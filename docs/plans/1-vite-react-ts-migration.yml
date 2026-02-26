@@ -1,0 +1,122 @@
+meta:
+  title: "Migrate prototype to Vite + React + TypeScript"
+  phase: "Fas 1 – Grund"
+  roadmap_ref: "1.2 Separera data från UI"
+  created: 2026-02-26
+  status: pending
+
+context: |
+  The entire app lives in a single 1,696-line JSX file (prototypes/grodguiden-wireframe.jsx)
+  with all data and UI mixed together. This migration separates data from UI, introduces
+  TypeScript, and sets up a proper Vite build system.
+
+steps:
+  - id: 1
+    title: "Scaffold Vite project"
+    status: pending
+    details: |
+      - npm create vite@latest with react-ts template
+      - Install deps: react, react-dom, recharts
+      - Install fonts: @fontsource/fraunces, @fontsource/lora
+      - Update .gitignore for node_modules, dist
+      - Verify npm run dev works
+
+  - id: 2
+    title: "Define TypeScript types"
+    status: pending
+    details: |
+      - Create src/data/types.ts
+      - Key types: Crop (25+ fields), CropListEntry, ZoneInfo, DifficultyLevel
+      - Strict typing for all data structures
+
+  - id: 3
+    title: "Extract data files"
+    status: pending
+    details: |
+      - One file per crop: src/data/crops/{morot,tomat,potatis,hallon,basilika}.ts
+      - src/data/zones.ts, difficulty.ts, categories.ts
+      - crops/index.ts barrel exports CROPS + CROP_LIST
+
+  - id: 4
+    title: "Set up theme"
+    status: pending
+    details: |
+      - src/theme/tokens.ts — colors, spacing, radii (from docs/PROMPT-designsystem.md)
+      - src/theme/global.css — CSS custom properties, base reset, font imports
+      - Typography: Fraunces (headings), Lora (body), system-font (UI)
+      - Self-hosted fonts via @fontsource (no external requests)
+
+  - id: 5
+    title: "Migrate icons (11 icons)"
+    status: pending
+    details: |
+      - Extract from prototypes/grodguiden-designguide.jsx
+      - Each icon = own component with color + size props
+      - Icons: vegetable, berry, herb, sun, water, soil, scissors, seed, calendar, zone, logo
+
+  - id: 6
+    title: "Migrate illustrations"
+    status: pending
+    details: |
+      - Extract from prototypes/grodguiden-illustrationer.jsx
+      - Detailed (200x200) + list icons (48x48)
+      - Each = own component file
+
+  - id: 7
+    title: "Migrate UI components (bottom-up)"
+    status: pending
+    details: |
+      7a. Leaf components: Section, DifficultyBadge, ZoneBadge, PhBar, HarvestCalc, NutritionChart
+      7b. Section components: Watering, SoilPh, Timeline, Companions, Varieties, Problems, etc.
+      7c. Page components: CropPage (orchestrator), CropList, ZoneSelector
+      7d. Root: App.tsx with state management
+
+  - id: 8
+    title: "Add useLocalStorage hook"
+    status: pending
+    details: |
+      - Persist userZone to localStorage
+      - User keeps zone selection between visits
+
+  - id: 9
+    title: "Verify"
+    status: pending
+    details: |
+      - npm run dev — check all 5 crop pages
+      - tsc --noEmit — zero type errors
+      - Visual comparison with prototype
+
+decisions:
+  css_approach: "CSS Modules + CSS custom properties for design tokens"
+  fonts: "Self-hosted via @fontsource/fraunces and @fontsource/lora"
+  routing: "useState navigation for now, add react-router later"
+  design_source: "docs/PROMPT-designsystem.md is canonical (not wireframe values)"
+  prototypes: "Preserved in prototypes/ as reference"
+
+structure: |
+  src/
+  ├── main.tsx
+  ├── App.tsx
+  ├── data/
+  │   ├── types.ts
+  │   ├── zones.ts
+  │   ├── difficulty.ts
+  │   ├── categories.ts
+  │   └── crops/
+  │       ├── index.ts
+  │       ├── morot.ts
+  │       ├── tomat.ts
+  │       ├── potatis.ts
+  │       ├── hallon.ts
+  │       └── basilika.ts
+  ├── theme/
+  │   ├── tokens.ts
+  │   └── global.css
+  ├── components/
+  │   ├── ui/ (Section, DifficultyBadge, ZoneBadge, PhBar)
+  │   ├── crops/ (CropList, CropPage, NutritionChart, HarvestCalc, ...)
+  │   ├── zone/ (ZoneSelector)
+  │   ├── icons/ (11 SVG icon components)
+  │   └── illustrations/ (detailed + list icon components)
+  └── hooks/
+      └── useLocalStorage.ts
