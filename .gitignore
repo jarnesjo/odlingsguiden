@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/
+
+# Node (för framtiden)
+node_modules/
+dist/
+.env
