@@ -6,12 +6,69 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## Roadmap-Driven Workflow
 
-`docs/ROADMAP.md` is the source of truth for what to build and in what order.
+`docs/ROADMAP.md` is the source of truth for what to build. It uses numbered phases (Fas 1, 2, 3...) with substeps (1.1, 1.2, 1.3...) and checkboxes. The order within a phase is flexible — we pick what gives most value right now.
 
 - **On session start:** Read `docs/ROADMAP.md` and the latest `docs/handoffs/*.yml` to understand current progress.
-- **Before starting work:** Check which roadmap step is next. Suggest it if the user hasn't specified a task.
-- **After completing work:** Update `docs/ROADMAP.md` — check off completed items and note progress.
-- **When proposing tasks:** Always reference the relevant roadmap section.
+- **Before starting work:** Check which roadmap step is next. Suggest it if the user hasn't specified a task. The user may choose any step — we don't follow the order slavishly.
+- **After completing work:** Update `docs/ROADMAP.md` — check off completed items and mark steps with ✅.
+- **When proposing tasks:** Reference the relevant roadmap step (e.g., "1.3 Grafisk profil").
+- **New ideas:** Add to the "Idéer" section in ROADMAP.md. No priority needed — they get picked up when the time is right.
+
+### ROADMAP.md Format
+
+The roadmap follows a structured format designed for AI-assisted development. This format is portable — use it in any project.
+
+**Structure:**
+
+```markdown
+# Projektnamn – Roadmap
+
+> Tagline
+
+## Vision
+Short vision statement.
+
+## Fas 1: Namn
+Description of what the phase achieves.
+
+### 1.1 Step name ✅ (when done)
+> One-line summary of scope
+
+- [x] Completed subtask
+- [ ] Pending subtask
+
+Plan: `docs/plans/1.1-slug.yml`
+
+### 1.2 Step name
+> One-line summary of scope
+
+- [ ] Subtask 1
+- [ ] Subtask 2
+
+## Fas 2: Namn
+...
+
+## Idéer
+No priority. Picked up when the time is right.
+
+- Idea 1
+- Idea 2
+
+## Referens
+Stable reference material: design principles, tech stack, competitor analysis, file table, known issues. Things that change rarely.
+```
+
+**Key rules:**
+
+- **Numbered phases** (Fas 1, 2, 3...) with **numbered substeps** (1.1, 1.2, 1.3...)
+- **Checkboxes** on every actionable item — never just prose
+- **✅ after step title** when all checkboxes are done
+- **`> quote`** under each step title = one-line scope description
+- **Flexible order** within a phase — pick what gives most value now
+- **Idéer section** at the bottom — unordered, unprioritized ideas
+- **Referens section** — stable info that rarely changes (design principles, tech stack, competitor analysis, file table)
+- Steps can have **context blocks** (tables, explanations) below the checkboxes for complex steps
+- **Plan file reference** under each step when a detailed plan exists
 
 ---
 
@@ -72,15 +129,35 @@ known_issues:
 
 ---
 
-## Plans & Documentation
+## Plans, Guides & Documentation
 
-Implementation plans are saved as YAML files in `docs/plans/` (e.g., `docs/plans/1-separera-data.yml`).
+### docs/ structure
 
-When starting a new phase or feature:
+```
+docs/
+  ROADMAP.md                    — Faser, substeg, idéer, referens
+  plans/                        — Detaljerade implementationsplaner (YAML)
+    1.2-separera-data.yml
+    1.3-grafisk-profil.yml
+  guides/                       — Kvalitetsguider och specifikationer
+    ny-groda.md                 — Hur man lägger till en grödprofil (16-punkts checklista)
+    designsystem.md             — Färger, typografi, spacing, komponenter
+    svg-illustrationer.md       — SVG-stil, storlekar, teknisk spec
+  handoffs/                     — Sessionshandoffs (YAML)
+    2026-02-26-234845.yml
+```
+
+### Plan files
+
+**Naming:** `{fas}.{steg}-{slug}.yml` — matchar roadmap-steget exakt.
+Examples: `1.2-separera-data.yml`, `1.3-grafisk-profil.yml`, `2.2-sokfunktion.yml`
+
+When starting a new feature or task:
 
 1. Check `docs/plans/` for existing plan files
 2. Write the implementation plan as YAML before coding
 3. Use the plan as a checklist during implementation
+4. Update `docs/ROADMAP.md` — check off items and mark step with ✅ when done
 
 ---
 
@@ -95,14 +172,14 @@ Odlingsguiden (formerly Grödguiden) is a Swedish growing guide app — a deep, 
 - `prototypes/grodguiden-wireframe.jsx` — Main app prototype with all crop data and UI
 - `prototypes/grodguiden-designguide.jsx` — Design system & color palettes
 - `prototypes/grodguiden-illustrationer.jsx` — SVG crop illustrations
-- `prototypes/grodguiden-logotyper.jsx` — Logo concepts & branding
+- `prototypes/grodguiden-logotyper.jsx` — Logo concepts & branding (migrerat till `src/components/brand/` + `public/brand/`)
 
 ## Key Documentation
 
 - `docs/ROADMAP.md` — 6-phase development plan (Phase 1 / Q1 2026 in progress)
-- `docs/PROMPT-lagg-till-groda.md` — **Critical**: instructions and quality checklist for adding new crops (16-point checklist, tone guide, full data structure)
-- `docs/PROMPT-designsystem.md` — Design system specification (colors, typography, icons, components, spacing)
-- `docs/PROMPT-svg-illustrationer.md` — SVG illustration guidelines (200×200 detailed + 48×48 list icons)
+- `docs/guides/ny-groda.md` — **Critical**: instructions and quality checklist for adding new crops (16-point checklist, tone guide, full data structure)
+- `docs/guides/designsystem.md` — Design system specification (colors, typography, icons, components, spacing)
+- `docs/guides/svg-illustrationer.md` — SVG illustration guidelines (200×200 detailed + 48×48 list icons)
 
 ## Architecture & Data Model
 
@@ -137,6 +214,7 @@ The app uses "kompis-tonen" (friend's tone) — warm, personal, sometimes humoro
 - **Border radius**: Cards 16px, Badges 20px (pill), Buttons 14px
 - **Spacing scale**: 4, 8, 12, 16, 20, 24, 40px
 - **Icons**: Custom SVG, 1.8px stroke, rounded line caps, 24×24 standard
+- **Inga emojis i appen** — all grafik (ikoner, illustrationer, indikatorer) ska vara egengjorda custom SVG. Aldrig unicode-emojis i data eller UI.
 
 ## Tech Stack
 
