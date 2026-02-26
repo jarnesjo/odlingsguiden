@@ -1,0 +1,60 @@
+meta:
+  date: 2026-02-26
+  author: claude
+  phase: "Fas 1 – Prototyp"
+  status: aktiv
+  session_notes: |
+    Första sessionen i detta projekt. Skapade CLAUDE.md, diskuterade namnbyte,
+    och bytte projektnamn från Grödguiden till Odlingsguiden.
+
+tech_stack:
+  current:
+    - React (hooks, useState)
+    - Recharts (näringsgrafik)
+    - Pure SVG (ikoner/illustrationer)
+    - CSS-in-JS (inline styles)
+    - Inga build-verktyg, tester eller linting ännu
+  planned:
+    web: Statamic (Laravel CMS)
+    app: React Native + Expo
+    data: Shared JSON/TS-filer
+    charts: react-native-svg + victory-native
+
+structure:
+  prototypes:
+    - prototypes/grodguiden-wireframe.jsx  # Huvudprototyp med all gröddata och UI
+    - prototypes/grodguiden-designguide.jsx  # Designsystem & färgpaletter
+    - prototypes/grodguiden-illustrationer.jsx  # SVG-illustrationer
+    - prototypes/grodguiden-logotyper.jsx  # Logotypkoncept
+  docs:
+    - docs/ROADMAP.md  # 6-fas utvecklingsplan
+    - docs/PROMPT-lagg-till-groda.md  # Instruktioner för att lägga till grödor
+    - docs/PROMPT-designsystem.md  # Designsystemspecifikation
+    - docs/PROMPT-svg-illustrationer.md  # SVG-riktlinjer
+
+database: null  # Ingen databas ännu, all data i CROPS-objekt i wireframe.jsx
+
+api_endpoints: null  # Inga API:er ännu
+
+commands: null  # Inga build/test/lint-kommandon ännu (prototyp-fas)
+
+next_steps:
+  - Separera data från UI (crops-data.js) – nämnt i ROADMAP.md
+  - Korsreferenser (klickbara kompanionsplanteringslänkar)
+  - Säsongsvy v1 (månadskalender)
+  - Lägg till Frukt som 4:e kategori
+  - Expandera till 16 grödor (från nuvarande 4)
+  - Överväg att byta namn på prototypfilerna från grodguiden-* till odlingsguiden-*
+
+context:
+  decisions:
+    - "Bytte namn från Grödguiden till Odlingsguiden – tydligare för hemmaodlare"
+    - "Odlingsguiden valdes för att folk direkt förstår vad appen handlar om"
+    - "Mappen byttes från grodguiden/ till odlingsguiden/"
+  constraints:
+    - "All text i appen ska vara på svenska, kompis-ton"
+    - "Prototypfilerna heter fortfarande grodguiden-* (ej omdöpta ännu)"
+
+known_issues:
+  - "Prototypfilerna har fortfarande prefix grodguiden- istället för odlingsguiden-"
+  - "CLAUDE.md uppdaterades av användaren med handoff-system, commit-regler etc. från ett annat projekt – scopes i commit-exemplen (horses, stables, auth) behöver anpassas till detta projekt"
