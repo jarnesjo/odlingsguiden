@@ -1,4 +1,4 @@
-# 🌱 Grödguiden – Roadmap
+# Odlingsguiden – Roadmap
 
 > Allt du behöver veta – en gröda i taget
 
@@ -6,64 +6,60 @@
 
 ## Vision
 
-Grödguiden ska bli det självklara uppslagsverket för svenska odlare – en app som gör EN sak exceptionellt bra: ger djup, pålitlig och zonanpassad information om varje gröda, bär, krydda och frukt du kan odla i Sverige.
+Odlingsguiden ska bli det självklara uppslagsverket för svenska odlare – en app som gör EN sak exceptionellt bra: ger djup, pålitlig och zonanpassad information om varje gröda, bär, krydda och frukt du kan odla i Sverige.
 
 Long tail-filosofin: börja smått och nischat (svenska odlingszoner 1–8), bygg den bästa möjliga produkten, expandera därifrån.
 
-**Avsändare:** Lilla Bosgården (lillabosgarden.se) – ett småbruk utanför Kalmar med grönsakskassar, fönsterhantverk, självplock och gårdsbutik. Grödguiden blir gårdens digitala kunskapserbjudande: "Vi odlar det, vi lär dig odla det."
+**Avsändare:** Lilla Bosgården (lillabosgarden.se) – ett småbruk utanför Kalmar med grönsakskassar, fönsterhantverk, självplock och gårdsbutik. Odlingsguiden blir gårdens digitala kunskapserbjudande: "Vi odlar det, vi lär dig odla det."
 
 ---
 
-## Nuvarande status
-
-### ✅ Klart
-
-- **5 fullständiga profiler:** Morot, Tomat, Potatis (grönsaker), Hallon (bär), Basilika (kryddor)
-- **3 kategorier:** Grönsaker (10 st), Bär (5 st), Kryddor (5 st) med toggle – Frukt planerad som fjärde
-- **Zonväljare:** Odlingszon 1–8 med anpassat innehåll
-- **15+ sektioner per profil:** Trivs bäst, Bra att veta, Sådd/Beskärning, Näringskurva, Jord & pH, Vattning, Tidslinje, Companion planting, Växtföljd, Sorter, Problem, Skördekalkylator, Lagring, Frötagning/Förökning
-- **Kategori-anpassat:** Beskärning + Förökning för bär, Skörd & Användning för kryddor
-- **Prompt-system:** Repeterbar prompt (PROMPT-lagg-till-groda.md) med 16-punkts kvalitetschecklista och tonguide
-- **Latinskt namn primärt:** Solanaceae (Nattskatta) – som i frökataloger
-
-### ⚠️ Kända brister
-
-- [ ] Ingen säsongsvy/kalender
-- [ ] Inga korsreferenser (companion planting nämner grödor men de är inte klickbara)
-- [x] ~~All data i en enda JSX-fil (1700+ rader)~~ → Migrerat till Vite + React + TypeScript
-- [x] ~~Inga egna ikoner eller visuell identitet utöver emoji~~ → Designguide och designsystem-prompt klar
-- [ ] Frukt saknas som kategori
-- [x] ~~Typsnitt ej valt~~ → Fraunces (rubriker) + Lora (brödtext), self-hosted via @fontsource
-
----
-
-## Fas 1: Grund (Q1 2026) 🟡 Pågår
+## Fas 1: Grund
 
 Handlar om att lägga grunden rätt innan vi satsar på volym.
 
 ### 1.1 Tonpass – Basilika ✅
+
 > ~12 textredigeringar, ingen strukturförändring
 
 - [x] Bort med engelska ord ("Win-win" → "Ett perfekt par!")
-- [x] Känsla istället för procent ("70% jord + 30% perlit" → "7 delar jord med 3 delar perlit – hon måste kunna andas")
-- [x] Personifiera plantan ("Vill ha jämnt fuktig jord" → "Basilikan älskar fukt men HATAR att stå blöt")
+- [x] Känsla istället för procent ("7 delar jord med 3 delar perlit – hon måste kunna andas")
+- [x] Personifiera plantan ("Basilikan älskar fukt men HATAR att stå blöt")
 - [x] Uppdatera tonguide i prompten med 8 konkreta regler
 
-### 1.2 Separera data från UI
+### 1.2 Separera data från UI ✅
+
 > Gör det möjligt att lägga till profiler utan risk att röra UI-koden
 
-- [x] ~~`crops-data.js`~~ → Vite + React + TypeScript med separerade data, typer, tema, komponenter och hooks
-- [x] ~~`components.jsx`~~ → 27 komponenter i `components/ui/`, `components/crop/`, `components/pages/`
-- [x] ~~`App.jsx`~~ → `App.tsx` med useState-navigation + useLocalStorage för zon
+- [x] Vite + React + TypeScript med separerade data, typer, tema, komponenter och hooks
+- [x] 27 komponenter i `components/ui/`, `components/crop/`, `components/pages/`
+- [x] `App.tsx` med useState-navigation + useLocalStorage för zon
 
-### 1.3 Korsreferenser
+Plan: `docs/plans/1-separera-data.yml`
+
+### 1.3 Grafisk profil
+
+> Professionell visuell identitet – custom SVG överallt, inga emojis
+
+- [ ] Icon-registry + `<Icon>`-komponent
+- [ ] ~20 nya SVG-ikoner (samma stil som befintliga 11)
+- [ ] PotatoIllustration (200×200 + 48×48)
+- [ ] Byt alla emojis i data till semantiska ID:n
+- [ ] Uppdatera alla komponenter att rendera SVG istället för emoji
+- [ ] Slutverifiering – grep efter kvarvarande emoji
+
+Plan: `docs/plans/1-grafisk-profil.yml`
+
+### 1.4 Korsreferenser
+
 > "Wikipedia-effekten" – användare utforskar och fastnar
 
 - [ ] Companion-data får `id`-fält som matchar CROP_LIST id
 - [ ] UI renderar klickbara chips istället för ren text
 - [ ] Fungerar i: companion planting, växtföljd, bra att veta, sorter
 
-### 1.4 Säsongsvy v1
+### 1.5 Säsongsvy v1
+
 > "Vad ska jag göra i min odling just nu?"
 
 - [ ] Månadsbaserad startskärm
@@ -71,16 +67,17 @@ Handlar om att lägga grunden rätt innan vi satsar på volym.
 - [ ] Zonmedveten – anpassar sig efter vald zon
 - [ ] Varje åtgärd länkar till relevant profil och sektion
 
-### 1.5 Frukt som fjärde kategori 🍎
+### 1.6 Frukt som fjärde kategori
+
 > Fruktträd och bärbuskar med flerårig karaktär – "planterar du rätt från början, skördar du i 30 år"
 
 **Varför frukt?**
 
-Fruktodling skiljer sig fundamentalt från grönsaker och kryddor: det är ett långsiktigt åtagande. Du planterar ett äppelträd och lever med det beslutet i decennier. Det gör att behovet av bra information faktiskt är *större* – du har inte råd att välja fel sort. Och det är precis den typen av djup, genomtänkt info som Grödguiden gör bäst.
+Fruktodling skiljer sig fundamentalt från grönsaker och kryddor: det är ett långsiktigt åtagande. Du planterar ett äppelträd och lever med det beslutet i decennier. Det gör att behovet av bra information faktiskt är *större* – du har inte råd att välja fel sort. Och det är precis den typen av djup, genomtänkt info som Odlingsguiden gör bäst.
 
 **Vad gör frukt unikt jämfört med andra kategorier?**
 
-- **Sortval är kritiskt.** Ett äppelträd i zon 5 behöver en helt annan sort än i zon 2. Fel sort = år av besvikelse. Här kan Grödguiden verkligen lysa med zonanpassade rekommendationer.
+- **Sortval är kritiskt.** Ett äppelträd i zon 5 behöver en helt annan sort än i zon 2. Fel sort = år av besvikelse. Här kan vi verkligen lysa med zonanpassade rekommendationer.
 - **Pollinationspartners.** De flesta äppel- och päronsorter behöver en pollinatör – vilken sort passar med vilken? Det är korsreferenser på steroider.
 - **Beskärning är en hel vetenskap.** Uppbyggnadsbeskärning (år 1–5), underhållsbeskärning (årlig), föryngringsbeskärning (gamla träd). Mer komplext än bärbeskärning.
 - **Sjukdomar och skadedjur.** Äppelskorv, päronpest, fruktträdskräfta – fruktträd har fler specifika problem än grönsaker. En "Problem & sjukdomar"-sektion blir extra viktig.
@@ -97,16 +94,23 @@ Fruktodling skiljer sig fundamentalt från grönsaker och kryddor: det är ett l
 
 **Koppling till Lilla Bosgården:**
 
-Frukt är extra naturligt för er – om ni odlar eller planerar att odla frukt på gården blir det "vi berättar om det vi själva gör". Och även om ni inte har fruktträd just nu kan guiden bygga trovärdighet: "Vi hjälper dig välja rätt från början – så du slipper plantera om efter 5 år."
+Frukt är extra naturligt – om ni odlar eller planerar att odla frukt på gården blir det "vi berättar om det vi själva gör". Och även utan fruktträd just nu kan guiden bygga trovärdighet: "Vi hjälper dig välja rätt från början – så du slipper plantera om efter 5 år."
 
 **Tekniskt:**
 
-- Ny flik i kategori-togglen: 🍎 Frukt
+- Ny flik i kategori-togglen
 - `category: "frukt"` i CROP_LIST
 - `isFruit`-flagg i CropPage med villkorlig rendering
 - `perennial: true`, `lifespan: "20–50 år"`, `yearsToFullHarvest: 5`
 - Nya fält: `pollination`, `pruningGuide`, `establishment`
-- Färg i designsystem: förslag `fruit: "#B8653B"` (varm terrakotta/äppelröd), `fruitLight: "#F0DDD0"`
+- Färg i designsystem: `fruit: "#B8653B"` (varm terrakotta), `fruitLight: "#F0DDD0"`
+
+**Checkboxar:**
+
+- [ ] Ny flik i kategori-togglen + `category: "frukt"` i datamodellen
+- [ ] Nya typer och fält i `types.ts`
+- [ ] Kategori-specifika sektioner (Pollinationspartners, Beskärningsguide, Sortguide, Etablering, Mognadsklocka)
+- [ ] Färg i designsystem + tokens
 
 **Prioriterade fruktprofiler:**
 
@@ -114,13 +118,13 @@ Frukt är extra naturligt för er – om ni odlar eller planerar att odla frukt 
 |------|-------|--------|---------|
 | 1 | Äpple | Rosaceae | Sveriges mest odlade frukt. Enormt sortutbud. Zonberoende. |
 | 2 | Päron | Rosaceae | Näst populärast. Kräver pollinatör. Lagringsvärdig. |
-| 3 | Plommon | Rosaceae | Härdigt, populärt, finns sorten som klarar zon 5–6. |
+| 3 | Plommon | Rosaceae | Härdigt, populärt, finns sorter som klarar zon 5–6. |
 | 4 | Körsbär | Rosaceae | Både söt och sur. Fågelproblem = bra "drama" i profilen. |
 | 5 | Rabarber | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
 
 > *Notering: Alla topp-4 är Rosaceae – samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband.*
 
-### 1.6 Fler profiler → 16 totalt (10+3+3)
+### 1.7 Fler profiler → 16 totalt (10+3+3)
 
 **Grönsaker (7 nya):**
 
@@ -150,66 +154,96 @@ Frukt är extra naturligt för er – om ni odlar eller planerar att odla frukt 
 
 ---
 
-## Fas 2: Innehåll & Kvalitet (Q2 2026) 🔵 Planerad
+## Fas 2: Innehåll & Kvalitet
+
+Fylla på med innehåll och kvalitetssäkra.
+
+### 2.1 Fler profiler → 30+
 
 - [ ] 20+ grönsaker, 6+ bär, 8+ kryddor, 3+ frukt
 - [ ] Första fruktprofil: Äpple (flagship – bevisar att kategorin fungerar)
-- [ ] Sökfunktion tvärs över kategorier
-- [ ] Webb-version live på lillabosgarden.se/grodguiden (Statamic)
-- [ ] Användartest med 10–15 svenska odlare
+
+### 2.2 Sökfunktion
+
+- [ ] Sök tvärs över kategorier
+- [ ] Filtrering på familj, svårighetsgrad, zon
+
+### 2.3 Webb-version (Statamic)
+
+- [ ] Webb-version live på lillabosgarden.se/odlingsguiden
+- [ ] Server-renderad HTML via Statamic – varje gröda får egen URL
+- [ ] SEO-optimerat
+
+### 2.4 Användartest
+
+- [ ] Test med 10–15 svenska odlare
+- [ ] Samla feedback, prioritera förbättringar
+
+### 2.5 Gårdskoppling
+
 - [ ] Koppling till gårdens produkter i relevanta profiler
+- [ ] "Vill du inte odla själv? Moroten finns i våra grönsakskassar."
 
 ---
 
-## Fas 3: Lansering (Q3–Q4 2026) 🔵 Planerad
+## Fas 3: Lansering
+
+Gå live och bygg publik.
+
+### 3.1 Innehållsmål
 
 - [ ] 30+ grönsaker, 10+ bär, 12+ kryddor, 5+ frukt
+
+### 3.2 Lansering
+
 - [ ] Webbapp live på lillabosgarden.se/odlingsguiden
 - [ ] Lanseringskampanj via @lillabosgarden Instagram + odlarforum
 - [ ] Korsmarknadsföring: grönsakskassar ↔ webbapp, gårdsbutik ↔ webb
+
+### 3.3 Utvärdering
+
 - [ ] Utvärdera behov av native-app baserat på användartrafik
 
 ---
 
-## Fas 4: Expansion (2027+) 🔮 Framtid
+## Fas 4: Expansion
 
-- [ ] Nordisk expansion (Norge, Danmark, Finland)
-- [ ] Tempererade zoner globalt (UK, Nordtyskland, Kanada)
-- [ ] Community-funktioner (dela tips, bilder, skördrapporter)
-- [ ] AI-rådgivare ("Min tomat har gula blad – vad är fel?")
-- [ ] Partnerskap med fröföretag (Impecta, Runåbergs, Nelson Garden)
+Väx och bredda.
 
----
+### 4.1 Nordisk expansion
 
-## Affärsmodell
+- [ ] Norge, Danmark, Finland
 
-### Gratis webbapp först, native-app senare
+### 4.2 Globalt
 
-**Steg 1 (nu):** Bygg en gratis webbapp – öppen för alla, driver trafik via SEO, och bevisar konceptet. Webben är huvudprodukten och ska vara komplett i sig.
+- [ ] Tempererade zoner: UK, Nordtyskland, Kanada
 
-**Steg 2 (framtida):** Native-app (iOS/Android) som valfri betalversion. Samma innehåll men bättre upplevelse. Användare kan välja att stödja projektet genom att betala för bekvämligheten.
+### 4.3 Community
 
-| | Webbapp (gratis) | Native-app (framtida, betald) |
-|---|-----------------|-------------------------------|
-| Allt innehåll | ✓ Alla profiler | ✓ Alla profiler |
-| Sök & filter | ✓ Full funktionalitet | ✓ Snabb, offline-sökbar |
-| Säsongsvy | ✓ | ✓ + push-notiser |
-| Offline | ✗ | ✓ Full offline-åtkomst |
-| Upplevelse | Webbapp | Native app-känsla |
-| Zonminne | Sessionsbaserat | Sparar dina inställningar |
-| Min odling | ✗ | Spara vad du odlar |
-| SEO | ✓ Driver trafik | – |
-| Koppling Lilla Bosgården | ✓ Direkt på sajten | Länk i meny + "Från Lilla Bosgården" |
+- [ ] Dela tips, bilder, skördrapporter
 
-**Varför gratis webbapp först?** Validera att innehållet och upplevelsen håller innan vi investerar i native-app. Webben bygger publik, SEO-trafik och varumärke. Native-appen blir ett naturligt nästa steg när det finns en etablerad användarbas.
+### 4.4 Partnerskap
 
-**Betalmodell för native-appen:** Engångsköp (pris TBD) – inte prenumeration. Användaren betalar för bekvämligheten: offline-åtkomst, app-känsla, push-notiser. Samma innehåll som webben, men smidigare.
-
-**Koppling till gårdens produkter:** Varje profil kan ha en diskret sektion: "Vill du inte odla själv? Moroten finns i våra grönsakskassar." Inte påträngande, utan hjälpsamt.
+- [ ] Fröföretag: Impecta, Runåbergs, Nelson Garden
 
 ---
 
-## Designprinciper
+## Idéer
+
+Ingen prioritet ännu. Plockas upp när det passar.
+
+- F1-hybrider utbildningssektion
+- Mörkt läge / dark mode
+- AI-rådgivare för växtproblem ("Min tomat har gula blad – vad är fel?")
+- Push-notiser i native-app (säsongsbaserade)
+- Native-app (iOS/Android) som betald version med offline-åtkomst
+- README.md – så GitHub-sidan ser inbjudande ut istället för tom och trist
+
+---
+
+## Referens
+
+### Designprinciper
 
 1. **En sak, exceptionellt bra.** Uppslagsverk, inte kalender/planerare/socialt nätverk.
 2. **Djup slår bredd.** 30 profiler × 15 sektioner > 300 profiler × 3 sektioner.
@@ -217,72 +251,98 @@ Frukt är extra naturligt för er – om ni odlar eller planerar att odla frukt 
 4. **Kompistonen.** Läs texterna högt – låter det som en kompis vid trädgårdsbordet? Perfekt. Låter det som en lärobok? Skriv om.
 5. **Latinska namn primärt.** Solanaceae (Nattskatta), inte tvärtom.
 6. **Offline-redo.** Odlare är i trädgården, inte vid datorn.
+7. **Ingen emoji – all grafik egengjord.** Custom SVG-ikoner och illustrationer genomgående.
 
----
+### Affärsmodell
 
-## Teknikstack (förslag)
+**Gratis webbapp först, native-app senare.**
 
-### Webb (lillabosgarden.se/grodguiden)
+**Steg 1 (nu):** Bygg en gratis webbapp – öppen för alla, driver trafik via SEO, och bevisar konceptet. Webben är huvudprodukten och ska vara komplett i sig.
+
+**Steg 2 (framtida):** Native-app (iOS/Android) som valfri betalversion. Samma innehåll men bättre upplevelse. Användare kan välja att stödja projektet genom att betala för bekvämligheten.
+
+| | Webbapp (gratis) | Native-app (framtida, betald) |
+|---|---|---|
+| Allt innehåll | Ja | Ja |
+| Sök & filter | Ja | Ja, offline-sökbar |
+| Säsongsvy | Ja | Ja + push-notiser |
+| Offline | Nej | Ja, full offline-åtkomst |
+| Upplevelse | Webbapp | Native app-känsla |
+| Zonminne | Sessionsbaserat | Sparar inställningar |
+| Min odling | Nej | Spara vad du odlar |
+| SEO | Ja, driver trafik | – |
+| Koppling Lilla Bosgården | Direkt på sajten | Länk i meny + "Från Lilla Bosgården" |
+
+**Varför gratis webbapp först?** Validera att innehållet och upplevelsen håller innan vi investerar i native-app. Webben bygger publik, SEO-trafik och varumärke. Native-appen blir ett naturligt nästa steg när det finns en etablerad användarbas.
+
+**Betalmodell för native-appen:** Engångsköp (pris TBD) – inte prenumeration. Användaren betalar för bekvämligheten: offline-åtkomst, app-känsla, push-notiser. Samma innehåll som webben, men smidigare.
+
+**Koppling till gårdens produkter:** Varje profil kan ha en diskret sektion: "Vill du inte odla själv? Moroten finns i våra grönsakskassar." Inte påträngande, utan hjälpsamt.
+
+### Teknikstack
+
+**Webb (lillabosgarden.se/odlingsguiden):**
+
 - **CMS:** Statamic (redan befintlig sajt – Laravel-baserad, flat-file)
 - **Gröddata:** Statamic collections (varje gröda = ett entry med fält)
-- **Interaktivitet:** React-komponenter för zonväljare, filter, näringskurvor (alternativt Livewire)
+- **Interaktivitet:** React-komponenter för zonväljare, filter, näringskurvor
 - **Grafer:** Recharts (redan i prototypen)
 - **SEO:** Server-renderad HTML via Statamic – varje gröda får egen URL
 - **Hosting:** Samma som befintlig sajt
 
-### App (iOS + Android)
+**App (iOS + Android):**
+
 - **Framework:** React Native + Expo
 - **Data:** JSON/TS-filer bundlade i appen (snabbt, offline-först)
 - **Grafer:** react-native-svg + victory-native
 - **Betalning:** Engångsköp via App Store / Google Play
 - **Delad datamodell:** Samma gröddata-filer matar både webben och appen
 
-### Typografi
-- **Rubriker:** Fraunces (Google Fonts, variabel, organisk serif)
-- **Brödtext:** Lora (Google Fonts, bokaktig serif)
-- **UI-element:** System-font (badges, etiketter, knappar)
+**Prototyp (nu):**
 
----
+| Komponent | Teknologi |
+|---|---|
+| Byggverktyg | Vite 7.3 |
+| UI | React 19 + TypeScript (strict) |
+| Styling | CSS Modules + CSS custom properties |
+| Typografi | Fraunces (rubriker) + Lora (brödtext), self-hosted via @fontsource |
+| UI-element | System-font (badges, etiketter, knappar) |
+| Grafer | Recharts 3.7 |
 
-## Konkurrentanalys
+### Konkurrentanalys
 
-| | Grödguiden | Odla ätbart | GrowVeg | Grove.eco |
-|---|-----------|------------|---------|-----------|
-| Näringskurvor | ✓ | ✗ | ✗ | ✗ |
-| Sv. odlingszoner | ✓ | ✓ | ✗ | ✗ |
-| Djup per-profil | ✓ | Delvis | ✗ | Delvis |
-| Companion planting | ✓ | Delvis | ✓ | ✗ |
-| Bär, Kryddor & Frukt | ✓ | Delvis | Delvis | ✗ |
-| Offline | Planerat | ✗ | ✗ | ✗ |
+| | Odlingsguiden | Odla ätbart | GrowVeg | Grove.eco |
+|---|---|---|---|---|
+| Näringskurvor | Ja | Nej | Nej | Nej |
+| Sv. odlingszoner | Ja | Ja | Nej | Nej |
+| Djup per-profil | Ja | Delvis | Nej | Delvis |
+| Companion planting | Ja | Delvis | Ja | Nej |
+| Bär, Kryddor & Frukt | Ja | Delvis | Delvis | Nej |
+| Offline | Planerat | Nej | Nej | Nej |
 | Pris | Gratis (webb) | Gratis | $40/år | $60/år |
 
 **Vårt gap:** Ingen befintlig app kombinerar näringskurvor + nordisk klimatanpassning + djup per-profil-data. Och ingen har fruktträd med pollinationsguider och zonanpassade sortrekommendationer.
 
----
+### Kända brister
 
-## Nästa steg (i ordning)
+- [ ] Emojis används överallt istället för custom SVG-ikoner (pågår: 1.3 grafisk profil)
+- [ ] Ingen säsongsvy/kalender
+- [ ] Inga korsreferenser (companion planting nämner grödor men de är inte klickbara)
+- [ ] Frukt saknas som kategori
+- [ ] Potatis saknar illustration
+- [ ] Bundle size >500KB pga Recharts
 
-1. ~~Tonpass på basilika~~ ✅
-2. Separera data från UI (crops-data.js)
-3. Lägg till ärtor via prompten (validerar att prompten fungerar)
-4. Implementera korsreferenser
-5. Fylla på resterande fas 1-profiler (mål: 16 totalt)
-6. Bygga säsongsvy v1
-
----
-
-## Filer
+### Filer
 
 | Fil | Beskrivning |
 |-----|------------|
-| `grodguiden-wireframe.jsx` | Huvudprototyp – React JSX med all data och UI |
-| `grodguiden-designguide.jsx` | Visuell designguide med paletter, ikoner och typsnitt |
-| `PROMPT-lagg-till-groda.md` | Repeterbar prompt för att lägga till profiler |
-| `PROMPT-designsystem.md` | Designsystem-prompt för konsekvent visuell stil |
-| `ROADMAP.md` | Denna fil – utvecklingsplan |
-| `grodguiden-roadmap.docx` | Snygg Word-version av roadmapen |
-| `research-smabruk-app.md` | Initial marknadsresearch |
-| `research-gronsakslexikon-app.md` | Fokuserad research på crop lookup-appar |
+| `prototypes/grodguiden-wireframe.jsx` | Huvudprototyp – referens, ej längre aktiv kod |
+| `prototypes/grodguiden-designguide.jsx` | Visuell designguide med paletter och typsnitt |
+| `prototypes/grodguiden-illustrationer.jsx` | SVG-illustrationer för grödor |
+| `prototypes/grodguiden-logotyper.jsx` | Logotypkoncept och branding (migrerat till `src/components/brand/` + `public/brand/`) |
+| `docs/guides/ny-groda.md` | Guide för att lägga till grödprofiler (16-punkts checklista) |
+| `docs/guides/designsystem.md` | Designsystem-specifikation (färger, typografi, spacing, komponenter) |
+| `docs/guides/svg-illustrationer.md` | SVG-illustrationsriktlinjer (200×200 + 48×48) |
 
 ---
 
