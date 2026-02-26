@@ -4,7 +4,10 @@
 # Claude Code
 .claude/
 
-# Node (för framtiden)
+# Node
 node_modules/
 dist/
 .env
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
