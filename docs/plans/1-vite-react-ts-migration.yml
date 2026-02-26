@@ -3,7 +3,7 @@ meta:
   phase: "Fas 1 – Grund"
   roadmap_ref: "1.2 Separera data från UI"
   created: 2026-02-26
-  status: in_progress
+  status: done
 
 context: |
   The entire app lives in a single 1,696-line JSX file (prototypes/grodguiden-wireframe.jsx)
@@ -64,7 +64,7 @@ steps:
 
   - id: 7
     title: "Migrate UI components (bottom-up)"
-    status: pending
+    status: done
     details: |
       7a. Leaf components: Section, DifficultyBadge, ZoneBadge, PhBar, HarvestCalc, NutritionChart
       7b. Section components: Watering, SoilPh, Timeline, Companions, Varieties, Problems, etc.
@@ -73,14 +73,14 @@ steps:
 
   - id: 8
     title: "Add useLocalStorage hook"
-    status: pending
+    status: done
     details: |
       - Persist userZone to localStorage
       - User keeps zone selection between visits
 
   - id: 9
-    title: "Verify"
-    status: pending
+    title: "Verify & cleanup"
+    status: done
     details: |
       - npm run dev — check all 5 crop pages
       - tsc --noEmit — zero type errors
@@ -113,9 +113,9 @@ structure: |
   │   ├── tokens.ts
   │   └── global.css
   ├── components/
-  │   ├── ui/ (Section, DifficultyBadge, ZoneBadge, PhBar)
-  │   ├── crops/ (CropList, CropPage, NutritionChart, HarvestCalc, ...)
-  │   ├── zone/ (ZoneSelector)
+  │   ├── ui/ (Section, DifficultyBadge, ZoneBadge, PhBar, NutritionChart, HarvestCalc)
+  │   ├── crop/ (CropHeader + 17 section components)
+  │   ├── pages/ (CropPage, CropList, ZoneSelector)
   │   ├── icons/ (11 SVG icon components)
   │   └── illustrations/ (detailed + list icon components)
   └── hooks/

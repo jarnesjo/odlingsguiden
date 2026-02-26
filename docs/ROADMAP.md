@@ -30,10 +30,10 @@ Long tail-filosofin: börja smått och nischat (svenska odlingszoner 1–8), byg
 
 - [ ] Ingen säsongsvy/kalender
 - [ ] Inga korsreferenser (companion planting nämner grödor men de är inte klickbara)
-- [ ] All data i en enda JSX-fil (1700+ rader)
+- [x] ~~All data i en enda JSX-fil (1700+ rader)~~ → Migrerat till Vite + React + TypeScript
 - [x] ~~Inga egna ikoner eller visuell identitet utöver emoji~~ → Designguide och designsystem-prompt klar
 - [ ] Frukt saknas som kategori
-- [ ] Typsnitt ej valt → Förslag: Fraunces (rubriker) + Lora (brödtext)
+- [x] ~~Typsnitt ej valt~~ → Fraunces (rubriker) + Lora (brödtext), self-hosted via @fontsource
 
 ---
 
@@ -52,9 +52,9 @@ Handlar om att lägga grunden rätt innan vi satsar på volym.
 ### 1.2 Separera data från UI
 > Gör det möjligt att lägga till profiler utan risk att röra UI-koden
 
-- [ ] `crops-data.js` – All gröddata (CROPS, CROP_LIST, ZONE_INFO)
-- [ ] `components.jsx` – Alla UI-komponenter
-- [ ] `App.jsx` – Bara routing och state management
+- [x] ~~`crops-data.js`~~ → Vite + React + TypeScript med separerade data, typer, tema, komponenter och hooks
+- [x] ~~`components.jsx`~~ → 27 komponenter i `components/ui/`, `components/crop/`, `components/pages/`
+- [x] ~~`App.jsx`~~ → `App.tsx` med useState-navigation + useLocalStorage för zon
 
 ### 1.3 Korsreferenser
 > "Wikipedia-effekten" – användare utforskar och fastnar
