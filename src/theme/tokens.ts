@@ -1,5 +1,5 @@
 /**
- * Design tokens from docs/PROMPT-designsystem.md
+ * Design tokens from docs/guides/designsystem.md
  * This is the single source of truth for all design values.
  */
 
