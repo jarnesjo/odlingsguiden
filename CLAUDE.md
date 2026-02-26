@@ -138,11 +138,19 @@ The app uses "kompis-tonen" (friend's tone) — warm, personal, sometimes humoro
 - **Spacing scale**: 4, 8, 12, 16, 20, 24, 40px
 - **Icons**: Custom SVG, 1.8px stroke, rounded line caps, 24×24 standard
 
-## Planned Tech Stack (Production)
+## Tech Stack
 
-- Web: Statamic (Laravel CMS)
-- App: React Native + Expo
-- Data: Shared JSON/TS files for both platforms
+**Current focus: Free web app**
+
+- Web: Statamic (Laravel CMS) on lillabosgarden.se
+- Data: Shared JSON/TS files
+- Charts: Recharts
+- Prototypes: Standalone JSX (Codesandbox)
+
+**Future (native app, paid):**
+
+- React Native + Expo (iOS/Android)
+- Same data files as web
 - Charts: react-native-svg + victory-native
 
 ---
