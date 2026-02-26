@@ -1,0 +1,32 @@
+.card {
+  border-radius: var(--radius-card-sm);
+  padding: 14px;
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-body);
+}
+
+.avoidCard {
+  background: var(--color-warning-light);
+}
+
+.beforeCard {
+  background: #F0FAF4;
+}
+
+.afterCard {
+  background: #E3F2FD;
+}
+
+.cardTitle {
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.avoidTitle { color: var(--color-warning); }
+.beforeTitle { color: var(--color-accent); }
+.afterTitle { color: #1565C0; }
+
+.cardText {
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}

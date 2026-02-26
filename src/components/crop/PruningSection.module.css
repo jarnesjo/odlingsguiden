@@ -1,0 +1,68 @@
+.typeBlock {
+  margin-bottom: 20px;
+}
+
+.typeBlock:last-child {
+  margin-bottom: 0;
+}
+
+.typeHeader {
+  border-radius: var(--radius-card-sm);
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.typeHeaderFirst { background: #EDF7F0; }
+.typeHeaderAlt { background: #FFF8E7; }
+
+.typeIcon {
+  font-size: 22px;
+}
+
+.typeName {
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+.typeWhen {
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+.description {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.stepsTitle {
+  font-size: var(--text-body);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.step {
+  display: flex;
+  gap: 10px;
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+.stepNumber {
+  min-width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 1px;
+}

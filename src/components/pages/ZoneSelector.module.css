@@ -1,0 +1,109 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.sheet {
+  background: var(--color-card);
+  border-radius: 24px 24px 0 0;
+  width: 100%;
+  max-width: var(--max-width);
+  max-height: 85vh;
+  overflow: auto;
+  padding: var(--space-xxl) var(--space-xl) 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+}
+
+.description {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-lg);
+  line-height: 1.5;
+}
+
+.zoneButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px var(--space-lg);
+  border-radius: var(--radius-button);
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+  text-align: left;
+}
+
+.zoneDefault {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+}
+
+.zoneActive {
+  background: #EDF7F0;
+  border: 2px solid var(--color-accent);
+}
+
+.zoneBadge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.zoneBadgeDefault {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.zoneBadgeActive {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.zoneInfo {
+  flex: 1;
+}
+
+.zoneRegion {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.zoneFrost {
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+.checkmark {
+  color: var(--color-accent);
+  font-size: 18px;
+}

@@ -1,0 +1,50 @@
+.methodCard {
+  background: #EDF7F0;
+  border-radius: var(--radius-card-sm);
+  padding: 10px 14px;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.methodIcon {
+  font-size: 22px;
+}
+
+.methodTitle {
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+.description {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.usesTitle {
+  font-size: var(--text-body);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.useCard {
+  background: var(--color-background);
+  border-radius: var(--radius-card-sm);
+  padding: 10px 14px;
+  margin-bottom: 6px;
+}
+
+.useName {
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+.useTip {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-top: 2px;
+}

@@ -1,0 +1,22 @@
+.badge {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-badge);
+  font-size: var(--text-label);
+  font-weight: 600;
+  background: var(--badge-bg);
+}
+
+.greenhouseInfo {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  margin-top: 6px;
+  text-align: center;
+}
+
+.suitability {
+  font-size: var(--text-label);
+  font-weight: 600;
+  margin-top: var(--space-xs);
+  text-align: center;
+  color: var(--suit-color);
+}

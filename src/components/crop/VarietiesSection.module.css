@@ -1,0 +1,52 @@
+.groupTitle {
+  font-size: var(--text-label);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.goodGroupTitle {
+  color: var(--color-accent);
+}
+
+.otherGroupTitle {
+  color: var(--color-text-muted);
+  margin-top: var(--space-lg);
+}
+
+.varietyRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-body);
+}
+
+.otherVariety {
+  opacity: 0.5;
+}
+
+.varietyName {
+  font-weight: 600;
+}
+
+.varietyNote {
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.zoneBadge {
+  padding: 2px 10px;
+  border-radius: var(--radius-card-sm);
+  font-size: var(--text-small);
+  white-space: nowrap;
+  margin-left: var(--space-sm);
+}
+
+.zoneBadgeGood {
+  background: #E3F2FD;
+}
+
+.zoneBadgeOther {
+  background: #F0EDE8;
+}

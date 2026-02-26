@@ -1,0 +1,39 @@
+.sectionTitle {
+  font-size: var(--text-body);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.goodTitle {
+  color: var(--color-accent);
+}
+
+.badTitle {
+  color: var(--color-warning);
+  margin-top: var(--space-lg);
+}
+
+.card {
+  border-radius: var(--radius-card-sm);
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  font-size: var(--text-body);
+}
+
+.goodCard {
+  background: #F0FAF4;
+}
+
+.badCard {
+  background: var(--color-warning-light);
+}
+
+.companionName {
+  font-weight: 600;
+}
+
+.companionWhy {
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}

@@ -1,0 +1,91 @@
+.shelfBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 14px;
+}
+
+.shelfPill {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-badge);
+  font-size: var(--text-label);
+  font-weight: 600;
+  background: #E3F2FD;
+}
+
+.methodCard {
+  border-radius: var(--radius-button);
+  padding: var(--space-md) 14px;
+  margin-bottom: var(--space-sm);
+  position: relative;
+}
+
+.methodDefault {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+}
+
+.methodBest {
+  background: #EDF7F0;
+  border: 2px solid var(--color-accent);
+}
+
+.bestLabel {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.methodHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.methodIcon {
+  font-size: 18px;
+}
+
+.methodName {
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+.methodDuration {
+  font-size: var(--text-label);
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.methodDesc {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.tipsTitle {
+  font-size: var(--text-body);
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: var(--space-sm);
+}
+
+.tip {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: 6px;
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+.tipIcon {
+  color: var(--color-warm);
+}

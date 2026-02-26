@@ -1,0 +1,18 @@
+.problem {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-body);
+}
+
+.problemName {
+  font-weight: 700;
+}
+
+.symptom {
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.fix {
+  color: var(--color-accent);
+  margin-top: 2px;
+}

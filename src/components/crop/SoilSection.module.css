@@ -1,0 +1,22 @@
+.description {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.tips {
+  margin-top: var(--space-lg);
+}
+
+.tip {
+  font-size: var(--text-body);
+  line-height: 1.5;
+  padding: 6px 0;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.tipBullet {
+  color: var(--color-accent);
+}

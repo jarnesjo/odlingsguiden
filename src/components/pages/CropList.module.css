@@ -1,0 +1,251 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding: var(--space-xxl) 0 var(--space-sm);
+}
+
+.logo {
+  font-size: 36px;
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin: var(--space-xs) 0 0;
+}
+
+/* Category toggle */
+.categoryToggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: var(--space-lg);
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.categoryButton {
+  flex: 1;
+  padding: var(--space-md) var(--space-sm);
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-body);
+  font-weight: 700;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.categoryActive {
+  color: #fff;
+  background: var(--cat-color);
+}
+
+.categoryInactive {
+  color: var(--color-text-muted);
+  background: transparent;
+}
+
+.categoryEmoji {
+  font-size: 20px;
+}
+
+.categoryCount {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* Zone button */
+.zoneButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-button);
+  border: 2px solid var(--color-accent);
+  background: #EDF7F0;
+  cursor: pointer;
+  margin-bottom: var(--space-lg);
+}
+
+.zoneLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zoneBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.zoneLabel {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.zoneSub {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+}
+
+.zoneChange {
+  font-size: 14px;
+  color: var(--color-accent-muted);
+}
+
+/* Search */
+.searchWrapper {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg) var(--space-md) 40px;
+  border-radius: var(--radius-button);
+  border: 1px solid var(--color-border);
+  font-size: 15px;
+  background: var(--color-card);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+
+/* Family filters */
+.familyFilters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: var(--space-lg);
+  overflow-x: auto;
+  padding-bottom: var(--space-xs);
+}
+
+.familyButton {
+  padding: 6px 14px;
+  border-radius: var(--radius-badge);
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-label);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.familyActive {
+  color: #fff;
+  background: var(--cat-color);
+  box-shadow: none;
+}
+
+.familyInactive {
+  color: var(--color-text-muted);
+  background: var(--color-card);
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+
+/* Crop rows */
+.cropButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  margin-bottom: var(--space-sm);
+  text-align: left;
+  transition: box-shadow 0.15s;
+}
+
+.cropUnlocked {
+  background: var(--color-card);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.cropUnlocked:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cropLocked {
+  background: #FAFAF8;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.cropEmoji {
+  font-size: 32px;
+}
+
+.cropInfo {
+  flex: 1;
+}
+
+.cropName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.cropMeta {
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+.soonBadge {
+  font-size: var(--text-small);
+  padding: 3px 10px;
+  border-radius: 10px;
+  background: #F0EDE8;
+  color: var(--color-text-muted);
+}
+
+.arrow {
+  font-size: 18px;
+  color: var(--color-accent-muted);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: var(--space-xxl) 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-body);
+}
+
+.footerSub {
+  font-size: var(--text-label);
+}

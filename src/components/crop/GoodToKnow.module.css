@@ -1,0 +1,37 @@
+.intro {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-md);
+  line-height: 1.5;
+}
+
+.card {
+  border-radius: 0 var(--radius-card-sm) var(--radius-card-sm) 0;
+  padding: var(--space-md) 14px;
+  margin-bottom: var(--space-sm);
+}
+
+.cardWarning {
+  background: #FFF8E7;
+  border-left: 4px solid #E6A200;
+}
+
+.cardTip {
+  background: #F0FAF4;
+  border-left: 4px solid var(--color-accent);
+}
+
+.cardTitle {
+  font-size: var(--text-body);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardText {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-top: var(--space-xs);
+}

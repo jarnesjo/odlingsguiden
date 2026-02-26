@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.headerIcon {
+  font-size: 22px;
+}
+
+.headerTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.headerSummary {
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+.phasesTitle {
+  font-size: var(--text-body);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.phaseCard {
+  background: #F0F7FF;
+  border-radius: var(--radius-card-sm);
+  padding: var(--space-md) 14px;
+  margin-bottom: var(--space-sm);
+  border-left: 4px solid var(--need-color);
+}
+
+.phaseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.phaseName {
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+.needBadge {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--need-color);
+  padding: 2px 8px;
+  background: var(--color-zone-outdoor);
+  border-radius: 10px;
+}
+
+.phaseTip {
+  font-size: var(--text-body);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.mistakesTitle {
+  font-size: var(--text-body);
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: var(--space-sm);
+  color: var(--color-warning);
+}
+
+.mistake {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: 6px;
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+.mistakeIcon {
+  color: var(--color-warning);
+}
+
+.bestTip {
+  background: #EDF7F0;
+  border-radius: var(--radius-card-sm);
+  padding: 14px;
+  margin-top: var(--space-md);
+  font-size: var(--text-body);
+}
+
+.bestTipTitle {
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.bestTipText {
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}

@@ -1,0 +1,50 @@
+.card {
+  background: var(--color-warm-light);
+  border-radius: var(--radius-card);
+  padding: var(--space-xl);
+  margin-top: var(--space-md);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.sliderLabel {
+  font-size: var(--text-body);
+}
+
+.slider {
+  flex: 1;
+  min-width: 100px;
+  accent-color: var(--color-accent);
+}
+
+.sqmValue {
+  font-size: var(--text-h2);
+  font-weight: 700;
+  min-width: 50px;
+}
+
+.yield {
+  margin-top: var(--space-md);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.note {
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: var(--space-xs);
+}
