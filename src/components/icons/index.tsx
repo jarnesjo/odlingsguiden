@@ -1,5 +1,5 @@
 /**
- * Custom SVG icons from docs/PROMPT-designsystem.md
+ * Custom SVG icons from docs/guides/designsystem.md
  * All icons: 1.8px stroke, rounded line caps, subtle fills
  */
 
@@ -141,23 +141,4 @@ export function ZoneIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
   )
 }
 
-interface LogoIconProps {
-  accent?: string
-  warm?: string
-  size?: number
-}
-
-export function LogoIcon({ accent = '#3D6B4F', warm = '#C4956A', size = 48 }: LogoIconProps) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
-      <circle cx="24" cy="28" r="16" fill={accent} opacity="0.08" />
-      <path d="M24 8c-3 0-6 3-6 7 0 2 .8 3.5 2 4.5C16 21 13 24 13 28c0 5 4.9 9 11 9s11-4 11-9c0-4-3-7-7-8.5 1.2-1 2-2.5 2-4.5 0-4-3-7-6-7z" fill={accent} opacity="0.15" />
-      <path d="M24 8c-3 0-5 2.5-5 6 0 1.8.8 3.2 2 4" stroke={accent} strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M24 8c3 0 5 2.5 5 6 0 1.8-.8 3.2-2 4" stroke={accent} strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M14 28c0 4.5 4.5 8 10 8s10-3.5 10-8c0-3.5-3-6.5-6.5-7" stroke={accent} strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M17.5 21c-2 1.5-3.5 4-3.5 7" stroke={accent} strokeWidth="2.2" strokeLinecap="round" />
-      <line x1="24" y1="5" x2="24" y2="10" stroke={warm} strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M21 6c1-1 2-1.5 3-1.5s2 .5 3 1.5" stroke={warm} strokeWidth="2" strokeLinecap="round" />
-    </svg>
-  )
-}
+export { SymbolSprout as LogoIcon } from '../brand'
