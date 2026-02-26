@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import type { Zone } from './data/types'
 import { CropList, CropPage, ZoneSelector } from './components/pages'
+import { useLocalStorage } from './hooks/useLocalStorage'
 
 type View = 'list' | 'crop'
 
 function App() {
   const [view, setView] = useState<View>('list')
   const [selectedCrop, setSelectedCrop] = useState<string | null>(null)
-  const [userZone, setUserZone] = useState<Zone>(4)
+  const [userZone, setUserZone] = useLocalStorage<Zone>('odlingsguiden-zone', 4)
   const [showZoneModal, setShowZoneModal] = useState(false)
 
   return (
