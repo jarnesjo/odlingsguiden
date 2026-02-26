@@ -41,7 +41,7 @@ steps:
     title: "Set up theme"
     status: done
     details: |
-      - src/theme/tokens.ts — colors, spacing, radii (from docs/PROMPT-designsystem.md)
+      - src/theme/tokens.ts — colors, spacing, radii (from docs/guides/designsystem.md)
       - src/theme/global.css — CSS custom properties, base reset, font imports
       - Typography: Fraunces (headings), Lora (body), system-font (UI)
       - Self-hosted fonts via @fontsource (no external requests)
@@ -90,7 +90,7 @@ decisions:
   css_approach: "CSS Modules + CSS custom properties for design tokens"
   fonts: "Self-hosted via @fontsource/fraunces and @fontsource/lora"
   routing: "useState navigation for now, add react-router later"
-  design_source: "docs/PROMPT-designsystem.md is canonical (not wireframe values)"
+  design_source: "docs/guides/designsystem.md is canonical (not wireframe values)"
   prototypes: "Preserved in prototypes/ as reference"
 
 structure: |
