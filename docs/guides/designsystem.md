@@ -269,8 +269,8 @@ UI-text (knappar, labels, felmeddelanden) ska följa samma ton som grödtexterna
 |-----|------------|
 | `grodguiden-designguide.jsx` | Interaktiv designguide med paletter, ikoner, app-preview |
 | `grodguiden-wireframe.jsx` | Huvudprototyp – se befintliga komponenter som referens |
-| `PROMPT-designsystem.md` | Denna fil |
-| `PROMPT-lagg-till-groda.md` | Tonguide för grödtexter (se steg 5 i den prompten) |
+| `docs/guides/designsystem.md` | Denna fil |
+| `docs/guides/ny-groda.md` | Tonguide för grödtexter (se steg 5 i den filen) |
 
 ---
 

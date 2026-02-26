@@ -202,8 +202,8 @@ Lägg sedan till grödan i preview-sektionerna längre ner i filen (stora visnin
 |-----|----------|
 | `grodguiden-illustrationer.jsx` | Befintliga illustrationer (Morot, Tomat) + preview |
 | `grodguiden-designguide.jsx` | Paletter, ikoner, typografi |
-| `PROMPT-designsystem.md` | Fullständigt designsystem |
-| `PROMPT-lagg-till-groda.md` | Tonguide och gröddata-struktur |
+| `docs/guides/designsystem.md` | Fullständigt designsystem |
+| `docs/guides/ny-groda.md` | Tonguide och gröddata-struktur |
 
 ---
 
