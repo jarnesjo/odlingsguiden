@@ -164,11 +164,10 @@ Frukt är extra naturligt för er – om ni odlar eller planerar att odla frukt 
 ## Fas 3: Lansering (Q3–Q4 2026) 🔵 Planerad
 
 - [ ] 30+ grönsaker, 10+ bär, 12+ kryddor, 5+ frukt
-- [ ] React Native-app klar (iOS + Android)
-- [ ] "Min odling" – spara vad du odlar, få påminnelser
-- [ ] Engångsköp (49–79 kr) via App Store + Google Play
+- [ ] Webbapp live på lillabosgarden.se/odlingsguiden
 - [ ] Lanseringskampanj via @lillabosgarden Instagram + odlarforum
-- [ ] Korsmarknadsföring: grönsakskassar ↔ app, gårdsbutik ↔ webb
+- [ ] Korsmarknadsföring: grönsakskassar ↔ webbapp, gårdsbutik ↔ webb
+- [ ] Utvärdera behov av native-app baserat på användartrafik
 
 ---
 
@@ -184,33 +183,29 @@ Frukt är extra naturligt för er – om ni odlar eller planerar att odla frukt 
 
 ## Affärsmodell
 
-### Ny modell: Gratis webb + Betald app
+### Gratis webbapp först, native-app senare
 
-Webben (lillabosgarden.se/grodguiden) är helt gratis – fungerar som marknadsföring för gården och appen. Appen (React Native) kostar en engångssumma och ger en bättre upplevelse.
+**Steg 1 (nu):** Bygg en gratis webbapp – öppen för alla, driver trafik via SEO, och bevisar konceptet. Webben är huvudprodukten och ska vara komplett i sig.
 
-| | Webb (gratis) | App (49–79 kr engångsköp) |
-|---|--------------|--------------------------|
+**Steg 2 (framtida):** Native-app (iOS/Android) som valfri betalversion. Samma innehåll men bättre upplevelse. Användare kan välja att stödja projektet genom att betala för bekvämligheten.
+
+| | Webbapp (gratis) | Native-app (framtida, betald) |
+|---|-----------------|-------------------------------|
 | Allt innehåll | ✓ Alla profiler | ✓ Alla profiler |
-| Sök & filter | Grundläggande | Snabb, offline-sökbar |
+| Sök & filter | ✓ Full funktionalitet | ✓ Snabb, offline-sökbar |
 | Säsongsvy | ✓ | ✓ + push-notiser |
 | Offline | ✗ | ✓ Full offline-åtkomst |
-| Upplevelse | Webbsida | App-känsla (smooth, snabb) |
+| Upplevelse | Webbapp | Native app-känsla |
 | Zonminne | Sessionsbaserat | Sparar dina inställningar |
 | Min odling | ✗ | Spara vad du odlar |
 | SEO | ✓ Driver trafik | – |
 | Koppling Lilla Bosgården | ✓ Direkt på sajten | Länk i meny + "Från Lilla Bosgården" |
 
-**Varför inte prenumeration?** Innehållet finns gratis på webben, så en prenumeration på 399 kr/år är svårmotiverad. Men ett engångsköp för bekvämligheten – snabb åtkomst, offline, app-känsla – det köper folk utan att blinka.
+**Varför gratis webbapp först?** Validera att innehållet och upplevelsen håller innan vi investerar i native-app. Webben bygger publik, SEO-trafik och varumärke. Native-appen blir ett naturligt nästa steg när det finns en etablerad användarbas.
 
-**Koppling till gårdens produkter:** Varje profil kan ha en diskret sektion: "Vill du inte odla själv? Moroten finns i våra grönsakskassar." Inte påträngande, utan hjälpsamt. Självplock av blommor, ägg i gårdsbutiken – allt kan korsrefereras naturligt.
+**Betalmodell för native-appen:** Engångsköp (pris TBD) – inte prenumeration. Användaren betalar för bekvämligheten: offline-åtkomst, app-känsla, push-notiser. Samma innehåll som webben, men smidigare.
 
-### Intäktsscenario (år 1)
-
-- Webben driver 2 000–5 000 besökare/månad via SEO
-- 5% laddar ner appen = 100–250 köp
-- 200 × 69 kr = ~14 000 kr
-- Plus: Ökad trafik till gården, fler kassekunder, stärkt varumärke
-- Målet: validera att folk betalar för bekvämlighet, samtidigt som webben bygger Lilla Bosgårdens varumärke
+**Koppling till gårdens produkter:** Varje profil kan ha en diskret sektion: "Vill du inte odla själv? Moroten finns i våra grönsakskassar." Inte påträngande, utan hjälpsamt.
 
 ---
 
@@ -259,7 +254,7 @@ Webben (lillabosgarden.se/grodguiden) är helt gratis – fungerar som marknadsf
 | Companion planting | ✓ | Delvis | ✓ | ✗ |
 | Bär, Kryddor & Frukt | ✓ | Delvis | Delvis | ✗ |
 | Offline | Planerat | ✗ | ✗ | ✗ |
-| Pris | 399 kr/år | Gratis | $40/år | $60/år |
+| Pris | Gratis (webb) | Gratis | $40/år | $60/år |
 
 **Vårt gap:** Ingen befintlig app kombinerar näringskurvor + nordisk klimatanpassning + djup per-profil-data. Och ingen har fruktträd med pollinationsguider och zonanpassade sortrekommendationer.
 
