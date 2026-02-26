@@ -28,6 +28,13 @@
   --color-warning: #B54A3F;
   --color-warning-light: #F5DDD9;
   --color-water: #4A7A8A;
+  --color-accent-muted: #5A8B6F;
+  --color-chart-n: #4CAF50;
+  --color-chart-p: #FF9800;
+  --color-chart-k: #7B1FA2;
+  --color-zone-outdoor: #E3F2FD;
+  --color-zone-greenhouse: #FFF3CD;
+  --color-zone-greenhouse-text: #E6A200;
 
   /* Typography */
   --font-heading: 'Fraunces', Georgia, serif;

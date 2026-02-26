@@ -21,6 +21,9 @@ export const colors = {
     herbs: { primary: '#6B7D3E', light: '#DDE5C8' },
   },
 
+  // Accent variants
+  accentMuted: '#5A8B6F',
+
   // UI
   background: '#F5F2EB',
   card: '#FEFDFB',
@@ -30,6 +33,16 @@ export const colors = {
   warning: '#B54A3F',
   warningLight: '#F5DDD9',
   water: '#4A7A8A',
+
+  // Chart
+  chartN: '#4CAF50',
+  chartP: '#FF9800',
+  chartK: '#7B1FA2',
+
+  // Zone badge
+  zoneOutdoor: '#E3F2FD',
+  zoneGreenhouse: '#FFF3CD',
+  zoneGreenhouseText: '#E6A200',
 } as const
 
 export const fonts = {
