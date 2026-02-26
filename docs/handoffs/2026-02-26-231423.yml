@@ -1,0 +1,88 @@
+meta:
+  date: 2026-02-26
+  author: claude
+  phase: "Fas 1 – Grund"
+  status: aktiv
+  session_notes: |
+    Session 4. Slutförde migrationsplanens steg 7–9.
+    Migrerade alla UI-komponenter från prototypen till React + TypeScript + CSS Modules.
+    56 nya filer skapade: 6 leaf-komponenter, 18 section-komponenter, 3 page-komponenter.
+    Lade till useLocalStorage hook för att spara vald zon.
+    Uppdaterade ROADMAP.md — 1.2 (separera data) markerad som klar.
+    Hela 9-stegs migrationen är nu komplett.
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript (strict mode)
+    - Recharts 3.7 (NutritionChart)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  src:
+    - src/main.tsx (entry, font-imports, global CSS)
+    - src/App.tsx (navigation state, useLocalStorage för zon)
+    - src/hooks/useLocalStorage.ts
+    - src/data/types.ts (285 rader, alla typer)
+    - src/data/zones.ts
+    - src/data/difficulty.ts
+    - src/data/categories.ts
+    - src/data/crops/index.ts (barrel, CROPS + CROP_LIST)
+    - src/data/crops/{morot,tomat,potatis,hallon,basilika}.ts
+    - src/theme/tokens.ts (colors, fonts, spacing, radii + chart/zone tokens)
+    - src/theme/global.css (CSS custom properties, reset)
+    - src/components/ui/ (Section, DifficultyBadge, ZoneBadge, PhBar, NutritionChart, HarvestCalc + index.ts)
+    - src/components/crop/ (CropHeader + 17 section-komponenter + index.ts)
+    - src/components/pages/ (CropPage, CropList, ZoneSelector + index.ts)
+    - src/components/icons/index.tsx (11 ikoner)
+    - src/components/illustrations/ (4 grödor × 2 storlekar)
+  prototypes:
+    - prototypes/grodguiden-wireframe.jsx (referens, ej längre aktiv kod)
+    - prototypes/grodguiden-designguide.jsx
+    - prototypes/grodguiden-illustrationer.jsx
+    - prototypes/grodguiden-logotyper.jsx
+  docs:
+    - docs/ROADMAP.md
+    - docs/plans/1-vite-react-ts-migration.yml (alla 9 steg klara)
+    - docs/PROMPT-lagg-till-groda.md
+    - docs/PROMPT-designsystem.md
+    - docs/PROMPT-svg-illustrationer.md
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "Roadmap 1.3: Korsreferenser — klickbara chips i companion planting, växtföljd, bra att veta"
+  - "  Companion-data behöver id-fält som matchar CROP_LIST id"
+  - "  CompanionSection, RotationSection m.fl. renderar klickbara chips istället för text"
+  - "  Kräver onNavigate callback genom komponentträdet"
+  - "Roadmap 1.4: Säsongsvy v1 — månadsbaserad startskärm"
+  - "Roadmap 1.5: Frukt som fjärde kategori"
+  - "Roadmap 1.6: Fler profiler → 16 totalt"
+
+context:
+  decisions:
+    - "CSS Modules med CSS custom properties — inga inline styles utom dynamiska färger via --variabel"
+    - "Komponentstruktur: ui/ (leaf), crop/ (sections), pages/ (orchestrators)"
+    - "CropPage gör all data-derivation (timeline zone lookup, variety filtering) — sections får rena slices"
+    - "useLocalStorage sparar zon med nyckel 'odlingsguiden-zone'"
+    - "Appens titel ändrad från Grödguiden till Odlingsguiden i CropList"
+    - "Bundle size ~616KB (mestadels Recharts) — kan code-splittas senare"
+  constraints:
+    - "All text i appen ska vara på svenska, kompis-ton"
+    - "Prototypfilerna bevaras i prototypes/ som referens"
+    - "Max 480px bredd, mobilfokuserad design"
+
+known_issues:
+  - "Potatis saknar illustration (finns ej i prototypen)"
+  - "Bundle size varning (>500KB) pga Recharts — code-splitting ej implementerat ännu"
+  - "Inga korsreferenser ännu — companion/rotation nämner grödor som text, ej klickbara"
