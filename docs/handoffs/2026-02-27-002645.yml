@@ -1,0 +1,106 @@
+meta:
+  date: 2026-02-27
+  author: claude
+  phase: "Fas 1: Grund"
+  status: aktiv
+  session_notes: |
+    Session 5 (fortsättning). Strukturarbete — roadmap, konventioner, filorganisation.
+
+    Gjort:
+    - Omstrukturerade ROADMAP.md till Travspelet-stil: numrerade faser med substeg (1.1, 1.2...),
+      checkboxar, detaljkontext under varje steg, Idéer-sektion, Referens-sektion
+    - Återställde all detalj som komprimerades för aggressivt (frukt-sektionen 1.6,
+      profiltabeller 1.7, affärsmodell, teknikstack, konkurrentanalys, "Vårt gap", filtabell)
+    - Flyttade PROMPT-filer till docs/guides/ med tydligare namn:
+        PROMPT-lagg-till-groda.md → guides/ny-groda.md
+        PROMPT-designsystem.md → guides/designsystem.md
+        PROMPT-svg-illustrationer.md → guides/svg-illustrationer.md
+    - Döpte om planfiler till ny konvention: 1.2-separera-data.yml, 1.3-grafisk-profil.yml
+    - Uppdaterade alla PROMPT-referenser i: CLAUDE.md, ROADMAP.md, guides/, plans/, src/
+    - Uppdaterade CLAUDE.md: roadmap-workflow (flexibel ordning, idéer-sektion),
+      plans/guides/docs-struktur, emoji-förbudsregel
+    - Sparade användarpreferens i memory: inga emojis, professionellt och rent
+    - Skrev 9-stegs implementationsplan för grafisk profil (1.3-grafisk-profil.yml)
+
+    Påbörjat men avbrutet:
+    - Inventering av prototypes/grodguiden-logotyper.jsx — innehåller 4 symbolkoncept
+      (Grodden, Bladet, Grödan, Sol & Blad), app-ikoner (mörk/ljus), favicons (3 varianter),
+      kontextmockups (splash, webbheader, App Store), rekommendation.
+      INGET av detta är migrerat till src/ ännu. Ska hanteras innan prototypes/ arkiveras.
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript (strict mode)
+    - Recharts 3.7 (NutritionChart)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md (omstrukturerad: faser + substeg + idéer + referens)
+    - docs/guides/ny-groda.md (var PROMPT-lagg-till-groda.md)
+    - docs/guides/designsystem.md (var PROMPT-designsystem.md)
+    - docs/guides/svg-illustrationer.md (var PROMPT-svg-illustrationer.md)
+    - docs/plans/1.2-separera-data.yml (klar)
+    - docs/plans/1.3-grafisk-profil.yml (redo att implementera)
+    - docs/handoffs/
+  src:
+    - src/components/icons/index.tsx (11 SVG-ikoner, OANVÄNDA)
+    - src/components/illustrations/ (4 illustrationer, OANVÄNDA)
+    - src/theme/tokens.ts
+    - src/data/types.ts
+    - src/data/crops/*.ts (5 grödfiler med emoji)
+    - src/components/pages/ (CropList, CropPage, ZoneSelector)
+    - src/components/crop/ (18 sektionskomponenter)
+    - src/components/ui/ (Section, DifficultyBadge, ZoneBadge m.fl.)
+  prototypes:
+    - prototypes/grodguiden-wireframe.jsx (ersatt av src/, referens)
+    - prototypes/grodguiden-designguide.jsx (ersatt av tokens.ts + guides/, referens)
+    - prototypes/grodguiden-illustrationer.jsx (ersatt av src/components/illustrations/)
+    - prototypes/grodguiden-logotyper.jsx (EJ MIGRERAT — 4 symbolkoncept, app-ikoner, favicons)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "Inventera prototypes/grodguiden-logotyper.jsx — bestäm vad som ska migreras till src/"
+  - "  4 symbolkoncept (Grodden rekommenderad), app-ikoner, favicons, kontextmockups"
+  - "  Behöver beslut: vilken symbol? Migrera som React-komponenter eller exportera SVG?"
+  - "Implementera 1.3 Grafisk profil (docs/plans/1.3-grafisk-profil.yml):"
+  - "  Steg 1: Icon-registry (Icon.tsx) + CropGraphic.tsx"
+  - "  Steg 2: ~20 nya SVG-ikoner"
+  - "  Steg 3: PotatoIllustration"
+  - "  Steg 4-5: Uppdatera types.ts + alla datafiler (emoji → semantiska ID)"
+  - "  Steg 6-8: Uppdatera Section + alla komponenter"
+  - "  Steg 9: Slutverifiering"
+  - "Efter grafisk profil: bestäm om prototypes/ ska arkiveras eller tas bort"
+
+context:
+  decisions:
+    - "INGA EMOJIS i appen — all grafik ska vara egengjord custom SVG"
+    - "Roadmap-struktur: faser med substeg (1.1, 1.2...), checkboxar, Idéer-sektion, flexibel ordning"
+    - "Planfil-konvention: {fas}.{steg}-slug.yml matchar roadmap-steget exakt"
+    - "PROMPT-filer → docs/guides/ med tydliga namn (ny-groda.md, designsystem.md, svg-illustrationer.md)"
+    - "Icon-registry pattern: data lagrar semantiska string-ID, central Icon-komponent mappar till SVG"
+    - "Grafisk profil prioriteras före korsreferenser"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Alla ikoner: 1.8px stroke, round caps, 24x24, monokrom, subtil fill (0.12-0.20 opacity)"
+    - "All text på svenska, kompis-ton"
+    - "Prototypes/ får inte arkiveras förrän logotyp-innehållet är hanterat"
+
+known_issues:
+  - "11 SVG-ikoner + 4 illustrationer finns men används inte i appen"
+  - "Potatis saknar illustration"
+  - "Bundle size >500KB pga Recharts"
+  - "prototypes/grodguiden-logotyper.jsx ej migrerat (symboler, app-ikoner, favicons)"
+  - "Handoffs refererar fortfarande till gamla PROMPT-filnamn (historiska, lämnas)"
