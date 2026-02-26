@@ -1,150 +1,86 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code when working with this repository.
 
-## Global Standards
+---
 
-```yaml
-yml:
-  indentation: 2 spaces
-  tabs: never
-  validate_before_save: true
-  multiline_strings: use_pipe_operator
-```
+## Roadmap-Driven Workflow
+
+`docs/ROADMAP.md` is the source of truth for what to build and in what order.
+
+- **On session start:** Read `docs/ROADMAP.md` and the latest `docs/handoffs/*.yml` to understand current progress.
+- **Before starting work:** Check which roadmap step is next. Suggest it if the user hasn't specified a task.
+- **After completing work:** Update `docs/ROADMAP.md` — check off completed items and note progress.
+- **When proposing tasks:** Always reference the relevant roadmap section.
 
 ---
 
 ## Session Continuity
 
+When context gets long or before ending a session, write a handoff file.
+
+**Handoff file spec:**
+
+- Path: `docs/handoffs/{YYYY-MM-DD-HHmmss}.yml`
+- Timestamp: use `date +%Y-%m-%d-%H%M%S` (never estimate)
+- Format:
+
 ```yaml
-handoff_sections: &handoff_sections
-  - meta # date, author, phase, status, session_notes
-  - tech_stack
-  - structure
-  - database
-  - api_endpoints
-  - commands
-  - next_steps # specific tasks in progress, be explicit and actionable
-  - context # decisions made, constraints, reasoning
-  - known_issues
+meta:
+  date: YYYY-MM-DD
+  author: claude
+  phase: "current roadmap phase"
+  status: aktiv | avslutad
+  session_notes: |
+    Brief summary of what happened this session.
 
-on_session_start:
-  - action: read
-    path: docs/roadmap.md
-    purpose: understand project plan and current phase
-  - action: check
-    path: docs/handoffs/*.yml
-    select: latest_by_filename
-    always: true
-    then:
-      if_found:
-        action: notify_user
-        message: |
-          📋 Hittade handoff från {handoff_date}: "{handoff_next_step}"
-          Skriv "resume" för att fortsätta där vi slutade, eller kör vidare utan.
-      if_not_found:
-        action: summarize_repo_state
-        purpose: orient Claude in project without handoff
+tech_stack:
+  current: [list of current tools/libs]
+  planned:
+    web: ...
+    app: ...
 
-on_context_window_75_percent:
-  action: write
-  path: docs/handoffs/{YYYY-MM-DD-HHmmss}.yml
-  format: yaml
-  timestamp: use_system_time_exactly
-  timestamp_format: YYYY-MM-DD-HHHmmss
-  timestamp_command: "date +%Y-%m-%d-%H%M%S"
-  timestamp_source: shell_command_not_estimated
-  sections: *handoff_sections
-  then: notify_user
-  message: |
-    Handoff sparad till docs/handoffs/{filename}.
-    Kör /clear och säg "resume" för att fortsätta i ny session.
+structure:
+  prototypes: [file list]
+  docs: [file list]
 
-on_post_compact:
-  action: read
-  path: docs/handoffs/*.yml
-  select: latest_by_filename
-  purpose: restore context lost during compaction
-  fallback: if_no_handoff_exists then summarize current repo state and notify user
+database: null # or description when applicable
+api_endpoints: null # or list when applicable
+commands: null # or list of build/test/lint commands
 
-on_clear_context:
-  - action: write
-    path: docs/handoffs/{YYYY-MM-DD-HHHmmss}.yml
-    format: yaml
-    timestamp: use_system_time_exactly
-    timestamp_format: YYYY-MM-DD-HHmmss
-    timestamp_command: "date +%Y-%m-%d-%H%M%S"
-    timestamp_source: shell_command_not_estimated
-    sections: *handoff_sections
-    purpose: save full context before clearing
-  - action: read
-    path: docs/handoffs/*.yml
-    select: latest_by_filename
-    timing: after_clear
-    purpose: immediately restore context in new session
+next_steps:
+  - "Specific actionable task 1"
+  - "Specific actionable task 2"
 
-on_end_of_session:
-  trigger: if_user_says_any_of ["bye", "hejdå", "för idag", "stänger", "avslutar", "done for today"]
-  actions:
-    - action: write
-      path: docs/handoffs/{YYYY-MM-DD-HHmmss}.yml
-      format: yaml
-      timestamp: use_system_time_exactly
-      timestamp_format: YYYY-MM-DD-HHmmss
-      timestamp_command: "date +%Y-%m-%d-%H%M%S"
-      timestamp_source: shell_command_not_estimated
-      sections: *handoff_sections
-    - action: update
-      path: docs/ASSET-LIST.md
-      condition: if_assets_were_modified
-      purpose: ensure asset list is up to date
-    - action: notify_user
-      message: |
-        👋 Bra jobbat idag! Sparat handoff till docs/handoffs/{filename}.
-        Imorgon: öppna projektet och Claude påminner dig automatiskt.
+context:
+  decisions:
+    - "Key decision and why"
+  constraints:
+    - "Important constraint"
 
-on_manual_handoff:
-  trigger: if_user_says_any_of ["handoff", "/handoff", "spara läge"]
-  actions:
-    - action: write
-      path: docs/handoffs/{YYYY-MM-DD-HHmmss}.yml
-      format: yaml
-      timestamp_command: "date +%Y-%m-%d-%H%M%S"
-      timestamp_source: shell_command_not_estimated
-      sections: *handoff_sections
-    - action: notify_user
-      message: |
-        💾 Handoff sparad till docs/handoffs/{filename}.
+known_issues:
+  - "Issue description"
 ```
+
+**Triggers** for writing a handoff:
+
+- User says: "bye", "hejdå", "för idag", "stänger", "avslutar", "done for today"
+- User says: "handoff", "/handoff", "spara läge"
+- Context window is getting large — proactively suggest writing one
+
+**On session start:** Check for the latest handoff and summarize it for the user.
 
 ---
 
 ## Plans & Documentation
 
-All implementation plans MUST be saved as YAML files in `docs/plans/` (e.g., `docs/plans/fas3-visualisering.yml`). YAML is the required format because:
+Implementation plans are saved as YAML files in `docs/plans/` (e.g., `docs/plans/1-separera-data.yml`).
 
-- Structured and unambiguous – reduces interpretation errors across agents and sessions
-- Consistent with the handoff file format
-- Easy to validate and follow step-by-step
+When starting a new phase or feature:
 
-When starting a new phase or feature, always:
-
-1. Check `docs/plans/` for existing plan files related to the work
+1. Check `docs/plans/` for existing plan files
 2. Write the implementation plan as YAML before coding
 3. Use the plan as a checklist during implementation
-
----
-
-## Context Management
-
-När du känner att konversationen blivit lång eller komplex, skriv proaktivt en `docs/handoffs/*.yml` med:
-
-- Vad vi jobbar med
-- Vad som är klart
-- Nästa steg
-- Kritiska beslut och constraints
-
-Meddela mig sedan så att jag kan köra /clear och du kan läsa handoff-filen.
 
 ---
 
@@ -154,9 +90,9 @@ Odlingsguiden (formerly Grödguiden) is a Swedish growing guide app — a deep, 
 
 ## Current State
 
-This is a **prototype-only codebase** — no package.json, build system, tests, or linting configured yet. The prototypes are standalone JSX files designed for use in Codesandbox or similar environments.
+**Prototype-only codebase** — no package.json, build system, tests, or linting configured yet. The prototypes are standalone JSX files designed for use in Codesandbox or similar environments.
 
-- `prototypes/grodguiden-wireframe.jsx` — Main app prototype with all crop data and UI components
+- `prototypes/grodguiden-wireframe.jsx` — Main app prototype with all crop data and UI
 - `prototypes/grodguiden-designguide.jsx` — Design system & color palettes
 - `prototypes/grodguiden-illustrationer.jsx` — SVG crop illustrations
 - `prototypes/grodguiden-logotyper.jsx` — Logo concepts & branding
@@ -176,7 +112,7 @@ Key data structures:
 
 - **ZONE_INFO** — Sweden's 8 growing zones with frost dates and frost-free days
 - **DIFFICULTY_INFO** — Enkel/Medel/Avancerad difficulty levels
-- **CROPS** — Full crop profiles (currently: morot, tomat, hallon, basilika)
+- **CROPS** — Full crop profiles (currently: morot, tomat, potatis, hallon, basilika)
 - **CROP_LIST** — Registry with id, name, emoji, family, difficulty, category
 
 Libraries: React (hooks), Recharts (nutrition graphs), pure SVG for icons/illustrations, CSS-in-JS (inline styles).
@@ -189,7 +125,7 @@ The app uses "kompis-tonen" (friend's tone) — warm, personal, sometimes humoro
 - Describe plant reactions: "Morötter blir faktiskt sötare efter frost!"
 - Dramatize important moments: "Kritisk period!" for watering stress
 - Use feelings, not percentages: "hon måste kunna andas"
-- Never use English words — always Swedish equivalents
+- Never use English words in app content — always Swedish equivalents
 - Avoid marketing speak — "Enkel" not "Superenkelt"
 - Include hard-won wisdom and real grower experience
 
@@ -209,12 +145,14 @@ The app uses "kompis-tonen" (friend's tone) — warm, personal, sometimes humoro
 - Data: Shared JSON/TS files for both platforms
 - Charts: react-native-svg + victory-native
 
+---
+
 ## Git & Commits
 
 ### Commit strategy
 
 - **Never** bundle unrelated changes in one commit
-- One commit per logical change – if in doubt, split it
+- One commit per logical change — if in doubt, split it
 - Always stage files explicitly, never `git add .`
 
 ### Commit message format
@@ -230,26 +168,26 @@ Types:
 - `feat` – new feature
 - `fix` – bug fix
 - `refactor` – restructure without behavior change
-- `assets` – pixel art assets added or modified
+- `content` – crop profiles, text content
 - `docs` – documentation, CLAUDE.md, handoffs
 - `style` – formatting, no logic change
 - `chore` – deps, config, tooling
 
-Scopes (examples): `horses`, `races`, `stables`, `auth`, `ui`, `db`, `assets`
+Scopes (examples): `crops`, `ui`, `data`, `design`, `docs`, `config`
 
 ### Examples
 
 ```text
-feat(horses): add horse queue system for stables
-feat(auth): add RequireAuth guard to protected routes
-docs(claude): update CLAUDE.md with handoff system
-assets(horses): add palomino and grey portrait variants
+feat(crops): add pea crop profile
+feat(ui): add cross-reference chips to companion section
+refactor(data): separate crop data from UI components
+content(crops): update basil tone to kompis-tonen
+docs(claude): update CLAUDE.md for Claude Code workflow
 ```
 
 ### Rules
 
 - Never commit `CLAUDE.md` changes together with feature code
-- Never commit assets together with logic changes
 - Never commit multiple features in one commit
 - Commit automatically without asking, but always as separate commits per scope
 - If multiple files changed, group by scope and propose separate commits
