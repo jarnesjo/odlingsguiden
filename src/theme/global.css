@@ -1,0 +1,100 @@
+/* ─── Design tokens as CSS custom properties ─── */
+
+:root {
+  /* Primary */
+  --color-accent: #3D6B4F;
+  --color-accent-light: #C8DEC9;
+  --color-accent-dark: #2A4A36;
+  --color-warm: #C4956A;
+  --color-warm-light: #F0E4D5;
+  --color-warm-dark: #96694A;
+  --color-earth: #8B7355;
+  --color-earth-light: #D4C4AD;
+
+  /* Category */
+  --color-cat-vegetables: #3D6B4F;
+  --color-cat-vegetables-light: #C8DEC9;
+  --color-cat-berries: #7B4B6A;
+  --color-cat-berries-light: #E8D1DF;
+  --color-cat-herbs: #6B7D3E;
+  --color-cat-herbs-light: #DDE5C8;
+
+  /* UI */
+  --color-background: #F5F2EB;
+  --color-card: #FEFDFB;
+  --color-text: #2C3028;
+  --color-text-muted: #7A7568;
+  --color-border: #E2DDD4;
+  --color-warning: #B54A3F;
+  --color-warning-light: #F5DDD9;
+  --color-water: #4A7A8A;
+
+  /* Typography */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --text-h1: 28px;
+  --text-h2: 15px;
+  --text-body: 13px;
+  --text-label: 12px;
+  --text-small: 11px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-xxl: 24px;
+  --space-section: 40px;
+
+  /* Radii */
+  --radius-card-lg: 20px;
+  --radius-card: 16px;
+  --radius-card-sm: 12px;
+  --radius-button: 14px;
+  --radius-badge: 20px;
+
+  /* Layout */
+  --max-width: 480px;
+  --page-padding: 16px;
+}
+
+/* ─── Reset & base styles ─── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+button, input, select, textarea {
+  font-family: var(--font-ui);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
