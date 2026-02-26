@@ -46,6 +46,8 @@ Plan: `docs/plans/1-separera-data.yml`
 - [ ] PotatoIllustration (200×200 + 48×48)
 - [ ] Byt alla emojis i data till semantiska ID:n
 - [ ] Uppdatera alla komponenter att rendera SVG istället för emoji
+- [ ] Appheader med logotyp (SymbolSprout + "Odlingsguiden")
+- [ ] Branda appen med rätt färgpalett, typografi och visuell profil
 - [ ] Slutverifiering – grep efter kvarvarande emoji
 
 Plan: `docs/plans/1-grafisk-profil.yml`
