@@ -1,0 +1,65 @@
+meta:
+  date: 2026-02-26
+  author: claude
+  phase: "Fas 1 – Grund"
+  status: aktiv
+  session_notes: |
+    Session 2. Initierade git-repo och pushade till GitHub (jarnesjo/odlingsguiden).
+    Skrev om CLAUDE.md helt — tog bort Cowork-specifikt handoff-system, gamla
+    projekt-referenser (horses/stables), lade till roadmap-driven workflow.
+    Uppdaterade affärsmodell till web-first strategi. Skapade migrationsplan
+    för Vite + React + TypeScript.
+
+tech_stack:
+  current:
+    - React (hooks, useState)
+    - Recharts (näringsgrafik)
+    - Pure SVG (ikoner/illustrationer)
+    - CSS-in-JS (inline styles)
+    - Inga build-verktyg, tester eller linting ännu
+  planned:
+    web: "Vite + React + TypeScript (gratis webbapp)"
+    fonts: "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    css: "CSS Modules + CSS custom properties"
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  prototypes:
+    - prototypes/grodguiden-wireframe.jsx
+    - prototypes/grodguiden-designguide.jsx
+    - prototypes/grodguiden-illustrationer.jsx
+    - prototypes/grodguiden-logotyper.jsx
+  docs:
+    - docs/ROADMAP.md
+    - docs/PROMPT-lagg-till-groda.md
+    - docs/PROMPT-designsystem.md
+    - docs/PROMPT-svg-illustrationer.md
+    - docs/plans/1-vite-react-ts-migration.yml
+
+database: null
+api_endpoints: null
+commands: null
+
+next_steps:
+  - "Implementera migrationsplanen i docs/plans/1-vite-react-ts-migration.yml"
+  - "Steg 1: Scaffolda Vite + React + TypeScript projekt"
+  - "Steg 2: Definiera TypeScript-typer baserat på wireframe-data"
+  - "Steg 3: Extrahera data till separata filer (en per gröda)"
+  - "Sedan: tema, ikoner, illustrationer, UI-komponenter"
+
+context:
+  decisions:
+    - "Git-repo skapat och pushat till github.com/jarnesjo/odlingsguiden"
+    - "CLAUDE.md omskriven för Claude Code (inte Cowork)"
+    - "Affärsmodell ändrad: gratis webbapp först, native-app som framtida betalversion"
+    - "CSS Modules valt som styling-approach (zero runtime, scoped)"
+    - "Fonts: @fontsource för self-hosted Fraunces + Lora (offline-kompatibelt)"
+    - "Design guide (PROMPT-designsystem.md) är kanonisk källa för designvärden"
+    - "Inga router behövs nu — useState navigation räcker i Fas 1"
+  constraints:
+    - "All text i appen ska vara på svenska, kompis-ton"
+    - "Prototypfilerna bevaras i prototypes/ som referens"
+
+known_issues:
+  - "Prototypfilerna har prefix grodguiden- (inte odlingsguiden-) — kosmetiskt, inte blockerande"
+  - "Wireframe och design guide har lite olika färgvärden — design guide är kanonisk"
