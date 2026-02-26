@@ -3,7 +3,7 @@ meta:
   phase: "Fas 1 – Grund"
   roadmap_ref: "1.2 Separera data från UI"
   created: 2026-02-26
-  status: pending
+  status: in_progress
 
 context: |
   The entire app lives in a single 1,696-line JSX file (prototypes/grodguiden-wireframe.jsx)
@@ -13,7 +13,7 @@ context: |
 steps:
   - id: 1
     title: "Scaffold Vite project"
-    status: pending
+    status: done
     details: |
       - npm create vite@latest with react-ts template
       - Install deps: react, react-dom, recharts
@@ -23,7 +23,7 @@ steps:
 
   - id: 2
     title: "Define TypeScript types"
-    status: pending
+    status: done
     details: |
       - Create src/data/types.ts
       - Key types: Crop (25+ fields), CropListEntry, ZoneInfo, DifficultyLevel
@@ -31,7 +31,7 @@ steps:
 
   - id: 3
     title: "Extract data files"
-    status: pending
+    status: done
     details: |
       - One file per crop: src/data/crops/{morot,tomat,potatis,hallon,basilika}.ts
       - src/data/zones.ts, difficulty.ts, categories.ts
@@ -39,7 +39,7 @@ steps:
 
   - id: 4
     title: "Set up theme"
-    status: pending
+    status: done
     details: |
       - src/theme/tokens.ts — colors, spacing, radii (from docs/PROMPT-designsystem.md)
       - src/theme/global.css — CSS custom properties, base reset, font imports
@@ -48,7 +48,7 @@ steps:
 
   - id: 5
     title: "Migrate icons (11 icons)"
-    status: pending
+    status: done
     details: |
       - Extract from prototypes/grodguiden-designguide.jsx
       - Each icon = own component with color + size props
@@ -56,7 +56,7 @@ steps:
 
   - id: 6
     title: "Migrate illustrations"
-    status: pending
+    status: done
     details: |
       - Extract from prototypes/grodguiden-illustrationer.jsx
       - Detailed (200x200) + list icons (48x48)

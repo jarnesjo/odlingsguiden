@@ -1,0 +1,92 @@
+meta:
+  date: 2026-02-26
+  author: claude
+  phase: "Fas 1 – Grund"
+  status: aktiv
+  session_notes: |
+    Session 3. Implementerade migrationsplanens steg 1–6 av 9.
+    Scaffoldade Vite + React + TypeScript, definierade alla typer,
+    extraherade data (5 grödor + zones/difficulty/categories),
+    satte upp tema med design tokens + self-hosted fonts,
+    migrerade 11 SVG-ikoner och 4 illustrationer (detail + list).
+    Allt kompilerar utan fel. Steg 7–8 (UI-komponenter + hooks) kvar.
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript (strict mode)
+    - Recharts 3.7 (installerad, ej använd ännu)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS custom properties + global.css
+  planned:
+    css_modules: "CSS Modules för komponent-scoped styles (steg 7)"
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  src:
+    - src/main.tsx (entry, font-imports, global CSS)
+    - src/App.tsx (placeholder)
+    - src/data/types.ts (285 rader, alla typer)
+    - src/data/zones.ts
+    - src/data/difficulty.ts
+    - src/data/categories.ts
+    - src/data/crops/index.ts (barrel, CROPS + CROP_LIST)
+    - src/data/crops/morot.ts
+    - src/data/crops/tomat.ts
+    - src/data/crops/potatis.ts
+    - src/data/crops/hallon.ts
+    - src/data/crops/basilika.ts
+    - src/theme/tokens.ts (colors, fonts, spacing, radii)
+    - src/theme/global.css (CSS custom properties, reset)
+    - src/components/icons/index.tsx (11 ikoner)
+    - src/components/illustrations/index.ts (barrel)
+    - src/components/illustrations/CarrotIllustration.tsx
+    - src/components/illustrations/TomatoIllustration.tsx
+    - src/components/illustrations/RaspberryIllustration.tsx
+    - src/components/illustrations/BasilIllustration.tsx
+  prototypes:
+    - prototypes/grodguiden-wireframe.jsx (referens för steg 7)
+    - prototypes/grodguiden-designguide.jsx
+    - prototypes/grodguiden-illustrationer.jsx
+    - prototypes/grodguiden-logotyper.jsx
+  docs:
+    - docs/ROADMAP.md
+    - docs/plans/1-vite-react-ts-migration.yml
+    - docs/PROMPT-lagg-till-groda.md
+    - docs/PROMPT-designsystem.md
+    - docs/PROMPT-svg-illustrationer.md
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "Steg 7: Migrera UI-komponenter (största steget)"
+  - "  7a. Leaf: Section, DifficultyBadge, ZoneBadge, PhBar, HarvestCalc, NutritionChart"
+  - "  7b. Sections: Watering, Soil, Timeline, Companions, Varieties, Problems, GoodToKnow, Sowing, SeedSaving, Storage"
+  - "  7c. Pages: CropPage (orchestrator), CropList (med sök/filter/kategori), ZoneSelector"
+  - "  7d. Root: App.tsx med useState-navigation (lista ↔ grödvy ↔ zonväljare)"
+  - "Steg 8: useLocalStorage hook + verifiering (alla 5 grödor, tsc, visuell jämförelse)"
+  - "Referens: prototypes/grodguiden-wireframe.jsx rad 852–1696 har all UI-kod"
+
+context:
+  decisions:
+    - "Fraunces (rubriker) + Lora (brödtext) + system-font (UI) – installerade via @fontsource"
+    - "Design tokens finns som både TS-konstanter (tokens.ts) och CSS custom properties (global.css)"
+    - "Illustrationer: potatis saknas i prototypen, krusbär och äpple finns men behöver inte migreras nu"
+    - "CROP_LIST har 20 entries (5 aktiva + 15 locked) – matchar prototypen exakt"
+    - "Hallon har extra fält: pruning, propagation. Basilika har extra: harvest. Typerna stöder detta."
+    - "Migrationsplan: docs/plans/1-vite-react-ts-migration.yml – steg 1-6 klara, 7-9 kvar"
+  constraints:
+    - "All text i appen ska vara på svenska, kompis-ton"
+    - "Prototypfilerna bevaras i prototypes/ som referens"
+    - "Max 480px bredd, mobilfokuserad design"
+
+known_issues:
+  - "Potatis saknar illustration (finns ej i prototypen) – behöver skapas senare"
+  - "Prototypfilerna har prefix grodguiden- (inte odlingsguiden-) – kosmetiskt"
