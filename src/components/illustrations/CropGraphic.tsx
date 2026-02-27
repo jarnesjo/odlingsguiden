@@ -5,6 +5,9 @@ import { TomatoIllustration, TomatoIcon } from './TomatoIllustration'
 import { RaspberryIllustration, RaspberryIcon } from './RaspberryIllustration'
 import { BasilIllustration, BasilIcon } from './BasilIllustration'
 import { PotatoIllustration, PotatoIcon } from './PotatoIllustration'
+import { PeaIllustration, PeaIcon } from './PeaIllustration'
+import { SquashIllustration, SquashIcon } from './SquashIllustration'
+import { LettuceIllustration, LettuceIcon } from './LettuceIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon } from '../icons'
 
 interface SizeProps {
@@ -17,6 +20,9 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   potatis: { large: PotatoIllustration, small: PotatoIcon },
   hallon: { large: RaspberryIllustration, small: RaspberryIcon },
   basilika: { large: BasilIllustration, small: BasilIcon },
+  artor: { large: PeaIllustration, small: PeaIcon },
+  squash: { large: SquashIllustration, small: SquashIcon },
+  sallat: { large: LettuceIllustration, small: LettuceIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
