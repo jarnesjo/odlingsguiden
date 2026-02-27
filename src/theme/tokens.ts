@@ -34,10 +34,10 @@ export const colors = {
   warningLight: '#F5DDD9',
   water: '#4A7A8A',
 
-  // Chart
-  chartN: '#4CAF50',
-  chartP: '#FF9800',
-  chartK: '#7B1FA2',
+  // Chart (N-P-K from project palette)
+  chartN: '#3D6B4F',
+  chartP: '#C4956A',
+  chartK: '#7B4B6A',
 
   // Zone badge
   zoneOutdoor: '#E3F2FD',
