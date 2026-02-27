@@ -433,6 +433,107 @@ export function ChevronRightIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
   )
 }
 
+// ─── Missing timeline icons ─────────────────────────────
+
+export function PlantIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Planta med rötter i jord */}
+      <path d="M12 11c0-3 2.5-6 6-7-1 3.5-3.5 6-6 7z" fill={color} opacity="0.15" />
+      <path d="M12 11c0-3 2.5-6 6-7-1 3.5-3.5 6-6 7z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M12 13c0-2.5-2-5-5-5.5.5 3 2.5 5 5 5.5z" fill={color} opacity="0.12" />
+      <path d="M12 13c0-2.5-2-5-5-5.5.5 3 2.5 5 5 5.5z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M12 10v7" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Jordlinje */}
+      <path d="M5 17h14" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Rötter */}
+      <path d="M12 17v4M10 18l-1.5 3M14 18l1.5 3" stroke={color} strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+    </svg>
+  )
+}
+
+export function GrowthIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Växande frukt/cirkel med uppåtpil */}
+      <circle cx="12" cy="13" r="6" fill={color} opacity="0.12" />
+      <circle cx="12" cy="13" r="6" stroke={color} strokeWidth="1.8" />
+      <path d="M12 16v-6" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M9.5 12.5L12 10l2.5 2.5" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Litet blad uppe */}
+      <path d="M12 7c1-2 3-3 5-3-0.5 2-2 3.5-5 3z" fill={color} opacity="0.15" />
+      <path d="M12 7c1-2 3-3 5-3-0.5 2-2 3.5-5 3z" stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+export function SupportIcon({ color = '#8B7355', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Stöd-pinne */}
+      <line x1="8" y1="4" x2="8" y2="20" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Planta som klättrar */}
+      <path d="M8 16c2-1 4-3 4-6" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M12 10c0-2 1.5-3.5 3-4" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Bind-punkter */}
+      <circle cx="8" cy="10" r="1.2" fill={color} opacity="0.4" />
+      <circle cx="8" cy="14" r="1.2" fill={color} opacity="0.4" />
+      {/* Jordlinje */}
+      <path d="M5 20h10" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+export function PropagationIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Moderplanta */}
+      <path d="M8 14V8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M8 8c0-2 1.5-4 3.5-4.5C11 5 9.5 7 8 8z" fill={color} opacity="0.15" />
+      <path d="M8 8c0-2 1.5-4 3.5-4.5C11 5 9.5 7 8 8z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M8 10c0-2-1.5-3.5-3-4 .5 2 1.5 3.5 3 4z" fill={color} opacity="0.12" />
+      <path d="M8 10c0-2-1.5-3.5-3-4 .5 2 1.5 3.5 3 4z" stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
+      {/* Delnings-pil */}
+      <path d="M11 14h4" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M13.5 12l2 2-2 2" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Ny planta */}
+      <path d="M18 14v-3" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M18 11c.5-1.5 2-2.5 3-2.5-.5 1.5-1.5 2.5-3 2.5z" fill={color} opacity="0.15" />
+      <path d="M18 11c.5-1.5 2-2.5 3-2.5-.5 1.5-1.5 2.5-3 2.5z" stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
+      {/* Jordlinje */}
+      <path d="M4 18h16" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M8 14v4M18 14v4" stroke={color} strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+    </svg>
+  )
+}
+
+export function DormantIcon({ color = '#8B7355', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Vissnande/vilande planta */}
+      <path d="M12 22v-8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M12 14c-1.5-1-3-3.5-2-6 2 1 3 3.5 2 6z" fill={color} opacity="0.1" />
+      <path d="M12 14c-1.5-1-3-3.5-2-6 2 1 3 3.5 2 6z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" />
+      {/* Nedhängande blad */}
+      <path d="M12 12c1.5-0.5 3.5-1 4-3.5-2 0-3.5 1.5-4 3.5z" fill={color} opacity="0.08" />
+      <path d="M12 12c1.5-0.5 3.5-1 4-3.5-2 0-3.5 1.5-4 3.5z" stroke={color} strokeWidth="1.5" strokeLinejoin="round" opacity="0.6" />
+      {/* Z z z - vilar */}
+      <text x="16" y="8" fill={color} fontSize="6" fontWeight="bold" opacity="0.5">z</text>
+      <text x="18.5" y="5.5" fill={color} fontSize="5" fontWeight="bold" opacity="0.35">z</text>
+    </svg>
+  )
+}
+
+export function ClockIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="9" fill={color} opacity="0.1" />
+      <circle cx="12" cy="12" r="9" stroke={color} strokeWidth="1.8" />
+      <path d="M12 6v6l4 3" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function DifficultyDot({ color, size = 10 }: { color: string; size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 10 10" fill="none" style={{ display: 'inline-block', verticalAlign: 'middle' }}>

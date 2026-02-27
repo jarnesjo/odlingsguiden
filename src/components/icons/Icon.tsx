@@ -36,6 +36,12 @@ import {
   CheckIcon,
   SeedlingIcon,
   ChevronRightIcon,
+  PlantIcon,
+  GrowthIcon,
+  SupportIcon,
+  PropagationIcon,
+  DormantIcon,
+  ClockIcon,
 } from './index'
 
 const ICON_MAP: Record<string, ComponentType<IconProps>> = {
@@ -74,6 +80,12 @@ const ICON_MAP: Record<string, ComponentType<IconProps>> = {
   check: CheckIcon,
   seedling: SeedlingIcon,
   'chevron-right': ChevronRightIcon,
+  plant: PlantIcon,
+  growth: GrowthIcon,
+  support: SupportIcon,
+  propagation: PropagationIcon,
+  dormant: DormantIcon,
+  clock: ClockIcon,
 }
 
 interface Props {
