@@ -15,6 +15,10 @@ import { jordgubbar } from './jordgubbar'
 import { persilja } from './persilja'
 import { svartaVinbar } from './svarta-vinbar'
 import { dill } from './dill'
+import { rodbeta } from './rodbeta'
+import { rabarber } from './rabarber'
+import { sockermajs } from './sockermajs'
+import { sparris } from './sparris'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -33,6 +37,10 @@ export const CROPS: Record<string, Crop> = {
   persilja,
   'svarta-vinbar': svartaVinbar,
   dill,
+  rodbeta,
+  rabarber,
+  sockermajs,
+  sparris,
 }
 
 export const CROP_LIST: CropListEntry[] = [
@@ -76,7 +84,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'schalottenlok', name: 'Schalottenlök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   // Grönsaker — Amaranthaceae (Mållväxter)
-  { id: 'rodbeta', name: 'Rödbeta', icon: 'vegetable', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'rodbeta', name: 'Rödbeta', icon: 'rodbeta', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'spenat', name: 'Spenat', icon: 'vegetable', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   { id: 'mangold', name: 'Mangold', icon: 'vegetable', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   // Grönsaker — Asteraceae (Korgblommiga)
@@ -85,11 +93,11 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'jordartskocka', name: 'Jordärtskocka', icon: 'vegetable', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   { id: 'endiv', name: 'Endiv', icon: 'vegetable', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   // Grönsaker — Poaceae (Gräs)
-  { id: 'sockermajs', name: 'Sockermajs', icon: 'vegetable', family: 'Gräs', familyLatin: 'Poaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
+  { id: 'sockermajs', name: 'Sockermajs', icon: 'sockermajs', family: 'Gräs', familyLatin: 'Poaceae', difficulty: 'Medel', category: 'grönsaker' },
   // Grönsaker — Polygonaceae (Slideväxter)
-  { id: 'rabarber', name: 'Rabarber', icon: 'vegetable', family: 'Slideväxter', familyLatin: 'Polygonaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'rabarber', name: 'Rabarber', icon: 'rabarber', family: 'Slideväxter', familyLatin: 'Polygonaceae', difficulty: 'Enkel', category: 'grönsaker' },
   // Grönsaker — Asparagaceae (Sparrisväxter)
-  { id: 'sparris', name: 'Sparris', icon: 'vegetable', family: 'Sparrisväxter', familyLatin: 'Asparagaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
+  { id: 'sparris', name: 'Sparris', icon: 'sparris', family: 'Sparrisväxter', familyLatin: 'Asparagaceae', difficulty: 'Avancerad', category: 'grönsaker' },
   // Bär — Rosaceae (Rosväxter)
   { id: 'hallon', name: 'Hallon', icon: 'hallon', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'jordgubbar', name: 'Jordgubbar', icon: 'jordgubbar', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
@@ -147,4 +155,4 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'tagetes', name: 'Tagetes', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
 ]
 
-export { morot, tomat, potatis, hallon, basilika, lok, gronkal, radisa, bondbona, jordgubbar, persilja, svartaVinbar, dill }
+export { morot, tomat, potatis, hallon, basilika, lok, gronkal, radisa, bondbona, jordgubbar, persilja, svartaVinbar, dill, rodbeta, rabarber, sockermajs, sparris }
