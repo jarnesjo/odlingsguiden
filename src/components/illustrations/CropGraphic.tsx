@@ -20,6 +20,10 @@ import { BeetrootIllustration, BeetrootIcon } from './BeetrootIllustration'
 import { RhubarbIllustration, RhubarbIcon } from './RhubarbIllustration'
 import { SweetcornIllustration, SweetcornIcon } from './SweetcornIllustration'
 import { AsparagusIllustration, AsparagusIcon } from './AsparagusIllustration'
+import { CucumberIllustration, CucumberIcon } from './CucumberIllustration'
+import { SpinachIllustration, SpinachIcon } from './SpinachIllustration'
+import { BroccoliIllustration, BroccoliIcon } from './BroccoliIllustration'
+import { LeekIllustration, LeekIcon } from './LeekIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -47,6 +51,10 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   rabarber: { large: RhubarbIllustration, small: RhubarbIcon },
   sockermajs: { large: SweetcornIllustration, small: SweetcornIcon },
   sparris: { large: AsparagusIllustration, small: AsparagusIcon },
+  gurka: { large: CucumberIllustration, small: CucumberIcon },
+  spenat: { large: SpinachIllustration, small: SpinachIcon },
+  broccoli: { large: BroccoliIllustration, small: BroccoliIcon },
+  purjolok: { large: LeekIllustration, small: LeekIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
