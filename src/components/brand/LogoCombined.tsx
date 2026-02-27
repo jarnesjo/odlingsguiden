@@ -62,13 +62,13 @@ export function LogoCombined({
   }
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-      <Symbol size={48} accent={symbolAccent} warm={symbolWarm} />
+    <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+      <Symbol size={56} accent={symbolAccent} warm={symbolWarm} />
       <div>
         <div
           style={{
             fontFamily: fonts.heading,
-            fontSize: 22,
+            fontSize: 26,
             fontWeight: fontWeights.extrabold,
             color: textColor,
             lineHeight: 1.1,
@@ -80,9 +80,9 @@ export function LogoCombined({
           <div
             style={{
               fontFamily: fonts.body,
-              fontSize: 11,
+              fontSize: 13,
               color: mutedColor,
-              marginTop: 1,
+              marginTop: 2,
             }}
           >
             {tagline}
