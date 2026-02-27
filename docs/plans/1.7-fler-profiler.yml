@@ -1,0 +1,131 @@
+meta:
+  phase: "1.7"
+  title: "Fler profiler - 16 totalt (10+3+3)"
+  status: planerad
+  created: 2026-02-27
+
+context: |
+  Fas 1.7 i roadmapen: "Fler profiler -> 16 totalt (10+3+3)".
+  Idag finns 5 profiler med full data av 76 entries i CROP_LIST.
+  Vi ska skapa 11 nya profiler med SVG-illustrationer.
+
+nulagsanalys:
+  crop_list_entries: 76
+  profiler_klara: 5
+  grönsaker:
+    i_crop_list: 39
+    med_profil: ["morot", "tomat", "potatis"]
+    mal: 10
+  bar:
+    i_crop_list: 16
+    med_profil: ["hallon"]
+    mal: 3
+  kryddor:
+    i_crop_list: 21
+    med_profil: ["basilika"]
+    mal: 3
+
+nya_profiler:
+  grönsaker:
+    - id: artor
+      name: "Ärtor"
+      family: Fabaceae
+      difficulty: Enkel
+      prio: 1
+      varfor: "Korsrefereras redan av 3 profiler"
+    - id: squash
+      name: "Squash/Zucchini"
+      family: Cucurbitaceae
+      difficulty: Enkel
+      prio: 2
+      varfor: "Ny familj, stor skörd, bra drama"
+    - id: sallat
+      name: "Sallat"
+      family: Asteraceae
+      difficulty: Enkel
+      prio: 3
+      varfor: "Snabb, ny familj, bra för nybörjare"
+    - id: lok
+      name: "Lök"
+      family: Amaryllidaceae
+      difficulty: Enkel
+      prio: 4
+      varfor: "Grundgröda, nämns som companion överallt"
+    - id: gronkal
+      name: "Grönkål"
+      family: Brassicaceae
+      difficulty: Enkel
+      prio: 5
+      varfor: "Härdig, vintergröda, ny familj"
+    - id: radisa
+      name: "Rädisa"
+      family: Brassicaceae
+      difficulty: Enkel
+      prio: 6
+      varfor: "Snabbast från sådd till skörd"
+    - id: bondbona
+      name: "Bondböna"
+      family: Fabaceae
+      difficulty: Enkel
+      prio: 7
+      varfor: "Kvävefixerare, bra växtföljdsväxt"
+  bar:
+    - id: jordgubbar
+      name: "Jordgubbar"
+      family: Rosaceae
+      difficulty: Enkel
+      prio: 8
+      varfor: "Sveriges populäraste bär"
+    - id: svarta-vinbar
+      name: "Svarta vinbär"
+      family: Grossulariaceae
+      difficulty: Enkel
+      prio: 9
+      varfor: "Ny familj, extremt härdig, klassisk"
+  kryddor:
+    - id: persilja
+      name: "Persilja"
+      family: Apiaceae
+      difficulty: Enkel
+      prio: 10
+      varfor: "Grundkrydda, tvåårig, ny dimension"
+    - id: dill
+      name: "Dill"
+      family: Apiaceae
+      difficulty: Enkel
+      prio: 11
+      varfor: "Svenskt staple, direktsådd, enkel"
+
+per_profil_filer:
+  skapa:
+    - "src/data/crops/{id}.ts"
+    - "src/components/illustrations/{Name}Illustration.tsx"
+  uppdatera:
+    - "src/components/illustrations/CropGraphic.tsx"
+    - "src/data/crops/index.ts"
+
+arbetsordning:
+  - "Research fakta om grödan"
+  - "Skapa datafil (full profil enligt ny-groda.md 16-punkts checklista)"
+  - "Skapa SVG illustration 200x200 + ikon 48x48"
+  - "Registrera i CropGraphic.tsx + index.ts"
+  - "Uppdatera korsreferenser i befintliga profiler"
+  - "Commit per profil"
+
+kvalitetskrav:
+  - "Alla fält finns (types.ts-kompatibel)"
+  - "Zoner faktagranskade för Sverige"
+  - "Tidslinjer skiljer sig för zon 1/4/6"
+  - "N-P-K kurvor speglar verkliga behov"
+  - "Companion planting med mekanismförklaringar"
+  - "Sortrekommendationer som funkar i Sverige"
+  - "Kompis-ton genomgående"
+  - "All text på svenska, inga engelska ord"
+  - "Inga emojis - semantiska ikon-ID:n"
+  - "SVG: 1.8px stroke, round caps, dämpade färger"
+  - "SVG botaniskt rimlig"
+
+verifiering:
+  - "npx tsc --noEmit"
+  - "npm run build"
+  - "Visuell granskning i dev server"

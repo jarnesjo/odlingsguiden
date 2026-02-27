@@ -1,0 +1,80 @@
+meta:
+  date: 2026-02-27
+  author: claude
+  phase: "Fas 1: Grund"
+  status: aktiv
+  session_notes: |
+    Session 10. Kort session - planering och buggfix.
+
+    Gjort:
+    - Fixat SVG path-buggar i SymbolSprout.tsx och CarrotIllustration.tsx
+      (C-kommando med 2 koordinatpar byttes till Q som kräver exakt 2)
+    - Analyserat CROP_LIST: 76 entries, 5 med full profil
+    - Skapat implementationsplan för 1.7 Fler profiler (11 nya profiler)
+    - Plan sparad: docs/plans/1.7-fler-profiler.yml
+
+    Commits:
+    - (inga commits denna session - bara planering + buggfix utan commit)
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - Recharts 3.7 (NutritionChart)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/plans/1.2-separera-data.yml (klar)
+    - docs/plans/1.3-grafisk-profil.yml (klar)
+    - docs/plans/1.6-frukt-kategori.yml (planerad)
+    - docs/plans/1.7-fler-profiler.yml (NY - planerad)
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/cropUtils.ts
+    - src/data/crops/index.ts (76 entries, 5 profiler)
+    - src/data/crops/*.ts (morot, tomat, potatis, hallon, basilika)
+    - src/components/illustrations/CropGraphic.tsx
+    - src/components/illustrations/*Illustration.tsx (5 st)
+    - src/components/icons/index.tsx (36 ikoner)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "1.7 Fler profiler - börja implementera (plan klar i docs/plans/1.7-fler-profiler.yml)"
+  - "Första batch: Ärtor, Squash, Sallat (prio 1-3)"
+  - "Varje profil: datafil + SVG-illustration + registrering + korsreferenser"
+  - "SVG path-buggfixarna bör committas"
+
+context:
+  decisions:
+    - "11 nya profiler totalt: 7 grönsaker + 2 bär + 2 kryddor"
+    - "Arbeta i batchar om ~3 profiler åt gången"
+    - "Prioritetsordning: ärtor först (korsrefereras redan av 3 profiler)"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "All text på svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner, dämpade färger"
+    - "Q istället för C i SVG paths med bara 2 koordinatpar"
+
+known_issues:
+  - "SVG path-buggar fixade men ej committade (SymbolSprout.tsx, CarrotIllustration.tsx)"
+  - "Odlingszonerna behöver faktagranskas"
+  - "Bundle size >500KB pga Recharts"
+  - "76 entries men bara 5 har fulla profiler"
