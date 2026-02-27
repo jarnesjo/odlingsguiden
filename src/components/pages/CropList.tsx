@@ -24,9 +24,12 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
 
   const catCrops = CROP_LIST.filter((c) => c.category === category)
   const families = ["Alla", ...new Set(catCrops.map((c) => c.familyLatin))]
-  const filtered = catCrops.filter(
-    (c) => (filter === "Alla" || c.familyLatin === filter) && c.name.toLowerCase().includes(search.toLowerCase()),
-  )
+  const filtered = catCrops
+    .filter((c) => (filter === "Alla" || c.familyLatin === filter) && c.name.toLowerCase().includes(search.toLowerCase()))
+    .sort((a, b) => {
+      if (a.locked !== b.locked) return a.locked ? 1 : -1
+      return a.name.localeCompare(b.name, 'sv')
+    })
 
   const activeCat = CATEGORIES.find((c) => c.id === category)!
   const unlockedCount = filtered.filter((c) => !c.locked).length
