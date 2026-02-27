@@ -12,6 +12,10 @@ import { OnionIllustration, OnionIcon } from './OnionIllustration'
 import { KaleIllustration, KaleIcon } from './KaleIllustration'
 import { RadishIllustration, RadishIcon } from './RadishIllustration'
 import { FavaBeanIllustration, FavaBeanIcon } from './FavaBeanIllustration'
+import { StrawberryIllustration, StrawberryIcon } from './StrawberryIllustration'
+import { ParsleyIllustration, ParsleyIcon } from './ParsleyIllustration'
+import { BlackcurrantIllustration, BlackcurrantIcon } from './BlackcurrantIllustration'
+import { DillIllustration, DillIcon } from './DillIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -31,6 +35,10 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   gronkal: { large: KaleIllustration, small: KaleIcon },
   radisa: { large: RadishIllustration, small: RadishIcon },
   bondbona: { large: FavaBeanIllustration, small: FavaBeanIcon },
+  jordgubbar: { large: StrawberryIllustration, small: StrawberryIcon },
+  persilja: { large: ParsleyIllustration, small: ParsleyIcon },
+  'svarta-vinbar': { large: BlackcurrantIllustration, small: BlackcurrantIcon },
+  dill: { large: DillIllustration, small: DillIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
