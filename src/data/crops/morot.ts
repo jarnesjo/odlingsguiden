@@ -78,23 +78,23 @@ export const morot: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Lök', icon: 'vegetable', why: 'Löken avskräcker morotsflugan med sin starka doft' },
-      { name: 'Salvia', icon: 'herb', why: 'Salvia maskerar morotsdoften och håller skadedjur borta' },
-      { name: 'Tomat', icon: 'vegetable', why: 'Tomatens starka doft förvirrar morotsflugan' },
-      { name: 'Purjolök', icon: 'vegetable', why: 'Samma effekt som vanlig lök - doftbarriär' },
+      { id: 'lok', name: 'Lök', icon: 'vegetable', why: 'Löken avskräcker morotsflugan med sin starka doft' },
+      { id: 'salvia', name: 'Salvia', icon: 'herb', why: 'Salvia maskerar morotsdoften och håller skadedjur borta' },
+      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Tomatens starka doft förvirrar morotsflugan' },
+      { id: 'purjolok', name: 'Purjolök', icon: 'vegetable', why: 'Samma effekt som vanlig lök - doftbarriär' },
     ],
     bad: [
-      { name: 'Dill', icon: 'herb', why: 'Samma familj (flockblommiga) - delar sjukdomar och skadedjur' },
-      { name: 'Palsternacka', icon: 'vegetable', why: 'Samma familj - konkurrerar och delar morotsflugan' },
-      { name: 'Selleri', icon: 'vegetable', why: 'Samma familj - ökar risk för sjukdomar' },
+      { id: 'dill', name: 'Dill', icon: 'herb', why: 'Samma familj (flockblommiga) - delar sjukdomar och skadedjur' },
+      { id: 'palsternacka', name: 'Palsternacka', icon: 'vegetable', why: 'Samma familj - konkurrerar och delar morotsflugan' },
+      { id: 'selleri', name: 'Selleri', icon: 'vegetable', why: 'Samma familj - ökar risk för sjukdomar' },
     ],
   },
   rotation: {
-    avoid: ['Palsternacka', 'Persilja', 'Selleri', 'Dill', 'Fänkål'],
+    avoid: [{ id: 'palsternacka', name: 'Palsternacka' }, { id: 'persilja', name: 'Persilja' }, { id: 'selleri', name: 'Selleri' }, { id: 'dill', name: 'Dill' }, { id: 'fankal', name: 'Fänkål' }],
     avoidWhy: 'Alla tillhör flockblommiga - delar sjukdomar och skadedjur. Vänta minst 3 år.',
-    goodBefore: ['Baljväxter (ärtor, bönor)', 'Lök', 'Vitlök'],
+    goodBefore: [{ name: 'Baljväxter (ärtor, bönor)' }, { id: 'lok', name: 'Lök' }, { id: 'vitlok', name: 'Vitlök' }],
     goodBeforeWhy: 'Baljväxter fixerar kväve i jorden. Lökväxter sanerar mot svampsjukdomar.',
-    goodAfter: ['Kål', 'Sallat', 'Spenat'],
+    goodAfter: [{ name: 'Kål' }, { id: 'sallat', name: 'Sallat' }, { id: 'spenat', name: 'Spenat' }],
     goodAfterWhy: 'Bladgrönsaker drar nytta av den djupt bearbetade jorden moroten lämnar efter sig.',
   },
   varieties: [

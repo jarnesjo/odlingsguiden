@@ -85,22 +85,22 @@ export const hallon: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Vitlök', icon: 'vegetable', why: 'Avskräcker bladlöss och gallkvalster som kan angripa hallon.' },
+      { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', why: 'Avskräcker bladlöss och gallkvalster som kan angripa hallon.' },
       { name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinatörer och nyttiga insekter. Plus att den ser fantastisk ut vid hallonraden!' },
-      { name: 'Rabarber', icon: 'vegetable', why: 'Skuggar marken, behåller fukt och samsas bra utan konkurrens om samma näring.' },
+      { id: 'rabarber', name: 'Rabarber', icon: 'vegetable', why: 'Skuggar marken, behåller fukt och samsas bra utan konkurrens om samma näring.' },
     ],
     bad: [
-      { name: 'Potatis', icon: 'vegetable', why: 'Bägge är känsliga för verticillium-svamp. Plantera aldrig hallon där det stått potatis.' },
-      { name: 'Tomater', icon: 'vegetable', why: 'Samma verticillium-risk. Håll minst 3 meters avstånd eller vänta 3 år.' },
-      { name: 'Björnbär', icon: 'berry', why: 'Korspollinerar och kan sprida sjukdomar mellan sig. Håll 50+ meter avstånd.' },
+      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Bägge är känsliga för verticillium-svamp. Plantera aldrig hallon där det stått potatis.' },
+      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma verticillium-risk. Håll minst 3 meters avstånd eller vänta 3 år.' },
+      { id: 'bjornbar', name: 'Björnbär', icon: 'berry', why: 'Korspollinerar och kan sprida sjukdomar mellan sig. Håll 50+ meter avstånd.' },
     ],
   },
   rotation: {
-    avoid: ['Hallon', 'Björnbär', 'Jordgubbar', 'Potatis', 'Tomater'],
+    avoid: [{ id: 'hallon', name: 'Hallon' }, { id: 'bjornbar', name: 'Björnbär' }, { id: 'jordgubbar', name: 'Jordgubbar' }, { id: 'potatis', name: 'Potatis' }, { id: 'tomat', name: 'Tomat' }],
     avoidWhy: 'Alla Rubus-arter samt Solanaceae delar sjukdomar (verticillium, rotröta). Vänta minst 4-5 år innan du planterar hallon på samma plats igen.',
-    goodBefore: ['Gräsmatta', 'Baljväxter', 'Lök'],
+    goodBefore: [{ name: 'Gräsmatta' }, { name: 'Baljväxter' }, { id: 'lok', name: 'Lök' }],
     goodBeforeWhy: 'Mark som legat som gräsmatta i flera år är idealisk - fri från de vanligaste hallonsjukdomarna. Baljväxter berikar jorden med kväve.',
-    goodAfter: ['Grönkål', 'Ärtor', 'Gröngödsling'],
+    goodAfter: [{ id: 'gronkal', name: 'Grönkål' }, { id: 'artor', name: 'Ärtor' }, { name: 'Gröngödsling' }],
     goodAfterWhy: 'Efter att hallonraden tagits bort (10+ år) är jorden utarmad. Baljväxter eller gröngödsling bygger upp den igen.',
   },
   varieties: [
@@ -117,7 +117,7 @@ export const hallon: Crop = {
   ],
   goodToKnow: [
     { icon: 'warning', title: 'Hallon sprider sig - aktivt', text: 'Hallonrötter skickar ut utlöpare och nya plantor dyker upp överallt. Använd rotspärr (nedgrävd plåt/plast 30 cm djupt) om du vill hålla dem på plats. Eller plantera i upphöjd bädd.', severity: 'warning' },
-    { icon: 'warning', title: 'Sommarhallon vs hösthallon - helt olika beskärning', text: 'Sommarhallon bär frukt på fjolårets skott → klipp bara de som burit frukt. Hösthallon bär på årets skott → klipp ALLT på våren. Blandar du ihop detta förlorar du skörden!', severity: 'warning' },
+    { icon: 'warning', title: 'Sommarhallon vs hösthallon - helt olika beskärning', text: 'Sommarhallon bär frukt på fjolårets skott - klipp bara de som burit frukt. Hösthallon bär på årets skott - klipp ALLT på våren. Blandar du ihop detta förlorar du skörden!', severity: 'warning' },
     { icon: 'tip', title: 'Fryser perfekt', text: 'Hallon är ett av de bär som fryser bäst. Lägg ut dem i ett lager på en plåt, frys, flytta sedan till påse. Perfekt smak året runt.', severity: 'tip' },
     { icon: 'tip', title: 'Plocka rätt', text: 'Mogna hallon lossnar lätt från kärnan (tappar tappar). Om du behöver dra - vänta en dag till. Plocka gärna varannan dag under högsäsong.', severity: 'tip' },
   ],

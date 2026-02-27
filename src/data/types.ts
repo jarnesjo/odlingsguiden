@@ -111,6 +111,7 @@ export interface NutritionTip {
 }
 
 export interface Companion {
+  id?: string
   name: string
   icon: string
   why: string
@@ -121,12 +122,17 @@ export interface Companions {
   bad: Companion[]
 }
 
+export interface RotationItem {
+  id?: string
+  name: string
+}
+
 export interface Rotation {
-  avoid: string[]
+  avoid: RotationItem[]
   avoidWhy: string
-  goodBefore: string[]
+  goodBefore: RotationItem[]
   goodBeforeWhy: string
-  goodAfter: string[]
+  goodAfter: RotationItem[]
   goodAfterWhy: string
 }
 
@@ -142,11 +148,17 @@ export interface Problem {
   fix: string
 }
 
+export interface CropRef {
+  id: string
+  name: string
+}
+
 export interface GoodToKnow {
   icon: string
   title: string
   text: string
   severity: Severity
+  refs?: CropRef[]
 }
 
 export interface SowingInfo {

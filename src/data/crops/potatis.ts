@@ -82,23 +82,23 @@ export const potatis: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Bondböna', icon: 'vegetable', why: 'Fixerar kväve i jorden som potatisen drar nytta av' },
+      { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Fixerar kväve i jorden som potatisen drar nytta av' },
       { name: 'Kål', icon: 'vegetable', why: 'Kompakt rotsystem som inte konkurrerar med potatisens djupa rötter' },
       { name: 'Ringblomma', icon: 'flower', why: 'Avskräcker coloradobagge och nematoder' },
       { name: 'Pepparrot', icon: 'herb', why: 'Traditionell samodling - pepparrot ska avskräcka potatisbagge' },
     ],
     bad: [
-      { name: 'Tomat', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar bladmögel. En sjuk potatisplanta smittar tomaterna på dagar.' },
-      { name: 'Squash', icon: 'vegetable', why: 'Konkurrerar hårt om näring och utrymme - båda är storätare' },
+      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar bladmögel. En sjuk potatisplanta smittar tomaterna på dagar.' },
+      { id: 'squash', name: 'Squash', icon: 'vegetable', why: 'Konkurrerar hårt om näring och utrymme - båda är storätare' },
       { name: 'Solros', icon: 'flower', why: 'Utsöndrar ämnen (allelopati) som hämmar potatisens tillväxt' },
     ],
   },
   rotation: {
-    avoid: ['Tomat', 'Paprika', 'Aubergine', 'Chili', 'Potatis'],
+    avoid: [{ id: 'tomat', name: 'Tomat' }, { id: 'paprika', name: 'Paprika' }, { name: 'Aubergine' }, { id: 'chili', name: 'Chili' }, { id: 'potatis', name: 'Potatis' }],
     avoidWhy: 'Alla nattskatta - delar bladmögel, brunröta och nematoder. Vänta minst 3-4 år. Odla ALDRIG potatis på samma plats två år i rad.',
-    goodBefore: ['Baljväxter (ärtor, bönor)', 'Gröngödsling', 'Lök'],
+    goodBefore: [{ name: 'Baljväxter (ärtor, bönor)' }, { name: 'Gröngödsling' }, { id: 'lok', name: 'Lök' }],
     goodBeforeWhy: 'Baljväxter fixerar kväve. Gröngödsling förbättrar jordstrukturen - perfekt före potatis.',
-    goodAfter: ['Kål', 'Sallat', 'Morötter'],
+    goodAfter: [{ name: 'Kål' }, { id: 'sallat', name: 'Sallat' }, { id: 'morot', name: 'Morötter' }],
     goodAfterWhy: 'Potatisen lämnar efter sig en väl bearbetad, luckrad jord som rotgrönsaker och kål älskar.',
   },
   varieties: [

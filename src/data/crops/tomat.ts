@@ -85,23 +85,23 @@ export const tomat: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Basilika', icon: 'herb', why: 'Förbättrar smaken och håller bladlöss borta' },
-      { name: 'Morot', icon: 'vegetable', why: 'Luckrar jorden runt tomatrötterna' },
+      { id: 'basilika', name: 'Basilika', icon: 'herb', why: 'Förbättrar smaken och håller bladlöss borta' },
+      { id: 'morot', name: 'Morot', icon: 'vegetable', why: 'Luckrar jorden runt tomatrötterna' },
       { name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinerare och avskräcker vita flygare' },
-      { name: 'Persilja', icon: 'herb', why: 'Lockar nyttiga rovinsekter' },
+      { id: 'persilja', name: 'Persilja', icon: 'herb', why: 'Lockar nyttiga rovinsekter' },
     ],
     bad: [
-      { name: 'Potatis', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar bladmögel och andra sjukdomar' },
-      { name: 'Fänkål', icon: 'herb', why: 'Hämmar tomatens tillväxt genom allelopati' },
+      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar bladmögel och andra sjukdomar' },
+      { id: 'fankal', name: 'Fänkål', icon: 'herb', why: 'Hämmar tomatens tillväxt genom allelopati' },
       { name: 'Kål', icon: 'vegetable', why: 'Konkurrerar om näring - båda är storätare' },
     ],
   },
   rotation: {
-    avoid: ['Potatis', 'Paprika', 'Aubergine', 'Chili'],
+    avoid: [{ id: 'potatis', name: 'Potatis' }, { id: 'paprika', name: 'Paprika' }, { name: 'Aubergine' }, { id: 'chili', name: 'Chili' }],
     avoidWhy: 'Alla nattskatta - delar bladmögel, fusarium. Vänta minst 3-4 år.',
-    goodBefore: ['Baljväxter', 'Lök', 'Gröngödsling'],
+    goodBefore: [{ name: 'Baljväxter' }, { id: 'lok', name: 'Lök' }, { name: 'Gröngödsling' }],
     goodBeforeWhy: 'Kvävefixering från baljväxter + sanering från lökväxter.',
-    goodAfter: ['Rotgrönsaker', 'Baljväxter', 'Sallat'],
+    goodAfter: [{ name: 'Rotgrönsaker' }, { name: 'Baljväxter' }, { id: 'sallat', name: 'Sallat' }],
     goodAfterWhy: 'Jorden är fortfarande näringsrik - bra för måttliga ätare.',
   },
   varieties: [
@@ -121,7 +121,7 @@ export const tomat: Crop = {
     { icon: 'leaf', title: 'Ta bort nedre bladen', text: 'Klipp bort alla blad under den lägsta fruktklassen. Det förbättrar luftcirkulationen och minskar risken för bladmögel drastiskt.', severity: 'tip' },
     { icon: 'indoor', title: 'Växthus gör enorm skillnad', text: 'Även ett enkelt plasttunnelväxthus förlänger säsongen med 4-6 veckor och skyddar mot bladmögel. Tomater i växthus vs utomhus i Sverige är som natt och dag.', severity: 'tip' },
     { icon: 'check', title: 'Gröna tomater? Ingen panik', text: 'I slutet av säsongen: plocka gröna tomater och lägg dem i en papperspåse med ett äpple. Etylen från äpplet eftermognar dem inomhus på 1-2 veckor.', severity: 'tip' },
-    { icon: 'warning', title: 'Plantera ALDRIG bredvid potatis', text: 'Tomat och potatis är samma familj och delar bladmögel. En sjuk potatisplanta kan smitta dina tomater på några dagar. Håll dem så långt ifrån varandra som möjligt.', severity: 'warning' },
+    { icon: 'warning', title: 'Plantera ALDRIG bredvid potatis', text: 'Tomat och potatis är samma familj och delar bladmögel. En sjuk potatisplanta kan smitta dina tomater på några dagar. Håll dem så långt ifrån varandra som möjligt.', severity: 'warning', refs: [{ id: 'potatis', name: 'potatis' }] },
   ],
   sowing: {
     method: 'indoor',

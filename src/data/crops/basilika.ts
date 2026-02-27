@@ -78,21 +78,21 @@ export const basilika: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Tomat', icon: 'vegetable', why: 'Det klassiska drömpar! Basilika sägs förbättra tomatens smak, och avskräcker bladlöss och vitfjäril. Plus att de trivs under exakt samma förhållanden - sol och värme.' },
-      { name: 'Paprika', icon: 'vegetable', why: 'Samma värmebehov, och basilikan lockar pollinatörer som hjälper paprika sätta frukt. De samsas fint.' },
-      { name: 'Sallat', icon: 'vegetable', why: 'Basilikan ger välbehövlig skugga åt sallat i högsommarvärmen, och sallaten håller marken sval och fuktig. Ett perfekt par!' },
+      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Det klassiska drömpar! Basilika sägs förbättra tomatens smak, och avskräcker bladlöss och vitfjäril. Plus att de trivs under exakt samma förhållanden - sol och värme.' },
+      { id: 'paprika', name: 'Paprika', icon: 'vegetable', why: 'Samma värmebehov, och basilikan lockar pollinatörer som hjälper paprika sätta frukt. De samsas fint.' },
+      { id: 'sallat', name: 'Sallat', icon: 'vegetable', why: 'Basilikan ger välbehövlig skugga åt sallat i högsommarvärmen, och sallaten håller marken sval och fuktig. Ett perfekt par!' },
     ],
     bad: [
-      { name: 'Salvia', icon: 'herb', why: 'Bägge producerar starka eteriska oljor som bråkar med varandra. Salvia vill dessutom ha det torrt - raka motsatsen till basilika.' },
-      { name: 'Timjan', icon: 'herb', why: 'Timjan trivs i mager, torr jord. Basilika vill ha rik, fuktig jord. De pratar helt enkelt olika språk.' },
+      { id: 'salvia', name: 'Salvia', icon: 'herb', why: 'Bägge producerar starka eteriska oljor som bråkar med varandra. Salvia vill dessutom ha det torrt - raka motsatsen till basilika.' },
+      { id: 'timjan', name: 'Timjan', icon: 'herb', why: 'Timjan trivs i mager, torr jord. Basilika vill ha rik, fuktig jord. De pratar helt enkelt olika språk.' },
     ],
   },
   rotation: {
-    avoid: ['Basilika', 'Mynta', 'Salvia'],
+    avoid: [{ id: 'basilika', name: 'Basilika' }, { id: 'mynta', name: 'Mynta' }, { id: 'salvia', name: 'Salvia' }],
     avoidWhy: 'Kransblommiga (Lamiaceae) delar en del jordburna sjukdomar. Vänta 2-3 år innan du odlar basilika på samma plats.',
-    goodBefore: ['Baljväxter', 'Lök', 'Rotsaker'],
+    goodBefore: [{ name: 'Baljväxter' }, { id: 'lok', name: 'Lök' }, { name: 'Rotsaker' }],
     goodBeforeWhy: 'Baljväxter berikar jorden med kväve som basilika uppskattar. Lök och rotsaker lämnar ren jord.',
-    goodAfter: ['Lök', 'Rotsaker', 'Kål'],
+    goodAfter: [{ id: 'lok', name: 'Lök' }, { name: 'Rotsaker' }, { name: 'Kål' }],
     goodAfterWhy: 'Basilikans aromatiska rester i jorden kan ha mild desinficerande effekt. Bra föregångare för grönsaker som är känsliga för jordburna sjukdomar.',
   },
   varieties: [
