@@ -52,13 +52,13 @@ Plan: `docs/plans/1.2-separera-data.yml`
 
 Plan: `docs/plans/1.3-grafisk-profil.yml`
 
-### 1.4 Korsreferenser
+### 1.4 Korsreferenser ✅
 
-> "Wikipedia-effekten" – användare utforskar och fastnar
+> "Wikipedia-effekten" - användare utforskar och fastnar
 
-- [ ] Companion-data får `id`-fält som matchar CROP_LIST id
-- [ ] UI renderar klickbara chips istället för ren text
-- [ ] Fungerar i: companion planting, växtföljd, bra att veta, sorter
+- [x] Companion-data får `id`-fält som matchar CROP_LIST id
+- [x] UI renderar klickbara chips istället för ren text
+- [x] Fungerar i: samodling, växtföljd, bra att veta
 
 ### 1.5 Säsongsvy v1
 
@@ -349,4 +349,4 @@ Ingen prioritet ännu. Plockas upp när det passar.
 
 ---
 
-_Senast uppdaterad: 2026-02-26_
+_Senast uppdaterad: 2026-02-27_
