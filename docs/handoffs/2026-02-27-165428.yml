@@ -1,0 +1,111 @@
+meta:
+  date: 2026-02-27
+  author: claude
+  phase: "Fas 1: Grund / Fas 2: Innehall"
+  status: aktiv
+  session_notes: |
+    Session 12. Massiv profil-session - 16 nya grodprofiler + UI-forbattringar.
+
+    Gjort:
+    - Sorterat grodlistan: olasta forst i bokstavsordning (sv-locale), sedan lasta
+    - pH-bar redesign: dampade jordiga farger istallet for skarpa Material Design
+    - pH-bar ideal-markering: testat trianglar, pilar, cirklar - landade pa subtilt streck med opacity
+    - Fix: ikon+rubrik inline i Ta eget fro-sektionens infokort (flex-layout)
+    - Batch 1 (nya familjer): Rodbeta, Rabarber, Sockermajs, Sparris
+    - Batch 2 (populara): Gurka, Spenat, Broccoli, Purjolok
+    - Batch 3 (populara): Vitlok, Paprika, Graslok, Krusbar
+    - Batch 4 (kryddor+bar): Timjan, Mynta, Roda vinbar, Pumpa
+    - Totalt 32 profiler nu (21 gronsaker, 5 bar, 6 kryddor)
+    - Roadmap 2.1 mal (30+) uppnatt
+
+    Commits (25 st):
+    - feat(ui): sort crop list alphabetically with unlocked first
+    - feat(crops): add beetroot crop profile with SVG illustration
+    - feat(crops): add rhubarb crop profile with SVG illustration
+    - feat(crops): add sweet corn crop profile with SVG illustration
+    - feat(crops): add asparagus crop profile with SVG illustration
+    - feat(ui): register beetroot, rhubarb, sweet corn and asparagus profiles
+    - style(ui): redesign pH bar to match earthy color palette
+    - fix(ui): align icon and title inline in seed saving info cards
+    - style(ui): refine pH bar with earthy colors and subtle ideal line
+    - feat(crops): add cucumber crop profile with SVG illustration
+    - feat(crops): add spinach crop profile with SVG illustration
+    - feat(crops): add broccoli crop profile with SVG illustration
+    - feat(crops): add leek crop profile with SVG illustration
+    - feat(ui): register cucumber, spinach, broccoli and leek profiles
+    - feat(crops): add garlic crop profile with SVG illustration
+    - feat(crops): add sweet pepper crop profile with SVG illustration
+    - feat(crops): add chives crop profile with SVG illustration
+    - feat(crops): add gooseberry crop profile with SVG illustration
+    - feat(ui): register garlic, pepper, chives and gooseberry profiles
+    - feat(crops): add thyme crop profile with SVG illustration
+    - feat(crops): add mint crop profile with SVG illustration
+    - feat(crops): add red currant crop profile with SVG illustration
+    - feat(crops): add pumpkin crop profile with SVG illustration
+    - feat(ui): register thyme, mint, red currant and pumpkin profiles
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - Recharts 3.7 (NutritionChart)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts (blommor hidden)
+    - src/data/cropUtils.ts
+    - "src/data/crops/index.ts (76+ entries, 32 profiler, 6 blommor)"
+    - "src/data/crops/*.ts (32 profiler)"
+    - src/components/illustrations/CropGraphic.tsx (32 illustrationer)
+    - "src/components/illustrations/*Illustration.tsx (32 st)"
+    - src/components/icons/index.tsx (36+ ikoner)
+    - src/components/ui/PhBar.tsx (redesignad)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "Visuell granskning av alla 16 nya profiler i dev server"
+  - "Faktagranska odlingszoner och sorter"
+  - "Uppdatera ROADMAP.md - markera 2.1 som klar (30+ profiler uppnatt)"
+  - "1.5 Sasongsvy v1 - manadsbaserad startskarm"
+  - "1.6 Frukt som fjarde kategori"
+  - "2.2 Sokfunktion"
+
+context:
+  decisions:
+    - "Grodlistan sorteras nu: olasta forst A-Z (sv-locale), sedan lasta A-Z"
+    - "pH-bar: dampade men igenkannbara farger, subtilt streck for idealvarde"
+    - "Parallella agenter (4 st per batch) for att skapa profiler"
+    - "Fokus pa familjebredd forst, sedan populara gronsaker, sedan kryddor/bar"
+    - "32 profiler totalt - passerar roadmap 2.1 malet pa 30+"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "All text pa svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner, dampade farger"
+    - "Q istallet for C i SVG paths med bara 2 koordinatpar"
+
+known_issues:
+  - "Nya profiler behover visuell granskning i dev server"
+  - "Odlingszonerna behover faktagranskas"
+  - "Bundle size >500KB pga Recharts"
+  - "Korsreferenser mellan nya profiler kan behova dubbelkollas"
+  - "Roadmap 2.1 behover markeras som klar"
