@@ -126,33 +126,23 @@ Frukt är extra naturligt – om ni odlar eller planerar att odla frukt på går
 
 > _Notering: Alla topp-4 är Rosaceae – samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband._
 
-### 1.7 Fler profiler → 16 totalt (10+3+3)
+### 1.7 Fler profiler → 16 totalt (10+3+3) ✅
 
-**Grönsaker (7 nya):**
+> 11 nya profiler med full data + SVG-illustrationer
 
-| Prio | Gröda           | Familj         | Varför nu?                                             |
-| ---- | --------------- | -------------- | ------------------------------------------------------ |
-| 1    | Ärtor           | Fabaceae       | Enkel, populär, korsrefereras redan av 3 profiler      |
-| 2    | Squash/Zucchini | Cucurbitaceae  | Storslagen skörd, ny familj, bra drama i näringskurvan |
-| 3    | Sallat          | Asteraceae     | Snabb, enkel, ny familj, bra för nybörjare             |
-| 4    | Lök             | Amaryllidaceae | Grundgröda, nämns som companion överallt               |
-| 5    | Grönkål         | Brassicaceae   | Härdig, vintergröda, ny familj                         |
-| 6    | Rädisa          | Brassicaceae   | Snabbast från sådd till skörd                          |
-| 7    | Bondböna        | Fabaceae       | Kvävefixerare, bra växtföljdsväxt                      |
+- [x] Ärtor (Fabaceae) - kvävefixerare, frosttålig, direktsådd
+- [x] Squash/Zucchini (Cucurbitaceae) - värmekrävande, enorm skörd
+- [x] Sallat (Asteraceae) - svalvädersvän, successionsådd
+- [x] Lök (Amaryllidaceae) - grundgröda, sättlök + frösådd
+- [x] Grönkål (Brassicaceae) - tål -15°C, bättre efter frost
+- [x] Rädisa (Brassicaceae) - 20-30 dagar till skörd
+- [x] Bondböna (Fabaceae) - kvävefixerare, tidig sådd
+- [x] Jordgubbar (Rosaceae) - bärprofil med revor och beskärning
+- [x] Svarta vinbär (Grossulariaceae) - tål -30°C, 15-20 år livsängd
+- [x] Persilja (Apiaceae) - tvåårig, långsam groning
+- [x] Dill (Apiaceae) - svenskaste kryddan, självsår sig
 
-**Bär (2 nya):**
-
-| Prio | Bär           | Familj          | Varför nu?                                       |
-| ---- | ------------- | --------------- | ------------------------------------------------ |
-| 1    | Jordgubbar    | Rosaceae        | Sveriges populäraste bär. Måste finnas.          |
-| 2    | Svarta vinbär | Grossulariaceae | Ny familj, extremt härdig, klassisk svensk buske |
-
-**Kryddor (2 nya):**
-
-| Prio | Krydda   | Familj   | Varför nu?                         |
-| ---- | -------- | -------- | ---------------------------------- |
-| 1    | Persilja | Apiaceae | Grundkrydda, tvåårig, ny dimension |
-| 2    | Dill     | Apiaceae | Svenskt staple, direktsådd, enkel  |
+Plan: `docs/plans/1.7-fler-profiler.yml`
 
 ---
 
@@ -331,7 +321,7 @@ Ingen prioritet ännu. Plockas upp när det passar.
 - [x] ~~Potatis saknar illustration~~ (åtgärdat: 1.3 grafisk profil)
 - [ ] Odlingszonerna och landskapstilldelning behöver faktagranskas (Gotland = zon 1, m.fl.)
 - [ ] Ingen säsongsvy/kalender
-- [ ] Inga korsreferenser (companion planting nämner grödor men de är inte klickbara)
+- [x] ~~Inga korsreferenser~~ (åtgärdat: 1.4 korsreferenser)
 - [ ] Frukt saknas som kategori
 - [ ] Bundle size >500KB pga Recharts
 
