@@ -3,7 +3,7 @@ import { hasProfile } from '../../data/cropUtils'
 import { CROP_LIST } from '../../data/crops'
 import { Section } from '../ui'
 import { CropGraphic } from '../illustrations/CropGraphic'
-import { RotationIcon } from '../icons'
+import { RotationIcon, VegetableIcon } from '../icons'
 import styles from './RotationSection.module.css'
 
 interface RotationSectionProps {
@@ -16,7 +16,7 @@ function RotationItemIcon({ item }: { item: RotationItem }) {
     const entry = CROP_LIST.find(c => c.id === item.id)
     if (entry) return <CropGraphic id={entry.icon} size={14} category={entry.category} />
   }
-  return null
+  return <VegetableIcon size={14} />
 }
 
 function RotationPills({ items, onNavigate }: { items: RotationItem[], onNavigate?: (cropId: string) => void }) {
