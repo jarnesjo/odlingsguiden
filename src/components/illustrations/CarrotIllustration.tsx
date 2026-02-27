@@ -32,9 +32,9 @@ export function CarrotIllustration({ size = 200 }: Props) {
       <path d="M86 148 C90 146, 110 146, 114 148" stroke="#D4782A" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
       <path d="M90 162 C94 160, 106 160, 110 162" stroke="#D4782A" strokeWidth="1" strokeLinecap="round" opacity="0.15" />
       <path d="M92 85 C90 95, 88 115, 90 140" stroke="#F5C882" strokeWidth="2.5" strokeLinecap="round" opacity="0.25" />
-      <path d="M86 110 C82 112, 80 110" stroke="#D4782A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
-      <path d="M114 125 C118 127, 120 125" stroke="#D4782A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
-      <path d="M84 140 C80 142, 78 140" stroke="#D4782A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      <path d="M86 110 Q82 112 80 110" stroke="#D4782A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      <path d="M114 125 Q118 127 120 125" stroke="#D4782A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      <path d="M84 140 Q80 142 78 140" stroke="#D4782A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
       <circle cx="76" cy="168" r="1.5" fill={colors.earth} opacity="0.2" />
       <circle cx="124" cy="165" r="1" fill={colors.earth} opacity="0.15" />
       <circle cx="90" cy="185" r="1.2" fill={colors.earth} opacity="0.2" />

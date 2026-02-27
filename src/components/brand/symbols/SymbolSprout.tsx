@@ -33,8 +33,8 @@ export function SymbolSprout({
       <circle cx="48" cy="10" r="3" fill={warm} opacity="0.2" />
       <circle cx="48" cy="10" r="3" stroke={warm} strokeWidth="1.2" fill="none" opacity="0.5" />
       {/* Liten rot */}
-      <path d="M32 50 C30 54, 28 56" stroke={colors.earth} strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-      <path d="M32 50 C34 53, 36 55" stroke={colors.earth} strokeWidth="1" strokeLinecap="round" opacity="0.25" />
+      <path d="M32 50 Q30 54 28 56" stroke={colors.earth} strokeWidth="1" strokeLinecap="round" opacity="0.3" />
+      <path d="M32 50 Q34 53 36 55" stroke={colors.earth} strokeWidth="1" strokeLinecap="round" opacity="0.25" />
     </svg>
   )
 }
