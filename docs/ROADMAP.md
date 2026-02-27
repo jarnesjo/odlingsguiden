@@ -35,22 +35,22 @@ Handlar om att lägga grunden rätt innan vi satsar på volym.
 - [x] 27 komponenter i `components/ui/`, `components/crop/`, `components/pages/`
 - [x] `App.tsx` med useState-navigation + useLocalStorage för zon
 
-Plan: `docs/plans/1-separera-data.yml`
+Plan: `docs/plans/1.2-separera-data.yml`
 
-### 1.3 Grafisk profil
+### 1.3 Grafisk profil ✅
 
 > Professionell visuell identitet – custom SVG överallt, inga emojis
 
-- [ ] Icon-registry + `<Icon>`-komponent
-- [ ] ~20 nya SVG-ikoner (samma stil som befintliga 11)
-- [ ] PotatoIllustration (200×200 + 48×48)
-- [ ] Byt alla emojis i data till semantiska ID:n
-- [ ] Uppdatera alla komponenter att rendera SVG istället för emoji
-- [ ] Appheader med logotyp (SymbolSprout + "Odlingsguiden")
-- [ ] Branda appen med rätt färgpalett, typografi och visuell profil
-- [ ] Slutverifiering – grep efter kvarvarande emoji
+- [x] Icon-registry + `<Icon>`-komponent
+- [x] ~20 nya SVG-ikoner (samma stil som befintliga 11)
+- [x] PotatoIllustration (200×200 + 48×48)
+- [x] Byt alla emojis i data till semantiska ID:n
+- [x] Uppdatera alla komponenter att rendera SVG istället för emoji
+- [x] Appheader med logotyp (SymbolSprout + "Odlingsguiden")
+- [x] Branda appen med rätt färgpalett, typografi och visuell profil
+- [x] Slutverifiering – grep efter kvarvarande emoji
 
-Plan: `docs/plans/1-grafisk-profil.yml`
+Plan: `docs/plans/1.3-grafisk-profil.yml`
 
 ### 1.4 Korsreferenser
 
@@ -75,7 +75,7 @@ Plan: `docs/plans/1-grafisk-profil.yml`
 
 **Varför frukt?**
 
-Fruktodling skiljer sig fundamentalt från grönsaker och kryddor: det är ett långsiktigt åtagande. Du planterar ett äppelträd och lever med det beslutet i decennier. Det gör att behovet av bra information faktiskt är *större* – du har inte råd att välja fel sort. Och det är precis den typen av djup, genomtänkt info som Odlingsguiden gör bäst.
+Fruktodling skiljer sig fundamentalt från grönsaker och kryddor: det är ett långsiktigt åtagande. Du planterar ett äppelträd och lever med det beslutet i decennier. Det gör att behovet av bra information faktiskt är _större_ – du har inte råd att välja fel sort. Och det är precis den typen av djup, genomtänkt info som Odlingsguiden gör bäst.
 
 **Vad gör frukt unikt jämfört med andra kategorier?**
 
@@ -116,43 +116,43 @@ Frukt är extra naturligt – om ni odlar eller planerar att odla frukt på går
 
 **Prioriterade fruktprofiler:**
 
-| Prio | Frukt | Familj | Varför? |
-|------|-------|--------|---------|
-| 1 | Äpple | Rosaceae | Sveriges mest odlade frukt. Enormt sortutbud. Zonberoende. |
-| 2 | Päron | Rosaceae | Näst populärast. Kräver pollinatör. Lagringsvärdig. |
-| 3 | Plommon | Rosaceae | Härdigt, populärt, finns sorter som klarar zon 5–6. |
-| 4 | Körsbär | Rosaceae | Både söt och sur. Fågelproblem = bra "drama" i profilen. |
-| 5 | Rabarber | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
+| Prio | Frukt    | Familj       | Varför?                                                         |
+| ---- | -------- | ------------ | --------------------------------------------------------------- |
+| 1    | Äpple    | Rosaceae     | Sveriges mest odlade frukt. Enormt sortutbud. Zonberoende.      |
+| 2    | Päron    | Rosaceae     | Näst populärast. Kräver pollinatör. Lagringsvärdig.             |
+| 3    | Plommon  | Rosaceae     | Härdigt, populärt, finns sorter som klarar zon 5–6.             |
+| 4    | Körsbär  | Rosaceae     | Både söt och sur. Fågelproblem = bra "drama" i profilen.        |
+| 5    | Rabarber | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
 
-> *Notering: Alla topp-4 är Rosaceae – samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband.*
+> _Notering: Alla topp-4 är Rosaceae – samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband._
 
 ### 1.7 Fler profiler → 16 totalt (10+3+3)
 
 **Grönsaker (7 nya):**
 
-| Prio | Gröda | Familj | Varför nu? |
-|------|-------|--------|-----------|
-| 1 | Ärtor | Fabaceae | Enkel, populär, korsrefereras redan av 3 profiler |
-| 2 | Squash/Zucchini | Cucurbitaceae | Storslagen skörd, ny familj, bra drama i näringskurvan |
-| 3 | Sallat | Asteraceae | Snabb, enkel, ny familj, bra för nybörjare |
-| 4 | Lök | Amaryllidaceae | Grundgröda, nämns som companion överallt |
-| 5 | Grönkål | Brassicaceae | Härdig, vintergröda, ny familj |
-| 6 | Rädisa | Brassicaceae | Snabbast från sådd till skörd |
-| 7 | Bondböna | Fabaceae | Kvävefixerare, bra växtföljdsväxt |
+| Prio | Gröda           | Familj         | Varför nu?                                             |
+| ---- | --------------- | -------------- | ------------------------------------------------------ |
+| 1    | Ärtor           | Fabaceae       | Enkel, populär, korsrefereras redan av 3 profiler      |
+| 2    | Squash/Zucchini | Cucurbitaceae  | Storslagen skörd, ny familj, bra drama i näringskurvan |
+| 3    | Sallat          | Asteraceae     | Snabb, enkel, ny familj, bra för nybörjare             |
+| 4    | Lök             | Amaryllidaceae | Grundgröda, nämns som companion överallt               |
+| 5    | Grönkål         | Brassicaceae   | Härdig, vintergröda, ny familj                         |
+| 6    | Rädisa          | Brassicaceae   | Snabbast från sådd till skörd                          |
+| 7    | Bondböna        | Fabaceae       | Kvävefixerare, bra växtföljdsväxt                      |
 
 **Bär (2 nya):**
 
-| Prio | Bär | Familj | Varför nu? |
-|------|-----|--------|-----------|
-| 1 | Jordgubbar | Rosaceae | Sveriges populäraste bär. Måste finnas. |
-| 2 | Svarta vinbär | Grossulariaceae | Ny familj, extremt härdig, klassisk svensk buske |
+| Prio | Bär           | Familj          | Varför nu?                                       |
+| ---- | ------------- | --------------- | ------------------------------------------------ |
+| 1    | Jordgubbar    | Rosaceae        | Sveriges populäraste bär. Måste finnas.          |
+| 2    | Svarta vinbär | Grossulariaceae | Ny familj, extremt härdig, klassisk svensk buske |
 
 **Kryddor (2 nya):**
 
-| Prio | Krydda | Familj | Varför nu? |
-|------|--------|--------|-----------|
-| 1 | Persilja | Apiaceae | Grundkrydda, tvåårig, ny dimension |
-| 2 | Dill | Apiaceae | Svenskt staple, direktsådd, enkel |
+| Prio | Krydda   | Familj   | Varför nu?                         |
+| ---- | -------- | -------- | ---------------------------------- |
+| 1    | Persilja | Apiaceae | Grundkrydda, tvåårig, ny dimension |
+| 2    | Dill     | Apiaceae | Svenskt staple, direktsådd, enkel  |
 
 ---
 
@@ -263,17 +263,17 @@ Ingen prioritet ännu. Plockas upp när det passar.
 
 **Steg 2 (framtida):** Native-app (iOS/Android) som valfri betalversion. Samma innehåll men bättre upplevelse. Användare kan välja att stödja projektet genom att betala för bekvämligheten.
 
-| | Webbapp (gratis) | Native-app (framtida, betald) |
-|---|---|---|
-| Allt innehåll | Ja | Ja |
-| Sök & filter | Ja | Ja, offline-sökbar |
-| Säsongsvy | Ja | Ja + push-notiser |
-| Offline | Nej | Ja, full offline-åtkomst |
-| Upplevelse | Webbapp | Native app-känsla |
-| Zonminne | Sessionsbaserat | Sparar inställningar |
-| Min odling | Nej | Spara vad du odlar |
-| SEO | Ja, driver trafik | – |
-| Koppling Lilla Bosgården | Direkt på sajten | Länk i meny + "Från Lilla Bosgården" |
+|                          | Webbapp (gratis)  | Native-app (framtida, betald)        |
+| ------------------------ | ----------------- | ------------------------------------ |
+| Allt innehåll            | Ja                | Ja                                   |
+| Sök & filter             | Ja                | Ja, offline-sökbar                   |
+| Säsongsvy                | Ja                | Ja + push-notiser                    |
+| Offline                  | Nej               | Ja, full offline-åtkomst             |
+| Upplevelse               | Webbapp           | Native app-känsla                    |
+| Zonminne                 | Sessionsbaserat   | Sparar inställningar                 |
+| Min odling               | Nej               | Spara vad du odlar                   |
+| SEO                      | Ja, driver trafik | –                                    |
+| Koppling Lilla Bosgården | Direkt på sajten  | Länk i meny + "Från Lilla Bosgården" |
 
 **Varför gratis webbapp först?** Validera att innehållet och upplevelsen håller innan vi investerar i native-app. Webben bygger publik, SEO-trafik och varumärke. Native-appen blir ett naturligt nästa steg när det finns en etablerad användarbas.
 
@@ -302,42 +302,43 @@ Ingen prioritet ännu. Plockas upp när det passar.
 
 **Prototyp (nu):**
 
-| Komponent | Teknologi |
-|---|---|
-| Byggverktyg | Vite 7.3 |
-| UI | React 19 + TypeScript (strict) |
-| Styling | CSS Modules + CSS custom properties |
-| Typografi | Fraunces (rubriker) + Lora (brödtext), self-hosted via @fontsource |
-| UI-element | System-font (badges, etiketter, knappar) |
-| Grafer | Recharts 3.7 |
+| Komponent   | Teknologi                                                          |
+| ----------- | ------------------------------------------------------------------ |
+| Byggverktyg | Vite 7.3                                                           |
+| UI          | React 19 + TypeScript (strict)                                     |
+| Styling     | CSS Modules + CSS custom properties                                |
+| Typografi   | Fraunces (rubriker) + Lora (brödtext), self-hosted via @fontsource |
+| UI-element  | System-font (badges, etiketter, knappar)                           |
+| Grafer      | Recharts 3.7                                                       |
 
 ### Konkurrentanalys
 
-| | Odlingsguiden | Odla ätbart | GrowVeg | Grove.eco |
-|---|---|---|---|---|
-| Näringskurvor | Ja | Nej | Nej | Nej |
-| Sv. odlingszoner | Ja | Ja | Nej | Nej |
-| Djup per-profil | Ja | Delvis | Nej | Delvis |
-| Companion planting | Ja | Delvis | Ja | Nej |
-| Bär, Kryddor & Frukt | Ja | Delvis | Delvis | Nej |
-| Offline | Planerat | Nej | Nej | Nej |
-| Pris | Gratis (webb) | Gratis | $40/år | $60/år |
+|                      | Odlingsguiden | Odla ätbart | GrowVeg | Grove.eco |
+| -------------------- | ------------- | ----------- | ------- | --------- |
+| Näringskurvor        | Ja            | Nej         | Nej     | Nej       |
+| Sv. odlingszoner     | Ja            | Ja          | Nej     | Nej       |
+| Djup per-profil      | Ja            | Delvis      | Nej     | Delvis    |
+| Companion planting   | Ja            | Delvis      | Ja      | Nej       |
+| Bär, Kryddor & Frukt | Ja            | Delvis      | Delvis  | Nej       |
+| Offline              | Planerat      | Nej         | Nej     | Nej       |
+| Pris                 | Gratis (webb) | Gratis      | $40/år  | $60/år    |
 
 **Vårt gap:** Ingen befintlig app kombinerar näringskurvor + nordisk klimatanpassning + djup per-profil-data. Och ingen har fruktträd med pollinationsguider och zonanpassade sortrekommendationer.
 
 ### Kända brister
 
-- [ ] Emojis används överallt istället för custom SVG-ikoner (pågår: 1.3 grafisk profil)
+- [x] ~~Emojis används överallt istället för custom SVG-ikoner~~ (åtgärdat: 1.3 grafisk profil)
+- [x] ~~Potatis saknar illustration~~ (åtgärdat: 1.3 grafisk profil)
+- [ ] Odlingszonerna och landskapstilldelning behöver faktagranskas (Gotland = zon 1, m.fl.)
 - [ ] Ingen säsongsvy/kalender
 - [ ] Inga korsreferenser (companion planting nämner grödor men de är inte klickbara)
 - [ ] Frukt saknas som kategori
-- [ ] Potatis saknar illustration
 - [ ] Bundle size >500KB pga Recharts
 
 ### Filer
 
 | Fil | Beskrivning |
-|-----|------------|
+| --- | --- |
 | `prototypes/grodguiden-wireframe.jsx` | Huvudprototyp – referens, ej längre aktiv kod |
 | `prototypes/grodguiden-designguide.jsx` | Visuell designguide med paletter och typsnitt |
 | `prototypes/grodguiden-illustrationer.jsx` | SVG-illustrationer för grödor |
@@ -348,4 +349,4 @@ Ingen prioritet ännu. Plockas upp när det passar.
 
 ---
 
-*Senast uppdaterad: 2026-02-26*
+_Senast uppdaterad: 2026-02-26_
