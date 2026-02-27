@@ -5,8 +5,27 @@
 
 .header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: var(--space-section) 0 var(--space-lg);
+  gap: var(--space-xxl);
+}
+
+.zonePill {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-badge);
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-family: var(--font-ui);
+  transition: all 0.2s;
+}
+
+.zonePill:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 /* Category toggle */
@@ -22,21 +41,27 @@
 
 .categoryButton {
   flex: 1;
-  padding: var(--space-md) var(--space-sm);
+  padding: var(--space-sm) var(--space-sm);
   border: none;
+  border-right: 1px solid var(--color-border);
   cursor: pointer;
   font-size: var(--text-body);
   font-weight: 700;
   transition: all 0.2s;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 2px;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.categoryButton:last-child {
+  border-right: none;
 }
 
 .categoryActive {
   color: #fff;
   background: var(--cat-color);
+  border-right-color: transparent;
 }
 
 .categoryInactive {
@@ -44,63 +69,10 @@
   background: transparent;
 }
 
+
 .categoryIcon {
   display: flex;
   align-items: center;
-}
-
-.categoryCount {
-  font-size: 10px;
-  opacity: 0.7;
-}
-
-/* Zone button */
-.zoneButton {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--space-md) var(--space-lg);
-  border-radius: var(--radius-button);
-  border: 2px solid var(--color-accent);
-  background: #EDF7F0;
-  cursor: pointer;
-  margin-bottom: var(--space-lg);
-}
-
-.zoneLeft {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.zoneBadge {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.zoneLabel {
-  font-size: var(--text-body);
-  font-weight: 700;
-  color: var(--color-text);
-}
-
-.zoneSub {
-  font-size: var(--text-small);
-  color: var(--color-text-muted);
-}
-
-.zoneChange {
-  font-size: 14px;
-  color: var(--color-accent-muted);
 }
 
 /* Search */
@@ -186,7 +158,7 @@
 }
 
 .cropLocked {
-  background: #FAFAF8;
+  background: #fafaf8;
   cursor: default;
   opacity: 0.6;
 }
@@ -219,7 +191,7 @@
   font-size: var(--text-small);
   padding: 3px 10px;
   border-radius: 10px;
-  background: #F0EDE8;
+  background: #f0ede8;
   color: var(--color-text-muted);
 }
 

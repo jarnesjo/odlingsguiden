@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import type { Category, Zone } from '../../data/types'
-import { CATEGORIES } from '../../data/categories'
-import { CROP_LIST } from '../../data/crops'
-import { DIFFICULTY_INFO } from '../../data/difficulty'
-import { ZONE_INFO } from '../../data/zones'
-import { Icon } from '../icons/Icon'
-import { SearchIcon, DifficultyDot } from '../icons'
-import { LogoCombined } from '../brand'
-import { SymbolSprout } from '../brand'
-import { CropGraphic } from '../illustrations/CropGraphic'
-import styles from './CropList.module.css'
+import { useState } from "react"
+import type { Category, Zone } from "../../data/types"
+import { CATEGORIES } from "../../data/categories"
+import { CROP_LIST } from "../../data/crops"
+import { DIFFICULTY_INFO } from "../../data/difficulty"
+import { ZONE_INFO } from "../../data/zones"
+import { Icon } from "../icons/Icon"
+import { SearchIcon, DifficultyDot } from "../icons"
+import { LogoCombined } from "../brand"
+import { SymbolSprout } from "../brand"
+import { CropGraphic } from "../illustrations/CropGraphic"
+import styles from "./CropList.module.css"
 
 interface CropListProps {
   userZone: Zone
@@ -18,16 +18,14 @@ interface CropListProps {
 }
 
 export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
-  const [search, setSearch] = useState('')
-  const [filter, setFilter] = useState('Alla')
-  const [category, setCategory] = useState<Category>('grönsaker')
+  const [search, setSearch] = useState("")
+  const [filter, setFilter] = useState("Alla")
+  const [category, setCategory] = useState<Category>("grönsaker")
 
   const catCrops = CROP_LIST.filter((c) => c.category === category)
-  const families = ['Alla', ...new Set(catCrops.map((c) => c.familyLatin))]
+  const families = ["Alla", ...new Set(catCrops.map((c) => c.familyLatin))]
   const filtered = catCrops.filter(
-    (c) =>
-      (filter === 'Alla' || c.familyLatin === filter) &&
-      c.name.toLowerCase().includes(search.toLowerCase())
+    (c) => (filter === "Alla" || c.familyLatin === filter) && c.name.toLowerCase().includes(search.toLowerCase()),
   )
 
   const activeCat = CATEGORIES.find((c) => c.id === category)!
@@ -37,47 +35,34 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <LogoCombined
-          name="Odlingsguiden"
-          tagline="Allt du behöver veta - en gröda i taget"
-          symbol={SymbolSprout}
-        />
+        <LogoCombined name="Odlingsguiden" tagline="Allt du behöver veta - en gröda i taget" symbol={SymbolSprout} />
+        <button className={styles.zonePill} onClick={onZoneClick}>
+          Zon {userZone} · {ZONE_INFO[userZone].region} ▾
+        </button>
       </div>
 
       {/* Category Toggle */}
       <div className={styles.categoryToggle}>
         {CATEGORIES.map((cat) => {
           const isActive = category === cat.id
-          const count = CROP_LIST.filter((c) => c.category === cat.id).length
           return (
             <button
               key={cat.id}
               className={`${styles.categoryButton} ${isActive ? styles.categoryActive : styles.categoryInactive}`}
-              style={{ '--cat-color': cat.color } as React.CSSProperties}
+              style={{ "--cat-color": cat.color } as React.CSSProperties}
               onClick={() => {
                 setCategory(cat.id)
-                setFilter('Alla')
+                setFilter("Alla")
               }}
             >
-              <span className={styles.categoryIcon}><Icon name={cat.icon} size={18} color={isActive ? '#fff' : cat.color} /></span>
+              <span className={styles.categoryIcon}>
+                <Icon name={cat.icon} size={22} color={isActive ? "#fff" : cat.color} />
+              </span>
               <span>{cat.label}</span>
-              <span className={styles.categoryCount}>{count} st</span>
             </button>
           )
         })}
       </div>
-
-      {/* Zone selector button */}
-      <button className={styles.zoneButton} onClick={onZoneClick}>
-        <div className={styles.zoneLeft}>
-          <div className={styles.zoneBadge}>{userZone}</div>
-          <div>
-            <div className={styles.zoneLabel}>Odlingszon {userZone}</div>
-            <div className={styles.zoneSub}>{ZONE_INFO[userZone].region} · Tryck för att byta</div>
-          </div>
-        </div>
-        <span className={styles.zoneChange}>Byt ›</span>
-      </button>
 
       {/* Search */}
       <div className={styles.searchWrapper}>
@@ -88,7 +73,9 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
           onChange={(e) => setSearch(e.target.value)}
           className={styles.searchInput}
         />
-        <span className={styles.searchIcon}><SearchIcon size={16} color="#999" /></span>
+        <span className={styles.searchIcon}>
+          <SearchIcon size={16} color="#999" />
+        </span>
       </div>
 
       {/* Family filters */}
@@ -98,7 +85,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
             <button
               key={f}
               className={`${styles.familyButton} ${filter === f ? styles.familyActive : styles.familyInactive}`}
-              style={{ '--cat-color': activeCat.color } as React.CSSProperties}
+              style={{ "--cat-color": activeCat.color } as React.CSSProperties}
               onClick={() => setFilter(f)}
             >
               {f}
@@ -110,7 +97,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
       {/* Crop rows */}
       {filtered.map((crop) => {
         const d = DIFFICULTY_INFO[crop.difficulty]
-        const dotColor = d.color === '#B7E4C7' ? '#3D6B4F' : d.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
+        const dotColor = d.color === "#B7E4C7" ? "#3D6B4F" : d.color === "#FFF3CD" ? "#B8860B" : "#B54A3F"
         return (
           <button
             key={crop.id}
@@ -123,14 +110,13 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
             <div className={styles.cropInfo}>
               <div className={styles.cropName}>{crop.name}</div>
               <div className={styles.cropMeta}>
-                {crop.familyLatin} ({crop.family}) · <span style={{ color: dotColor }}><DifficultyDot color={dotColor} /> {crop.difficulty}</span>
+                {crop.familyLatin} ({crop.family}) ·{" "}
+                <span style={{ color: dotColor }}>
+                  <DifficultyDot color={dotColor} /> {crop.difficulty}
+                </span>
               </div>
             </div>
-            {crop.locked ? (
-              <span className={styles.soonBadge}>Snart</span>
-            ) : (
-              <span className={styles.arrow}>→</span>
-            )}
+            {crop.locked ? <span className={styles.soonBadge}>Snart</span> : <span className={styles.arrow}>→</span>}
           </button>
         )
       })}
@@ -140,7 +126,10 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
         {unlockedCount} {activeCat.label.toLowerCase()} tillgängliga · {lockedCount} kommer snart
         <br />
         <span className={styles.footerSub}>
-          Skapad med omtanke av <a href="https://lillabosgarden.se" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Lilla Bosgården</a>
+          Skapad med omtanke av{" "}
+          <a href="https://lillabosgarden.se" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+            Lilla Bosgården
+          </a>
         </span>
       </div>
     </div>
