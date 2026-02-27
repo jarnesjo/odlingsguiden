@@ -1,5 +1,7 @@
 import type { SowingInfo } from '../../data/types'
 import { Section } from '../ui'
+import { Icon } from '../icons/Icon'
+import { SeedlingIcon, TipIcon } from '../icons'
 import styles from './SowingSection.module.css'
 
 interface SowingSectionProps {
@@ -7,18 +9,18 @@ interface SowingSectionProps {
 }
 
 const METHOD_CONFIG = {
-  direct: { className: 'methodDirect', icon: '🌾', label: 'Direktsådd' },
-  indoor: { className: 'methodIndoor', icon: '🏠', label: 'Förodling inomhus' },
-  both: { className: 'methodBoth', icon: '🌾🏠', label: 'Direktsådd eller förodling' },
+  direct: { className: 'methodDirect', icon: 'seed', label: 'Direktsådd' },
+  indoor: { className: 'methodIndoor', icon: 'indoor', label: 'Förodling inomhus' },
+  both: { className: 'methodBoth', icon: 'seed', label: 'Direktsådd eller förodling' },
 } as const
 
 export function SowingSection({ sowing }: SowingSectionProps) {
   const config = METHOD_CONFIG[sowing.method]
 
   return (
-    <Section title={`🌱 ${sowing.label}`}>
+    <Section title={sowing.label} icon={<SeedlingIcon size={20} />}>
       <div className={`${styles.methodCard} ${styles[config.className]}`}>
-        <span className={styles.methodIcon}>{config.icon}</span>
+        <span className={styles.methodIcon}><Icon name={config.icon} size={20} /></span>
         <div>
           <div className={styles.methodTitle}>{config.label}</div>
           {sowing.indoorWeeks && (
@@ -39,7 +41,7 @@ export function SowingSection({ sowing }: SowingSectionProps) {
           <div className={styles.tipsTitle}>Tips</div>
           {sowing.tips.map((tip, i) => (
             <div key={i} className={styles.tip}>
-              <span className={styles.tipIcon}>💡</span> {tip}
+              <span className={styles.tipIcon}><TipIcon size={14} /></span> {tip}
             </div>
           ))}
         </>

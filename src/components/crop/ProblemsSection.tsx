@@ -1,5 +1,6 @@
 import type { Problem } from '../../data/types'
 import { Section } from '../ui'
+import { BugIcon } from '../icons'
 import styles from './ProblemsSection.module.css'
 
 interface ProblemsSectionProps {
@@ -8,7 +9,7 @@ interface ProblemsSectionProps {
 
 export function ProblemsSection({ problems }: ProblemsSectionProps) {
   return (
-    <Section title="🐛 Vanliga problem" defaultOpen={false}>
+    <Section title="Vanliga problem" icon={<BugIcon size={20} />} defaultOpen={false}>
       {problems.map((p, i) => (
         <div key={i} className={styles.problem}>
           <div className={styles.problemName}>{p.name}</div>

@@ -1,5 +1,6 @@
 import type { Variety, Zone } from '../../data/types'
 import { Section } from '../ui'
+import { TagIcon } from '../icons'
 import styles from './VarietiesSection.module.css'
 
 interface VarietiesSectionProps {
@@ -12,7 +13,7 @@ export function VarietiesSection({ varieties, userZone }: VarietiesSectionProps)
   const otherVarieties = varieties.filter((v) => !v.zones.includes(userZone))
 
   return (
-    <Section title={`🏷️ Sorter för odlingszon ${userZone}`} defaultOpen={false}>
+    <Section title={`Sorter för odlingszon ${userZone}`} icon={<TagIcon size={20} />} defaultOpen={false}>
       {goodVarieties.length > 0 && (
         <>
           <div className={`${styles.groupTitle} ${styles.goodGroupTitle}`}>

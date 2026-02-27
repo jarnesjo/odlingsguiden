@@ -4,6 +4,9 @@ import { CATEGORIES } from '../../data/categories'
 import { CROP_LIST } from '../../data/crops'
 import { DIFFICULTY_INFO } from '../../data/difficulty'
 import { ZONE_INFO } from '../../data/zones'
+import { Icon } from '../icons/Icon'
+import { LogoIcon, SearchIcon, DifficultyDot } from '../icons'
+import { CropGraphic } from '../illustrations/CropGraphic'
 import styles from './CropList.module.css'
 
 interface CropListProps {
@@ -32,7 +35,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.logo}>🌱</div>
+        <div className={styles.logo}><LogoIcon size={32} /></div>
         <h1 className={styles.title}>Odlingsguiden</h1>
         <p className={styles.subtitle}>Allt du behöver veta – en gröda i taget</p>
       </div>
@@ -52,7 +55,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
                 setFilter('Alla')
               }}
             >
-              <span className={styles.categoryEmoji}>{cat.emoji}</span>
+              <span className={styles.categoryIcon}><Icon name={cat.icon} size={18} color={isActive ? '#fff' : cat.color} /></span>
               <span>{cat.label}</span>
               <span className={styles.categoryCount}>{count} st</span>
             </button>
@@ -81,7 +84,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
           onChange={(e) => setSearch(e.target.value)}
           className={styles.searchInput}
         />
-        <span className={styles.searchIcon}>🔍</span>
+        <span className={styles.searchIcon}><SearchIcon size={16} color="#999" /></span>
       </div>
 
       {/* Family filters */}
@@ -103,17 +106,20 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
       {/* Crop rows */}
       {filtered.map((crop) => {
         const d = DIFFICULTY_INFO[crop.difficulty]
+        const dotColor = d.color === '#B7E4C7' ? '#3D6B4F' : d.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
         return (
           <button
             key={crop.id}
             className={`${styles.cropButton} ${crop.locked ? styles.cropLocked : styles.cropUnlocked}`}
             onClick={() => !crop.locked && onSelect(crop.id)}
           >
-            <div className={styles.cropEmoji}>{crop.emoji}</div>
+            <div className={styles.cropGraphic}>
+              <CropGraphic id={crop.id} size={40} category={crop.category} />
+            </div>
             <div className={styles.cropInfo}>
               <div className={styles.cropName}>{crop.name}</div>
               <div className={styles.cropMeta}>
-                {crop.familyLatin} ({crop.family}) · <span style={{ color: d.color === '#B7E4C7' ? '#3D6B4F' : d.color === '#FFF3CD' ? '#B8860B' : '#B54A3F' }}>{d.icon} {crop.difficulty}</span>
+                {crop.familyLatin} ({crop.family}) · <span style={{ color: dotColor }}><DifficultyDot color={dotColor} /> {crop.difficulty}</span>
               </div>
             </div>
             {crop.locked ? (

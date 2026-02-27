@@ -1,5 +1,7 @@
 import type { Watering } from '../../data/types'
 import { Section } from '../ui'
+import { Icon } from '../icons/Icon'
+import { WaterIcon, TipIcon } from '../icons'
 import styles from './WateringSection.module.css'
 
 interface WateringSectionProps {
@@ -14,9 +16,9 @@ function getNeedColor(need: string): string {
 
 export function WateringSection({ watering }: WateringSectionProps) {
   return (
-    <Section title="💧 Vattning" defaultOpen={false}>
+    <Section title="Vattning" icon={<WaterIcon size={20} />} defaultOpen={false}>
       <div className={styles.header}>
-        <span className={styles.headerIcon}>{watering.icon}</span>
+        <span className={styles.headerIcon}><Icon name={watering.icon} size={24} /></span>
         <div>
           <div className={styles.headerTitle}>Vattenbehov: {watering.need}</div>
           <div className={styles.headerSummary}>{watering.summary}</div>
@@ -46,7 +48,7 @@ export function WateringSection({ watering }: WateringSectionProps) {
         </div>
       ))}
       <div className={styles.bestTip}>
-        <div className={styles.bestTipTitle}>💡 Bästa tipset</div>
+        <div className={styles.bestTipTitle}><TipIcon size={16} /> Bästa tipset</div>
         <div className={styles.bestTipText}>{watering.tip}</div>
       </div>
     </Section>

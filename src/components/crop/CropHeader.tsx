@@ -1,5 +1,7 @@
 import type { Crop, Zone } from '../../data/types'
 import { DifficultyBadge, ZoneBadge } from '../ui'
+import { CropGraphic } from '../illustrations/CropGraphic'
+import { BackArrowIcon } from '../icons'
 import styles from './CropHeader.module.css'
 
 interface CropHeaderProps {
@@ -26,11 +28,13 @@ export function CropHeader({ crop, userZone, onBack }: CropHeaderProps) {
   return (
     <>
       <button className={styles.backButton} onClick={onBack}>
-        ← Tillbaka
+        <BackArrowIcon size={18} /> Tillbaka
       </button>
 
       <div className={styles.hero}>
-        <div className={styles.emoji}>{crop.emoji}</div>
+        <div className={styles.illustration}>
+          <CropGraphic id={crop.icon} size={120} category={crop.category} />
+        </div>
         <h1 className={styles.name}>{crop.name}</h1>
         <div className={styles.family}>
           {crop.familyLatin} <span className={styles.familySwedish}>({crop.family})</span>

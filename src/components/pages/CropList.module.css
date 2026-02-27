@@ -9,7 +9,8 @@
 }
 
 .logo {
-  font-size: 36px;
+  display: flex;
+  justify-content: center;
   margin-bottom: var(--space-xs);
 }
 
@@ -61,8 +62,9 @@
   background: transparent;
 }
 
-.categoryEmoji {
-  font-size: 20px;
+.categoryIcon {
+  display: flex;
+  align-items: center;
 }
 
 .categoryCount {
@@ -141,7 +143,8 @@
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16px;
+  display: flex;
+  align-items: center;
   color: var(--color-text-muted);
 }
 
@@ -206,8 +209,13 @@
   opacity: 0.6;
 }
 
-.cropEmoji {
-  font-size: 32px;
+.cropGraphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
 
 .cropInfo {

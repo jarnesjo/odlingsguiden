@@ -1,5 +1,6 @@
 import type { NutritionDataPoint, NutritionTip } from '../../data/types'
 import { Section, NutritionChart } from '../ui'
+import { ChartIcon } from '../icons'
 import styles from './NutritionSection.module.css'
 
 interface NutritionSectionProps {
@@ -10,7 +11,7 @@ interface NutritionSectionProps {
 
 export function NutritionSection({ cropName, data, tips }: NutritionSectionProps) {
   return (
-    <Section title="📈 Näringskurva">
+    <Section title="Näringskurva" icon={<ChartIcon size={20} />}>
       <p className={styles.intro}>
         Visar hur {cropName.toLowerCase()}ens behov av kväve, fosfor och kalium förändras genom säsongen.
       </p>

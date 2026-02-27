@@ -1,5 +1,6 @@
 import type { Pruning } from '../../data/types'
 import { Section } from '../ui'
+import { ScissorsIcon } from '../icons'
 import styles from './PruningSection.module.css'
 
 interface PruningSectionProps {
@@ -10,11 +11,11 @@ export function PruningSection({ pruning }: PruningSectionProps) {
   const types = Object.values(pruning.types)
 
   return (
-    <Section title={`✂️ ${pruning.label}`}>
+    <Section title={pruning.label} icon={<ScissorsIcon size={20} />}>
       {types.map((type, idx) => (
         <div key={idx} className={styles.typeBlock}>
           <div className={`${styles.typeHeader} ${idx === 0 ? styles.typeHeaderFirst : styles.typeHeaderAlt}`}>
-            <span className={styles.typeIcon}>✂️</span>
+            <span className={styles.typeIcon}><ScissorsIcon size={18} /></span>
             <div>
               <div className={styles.typeName}>{type.name}</div>
               <div className={styles.typeWhen}>{type.when}</div>

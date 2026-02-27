@@ -1,5 +1,6 @@
 import type { PhRange } from '../../data/types'
 import { Section, PhBar } from '../ui'
+import { SoilIcon } from '../icons'
 import styles from './SoilSection.module.css'
 
 interface SoilSectionProps {
@@ -10,7 +11,7 @@ interface SoilSectionProps {
 
 export function SoilSection({ soil, ph, soilTips }: SoilSectionProps) {
   return (
-    <Section title="🌡️ Jord & pH-krav" defaultOpen={false}>
+    <Section title="Jord & pH-krav" icon={<SoilIcon size={20} />} defaultOpen={false}>
       <p className={styles.description}>{soil}</p>
       <PhBar ph={ph} />
       <div className={styles.tips}>

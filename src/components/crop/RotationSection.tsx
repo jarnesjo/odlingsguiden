@@ -1,5 +1,6 @@
 import type { Rotation } from '../../data/types'
 import { Section } from '../ui'
+import { RotationIcon } from '../icons'
 import styles from './RotationSection.module.css'
 
 interface RotationSectionProps {
@@ -8,7 +9,7 @@ interface RotationSectionProps {
 
 export function RotationSection({ rotation }: RotationSectionProps) {
   return (
-    <Section title="🔄 Växtföljd" defaultOpen={false}>
+    <Section title="Växtföljd" icon={<RotationIcon size={20} />} defaultOpen={false}>
       <div className={`${styles.card} ${styles.avoidCard}`}>
         <div className={`${styles.cardTitle} ${styles.avoidTitle}`}>
           Undvik efter: {rotation.avoid.join(', ')}

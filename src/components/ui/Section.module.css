@@ -18,6 +18,13 @@
   font-family: var(--font-heading);
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-xs);
+  flex-shrink: 0;
+}
+
 .chevron {
   font-size: 18px;
   transition: transform 0.2s ease;
