@@ -11,12 +11,13 @@ interface IconProps {
 export function VegetableIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-      <path d="M12 2C9 2 7 4 7 7c0 1 .3 2 .8 2.8C6 10.5 5 12 5 14c0 3.3 3.1 6 7 6s7-2.7 7-6c0-2-.8-3.5-2.8-4.2.5-.8.8-1.8.8-2.8 0-3-2-5-5-5z" fill={color} opacity="0.15" />
-      <path d="M12 3c-2.5 0-4 1.8-4 4 0 1.2.5 2.3 1.3 3" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M12 3c2.5 0 4 1.8 4 4 0 1.2-.5 2.3-1.3 3" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M6 14c0 3 2.7 5 6 5s6-2 6-5c0-2.5-2-4-4-4.5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M10 9.5C8 10 6 11.5 6 14" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="12" y1="2" x2="12" y2="5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Droppform */}
+      <path d="M12 22c-3 0-5.5-2-5.5-5 0-3.5 4-9.5 5.5-11.5C13.5 7.5 17.5 13.5 17.5 17c0 3-2.5 5-5.5 5z" fill={color} opacity="0.12" />
+      <path d="M12 22c-3 0-5.5-2-5.5-5 0-3.5 4-9.5 5.5-11.5C13.5 7.5 17.5 13.5 17.5 17c0 3-2.5 5-5.5 5z" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Blast */}
+      <path d="M10 5.5L8 2" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M12 5.5V1.5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M14 5.5L16 2" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   )
 }
