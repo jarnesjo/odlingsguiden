@@ -1,0 +1,59 @@
+meta:
+  roadmap_step: "1.6"
+  title: "Frukt som fjärde kategori"
+  status: planerad
+  created: 2026-02-27
+
+context: |
+  Roadmap steg 1.6 - Frukt som fjärde kategori. Vi har redan 76 entries
+  (43 grönsaker, 15 bär, 18 kryddor). Nu lägger vi till frukt med flik,
+  färg, ikon och en komplett lista med fruktträd.
+
+files_to_modify:
+  - path: src/data/types.ts
+    change: "Lägg till 'frukt' i Category-unionen"
+  - path: src/data/categories.ts
+    change: "Ny entry: { id: 'frukt', label: 'Frukt', icon: 'fruit', color: '#B8653B' }"
+  - path: src/theme/tokens.ts
+    change: "Lägg till fruits: { primary: '#B8653B', light: '#F2DECE' } i colors.category"
+  - path: src/theme/global.css
+    change: "Lägg till --color-cat-fruits och --color-cat-fruits-light CSS-variabler"
+  - path: src/components/icons/index.tsx
+    change: "Skapa FruitIcon - abstrakt äpple/fruktform, 1.8px stroke, round caps, opacity 0.12 fill, 24x24"
+  - path: src/components/icons/Icon.tsx
+    change: "Importera FruitIcon, lägg till fruit: FruitIcon i ICON_MAP"
+  - path: src/components/illustrations/CropGraphic.tsx
+    change: "Importera FruitIcon, lägg till 'frukt': FruitIcon i CATEGORY_ICONS (exhaustive Record)"
+  - path: src/components/pages/CropPage.tsx
+    change: "Lägg till isFruit-check. Frukt beter sig som bär (fleråriga): PruningSection + PropagationSection"
+  - path: src/components/crop/CropHeader.tsx
+    change: "Lägg till isFruit - samma labels som bär (Plantavstånd, Plantering istf Sådjup)"
+  - path: src/data/crops/index.ts
+    change: "Lägg till komplett fruktlista (~15 st) med category: 'frukt', alla låsta"
+
+fruit_list:
+  rosaceae:
+    - { id: apple, name: Äpple, difficulty: Medel }
+    - { id: paron, name: Päron, difficulty: Medel }
+    - { id: plommon, name: Plommon, difficulty: Medel }
+    - { id: korsbar, name: Körsbär, difficulty: Medel }
+    - { id: surkorsbar, name: Surkörsbär, difficulty: Medel }
+    - { id: krikon, name: Krikon, difficulty: Enkel }
+    - { id: slan, name: Slån, difficulty: Enkel }
+    - { id: hagtorn, name: Hagtorn, difficulty: Enkel }
+    - { id: mirabellplommon, name: Mirabellplommon, difficulty: Medel }
+  moraceae:
+    - { id: fikon, name: Fikon, difficulty: Avancerad }
+  juglandaceae:
+    - { id: valnot, name: Valnöt, difficulty: Avancerad }
+  corylaceae:
+    - { id: hasselnot, name: Hasselnöt, difficulty: Medel }
+  actinidiaceae:
+    - { id: minikiwi, name: Minikiwi, difficulty: Medel }
+  elaeagnaceae:
+    - { id: silverbuske, name: Silverbuske, difficulty: Enkel }
+
+verification:
+  - "npx tsc --noEmit - inga typfel"
+  - "npm run dev - kontrollera att frukt-fliken syns och fungerar"
+  - "Verifiera att frukt-entries renderas korrekt i listan"
