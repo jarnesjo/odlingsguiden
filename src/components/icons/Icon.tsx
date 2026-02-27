@@ -1,0 +1,87 @@
+import type { ComponentType } from 'react'
+import type { IconProps } from './index'
+import {
+  VegetableIcon,
+  BerryIcon,
+  HerbIcon,
+  SunIcon,
+  WaterIcon,
+  SoilIcon,
+  ScissorsIcon,
+  SeedIcon,
+  CalendarIcon,
+  ZoneIcon,
+  SearchIcon,
+  TemperatureIcon,
+  WindIcon,
+  IndoorIcon,
+  HardeningIcon,
+  TransplantIcon,
+  HarvestIcon,
+  TipIcon,
+  WarningIcon,
+  SnowflakeIcon,
+  CellarIcon,
+  BloomIcon,
+  HillIcon,
+  StakeIcon,
+  LeafIcon,
+  RotationIcon,
+  BugIcon,
+  TagIcon,
+  ChartIcon,
+  StorageIcon,
+  FlowerIcon,
+  BackArrowIcon,
+  CheckIcon,
+  SeedlingIcon,
+} from './index'
+
+const ICON_MAP: Record<string, ComponentType<IconProps>> = {
+  vegetable: VegetableIcon,
+  berry: BerryIcon,
+  herb: HerbIcon,
+  sun: SunIcon,
+  water: WaterIcon,
+  soil: SoilIcon,
+  scissors: ScissorsIcon,
+  seed: SeedIcon,
+  calendar: CalendarIcon,
+  zone: ZoneIcon,
+  search: SearchIcon,
+  temperature: TemperatureIcon,
+  wind: WindIcon,
+  indoor: IndoorIcon,
+  hardening: HardeningIcon,
+  transplant: TransplantIcon,
+  harvest: HarvestIcon,
+  tip: TipIcon,
+  warning: WarningIcon,
+  snowflake: SnowflakeIcon,
+  cellar: CellarIcon,
+  bloom: BloomIcon,
+  hill: HillIcon,
+  stake: StakeIcon,
+  leaf: LeafIcon,
+  rotation: RotationIcon,
+  bug: BugIcon,
+  tag: TagIcon,
+  chart: ChartIcon,
+  storage: StorageIcon,
+  flower: FlowerIcon,
+  back: BackArrowIcon,
+  check: CheckIcon,
+  seedling: SeedlingIcon,
+}
+
+interface Props {
+  name: string
+  color?: string
+  size?: number
+}
+
+export function Icon({ name, color, size }: Props) {
+  const Component = ICON_MAP[name]
+  if (!Component) return null
+  return <Component color={color} size={size} />
+}
