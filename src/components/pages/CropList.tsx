@@ -43,7 +43,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
 
       {/* Category Toggle */}
       <div className={styles.categoryToggle}>
-        {CATEGORIES.map((cat) => {
+        {CATEGORIES.filter((c) => !c.hidden).map((cat) => {
           const isActive = category === cat.id
           return (
             <button

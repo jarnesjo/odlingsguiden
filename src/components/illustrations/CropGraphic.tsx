@@ -8,7 +8,7 @@ import { PotatoIllustration, PotatoIcon } from './PotatoIllustration'
 import { PeaIllustration, PeaIcon } from './PeaIllustration'
 import { SquashIllustration, SquashIcon } from './SquashIllustration'
 import { LettuceIllustration, LettuceIcon } from './LettuceIllustration'
-import { VegetableIcon, BerryIcon, HerbIcon } from '../icons'
+import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
   size?: number
@@ -29,6 +29,7 @@ const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
   'grönsaker': VegetableIcon,
   'bär': BerryIcon,
   'kryddor': HerbIcon,
+  'blommor': FlowerIcon,
 }
 
 interface Props {

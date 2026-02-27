@@ -6,7 +6,7 @@ export type TimelineZone = 1 | 4 | 6
 
 export type Difficulty = 'Enkel' | 'Medel' | 'Avancerad'
 
-export type Category = 'grönsaker' | 'kryddor' | 'bär'
+export type Category = 'grönsaker' | 'kryddor' | 'bär' | 'blommor'
 
 export type Severity = 'warning' | 'tip'
 
@@ -36,6 +36,8 @@ export interface CategoryInfo {
   label: string
   icon: string
   color: string
+  /** Hidden categories are not shown in UI but can be used for data/icons */
+  hidden?: boolean
 }
 
 // ─── Crop Sub-types ──────────────────────────────────────
@@ -125,6 +127,7 @@ export interface Companions {
 export interface RotationItem {
   id?: string
   name: string
+  category?: Category
 }
 
 export interface Rotation {

@@ -118,6 +118,17 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'krasse', name: 'Krasse', icon: 'herb', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'kryddor', locked: true },
   // Kryddor — Lauraceae (Lagerväxter)
   { id: 'lagerblad', name: 'Lagerblad', icon: 'herb', family: 'Lagerväxter', familyLatin: 'Lauraceae', difficulty: 'Avancerad', category: 'kryddor', locked: true },
+  // Blommor — Asteraceae (Korgblommiga)
+  { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
+  { id: 'solros', name: 'Solros', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
+  // Blommor — Tropaeolaceae (Indiankrasseväxter)
+  { id: 'indiankrasse', name: 'Indiankrasse', icon: 'flower', family: 'Indiankrasseväxter', familyLatin: 'Tropaeolaceae', difficulty: 'Enkel', category: 'blommor', locked: true },
+  // Blommor — Boraginaceae (Strävbladiga)
+  { id: 'gurkort', name: 'Gurkört', icon: 'flower', family: 'Strävbladiga', familyLatin: 'Boraginaceae', difficulty: 'Enkel', category: 'blommor', locked: true },
+  // Blommor — Fabaceae (Baljväxter)
+  { id: 'lupin', name: 'Lupin', icon: 'flower', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'blommor', locked: true },
+  // Blommor — Asteraceae (Korgblommiga)
+  { id: 'tagetes', name: 'Tagetes', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
 ]
 
 export { morot, tomat, potatis, hallon, basilika }
