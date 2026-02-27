@@ -8,14 +8,14 @@
   border-radius: 14px;
   background: linear-gradient(
     90deg,
-    #B5645A 0%,
-    #C4956A 20%,
-    #D4C08A 35%,
-    #8BAF7A 43%,
-    #6B9A6B 57%,
-    #7A9BB5 70%,
-    #8B7BAA 85%,
-    #6B5A7A 100%
+    #c4564a 0%,
+    #d9915a 20%,
+    #d4c06a 35%,
+    #5e9e5e 43%,
+    #5e9e5e 57%,
+    #5a8ead 70%,
+    #7e6a9a 85%,
+    #5c4574 100%
   );
   overflow: visible;
 }
@@ -29,22 +29,15 @@
   background: rgba(255, 255, 255, 0.25);
 }
 
-.idealMarker {
+.idealLine {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--color-text);
-  background: var(--color-bg);
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 2px solid var(--color-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
+  top: 2px;
+  bottom: 2px;
+  width: 1.5px;
+  background: var(--color-text);
+  opacity: 0.5;
+  transform: translateX(-50%);
+  border-radius: 1px;
 }
 
 .axis {
