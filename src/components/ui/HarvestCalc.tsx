@@ -28,7 +28,7 @@ export function HarvestCalc({ calc, cropName }: HarvestCalcProps) {
         <span className={styles.sqmValue}>{sqm} m²</span>
       </div>
       <div className={styles.yield}>
-        {minYield}–{maxYield} {calc.unit} {cropName.toLowerCase()}
+        {minYield}-{maxYield} {calc.unit} {cropName.toLowerCase()}
       </div>
       <div className={styles.note}>Uppskattad skörd under normala förhållanden</div>
     </div>

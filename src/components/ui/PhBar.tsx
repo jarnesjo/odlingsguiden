@@ -23,7 +23,7 @@ export function PhBar({ ph }: PhBarProps) {
         <span>14 (basiskt)</span>
       </div>
       <div className={styles.idealText}>
-        Idealiskt: <strong>pH {ph.ideal}</strong> (intervall: {ph.min}–{ph.max})
+        Idealiskt: <strong>pH {ph.ideal}</strong> (intervall: {ph.min}-{ph.max})
       </div>
     </div>
   )

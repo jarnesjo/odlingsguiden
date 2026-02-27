@@ -26,7 +26,7 @@ export function VarietiesSection({ varieties, userZone }: VarietiesSectionProps)
                 <div className={styles.varietyNote}>{v.note}</div>
               </div>
               <span className={`${styles.zoneBadge} ${styles.zoneBadgeGood}`}>
-                Zon {Math.min(...v.zones)}–{Math.max(...v.zones)}
+                Zon {Math.min(...v.zones)}-{Math.max(...v.zones)}
               </span>
             </div>
           ))}
@@ -44,7 +44,7 @@ export function VarietiesSection({ varieties, userZone }: VarietiesSectionProps)
                 <div className={styles.varietyNote}>{v.note}</div>
               </div>
               <span className={`${styles.zoneBadge} ${styles.zoneBadgeOther}`}>
-                Zon {Math.min(...v.zones)}–{Math.max(...v.zones)}
+                Zon {Math.min(...v.zones)}-{Math.max(...v.zones)}
               </span>
             </div>
           ))}

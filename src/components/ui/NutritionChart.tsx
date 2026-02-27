@@ -61,7 +61,7 @@ export function NutritionChart({ data }: NutritionChartProps) {
               formatter={(value?: number, name?: string) => [`${value ?? 0}%`, LABELS[name ?? ''] || name || '']}
               labelFormatter={(label, payload) => {
                 const item = payload?.[0]?.payload as NutritionDataPoint | undefined
-                return item?.label ? `${label} – ${item.label}` : String(label)
+                return item?.label ? `${label} - ${item.label}` : String(label)
               }}
             />
             <Area type="monotone" dataKey="N" stroke={colors.chartN} fill="url(#nGrad)" strokeWidth={2.5} dot={{ r: 3 }} />

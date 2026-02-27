@@ -17,7 +17,7 @@ export function ZoneSelector({ currentZone, onSelect, onClose }: ZoneSelectorPro
           <button className={styles.closeButton} onClick={onClose}>✕</button>
         </div>
         <p className={styles.description}>
-          Odlingszoner i Sverige (1–8) anger hur kallt klimatet är i ditt område. Zon 1 är mildast
+          Odlingszoner i Sverige (1-8) anger hur kallt klimatet är i ditt område. Zon 1 är mildast
           (Skåne), zon 8 kallast (fjällen). Appen anpassar tidslinjer och sortrekommendationer efter
           din zon.
         </p>

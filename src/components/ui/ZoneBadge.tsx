@@ -17,7 +17,7 @@ export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
   let suitColor: string
 
   if (canGrowOutdoor) {
-    label = `Odlingszon ${Math.min(...zones.outdoor!)}–${Math.max(...zones.outdoor!)}`
+    label = `Odlingszon ${Math.min(...zones.outdoor!)}-${Math.max(...zones.outdoor!)}`
     bg = colors.zoneOutdoor
     detail = '✓ Passar din zon'
     suitColor = colors.accent
@@ -28,7 +28,7 @@ export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
     suitColor = colors.zoneGreenhouseText
   } else {
     const fallback = zones.outdoor || zones.greenhouse || []
-    label = `Odlingszon ${Math.min(...fallback)}–${Math.max(...fallback)}`
+    label = `Odlingszon ${Math.min(...fallback)}-${Math.max(...fallback)}`
     bg = colors.warningLight
     detail = '✗ Svårt i din zon'
     suitColor = colors.warning
@@ -41,8 +41,8 @@ export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
       </span>
       {zones.greenhouse && zones.outdoor && (
         <div className={styles.greenhouseInfo}>
-          Utomhus: zon {Math.min(...zones.outdoor)}–{Math.max(...zones.outdoor)} · Växthus: zon{' '}
-          {Math.min(...zones.greenhouse)}–{Math.max(...zones.greenhouse)}
+          Utomhus: zon {Math.min(...zones.outdoor)}-{Math.max(...zones.outdoor)} · Växthus: zon{' '}
+          {Math.min(...zones.greenhouse)}-{Math.max(...zones.greenhouse)}
         </div>
       )}
       <div className={styles.suitability} style={{ '--suit-color': suitColor } as React.CSSProperties}>

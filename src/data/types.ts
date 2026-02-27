@@ -1,4 +1,4 @@
-/** Growing zones in Sweden (1–8) */
+/** Growing zones in Sweden (1-8) */
 export type Zone = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 
 /** Timeline reference zones used in crop data */

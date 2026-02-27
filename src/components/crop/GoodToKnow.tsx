@@ -12,7 +12,7 @@ export function GoodToKnow({ items }: GoodToKnowProps) {
   return (
     <Section title="Bra att veta" icon={<TipIcon size={20} />}>
       <p className={styles.intro}>
-        Saker som erfarna odlare vet – och nybörjare ofta lär sig the hard way.
+        Saker som erfarna odlare vet - och nybörjare ofta lär sig the hard way.
       </p>
       {items.map((item, i) => (
         <div

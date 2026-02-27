@@ -37,7 +37,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
       <div className={styles.header}>
         <div className={styles.logo}><LogoIcon size={32} /></div>
         <h1 className={styles.title}>Odlingsguiden</h1>
-        <p className={styles.subtitle}>Allt du behöver veta – en gröda i taget</p>
+        <p className={styles.subtitle}>Allt du behöver veta - en gröda i taget</p>
       </div>
 
       {/* Category Toggle */}
