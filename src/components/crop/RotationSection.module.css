@@ -30,3 +30,36 @@
   color: var(--color-text-muted);
   line-height: 1.4;
 }
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-sm);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: var(--text-small);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--color-text);
+}
+
+.clickable {
+  cursor: pointer;
+  transition: background 0.1s ease, transform 0.1s ease;
+}
+
+.clickable:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.clickable:active {
+  transform: translateY(0);
+}

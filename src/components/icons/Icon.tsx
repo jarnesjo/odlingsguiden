@@ -35,6 +35,7 @@ import {
   BackArrowIcon,
   CheckIcon,
   SeedlingIcon,
+  ChevronRightIcon,
 } from './index'
 
 const ICON_MAP: Record<string, ComponentType<IconProps>> = {
@@ -72,6 +73,7 @@ const ICON_MAP: Record<string, ComponentType<IconProps>> = {
   back: BackArrowIcon,
   check: CheckIcon,
   seedling: SeedlingIcon,
+  'chevron-right': ChevronRightIcon,
 }
 
 interface Props {

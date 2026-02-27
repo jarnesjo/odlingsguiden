@@ -23,7 +23,15 @@ function App() {
           onZoneClick={() => setShowZoneModal(true)}
         />
       ) : selectedCrop ? (
-        <CropPage cropId={selectedCrop} onBack={() => setView('list')} userZone={userZone} />
+        <CropPage
+          cropId={selectedCrop}
+          onBack={() => setView('list')}
+          userZone={userZone}
+          onNavigate={(id) => {
+            setSelectedCrop(id)
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+        />
       ) : null}
       {showZoneModal && (
         <ZoneSelector

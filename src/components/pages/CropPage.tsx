@@ -27,9 +27,10 @@ interface CropPageProps {
   cropId: string
   userZone: Zone
   onBack: () => void
+  onNavigate?: (cropId: string) => void
 }
 
-export function CropPage({ cropId, userZone, onBack }: CropPageProps) {
+export function CropPage({ cropId, userZone, onBack, onNavigate }: CropPageProps) {
   const crop = CROPS[cropId]
   if (!crop) return null
 
@@ -49,7 +50,7 @@ export function CropPage({ cropId, userZone, onBack }: CropPageProps) {
 
       <div className={styles.card}>
         <OptimalConditions conditions={crop.optimalConditions} watering={crop.watering} />
-        <GoodToKnow items={crop.goodToKnow} />
+        <GoodToKnow items={crop.goodToKnow} onNavigate={onNavigate} />
 
         {/* Sowing (vegetables & herbs) OR Pruning (berries) */}
         {isBerry && crop.pruning ? (
@@ -65,8 +66,8 @@ export function CropPage({ cropId, userZone, onBack }: CropPageProps) {
         <SoilSection soil={crop.soil} ph={crop.ph} soilTips={crop.soilTips} />
         <WateringSection watering={crop.watering} />
         <TimelineSection timeline={timeline} userZone={userZone} zoneInfo={ZONE_INFO[userZone]} />
-        <CompanionSection companions={crop.companions} />
-        <RotationSection rotation={crop.rotation} />
+        <CompanionSection companions={crop.companions} onNavigate={onNavigate} />
+        <RotationSection rotation={crop.rotation} onNavigate={onNavigate} />
         <VarietiesSection varieties={crop.varieties} userZone={userZone} />
         <ProblemsSection problems={crop.problems} />
         <HarvestCalcSection calc={crop.harvestCalc} cropName={crop.name} />

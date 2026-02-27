@@ -425,6 +425,14 @@ export function SeedlingIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
   )
 }
 
+export function ChevronRightIcon({ color = '#3D6B4F', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      <path d="M9 4l8 8-8 8" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function DifficultyDot({ color, size = 10 }: { color: string; size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 10 10" fill="none" style={{ display: 'inline-block', verticalAlign: 'middle' }}>

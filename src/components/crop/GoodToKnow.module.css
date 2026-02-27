@@ -35,3 +35,18 @@
   line-height: 1.5;
   margin-top: var(--space-xs);
 }
+
+.inlineLink {
+  all: unset;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(61, 107, 79, 0.3);
+  text-underline-offset: 2px;
+  cursor: pointer;
+  transition: text-decoration-color 0.1s ease;
+}
+
+.inlineLink:hover {
+  text-decoration-color: var(--color-accent);
+}
