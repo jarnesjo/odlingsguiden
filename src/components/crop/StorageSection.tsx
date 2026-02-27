@@ -10,7 +10,7 @@ interface StorageSectionProps {
 
 export function StorageSection({ storage }: StorageSectionProps) {
   return (
-    <Section title="Lagring" icon={<StorageIcon size={20} />} defaultOpen={false}>
+    <Section title="Lagring" icon={<StorageIcon size={20} />}>
       <div className={styles.shelfBadge}>
         <span className={styles.shelfPill}>Håller: {storage.shelfLife}</span>
       </div>

@@ -18,7 +18,7 @@ export function OptimalConditions({ conditions, watering }: OptimalConditionsPro
   ]
 
   return (
-    <Section title="Trivs bäst" icon={<SunIcon size={20} />}>
+    <Section title="Trivs bäst" icon={<SunIcon size={20} />} defaultOpen>
       <div className={styles.grid}>
         {items.map((item, i) => (
           <div key={i} className={styles.card}>

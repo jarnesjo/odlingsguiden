@@ -9,7 +9,7 @@ interface RotationSectionProps {
 
 export function RotationSection({ rotation }: RotationSectionProps) {
   return (
-    <Section title="Växtföljd" icon={<RotationIcon size={20} />} defaultOpen={false}>
+    <Section title="Växtföljd" icon={<RotationIcon size={20} />}>
       <div className={`${styles.card} ${styles.avoidCard}`}>
         <div className={`${styles.cardTitle} ${styles.avoidTitle}`}>
           Undvik efter: {rotation.avoid.join(', ')}

@@ -16,7 +16,7 @@ function getNeedColor(need: string): string {
 
 export function WateringSection({ watering }: WateringSectionProps) {
   return (
-    <Section title="Vattning" icon={<WaterIcon size={20} />} defaultOpen={false}>
+    <Section title="Vattning" icon={<WaterIcon size={20} />}>
       <div className={styles.header}>
         <span className={styles.headerIcon}><Icon name={watering.icon} size={24} /></span>
         <div>

@@ -9,7 +9,7 @@ interface HarvestCalcSectionProps {
 
 export function HarvestCalcSection({ calc, cropName }: HarvestCalcSectionProps) {
   return (
-    <Section title="Skördekalkylator" icon={<HarvestIcon size={20} />} defaultOpen={false}>
+    <Section title="Skördekalkylator" icon={<HarvestIcon size={20} />}>
       <HarvestCalc calc={calc} cropName={cropName} />
     </Section>
   )

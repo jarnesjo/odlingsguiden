@@ -13,7 +13,7 @@ export function VarietiesSection({ varieties, userZone }: VarietiesSectionProps)
   const otherVarieties = varieties.filter((v) => !v.zones.includes(userZone))
 
   return (
-    <Section title={`Sorter för odlingszon ${userZone}`} icon={<TagIcon size={20} />} defaultOpen={false}>
+    <Section title={`Sorter för odlingszon ${userZone}`} icon={<TagIcon size={20} />}>
       {goodVarieties.length > 0 && (
         <>
           <div className={`${styles.groupTitle} ${styles.goodGroupTitle}`}>

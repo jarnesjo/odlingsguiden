@@ -10,7 +10,7 @@ interface CompanionSectionProps {
 
 export function CompanionSection({ companions }: CompanionSectionProps) {
   return (
-    <Section title="Companion planting" icon={<SeedlingIcon size={20} />} defaultOpen={false}>
+    <Section title="Companion planting" icon={<SeedlingIcon size={20} />}>
       <div className={`${styles.sectionTitle} ${styles.goodTitle}`}>Bra grannar</div>
       {companions.good.map((comp, i) => (
         <div key={i} className={`${styles.card} ${styles.goodCard}`}>

@@ -12,7 +12,7 @@ interface TimelineSectionProps {
 
 export function TimelineSection({ timeline, userZone, zoneInfo }: TimelineSectionProps) {
   return (
-    <Section title={`Tidslinje för din zon (${userZone})`} icon={<CalendarIcon size={20} />} defaultOpen={false}>
+    <Section title={`Tidslinje för din zon (${userZone})`} icon={<CalendarIcon size={20} />}>
       <div className={styles.zoneBanner}>
         Anpassad för odlingszon {userZone} · {zoneInfo.region}
       </div>

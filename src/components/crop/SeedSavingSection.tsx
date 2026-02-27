@@ -14,7 +14,7 @@ export function SeedSavingSection({ seedSaving }: SeedSavingSectionProps) {
   const dotColor = diffInfo.color === '#B7E4C7' ? '#3D6B4F' : diffInfo.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
 
   return (
-    <Section title="Ta eget frö" icon={<SeedIcon size={20} />} defaultOpen={false}>
+    <Section title="Ta eget frö" icon={<SeedIcon size={20} />}>
       <div className={styles.badges}>
         <span className={styles.badge} style={{ background: diffInfo.color }}>
           <DifficultyDot color={dotColor} /> {seedSaving.difficulty}

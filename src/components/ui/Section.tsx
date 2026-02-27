@@ -8,7 +8,7 @@ interface SectionProps {
   defaultOpen?: boolean
 }
 
-export function Section({ title, icon, children, defaultOpen = true }: SectionProps) {
+export function Section({ title, icon, children, defaultOpen = false }: SectionProps) {
   const [open, setOpen] = useState(defaultOpen)
 
   return (

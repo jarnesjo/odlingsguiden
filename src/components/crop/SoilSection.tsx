@@ -11,7 +11,7 @@ interface SoilSectionProps {
 
 export function SoilSection({ soil, ph, soilTips }: SoilSectionProps) {
   return (
-    <Section title="Jord & pH-krav" icon={<SoilIcon size={20} />} defaultOpen={false}>
+    <Section title="Jord & pH-krav" icon={<SoilIcon size={20} />}>
       <p className={styles.description}>{soil}</p>
       <PhBar ph={ph} />
       <div className={styles.tips}>
