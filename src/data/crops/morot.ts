@@ -2,7 +2,7 @@ import type { Crop } from '../types'
 
 export const morot: Crop = {
   name: 'Morot',
-  emoji: '🥕',
+  icon: 'morot',
   family: 'Flockblommiga',
   familyLatin: 'Apiaceae',
   difficulty: 'Enkel',
@@ -14,13 +14,13 @@ export const morot: Crop = {
   depth: '1 cm',
   ph: { min: 6.0, max: 6.8, ideal: 6.3 },
   optimalConditions: {
-    sun: { level: 'Sol–halvskugga', icon: '🌤️', detail: 'Minst 6 timmar sol per dag för bäst resultat, men klarar halvskugga (4+ timmar). I halvskugga blir morötterna tunnare men sötare.' },
+    sun: { level: 'Sol–halvskugga', icon: 'sun', detail: 'Minst 6 timmar sol per dag för bäst resultat, men klarar halvskugga (4+ timmar). I halvskugga blir morötterna tunnare men sötare.' },
     temperature: { min: 7, max: 24, ideal: '15–20°C', detail: 'Gror redan vid 7°C men trivs bäst runt 15–20°C. Tål lätt frost – morötter blir faktiskt sötare efter frost!' },
     wind: { level: 'Tålig', detail: 'Låg profil – påverkas sällan av vind. Inga särskilda krav.' },
   },
   watering: {
     need: 'Medel',
-    icon: '💧💧',
+    icon: 'water',
     summary: 'Jämn fukt under hela säsongen – varken för blött eller för torrt. Ojämn bevattning ger spruckna eller håriga morötter.',
     phases: [
       { phase: 'Groning (0–3 veckor)', need: 'Hög', tip: 'Håll jorden jämnt fuktig – fröna MÅSTE ha fukt för att gro. Torkar ytan ut dör groddarna. Vattna försiktigt med stril, gärna på morgonen.' },
@@ -42,24 +42,24 @@ export const morot: Crop = {
   ],
   timeline: {
     1: [
-      { phase: 'Direktså', months: 'Apr', icon: '🌱' },
-      { phase: 'Gallra', months: 'Maj', icon: '✂️' },
-      { phase: 'Gödsla (lätt)', months: 'Jun', icon: '💧' },
-      { phase: 'Skörd tidig', months: 'Jul', icon: '🥕' },
-      { phase: 'Huvudskörd', months: 'Aug–Sep', icon: '🎉' },
+      { phase: 'Direktså', months: 'Apr', icon: 'seedling' },
+      { phase: 'Gallra', months: 'Maj', icon: 'scissors' },
+      { phase: 'Gödsla (lätt)', months: 'Jun', icon: 'water' },
+      { phase: 'Skörd tidig', months: 'Jul', icon: 'harvest' },
+      { phase: 'Huvudskörd', months: 'Aug–Sep', icon: 'harvest' },
     ],
     4: [
-      { phase: 'Direktså', months: 'Maj', icon: '🌱' },
-      { phase: 'Gallra', months: 'Jun', icon: '✂️' },
-      { phase: 'Gödsla (lätt)', months: 'Jun–Jul', icon: '💧' },
-      { phase: 'Skörd tidig', months: 'Aug', icon: '🥕' },
-      { phase: 'Huvudskörd', months: 'Sep', icon: '🎉' },
+      { phase: 'Direktså', months: 'Maj', icon: 'seedling' },
+      { phase: 'Gallra', months: 'Jun', icon: 'scissors' },
+      { phase: 'Gödsla (lätt)', months: 'Jun–Jul', icon: 'water' },
+      { phase: 'Skörd tidig', months: 'Aug', icon: 'harvest' },
+      { phase: 'Huvudskörd', months: 'Sep', icon: 'harvest' },
     ],
     6: [
-      { phase: 'Direktså', months: 'Jun', icon: '🌱' },
-      { phase: 'Gallra', months: 'Jul', icon: '✂️' },
-      { phase: 'Gödsla (lätt)', months: 'Jul', icon: '💧' },
-      { phase: 'Huvudskörd', months: 'Sep', icon: '🎉' },
+      { phase: 'Direktså', months: 'Jun', icon: 'seedling' },
+      { phase: 'Gallra', months: 'Jul', icon: 'scissors' },
+      { phase: 'Gödsla (lätt)', months: 'Jul', icon: 'water' },
+      { phase: 'Huvudskörd', months: 'Sep', icon: 'harvest' },
     ],
   },
   nutritionData: [
@@ -78,15 +78,15 @@ export const morot: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Lök', emoji: '🧅', why: 'Löken avskräcker morotsflugan med sin starka doft' },
-      { name: 'Salvia', emoji: '🌿', why: 'Salvia maskerar morotsdoften och håller skadedjur borta' },
-      { name: 'Tomat', emoji: '🍅', why: 'Tomatens starka doft förvirrar morotsflugan' },
-      { name: 'Purjolök', emoji: '🧅', why: 'Samma effekt som vanlig lök – doftbarriär' },
+      { name: 'Lök', icon: 'vegetable', why: 'Löken avskräcker morotsflugan med sin starka doft' },
+      { name: 'Salvia', icon: 'herb', why: 'Salvia maskerar morotsdoften och håller skadedjur borta' },
+      { name: 'Tomat', icon: 'vegetable', why: 'Tomatens starka doft förvirrar morotsflugan' },
+      { name: 'Purjolök', icon: 'vegetable', why: 'Samma effekt som vanlig lök – doftbarriär' },
     ],
     bad: [
-      { name: 'Dill', emoji: '🌿', why: 'Samma familj (flockblommiga) – delar sjukdomar och skadedjur' },
-      { name: 'Palsternacka', emoji: '🥕', why: 'Samma familj – konkurrerar och delar morotsflugan' },
-      { name: 'Selleri', emoji: '🥬', why: 'Samma familj – ökar risk för sjukdomar' },
+      { name: 'Dill', icon: 'herb', why: 'Samma familj (flockblommiga) – delar sjukdomar och skadedjur' },
+      { name: 'Palsternacka', icon: 'vegetable', why: 'Samma familj – konkurrerar och delar morotsflugan' },
+      { name: 'Selleri', icon: 'vegetable', why: 'Samma familj – ökar risk för sjukdomar' },
     ],
   },
   rotation: {
@@ -109,11 +109,11 @@ export const morot: Crop = {
     { name: 'Gröna toppar', symptom: 'Grön missfärgning vid toppen', fix: 'Kupa jord runt topparna när de sticker upp.' },
   ],
   goodToKnow: [
-    { icon: '⚠️', title: 'Så aldrig i nygödslad jord', text: 'Färsk gödsel (eller för mycket kväve) ger krokiga, kluvna och håriga morötter. Använd bara väl brunnen kompost – helst från förra året.', severity: 'warning' },
-    { icon: '🪨', title: 'Stenar = krokiga morötter', text: 'Varje sten i jorden tvingar roten att växa runt den. Rensa ordentligt ner till 30 cm djup, eller odla i upphöjd bädd med stenfri jord.', severity: 'warning' },
-    { icon: '🔁', title: 'Så i omgångar – inte allt på en gång', text: 'Så med 3 veckors mellanrum från april till juni. Då får du färska morötter hela sommaren och hösten istället för 40 kg samtidigt i september.', severity: 'tip' },
-    { icon: '🧊', title: 'Tål frost – en av de sista du skördar', text: 'Morötter blir faktiskt sötare efter en lätt frost! Du kan lämna dem i jorden långt in på hösten. Täck med halm så klarar de sig ännu längre.', severity: 'tip' },
-    { icon: '🥕', title: 'Gallra utan dåligt samvete', text: 'Det känns slösigt att dra upp små plantor, men om du inte gallrar får du bara tunna, korta morötter. Var brutal – 3–5 cm avstånd.', severity: 'tip' },
+    { icon: 'warning', title: 'Så aldrig i nygödslad jord', text: 'Färsk gödsel (eller för mycket kväve) ger krokiga, kluvna och håriga morötter. Använd bara väl brunnen kompost – helst från förra året.', severity: 'warning' },
+    { icon: 'soil', title: 'Stenar = krokiga morötter', text: 'Varje sten i jorden tvingar roten att växa runt den. Rensa ordentligt ner till 30 cm djup, eller odla i upphöjd bädd med stenfri jord.', severity: 'warning' },
+    { icon: 'rotation', title: 'Så i omgångar – inte allt på en gång', text: 'Så med 3 veckors mellanrum från april till juni. Då får du färska morötter hela sommaren och hösten istället för 40 kg samtidigt i september.', severity: 'tip' },
+    { icon: 'snowflake', title: 'Tål frost – en av de sista du skördar', text: 'Morötter blir faktiskt sötare efter en lätt frost! Du kan lämna dem i jorden långt in på hösten. Täck med halm så klarar de sig ännu längre.', severity: 'tip' },
+    { icon: 'scissors', title: 'Gallra utan dåligt samvete', text: 'Det känns slösigt att dra upp små plantor, men om du inte gallrar får du bara tunna, korta morötter. Var brutal – 3–5 cm avstånd.', severity: 'tip' },
   ],
   sowing: {
     method: 'direct',
@@ -155,10 +155,10 @@ export const morot: Crop = {
   storage: {
     shelfLife: '6–8 månader',
     methods: [
-      { method: 'I landet (med täckning)', icon: '🌿', duration: 'Ända till december/januari', description: 'Låt morötterna ligga kvar i jorden och täck med ett tjockt lager halm, löv eller fiberduk. Morötterna blir sötare av kylan och håller sig fräscha ända tills marken fryser på djupet.', best: true },
-      { method: 'Sandlåda i källare', icon: '📦', duration: '4–6 månader', description: 'Lägg morötterna i lager med fuktig sand i en låda. Förvara svalt (1–4°C) och mörkt. Klassisk metod som fungerar utmärkt. Kolla med jämna mellanrum att ingen börjat mögla.', best: false },
-      { method: 'Kylskåp', icon: '❄️', duration: '3–4 veckor', description: 'Klipp av blasten (den suger fukt ur roten). Lägg i plastpåse med några hål. Fungerar för kortare lagring.', best: false },
-      { method: 'Frysa', icon: '🧊', duration: '8–12 månader', description: 'Skala, skär i bitar och blanchera 2–3 minuter. Kyl snabbt i isvatten, torka av och frys in. Perfekt för soppa och gryta.', best: false },
+      { method: 'I landet (med täckning)', icon: 'leaf', duration: 'Ända till december/januari', description: 'Låt morötterna ligga kvar i jorden och täck med ett tjockt lager halm, löv eller fiberduk. Morötterna blir sötare av kylan och håller sig fräscha ända tills marken fryser på djupet.', best: true },
+      { method: 'Sandlåda i källare', icon: 'storage', duration: '4–6 månader', description: 'Lägg morötterna i lager med fuktig sand i en låda. Förvara svalt (1–4°C) och mörkt. Klassisk metod som fungerar utmärkt. Kolla med jämna mellanrum att ingen börjat mögla.', best: false },
+      { method: 'Kylskåp', icon: 'snowflake', duration: '3–4 veckor', description: 'Klipp av blasten (den suger fukt ur roten). Lägg i plastpåse med några hål. Fungerar för kortare lagring.', best: false },
+      { method: 'Frysa', icon: 'snowflake', duration: '8–12 månader', description: 'Skala, skär i bitar och blanchera 2–3 minuter. Kyl snabbt i isvatten, torka av och frys in. Perfekt för soppa och gryta.', best: false },
     ],
     tips: [
       'Ta alltid bort blasten direkt vid skörd – den suger fukt och näring ur roten',

@@ -2,7 +2,7 @@ import type { Crop } from '../types'
 
 export const hallon: Crop = {
   name: 'Hallon',
-  emoji: '🫐',
+  icon: 'hallon',
   category: 'bär',
   family: 'Rosväxter',
   familyLatin: 'Rosaceae',
@@ -17,13 +17,13 @@ export const hallon: Crop = {
   depth: 'Plantera i samma djup som i krukan',
   ph: { min: 5.5, max: 6.5, ideal: 6.0 },
   optimalConditions: {
-    sun: { level: 'Sol–halvskugga', icon: '☀️', detail: 'Full sol ger sötast bär och rikligast skörd, men hallon klarar halvskugga bättre än de flesta bärbuskar. I södra Sverige kan lite eftermiddagsskugga vara bra för att undvika uttorkning.' },
+    sun: { level: 'Sol–halvskugga', icon: 'sun', detail: 'Full sol ger sötast bär och rikligast skörd, men hallon klarar halvskugga bättre än de flesta bärbuskar. I södra Sverige kan lite eftermiddagsskugga vara bra för att undvika uttorkning.' },
     temperature: { min: -30, max: 30, ideal: '18–24°C', detail: 'Extremt härdig – tål ner till -30°C i vila. Trivs bäst runt 20°C under växtsäsongen. Blommar sent (juni) så frostskador på blommor är ovanliga.' },
     wind: { level: 'Måttligt känslig', detail: 'Långa skott kan knäckas i stark vind. Plantera gärna intill ett staket eller sätt upp trådar att binda mot. Vindskydd förbättrar pollinering och skörd.' },
   },
   watering: {
     need: 'Medel–Hög',
-    icon: '💧💧💧',
+    icon: 'water',
     summary: 'Hallon har grunda rötter och torkar lätt ut. Jämn fukt under blomning och mognad är avgörande för stora, saftiga bär.',
     phases: [
       { phase: 'Vår (utbrytning)', need: 'Medel', tip: 'Vattna vid torka – busken vaknar och börjar skjuta nya skott. Mulcha med bark eller gräsklipp för att hålla fukten.' },
@@ -47,27 +47,27 @@ export const hallon: Crop = {
   ],
   timeline: {
     1: [
-      { phase: 'Plantering', months: 'Maj', icon: '🌱' },
-      { phase: 'Blomning', months: 'Juni–juli', icon: '🌸' },
-      { phase: 'Skörd (sommarhallon)', months: 'Juli–aug', icon: '🫐' },
-      { phase: 'Beskärning', months: 'Aug–sept (efter skörd)', icon: '✂️' },
-      { phase: 'Skörd (hösthallon)', months: 'Aug–sept', icon: '🫐' },
-      { phase: 'Vintervila', months: 'Nov–apr', icon: '❄️' },
+      { phase: 'Plantering', months: 'Maj', icon: 'seedling' },
+      { phase: 'Blomning', months: 'Juni–juli', icon: 'bloom' },
+      { phase: 'Skörd (sommarhallon)', months: 'Juli–aug', icon: 'harvest' },
+      { phase: 'Beskärning', months: 'Aug–sept (efter skörd)', icon: 'scissors' },
+      { phase: 'Skörd (hösthallon)', months: 'Aug–sept', icon: 'harvest' },
+      { phase: 'Vintervila', months: 'Nov–apr', icon: 'snowflake' },
     ],
     4: [
-      { phase: 'Plantering', months: 'Maj', icon: '🌱' },
-      { phase: 'Blomning', months: 'Juni', icon: '🌸' },
-      { phase: 'Skörd (sommarhallon)', months: 'Juli', icon: '🫐' },
-      { phase: 'Beskärning', months: 'Juli–aug (efter skörd)', icon: '✂️' },
-      { phase: 'Skörd (hösthallon)', months: 'Aug–sept', icon: '🫐' },
-      { phase: 'Vintervila', months: 'Okt–apr', icon: '❄️' },
+      { phase: 'Plantering', months: 'Maj', icon: 'seedling' },
+      { phase: 'Blomning', months: 'Juni', icon: 'bloom' },
+      { phase: 'Skörd (sommarhallon)', months: 'Juli', icon: 'harvest' },
+      { phase: 'Beskärning', months: 'Juli–aug (efter skörd)', icon: 'scissors' },
+      { phase: 'Skörd (hösthallon)', months: 'Aug–sept', icon: 'harvest' },
+      { phase: 'Vintervila', months: 'Okt–apr', icon: 'snowflake' },
     ],
     6: [
-      { phase: 'Plantering', months: 'Maj–juni', icon: '🌱' },
-      { phase: 'Blomning', months: 'Juni–juli', icon: '🌸' },
-      { phase: 'Skörd (sommarhallon)', months: 'Juli–aug', icon: '🫐' },
-      { phase: 'Beskärning', months: 'Aug (efter skörd)', icon: '✂️' },
-      { phase: 'Vintervila', months: 'Sept–maj', icon: '❄️' },
+      { phase: 'Plantering', months: 'Maj–juni', icon: 'seedling' },
+      { phase: 'Blomning', months: 'Juni–juli', icon: 'bloom' },
+      { phase: 'Skörd (sommarhallon)', months: 'Juli–aug', icon: 'harvest' },
+      { phase: 'Beskärning', months: 'Aug (efter skörd)', icon: 'scissors' },
+      { phase: 'Vintervila', months: 'Sept–maj', icon: 'snowflake' },
     ],
   },
   nutritionData: [
@@ -85,14 +85,14 @@ export const hallon: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Vitlök', emoji: '🧄', why: 'Avskräcker bladlöss och gallkvalster som kan angripa hallon.' },
-      { name: 'Ringblomma', emoji: '🌼', why: 'Lockar pollinatörer och nyttiga insekter. Plus att den ser fantastisk ut vid hallonraden!' },
-      { name: 'Rabarber', emoji: '🌿', why: 'Skuggar marken, behåller fukt och samsas bra utan konkurrens om samma näring.' },
+      { name: 'Vitlök', icon: 'vegetable', why: 'Avskräcker bladlöss och gallkvalster som kan angripa hallon.' },
+      { name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinatörer och nyttiga insekter. Plus att den ser fantastisk ut vid hallonraden!' },
+      { name: 'Rabarber', icon: 'vegetable', why: 'Skuggar marken, behåller fukt och samsas bra utan konkurrens om samma näring.' },
     ],
     bad: [
-      { name: 'Potatis', emoji: '🥔', why: 'Bägge är känsliga för verticillium-svamp. Plantera aldrig hallon där det stått potatis.' },
-      { name: 'Tomater', emoji: '🍅', why: 'Samma verticillium-risk. Håll minst 3 meters avstånd eller vänta 3 år.' },
-      { name: 'Björnbär', emoji: '🫐', why: 'Korspollinerar och kan sprida sjukdomar mellan sig. Håll 50+ meter avstånd.' },
+      { name: 'Potatis', icon: 'vegetable', why: 'Bägge är känsliga för verticillium-svamp. Plantera aldrig hallon där det stått potatis.' },
+      { name: 'Tomater', icon: 'vegetable', why: 'Samma verticillium-risk. Håll minst 3 meters avstånd eller vänta 3 år.' },
+      { name: 'Björnbär', icon: 'berry', why: 'Korspollinerar och kan sprida sjukdomar mellan sig. Håll 50+ meter avstånd.' },
     ],
   },
   rotation: {
@@ -116,10 +116,10 @@ export const hallon: Crop = {
     { name: 'Skottsjuka', symptom: 'Purpurfärgade fläckar på skotten, skotten vissnar och dör.', fix: 'Klipp bort och bränn angripna skott. Förebygg med god gallring och luftcirkulation.' },
   ],
   goodToKnow: [
-    { icon: '⚠️', title: 'Hallon sprider sig – aktivt', text: 'Hallonrötter skickar ut utlöpare och nya plantor dyker upp överallt. Använd rotspärr (nedgrävd plåt/plast 30 cm djupt) om du vill hålla dem på plats. Eller plantera i upphöjd bädd.', severity: 'warning' },
-    { icon: '⚠️', title: 'Sommarhallon vs hösthallon – helt olika beskärning', text: 'Sommarhallon bär frukt på fjolårets skott → klipp bara de som burit frukt. Hösthallon bär på årets skott → klipp ALLT på våren. Blandar du ihop detta förlorar du skörden!', severity: 'warning' },
-    { icon: '💡', title: 'Fryser perfekt', text: 'Hallon är ett av de bär som fryser bäst. Lägg ut dem i ett lager på en plåt, frys, flytta sedan till påse. Perfekt smak året runt.', severity: 'tip' },
-    { icon: '💡', title: 'Plocka rätt', text: 'Mogna hallon lossnar lätt från kärnan (tappar tappar). Om du behöver dra – vänta en dag till. Plocka gärna varannan dag under högsäsong.', severity: 'tip' },
+    { icon: 'warning', title: 'Hallon sprider sig – aktivt', text: 'Hallonrötter skickar ut utlöpare och nya plantor dyker upp överallt. Använd rotspärr (nedgrävd plåt/plast 30 cm djupt) om du vill hålla dem på plats. Eller plantera i upphöjd bädd.', severity: 'warning' },
+    { icon: 'warning', title: 'Sommarhallon vs hösthallon – helt olika beskärning', text: 'Sommarhallon bär frukt på fjolårets skott → klipp bara de som burit frukt. Hösthallon bär på årets skott → klipp ALLT på våren. Blandar du ihop detta förlorar du skörden!', severity: 'warning' },
+    { icon: 'tip', title: 'Fryser perfekt', text: 'Hallon är ett av de bär som fryser bäst. Lägg ut dem i ett lager på en plåt, frys, flytta sedan till påse. Perfekt smak året runt.', severity: 'tip' },
+    { icon: 'tip', title: 'Plocka rätt', text: 'Mogna hallon lossnar lätt från kärnan (tappar tappar). Om du behöver dra – vänta en dag till. Plocka gärna varannan dag under högsäsong.', severity: 'tip' },
   ],
   sowing: {
     method: 'direct',
@@ -158,10 +158,10 @@ export const hallon: Crop = {
   storage: {
     shelfLife: '2–3 dagar (färska)',
     methods: [
-      { method: 'Frysning', icon: '❄️', duration: '10–12 månader', description: 'Det absolut bästa sättet. Lägg bären i ett lager på bakplåtspapper, frys 2 timmar, flytta sedan till påse. Behåller form och smak perfekt.', best: true },
-      { method: 'Sylt & mos', icon: '🍯', duration: '1+ år', description: 'Klassikern. Hallon och socker i lika delar. Mindre socker ger bättre hallonsmak men kortare hållbarhet.', best: false },
-      { method: 'Kylskåp', icon: '🥡', duration: '2–3 dagar', description: 'Lägg bären i ett lager på hushållspapper i en skål. Tvätta INTE förrän precis innan du äter – fukt ger mögel.', best: false },
-      { method: 'Torkning', icon: '☀️', duration: '6+ månader', description: 'Torka i ugn på 50°C i 8–12 timmar eller i torkmaskin. Blir intensivt söta. Perfekt i müsli eller bakning.', best: false },
+      { method: 'Frysning', icon: 'snowflake', duration: '10–12 månader', description: 'Det absolut bästa sättet. Lägg bären i ett lager på bakplåtspapper, frys 2 timmar, flytta sedan till påse. Behåller form och smak perfekt.', best: true },
+      { method: 'Sylt & mos', icon: 'storage', duration: '1+ år', description: 'Klassikern. Hallon och socker i lika delar. Mindre socker ger bättre hallonsmak men kortare hållbarhet.', best: false },
+      { method: 'Kylskåp', icon: 'snowflake', duration: '2–3 dagar', description: 'Lägg bären i ett lager på hushållspapper i en skål. Tvätta INTE förrän precis innan du äter – fukt ger mögel.', best: false },
+      { method: 'Torkning', icon: 'sun', duration: '6+ månader', description: 'Torka i ugn på 50°C i 8–12 timmar eller i torkmaskin. Blir intensivt söta. Perfekt i müsli eller bakning.', best: false },
     ],
     tips: [
       'Plocka alltid torra bär – vänta tills daggen torkat',
@@ -201,8 +201,8 @@ export const hallon: Crop = {
   propagation: {
     difficulty: 'Enkel',
     methods: [
-      { method: 'Rotskott', description: 'Det enklaste sättet. Hallon skickar naturligt upp nya skott via utlöpare. Gräv upp ett skott med rot på våren eller hösten och plantera om.', icon: '🌱' },
-      { method: 'Sticklingar', description: 'Klipp 15–20 cm bitar av friska skott i november. Sätt i fukt-hållen jord utomhus. De rotar sig under vintern och kan planteras ut på våren.', icon: '✂️' },
+      { method: 'Rotskott', description: 'Det enklaste sättet. Hallon skickar naturligt upp nya skott via utlöpare. Gräv upp ett skott med rot på våren eller hösten och plantera om.', icon: 'seedling' },
+      { method: 'Sticklingar', description: 'Klipp 15–20 cm bitar av friska skott i november. Sätt i fukt-hållen jord utomhus. De rotar sig under vintern och kan planteras ut på våren.', icon: 'scissors' },
     ],
     tip: 'Ta alltid förökningsmaterial från friska, produktiva buskar. Undvik att sprida sjukdomar genom att välja plantor utan tecken på skottsjuka eller virusangrepp.',
   },

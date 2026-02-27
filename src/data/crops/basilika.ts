@@ -2,7 +2,7 @@ import type { Crop } from '../types'
 
 export const basilika: Crop = {
   name: 'Basilika',
-  emoji: '🌿',
+  icon: 'basilika',
   category: 'kryddor',
   family: 'Kransblommiga',
   familyLatin: 'Lamiaceae',
@@ -16,13 +16,13 @@ export const basilika: Crop = {
   depth: '0.5 cm (ytligt, fröna behöver ljus)',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
-    sun: { level: 'Full sol', icon: '☀️', detail: 'Basilika kräver minst 6–8 timmars sol per dag. I halvskugga blir smaken svagare och tillväxten långsam. Söderläge är perfekt.' },
+    sun: { level: 'Full sol', icon: 'sun', detail: 'Basilika kräver minst 6–8 timmars sol per dag. I halvskugga blir smaken svagare och tillväxten långsam. Söderläge är perfekt.' },
     temperature: { min: 10, max: 35, ideal: '20–25°C', detail: 'Tropisk växt som HATAR kyla. Dör vid frost. Sätts ut först när nätterna stabilt håller 10°C+. I norra Sverige bäst i växthus eller fönsterkarmen.' },
     wind: { level: 'Känslig', detail: 'Vindkänslig med tunna blad som torkar ut snabbt. Skyddat, varmt läge är a och o. Perfekt i en sydvänd mur- eller huslycka.' },
   },
   watering: {
     need: 'Medel',
-    icon: '💧💧',
+    icon: 'water',
     summary: 'Basilikan älskar fukt men HATAR att stå blöt – hon är lite bortskämd men värd varje droppe. Vattna alltid vid basen, aldrig ovanifrån.',
     phases: [
       { phase: 'Plantor inomhus', need: 'Låg–Medel', tip: 'Vattna underifrån – ställ krukan i vatten 10 minuter och låt den dricka. Sen vill basilikan nästan torka ut innan nästa vattning. Hon gillar inte att ha blöta fötter hela tiden.' },
@@ -45,23 +45,23 @@ export const basilika: Crop = {
   ],
   timeline: {
     1: [
-      { phase: 'Förodling inomhus', months: 'April', icon: '🏠' },
-      { phase: 'Härdning', months: 'Maj', icon: '🌤️' },
-      { phase: 'Utplantering', months: 'Slutet av maj–juni', icon: '🌱' },
-      { phase: 'Skörd (plocka löpande)', months: 'Juni–sept', icon: '🌿' },
-      { phase: 'Ta eget frö', months: 'Sept', icon: '🌾' },
+      { phase: 'Förodling inomhus', months: 'April', icon: 'indoor' },
+      { phase: 'Härdning', months: 'Maj', icon: 'hardening' },
+      { phase: 'Utplantering', months: 'Slutet av maj–juni', icon: 'seedling' },
+      { phase: 'Skörd (plocka löpande)', months: 'Juni–sept', icon: 'harvest' },
+      { phase: 'Ta eget frö', months: 'Sept', icon: 'seed' },
     ],
     4: [
-      { phase: 'Förodling inomhus', months: 'April–maj', icon: '🏠' },
-      { phase: 'Härdning', months: 'Slutet av maj', icon: '🌤️' },
-      { phase: 'Utplantering', months: 'Juni', icon: '🌱' },
-      { phase: 'Skörd (plocka löpande)', months: 'Juli–sept', icon: '🌿' },
-      { phase: 'Ta eget frö', months: 'Sept', icon: '🌾' },
+      { phase: 'Förodling inomhus', months: 'April–maj', icon: 'indoor' },
+      { phase: 'Härdning', months: 'Slutet av maj', icon: 'hardening' },
+      { phase: 'Utplantering', months: 'Juni', icon: 'seedling' },
+      { phase: 'Skörd (plocka löpande)', months: 'Juli–sept', icon: 'harvest' },
+      { phase: 'Ta eget frö', months: 'Sept', icon: 'seed' },
     ],
     6: [
-      { phase: 'Förodling inomhus', months: 'Maj', icon: '🏠' },
-      { phase: 'Utplantering (växthus)', months: 'Juni', icon: '🏠' },
-      { phase: 'Skörd', months: 'Juli–aug', icon: '🌿' },
+      { phase: 'Förodling inomhus', months: 'Maj', icon: 'indoor' },
+      { phase: 'Utplantering (växthus)', months: 'Juni', icon: 'indoor' },
+      { phase: 'Skörd', months: 'Juli–aug', icon: 'harvest' },
     ],
   },
   nutritionData: [
@@ -78,13 +78,13 @@ export const basilika: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Tomat', emoji: '🍅', why: 'Det klassiska drömpar! Basilika sägs förbättra tomatens smak, och avskräcker bladlöss och vitfjäril. Plus att de trivs under exakt samma förhållanden – sol och värme.' },
-      { name: 'Paprika', emoji: '🌶️', why: 'Samma värmebehov, och basilikan lockar pollinatörer som hjälper paprika sätta frukt. De samsas fint.' },
-      { name: 'Sallat', emoji: '🥬', why: 'Basilikan ger välbehövlig skugga åt sallat i högsommarvärmen, och sallaten håller marken sval och fuktig. Ett perfekt par!' },
+      { name: 'Tomat', icon: 'vegetable', why: 'Det klassiska drömpar! Basilika sägs förbättra tomatens smak, och avskräcker bladlöss och vitfjäril. Plus att de trivs under exakt samma förhållanden – sol och värme.' },
+      { name: 'Paprika', icon: 'vegetable', why: 'Samma värmebehov, och basilikan lockar pollinatörer som hjälper paprika sätta frukt. De samsas fint.' },
+      { name: 'Sallat', icon: 'vegetable', why: 'Basilikan ger välbehövlig skugga åt sallat i högsommarvärmen, och sallaten håller marken sval och fuktig. Ett perfekt par!' },
     ],
     bad: [
-      { name: 'Salvia', emoji: '🌿', why: 'Bägge producerar starka eteriska oljor som bråkar med varandra. Salvia vill dessutom ha det torrt – raka motsatsen till basilika.' },
-      { name: 'Timjan', emoji: '🌿', why: 'Timjan trivs i mager, torr jord. Basilika vill ha rik, fuktig jord. De pratar helt enkelt olika språk.' },
+      { name: 'Salvia', icon: 'herb', why: 'Bägge producerar starka eteriska oljor som bråkar med varandra. Salvia vill dessutom ha det torrt – raka motsatsen till basilika.' },
+      { name: 'Timjan', icon: 'herb', why: 'Timjan trivs i mager, torr jord. Basilika vill ha rik, fuktig jord. De pratar helt enkelt olika språk.' },
     ],
   },
   rotation: {
@@ -107,10 +107,10 @@ export const basilika: Crop = {
     { name: 'Kyla-skador', symptom: 'Svarta fläckar på blad, slappe blad efter kall natt.', fix: 'Förebygg! Ta in krukodlad basilika så fort nattemperaturen kryper under 10°C. Frilandsodlad? Fiberduk under kalla nätter kan rädda henne.' },
   ],
   goodToKnow: [
-    { icon: '⚠️', title: 'Knip topparna – annars ger hon upp', text: 'Basilika måste toppas regelbundet, det är nyckeln till en bubbig, produktiv planta. Klipp ovanför ett bladpar så växer två nya grenar ut. Låter du henne blomma tappar bladen smak och plantan ger snabbt upp – hon tycker att jobbet är klart.', severity: 'warning' },
-    { icon: '⚠️', title: 'Köldkänslig – noll tolerans', text: 'Basilika dör vid minsta frost och börjar må dåligt redan under 10°C. Sätt aldrig ut henne för tidigt – bättre att vänta en vecka extra än att börja om. I norra Sverige (zon 5+) är växthus eller fönsterkarmen enda alternativet.', severity: 'warning' },
-    { icon: '💡', title: 'Bäst smak före blomning', text: 'Skörda alltid innan blommorna dyker upp – det är då smaken är som allra starkast. Ser du blomknoppar? Knip av dem direkt, så fortsätter plantan producera blad istället.', severity: 'tip' },
-    { icon: '💡', title: 'Perfekt i kruka på balkongen', text: 'Har du ingen trädgård? Basilika är räddningen. En 5-liters kruka, bra jord och ett soligt läge – det är allt hon behöver. Många tycker faktiskt att krukodlad basilika ger bäst resultat.', severity: 'tip' },
+    { icon: 'warning', title: 'Knip topparna – annars ger hon upp', text: 'Basilika måste toppas regelbundet, det är nyckeln till en bubbig, produktiv planta. Klipp ovanför ett bladpar så växer två nya grenar ut. Låter du henne blomma tappar bladen smak och plantan ger snabbt upp – hon tycker att jobbet är klart.', severity: 'warning' },
+    { icon: 'warning', title: 'Köldkänslig – noll tolerans', text: 'Basilika dör vid minsta frost och börjar må dåligt redan under 10°C. Sätt aldrig ut henne för tidigt – bättre att vänta en vecka extra än att börja om. I norra Sverige (zon 5+) är växthus eller fönsterkarmen enda alternativet.', severity: 'warning' },
+    { icon: 'tip', title: 'Bäst smak före blomning', text: 'Skörda alltid innan blommorna dyker upp – det är då smaken är som allra starkast. Ser du blomknoppar? Knip av dem direkt, så fortsätter plantan producera blad istället.', severity: 'tip' },
+    { icon: 'tip', title: 'Perfekt i kruka på balkongen', text: 'Har du ingen trädgård? Basilika är räddningen. En 5-liters kruka, bra jord och ett soligt läge – det är allt hon behöver. Många tycker faktiskt att krukodlad basilika ger bäst resultat.', severity: 'tip' },
   ],
   sowing: {
     method: 'indoor',
@@ -153,9 +153,9 @@ export const basilika: Crop = {
   storage: {
     shelfLife: '5–7 dagar (färsk)',
     methods: [
-      { method: 'Frysning (bäst!)', icon: '❄️', duration: '6+ månader', description: 'Blanchera snabbt (2 sek), isbad, torka, frys i påse. Eller mixa med lite olivolja och frys i isbitsfack. Behåller smaken fantastiskt.', best: true },
-      { method: 'I glas med vatten', icon: '🌊', duration: '7–10 dagar', description: 'Ställ stjälkarna i ett glas vatten som en bukett. Rumstemperatur – INTE i kylen (kyla ger svarta blad). Byt vatten varannan dag.', best: false },
-      { method: 'Saltkonservering', icon: '🧂', duration: '6+ månader', description: 'Varva blad med havssalt i en burk. Saltet drar ut fukten och konserverar. Skölj av salt innan användning.', best: false },
+      { method: 'Frysning (bäst!)', icon: 'snowflake', duration: '6+ månader', description: 'Blanchera snabbt (2 sek), isbad, torka, frys i påse. Eller mixa med lite olivolja och frys i isbitsfack. Behåller smaken fantastiskt.', best: true },
+      { method: 'I glas med vatten', icon: 'water', duration: '7–10 dagar', description: 'Ställ stjälkarna i ett glas vatten som en bukett. Rumstemperatur – INTE i kylen (kyla ger svarta blad). Byt vatten varannan dag.', best: false },
+      { method: 'Saltkonservering', icon: 'storage', duration: '6+ månader', description: 'Varva blad med havssalt i en burk. Saltet drar ut fukten och konserverar. Skölj av salt innan användning.', best: false },
     ],
     tips: [
       'Lägg ALDRIG basilika i kylen – hon blir svart och ledsen av kyla (tropisk själ, minns du?)',

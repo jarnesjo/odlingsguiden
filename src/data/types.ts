@@ -34,7 +34,7 @@ export interface DifficultyInfo {
 export interface CategoryInfo {
   id: Category
   label: string
-  emoji: string
+  icon: string
   color: string
 }
 
@@ -112,7 +112,7 @@ export interface NutritionTip {
 
 export interface Companion {
   name: string
-  emoji: string
+  icon: string
   why: string
 }
 
@@ -233,7 +233,7 @@ export interface HarvestInfo {
 
 export interface Crop {
   name: string
-  emoji: string
+  icon: string
   category?: Category
   family: string
   familyLatin: string
@@ -276,7 +276,7 @@ export interface Crop {
 export interface CropListEntry {
   id: string
   name: string
-  emoji: string
+  icon: string
   family: string
   familyLatin: string
   difficulty: Difficulty

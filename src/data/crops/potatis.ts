@@ -2,7 +2,7 @@ import type { Crop } from '../types'
 
 export const potatis: Crop = {
   name: 'Potatis',
-  emoji: '🥔',
+  icon: 'potatis',
   family: 'Nattskatta',
   familyLatin: 'Solanaceae',
   difficulty: 'Enkel',
@@ -14,13 +14,13 @@ export const potatis: Crop = {
   depth: '10–15 cm',
   ph: { min: 5.0, max: 6.5, ideal: 5.5 },
   optimalConditions: {
-    sun: { level: 'Full sol', icon: '☀️', detail: 'Minst 6–8 timmar sol per dag. Blasten behöver sol för att producera energi till knölarna. I skugga: mycket blast, små knölar.' },
+    sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 6–8 timmar sol per dag. Blasten behöver sol för att producera energi till knölarna. I skugga: mycket blast, små knölar.' },
     temperature: { min: 7, max: 30, ideal: '15–20°C', detail: 'Jorden bör vara minst 8°C vid sättning. Knölbildning bäst vid 15–18°C. Över 25°C minskar knölbildningen – potatisen \'vilar\'.' },
     wind: { level: 'Tålig', detail: 'Blasten är relativt tålig. Inga särskilda vindkrav. Höga kupor ger extra stabilitet.' },
   },
   watering: {
     need: 'Medel–Hög',
-    icon: '💧💧',
+    icon: 'water',
     summary: 'Potatis behöver jämn fukt, speciellt under knölbildningen (blomning). Vattningsmomentet är det som avgör om du får en OK skörd eller en fantastisk skörd.',
     phases: [
       { phase: 'Sättning till uppkomst', need: 'Låg', tip: 'Vattna vid sättning men sedan sparsamt. Jorden ska vara fuktig men inte blöt – för mycket vatten nu ger röta.' },
@@ -44,26 +44,26 @@ export const potatis: Crop = {
   ],
   timeline: {
     1: [
-      { phase: 'Förgro inomhus', months: 'Mar', icon: '🌱' },
-      { phase: 'Sätt potatis', months: 'Apr', icon: '🥔' },
-      { phase: 'Kupa (1:a gången)', months: 'Maj', icon: '⛰️' },
-      { phase: 'Kupa (2:a gången)', months: 'Jun', icon: '⛰️' },
-      { phase: 'Tidig skörd (färskpotatis)', months: 'Jun–Jul', icon: '🎉' },
-      { phase: 'Huvudskörd', months: 'Aug–Sep', icon: '🥔' },
+      { phase: 'Förgro inomhus', months: 'Mar', icon: 'seedling' },
+      { phase: 'Sätt potatis', months: 'Apr', icon: 'seed' },
+      { phase: 'Kupa (1:a gången)', months: 'Maj', icon: 'hill' },
+      { phase: 'Kupa (2:a gången)', months: 'Jun', icon: 'hill' },
+      { phase: 'Tidig skörd (färskpotatis)', months: 'Jun–Jul', icon: 'harvest' },
+      { phase: 'Huvudskörd', months: 'Aug–Sep', icon: 'harvest' },
     ],
     4: [
-      { phase: 'Förgro inomhus', months: 'Apr', icon: '🌱' },
-      { phase: 'Sätt potatis', months: 'Maj', icon: '🥔' },
-      { phase: 'Kupa (1:a gången)', months: 'Jun', icon: '⛰️' },
-      { phase: 'Kupa (2:a gången)', months: 'Jul', icon: '⛰️' },
-      { phase: 'Tidig skörd', months: 'Jul', icon: '🎉' },
-      { phase: 'Huvudskörd', months: 'Aug–Sep', icon: '🥔' },
+      { phase: 'Förgro inomhus', months: 'Apr', icon: 'seedling' },
+      { phase: 'Sätt potatis', months: 'Maj', icon: 'seed' },
+      { phase: 'Kupa (1:a gången)', months: 'Jun', icon: 'hill' },
+      { phase: 'Kupa (2:a gången)', months: 'Jul', icon: 'hill' },
+      { phase: 'Tidig skörd', months: 'Jul', icon: 'harvest' },
+      { phase: 'Huvudskörd', months: 'Aug–Sep', icon: 'harvest' },
     ],
     6: [
-      { phase: 'Förgro inomhus', months: 'Apr–Maj', icon: '🌱' },
-      { phase: 'Sätt potatis', months: 'Jun', icon: '🥔' },
-      { phase: 'Kupa', months: 'Jun–Jul', icon: '⛰️' },
-      { phase: 'Huvudskörd', months: 'Sep', icon: '🥔' },
+      { phase: 'Förgro inomhus', months: 'Apr–Maj', icon: 'seedling' },
+      { phase: 'Sätt potatis', months: 'Jun', icon: 'seed' },
+      { phase: 'Kupa', months: 'Jun–Jul', icon: 'hill' },
+      { phase: 'Huvudskörd', months: 'Sep', icon: 'harvest' },
     ],
   },
   nutritionData: [
@@ -82,15 +82,15 @@ export const potatis: Crop = {
   ],
   companions: {
     good: [
-      { name: 'Bondböna', emoji: '🫘', why: 'Fixerar kväve i jorden som potatisen drar nytta av' },
-      { name: 'Kål', emoji: '🥬', why: 'Kompakt rotsystem som inte konkurrerar med potatisens djupa rötter' },
-      { name: 'Ringblomma', emoji: '🌼', why: 'Avskräcker coloradobagge och nematoder' },
-      { name: 'Pepparrot', emoji: '🌿', why: 'Traditionell samodling – pepparrot ska avskräcka potatisbagge' },
+      { name: 'Bondböna', icon: 'vegetable', why: 'Fixerar kväve i jorden som potatisen drar nytta av' },
+      { name: 'Kål', icon: 'vegetable', why: 'Kompakt rotsystem som inte konkurrerar med potatisens djupa rötter' },
+      { name: 'Ringblomma', icon: 'flower', why: 'Avskräcker coloradobagge och nematoder' },
+      { name: 'Pepparrot', icon: 'herb', why: 'Traditionell samodling – pepparrot ska avskräcka potatisbagge' },
     ],
     bad: [
-      { name: 'Tomat', emoji: '🍅', why: 'Samma familj (nattskatta) – delar bladmögel. En sjuk potatisplanta smittar tomaterna på dagar.' },
-      { name: 'Squash', emoji: '🎃', why: 'Konkurrerar hårt om näring och utrymme – båda är storätare' },
-      { name: 'Solros', emoji: '🌻', why: 'Utsöndrar ämnen (allelopati) som hämmar potatisens tillväxt' },
+      { name: 'Tomat', icon: 'vegetable', why: 'Samma familj (nattskatta) – delar bladmögel. En sjuk potatisplanta smittar tomaterna på dagar.' },
+      { name: 'Squash', icon: 'vegetable', why: 'Konkurrerar hårt om näring och utrymme – båda är storätare' },
+      { name: 'Solros', icon: 'flower', why: 'Utsöndrar ämnen (allelopati) som hämmar potatisens tillväxt' },
     ],
   },
   rotation: {
@@ -115,12 +115,12 @@ export const potatis: Crop = {
     { name: 'Gröna knölar', symptom: 'Grön missfärgning på potatisen', fix: 'Kupa ordentligt! Grönt = solanin = giftigt. Ät aldrig grön potatis. Skala bort grönt eller kassera.' },
   ],
   goodToKnow: [
-    { icon: '☠️', title: 'Grön potatis är giftig', text: 'Gröna partier innehåller solanin – ett gift som inte försvinner vid kokning. Kupa ordentligt så att knölarna aldrig ser ljus. Ät aldrig potatis som är grön under skalet.', severity: 'warning' },
-    { icon: '⚠️', title: 'Använd ALLTID sättpotatis', text: 'Plantera aldrig matpotatis från affären. Sättpotatis är certifierad fri från sjukdomar. Matpotatis kan bära virus och bladmögel som sprids i din jord i åratal.', severity: 'warning' },
-    { icon: '⛰️', title: 'Kupning är allt', text: 'Kupa jord runt plantorna minst 2 gånger. Det skyddar mot ljus (gröna knölar), ökar skörden genom att ge mer utrymme för knölar, och förebygger bladmögel genom bättre dränering.', severity: 'warning' },
-    { icon: '🌿', title: 'Klipp blasten – dubbel vinst', text: 'Klipp av blasten 2–3 veckor före skörd. Det stoppar bladmögel från att sprida sig till knölarna OCH härdar skalet så potatisen lagras bättre.', severity: 'tip' },
-    { icon: '🕐', title: 'Tidig vs sen – två helt olika grödor', text: 'Färskpotatis (60 dagar, tunn skal, ät direkt) och lagringspotatis (100–120 dagar, tjockt skal) är nästan som att odla två olika saker. Bestäm i förväg vad du vill ha.', severity: 'tip' },
-    { icon: '🪣', title: 'Fungerar i hink!', text: 'Har du ingen trädgård? Potatis växer utmärkt i en stor hink, säck eller odlingslåda. 30 liter jord + 2 sättknölar = ca 2 kg potatis. Perfekt för balkong.', severity: 'tip' },
+    { icon: 'warning', title: 'Grön potatis är giftig', text: 'Gröna partier innehåller solanin – ett gift som inte försvinner vid kokning. Kupa ordentligt så att knölarna aldrig ser ljus. Ät aldrig potatis som är grön under skalet.', severity: 'warning' },
+    { icon: 'warning', title: 'Använd ALLTID sättpotatis', text: 'Plantera aldrig matpotatis från affären. Sättpotatis är certifierad fri från sjukdomar. Matpotatis kan bära virus och bladmögel som sprids i din jord i åratal.', severity: 'warning' },
+    { icon: 'hill', title: 'Kupning är allt', text: 'Kupa jord runt plantorna minst 2 gånger. Det skyddar mot ljus (gröna knölar), ökar skörden genom att ge mer utrymme för knölar, och förebygger bladmögel genom bättre dränering.', severity: 'warning' },
+    { icon: 'leaf', title: 'Klipp blasten – dubbel vinst', text: 'Klipp av blasten 2–3 veckor före skörd. Det stoppar bladmögel från att sprida sig till knölarna OCH härdar skalet så potatisen lagras bättre.', severity: 'tip' },
+    { icon: 'calendar', title: 'Tidig vs sen – två helt olika grödor', text: 'Färskpotatis (60 dagar, tunn skal, ät direkt) och lagringspotatis (100–120 dagar, tjockt skal) är nästan som att odla två olika saker. Bestäm i förväg vad du vill ha.', severity: 'tip' },
+    { icon: 'harvest', title: 'Fungerar i hink!', text: 'Har du ingen trädgård? Potatis växer utmärkt i en stor hink, säck eller odlingslåda. 30 liter jord + 2 sättknölar = ca 2 kg potatis. Perfekt för balkong.', severity: 'tip' },
   ],
   sowing: {
     method: 'direct',
@@ -164,10 +164,10 @@ export const potatis: Crop = {
   storage: {
     shelfLife: '4–8 månader',
     methods: [
-      { method: 'Mörk källare / jordkällare', icon: '🏚️', duration: '6–8 månader', description: 'Optimalt 4–6°C, mörkt och svalt med lite luftfuktighet. Förvara i trälåda, jutesäck eller papperskasse – aldrig i plast. Kolla med jämna mellanrum och ta bort knölar som börjar mjukna.', best: true },
-      { method: 'Kupa och lämna i jorden', icon: '🌿', duration: '2–4 veckor efter blasten dör', description: 'Klipp blasten och låt potatisen ligga kvar i jorden. Skalet härdas och lagringskvaliteten ökar. Men gräv upp före ihållande regn eller frost.', best: false },
-      { method: 'Kylskåp (nödlösning)', icon: '❄️', duration: '2–3 veckor', description: 'Fungerar i nödfall men kylan omvandlar stärkelse till socker – potatisen blir söt och brunfärgas vid stekning. Lägg i papperspåse, aldrig plast.', best: false },
-      { method: 'Frysa (tillagad)', icon: '🧊', duration: '8–12 månader', description: 'Koka eller blanchera först – rå potatis fryser dåligt. Mos, gratäng och klyftpotatis fryser utmärkt. Vakuumförpacka för bäst resultat.', best: false },
+      { method: 'Mörk källare / jordkällare', icon: 'cellar', duration: '6–8 månader', description: 'Optimalt 4–6°C, mörkt och svalt med lite luftfuktighet. Förvara i trälåda, jutesäck eller papperskasse – aldrig i plast. Kolla med jämna mellanrum och ta bort knölar som börjar mjukna.', best: true },
+      { method: 'Kupa och lämna i jorden', icon: 'leaf', duration: '2–4 veckor efter blasten dör', description: 'Klipp blasten och låt potatisen ligga kvar i jorden. Skalet härdas och lagringskvaliteten ökar. Men gräv upp före ihållande regn eller frost.', best: false },
+      { method: 'Kylskåp (nödlösning)', icon: 'snowflake', duration: '2–3 veckor', description: 'Fungerar i nödfall men kylan omvandlar stärkelse till socker – potatisen blir söt och brunfärgas vid stekning. Lägg i papperspåse, aldrig plast.', best: false },
+      { method: 'Frysa (tillagad)', icon: 'snowflake', duration: '8–12 månader', description: 'Koka eller blanchera först – rå potatis fryser dåligt. Mos, gratäng och klyftpotatis fryser utmärkt. Vakuumförpacka för bäst resultat.', best: false },
     ],
     tips: [
       'ALDRIG i solljus – det ger gröna, giftiga knölar',
