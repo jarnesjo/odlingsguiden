@@ -15,7 +15,11 @@ export function PhBar({ ph }: PhBarProps) {
     <div className={styles.wrapper}>
       <div className={styles.bar}>
         <div className={styles.range} style={{ left: `${leftPct}%`, width: `${widthPct}%` }} />
-        <div className={styles.idealMarker} style={{ left: `${idealPct}%` }}>▼</div>
+        <div className={styles.idealMarker} style={{ left: `${idealPct}%` }}>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 1 L5 9 M2 6 L5 9 L8 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
       </div>
       <div className={styles.axis}>
         <span>0 (surt)</span>
