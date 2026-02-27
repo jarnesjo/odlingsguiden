@@ -6,7 +6,6 @@
 .trigger {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: var(--space-lg) 0;
   background: none;
@@ -21,11 +20,12 @@
 .icon {
   display: flex;
   align-items: center;
-  margin-right: var(--space-xs);
+  margin-right: var(--space-lg);
   flex-shrink: 0;
 }
 
 .chevron {
+  margin-left: auto;
   font-size: 18px;
   transition: transform 0.2s ease;
 }
