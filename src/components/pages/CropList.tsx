@@ -5,7 +5,9 @@ import { CROP_LIST } from '../../data/crops'
 import { DIFFICULTY_INFO } from '../../data/difficulty'
 import { ZONE_INFO } from '../../data/zones'
 import { Icon } from '../icons/Icon'
-import { LogoIcon, SearchIcon, DifficultyDot } from '../icons'
+import { SearchIcon, DifficultyDot } from '../icons'
+import { LogoCombined } from '../brand'
+import { SymbolSprout } from '../brand'
 import { CropGraphic } from '../illustrations/CropGraphic'
 import styles from './CropList.module.css'
 
@@ -35,9 +37,11 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.logo}><LogoIcon size={32} /></div>
-        <h1 className={styles.title}>Odlingsguiden</h1>
-        <p className={styles.subtitle}>Allt du behöver veta - en gröda i taget</p>
+        <LogoCombined
+          name="Odlingsguiden"
+          tagline="Allt du behöver veta - en gröda i taget"
+          symbol={SymbolSprout}
+        />
       </div>
 
       {/* Category Toggle */}
@@ -136,7 +140,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
         {unlockedCount} {activeCat.label.toLowerCase()} tillgängliga · {lockedCount} kommer snart
         <br />
         <span className={styles.footerSub}>
-          Klicka på en olåst {category === 'grönsaker' ? 'gröda' : category === 'bär' ? 'bärbuske' : 'krydda'} för att se demo
+          Skapad med omtanke av <a href="https://lillabosgarden.se" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Lilla Bosgården</a>
         </span>
       </div>
     </div>
