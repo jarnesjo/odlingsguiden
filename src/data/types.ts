@@ -6,7 +6,7 @@ export type TimelineZone = 1 | 4 | 6
 
 export type Difficulty = 'Enkel' | 'Medel' | 'Avancerad'
 
-export type Category = 'grönsaker' | 'bär' | 'kryddor'
+export type Category = 'grönsaker' | 'kryddor' | 'bär'
 
 export type Severity = 'warning' | 'tip'
 
