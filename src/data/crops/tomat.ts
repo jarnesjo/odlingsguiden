@@ -87,7 +87,7 @@ export const tomat: Crop = {
     good: [
       { id: 'basilika', name: 'Basilika', icon: 'herb', why: 'Förbättrar smaken och håller bladlöss borta' },
       { id: 'morot', name: 'Morot', icon: 'vegetable', why: 'Luckrar jorden runt tomatrötterna' },
-      { name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinerare och avskräcker vita flygare' },
+      { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinerare och avskräcker vita flygare' },
       { id: 'persilja', name: 'Persilja', icon: 'herb', why: 'Lockar nyttiga rovinsekter' },
     ],
     bad: [

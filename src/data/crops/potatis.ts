@@ -84,13 +84,13 @@ export const potatis: Crop = {
     good: [
       { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Fixerar kväve i jorden som potatisen drar nytta av' },
       { name: 'Kål', icon: 'vegetable', why: 'Kompakt rotsystem som inte konkurrerar med potatisens djupa rötter' },
-      { name: 'Ringblomma', icon: 'flower', why: 'Avskräcker coloradobagge och nematoder' },
+      { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', why: 'Avskräcker coloradobagge och nematoder' },
       { name: 'Pepparrot', icon: 'herb', why: 'Traditionell samodling - pepparrot ska avskräcka potatisbagge' },
     ],
     bad: [
       { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar bladmögel. En sjuk potatisplanta smittar tomaterna på dagar.' },
       { id: 'squash', name: 'Squash', icon: 'vegetable', why: 'Konkurrerar hårt om näring och utrymme - båda är storätare' },
-      { name: 'Solros', icon: 'flower', why: 'Utsöndrar ämnen (allelopati) som hämmar potatisens tillväxt' },
+      { id: 'solros', name: 'Solros', icon: 'flower', why: 'Utsöndrar ämnen (allelopati) som hämmar potatisens tillväxt' },
     ],
   },
   rotation: {

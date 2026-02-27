@@ -86,7 +86,7 @@ export const hallon: Crop = {
   companions: {
     good: [
       { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', why: 'Avskräcker bladlöss och gallkvalster som kan angripa hallon.' },
-      { name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinatörer och nyttiga insekter. Plus att den ser fantastisk ut vid hallonraden!' },
+      { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinatörer och nyttiga insekter. Plus att den ser fantastisk ut vid hallonraden!' },
       { id: 'rabarber', name: 'Rabarber', icon: 'vegetable', why: 'Skuggar marken, behåller fukt och samsas bra utan konkurrens om samma näring.' },
     ],
     bad: [

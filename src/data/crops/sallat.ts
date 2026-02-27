@@ -82,7 +82,7 @@ export const sallat: Crop = {
     ],
   },
   rotation: {
-    avoid: [{ name: 'Solros' }, { name: 'Kronärtskocka' }, { name: 'Jordärtskocka' }],
+    avoid: [{ id: 'solros', name: 'Solros' }, { name: 'Kronärtskocka' }, { name: 'Jordärtskocka' }],
     avoidWhy: 'Alla korgblommiga delar sjukdomar som sallatsröta. Vänta 2-3 år.',
     goodBefore: [{ id: 'artor', name: 'Ärtor' }, { id: 'bondbona', name: 'Bondböna' }, { name: 'Kål' }],
     goodBeforeWhy: 'Baljväxter och kål lämnar kväve- och näringsrik jord som sallat trivs i.',
