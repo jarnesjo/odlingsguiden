@@ -7,6 +7,10 @@ import { basilika } from './basilika'
 import { artor } from './artor'
 import { squash } from './squash'
 import { sallat } from './sallat'
+import { lok } from './lok'
+import { gronkal } from './gronkal'
+import { radisa } from './radisa'
+import { bondbona } from './bondbona'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -17,6 +21,10 @@ export const CROPS: Record<string, Crop> = {
   artor,
   squash,
   sallat,
+  lok,
+  gronkal,
+  radisa,
+  bondbona,
 }
 
 export const CROP_LIST: CropListEntry[] = [
@@ -32,8 +40,8 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'paprika', name: 'Paprika', icon: 'vegetable', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'chili', name: 'Chili', icon: 'vegetable', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   // Grönsaker — Brassicaceae (Korsblommiga)
-  { id: 'gronkal', name: 'Grönkål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
-  { id: 'radisa', name: 'Rädisa', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'gronkal', name: 'Grönkål', icon: 'gronkal', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
+  { id: 'radisa', name: 'Rädisa', icon: 'radisa', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'vitkal', name: 'Vitkål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'rodkal', name: 'Rödkål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'broccoli', name: 'Broccoli', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
@@ -51,11 +59,11 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'melon', name: 'Melon', icon: 'vegetable', family: 'Gurkväxter', familyLatin: 'Cucurbitaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
   // Grönsaker — Fabaceae (Baljväxter)
   { id: 'artor', name: 'Ärtor', icon: 'artor', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'bondbona', name: 'Bondböna', icon: 'bondbona', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'brytbona', name: 'Brytböna', icon: 'vegetable', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   { id: 'storbona', name: 'Störböna', icon: 'vegetable', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   // Grönsaker — Amaryllidaceae (Lökväxter)
-  { id: 'lok', name: 'Lök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'lok', name: 'Lök', icon: 'lok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'purjolok', name: 'Purjolök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'schalottenlok', name: 'Schalottenlök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
@@ -131,4 +139,4 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'tagetes', name: 'Tagetes', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
 ]
 
-export { morot, tomat, potatis, hallon, basilika }
+export { morot, tomat, potatis, hallon, basilika, lok, gronkal, radisa, bondbona }

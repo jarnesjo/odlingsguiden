@@ -8,6 +8,10 @@ import { PotatoIllustration, PotatoIcon } from './PotatoIllustration'
 import { PeaIllustration, PeaIcon } from './PeaIllustration'
 import { SquashIllustration, SquashIcon } from './SquashIllustration'
 import { LettuceIllustration, LettuceIcon } from './LettuceIllustration'
+import { OnionIllustration, OnionIcon } from './OnionIllustration'
+import { KaleIllustration, KaleIcon } from './KaleIllustration'
+import { RadishIllustration, RadishIcon } from './RadishIllustration'
+import { FavaBeanIllustration, FavaBeanIcon } from './FavaBeanIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -23,6 +27,10 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   artor: { large: PeaIllustration, small: PeaIcon },
   squash: { large: SquashIllustration, small: SquashIcon },
   sallat: { large: LettuceIllustration, small: LettuceIcon },
+  lok: { large: OnionIllustration, small: OnionIcon },
+  gronkal: { large: KaleIllustration, small: KaleIcon },
+  radisa: { large: RadishIllustration, small: RadishIcon },
+  bondbona: { large: FavaBeanIllustration, small: FavaBeanIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
