@@ -23,6 +23,10 @@ import { gurka } from './gurka'
 import { spenat } from './spenat'
 import { broccoli } from './broccoli'
 import { purjolok } from './purjolok'
+import { vitlok } from './vitlok'
+import { paprika } from './paprika'
+import { graslok } from './graslok'
+import { krusbar } from './krusbar'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -49,6 +53,10 @@ export const CROPS: Record<string, Crop> = {
   spenat,
   broccoli,
   purjolok,
+  vitlok,
+  paprika,
+  graslok,
+  krusbar,
 }
 
 export const CROP_LIST: CropListEntry[] = [
@@ -61,7 +69,7 @@ export const CROP_LIST: CropListEntry[] = [
   // Grönsaker — Solanaceae (Nattskatta)
   { id: 'tomat', name: 'Tomat', icon: 'tomat', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'potatis', name: 'Potatis', icon: 'potatis', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'paprika', name: 'Paprika', icon: 'vegetable', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
+  { id: 'paprika', name: 'Paprika', icon: 'paprika', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'chili', name: 'Chili', icon: 'vegetable', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   // Grönsaker — Brassicaceae (Korsblommiga)
   { id: 'gronkal', name: 'Grönkål', icon: 'gronkal', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
@@ -89,7 +97,7 @@ export const CROP_LIST: CropListEntry[] = [
   // Grönsaker — Amaryllidaceae (Lökväxter)
   { id: 'lok', name: 'Lök', icon: 'lok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'purjolok', name: 'Purjolök', icon: 'purjolok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Medel', category: 'grönsaker' },
-  { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
+  { id: 'vitlok', name: 'Vitlök', icon: 'vitlok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'schalottenlok', name: 'Schalottenlök', icon: 'vegetable', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   // Grönsaker — Amaranthaceae (Mållväxter)
   { id: 'rodbeta', name: 'Rödbeta', icon: 'rodbeta', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker' },
@@ -116,7 +124,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'svarta-vinbar', name: 'Svarta vinbär', icon: 'svarta-vinbar', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'roda-vinbar', name: 'Röda vinbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
   { id: 'vita-vinbar', name: 'Vita vinbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
-  { id: 'krusbar', name: 'Krusbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
+  { id: 'krusbar', name: 'Krusbär', icon: 'krusbar', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'guldvinbar', name: 'Guldvinbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
   // Bär — Ericaceae (Ljungväxter)
   { id: 'blabar', name: 'Blåbär (odlade)', icon: 'berry', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär', locked: true },
@@ -142,7 +150,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'libbsticka', name: 'Libbsticka', icon: 'herb', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor', locked: true },
   { id: 'kummin', name: 'Kummin', icon: 'herb', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor', locked: true },
   // Kryddor — Amaryllidaceae (Lökväxter)
-  { id: 'graslok', name: 'Gräslök', icon: 'herb', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'kryddor', locked: true },
+  { id: 'graslok', name: 'Gräslök', icon: 'graslok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'kryddor' },
   { id: 'ramslok', name: 'Ramslök', icon: 'herb', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'kryddor', locked: true },
   // Kryddor — Asteraceae (Korgblommiga)
   { id: 'dragon', name: 'Dragon', icon: 'herb', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Medel', category: 'kryddor', locked: true },
@@ -163,4 +171,4 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'tagetes', name: 'Tagetes', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
 ]
 
-export { morot, tomat, potatis, hallon, basilika, lok, gronkal, radisa, bondbona, jordgubbar, persilja, svartaVinbar, dill, rodbeta, rabarber, sockermajs, sparris, gurka, spenat, broccoli, purjolok }
+export { morot, tomat, potatis, hallon, basilika, lok, gronkal, radisa, bondbona, jordgubbar, persilja, svartaVinbar, dill, rodbeta, rabarber, sockermajs, sparris, gurka, spenat, broccoli, purjolok, vitlok, paprika, graslok, krusbar }

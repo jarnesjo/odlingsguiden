@@ -24,6 +24,10 @@ import { CucumberIllustration, CucumberIcon } from './CucumberIllustration'
 import { SpinachIllustration, SpinachIcon } from './SpinachIllustration'
 import { BroccoliIllustration, BroccoliIcon } from './BroccoliIllustration'
 import { LeekIllustration, LeekIcon } from './LeekIllustration'
+import { GarlicIllustration, GarlicIcon } from './GarlicIllustration'
+import { PepperIllustration, PepperIcon } from './PepperIllustration'
+import { ChivesIllustration, ChivesIcon } from './ChivesIllustration'
+import { GooseberryIllustration, GooseberryIcon } from './GooseberryIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -55,6 +59,10 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   spenat: { large: SpinachIllustration, small: SpinachIcon },
   broccoli: { large: BroccoliIllustration, small: BroccoliIcon },
   purjolok: { large: LeekIllustration, small: LeekIcon },
+  vitlok: { large: GarlicIllustration, small: GarlicIcon },
+  paprika: { large: PepperIllustration, small: PepperIcon },
+  graslok: { large: ChivesIllustration, small: ChivesIcon },
+  krusbar: { large: GooseberryIllustration, small: GooseberryIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
