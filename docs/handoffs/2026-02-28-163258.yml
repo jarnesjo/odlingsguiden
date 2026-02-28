@@ -1,0 +1,88 @@
+meta:
+  date: 2026-02-28
+  author: claude
+  phase: "Fas 2: Innehall & Kvalitet"
+  status: aktiv
+  session_notes: |
+    Session 13. Saknade ikoner + 4 nya profiler.
+
+    Gjort:
+    - Skapade 6 saknade ikoner som refererades i groddata men aldrig definierats:
+      PlantIcon, GrowthIcon, SupportIcon, PropagationIcon, DormantIcon, ClockIcon
+    - Batch med 4 nya profiler (parallella agenter):
+      Bjornbar (bar), Oregano (krydda), Rosmarin (krydda), Blomkal (gronsak)
+    - Fix: oregano-profilen saknade aao-tecken (encoding-bugg i en agent)
+    - Totalt 36 profiler nu (22 gronsaker, 6 bar, 8 kryddor)
+    - Anvandaren vill andra 2.1-malet till "lagg in alla" (ej uppdaterat i roadmap an)
+
+    Commits (8 st):
+    - feat(ui): add 6 missing timeline icons
+    - feat(crops): add blackberry crop profile with SVG illustration
+    - feat(crops): add oregano crop profile with SVG illustration
+    - feat(crops): add rosemary crop profile with SVG illustration
+    - feat(crops): add cauliflower crop profile with SVG illustration
+    - feat(ui): register blackberry, oregano, rosemary and cauliflower profiles
+    - fix(crops): restore Swedish characters in oregano profile
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - Recharts 3.7 (NutritionChart)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts (blommor hidden)
+    - src/data/cropUtils.ts
+    - "src/data/crops/index.ts (80+ entries, 36 profiler, 6 blommor)"
+    - "src/data/crops/*.ts (36 profiler)"
+    - "src/components/illustrations/CropGraphic.tsx (36 illustrationer)"
+    - "src/components/illustrations/*Illustration.tsx (36 st)"
+    - "src/components/icons/index.tsx (42 ikoner + 6 nya = 48)"
+    - src/components/icons/Icon.tsx (48 ikoner i ICON_MAP)
+    - src/components/ui/PhBar.tsx
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "Uppdatera ROADMAP.md - andra 2.1-malet till 'lagg in alla profiler'"
+  - "Fortsatt batchar med profiler - manga locked crops kvar"
+  - "Visuell granskning av de 4 nya profilerna i dev server"
+  - "1.5 Sasongsvy v1 - manadsbaserad startskarm"
+  - "1.6 Frukt som fjarde kategori"
+
+context:
+  decisions:
+    - "6 saknade ikoner skapade: plant, growth, support, propagation, dormant, clock"
+    - "Worktree-isolation fungerade inte for agenter (ej git-repo i agent-kontext)"
+    - "Anvandaren vill att 2.1-malet andras till 'lagg in alla' istallet for 30+"
+    - "Sanity check med grep -c '[aao]' pa nya filer rekommenderas efter agentbatchar"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "All text pa svenska, kompis-ton, korrekt aao"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner, dampade farger"
+
+known_issues:
+  - "Nya profiler behover visuell granskning i dev server"
+  - "Roadmap 2.1 mal behover uppdateras till 'lagg in alla'"
+  - "Bundle size >500KB pga Recharts"
+  - "Agenter kan ibland tappa aao-tecken - korskolla efter batchar"
