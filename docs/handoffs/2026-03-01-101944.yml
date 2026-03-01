@@ -1,0 +1,103 @@
+meta:
+  date: 2026-03-01
+  author: claude
+  phase: "Fas 2: Innehall & Kvalitet"
+  status: aktiv
+  session_notes: |
+    Session 15. Roadmap-uppdatering, kallor.md, frofilosofi, F1-research.
+
+    Gjort:
+    - Uppdaterat ROADMAP.md: 2.1 andrat fran "30+" till "Alla profiler" med raknare
+    - Ny roadmap-punkt 2.2 Kallhantering & faktacheck (numrering justerad)
+    - Skapat docs/guides/kallor.md - arlig om nulage (0 verifierade), metod, kalltyper, verifieringsniva, faktacheck-process, AI-transparens, ansvarsfriskrivning
+    - Skrivit om kallor.md efter feedback - forsta versionen var oarlig (lat som att verifiering redan var pa plats)
+    - Utokade kallor med 6 nya: SMHI, Jordbruksverket (+ Vaxtskyddsinfo), Hushallningssallskapet, Lindbloms Fro, FOR, frobevarande-organisationer
+    - Djup research om F1-hybrider vs kultursorter i Sverige
+    - Skapat docs/research/ som ny mapp for djup research
+    - Skapat docs/research/f1-frodebatten.md - svenska aktorer, EU-lagstiftning, frobevarande-organisationer, nyckelpersoner
+    - Lagt till frofilosofi i kallor.md (OP-sorter forst, F1 bara vid verkligt mervarde)
+    - Lagt till Frobanken som kalla
+    - Uppdaterat CLAUDE.md med frofilosofi som bindande konvention
+    - Uppdaterat ny-groda.md - sortrekommendationer prioriterar OP, 2 nya checklistpunkter
+    - Uppdaterat docs/-struktur i CLAUDE.md och ROADMAP.md filtabell
+
+    Commits (7 st):
+    - docs(roadmap): update 2.1 goal and add kallhantering step
+    - docs(guides): add kallor.md - source methodology and AI transparency
+    - docs(guides): rewrite kallor.md with honest status and expanded sources
+    - docs(guides): add seed philosophy and F1 debate research
+    - docs(guides): add Frobanken to seed company sources
+    - docs(guides): prioritize OP varieties in crop profile guide
+    - docs(claude,roadmap): add seed philosophy convention and docs structure
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - Recharts 3.7 (NutritionChart)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/research/f1-frodebatten.md
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts (blommor hidden)
+    - src/data/cropUtils.ts
+    - "src/data/crops/index.ts (37 profiler registrerade)"
+    - "src/data/crops/*.ts (37 profiler)"
+    - "src/components/illustrations/CropGraphic.tsx (37 illustrationer)"
+    - "src/components/illustrations/*Illustration.tsx (37 st)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/icons/Icon.tsx
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "Borja faktacheck av profiler (tomat, morot, potatis forst)"
+  - "Anvandaren vill kolla med tradgardsmastaren om fler frokallor"
+  - "Fortsatt batchar med profiler - manga locked crops kvar"
+  - "1.5 Sasongsvy v1 - manadsbaserad startskarm"
+  - "1.6 Frukt som fjarde kategori"
+  - "Markera 2.2 som paborjad i roadmapen"
+
+context:
+  decisions:
+    - "Frofilosofi: OP-sorter och kulturarvssorter prioriteras fore F1"
+    - "F1-hybrider namns bara vid verkligt mervarde (sjukdomsresistens, hardighet)"
+    - "Research sparas i docs/research/, sammanfattas i kallor.md"
+    - "kallor.md ska vara arlig om nulage vs mal - aldrig latsa att verifiering ar klar"
+    - "Nya kallor: SMHI, Jordbruksverket, Hushallningssallskapet, Frobanken"
+    - "Svenska frokallor prioriteras: Runabergs, NordFro, Lindbloms, Eco Grow"
+    - "Foreningen Sesam ar central for frobevarande-referens"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "All text pa svenska, kompis-ton, korrekt aao"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner, dampade farger"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "F1-hybrider alltid markerade tydligt"
+
+known_issues:
+  - "37 profiler, 0 formellt faktacheckade"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
+  - "Zondata och sorter bor verifieras mot svenska frokatalloger"
+  - "Tidslinjer bor kollas mot SLU:s odlingskalender"
+  - "Bundle size >500KB pga Recharts"
+  - "Befintliga profiler kan ha F1-sorter utan tydlig markering - bor granskas"
