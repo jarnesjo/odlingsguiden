@@ -1,4 +1,5 @@
-import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
+import { useRef, useState, useEffect } from 'react'
+import { AreaChart, Area, XAxis, YAxis, Tooltip } from 'recharts'
 import type { NutritionDataPoint } from '../../data/types'
 import { colors } from '../../theme/tokens'
 import styles from './NutritionChart.module.css'
@@ -20,11 +21,26 @@ const LABELS: Record<string, string> = {
 }
 
 export function NutritionChart({ data }: NutritionChartProps) {
+  const wrapperRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(0)
+
+  useEffect(() => {
+    const el = wrapperRef.current
+    if (!el) return
+
+    const observer = new ResizeObserver((entries) => {
+      const w = entries[0]?.contentRect.width ?? 0
+      if (w > 0) setWidth(w)
+    })
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div>
-      <div className={styles.wrapper}>
-        <ResponsiveContainer>
-          <AreaChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+      <div className={styles.wrapper} ref={wrapperRef}>
+        {width > 0 && (
+          <AreaChart data={data} width={width} height={220} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
             <defs>
               <linearGradient id="nGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor={colors.chartN} stopOpacity={0.3} />
@@ -64,11 +80,11 @@ export function NutritionChart({ data }: NutritionChartProps) {
                 return item?.label ? `${label} - ${item.label}` : String(label)
               }}
             />
-            <Area type="monotone" dataKey="N" stroke={colors.chartN} fill="url(#nGrad)" strokeWidth={2.5} dot={{ r: 3 }} />
-            <Area type="monotone" dataKey="P" stroke={colors.chartP} fill="url(#pGrad)" strokeWidth={2.5} dot={{ r: 3 }} />
-            <Area type="monotone" dataKey="K" stroke={colors.chartK} fill="url(#kGrad)" strokeWidth={2.5} dot={{ r: 3 }} />
+            <Area type="monotone" dataKey="N" stroke={colors.chartN} fill="url(#nGrad)" strokeWidth={2.5} dot={{ r: 3 }} isAnimationActive={false} />
+            <Area type="monotone" dataKey="P" stroke={colors.chartP} fill="url(#pGrad)" strokeWidth={2.5} dot={{ r: 3 }} isAnimationActive={false} />
+            <Area type="monotone" dataKey="K" stroke={colors.chartK} fill="url(#kGrad)" strokeWidth={2.5} dot={{ r: 3 }} isAnimationActive={false} />
           </AreaChart>
-        </ResponsiveContainer>
+        )}
       </div>
       <div className={styles.legend}>
         {LEGEND.map((n) => (
