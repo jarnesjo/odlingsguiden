@@ -101,7 +101,7 @@ export const morot: Crop = {
     { name: 'Nantes 2', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassikern. Pålitlig överallt.' },
     { name: 'Autumn King', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Stor, bra för lagring.' },
     { name: 'Flyaway F1', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Morotsfluge-resistent!' },
-    { name: 'Purple Haze', zones: [1, 2, 3, 4, 5, 6], note: 'Lila utsida, orange insida. Nyttig.' },
+    { name: 'Purple Haze F1', zones: [1, 2, 3, 4, 5, 6], note: 'Lila utsida, orange insida. F1-hybrid - frön ger inte sortäkta plantor.' },
   ],
   problems: [
     { name: 'Morotsflugan', symptom: 'Rostbruna gångar i roten', fix: 'Samodla med lök. Fiberduk. Så efter mitten av juni.' },
