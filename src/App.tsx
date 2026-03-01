@@ -26,7 +26,6 @@ function CropRoute({ userZone, onZoneClick }: { userZone: Zone; onZoneClick: () 
       onNavigate={(id) => {
         const slug = ID_TO_SLUG[id] ?? id
         navigate(`/${slug}`)
-        window.scrollTo({ top: 0, behavior: 'smooth' })
       }}
     />
   )
@@ -48,7 +47,6 @@ function App() {
                 onSelect={(id) => {
                   const slug = ID_TO_SLUG[id] ?? id
                   navigate(`/${slug}`)
-                  window.scrollTo({ top: 0 })
                 }}
                 userZone={userZone}
                 onZoneClick={() => setShowZoneModal(true)}

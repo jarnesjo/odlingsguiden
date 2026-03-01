@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import type { Zone, TimelineZone } from '../../data/types'
 import { CROPS } from '../../data/crops'
 import { ZONE_INFO } from '../../data/zones'
@@ -34,6 +35,10 @@ interface CropPageProps {
 
 export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: CropPageProps) {
   const crop = CROPS[cropId]
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [cropId])
 
   useDocumentMeta(
     crop ? `${crop.name} - Odlingsguiden` : 'Odlingsguiden',
