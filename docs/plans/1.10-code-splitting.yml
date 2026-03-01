@@ -1,0 +1,65 @@
+meta:
+  phase: "1.10"
+  title: "Code-splitting och build-optimering"
+  status: planerad
+  created: 2026-03-01
+
+context: |
+  Huvudbundlen (index.js) ar 998KB minifierad.
+  Startsidan behover bara ~200KB av detta.
+  Resten (groddata, stora illustrationer, sektionskomponenter)
+  behovs forst nar anvandaren klickar pa en groda.
+
+analysis:
+  current_bundle:
+    index_js: "998KB minified"
+    react_vendor: "47KB (redan separat)"
+    nutrition_chart: "323KB (redan lazy-loadad)"
+  breakdown:
+    crop_data: "567KB ra - 37 profiler med 25+ falt"
+    large_illustrations: "~190KB ra - 120px SVG"
+    small_icons: "~100KB ra - 48px SVG"
+    section_components: "~50KB ra - 19 sektioner"
+    ui_routing_brand: "~90KB ra"
+
+steps:
+  - title: "Lazy-load CropPage-routen"
+    files:
+      - src/App.tsx
+    description: |
+      Byt statisk import av CropPage till React.lazy().
+      Alla CropPage-beroenden (groddata, sektionskomponenter)
+      hamnar automatiskt i en separat chunk.
+
+  - title: "Bryt CROPS-beroendet i cropUtils"
+    files:
+      - src/data/cropUtils.ts
+    description: |
+      hasProfile() importerar hela CROPS-objektet (567KB) bara for att
+      kolla om en nyckel finns. Andra till att kolla mot CROP_LIST istallet.
+
+  - title: "Separera sma ikoner fran stora illustrationer"
+    files:
+      - src/components/illustrations/CropIcon.tsx (ny)
+      - src/components/pages/CropList.tsx
+    description: |
+      Skapa CropIcon-komponent med bara 48px-varianter.
+      CropList anvander CropIcon istallet for CropGraphic.
+      CropGraphic behalls oforandrad i CropPage-chunken.
+
+  - title: "Ta bort chunkSizeWarningLimit"
+    files:
+      - vite.config.ts
+    description: "Behovs inte langre nar chunkstorlekarna ar rimliga."
+
+expected_result:
+  index_js: "~200-300KB (direkt)"
+  react_vendor: "47KB (direkt)"
+  crop_page: "~500-600KB (vid navigation)"
+  nutrition_chart: "323KB (vid oppning av Naringskurva)"
+
+verification:
+  - "npm run build - inga varningar, kontrollera chunkstorlekar"
+  - "npm run dev - testa startsida + grodnavigation"
+  - "Network-fliken - verifiera lazy loading"
+  - "npx tsc --noEmit - inga typfel"

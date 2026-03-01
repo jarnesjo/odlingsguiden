@@ -164,6 +164,17 @@ Plan: `docs/plans/1.8-grod-navigering.yml`
 
 Plan: `docs/plans/1.7-fler-profiler.yml`
 
+### 1.10 Code-splitting och build-optimering
+
+> Snabbare laddning - startsidan behöver bara ~200KB av 998KB
+
+- [ ] Lazy-load CropPage-routen med React.lazy
+- [ ] Bryt CROPS-beroendet i cropUtils (använd CROP_LIST)
+- [ ] Separera CropIcon (48px) från CropGraphic (120px)
+- [ ] Ta bort chunkSizeWarningLimit
+
+Plan: `docs/plans/1.10-code-splitting.yml`
+
 ---
 
 ## Fas 2: Innehåll & Kvalitet
