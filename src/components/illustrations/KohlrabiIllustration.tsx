@@ -27,12 +27,12 @@ export function KohlrabiIllustration({ size = 200 }: Props) {
         fill="none"
       />
 
-      {/* Subtila ränder pa knolen */}
+      {/* Subtila ränder på knölen */}
       <path d="M64 100 Q80 96 100 96 Q120 96 136 100" stroke="#8AAE7A" strokeWidth="0.8" strokeLinecap="round" opacity="0.22" />
       <path d="M60 114 Q78 110 100 110 Q122 110 140 114" stroke="#8AAE7A" strokeWidth="0.8" strokeLinecap="round" opacity="0.20" />
       <path d="M64 128 Q80 124 100 124 Q120 124 136 128" stroke="#8AAE7A" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" />
 
-      {/* Ljusreflex pa knolen */}
+      {/* Ljusreflex på knölen */}
       <path
         d="M70 84 Q68 96 68 110 Q68 122 72 132"
         stroke="#C8E0B8"
@@ -41,14 +41,14 @@ export function KohlrabiIllustration({ size = 200 }: Props) {
         opacity="0.22"
       />
 
-      {/* Bladstjalkar - kortare, ryms i viewBox */}
+      {/* Bladstjälkar - kortare, ryms i viewBox */}
       <path d="M76 78 L60 52" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M124 78 L140 52" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M88 67 L76 42" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M112 67 L124 42" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M100 64 L100 36" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
 
-      {/* Blad - vanster */}
+      {/* Blad - vänster */}
       <path
         d="M60 52 Q48 44 44 36 Q42 28 48 30 Q54 32 60 52Z"
         fill="#3D6B4F"
@@ -57,7 +57,7 @@ export function KohlrabiIllustration({ size = 200 }: Props) {
       <path d="M60 52 Q48 44 44 36 Q42 28 48 30 Q54 32 60 52" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M59 50 Q50 42 46 34" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.3" />
 
-      {/* Blad - hoger */}
+      {/* Blad - höger */}
       <path
         d="M140 52 Q152 44 156 36 Q158 28 152 30 Q146 32 140 52Z"
         fill="#3D6B4F"
@@ -66,7 +66,7 @@ export function KohlrabiIllustration({ size = 200 }: Props) {
       <path d="M140 52 Q152 44 156 36 Q158 28 152 30 Q146 32 140 52" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M141 50 Q150 42 154 34" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.3" />
 
-      {/* Blad - mitt vanster */}
+      {/* Blad - mitt vänster */}
       <path
         d="M76 42 Q66 34 62 26 Q68 22 74 28 Q78 34 76 42Z"
         fill="#3D6B4F"
@@ -74,7 +74,7 @@ export function KohlrabiIllustration({ size = 200 }: Props) {
       />
       <path d="M76 42 Q66 34 62 26 Q68 22 74 28 Q78 34 76 42" stroke="#3D6B4F" strokeWidth="1.5" strokeLinecap="round" />
 
-      {/* Blad - mitt hoger */}
+      {/* Blad - mitt höger */}
       <path
         d="M124 42 Q134 34 138 26 Q132 22 126 28 Q122 34 124 42Z"
         fill="#3D6B4F"
@@ -121,7 +121,7 @@ export function KohlrabiIcon({ size = 48 }: Props) {
         fill="none"
       />
 
-      {/* Bladstjalkar */}
+      {/* Bladstjälkar */}
       <path d="M17 15 L11 7" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M24 9 L24 3" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M31 15 L37 7" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />

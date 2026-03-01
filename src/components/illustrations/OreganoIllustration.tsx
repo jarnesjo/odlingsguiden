@@ -7,10 +7,10 @@ interface Props {
 export function OreganoIllustration({ size = 200 }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 200 200" fill="none">
-      {/* Bakgrundsglod */}
+      {/* Bakgrundsglöd */}
       <circle cx="100" cy="100" r="90" fill="#DDE5C8" opacity="0.15" />
 
-      {/* Huvudstam - vedartad bas som overgar till gron */}
+      {/* Huvudstam - vedartad bas som övergår till grön */}
       <path
         d="M100 185 C100 178, 99 170, 98 160 C97 148, 97 135, 97 125"
         stroke="#8B7355"
@@ -31,7 +31,7 @@ export function OreganoIllustration({ size = 200 }: Props) {
         strokeWidth="1.8"
         strokeLinecap="round"
       />
-      {/* Bladpar vanster nedre - ovala blad */}
+      {/* Bladpar vänster nedre - ovala blad */}
       <ellipse cx="70" cy="142" rx="6" ry="4" fill="#6B7D3E" opacity="0.45" transform="rotate(-15 70 142)" />
       <ellipse cx="70" cy="142" rx="6" ry="4" fill="none" stroke="#4A6A2F" strokeWidth="0.8" opacity="0.3" transform="rotate(-15 70 142)" />
       <ellipse cx="62" cy="138" rx="5.5" ry="3.5" fill="#6B7D3E" opacity="0.4" transform="rotate(-10 62 138)" />
@@ -77,7 +77,7 @@ export function OreganoIllustration({ size = 200 }: Props) {
       <ellipse cx="128" cy="111" rx="5" ry="3.5" fill="#7A9450" opacity="0.45" transform="rotate(18 128 111)" />
       <ellipse cx="118" cy="114" rx="4.5" ry="3" fill="#7A9450" opacity="0.4" transform="rotate(22 118 114)" />
 
-      {/* Vanster sidogren 3 (ovre) */}
+      {/* Vanster sidogren 3 (övre) */}
       <path
         d="M96 100 C86 95, 68 90, 50 86"
         stroke="#3D6B4F"
@@ -89,7 +89,7 @@ export function OreganoIllustration({ size = 200 }: Props) {
       <ellipse cx="66" cy="89" rx="5" ry="3" fill="#7A9450" opacity="0.45" transform="rotate(-15 66 89)" />
       <ellipse cx="76" cy="93" rx="4" ry="2.5" fill="#7A9450" opacity="0.4" transform="rotate(-20 76 93)" />
 
-      {/* Hoger sidogren 3 (ovre) */}
+      {/* Hoger sidogren 3 (övre) */}
       <path
         d="M97 95 C107 91, 125 87, 148 85"
         stroke="#3D6B4F"
@@ -122,19 +122,19 @@ export function OreganoIllustration({ size = 200 }: Props) {
       <circle cx="94" cy="38" r="1.3" fill="#B08498" opacity="0.35" />
       <circle cx="98" cy="33" r="1.2" fill="#B08498" opacity="0.3" />
 
-      {/* Blomklase vanster gren */}
+      {/* Blomklase vänster gren */}
       <circle cx="48" cy="83" r="1.8" fill="#7B4B6A" opacity="0.45" />
       <circle cx="46" cy="81" r="1.5" fill="#9B6888" opacity="0.4" />
       <circle cx="50" cy="81" r="1.3" fill="#7B4B6A" opacity="0.45" />
       <circle cx="48" cy="79" r="1.2" fill="#9B6888" opacity="0.35" />
 
-      {/* Blomklase hoger gren */}
+      {/* Blomklase höger gren */}
       <circle cx="150" cy="83" r="1.8" fill="#7B4B6A" opacity="0.45" />
       <circle cx="152" cy="81" r="1.5" fill="#9B6888" opacity="0.4" />
       <circle cx="148" cy="81" r="1.3" fill="#7B4B6A" opacity="0.45" />
       <circle cx="150" cy="79" r="1.2" fill="#9B6888" opacity="0.35" />
 
-      {/* Extra blomklase pa mitten-grenar */}
+      {/* Extra blomklase på mitten-grenar */}
       <circle cx="50" cy="107" r="1.5" fill="#7B4B6A" opacity="0.35" />
       <circle cx="48" cy="105" r="1.2" fill="#9B6888" opacity="0.3" />
       <circle cx="147" cy="106" r="1.5" fill="#7B4B6A" opacity="0.35" />
@@ -191,7 +191,7 @@ export function OreganoIllustration({ size = 200 }: Props) {
 export function OreganoIcon({ size = 48 }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
-      {/* Huvudstam - vedartad bas till gron */}
+      {/* Huvudstam - vedartad bas till grön */}
       <path d="M24 44 L24 32" stroke="#8B7355" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M24 32 L24 12" stroke="#3D6B4F" strokeWidth="1.6" strokeLinecap="round" />
 
@@ -209,7 +209,7 @@ export function OreganoIcon({ size = 48 }: Props) {
       <ellipse cx="38" cy="20" rx="4" ry="2.5" fill="#7A9450" opacity="0.45" transform="rotate(10 38 20)" />
       <ellipse cx="32" cy="22" rx="3.5" ry="2.2" fill="#7A9450" opacity="0.4" transform="rotate(15 32 22)" />
 
-      {/* Ovre bladpar */}
+      {/* Övre bladpar */}
       <ellipse cx="20" cy="16" rx="3.5" ry="2.2" fill="#8AA55E" opacity="0.45" transform="rotate(-12 20 16)" />
       <ellipse cx="28" cy="15" rx="3.5" ry="2.2" fill="#8AA55E" opacity="0.45" transform="rotate(12 28 15)" />
 

@@ -10,27 +10,27 @@ export function ParsnipIllustration({ size = 200 }: Props) {
       {/* 1. Bakgrundscirkel - grönsak */}
       <circle cx="100" cy="100" r="90" fill={colors.accentLight} opacity="0.15" />
 
-      {/* 2. Blast - central stjalk */}
+      {/* 2. Blast - central stjälk */}
       <path d="M100 72 L100 28" stroke="#3D6B4F" strokeWidth="2" strokeLinecap="round" />
 
-      {/* Vaster blast - stor fjaderbladsgren */}
+      {/* Väster blast - stor fjäderbladgren */}
       <path d="M97 50 C90 40, 76 30, 60 22" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M97 50 C86 42, 72 38, 56 38" stroke="#3D6B4F" strokeWidth="1.5" strokeLinecap="round" opacity="0.65" />
 
-      {/* Vaster blast - bladskiva pa stor gren */}
+      {/* Väster blast - bladskiva på stor gren */}
       <path d="M60 22 C65 24, 67 31, 63 37 C59 43, 53 39, 55 33 C57 27, 58 24, 60 22Z" fill="#3D6B4F" opacity="0.12" />
 
-      {/* Vaster blast - mindre gren */}
+      {/* Väster blast - mindre gren */}
       <path d="M97 56 C88 44, 74 34, 62 26" stroke="#3D6B4F" strokeWidth="1.4" strokeLinecap="round" opacity="0.5" />
 
-      {/* Ostra blast - stor fjaderbladsgren */}
+      {/* Östra blast - stor fjäderbladgren */}
       <path d="M103 50 C110 40, 124 30, 140 22" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
       <path d="M103 50 C114 42, 128 38, 144 38" stroke="#3D6B4F" strokeWidth="1.5" strokeLinecap="round" opacity="0.65" />
 
-      {/* Ostra blast - bladskiva pa stor gren */}
+      {/* Östra blast - bladskiva på stor gren */}
       <path d="M140 22 C135 24, 133 31, 137 37 C141 43, 147 39, 145 33 C143 27, 142 24, 140 22Z" fill="#3D6B4F" opacity="0.12" />
 
-      {/* Ostra blast - mindre gren */}
+      {/* Östra blast - mindre gren */}
       <path d="M103 56 C112 44, 126 34, 138 26" stroke="#3D6B4F" strokeWidth="1.4" strokeLinecap="round" opacity="0.5" />
 
       {/* Toppblast - liten centrumsgren */}
@@ -39,7 +39,7 @@ export function ParsnipIllustration({ size = 200 }: Props) {
       <path d="M85 7 C82 5, 80 7, 81 10" stroke="#3D6B4F" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
       <path d="M115 7 C118 5, 120 7, 119 10" stroke="#3D6B4F" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
 
-      {/* 3. Huvudkropp - palsternackan (bredare axlar an morot, trubbigare) */}
+      {/* 3. Huvudkropp - palsternackan (bredare axlar än morot, trubbigare) */}
       {/* Fill - krämvit/ljusgul */}
       <path
         d="M82 76 C78 76, 74 80, 72 88 L67 116 C64 130, 67 148, 74 162 C79 172, 87 180, 96 185 C98 186, 102 186, 104 185 C113 180, 121 172, 126 162 C133 148, 136 130, 133 116 L128 88 C126 80, 122 76, 118 76 Z"
@@ -90,13 +90,13 @@ export function ParsnipIllustration({ size = 200 }: Props) {
 export function ParsnipIcon({ size = 48 }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
-      {/* Blast - central stjalk */}
+      {/* Blast - central stjälk */}
       <path d="M24 18 L24 8" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" />
 
-      {/* Vaster blast */}
+      {/* Väster blast */}
       <path d="M23 13 C20 9, 15 6, 11 4" stroke="#3D6B4F" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
 
-      {/* Ostra blast */}
+      {/* Östra blast */}
       <path d="M25 13 C28 9, 33 6, 37 4" stroke="#3D6B4F" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
 
       {/* Toppgrenar */}
