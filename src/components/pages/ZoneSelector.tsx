@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import type { Zone } from '../../data/types'
 import { ZONE_INFO } from '../../data/zones'
 import styles from './ZoneSelector.module.css'
@@ -9,9 +10,25 @@ interface ZoneSelectorProps {
 }
 
 export function ZoneSelector({ currentZone, onSelect, onClose }: ZoneSelectorProps) {
+  const sheetRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [onClose])
+
+  const handleOverlayClick = (e: React.MouseEvent) => {
+    if (sheetRef.current && !sheetRef.current.contains(e.target as Node)) {
+      onClose()
+    }
+  }
+
   return (
-    <div className={styles.overlay}>
-      <div className={styles.sheet}>
+    <div className={styles.overlay} onClick={handleOverlayClick}>
+      <div className={styles.sheet} ref={sheetRef}>
         <div className={styles.header}>
           <h2 className={styles.title}>Välj din odlingszon</h2>
           <button className={styles.closeButton} onClick={onClose}>✕</button>
