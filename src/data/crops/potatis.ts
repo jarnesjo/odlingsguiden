@@ -11,7 +11,7 @@ export const potatis: Crop = {
   days: '60-120',
   spacing: '30-35 cm',
   rowSpacing: '60-70 cm',
-  depth: '10-15 cm',
+  depth: '8-10 cm',
   ph: { min: 5.0, max: 6.5, ideal: 5.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 6-8 timmar sol per dag. Blasten behöver sol för att producera energi till knölarna. I skugga: mycket blast, små knölar.' },
@@ -159,7 +159,7 @@ export const potatis: Crop = {
     ],
     isolation: 'Vegetativ förökning - ingen korspollinering att oroa sig för. Varje knöl är en genetisk klon av moderplantan.',
     storageYears: '1 år (nytt utsäde varje säsong)',
-    tip: 'OBS: Efter 3-4 år med eget utsäde byggs sjukdomar upp. Köp ny certifierad sättpotatis vart tredje år för att bryta smittcykeln.',
+    tip: 'OBS: Efter 2-3 år med eget utsäde byggs sjukdomar upp. Köp ny certifierad sättpotatis vart 2-3:e år för att bryta smittcykeln.',
   },
   storage: {
     shelfLife: '4-8 månader',
