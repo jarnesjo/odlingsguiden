@@ -151,7 +151,7 @@ export const lok: Crop = {
       'Skaka ut fröna när de är helt torra',
     ],
     isolation: 'Korsar fritt med andra sorter av vanlig lök (Allium cepa). Isolera med minst 1 km eller odla bara en sort för frö.',
-    storageYears: '1-2 år',
+    storageYears: '1-3 år',
     tip: 'Lökfrö tappar grobarhet snabbt! Använd helst fröna redan nästa säsong. Förvara torrt och svalt.',
   },
   storage: {
