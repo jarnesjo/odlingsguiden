@@ -15,7 +15,7 @@ export const tomat: Crop = {
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 8 timmar direkt sol per dag. Tomater ÄLSKAR sol - mer sol = sötare tomater. I halvskugga får du mest blad och lite frukt.' },
-    temperature: { min: 10, max: 35, ideal: '20-25°C', detail: 'Värmekrävande. Under 10°C stannar tillväxten. Fruktsättning sker bäst mellan 18-25°C. Över 35°C slutar blommorna att sätta frukt.' },
+    temperature: { min: 10, max: 35, ideal: '20-25°C', detail: 'Värmekrävande. Under 10°C stannar tillväxten. Fruktsättning sker bäst mellan 18-25°C. Över 30°C försämras fruktsättningen och vid 38-39°C upphör den helt.' },
     wind: { level: 'Skyddat', detail: 'Vindkänslig - stjälkar och blad skadas lätt. Plantera gärna intill en södervägg eller i växthus. Lite vind hjälper dock pollineringen.' },
   },
   watering: {
@@ -108,7 +108,7 @@ export const tomat: Crop = {
     { name: 'Sungold F1', zones: [1, 2, 3, 4, 5, 6], note: 'Söta cocktailtomater. Extremt populär.' },
     { name: 'Moneymaker', zones: [1, 2, 3, 4, 5, 6], note: 'Pålitlig klassiker. Bra för nybörjare.' },
     { name: 'Black Krim', zones: [1, 2, 3, 4, 5], note: 'Mörk, komplex smak. Wow-faktor.' },
-    { name: 'Polar Star', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Köldtålig! Bra för norra Sverige.' },
+    { name: 'Sibirjak', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Köldtålig rysk sort. 62 dagar - bra för norra Sverige och kort säsong.' },
   ],
   problems: [
     { name: 'Bladmögel', symptom: 'Bruna fläckar på bladen, sprider sig snabbt', fix: 'Luftig plantering, vattna vid basen, ta bort angripna blad direkt.' },
@@ -178,5 +178,5 @@ export const tomat: Crop = {
       'Skörda helst med en bit stjälk kvar - håller sig bättre',
     ],
   },
-  harvestCalc: { minPerSqm: 2, maxPerSqm: 4, unit: 'kg' },
+  harvestCalc: { minPerSqm: 3, maxPerSqm: 8, unit: 'kg' },
 }
