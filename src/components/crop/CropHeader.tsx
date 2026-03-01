@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import type { Crop, Zone } from '../../data/types'
 import { DifficultyBadge, ZoneBadge } from '../ui'
 import { CropGraphic } from '../illustrations/CropGraphic'
@@ -33,10 +34,10 @@ export function CropHeader({ crop, userZone, onBack, onZoneClick }: CropHeaderPr
         <button className={styles.backButton} onClick={onBack} aria-label="Tillbaka">
           <BackArrowIcon size={18} />
         </button>
-        <div className={styles.brand}>
+        <Link to="/" className={styles.brand}>
           <SymbolSprout size={24} />
           <span className={styles.brandName}>Odlingsguiden</span>
-        </div>
+        </Link>
         <button className={styles.zonePill} onClick={onZoneClick}>
           Zon {userZone} ▾
         </button>
