@@ -150,28 +150,43 @@ Plan: `docs/plans/1.7-fler-profiler.yml`
 
 Fylla på med innehåll och kvalitetssäkra.
 
-### 2.1 Fler profiler → 30+
+### 2.1 Alla profiler
 
-- [ ] 20+ grönsaker, 6+ bär, 8+ kryddor, 3+ frukt
-- [ ] Första fruktprofil: Äpple (flagship – bevisar att kategorin fungerar)
+> Lägg in alla grödor, bär och kryddor som kan odlas i Sverige
 
-### 2.2 Sökfunktion
+- [ ] Alla grönsaker (22 av ~40 klara)
+- [ ] Alla bär (7 av ~15 klara)
+- [ ] Alla kryddor (8 av ~20 klara)
+- [ ] Första fruktprofil: Äpple (flagship - bevisar att kategorin fungerar)
+
+### 2.2 Källhantering & faktacheck
+
+> Trovärdighet kräver transparens - visa var informationen kommer ifrån
+
+- [ ] Skapa `docs/guides/kallor.md` (metod, källtyper, ansvarsfriskrivning)
+- [ ] Faktacheck befintliga profiler mot svenska källor (SLU, Impecta, Runåbergs)
+- [ ] Verifiera zondata och sorter mot svenska frökataloger
+- [ ] Verifiera tidslinjer mot SLU:s odlingskalender
+- [ ] Ansvarsfriskrivning på sajten
+- [ ] AI-transparens: öppen om att AI använts, utan att göra det till huvudsaken
+
+### 2.3 Sökfunktion
 
 - [ ] Sök tvärs över kategorier
 - [ ] Filtrering på familj, svårighetsgrad, zon
 
-### 2.3 Webb-version (Statamic)
+### 2.4 Webb-version (Statamic)
 
 - [ ] Webb-version live på lillabosgarden.se/odlingsguiden
-- [ ] Server-renderad HTML via Statamic – varje gröda får egen URL
+- [ ] Server-renderad HTML via Statamic - varje gröda får egen URL
 - [ ] SEO-optimerat
 
-### 2.4 Användartest
+### 2.5 Användartest
 
-- [ ] Test med 10–15 svenska odlare
+- [ ] Test med 10-15 svenska odlare
 - [ ] Samla feedback, prioritera förbättringar
 
-### 2.5 Gårdskoppling
+### 2.6 Gårdskoppling
 
 - [ ] Koppling till gårdens produkter i relevanta profiler
 - [ ] "Vill du inte odla själv? Moroten finns i våra grönsakskassar."
@@ -339,4 +354,4 @@ Ingen prioritet ännu. Plockas upp när det passar.
 
 ---
 
-_Senast uppdaterad: 2026-02-27_
+_Senast uppdaterad: 2026-03-01_
