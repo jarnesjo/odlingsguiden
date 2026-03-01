@@ -89,6 +89,9 @@
 }
 
 .bestTipTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 600;
   margin-bottom: var(--space-xs);
 }
