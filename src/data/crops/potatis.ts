@@ -103,7 +103,7 @@ export const potatis: Crop = {
   },
   varieties: [
     { name: 'Solist', zones: [1, 2, 3, 4, 5, 6], note: 'Sveriges populäraste färskpotatis. Tidig, krämig, fantastisk.' },
-    { name: 'King Edward', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassikern. Mjölig, perfekt för mos och bakning. Bra lagring.' },
+    { name: 'King Edward', zones: [1, 2, 3, 4, 5, 6], note: 'Klassikern. Mjölig, perfekt för mos och bakning. Bra lagring. Sen sort - kräver lång säsong.' },
     { name: 'Mandel', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Norrlandsfavoriten. Fast, gul, otrolig smak. Lagrar utmärkt.' },
     { name: 'Asterix', zones: [1, 2, 3, 4, 5, 6], note: 'Rödskalig. Bra allround och fantastisk lagringspotatis.' },
     { name: 'Amandine', zones: [1, 2, 3, 4, 5], note: 'Fransk gourmetpotatis. Fast, len, sjukt god. Motståndskraftig.' },
