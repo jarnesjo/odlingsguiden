@@ -1,0 +1,127 @@
+meta:
+  date: 2026-03-01
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 19. Code-splitting, font-trimming, Lighthouse, roadmap-omstrukturering, nya profiler.
+
+    Gjort:
+    - Code-splitting: lazy-load CropPage (React.lazy + Suspense)
+    - Separerat CROP_LIST till egen fil (cropList.ts) - bryter beroende till tung groddata
+    - CropIcon.tsx skapad - lattviktsikoner for CropList (48px)
+    - cropUtils.ts anvander nu CROP_LIST istallet for CROPS
+    - chunkSizeWarningLimit borttagen fran vite.config.ts
+    - Fonter trimmade till latin + latin-ext (bort med vietnamese, cyrillic, symbols, math)
+    - robots.txt tillagd i public/
+    - Lighthouse-analys: Performance 97, Accessibility 84, Best Practices 100, SEO 91
+    - Performance benchmark sparad i docs/guides/performance.md
+    - Roadmap omstrukturerad - Fas 1 markerad klar, Sasongsvy + Frukt flyttade till Fas 2
+    - Ideer kategoriserade: Innehall, Funktioner, SEO, Optimering, Plattform, Projekt
+    - CLAUDE.md uppdaterad - commit-format klargjort (anvand -m flags, inte heredoc)
+    - Lighthouse-rapporter gitignored (docs/benchmarks/)
+    - 3 nya grodprofiler skapade: Mangold, Kalrabbi, Palsternacka (KLARA, ej registrerade)
+    - 1 profil pagaende: Brytbona (agent korar i bakgrunden, bor vara klar)
+
+    Commits (5 st):
+    - perf(ui): code-split CropPage and separate CROP_LIST from crop data
+    - perf(config): trim fonts to latin/latin-ext and add robots.txt
+    - docs(roadmap): restructure phases and categorize ideas
+    - docs(claude): clarify commit message format - use -m flags not heredoc
+    - chore(config): gitignore lighthouse benchmark reports
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (URL-routing)
+    - Recharts 3.7 (NutritionChart, lazy-loaded)
+    - "@fontsource/fraunces + @fontsource/lora (latin + latin-ext only)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/guides/performance.md (NY - Lighthouse baseline)
+    - docs/research/f1-frodebatten.md
+    - docs/research/faktacheck-2026-03-01.md
+    - docs/plans/1.10-code-splitting.yml (klar)
+    - docs/handoffs/
+    - docs/benchmarks/ (gitignored, lokala Lighthouse-rapporter)
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts
+    - src/data/cropList.ts (NY - separerad fran crops/index.ts)
+    - src/data/cropUtils.ts (andrad - anvander CROP_LIST)
+    - src/data/cropSlugs.ts (andrad - importerar fran cropList)
+    - "src/data/crops/index.ts (37 profiler + CROPS-objekt, CROP_LIST borttagen)"
+    - "src/data/crops/*.ts (37 aktiva + 3 nya ej registrerade)"
+    - src/components/illustrations/CropIcon.tsx (NY - 48px ikoner)
+    - "src/components/illustrations/CropGraphic.tsx (oforandrad, i lazy chunk)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/hooks/useDocumentMeta.ts
+    - src/hooks/useLocalStorage.ts
+  config:
+    - nginx.conf (oforandrad - /assets/ immutable caching taecker lazy chunks)
+    - public/robots.txt (NY)
+  scripts:
+    - scripts/generate-sitemap.ts (andrad import)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/ + genererar sitemap"
+  - "npm run sitemap  # Generera sitemap.xml separat"
+  - "npx tsc --noEmit # Typkontroll utan output"
+
+next_steps:
+  - "Registrera 4 nya profiler (mangold, kalrabbi, palsternacka, brytbona) i crops/index.ts + ta bort locked i cropList.ts"
+  - "Skapa Chili och Vitkal profiler"
+  - "Typkontroll + bygg efter registrering"
+  - "Committa nya profiler"
+  - "Fortsatt med fler profiler (bar: havtorn, aronia, honungsbar; kryddor: koriander, salvia, citronmeliss)"
+  - "Faktacheck nya profiler mot svenska kallor"
+
+context:
+  decisions:
+    - "CROP_LIST separerad till egen fil - forhindrar att main bundle drar in tung groddata"
+    - "CropIcon.tsx skapad for latt CropList-rendering - CropGraphic kvar i lazy CropPage chunk"
+    - "Fonter trimmade till latin + latin-ext - svenska behover inget annat"
+    - "robots.txt: Allow all - liten sajt behover synlighet, inte skydd"
+    - "Lighthouse-rapporter gitignored - genererade filer, baseline sparad i performance.md"
+    - "Roadmap: Fas 1 klar, 1.5 + 1.6 flyttade till Fas 2, Ideer kategoriserade"
+    - "Commits: anvand -m flags istallet for heredoc/$() - uppdaterat i CLAUDE.md"
+    - "Nya profiler skapas utan custom SVG-illustrationer - fallback till kategori-ikon fungerar"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "All text pa svenska, kompis-ton, korrekt aao"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner, dampade farger"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Commits: git commit -m 'titel' -m 'body' - aldrig heredoc"
+
+known_issues:
+  - "37 aktiva profiler, 5 faktacheckade (tomat, morot, potatis, sallat, lok)"
+  - "4 nya profiler skapade men EJ registrerade (mangold, kalrabbi, palsternacka, brytbona)"
+  - "Brytbona-agenten kan fortfarande kora - kontrollera att filen finns"
+  - "Nya profiler saknar custom SVG-illustrationer (visar fallback kategori-ikon)"
+  - "CropPage chunk 518KB triggar Vite-varning (kan fixas med dynamic import per profil)"
+  - "Lighthouse Accessibility 84 - kontrastproblem pa vissa fargkombinationer"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
+  - "NutritionChart gradient-IDs ar globala - kan krocka om flera chart renderas samtidigt"
+
+bundle_sizes:
+  index_js: "482 KB (103 KB gzip)"
+  react_vendor: "47 KB (17 KB gzip)"
+  crop_page: "518 KB lazy (155 KB gzip)"
+  nutrition_chart: "323 KB lazy (97 KB gzip)"
+  font_files: "20 st (latin + latin-ext)"
