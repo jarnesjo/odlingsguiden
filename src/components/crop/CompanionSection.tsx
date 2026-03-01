@@ -1,6 +1,6 @@
 import type { Companion, Companions } from '../../data/types'
 import { hasProfile } from '../../data/cropUtils'
-import { CROP_LIST } from '../../data/crops'
+import { CROP_LIST } from '../../data/cropList'
 import { Section } from '../ui'
 import { Icon } from '../icons/Icon'
 import { CropGraphic } from '../illustrations/CropGraphic'

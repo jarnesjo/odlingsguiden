@@ -1,5 +1,9 @@
-import { CROPS } from './crops'
+import { CROP_LIST } from './cropList'
+
+const PROFILE_IDS = new Set(
+  CROP_LIST.filter(c => !c.locked).map(c => c.id)
+)
 
 export function hasProfile(id: string): boolean {
-  return id in CROPS
+  return PROFILE_IDS.has(id)
 }

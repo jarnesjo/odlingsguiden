@@ -2,14 +2,14 @@ import { useState } from "react"
 import type { Category, Zone } from "../../data/types"
 import { useDocumentMeta } from "../../hooks/useDocumentMeta"
 import { CATEGORIES } from "../../data/categories"
-import { CROP_LIST } from "../../data/crops"
+import { CROP_LIST } from "../../data/cropList"
 import { DIFFICULTY_INFO } from "../../data/difficulty"
 import { ZONE_INFO } from "../../data/zones"
 import { Icon } from "../icons/Icon"
 import { SearchIcon, DifficultyDot } from "../icons"
 import { LogoCombined } from "../brand"
 import { SymbolSprout } from "../brand"
-import { CropGraphic } from "../illustrations/CropGraphic"
+import { CropIcon } from "../illustrations/CropIcon"
 import styles from "./CropList.module.css"
 
 interface CropListProps {
@@ -114,7 +114,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
             onClick={() => !crop.locked && onSelect(crop.id)}
           >
             <div className={styles.cropGraphic}>
-              <CropGraphic id={crop.id} size={40} category={crop.category} />
+              <CropIcon id={crop.id} size={40} category={crop.category} />
             </div>
             <div className={styles.cropInfo}>
               <div className={styles.cropName}>{crop.name}</div>

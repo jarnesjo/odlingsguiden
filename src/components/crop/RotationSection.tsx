@@ -1,6 +1,6 @@
 import type { Rotation, RotationItem } from '../../data/types'
 import { hasProfile } from '../../data/cropUtils'
-import { CROP_LIST } from '../../data/crops'
+import { CROP_LIST } from '../../data/cropList'
 import { Section } from '../ui'
 import { CropGraphic } from '../illustrations/CropGraphic'
 import { RotationIcon } from '../icons'

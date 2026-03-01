@@ -1,4 +1,4 @@
-import { CROP_LIST } from './crops'
+import { CROP_LIST } from './cropList'
 
 /** Convert a crop name to a URL-friendly slug, preserving åäö */
 function toSlug(name: string): string {

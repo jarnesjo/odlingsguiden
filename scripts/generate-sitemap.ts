@@ -1,4 +1,4 @@
-import { CROP_LIST } from '../src/data/crops/index.ts'
+import { CROP_LIST } from '../src/data/cropList.ts'
 import { writeFileSync } from 'fs'
 
 const BASE_URL = 'https://lillabosgarden.se/odlingsguiden'

@@ -1,9 +1,13 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { Routes, Route, useNavigate, useParams } from 'react-router-dom'
 import type { Zone } from './data/types'
 import { SLUG_TO_ID, ID_TO_SLUG } from './data/cropSlugs'
-import { CropList, CropPage, ZoneSelector } from './components/pages'
+import { CropList, ZoneSelector } from './components/pages'
 import { useLocalStorage } from './hooks/useLocalStorage'
+
+const CropPage = lazy(() =>
+  import('./components/pages/CropPage').then(m => ({ default: m.CropPage }))
+)
 
 function CropRoute({ userZone, onZoneClick }: { userZone: Zone; onZoneClick: () => void }) {
   const { cropSlug } = useParams()
@@ -53,7 +57,9 @@ function App() {
           <Route
             path="/:cropSlug"
             element={
-              <CropRoute userZone={userZone} onZoneClick={() => setShowZoneModal(true)} />
+              <Suspense fallback={null}>
+                <CropRoute userZone={userZone} onZoneClick={() => setShowZoneModal(true)} />
+              </Suspense>
             }
           />
         </Routes>
