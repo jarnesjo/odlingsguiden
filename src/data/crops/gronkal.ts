@@ -12,7 +12,7 @@ export const gronkal: Crop = {
   spacing: '40-50 cm',
   rowSpacing: '50-60 cm',
   depth: '1-2 cm',
-  ph: { min: 6.0, max: 7.5, ideal: 6.5 },
+  ph: { min: 6.0, max: 7.5, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Minst 4 timmar sol per dag. Klarar halvskugga bättre än de flesta kålväxter - bladen blir mörkare och mörare i halvskugga.' },
     temperature: { min: -15, max: 25, ideal: '10-20°C', detail: 'Grönkål är odlingens tuffing - hon står kvar när allt annat gett upp. Tål frost ner till -15°C och blir faktiskt BÄTTRE av kyla. Stärkelse omvandlas till socker efter frost!' },
@@ -99,7 +99,7 @@ export const gronkal: Crop = {
   },
   varieties: [
     { name: 'Westlandse Winter', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Klassikern. Extremt härdig, perfekt för svenska vintrar.' },
-    { name: 'Halvhög Kraus', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Krullig och kompakt. Fin i trädgården och på tallriken.' },
+    { name: 'Halvhög Krusig', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Krullig och kompakt. Traditionell svensk sort, även känd som "Half Tall". Fin i trädgården och på tallriken.' },
     { name: 'Red Russian', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Vackert lilaröda stjälkar och grågröna blad. Mildare smak.' },
     { name: 'Nero di Toscana', zones: [1, 2, 3, 4, 5, 6], note: 'Svartkål (cavolo nero). Smala, mörkgröna blad. Italiensk favorit som fungerar fint i Sverige.' },
   ],
@@ -149,8 +149,8 @@ export const gronkal: Crop = {
       'Klipp av hela blomstjälken och torka inomhus',
       'Krossa skidorna försiktigt och rensa bort skräp',
     ],
-    isolation: 'Korsar med ALLA andra Brassica oleracea (vitkål, broccoli, blomkål, brysselkål, kålrabbi). Odla bara en sort av kål för frö, eller isolera med minst 1 km.',
-    storageYears: '4-5 år',
+    isolation: 'Korsar med ALLA andra Brassica oleracea (vitkål, broccoli, blomkål, brysselkål, kålrabbi). Odla bara en sort av kål för frö, eller isolera med minst 500 m (helst 800 m+).',
+    storageYears: '4 år',
     tip: 'Kålfrö håller sig bra i flera år om du förvarar svalt och torrt. Märk sort och år!',
   },
   storage: {
@@ -168,5 +168,5 @@ export const gronkal: Crop = {
       'Skörda aldrig alla blad från en planta - lämna minst 5-6 blad så hon överlever vintern',
     ],
   },
-  harvestCalc: { minPerSqm: 0.8, maxPerSqm: 1.5, unit: 'kg' },
+  harvestCalc: { minPerSqm: 1.5, maxPerSqm: 2.5, unit: 'kg' },
 }
