@@ -124,7 +124,7 @@ export const bondbona: Crop = {
     label: 'Direktsådd',
     description: 'Bondbönan sås direkt på friland - hon har en kraftig pålrot som inte vill bli störd. De stora fröna är lätthanterliga och gör sådd till en barnlek.',
     steps: [
-      'Blötlägg fröna i vatten over natten (8-12 timmar) - de gror snabbare och jämnare',
+      'Blötlägg fröna i vatten över natten (8-12 timmar) - de gror snabbare och jämnare',
       'Gör hål 5-8 cm djupa med en pinne eller planteringspinne (ja, de ska djupt!)',
       'Lägg ett frö per hål med 15-20 cm avstånd',
       'Täck med jord och tryck till ordentligt',

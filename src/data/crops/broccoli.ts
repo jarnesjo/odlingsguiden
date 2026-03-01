@@ -14,7 +14,7 @@ export const broccoli: Crop = {
   depth: '1-2 cm',
   ph: { min: 6.0, max: 7.5, ideal: 6.5 },
   optimalConditions: {
-    sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 6 timmar sol per dag. I halvskugga blir huvudena mindre och lösare. Broccoli vill ha ordentligt med ljus for att bygga fina, täta buketter.' },
+    sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 6 timmar sol per dag. I halvskugga blir huvudena mindre och lösare. Broccoli vill ha ordentligt med ljus för att bygga fina, täta buketter.' },
     temperature: { min: -5, max: 25, ideal: '15-20°C', detail: 'Broccoli är en sval dam - hon gillar temperaturer runt 15-20°C allra bäst. Över 25°C stressar hon och börjar blomma i panik. Tål lätt frost ner till -5°C, men unga plantor bör skyddas.' },
     wind: { level: 'Skyddat', detail: 'Broccoli har tunga huvuden på relativt klena stjälkar. I blåsiga lägen kan plantorna luta sig eller till och med knäckas. Ge henne lite vindskydd eller kupa jord runt stambasen.' },
   },
@@ -40,7 +40,7 @@ export const broccoli: Crop = {
   soilTips: [
     'Blanda in rikligt med brunnen kompost och gärna lite hönsgödsel innan plantering',
     'Kalka på hösten om pH är under 6.0 - broccoli gillar kalkrik jord och det skyddar mot klumprotsjuka',
-    'Undvik packad lerjord - luckra djupt och blanda in sand eller kompost for bättre struktur',
+    'Undvik packad lerjord - luckra djupt och blanda in sand eller kompost för bättre struktur',
   ],
   timeline: {
     1: [
@@ -74,10 +74,10 @@ export const broccoli: Crop = {
     { month: 'Sep', N: 30, P: 25, K: 35, label: 'Sena sidoskott' },
   ],
   nutritionTips: [
-    { timing: 'Vid plantering', tip: 'Grundgödsla med brunnen kompost och hornmjöl. Broccoli vill ha kväverik start for att bygga bladmassa.' },
+    { timing: 'Vid plantering', tip: 'Grundgödsla med brunnen kompost och hornmjöl. Broccoli vill ha kväverik start för att bygga bladmassa.' },
     { timing: 'Tre veckor efter utplantering', tip: 'Ge flytande nässelvatten eller alggödsel. Hon ska vara i full gång nu och behöver bränsle.' },
-    { timing: 'Vid huvudbildning', tip: 'Extra giva med kaliumrik gödsel (vedaska eller alggödsel). Nu bygger hon buketterna och behöver kalium for täthet och smak.' },
-    { timing: 'Efter huvudskörd', tip: 'Ge en lätt kvävegiva for att putta igång sidoskotten. Nässelvatten varannan vecka räcker.' },
+    { timing: 'Vid huvudbildning', tip: 'Extra giva med kaliumrik gödsel (vedaska eller alggödsel). Nu bygger hon buketterna och behöver kalium för täthet och smak.' },
+    { timing: 'Efter huvudskörd', tip: 'Ge en lätt kvävegiva för att putta igång sidoskotten. Nässelvatten varannan vecka räcker.' },
   ],
   companions: {
     good: [
@@ -96,25 +96,25 @@ export const broccoli: Crop = {
     avoid: [{ id: 'gronkal', name: 'Grönkål' }, { id: 'blomkal', name: 'Blomkål' }, { id: 'vitkal', name: 'Vitkål' }, { id: 'rodkal', name: 'Rödkål' }, { id: 'brysselkal', name: 'Brysselkål' }, { id: 'kalrabbi', name: 'Kålrabbi' }, { id: 'radisa', name: 'Rädisa' }, { id: 'pak-choi', name: 'Pak choi' }],
     avoidWhy: 'Alla tillhör korsblommiga och delar sjukdomar som klumprotsjuka och kålbråck. Vänta minst 4 år innan du odlar kål på samma plats igen!',
     goodBefore: [{ id: 'artor', name: 'Ärtor' }, { id: 'bondbona', name: 'Bondböna' }, { id: 'potatis', name: 'Potatis' }, { id: 'lok', name: 'Lök' }],
-    goodBeforeWhy: 'Baljväxter fixerar kväve i jorden - gratis gödsel for hungriga broccoli. Potatis och lök lämnar ren, bearbetad jord.',
+    goodBeforeWhy: 'Baljväxter fixerar kväve i jorden - gratis gödsel för hungriga broccoli. Potatis och lök lämnar ren, bearbetad jord.',
     goodAfter: [{ id: 'morot', name: 'Morot' }, { id: 'lok', name: 'Lök' }, { id: 'sallat', name: 'Sallat' }, { id: 'rodbeta', name: 'Rödbeta' }],
     goodAfterWhy: 'Rotgrönsaker trivs i den djupt bearbetade, näringsrika restjorden. Sallat gillar kvävet som kål lämnar efter sig.',
   },
   varieties: [
     { name: 'Atlantis F1', zones: [1, 2, 3, 4, 5, 6], note: 'Pålitlig hybrid med stora, täta huvuden. Bra sidoskott efter huvudskörd. Funkar i hela Sverige.' },
     { name: 'Calabrese', zones: [1, 2, 3, 4, 5], note: 'Den klassiska italienska sorten. Riklig med sidoskott - skördar i veckor! Behöver lite längre säsong.' },
-    { name: 'Marathon F1', zones: [1, 2, 3, 4, 5, 6], note: 'Tålig och sjukdomsresistent. Perfekt for den som vill ha ett säkert kort. Kompakta, fina huvuden.' },
-    { name: 'Parthenon F1', zones: [1, 2, 3, 4, 5, 6], note: 'Tidigt mognande med stora huvuden. Bra val for kortare säsonger i norr.' },
+    { name: 'Marathon F1', zones: [1, 2, 3, 4, 5, 6], note: 'Tålig och sjukdomsresistent. Perfekt för den som vill ha ett säkert kort. Kompakta, fina huvuden.' },
+    { name: 'Parthenon F1', zones: [1, 2, 3, 4, 5, 6], note: 'Tidigt mognande med stora huvuden. Bra val för kortare säsonger i norr.' },
     { name: 'Broccoletto/Sprouting', zones: [1, 2, 3, 4], note: 'Ingen huvudbukett - massor av små sidoskott istället. Skörda som sparris. En helt annan upplevelse!' },
   ],
   problems: [
-    { name: 'Kålfjäril', symptom: 'Gröna larver som maler genom bladen. Gröna spillningshögar på och runt bladen.', fix: 'Fiberduk från dag ett! Handplocka larver. Spruta med Bacillus thuringiensis (Bt). Samodla med dill och lök for att förvirra fjärilarna.' },
+    { name: 'Kålfjäril', symptom: 'Gröna larver som maler genom bladen. Gröna spillningshögar på och runt bladen.', fix: 'Fiberduk från dag ett! Handplocka larver. Spruta med Bacillus thuringiensis (Bt). Samodla med dill och lök för att förvirra fjärilarna.' },
     { name: 'Kålfluga', symptom: 'Plantan vissnar trots vattning, rötterna är angripna av vita larver.', fix: 'Kålkragar runt stjälken vid utplantering - de hindrar flugan från att lägga ägg. Fiberduk hjälper också.' },
     { name: 'Klumprotsjuka', symptom: 'Plantan stannar i tillväxt och vissnar. Rötterna har klumpiga, svullna utväxter.', fix: 'Ingen bot - dra upp och bränn! Kalka jorden ordentligt. Odla inte kål på samma plats på minst 7 år. Allvarlig svampsjukdom.' },
-    { name: 'Lösa/gryniga huvuden', symptom: 'Huvudet blir löst, ojämnt eller grynigt istället for tätt och fint.', fix: 'Ofta orsakat av ojämn vattning, näringsbrist eller for hög temperatur. Håll jämn fukt och gödsla regelbundet. Välj sorter anpassade for din zon.' },
+    { name: 'Lösa/gryniga huvuden', symptom: 'Huvudet blir löst, ojämnt eller grynigt istället för tätt och fint.', fix: 'Ofta orsakat av ojämn vattning, näringsbrist eller för hög temperatur. Håll jämn fukt och gödsla regelbundet. Välj sorter anpassade för din zon.' },
   ],
   goodToKnow: [
-    { icon: 'warning', title: 'Skörda INNAN blommorna öppnas!', text: 'Det här är broccolis gyllene regel. När de gula blommorna börjar synas i buketterna är det for sent - smaken blir bitter och texten grov. Skörda när knopparna fortfarande är tätt slutna.', severity: 'warning' },
+    { icon: 'warning', title: 'Skörda INNAN blommorna öppnas!', text: 'Det här är broccolis gyllene regel. När de gula blommorna börjar synas i buketterna är det för sent - smaken blir bitter och texten grov. Skörda när knopparna fortfarande är tätt slutna.', severity: 'warning' },
     { icon: 'harvest', title: 'Sidoskotten är bonusen', text: 'Skär huvudet snett (så vatten rinner av) och lämna plantan kvar. Inom en-två veckor dyker mindre sidoskott upp i bladvecken. De kan ge skörd i veckor!', severity: 'tip' },
     { icon: 'warning', title: 'Broccoli hatar hetta', text: 'Temperaturer över 25°C stressar broccoli och hon kan gå i blom i panik - så kallad "bolting". I södra Sverige kan det vara smart att odla som höstgröda med plantering i juni-juli.', severity: 'warning' },
     { icon: 'leaf', title: 'Stjälken är också mat!', text: 'Släng aldrig stjälken! Skala bort det yttre hårda lagret och du hittar ett krispigt, milt hjärta inuti. Strimla tunt och ät rå i sallad eller stek i wok.', severity: 'tip' },
@@ -124,10 +124,10 @@ export const broccoli: Crop = {
   sowing: {
     method: 'indoor',
     label: 'Förodling inomhus',
-    description: 'Broccoli förodlas nästan alltid inomhus for att få ett försprång. Direktsådd fungerar i zon 1-3 men ger sen skörd. Förodling ger dig kontroll över timingen - och timing är allt med broccoli.',
+    description: 'Broccoli förodlas nästan alltid inomhus för att få ett försprång. Direktsådd fungerar i zon 1-3 men ger sen skörd. Förodling ger dig kontroll över timingen - och timing är allt med broccoli.',
     steps: [
       'Så 1-2 cm djupt i celler eller krukor, 5-6 veckor före planerad utplantering',
-      'Håll jorden runt 18-20°C for snabb groning (5-8 dagar)',
+      'Håll jorden runt 18-20°C för snabb groning (5-8 dagar)',
       'Flytta till svalare plats (15°C) och starkt ljus när plantorna kommit upp',
       'Gallra till en planta per cell om du sått flera frön',
       'Härda av plantorna 7-10 dagar innan utplantering - ställ ut dagtid, in på natten',
@@ -136,8 +136,8 @@ export const broccoli: Crop = {
     ],
     tips: [
       'Förodla i djupa celler - broccoli gör långa rötter och trivs inte i grunda krukor',
-      'Plantera inte ut for tidigt! Kyla kan trigga tidig blomning. Vänta tills nätterna stadigt är over 5°C.',
-      'Sätt kålkragar runt stjälken direkt vid utplantering for att skydda mot kålfluga',
+      'Plantera inte ut för tidigt! Kyla kan trigga tidig blomning. Vänta tills nätterna stadigt är över 5°C.',
+      'Sätt kålkragar runt stjälken direkt vid utplantering för att skydda mot kålfluga',
     ],
     indoorWeeks: '5-6 veckor',
   },
@@ -145,26 +145,26 @@ export const broccoli: Crop = {
     difficulty: 'Medel',
     type: 'Korspollinerare',
     biennial: false,
-    description: 'Broccoli är tekniskt sett ettårig men behöver lång säsong for att sätta frö. Låt en planta stå kvar efter skörd - hon kommer skjuta blomstjälkar från sidoskotten. Varning: hon korsar sig med ALL annan kål!',
+    description: 'Broccoli är tekniskt sett ettårig men behöver lång säsong för att sätta frö. Låt en planta stå kvar efter skörd - hon kommer skjuta blomstjälkar från sidoskotten. Varning: hon korsar sig med ALL annan kål!',
     steps: [
       'Välj den finaste, friskaste plantan och låt den stå kvar efter skörd',
       'Sidoskotten utvecklar gula blommor - insekter pollinerar dem',
       'Se till att bara EN sort av kål blommar i närheten',
       'Låt fröskidorna mogna och torka på plantan tills de är bruna och spröda',
-      'Klipp av hela blomstjälkarna och lägg dem i en papperspåse for eftertorkning',
+      'Klipp av hela blomstjälkarna och lägg dem i en papperspåse för eftertorkning',
       'Krossa skidorna försiktigt och blås bort agnarna',
       'Förvara i märkta påsar, svalt och torrt',
     ],
-    isolation: 'Korsar med ALLA andra Brassica oleracea (grönkål, blomkål, vitkål, brysselkål, kålrabbi). Odla bara en sort for frö, eller isolera med minst 1 km.',
+    isolation: 'Korsar med ALLA andra Brassica oleracea (grönkål, blomkål, vitkål, brysselkål, kålrabbi). Odla bara en sort för frö, eller isolera med minst 1 km.',
     storageYears: '3-5 år',
-    tip: 'De flesta populära broccolisorter är F1-hybrider - deras frön ger INTE samma sort. For frötagning, välj bara öppet pollinerade sorter som Calabrese.',
+    tip: 'De flesta populära broccolisorter är F1-hybrider - deras frön ger INTE samma sort. För frötagning, välj bara öppet pollinerade sorter som Calabrese.',
   },
   storage: {
     shelfLife: '3-5 dagar (färsk), upp till 12 månader (fryst)',
     methods: [
-      { method: 'Kylskåp', icon: 'snowflake', duration: '3-5 dagar', description: 'Lägg i en plastpåse med några hål i grönsakslådan. Tvätta INTE förrän du ska använda - fukt på buketterna gör att de ruttnar snabbare. Skörda på morgonen for bäst hållbarhet.', best: true },
-      { method: 'Frysa', icon: 'snowflake', duration: '8-12 månader', description: 'Dela i buketter, blanchera 2-3 minuter, kyl i isvatten. Torka av ordentligt och frys in i portionspåsar. Perfekt for grytor, wok och soppor hela vintern.', best: false },
-      { method: 'Torka', icon: 'storage', duration: '6-12 månader', description: 'Blanchera, skär i småbitar och torka i ugn på 50°C eller i torkmaskin. Blir knaprigt och kompakt. Bra for soppor och pulver.', best: false },
+      { method: 'Kylskåp', icon: 'snowflake', duration: '3-5 dagar', description: 'Lägg i en plastpåse med några hål i grönsakslådan. Tvätta INTE förrän du ska använda - fukt på buketterna gör att de ruttnar snabbare. Skörda på morgonen för bäst hållbarhet.', best: true },
+      { method: 'Frysa', icon: 'snowflake', duration: '8-12 månader', description: 'Dela i buketter, blanchera 2-3 minuter, kyl i isvatten. Torka av ordentligt och frys in i portionspåsar. Perfekt för grytor, wok och soppor hela vintern.', best: false },
+      { method: 'Torka', icon: 'storage', duration: '6-12 månader', description: 'Blanchera, skär i småbitar och torka i ugn på 50°C eller i torkmaskin. Blir knaprigt och kompakt. Bra för soppor och pulver.', best: false },
       { method: 'Fermentera', icon: 'storage', duration: '2-6 månader', description: 'Dela i buketter, lägg i saltlake (2% salt). Fermenterad broccoli är oväntat god och full av nyttiga bakterier. Prova det!', best: false },
     ],
     tips: [
