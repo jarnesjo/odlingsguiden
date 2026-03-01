@@ -136,14 +136,15 @@ Frukt är extra naturligt – om ni odlar eller planerar att odla frukt på går
 
 Plan: `docs/plans/1.8-grod-navigering.yml`
 
-### 1.9 URL-routing och SEO
+### 1.9 URL-routing och SEO ✅
 
-> Delbara URLer, webbläsarhistorik och sökbarhet - `/morot`, `/bondbona`
+> Delbara URLer med svenska tecken, webbläsarhistorik och sökbarhet - `/bondböna`, `/ärtor`
 
-- [ ] React Router med URL per gröda (`/:cropSlug`)
-- [ ] Dynamiska `<title>` och `<meta description>` per gröda
-- [ ] Sitemap.xml med alla grödor
-- [ ] Webbläsarens bakåtknapp fungerar naturligt
+- [x] React Router med URL per gröda (`/:cropSlug`)
+- [x] Svenska slugs med åäö (`/bondböna`, `/grönkål`, `/svarta-vinbär`)
+- [x] Dynamiska `<title>` och `<meta description>` per gröda
+- [x] Sitemap.xml med alla grödor (genereras vid byggtid)
+- [x] Webbläsarens bakåtknapp fungerar naturligt
 
 ### 1.7 Fler profiler → 16 totalt (10+3+3) ✅
 
