@@ -56,6 +56,7 @@ Det här dokumentet beskriver hur vi *ska* jobba med källor och verifiering - o
 | **Runåbergs Fröer + NordFrö** | Enbart OP-sorter, kulturarvssorter | Sorter, odlingsråd, kulturarvsinfo |
 | **Eco Grow** | Enbart KRAV-certifierat frö | Ekologiska sorter provodlade i svenska zoner |
 | **Lindbloms Frö** | Ekologiskt, 800+ sorter | Sorter provodlade i Sverige, biodynamiskt |
+| **Fröbanken** (Norden AB) | Kulturarvssektion | Svenskt Kulturarv-sorter |
 | **Impecta Fröhandel** | Blandat OP + F1, kulturarvssektion | Sorter, såtider, odlingsråd |
 | **Nelson Garden** | Stor marknadsledare, blandat | Sorter, zonhärdighet |
 | **Stångby Plantskola** | Fruktträd, bärbuskar | Härdighet, sortval frukt |
