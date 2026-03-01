@@ -15,7 +15,7 @@ export const spenat: Crop = {
   ph: { min: 6.0, max: 7.5, ideal: 6.8 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Trivs i 4-6 timmar sol men klarar halvskugga utmärkt - faktiskt en fördel under sommaren. Sol hela dagen i juli-värme gör att hon skjuter i blom snabbare än du hinner blinkar.' },
-    temperature: { min: 2, max: 25, ideal: '10-18°C', detail: 'En riktig svalvädersdrottning! Gror redan vid 2°C och älskar temperaturer runt 15°C. Över 20°C börjar hon stressa och fundera på att blomma - och då är det kört.' },
+    temperature: { min: 2, max: 25, ideal: '10-18°C', detail: 'En riktig svalvädersdrottning! Gror redan vid 2°C och älskar temperaturer runt 15°C. Över 23°C - särskilt i kombination med långa dagar (14+ timmar) - börjar hon stressa och blomma. Och då är det kört.' },
     wind: { level: 'Tålig', detail: 'Låg profil och kompakta blad - vinden är inget problem. Lite luftrörelse är faktiskt bra för att minska svamprisken.' },
   },
   watering: {
@@ -98,7 +98,7 @@ export const spenat: Crop = {
     { name: 'Matador', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassisk, pålitlig sort med mörkgröna, tjocka blad. Relativt långsam att gå i blom. Funkar överallt.' },
     { name: 'Bloomsdale Long Standing', zones: [1, 2, 3, 4, 5, 6], note: 'Krispiga, bubbliga blad och en av de mest blomtåliga sorterna. Perfekt för sommarsådd.' },
     { name: 'Butterflay', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Snabbväxande, ger skörd redan efter 30 dagar. Mjuka blad som är fantastiska färska.' },
-    { name: 'Viroflay', zones: [1, 2, 3, 4, 5, 6], note: 'Stor sort med breda blad. Ger riklig skörd men kräver bra näring.' },
+    { name: 'Monstrueux de Viroflay', zones: [1, 2, 3, 4, 5, 6], note: 'Fransk heirloom (1866) med stora, breda blad. Ger riklig skörd men kräver bra näring. Finns hos Impecta.' },
     { name: 'Palco F1', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Hybrid med hög bladmögelresistens. Bra i fuktigt klimat men spara inte frö (F1).' },
   ],
   problems: [
@@ -108,7 +108,7 @@ export const spenat: Crop = {
     { name: 'Snigelskador', symptom: 'Oregelbundna hål i bladen, slemspår synliga på morgonen.', fix: 'Snigelkorn (järnfosfat), kopparhinder runt odlingen. Vattna på morgonen så marken hinner torka till kvällen. Upphöjd bädd hjälper.' },
   ],
   goodToKnow: [
-    { icon: 'warning', title: 'Skjuter i blom i värme', text: 'Spenat HATAR värme och långa dagar. Över 20°C och mer än 14 timmar ljus per dag triggar blomning. Odla på vår och höst - skippa midsommar.', severity: 'warning' },
+    { icon: 'warning', title: 'Skjuter i blom i värme', text: 'Spenat HATAR värme och långa dagar. Över 23°C i kombination med mer än 14 timmar ljus per dag triggar blomning. Odla på vår och höst - skippa midsommar.', severity: 'warning' },
     { icon: 'seedling', title: 'Successionsådd - nyckeln till spenatlycka', text: 'Så en kort rad varannan vecka under våren (mars-maj) och igen i augusti. Då har du alltid mjuka, perfekta blad istället för en jätteskörd som boltar samtidigt.', severity: 'tip' },
     { icon: 'snowflake', title: 'Tål rejäl kyla', text: 'Spenat överlever frost ner till -8°C och gror redan vid 2°C. Med fiberduk kan du skörda långt in i november - till och med hela vintern i zon 1.', severity: 'tip' },
     { icon: 'warning', title: 'Oxalsyra - ät inte kilovis rå', text: 'Spenat innehåller oxalsyra som binder kalcium. Inget problem i normala mängder, men ät inte kilovis rå spenat varje dag. Kokning minskar oxalsyran rejält.', severity: 'warning' },
@@ -149,7 +149,7 @@ export const spenat: Crop = {
       'Gnugga loss fröna och sikta bort skräp',
       'Förvara i papperspåse på sval, torr plats',
     ],
-    isolation: 'Vindpollinerare som korsar sig med andra spenatsorter. Odla bara en sort för frö, eller isolera med minst 400 m.',
+    isolation: 'Vindpollinerare med extremt lätt pollen som färdas långt. Odla bara en sort för frö, eller isolera med minst 800 m (helst mer).',
     storageYears: '3-5 år',
     tip: 'Spenatfrö har taggigt skal - helt normalt. Välj frö från plantor som gick i blom SENT, så selekterar du för blomtålighet.',
   },
