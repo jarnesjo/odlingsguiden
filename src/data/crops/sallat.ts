@@ -15,7 +15,7 @@ export const sallat: Crop = {
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Trivs i 4-6 timmar sol, men klarar halvskugga bra. Faktum är att lite skugga mitt på dagen kan vara en fördel - sallat som får för mycket sol och värme blir bitter och skjuter i blom.' },
-    temperature: { min: 4, max: 22, ideal: '12-18°C', detail: 'En riktig svalvädersvän! Gror redan vid 4°C och trivs bäst när det är svalt. Över 22°C börjar hon stressa och skjuter i blom - och då blir smaken bitter.' },
+    temperature: { min: 4, max: 24, ideal: '12-18°C', detail: 'En riktig svalvädersvän! Gror redan vid 4°C och trivs bäst när det är svalt. Över 24°C börjar hon stressa och skjuter i blom - och då blir smaken bitter.' },
     wind: { level: 'Tålig', detail: 'Låg profil och inga speciella krav. Vinden är sällan ett problem.' },
   },
   watering: {
@@ -104,7 +104,7 @@ export const sallat: Crop = {
   ],
   goodToKnow: [
     { icon: 'seedling', title: 'Successionsådd - gyllene regeln', text: 'Så en kort rad varannan vecka från april till augusti. Då har du alltid perfekt sallat istället för 20 huvuden samtidigt som alla skjuter i blom.', severity: 'tip' },
-    { icon: 'warning', title: 'Skjuter i blom i värme', text: 'Över 22°C börjar sallat stressa och vill blomma. Bitter smak och gummigt blad. Under högsommar (juli) kan du pausa sådden och börja igen i augusti.', severity: 'warning' },
+    { icon: 'warning', title: 'Skjuter i blom i värme', text: 'Över 24°C börjar sallat stressa och vill blomma. Bitter smak och gummigt blad. Under högsommar (juli) kan du pausa sådden och börja igen i augusti.', severity: 'warning' },
     { icon: 'leaf', title: 'Plocka blad - inte hela huvudet', text: 'Bladsallat skördas bäst genom att plocka de yttersta bladen och låta hjärtat växa vidare. En planta kan ge skörd i veckor!', severity: 'tip' },
     { icon: 'snowflake', title: 'Tål lätt frost', text: 'Sallat klarar frost ner till -3°C. Du kan så tidigt på våren och sent på hösten. Under fiberduk klarar den sig ännu längre.', severity: 'tip' },
     { icon: 'warning', title: 'Fröna behöver ljus', text: 'Sallatsfrön gror bäst i ljus - täck knappt med jord (max 0.5 cm). I mörker gror de dåligt. Tryck ner fröna i ytan och håll fuktig.', severity: 'warning' },
@@ -143,7 +143,7 @@ export const sallat: Crop = {
       'Förvara i papperspåse på sval, torr plats',
     ],
     isolation: 'Självpollinerare - korsar sällan. Olika sorter kan odlas nära varandra. 1-2 m avstånd är mer än tillräckligt.',
-    storageYears: '3-5 år',
+    storageYears: '1-3 år',
     tip: 'Sallatsfrö tappar grobarhet snabbare i värme. Förvara i kylskåp för extra lång hållbarhet.',
   },
   storage: {
