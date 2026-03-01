@@ -68,10 +68,12 @@ Innan du skriver koden, researcha grödan grundligt. Svara på ALLA dessa frågo
 - Vilka grödor är bra EFTERFÖLJARE? Varför?
 
 ### Sortrekommendationer
-- 3–5 sorter som fungerar i Sverige
+- 3-5 sorter som fungerar i Sverige
 - Varje sort: { name, zones: [array av zonnummer], note: "Kort, personlig beskrivning" }
 - Inkludera minst en sort för norra Sverige om möjligt
-- Notera eventuella F1-hybrider (viktigt för frötagning)
+- **Prioritera OP-sorter och kulturarvssorter** - lyft dessa först
+- F1-hybrider bara om de ger verkligt mervärde (sjukdomsresistens, härdighet) - markera tydligt med "F1" i namn och notera i `note`
+- Använd svenska fröföretag som källa (Runåbergs, NordFrö, Impecta, Lindbloms, Eco Grow)
 
 ### Vanliga problem
 - 2–4 vanliga skadedjur/sjukdomar/odlingsproblem
@@ -293,7 +295,9 @@ Innan du är klar, verifiera:
 - [ ] **goodToKnow har blandning** – minst 1 warning + minst 1 tip
 - [ ] **Lagring har best: true** – exakt en metod markerad som rekommenderad
 - [ ] **Sowing method matchar label** – "direct" → "Direktsådd", "indoor" → "Förodling inomhus"
-- [ ] **Frötagning varnar om F1** – om hybrider finns bland sorterna
+- [ ] **Sorter prioriterar OP** - öppenpollinerade och kulturarvssorter listas före eventuella F1
+- [ ] **F1 tydligt markerat** - alla F1-hybrider har "F1" i namn och förklaring i note
+- [ ] **Frötagning varnar om F1** - om hybrider finns bland sorterna
 - [ ] **Texterna är på svenska** – naturlig, varm, tydlig svenska
 - [ ] **Tonen är personlig** – som en erfaren odlarvän som delar med sig, inte en lärobok
 - [ ] **Trivs bäst har alla 3 fält** – sun, temperature, wind (alla med level, icon/min/max, detail)
