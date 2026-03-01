@@ -26,12 +26,15 @@ The roadmap follows a structured format designed for AI-assisted development. Th
 > Tagline
 
 ## Vision
+
 Short vision statement.
 
 ## Fas 1: Namn
+
 Description of what the phase achieves.
 
 ### 1.1 Step name ✅ (when done)
+
 > One-line summary of scope
 
 - [x] Completed subtask
@@ -40,21 +43,25 @@ Description of what the phase achieves.
 Plan: `docs/plans/1.1-slug.yml`
 
 ### 1.2 Step name
+
 > One-line summary of scope
 
 - [ ] Subtask 1
 - [ ] Subtask 2
 
 ## Fas 2: Namn
+
 ...
 
 ## Idéer
+
 No priority. Picked up when the time is right.
 
 - Idea 1
 - Idea 2
 
 ## Referens
+
 Stable reference material: design principles, tech stack, competitor analysis, file table, known issues. Things that change rarely.
 ```
 
@@ -152,8 +159,7 @@ docs/
 
 ### Plan files
 
-**Naming:** `{fas}.{steg}-{slug}.yml` — matchar roadmap-steget exakt.
-Examples: `1.2-separera-data.yml`, `1.3-grafisk-profil.yml`, `2.2-sokfunktion.yml`
+**Naming:** `{fas}.{steg}-{slug}.yml` — matchar roadmap-steget exakt. Examples: `1.2-separera-data.yml`, `1.3-grafisk-profil.yml`, `2.2-sokfunktion.yml`
 
 When starting a new feature or task:
 
@@ -256,6 +262,7 @@ Background: `docs/research/f1-frodebatten.md`
 - **Never** bundle unrelated changes in one commit
 - One commit per logical change — if in doubt, split it
 - Always stage files explicitly, never `git add .`
+- Never use heredoc or $() substitution.
 
 ### Commit message format
 
