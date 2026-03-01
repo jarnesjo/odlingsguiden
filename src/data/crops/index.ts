@@ -36,6 +36,10 @@ import { blomkal } from './blomkal'
 import { rosmarin } from './rosmarin'
 import { oregano } from './oregano'
 import { mullbar } from './mullbar'
+import { mangold } from './mangold'
+import { kalrabbi } from './kalrabbi'
+import { palsternacka } from './palsternacka'
+import { brytbona } from './brytbona'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -75,4 +79,8 @@ export const CROPS: Record<string, Crop> = {
   rosmarin,
   oregano,
   mullbar,
+  mangold,
+  kalrabbi,
+  palsternacka,
+  brytbona,
 }

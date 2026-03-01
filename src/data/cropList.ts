@@ -3,7 +3,7 @@ import type { CropListEntry } from './types'
 export const CROP_LIST: CropListEntry[] = [
   // Grönsaker - Apiaceae (Flockblommiga)
   { id: 'morot', name: 'Morot', icon: 'morot', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'palsternacka', name: 'Palsternacka', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'palsternacka', name: 'Palsternacka', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'selleri', name: 'Selleri', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
   { id: 'rotselleri', name: 'Rotselleri', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
   { id: 'fankal', name: 'Fänkål', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
@@ -22,7 +22,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'pak-choi', name: 'Pak choi', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   { id: 'kinakal', name: 'Kinakål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   { id: 'brysselkal', name: 'Brysselkål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
-  { id: 'kalrabbi', name: 'Kålrabbi', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'kalrabbi', name: 'Kålrabbi', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'savoykal', name: 'Savoykål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'majrova', name: 'Majrova', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   // Grönsaker - Cucurbitaceae (Gurkväxter)
@@ -33,7 +33,7 @@ export const CROP_LIST: CropListEntry[] = [
   // Grönsaker - Fabaceae (Baljväxter)
   { id: 'artor', name: 'Ärtor', icon: 'artor', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'bondbona', name: 'Bondböna', icon: 'bondbona', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'brytbona', name: 'Brytböna', icon: 'vegetable', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'brytbona', name: 'Brytböna', icon: 'vegetable', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'storbona', name: 'Störböna', icon: 'vegetable', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   // Grönsaker - Amaryllidaceae (Lökväxter)
   { id: 'lok', name: 'Lök', icon: 'lok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'grönsaker' },
@@ -43,7 +43,7 @@ export const CROP_LIST: CropListEntry[] = [
   // Grönsaker - Amaranthaceae (Mållväxter)
   { id: 'rodbeta', name: 'Rödbeta', icon: 'rodbeta', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'spenat', name: 'Spenat', icon: 'spenat', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'mangold', name: 'Mangold', icon: 'vegetable', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
+  { id: 'mangold', name: 'Mangold', icon: 'vegetable', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker' },
   // Grönsaker - Asteraceae (Korgblommiga)
   { id: 'sallat', name: 'Sallat', icon: 'sallat', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'kronartskocka', name: 'Kronärtskocka', icon: 'vegetable', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
