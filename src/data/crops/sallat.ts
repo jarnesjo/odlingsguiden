@@ -8,7 +8,7 @@ export const sallat: Crop = {
   difficulty: 'Enkel',
   difficultyWhy: 'Snabb från sådd till skörd, tålig, och perfekt för nybörjare. Går att odla nästan var som helst - i landet, i kruka, på balkongen.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6, 7, 8], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },
-  days: '30-60',
+  days: '30-90',
   spacing: '20-25 cm',
   rowSpacing: '30 cm',
   depth: '0.5 cm',
