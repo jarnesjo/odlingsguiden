@@ -7,13 +7,14 @@ import { SymbolSprout } from '../brand'
 import styles from './CropHeader.module.css'
 
 interface CropHeaderProps {
+  cropId: string
   crop: Crop
   userZone: Zone
   onBack: () => void
   onZoneClick: () => void
 }
 
-export function CropHeader({ crop, userZone, onBack, onZoneClick }: CropHeaderProps) {
+export function CropHeader({ cropId, crop, userZone, onBack, onZoneClick }: CropHeaderProps) {
   const isBerry = crop.category === 'bär'
 
   const stats = isBerry
@@ -45,7 +46,7 @@ export function CropHeader({ crop, userZone, onBack, onZoneClick }: CropHeaderPr
 
       <div className={styles.hero}>
         <div className={styles.illustration}>
-          <CropGraphic id={crop.icon} size={120} category={crop.category} />
+          <CropGraphic id={cropId} size={120} category={crop.category} />
         </div>
         <h1 className={styles.name}>{crop.name}</h1>
         <div className={styles.family}>

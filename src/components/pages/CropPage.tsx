@@ -54,7 +54,7 @@ export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: 
 
   return (
     <div className={styles.container}>
-      <CropHeader crop={crop} userZone={userZone} onBack={onBack} onZoneClick={onZoneClick} />
+      <CropHeader cropId={cropId} crop={crop} userZone={userZone} onBack={onBack} onZoneClick={onZoneClick} />
 
       <div className={styles.card}>
         <OptimalConditions conditions={crop.optimalConditions} watering={crop.watering} />
