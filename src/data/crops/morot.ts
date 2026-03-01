@@ -78,7 +78,7 @@ export const morot: Crop = {
   ],
   companions: {
     good: [
-      { id: 'lok', name: 'Lök', icon: 'vegetable', why: 'Löken avskräcker morotsflugan med sin starka doft' },
+      { id: 'lok', name: 'Lök', icon: 'vegetable', why: 'Traditionellt samodlas med morot - lökens starka doft kan förvirra morotsflugan' },
       { id: 'salvia', name: 'Salvia', icon: 'herb', why: 'Salvia maskerar morotsdoften och håller skadedjur borta' },
       { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Tomatens starka doft förvirrar morotsflugan' },
       { id: 'purjolok', name: 'Purjolök', icon: 'vegetable', why: 'Samma effekt som vanlig lök - doftbarriär' },
@@ -148,7 +148,7 @@ export const morot: Crop = {
       'Klipp av hela flocken och torka inomhus i en papperspåse',
       'Gnugga loss fröna och rensa bort skräp',
     ],
-    isolation: 'Korsar med vild morot och andra morotssorter. Odla bara en sort för frö, eller isolera med minst 500 m.',
+    isolation: 'Korsar med vild morot och andra morotssorter. Odla bara en sort för frö, eller isolera med minst 500 m (gärna 1000 m).',
     storageYears: '2-3 år',
     tip: 'Märk alltid sort och år! Morotsfrö tappar grobarhet snabbt efter 3 år.',
   },
@@ -167,5 +167,5 @@ export const morot: Crop = {
       'Morötter som börjar bli slappa kan räddas genom att ställa dem i kallt vatten några timmar',
     ],
   },
-  harvestCalc: { minPerSqm: 1.5, maxPerSqm: 2.5, unit: 'kg' },
+  harvestCalc: { minPerSqm: 2, maxPerSqm: 5, unit: 'kg' },
 }
