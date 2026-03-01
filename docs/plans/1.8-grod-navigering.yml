@@ -1,0 +1,59 @@
+meta:
+  title: "Navigering i grodvy"
+  roadmap_step: "1.8"
+  created: 2026-03-01
+  status: planerad
+
+context: |
+  Nar man navigerar fran listan till en enskild grodprofil forsvinner hela
+  appens identitet - logga, zonvaljare och kanslan av att vara i Odlingsguiden.
+  Man far bara en naken "Tillbaka"-knapp. Det kanns som att lamna appen.
+
+  Mal: Behall appens identitet och ge anvandaren snabb atkomst till
+  zonvaljaren aven inne i en grodprofil.
+
+design:
+  current: |
+    Listvy har full header med LogoCombined + zonvaljare.
+    Grodvy har bara en naken "Tillbaka"-knapp utan branding.
+
+  proposed: |
+    Kompakt, sticky navigeringsrad overst i grodvyn:
+    - Vanster: Tillbaka-pil (BackArrowIcon)
+    - Center: Mini-logga (SymbolSprout 24px + "Odlingsguiden" 14px Fraunces)
+    - Hoger: Zon-pill (klickbar, oppnar zonvaljare)
+
+    Sticky: position sticky, top 0, z-index 10
+    Bakgrund: var(--color-bg) med subtil border-bottom
+    Hojd: ~48px
+
+files:
+  modify:
+    - src/App.tsx
+    - src/components/pages/CropPage.tsx
+    - src/components/crop/CropHeader.tsx
+    - src/components/crop/CropHeader.module.css
+
+steps:
+  - description: "Lagg till onZoneClick prop genom CropPage till CropHeader"
+    done: false
+  - description: "Ersatt backButton med NavBar (back + logga + zon-pill)"
+    done: false
+  - description: "Gor NavBar sticky med bakgrund och border"
+    done: false
+  - description: "Justera hero-sektionens top-padding"
+    done: false
+
+design_details:
+  navbar_height: "48px"
+  symbol_size: "24px (SymbolSprout)"
+  text: "14px Fraunces 'Odlingsguiden'"
+  zon_pill: "Samma styling som CropList men mindre"
+  back_icon: "BackArrowIcon 18px"
+  sticky: "position: sticky, top: 0, z-index: 10"
+  background: "var(--color-bg) med subtil border-bottom"
+
+verification:
+  - "npx tsc --noEmit"
+  - "npm run dev - visuell kontroll"
+  - "Navigera lista -> groda -> scrolla ner (sticky?) -> klicka zon -> byt -> tillbaka"

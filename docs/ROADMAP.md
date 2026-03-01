@@ -126,6 +126,16 @@ Frukt är extra naturligt – om ni odlar eller planerar att odla frukt på går
 
 > _Notering: Alla topp-4 är Rosaceae – samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband._
 
+### 1.8 Navigering i grödvy
+
+> Behåll appens identitet inne i grödprofiler - sticky navbar med logga och zonväljare
+
+- [ ] Ersätt naken "← Tillbaka" med kompakt navbar (back + logga + zon-pill)
+- [ ] Sticky navbar med position sticky, bakgrund och border
+- [ ] Zonväljare tillgänglig från grödvyn
+
+Plan: `docs/plans/1.8-grod-navigering.yml`
+
 ### 1.7 Fler profiler → 16 totalt (10+3+3) ✅
 
 > 11 nya profiler med full data + SVG-illustrationer
