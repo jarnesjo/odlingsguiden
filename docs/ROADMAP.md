@@ -14,9 +14,9 @@ Long tail-filosofin: börja smått och nischat (svenska odlingszoner 1–8), byg
 
 ---
 
-## Fas 1: Grund
+## Fas 1: Grundplattan ✅
 
-Handlar om att lägga grunden rätt innan vi satsar på volym.
+Arkitektur, design, navigering och build-pipeline - allt som behövs innan vi kan skala innehåll.
 
 ### 1.1 Tonpass – Basilika ✅
 
@@ -60,72 +60,6 @@ Plan: `docs/plans/1.3-grafisk-profil.yml`
 - [x] UI renderar klickbara chips istället för ren text
 - [x] Fungerar i: samodling, växtföljd, bra att veta
 
-### 1.5 Säsongsvy v1
-
-> "Vad ska jag göra i min odling just nu?"
-
-- [ ] Månadsbaserad startskärm
-- [ ] Visar aktiva grödor/bär/kryddor och vad som behöver göras
-- [ ] Zonmedveten – anpassar sig efter vald zon
-- [ ] Varje åtgärd länkar till relevant profil och sektion
-
-### 1.6 Frukt som fjärde kategori
-
-> Fruktträd och bärbuskar med flerårig karaktär – "planterar du rätt från början, skördar du i 30 år"
-
-**Varför frukt?**
-
-Fruktodling skiljer sig fundamentalt från grönsaker och kryddor: det är ett långsiktigt åtagande. Du planterar ett äppelträd och lever med det beslutet i decennier. Det gör att behovet av bra information faktiskt är _större_ – du har inte råd att välja fel sort. Och det är precis den typen av djup, genomtänkt info som Odlingsguiden gör bäst.
-
-**Vad gör frukt unikt jämfört med andra kategorier?**
-
-- **Sortval är kritiskt.** Ett äppelträd i zon 5 behöver en helt annan sort än i zon 2. Fel sort = år av besvikelse. Här kan vi verkligen lysa med zonanpassade rekommendationer.
-- **Pollinationspartners.** De flesta äppel- och päronsorter behöver en pollinatör – vilken sort passar med vilken? Det är korsreferenser på steroider.
-- **Beskärning är en hel vetenskap.** Uppbyggnadsbeskärning (år 1–5), underhållsbeskärning (årlig), föryngringsbeskärning (gamla träd). Mer komplext än bärbeskärning.
-- **Sjukdomar och skadedjur.** Äppelskorv, päronpest, fruktträdskräfta – fruktträd har fler specifika problem än grönsaker. En "Problem & sjukdomar"-sektion blir extra viktig.
-- **Skörd, lagring och förädling.** Äpplen kan lagras i månader om man gör rätt. Plommon torkas. Körsbär syras. Här finns plats för riktigt bra, praktisk info.
-- **Livslängd och mognad.** Ett äppelträd ger full skörd först efter 5–8 år. Det behöver kommuniceras tydligt – folk som är vana vid grönsaker (sådd → skörd på 3 månader) behöver andra förväntningar.
-
-**Kategori-specifika sektioner (utöver standardsektioner):**
-
-- **Pollinationspartners** – Vilka sorter behövs? Gruppindelning (triploid, diploid). Avstånd.
-- **Beskärningsguide** – Uppbyggnad vs underhåll vs föryngring. Illustrerad tidslinje.
-- **Sortguide** – Djupare än för grönsaker: smakprofil, lagringsbarhet, mognadstid, sjukdomsresistens per sort.
-- **Etablering** – Plantering, stöd, skydd mot vilt (kaniner, rådjur). Första åren.
-- **Mognadsklocka** – Visuell tidslinje: plommon mognar i augusti, äpplen sep–okt, päron okt–nov.
-
-**Koppling till Lilla Bosgården:**
-
-Frukt är extra naturligt – om ni odlar eller planerar att odla frukt på gården blir det "vi berättar om det vi själva gör". Och även utan fruktträd just nu kan guiden bygga trovärdighet: "Vi hjälper dig välja rätt från början – så du slipper plantera om efter 5 år."
-
-**Tekniskt:**
-
-- Ny flik i kategori-togglen
-- `category: "frukt"` i CROP_LIST
-- `isFruit`-flagg i CropPage med villkorlig rendering
-- `perennial: true`, `lifespan: "20–50 år"`, `yearsToFullHarvest: 5`
-- Nya fält: `pollination`, `pruningGuide`, `establishment`
-- Färg i designsystem: `fruit: "#B8653B"` (varm terrakotta), `fruitLight: "#F0DDD0"`
-
-**Checkboxar:**
-
-- [ ] Ny flik i kategori-togglen + `category: "frukt"` i datamodellen
-- [ ] Nya typer och fält i `types.ts`
-- [ ] Kategori-specifika sektioner (Pollinationspartners, Beskärningsguide, Sortguide, Etablering, Mognadsklocka)
-- [ ] Färg i designsystem + tokens
-
-**Prioriterade fruktprofiler:**
-
-| Prio | Frukt    | Familj       | Varför?                                                         |
-| ---- | -------- | ------------ | --------------------------------------------------------------- |
-| 1    | Äpple    | Rosaceae     | Sveriges mest odlade frukt. Enormt sortutbud. Zonberoende.      |
-| 2    | Päron    | Rosaceae     | Näst populärast. Kräver pollinatör. Lagringsvärdig.             |
-| 3    | Plommon  | Rosaceae     | Härdigt, populärt, finns sorter som klarar zon 5–6.             |
-| 4    | Körsbär  | Rosaceae     | Både söt och sur. Fågelproblem = bra "drama" i profilen.        |
-| 5    | Rabarber | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
-
-> _Notering: Alla topp-4 är Rosaceae – samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband._
-
 ### 1.8 Navigering i grödvy ✅
 
 > Behåll appens identitet inne i grödprofiler - sticky navbar med logga och zonväljare
@@ -164,22 +98,23 @@ Plan: `docs/plans/1.8-grod-navigering.yml`
 
 Plan: `docs/plans/1.7-fler-profiler.yml`
 
-### 1.10 Code-splitting och build-optimering
+### 1.10 Code-splitting och build-optimering ✅
 
 > Snabbare laddning - startsidan behöver bara ~200KB av 998KB
 
-- [ ] Lazy-load CropPage-routen med React.lazy
-- [ ] Bryt CROPS-beroendet i cropUtils (använd CROP_LIST)
-- [ ] Separera CropIcon (48px) från CropGraphic (120px)
-- [ ] Ta bort chunkSizeWarningLimit
+- [x] Lazy-load CropPage-routen med React.lazy
+- [x] Bryt CROPS-beroendet i cropUtils (använd CROP_LIST)
+- [x] Separera CROP_LIST till egen fil (cropList.ts)
+- [x] Separera CropIcon (48px) från CropGraphic (120px)
+- [x] Ta bort chunkSizeWarningLimit
 
 Plan: `docs/plans/1.10-code-splitting.yml`
 
 ---
 
-## Fas 2: Innehåll & Kvalitet
+## Fas 2: Innehåll & Funktioner
 
-Fylla på med innehåll och kvalitetssäkra.
+Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
 
 ### 2.1 Alla profiler
 
@@ -188,7 +123,6 @@ Fylla på med innehåll och kvalitetssäkra.
 - [ ] Alla grönsaker (22 av ~40 klara)
 - [ ] Alla bär (7 av ~15 klara)
 - [ ] Alla kryddor (8 av ~20 klara)
-- [ ] Första fruktprofil: Äpple (flagship - bevisar att kategorin fungerar)
 
 ### 2.2 Källhantering & faktacheck
 
@@ -201,23 +135,90 @@ Fylla på med innehåll och kvalitetssäkra.
 - [ ] Ansvarsfriskrivning på sajten
 - [ ] AI-transparens: öppen om att AI använts, utan att göra det till huvudsaken
 
-### 2.3 Sökfunktion
+### 2.3 Säsongsvy v1
+
+> "Vad ska jag göra i min odling just nu?"
+
+- [ ] Månadsbaserad startskärm
+- [ ] Visar aktiva grödor/bär/kryddor och vad som behöver göras
+- [ ] Zonmedveten - anpassar sig efter vald zon
+- [ ] Varje åtgärd länkar till relevant profil och sektion
+
+### 2.4 Frukt som fjärde kategori
+
+> Fruktträd och bärbuskar med flerårig karaktär - "planterar du rätt från början, skördar du i 30 år"
+
+**Varför frukt?**
+
+Fruktodling skiljer sig fundamentalt från grönsaker och kryddor: det är ett långsiktigt åtagande. Du planterar ett äppelträd och lever med det beslutet i decennier. Det gör att behovet av bra information faktiskt är större - du har inte råd att välja fel sort. Och det är precis den typen av djup, genomtänkt info som Odlingsguiden gör bäst.
+
+**Vad gör frukt unikt jämfört med andra kategorier?**
+
+- **Sortval är kritiskt.** Ett äppelträd i zon 5 behöver en helt annan sort än i zon 2. Fel sort = år av besvikelse. Här kan vi verkligen lysa med zonanpassade rekommendationer.
+- **Pollinationspartners.** De flesta äppel- och päronsorter behöver en pollinatör - vilken sort passar med vilken? Det är korsreferenser på steroider.
+- **Beskärning är en hel vetenskap.** Uppbyggnadsbeskärning (år 1-5), underhållsbeskärning (årlig), föryngringsbeskärning (gamla träd). Mer komplext än bärbeskärning.
+- **Sjukdomar och skadedjur.** Äppelskorv, päronpest, fruktträdskräfta - fruktträd har fler specifika problem än grönsaker. En "Problem & sjukdomar"-sektion blir extra viktig.
+- **Skörd, lagring och förädling.** Äpplen kan lagras i månader om man gör rätt. Plommon torkas. Körsbär syras. Här finns plats för riktigt bra, praktisk info.
+- **Livslängd och mognad.** Ett äppelträd ger full skörd först efter 5-8 år. Det behöver kommuniceras tydligt - folk som är vana vid grönsaker (sådd -> skörd på 3 månader) behöver andra förväntningar.
+
+**Kategori-specifika sektioner (utöver standardsektioner):**
+
+- **Pollinationspartners** - Vilka sorter behövs? Gruppindelning (triploid, diploid). Avstånd.
+- **Beskärningsguide** - Uppbyggnad vs underhåll vs föryngring. Illustrerad tidslinje.
+- **Sortguide** - Djupare än för grönsaker: smakprofil, lagringsbarhet, mognadstid, sjukdomsresistens per sort.
+- **Etablering** - Plantering, stöd, skydd mot vilt (kaniner, rådjur). Första åren.
+- **Mognadsklocka** - Visuell tidslinje: plommon mognar i augusti, äpplen sep-okt, päron okt-nov.
+
+**Koppling till Lilla Bosgården:**
+
+Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gården blir det "vi berättar om det vi själva gör". Och även utan fruktträd just nu kan guiden bygga trovärdighet: "Vi hjälper dig välja rätt från början - så du slipper plantera om efter 5 år."
+
+**Tekniskt:**
+
+- Ny flik i kategori-togglen
+- `category: "frukt"` i CROP_LIST
+- `isFruit`-flagg i CropPage med villkorlig rendering
+- `perennial: true`, `lifespan: "20-50 år"`, `yearsToFullHarvest: 5`
+- Nya fält: `pollination`, `pruningGuide`, `establishment`
+- Färg i designsystem: `fruit: "#B8653B"` (varm terrakotta), `fruitLight: "#F0DDD0"`
+
+**Checkboxar:**
+
+- [ ] Ny flik i kategori-togglen + `category: "frukt"` i datamodellen
+- [ ] Nya typer och fält i `types.ts`
+- [ ] Kategori-specifika sektioner (Pollinationspartners, Beskärningsguide, Sortguide, Etablering, Mognadsklocka)
+- [ ] Färg i designsystem + tokens
+- [ ] Första fruktprofil: Äpple (flagship - bevisar att kategorin fungerar)
+
+**Prioriterade fruktprofiler:**
+
+| Prio | Frukt    | Familj       | Varför?                                                         |
+| ---- | -------- | ------------ | --------------------------------------------------------------- |
+| 1    | Äpple    | Rosaceae     | Sveriges mest odlade frukt. Enormt sortutbud. Zonberoende.      |
+| 2    | Päron    | Rosaceae     | Näst populärast. Kräver pollinatör. Lagringsvärdig.             |
+| 3    | Plommon  | Rosaceae     | Härdigt, populärt, finns sorter som klarar zon 5-6.             |
+| 4    | Körsbär  | Rosaceae     | Både söt och sur. Fågelproblem = bra "drama" i profilen.        |
+| 5    | Rabarber | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
+
+> Notering: Alla topp-4 är Rosaceae - samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband.
+
+### 2.5 Sökfunktion
 
 - [ ] Sök tvärs över kategorier
 - [ ] Filtrering på familj, svårighetsgrad, zon
 
-### 2.4 Webb-version (Statamic)
+### 2.6 Webb-version (Statamic)
 
 - [ ] Webb-version live på lillabosgarden.se/odlingsguiden
 - [ ] Server-renderad HTML via Statamic - varje gröda får egen URL
 - [ ] SEO-optimerat
 
-### 2.5 Användartest
+### 2.7 Användartest
 
 - [ ] Test med 10-15 svenska odlare
 - [ ] Samla feedback, prioritera förbättringar
 
-### 2.6 Gårdskoppling
+### 2.8 Gårdskoppling
 
 - [ ] Koppling till gårdens produkter i relevanta profiler
 - [ ] "Vill du inte odla själv? Moroten finns i våra grönsakskassar."
@@ -268,15 +269,34 @@ Väx och bredda.
 
 ## Idéer
 
-Ingen prioritet ännu. Plockas upp när det passar.
+Ingen prioritet. Plockas upp när det passar.
+
+### Innehåll
 
 - F1-hybrider utbildningssektion
+- Plastfritt-perspektiv i odlingstips - lyft alternativ till fiberduk, markduk och plastbaserade material. Granris, halm, jutesäckar, stärkelsebaserade dukar (bio-nedbrytbara). Gå igenom profiler och komplettera med gröna alternativ där det finns. Vara ärliga när plast fortfarande är bästa valet (t.ex. fina insektsnät).
+
+### Funktioner
+
 - Mörkt läge / dark mode
-- AI-rådgivare för växtproblem ("Min tomat har gula blad – vad är fel?")
-- Push-notiser i native-app (säsongsbaserade)
+- AI-rådgivare för växtproblem ("Min tomat har gula blad - vad är fel?")
+
+### SEO & Synlighet
+
+- Strukturerad data (JSON-LD) - schema.org markup per grödprofil for bättre synlighet i Google och AI-svar. Article + HowTo + BreadcrumbList. Data finns redan i profilerna, handlar om att mappa till JSON-LD och injektera i head.
+
+### Optimering & Teknik
+
+- Fortsatt bundle-optimering - utvärdera kontinuerligt: (1) separera illustrationsfiler (Icon vs Illustration) så stora SVG inte hamnar i main chunk, (2) dynamic import per grödprofil istället for att ladda alla 37 på en gång, (3) övervaka bundle-storlekar när fler profiler tillkommer
+
+### Plattform
+
 - Native-app (iOS/Android) som betald version med offline-åtkomst
-- README.md – så GitHub-sidan ser inbjudande ut istället för tom och trist
-- Plastfritt-perspektiv i odlingstips – lyft alternativ till fiberduk, markduk och plastbaserade material. Granris, halm, jutesäckar, stärkelsebaserade dukar (bio-nedbrytbara). Gå igenom profiler och komplettera med gröna alternativ där det finns. Vara ärliga när plast fortfarande är bästa valet (t.ex. fina insektsnät).
+- Push-notiser i native-app (säsongsbaserade)
+
+### Projekt
+
+- README.md - så GitHub-sidan ser inbjudande ut istället för tom och trist
 
 ---
 
