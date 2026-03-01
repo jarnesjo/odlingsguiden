@@ -27,10 +27,11 @@ interface CropPageProps {
   cropId: string
   userZone: Zone
   onBack: () => void
+  onZoneClick: () => void
   onNavigate?: (cropId: string) => void
 }
 
-export function CropPage({ cropId, userZone, onBack, onNavigate }: CropPageProps) {
+export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: CropPageProps) {
   const crop = CROPS[cropId]
   if (!crop) return null
 
@@ -46,7 +47,7 @@ export function CropPage({ cropId, userZone, onBack, onNavigate }: CropPageProps
 
   return (
     <div className={styles.container}>
-      <CropHeader crop={crop} userZone={userZone} onBack={onBack} />
+      <CropHeader crop={crop} userZone={userZone} onBack={onBack} onZoneClick={onZoneClick} />
 
       <div className={styles.card}>
         <OptimalConditions conditions={crop.optimalConditions} watering={crop.watering} />

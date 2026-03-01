@@ -2,15 +2,17 @@ import type { Crop, Zone } from '../../data/types'
 import { DifficultyBadge, ZoneBadge } from '../ui'
 import { CropGraphic } from '../illustrations/CropGraphic'
 import { BackArrowIcon } from '../icons'
+import { SymbolSprout } from '../brand'
 import styles from './CropHeader.module.css'
 
 interface CropHeaderProps {
   crop: Crop
   userZone: Zone
   onBack: () => void
+  onZoneClick: () => void
 }
 
-export function CropHeader({ crop, userZone, onBack }: CropHeaderProps) {
+export function CropHeader({ crop, userZone, onBack, onZoneClick }: CropHeaderProps) {
   const isBerry = crop.category === 'bär'
 
   const stats = isBerry
@@ -27,9 +29,18 @@ export function CropHeader({ crop, userZone, onBack }: CropHeaderProps) {
 
   return (
     <>
-      <button className={styles.backButton} onClick={onBack}>
-        <BackArrowIcon size={18} /> Tillbaka
-      </button>
+      <nav className={styles.navbar}>
+        <button className={styles.backButton} onClick={onBack} aria-label="Tillbaka">
+          <BackArrowIcon size={18} />
+        </button>
+        <div className={styles.brand}>
+          <SymbolSprout size={24} />
+          <span className={styles.brandName}>Odlingsguiden</span>
+        </div>
+        <button className={styles.zonePill} onClick={onZoneClick}>
+          Zon {userZone} ▾
+        </button>
+      </nav>
 
       <div className={styles.hero}>
         <div className={styles.illustration}>

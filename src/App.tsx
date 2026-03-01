@@ -27,6 +27,7 @@ function App() {
           cropId={selectedCrop}
           onBack={() => setView('list')}
           userZone={userZone}
+          onZoneClick={() => setShowZoneModal(true)}
           onNavigate={(id) => {
             setSelectedCrop(id)
             window.scrollTo({ top: 0, behavior: 'smooth' })
