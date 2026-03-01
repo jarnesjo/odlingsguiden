@@ -11,6 +11,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/palsternacka</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/tomat</loc>
     <lastmod>2026-03-01</lastmod>
     <priority>0.8</priority>
@@ -26,6 +31,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/chili</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/gr%C3%B6nk%C3%A5l</loc>
     <lastmod>2026-03-01</lastmod>
     <priority>0.8</priority>
@@ -36,12 +46,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/vitk%C3%A5l</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/broccoli</loc>
     <lastmod>2026-03-01</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lillabosgarden.se/odlingsguiden/blomk%C3%A5l</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/k%C3%A5lrabbi</loc>
     <lastmod>2026-03-01</lastmod>
     <priority>0.8</priority>
   </url>
@@ -71,6 +91,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/brytb%C3%B6na</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/l%C3%B6k</loc>
     <lastmod>2026-03-01</lastmod>
     <priority>0.8</priority>
@@ -92,6 +117,11 @@
   </url>
   <url>
     <loc>https://lillabosgarden.se/odlingsguiden/spenat</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/mangold</loc>
     <lastmod>2026-03-01</lastmod>
     <priority>0.8</priority>
   </url>
