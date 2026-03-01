@@ -57,7 +57,7 @@ export const purjolok: Crop = {
       { phase: 'Skörd', months: 'Okt-Nov', icon: 'harvest' },
     ],
     6: [
-      { phase: 'Förodling inomhus', months: 'Mar', icon: 'seedling' },
+      { phase: 'Förodling inomhus', months: 'Feb-Mar', icon: 'seedling' },
       { phase: 'Utplantering', months: 'Jun', icon: 'plant' },
       { phase: 'Kupning (2 ggr)', months: 'Jul-Sep', icon: 'leaf' },
       { phase: 'Skörd', months: 'Sep-Okt', icon: 'harvest' },
@@ -100,17 +100,16 @@ export const purjolok: Crop = {
     goodAfterWhy: 'Baljväxter bygger upp kvävet i jorden igen efter purjolökens tunga näringsuttag. Morötter har helt andra sjukdomar och trivs i den luckra jorden.',
   },
   varieties: [
-    { name: 'Musselburgh', zones: [1, 2, 3, 4, 5, 6], note: 'Brittisk klassiker som klarar svensk vinter. Kraftig stam och mild, fin smak. Tålig och pålitlig.' },
-    { name: 'Hannibal', zones: [1, 2, 3, 4, 5], note: 'Tidig sort med extra tjock, vit stam. Bra val om du vill skörda redan i september-oktober.' },
-    { name: 'Blauwgroene Winter - Bandit', zones: [1, 2, 3, 4, 5, 6], note: 'Vinterhärdig favorit med blågröna blad. Kan stå kvar i marken ända till våren i mildare zoner.' },
-    { name: 'Carentan 2', zones: [1, 2, 3, 4, 5], note: 'Klassisk fransk sort med kort, tjock stam. Utmärkt smak och bra frosttålighet.' },
-    { name: 'Elefant', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Svensk favorit som är anpassad till nordiska förhållanden. Kraftig och härdig - klarar även zon 7 i skyddat läge.' },
+    { name: 'Musselburgh', zones: [1, 2, 3, 4, 5, 6], note: 'Brittisk OP-klassiker som klarar svensk vinter. Kraftig stam och mild, fin smak. Tålig och pålitlig.' },
+    { name: 'Hannibal', zones: [1, 2, 3, 4, 5], note: 'Tidig OP-sort med extra tjock, vit stam. Bra val om du vill skörda redan i september-oktober.' },
+    { name: 'Blauwgroene Winter', zones: [1, 2, 3, 4, 5, 6], note: 'Vinterhärdig OP-favorit med blågröna blad. Kan stå kvar i marken ända till våren i mildare zoner.' },
+    { name: 'Carentan 3', zones: [1, 2, 3, 4, 5], note: 'Klassisk fransk OP-sort med kort, tjock stam. Utmärkt smak och bra frosttålighet.' },
+    { name: 'Elefant', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Svensk OP-favorit som är anpassad till nordiska förhållanden. Kraftig och härdig - klarar även zon 7 i skyddat läge.' },
   ],
   problems: [
     { name: 'Purjolöksrost', symptom: 'Orange-rostfärgade prickar och ränder på bladen, speciellt sent på säsongen. Plantorna ser fula ut men lever vidare.', fix: 'Ta bort angripna blad direkt. Bra luftcirkulation (inte för tätt!) hjälper. Växtföljd är viktigast - minst 4 år mellan lökväxter på samma plats.' },
     { name: 'Lökfluga', symptom: 'Plantorna gulnar och slaknar. Larver i basen av stammen som äter sig inåt. Luktar illa.', fix: 'Täck med fiberduk från maj till midsommar. Samodla med morot. Strö kalkstenmjöl vid basen av plantorna.' },
-    { name: 'Purjolöksminerare (Lökbladsminerare)', symptom: 'Ljusa gångar (minor) i bladen där larverna äter sig fram. Bladen kan bli fula och missformade.', fix: 'Finmaskigt insektsnät är bästa skyddet. Plocka bort och förstör angripna blad. Undvik att plantera nära annan lök.' },
-    { name: 'Jordloppar', symptom: 'Små runda hål i bladen, framförallt på unga plantor. Hoppande små skalbaggar syns om man tittar noga.', fix: 'Håll jorden fuktig - jordloppor trivs i torr jord. Fiberduk skyddar unga plantor. Vattna på morgonen så bladen torkar under dagen.' },
+    { name: 'Purjolöksmal', symptom: 'Ljusa gångar (minor) i bladen där larverna äter sig fram. Bladen kan bli fula och missformade.', fix: 'Finmaskigt insektsnät är bästa skyddet. Plocka bort och förstör angripna blad. Undvik att plantera nära annan lök.' },
   ],
   goodToKnow: [
     { icon: 'warning', title: 'Kupning är nyckeln!', text: 'Purjolöken kupas (jord dras upp runt stammen) 2-3 gånger under säsongen. Det är kupningen som ger den fina vita delen - utan den blir det mest grönt och segt.', severity: 'warning' },
@@ -174,5 +173,5 @@ export const purjolok: Crop = {
       'Fryst purjolök tappar lite textur men smaken är kvar - bäst i varma rätter',
     ],
   },
-  harvestCalc: { minPerSqm: 2, maxPerSqm: 5, unit: 'kg' },
+  harvestCalc: { minPerSqm: 2, maxPerSqm: 4, unit: 'kg' },
 }
