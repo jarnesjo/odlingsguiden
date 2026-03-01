@@ -1,6 +1,7 @@
 import type { Zone, TimelineZone } from '../../data/types'
 import { CROPS } from '../../data/crops'
 import { ZONE_INFO } from '../../data/zones'
+import { useDocumentMeta } from '../../hooks/useDocumentMeta'
 import {
   CropHeader,
   OptimalConditions,
@@ -33,6 +34,12 @@ interface CropPageProps {
 
 export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: CropPageProps) {
   const crop = CROPS[cropId]
+
+  useDocumentMeta(
+    crop ? `${crop.name} - Odlingsguiden` : 'Odlingsguiden',
+    crop ? `Odla ${crop.name.toLowerCase()} i Sverige. Zonanpassad guide med sortval, tidslinje, samodling och skördetips.` : undefined,
+  )
+
   if (!crop) return null
 
   const isBerry = crop.category === 'bär'

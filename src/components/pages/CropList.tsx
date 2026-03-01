@@ -1,5 +1,6 @@
 import { useState } from "react"
 import type { Category, Zone } from "../../data/types"
+import { useDocumentMeta } from "../../hooks/useDocumentMeta"
 import { CATEGORIES } from "../../data/categories"
 import { CROP_LIST } from "../../data/crops"
 import { DIFFICULTY_INFO } from "../../data/difficulty"
@@ -18,6 +19,11 @@ interface CropListProps {
 }
 
 export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
+  useDocumentMeta(
+    'Odlingsguiden - Allt du behöver veta, en gröda i taget',
+    'Zonanpassad odlingsguide för svenska trädgårdar. Djupa profiler för grönsaker, bär och kryddor med sortval, tidslinjer och skördetips.',
+  )
+
   const [search, setSearch] = useState("")
   const [filter, setFilter] = useState("Alla")
   const [category, setCategory] = useState<Category>("grönsaker")
