@@ -34,28 +34,47 @@ function App() {
   const navigate = useNavigate()
 
   return (
-    <div style={{ padding: '0 16px 40px' }}>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <CropList
-              onSelect={(id) => {
-                const slug = ID_TO_SLUG[id] ?? id
-                navigate(`/${slug}`)
-              }}
-              userZone={userZone}
-              onZoneClick={() => setShowZoneModal(true)}
-            />
-          }
-        />
-        <Route
-          path="/:cropSlug"
-          element={
-            <CropRoute userZone={userZone} onZoneClick={() => setShowZoneModal(true)} />
-          }
-        />
-      </Routes>
+    <div style={{ padding: '0 16px 0', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, paddingBottom: 40 }}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <CropList
+                onSelect={(id) => {
+                  const slug = ID_TO_SLUG[id] ?? id
+                  navigate(`/${slug}`)
+                }}
+                userZone={userZone}
+                onZoneClick={() => setShowZoneModal(true)}
+              />
+            }
+          />
+          <Route
+            path="/:cropSlug"
+            element={
+              <CropRoute userZone={userZone} onZoneClick={() => setShowZoneModal(true)} />
+            }
+          />
+        </Routes>
+      </div>
+      <footer style={{
+        textAlign: 'center',
+        padding: '24px 0 32px',
+        fontSize: '13px',
+        color: '#7A7568',
+        fontFamily: 'var(--font-body)',
+      }}>
+        Skapad med omtanke av{' '}
+        <a
+          href="https://lillabosgarden.se"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#3D6B4F', textDecoration: 'none' }}
+        >
+          Lilla Bosgarden
+        </a>
+      </footer>
       {showZoneModal && (
         <ZoneSelector
           currentZone={userZone}
