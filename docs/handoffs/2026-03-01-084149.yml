@@ -1,0 +1,94 @@
+meta:
+  date: 2026-03-01
+  author: claude
+  phase: "Fas 2: Innehall & Kvalitet"
+  status: aktiv
+  session_notes: |
+    Session 14. Encoding-fix + mullbar + diskussion om kallor och AI-transparens.
+
+    Gjort:
+    - Auditerade ALLA 36 grodprofiler for encoding-buggar (saknade aa/ao/oo)
+    - Fixade 6 filer: mynta, radisa, blomkal, broccoli, persilja, bondbona
+    - Mynta och radisa var varst - nastan varje rad saknade svenska tecken
+    - Ny profil: Mullbar (bar, Moraceae) med SVG-illustration
+    - Mullbar ar forsta "tradfrukt-liknande" profilen (perenn, 100-300 ar, zon 1-4)
+    - Extern research for mullbar via websokning (svenska kallor: Wexthuset, Stangby, odla.nu)
+    - Diskussion om kallhantering och AI-transparens vid lansering
+
+    Commits (4 st):
+    - fix(crops): restore Swedish characters in 6 crop profiles
+    - feat(crops): add mulberry crop profile with SVG illustration
+    - feat(ui): register mulberry profile and illustration
+
+    Oavslutade diskussioner:
+    - Anvandaren vill skapa docs/guides/kallor.md (kallhantering, metod, ansvar)
+    - Anvandaren vill faktacheck alla profiler mot svenska kallor
+    - AI-transparens vid lansering diskuterad, rad givet
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - Recharts 3.7 (NutritionChart)
+    - "@fontsource/fraunces + @fontsource/lora (self-hosted)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts (blommor hidden)
+    - src/data/cropUtils.ts
+    - "src/data/crops/index.ts (37 profiler registrerade)"
+    - "src/data/crops/*.ts (37 profiler)"
+    - "src/components/illustrations/CropGraphic.tsx (37 illustrationer)"
+    - "src/components/illustrations/*Illustration.tsx (37 st)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/icons/Icon.tsx
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev    # Starta Vite dev server"
+  - "npm run build  # Bygger till dist/"
+  - "npx tsc --noEmit  # Typkontroll utan output"
+
+next_steps:
+  - "Skapa docs/guides/kallor.md - kallhantering, metod, ansvarsfriskrivning"
+  - "Faktacheck befintliga profiler mot svenska kallor (SLU, Impecta, Runåbergs)"
+  - "Uppdatera ROADMAP.md - andra 2.1-malet till 'lagg in alla profiler'"
+  - "Visuell granskning av mullbar i dev server"
+  - "Fortsatt batchar med profiler - manga locked crops kvar"
+  - "1.5 Sasongsvy v1 - manadsbaserad startskarm"
+
+context:
+  decisions:
+    - "Extern research bor goras for nischade grolor (mullbar, havtorn etc)"
+    - "Vanliga grodor (tomat, morot) behover ingen extern research"
+    - "Kallor-dokument ska skapas for att styrka troavrdigheten"
+    - "AI-transparens: var oppen men gor det inte till huvudsaken"
+    - "Ansvarsfriskrivning behovs pa sajten"
+    - "Mullbar blev profil 37 (22 gronsaker, 7 bar, 8 kryddor)"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "All text pa svenska, kompis-ton, korrekt aao"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner, dampade farger"
+    - "Encoding-check rekommenderas efter agentbatchar (grep for 'for'/'over')"
+
+known_issues:
+  - "Mullbar behover visuell granskning i dev server"
+  - "NPK-kurvor ar uppskattningar, ej matdata - bor noteras i kallor.md"
+  - "Zondata och sorter bor verifieras mot svenska frokkataloger"
+  - "Tidslinjer bor kollas mot SLU:s odlingskalender"
+  - "Roadmap 2.1 mal behover uppdateras till 'lagg in alla'"
+  - "Bundle size >500KB pga Recharts"
