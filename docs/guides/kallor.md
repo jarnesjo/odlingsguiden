@@ -4,67 +4,122 @@
 
 ---
 
-## Vår metod
+## Nuläge (ärligt)
 
-Odlingsguiden är skapad med hjälp av AI (Claude) som verktyg för att samla, strukturera och skriva innehåll. All information baseras på etablerad odlingskunskap och verifieras mot svenska källor.
+Odlingsguiden har 37 grödprofiler. **Ingen av dem är formellt faktacheckad** mot externa källor ännu. Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap. De är strukturellt konsekventa och följer kompis-tonen, men vi kan inte garantera att varje datapunkt stämmer.
 
-### Så här jobbar vi
-
-1. **Research** - Vi samlar information från svenska frökataloger, odlingsböcker, SLU:s publikationer och erfarna odlares kunskap.
-2. **Strukturering** - Informationen struktureras i ett enhetligt format med 25+ datapunkter per gröda.
-3. **Zonanpassning** - Tidslinjer, sorter och råd anpassas efter Sveriges 8 odlingszoner.
-4. **Kvalitetskontroll** - Varje profil granskas mot checklista (16 punkter) och verifieras mot minst 2 svenska källor.
+Det här dokumentet beskriver hur vi *ska* jobba med källor och verifiering - och var vi befinner oss just nu.
 
 ---
 
-## Källtyper
+## Metod
 
-### Primära källor (verifiering)
+### Så här skapas en profil idag
 
-| Källa | Typ | Används för |
-| --- | --- | --- |
-| SLU (Sveriges lantbruksuniversitet) | Forskning | Zondata, odlingstider, sjukdomar |
-| Impecta Fröhandel | Frökatalog | Sorter, såtider, odlingsråd |
-| Runåbergs Fröer | Frökatalog | Kulturarvssorter, ekologisk odling |
-| Nelson Garden | Frökatalog | Sorter, zonhärdighet |
-| Riksförbundet Svensk Trädgård | Förening | Zoner, frostdatum, odlingskalender |
+1. **Utkast** - AI (Claude) skriver ett utkast baserat på allmän odlingskunskap och den 16-punkts checklista som finns i `docs/guides/ny-groda.md`.
+2. **Strukturkontroll** - Profilen granskas mot checklistan: alla fält ifyllda, rätt format, kompis-ton, korrekt svenska.
+3. **Encoding-check** - Kontroll att svenska tecken (å, ä, ö) inte tappats.
 
-### Sekundära källor (komplettering)
+### Så här ska en profil verifieras (mål)
 
-| Källa | Typ | Används för |
-| --- | --- | --- |
-| odla.nu | Community | Praktiska tips, erfarenheter |
-| Wexthuset | Handel | Sortbeskrivningar, odlingsguider |
-| Stångby Plantskola | Plantskola | Fruktträd, bärbuskar, härdighet |
-| Sara Bäckmo / Skillnadens Trädgård | Odlare/media | Praktisk kunskap, årstidsodling |
+4. **Faktacheck** - Varje profil verifieras mot minst 2 svenska källor (se källista nedan).
+5. **Källoggning** - Vilka källor som användes dokumenteras per profil.
+6. **Status uppdateras** - Profilen markeras som verifierad i statustabellen.
 
-### Underlag (struktur och utkast)
-
-- **AI (Claude)** - Används som skrivverktyg för att skapa utkast baserade på ovanstående källor. AI:n genererar inte fakta - den strukturerar och formulerar information som sedan verifieras.
+**Vi är i steg 1-3.** Steg 4-6 är nästa fas.
 
 ---
 
-## Vad vi verifierar
+## Källor
 
-### Kritiskt (måste stämma exakt)
+### Myndigheter & forskning
 
-- **Odlingszoner** - Vilka zoner en gröda klarar
-- **Frosttolerens** - Temperaturgränser
-- **Giftighet/varningar** - Säkerhetsinformation
-- **Familjetillhörighet** - Latinska namn
+| Källa | Användning |
+| --- | --- |
+| **SLU** (Sveriges lantbruksuniversitet) | Odlingstider, växtskydd, sortförsök |
+| **Jordbruksverket** - odlingsbeskrivningar | Ekologisk odling, växtnäring, jordförbättring |
+| **Jordbruksverket** - Växtskyddsinfo (databas) | Sjukdomar och skadedjur - sök per gröda |
+| **SMHI** | Frostdatum, vegetationsperiod, klimatdata per ort |
+| **Hushållningssällskapet** | Regionala odlingsråd, "Frilandsgrönsaker i norr" (PDF) |
 
-### Viktigt (ska stämma väl)
+### Organisationer & zondata
 
-- **Såtider och skördetider** per zon
-- **Sortrekommendationer** - att sorterna finns tillgängliga i Sverige
-- **Sjukdomar och skadedjur** - att de förekommer i Sverige
-- **Plantavstånd och sådjup**
+| Källa | Användning |
+| --- | --- |
+| **Riksförbundet Svensk Trädgård** | Digitala zonkartan, frostdatum, odlingskalender |
+| **Fritidsodlingens Riksorganisation (FOR)** | Rådgivning, konsumentbevakning |
 
-### Uppskattat (bästa bedömning)
+### Frökataloger & plantskolor
 
-- **NPK-näringskurvor** - Baserade på generell växtfysiologi, ej mätdata för specifika sorter
-- **Exakta skördmängder** - Varierar kraftigt beroende på förhållanden
-- **Svårighetsgradering** - Subjektiv bedömning baserad på erfarenhet
+| Källa | Användning |
+| --- | --- |
+| **Impecta Fröhandel** | Sorter, såtider, odlingsråd |
+| **Runåbergs Fröer** | Kulturarvssorter, ekologiskt utsäde |
+| **Nelson Garden** | Sorter, zonhärdighet |
+| **Lindbloms Frö** | 800+ sorter provodlade i Sverige, ekologiskt |
+| **Stångby Plantskola** | Fruktträd, bärbuskar, härdighet |
+| **Wexthuset** | Sortbeskrivningar, odlingsguider |
+
+### Odlare & media
+
+| Källa | Användning |
+| --- | --- |
+| **Sara Bäckmo / Skillnadens Trädgård** | Praktisk kunskap, årstidsodling |
+| **odla.nu** | Community-erfarenheter, praktiska tips |
+
+### AI (verktyg)
+
+- **Claude (Anthropic)** - Används som skrivverktyg för att skapa utkast. AI:n ersätter inte källor - den strukturerar och formulerar text som sedan ska verifieras mot ovanstående källor.
+
+---
+
+## Vad som verifieras och hur
+
+### Nivå 1: Kritiskt (måste stämma exakt)
+
+| Datapunkt | Verifieras mot |
+| --- | --- |
+| Odlingszoner | Riksförbundet Svensk Trädgård (zonkartan) |
+| Frosttolerens | SMHI, SLU |
+| Giftighet/varningar | Jordbruksverket, SLU |
+| Familjetillhörighet | SLU, frökataloger |
+
+### Nivå 2: Viktigt (ska stämma väl)
+
+| Datapunkt | Verifieras mot |
+| --- | --- |
+| Såtider per zon | Frökataloger, Hushållningssällskapet |
+| Skördetider per zon | Frökataloger, SLU |
+| Sorter | Impecta, Runåbergs, Nelson Garden (att de säljs i Sverige) |
+| Sjukdomar/skadedjur | Jordbruksverket Växtskyddsinfo |
+| Plantavstånd, sådjup | Frökataloger (minst 2) |
+
+### Nivå 3: Uppskattat (bästa bedömning)
+
+| Datapunkt | Notering |
+| --- | --- |
+| NPK-näringskurvor | Generell växtfysiologi, ej mätdata för specifika sorter |
+| Exakta skördmängder | Varierar kraftigt - intervall, inte exakta tal |
+| Svårighetsgradering | Subjektiv bedömning |
+
+---
+
+## Faktacheck-process
+
+Så här verifierar vi en profil:
+
+1. **Öppna profilen** och gå igenom varje datapunkt mot verifieringstabellen ovan.
+2. **Nivå 1 först** - kontrollera alla kritiska datapunkter. Rätta fel direkt.
+3. **Nivå 2 sedan** - kontrollera såtider, sorter, skadedjur mot svenska källor. Notera vilka källor som användes.
+4. **Nivå 3 noteras** - markera uppskattade värden tydligt (NPK-kurvor etc).
+5. **Logga källorna** - uppdatera statustabellen med datum och vilka källor som kontrollerats.
+6. **Committa** med `fix(crops): fact-check [gröda] against Swedish sources`.
+
+### Prioriteringsordning
+
+1. Vanligaste grödorna först (tomat, morot, potatis, sallat, lök)
+2. Profiler som använts för extern research (mullbär, havtorn)
+3. Resterande i alfabetisk ordning
 
 ---
 
@@ -73,23 +128,24 @@ Odlingsguiden är skapad med hjälp av AI (Claude) som verktyg för att samla, s
 Vi är ärliga med vad Odlingsguiden är och inte är:
 
 - **Vi är inte forskare.** Informationen bygger på etablerad odlingskunskap, inte egen forskning.
-- **Näringskurvor är uppskattningar.** NPK-kurvorna visar generella mönster, inte exakta mätvärden för specifika sorter eller jordar.
-- **Lokala variationer finns.** Mikrolimat, jordtyp och väder påverkar mer än zontabeller kan visa.
+- **Näringskurvor är uppskattningar.** NPK-kurvorna visar generella mönster för att illustrera hur behoven förändras över säsongen. De är inte mätdata för specifika sorter eller jordar.
+- **Lokala variationer finns.** Mikroklimat, jordtyp och väder påverkar mer än zontabeller kan visa.
 - **Sorttillgänglighet ändras.** Frökataloger uppdateras årligen - en sort vi rekommenderar kan utgå.
+- **37 profiler, 0 verifierade.** Vi jobbar på det. Statustabellen nedan visar var vi befinner oss.
 
 ---
 
 ## AI-transparens
 
-Odlingsguiden är skapad med AI som verktyg. Det innebär:
+Odlingsguiden är skapad med AI som verktyg. Vi gömmer inte det - det är en styrka, inte en svaghet.
 
-- **AI skriver, människor verifierar.** Utkast genereras av AI, men all fakta kontrolleras mot svenska källor.
-- **AI ersätter inte erfarenhet.** Vi kombinerar AI:s struktureringsförmåga med verklig odlingskunskap.
-- **Vi är öppna med det.** Vi gömmer inte att AI används - det är ett verktyg, precis som en skrivmaskin eller en kalkylator.
+**Varför AI?** En person kan inte rimligen skriva 80+ djupa grödprofiler med 25+ datapunkter vardera och hålla allt konsekvent. AI gör det möjligt att skapa innehåll i en skala som annars skulle kräva ett helt redaktionsteam.
 
-### Varför AI?
+**Vad AI gör bra:** Strukturera data, hålla konsekvent format, skriva i rätt ton, generera SVG-illustrationer.
 
-En person kan inte rimligen skriva 80+ djupa grödprofiler med 25+ datapunkter vardera och hålla allt konsekvent. AI gör det möjligt att skapa innehåll i en skala som annars skulle kräva ett helt redaktionsteam - men kvaliteten säkras alltid av mänsklig granskning.
+**Vad AI inte gör bra:** Garantera att specifika datapunkter stämmer för svenska förhållanden. Därför verifierar vi mot svenska källor.
+
+**Vår princip:** Var öppen om att AI använts, men gör det inte till huvudsaken. Användaren bryr sig om att informationen stämmer - inte vilket verktyg som skrev den.
 
 ---
 
@@ -108,13 +164,15 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 
 ## Faktacheck-status
 
-| Kategori | Antal profiler | Verifierade | Status |
+| Profil | Verifierad | Datum | Källor |
 | --- | --- | --- | --- |
-| Grönsaker | 22 | 0 | Ej påbörjad |
-| Bär | 7 | 0 | Ej påbörjad |
-| Kryddor | 8 | 0 | Ej påbörjad |
+| Morot | Nej | - | - |
+| Tomat | Nej | - | - |
+| Potatis | Nej | - | - |
+| Hallon | Nej | - | - |
+| Basilika | Nej | - | - |
 
-_Tabellen uppdateras allt eftersom profiler faktagranskas._
+_Tabellen fylls på allt eftersom profiler faktagranskas. Alla 37 profiler ska in._
 
 ---
 
