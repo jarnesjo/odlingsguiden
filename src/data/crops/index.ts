@@ -35,6 +35,7 @@ import { bjornbar } from './bjornbar'
 import { blomkal } from './blomkal'
 import { rosmarin } from './rosmarin'
 import { oregano } from './oregano'
+import { mullbar } from './mullbar'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -73,6 +74,7 @@ export const CROPS: Record<string, Crop> = {
   blomkal,
   rosmarin,
   oregano,
+  mullbar,
 }
 
 export const CROP_LIST: CropListEntry[] = [
@@ -142,6 +144,8 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'vita-vinbar', name: 'Vita vinbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
   { id: 'krusbar', name: 'Krusbär', icon: 'krusbar', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'guldvinbar', name: 'Guldvinbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
+  // Bär — Moraceae (Mullbärsväxter)
+  { id: 'mullbar', name: 'Mullbär', icon: 'mullbar', family: 'Mullbärsväxter', familyLatin: 'Moraceae', difficulty: 'Enkel', category: 'bär' },
   // Bär — Ericaceae (Ljungväxter)
   { id: 'blabar', name: 'Blåbär (odlade)', icon: 'berry', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär', locked: true },
   { id: 'lingon', name: 'Lingon', icon: 'berry', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär', locked: true },
@@ -187,4 +191,4 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'tagetes', name: 'Tagetes', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
 ]
 
-export { morot, tomat, potatis, hallon, basilika, lok, gronkal, radisa, bondbona, jordgubbar, persilja, svartaVinbar, dill, rodbeta, rabarber, sockermajs, sparris, gurka, spenat, broccoli, purjolok, vitlok, paprika, graslok, krusbar, timjan, mynta, rodaVinbar, pumpa, bjornbar, blomkal, rosmarin, oregano }
+export { morot, tomat, potatis, hallon, basilika, lok, gronkal, radisa, bondbona, jordgubbar, persilja, svartaVinbar, dill, rodbeta, rabarber, sockermajs, sparris, gurka, spenat, broccoli, purjolok, vitlok, paprika, graslok, krusbar, timjan, mynta, rodaVinbar, pumpa, bjornbar, blomkal, rosmarin, oregano, mullbar }

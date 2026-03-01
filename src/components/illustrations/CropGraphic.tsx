@@ -36,6 +36,7 @@ import { BlackberryIllustration, BlackberryIcon } from './BlackberryIllustration
 import { OreganoIllustration, OreganoIcon } from './OreganoIllustration'
 import { RosemaryIllustration, RosemaryIcon } from './RosemaryIllustration'
 import { CauliflowerIllustration, CauliflowerIcon } from './CauliflowerIllustration'
+import { MulberryIllustration, MulberryIcon } from './MulberryIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -79,6 +80,7 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   oregano: { large: OreganoIllustration, small: OreganoIcon },
   rosmarin: { large: RosemaryIllustration, small: RosemaryIcon },
   blomkal: { large: CauliflowerIllustration, small: CauliflowerIcon },
+  mullbar: { large: MulberryIllustration, small: MulberryIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
