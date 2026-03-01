@@ -37,6 +37,12 @@ import { OreganoIcon } from './OreganoIllustration'
 import { RosemaryIcon } from './RosemaryIllustration'
 import { CauliflowerIcon } from './CauliflowerIllustration'
 import { MulberryIcon } from './MulberryIllustration'
+import { ChiliIcon } from './ChiliIllustration'
+import { CabbageIcon } from './CabbageIllustration'
+import { ChardIcon } from './ChardIllustration'
+import { KohlrabiIcon } from './KohlrabiIllustration'
+import { ParsnipIcon } from './ParsnipIllustration'
+import { SnapBeanIcon } from './SnapBeanIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -81,6 +87,12 @@ const ICONS: Record<string, ComponentType<SizeProps>> = {
   rosmarin: RosemaryIcon,
   blomkal: CauliflowerIcon,
   mullbar: MulberryIcon,
+  chili: ChiliIcon,
+  vitkal: CabbageIcon,
+  mangold: ChardIcon,
+  kalrabbi: KohlrabiIcon,
+  palsternacka: ParsnipIcon,
+  brytbona: SnapBeanIcon,
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {

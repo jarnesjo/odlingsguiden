@@ -37,6 +37,12 @@ import { OreganoIllustration, OreganoIcon } from './OreganoIllustration'
 import { RosemaryIllustration, RosemaryIcon } from './RosemaryIllustration'
 import { CauliflowerIllustration, CauliflowerIcon } from './CauliflowerIllustration'
 import { MulberryIllustration, MulberryIcon } from './MulberryIllustration'
+import { ChiliIllustration, ChiliIcon } from './ChiliIllustration'
+import { CabbageIllustration, CabbageIcon } from './CabbageIllustration'
+import { ChardIllustration, ChardIcon } from './ChardIllustration'
+import { KohlrabiIllustration, KohlrabiIcon } from './KohlrabiIllustration'
+import { ParsnipIllustration, ParsnipIcon } from './ParsnipIllustration'
+import { SnapBeanIllustration, SnapBeanIcon } from './SnapBeanIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -81,6 +87,12 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   rosmarin: { large: RosemaryIllustration, small: RosemaryIcon },
   blomkal: { large: CauliflowerIllustration, small: CauliflowerIcon },
   mullbar: { large: MulberryIllustration, small: MulberryIcon },
+  chili: { large: ChiliIllustration, small: ChiliIcon },
+  vitkal: { large: CabbageIllustration, small: CabbageIcon },
+  mangold: { large: ChardIllustration, small: ChardIcon },
+  kalrabbi: { large: KohlrabiIllustration, small: KohlrabiIcon },
+  palsternacka: { large: ParsnipIllustration, small: ParsnipIcon },
+  brytbona: { large: SnapBeanIllustration, small: SnapBeanIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
