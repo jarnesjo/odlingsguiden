@@ -8,14 +8,14 @@ export const palsternacka: Crop = {
   difficulty: 'Enkel',
   difficultyWhy: 'Direktsås utomhus, extremt härdig, kan övervintra i jorden. Kräver bara tålamod - groningen tar evigheter.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6], indoor: null, greenhouse: null },
-  days: '100-180',
+  days: '100-150',
   spacing: '10-15 cm',
-  rowSpacing: '30-40 cm',
+  rowSpacing: '30-60 cm',
   depth: '1-2 cm',
-  ph: { min: 6.0, max: 6.8, ideal: 6.5 },
+  ph: { min: 6.5, max: 7.5, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Trivs bäst i full sol men klarar halvskugga. I halvskugga blir rötterna lite mindre men fortfarande goda.' },
-    temperature: { min: 2, max: 25, ideal: '12-18°C', detail: 'Gror redan vid 2°C men otroligt långsamt. Optimal groningstemperatur 10-15°C. Tål hård frost - blir faktiskt godare efter frost! Kan stå ute hela vintern.' },
+    temperature: { min: 5, max: 25, ideal: '12-18°C', detail: 'Kan tekniskt gro vid 2°C men det är opraktiskt långsamt - räkna med minst 8°C för pålitlig groning. Optimal groningstemperatur 12-18°C. Tål hård frost - blir faktiskt godare efter frost! Kan stå ute hela vintern.' },
     wind: { level: 'Tålig', detail: 'Låg profil under säsongen. Blasten kan bli hög men växten tål vind utan problem.' },
   },
   watering: {
@@ -116,10 +116,11 @@ export const palsternacka: Crop = {
     goodAfterWhy: 'Palsternackans djupa rötter luckrar jorden fantastiskt. Kål och potatis drar nytta av den fina strukturen.',
   },
   varieties: [
-    { name: 'Halblange White', zones: [1, 2, 3, 4, 5, 6], note: 'Klassisk, pålitlig sort med halvlånga rötter. Lättskördad och lagrar bra. Finns hos Runåbergs.' },
+    { name: 'Halblange Weiss', zones: [1, 2, 3, 4, 5, 6], note: 'Klassisk, pålitlig sort med halvlånga rötter ("halvlång vit"). Lättskördad och lagrar bra. Finns hos Runåbergs.' },
     { name: 'White Gem', zones: [1, 2, 3, 4, 5, 6], note: 'Kompakt sort med korta, breda rötter. Perfekt för tyngre jordar där långa rötter har svårt.' },
     { name: 'Tender and True', zones: [1, 2, 3, 4, 5, 6], note: 'Lång, slät rot med fin smak. Kräver djup, stenfri jord men belönar med storlek och sötma.' },
     { name: 'Guernsey', zones: [1, 2, 3, 4, 5, 6], note: 'Gammal kulturarvssort med halvlång rot. Bra smak och enkel att odla.' },
+    { name: 'Student', zones: [1, 2, 3, 4, 5, 6], note: 'Kulturarvssort - en pålitlig gammal arbetshäst. Halvlånga, jämna rötter med fin sötma. Finns hos Runåbergs.' },
   ],
   problems: [
     { name: 'Morotsflugan', symptom: 'Rostbruna gångar i roten, rötterna ruttnar inifrån', fix: 'Samodla med lök. Fiberduk vid sådd. Palsternacka drabbas mer sällan än morot men problemet finns.' },
@@ -190,5 +191,5 @@ export const palsternacka: Crop = {
       'Om du lämnar dem i jorden: skörda innan våren kommer och de börjar växa igen, annars blir roten trättig och smaklös',
     ],
   },
-  harvestCalc: { minPerSqm: 2, maxPerSqm: 4, unit: 'kg' },
+  harvestCalc: { minPerSqm: 1.5, maxPerSqm: 3, unit: 'kg' },
 }
