@@ -262,7 +262,7 @@ Background: `docs/research/f1-frodebatten.md`
 - **Never** bundle unrelated changes in one commit
 - One commit per logical change — if in doubt, split it
 - Always stage files explicitly, never `git add .`
-- Never use heredoc or $() substitution.
+- Never use heredoc or $() substitution in commit commands. Use `git commit -m "line 1" -m "line 2"` for multi-line messages.
 
 ### Commit message format
 
