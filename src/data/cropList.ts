@@ -15,7 +15,7 @@ export const CROP_LIST: CropListEntry[] = [
   // Grönsaker - Brassicaceae (Korsblommiga)
   { id: 'gronkal', name: 'Grönkål', icon: 'gronkal', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'radisa', name: 'Rädisa', icon: 'radisa', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'vitkal', name: 'Vitkål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
+  { id: 'vitkal', name: 'Vitkål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'rodkal', name: 'Rödkål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   { id: 'broccoli', name: 'Broccoli', icon: 'broccoli', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'blomkal', name: 'Blomkål', icon: 'blomkal', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Avancerad', category: 'grönsaker' },
