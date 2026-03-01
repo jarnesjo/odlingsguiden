@@ -276,6 +276,7 @@ Ingen prioritet ännu. Plockas upp när det passar.
 - Push-notiser i native-app (säsongsbaserade)
 - Native-app (iOS/Android) som betald version med offline-åtkomst
 - README.md – så GitHub-sidan ser inbjudande ut istället för tom och trist
+- Plastfritt-perspektiv i odlingstips – lyft alternativ till fiberduk, markduk och plastbaserade material. Granris, halm, jutesäckar, stärkelsebaserade dukar (bio-nedbrytbara). Gå igenom profiler och komplettera med gröna alternativ där det finns. Vara ärliga när plast fortfarande är bästa valet (t.ex. fina insektsnät).
 
 ---
 
