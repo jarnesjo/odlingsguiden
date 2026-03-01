@@ -41,6 +41,7 @@ import { kalrabbi } from './kalrabbi'
 import { palsternacka } from './palsternacka'
 import { brytbona } from './brytbona'
 import { vitkal } from './vitkal'
+import { chili } from './chili'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -85,4 +86,5 @@ export const CROPS: Record<string, Crop> = {
   palsternacka,
   brytbona,
   vitkal,
+  chili,
 }
