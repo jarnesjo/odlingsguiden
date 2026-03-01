@@ -1,0 +1,112 @@
+meta:
+  date: 2026-03-01
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 20. Registrering av profiler, nya profiler med faktacheck, illustrationer, buggfixar, kodkvalitet.
+
+    Gjort:
+    - Registrerat 4 befintliga profiler (mangold, kalrabbi, palsternacka, brytbona) i crops/index.ts + cropList.ts
+    - Skapat 2 nya faktacheckade profiler: chili och vitkal
+    - Chili: verifierad mot Wexthuset, Impecta, Runåbergs, Svenska Chilepepparforeningen
+    - Vitkal: verifierad mot odla.nu, Runåbergs, Impecta, NordFro
+    - 6 nya SVG-illustrationer (200x200 + 48x48): chili, vitkal, mangold, kalrabbi, palsternacka, brytbona
+    - Registrerat alla illustrationer i CropGraphic.tsx, CropIcon.tsx och cropList.ts
+    - Fix: CropHeader anvande crop.icon istallet for cropId - alla profilsidor fick fallback-ikon
+    - Fix: scroll-to-top vid navigering fran lista till profil (useEffect i CropPage)
+    - Fix: kalrabbi-illustration klipptes utanfor viewBox - kompakterad
+    - Fix: 50+ instanser av saknade aao i kommentarer (4 illustrationer + 2 brand-symboler)
+    - Ny regel i CLAUDE.md: alltid korrekt aao i all kallkod
+    - Korsreferens: paprika uppdaterad med chili som dalig granne
+
+    Commits (11 st):
+    - feat(crops): add mangold, kalrabbi, palsternacka and brytbona profiles
+    - feat(crops): add chili and vitkal profiles with fact-checking
+    - feat(ui): add SVG illustrations for chili, vitkal, mangold, kalrabbi, palsternacka and brytbona
+    - refactor(crops): add chili as bad companion to paprika (cross-reference)
+    - chore(config): update sitemap with new crop URLs
+    - fix(ui): use cropId instead of crop.icon for profile illustrations
+    - fix(ui): scroll to top when navigating from crop list to profile
+    - fix(ui): move scroll-to-top into CropPage useEffect
+    - fix(ui): reposition/compact kohlrabi illustration to fit within viewBox
+    - fix(ui): correct Swedish characters in SVG and brand symbol comments
+    - docs(claude): add rule for correct aao encoding in all source code
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (URL-routing)
+    - Recharts 3.7 (NutritionChart, lazy-loaded)
+    - "@fontsource/fraunces + @fontsource/lora (latin + latin-ext only)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/guides/performance.md
+    - docs/research/f1-frodebatten.md
+    - docs/research/faktacheck-2026-03-01.md
+    - docs/plans/
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts
+    - src/data/cropList.ts
+    - src/data/cropUtils.ts
+    - src/data/cropSlugs.ts
+    - "src/data/crops/index.ts (43 profiler)"
+    - "src/data/crops/*.ts (43 aktiva profiler)"
+    - "src/components/illustrations/ (43 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/brand/symbols/ (SymbolSprout, SymbolLeaf)
+    - src/hooks/useDocumentMeta.ts
+    - src/hooks/useLocalStorage.ts
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/ + genererar sitemap"
+  - "npm run sitemap  # Generera sitemap.xml separat"
+  - "npx tsc --noEmit # Typkontroll utan output"
+
+next_steps:
+  - "Faktachecka de 4 aldre profilerna (mangold, kalrabbi, palsternacka, brytbona)"
+  - "Skapa fler profiler (bar: havtorn, aronia, honungsbar; kryddor: koriander, salvia, citronmeliss)"
+  - "Visuell QA av alla nya illustrationer - stamma proportioner, farger, igenkanning"
+  - "Fortsatt med Fas 2 funktioner (sasongsvy, sokfunktion, etc.)"
+  - "Uppdatera ROADMAP.md med nya profiler"
+
+context:
+  decisions:
+    - "Faktacheck vid skapande - inte i efterhand. Sparar tid och sakersstaller kvalitet direkt."
+    - "CropHeader anvander nu cropId (inte crop.icon) for illustration-lookup"
+    - "Scroll-to-top hanteras av CropPage useEffect pa cropId - inte imperativt fran App.tsx"
+    - "Ny CLAUDE.md-regel: alltid korrekt aao i all kallkod (kommentarer, strangar, variabelnamn)"
+    - "Alla sortrekommendationer verifierade hos svenska froforetag (Runåbergs, Impecta, NordFro)"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner, dampade farger"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Commits: git commit -m 'titel' -m 'body' - aldrig heredoc"
+
+known_issues:
+  - "43 aktiva profiler, 7 faktacheckade (tomat, morot, potatis, sallat, lok, chili, vitkal)"
+  - "4 profiler INTE faktacheckade (mangold, kalrabbi, palsternacka, brytbona)"
+  - "CropPage chunk 604 KB - kan fixas med dynamic import per profil"
+  - "Lighthouse Accessibility 84 - kontrastproblem pa vissa fargkombinationer"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
+  - "NutritionChart gradient-IDs ar globala - kan krocka om flera chart renderas samtidigt"
