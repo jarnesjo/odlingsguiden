@@ -12,10 +12,10 @@ export const broccoli: Crop = {
   spacing: '40-50 cm',
   rowSpacing: '50-60 cm',
   depth: '1-2 cm',
-  ph: { min: 6.0, max: 7.5, ideal: 6.5 },
+  ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 6 timmar sol per dag. I halvskugga blir huvudena mindre och lösare. Broccoli vill ha ordentligt med ljus för att bygga fina, täta buketter.' },
-    temperature: { min: -5, max: 25, ideal: '15-20°C', detail: 'Broccoli är en sval dam - hon gillar temperaturer runt 15-20°C allra bäst. Över 25°C stressar hon och börjar blomma i panik. Tål lätt frost ner till -5°C, men unga plantor bör skyddas.' },
+    temperature: { min: -3, max: 25, ideal: '15-20°C', detail: 'Broccoli är en sval dam - hon gillar temperaturer runt 15-20°C allra bäst. Över 25°C stressar hon och börjar blomma i panik. Tål lätt frost ner till -3°C, men unga plantor bör skyddas.' },
     wind: { level: 'Skyddat', detail: 'Broccoli har tunga huvuden på relativt klena stjälkar. I blåsiga lägen kan plantorna luta sig eller till och med knäckas. Ge henne lite vindskydd eller kupa jord runt stambasen.' },
   },
   watering: {
@@ -101,11 +101,11 @@ export const broccoli: Crop = {
     goodAfterWhy: 'Rotgrönsaker trivs i den djupt bearbetade, näringsrika restjorden. Sallat gillar kvävet som kål lämnar efter sig.',
   },
   varieties: [
-    { name: 'Atlantis F1', zones: [1, 2, 3, 4, 5, 6], note: 'Pålitlig hybrid med stora, täta huvuden. Bra sidoskott efter huvudskörd. Funkar i hela Sverige.' },
-    { name: 'Calabrese', zones: [1, 2, 3, 4, 5], note: 'Den klassiska italienska sorten. Riklig med sidoskott - skördar i veckor! Behöver lite längre säsong.' },
-    { name: 'Marathon F1', zones: [1, 2, 3, 4, 5, 6], note: 'Tålig och sjukdomsresistent. Perfekt för den som vill ha ett säkert kort. Kompakta, fina huvuden.' },
-    { name: 'Parthenon F1', zones: [1, 2, 3, 4, 5, 6], note: 'Tidigt mognande med stora huvuden. Bra val för kortare säsonger i norr.' },
-    { name: 'Broccoletto/Sprouting', zones: [1, 2, 3, 4], note: 'Ingen huvudbukett - massor av små sidoskott istället. Skörda som sparris. En helt annan upplevelse!' },
+    { name: 'Ramoso Calabrese', zones: [1, 2, 3, 4, 5], note: 'Den klassiska italienska sorten. Öppenpollinerad med rikliga sidoskott - skördar i veckor! Finns hos Impecta och Lindbloms.' },
+    { name: 'Rasmus', zones: [1, 2, 3, 4, 5, 6], note: 'Svensk OP-favorit från Runåbergs med stora huvuden. Bevisad i svenska odlingsförsök - pålitlig och produktiv.' },
+    { name: 'De Cicco', zones: [1, 2, 3, 4, 5], note: 'Italiensk heirloom-sort (1890-tal) med många sidoskott. Öppenpollinerad och perfekt för frösparing.' },
+    { name: 'Marathon F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid som är tålig och sjukdomsresistent. Perfekt för den som vill ha ett säkert kort. Kompakta, fina huvuden.' },
+    { name: 'Atlantis F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med stora huvuden och bra sidoskott efter huvudskörd. Finns hos Wexthuset.' },
   ],
   problems: [
     { name: 'Kålfjäril', symptom: 'Gröna larver som maler genom bladen. Gröna spillningshögar på och runt bladen.', fix: 'Fiberduk från dag ett! Handplocka larver. Spruta med Bacillus thuringiensis (Bt). Samodla med dill och lök för att förvirra fjärilarna.' },
@@ -144,8 +144,8 @@ export const broccoli: Crop = {
   seedSaving: {
     difficulty: 'Medel',
     type: 'Korspollinerare',
-    biennial: false,
-    description: 'Broccoli är tekniskt sett ettårig men behöver lång säsong för att sätta frö. Låt en planta stå kvar efter skörd - hon kommer skjuta blomstjälkar från sidoskotten. Varning: hon korsar sig med ALL annan kål!',
+    biennial: true,
+    description: 'Broccoli är en svag tvååring - i Sverige behöver hon oftast övervintra för att sätta frö. I mildare zoner kan hon ibland slutföra cykeln på en säsong om du startar tidigt. Hon korsar sig med ALL annan kål!',
     steps: [
       'Välj den finaste, friskaste plantan och låt den stå kvar efter skörd',
       'Sidoskotten utvecklar gula blommor - insekter pollinerar dem',
@@ -155,9 +155,9 @@ export const broccoli: Crop = {
       'Krossa skidorna försiktigt och blås bort agnarna',
       'Förvara i märkta påsar, svalt och torrt',
     ],
-    isolation: 'Korsar med ALLA andra Brassica oleracea (grönkål, blomkål, vitkål, brysselkål, kålrabbi). Odla bara en sort för frö, eller isolera med minst 1 km.',
-    storageYears: '3-5 år',
-    tip: 'De flesta populära broccolisorter är F1-hybrider - deras frön ger INTE samma sort. För frötagning, välj bara öppet pollinerade sorter som Calabrese.',
+    isolation: 'Korsar med ALLA andra Brassica oleracea (grönkål, blomkål, vitkål, brysselkål, kålrabbi). Odla bara en sort för frö, eller isolera med minst 500 m (helst 1 km+).',
+    storageYears: '3-4 år',
+    tip: 'De flesta populära broccolisorter är F1-hybrider - deras frön ger INTE samma sort. För frötagning, välj öppet pollinerade sorter som Ramoso Calabrese, De Cicco eller Rasmus.',
   },
   storage: {
     shelfLife: '3-5 dagar (färsk), upp till 12 månader (fryst)',
