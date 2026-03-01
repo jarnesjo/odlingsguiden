@@ -351,6 +351,8 @@ Ingen prioritet ännu. Plockas upp när det passar.
 | `docs/guides/ny-groda.md` | Guide för att lägga till grödprofiler (16-punkts checklista) |
 | `docs/guides/designsystem.md` | Designsystem-specifikation (färger, typografi, spacing, komponenter) |
 | `docs/guides/svg-illustrationer.md` | SVG-illustrationsriktlinjer (200×200 + 48×48) |
+| `docs/guides/kallor.md` | Källhantering, metod, fröfilosofi, AI-transparens |
+| `docs/research/f1-frodebatten.md` | F1-hybrider vs kultursorter, svenska aktörer, EU-lagstiftning |
 
 ---
 

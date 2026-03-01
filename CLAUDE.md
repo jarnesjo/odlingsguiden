@@ -143,6 +143,9 @@ docs/
     ny-groda.md                 — Hur man lägger till en grödprofil (16-punkts checklista)
     designsystem.md             — Färger, typografi, spacing, komponenter
     svg-illustrationer.md       — SVG-stil, storlekar, teknisk spec
+    kallor.md                   — Källhantering, metod, fröfilosofi, AI-transparens
+  research/                     — Djup research per ämne
+    f1-frodebatten.md           — F1-hybrider vs kultursorter, svenska aktörer
   handoffs/                     — Sessionshandoffs (YAML)
     2026-02-26-234845.yml
 ```
@@ -206,6 +209,18 @@ The app uses "kompis-tonen" (friend's tone) — warm, personal, sometimes humoro
 - Avoid marketing speak — "Enkel" not "Superenkelt"
 - Include hard-won wisdom and real grower experience
 - **Never use en-dash `–` (U+2013) in source code** — always use plain hyphen `-` (U+002D). En-dashes trigger IDE warnings and add no value in app text.
+
+## Seed Philosophy (Fröfilosofi)
+
+Odlingsguiden prioriterar öppenpollinerade sorter (OP) och kulturarvssorter. F1-hybrider nämns bara när de ger verkligt mervärde (sjukdomsresistens, härdighet i tuffa zoner).
+
+- **OP-sorter först** — sortrekommendationer lyfter alltid öppenpollinerade och kulturarvssorter före F1-hybrider
+- **Markera F1 tydligt** — om en F1-sort rekommenderas, markera det explicit: `"Bella F1"` + notera i `note` att det är F1
+- **Uppmuntra fröbesparing** — seedSaving-sektionen ska alltid finnas och vara uppmuntrande
+- **Stöd svenska fröföretag** — Runåbergs, NordFrö, Lindbloms, Eco Grow prioriteras som sortrekommendationskällor
+- **Föreningen Sesam** — referera till för den som vill fördjupa sig i fröbevarande
+
+Background: `docs/research/f1-frodebatten.md`
 
 ## Design System Essentials
 
