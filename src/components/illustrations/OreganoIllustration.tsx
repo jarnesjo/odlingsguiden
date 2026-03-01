@@ -113,7 +113,7 @@ export function OreganoIllustration({ size = 200 }: Props) {
       <ellipse cx="90" cy="48" rx="3.5" ry="2.5" fill="#8AA55E" opacity="0.4" transform="rotate(-10 90 48)" />
       <ellipse cx="102" cy="45" rx="3.5" ry="2.5" fill="#8AA55E" opacity="0.4" transform="rotate(10 102 45)" />
 
-      {/* Blomklasar - sma lila/rosa klasar i toppen */}
+      {/* Blomklasar - små lila/rosa klasar i toppen */}
       {/* Blomklase topp */}
       <circle cx="96" cy="38" r="2.2" fill="#7B4B6A" opacity="0.5" />
       <circle cx="93" cy="35" r="1.8" fill="#9B6888" opacity="0.45" />

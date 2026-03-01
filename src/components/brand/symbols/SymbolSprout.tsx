@@ -6,7 +6,7 @@ interface SymbolSproutProps {
   warm?: string
 }
 
-/** "Grodden" - ett fro som spirar, enkelt och organiskt (primar symbol) */
+/** "Grodden" - ett frö som spirar, enkelt och organiskt (primär symbol) */
 export function SymbolSprout({
   size = 64,
   accent = colors.accent,
@@ -16,12 +16,12 @@ export function SymbolSprout({
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       {/* Jordcirkel */}
       <circle cx="32" cy="42" r="18" fill={accent} opacity="0.08" />
-      {/* Fro i jorden */}
+      {/* Frö i jorden */}
       <ellipse cx="32" cy="46" rx="6" ry="4.5" fill={colors.earth} opacity="0.2" />
       <ellipse cx="32" cy="46" rx="6" ry="4.5" stroke={colors.earth} strokeWidth="1.8" fill="none" />
-      {/* Huvudstjalk */}
+      {/* Huvudstjälk */}
       <path d="M32 42 C32 34, 32 26, 30 18" stroke={accent} strokeWidth="2.2" strokeLinecap="round" />
-      {/* Forsta bladparet */}
+      {/* Första bladparet */}
       <path d="M31 28 C26 22, 16 18, 12 20 C16 16, 24 14, 30 22" stroke={accent} strokeWidth="1.8" strokeLinecap="round" />
       <path d="M12 20 C16 16, 24 14, 30 22 C24 14, 16 16, 12 20" fill={accent} opacity="0.1" />
       <path d="M31 28 C36 22, 46 20, 50 22 C46 18, 38 16, 32 22" stroke={accent} strokeWidth="1.8" strokeLinecap="round" />
