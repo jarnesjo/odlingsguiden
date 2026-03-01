@@ -3,7 +3,7 @@ import type { Crop } from '../types'
 export const paprika: Crop = {
   name: 'Paprika',
   icon: 'paprika',
-  family: 'Nattskatta',
+  family: 'Potatisväxter',
   familyLatin: 'Solanaceae',
   difficulty: 'Medel',
   difficultyWhy: 'Kräver lång förodling (8-10 v), trivs bäst i växthus i stora delar av Sverige och behöver värme och tålamod - frukterna tar sin tid att mogna.',
@@ -92,14 +92,14 @@ export const paprika: Crop = {
       { id: 'persilja', name: 'Persilja', icon: 'herb', why: 'Lockar nyttiga rovinsekter som äter upp bladlöss. Bra marktäckare under paprikaplantor.' },
     ],
     bad: [
-      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar sjukdomar och konkurrerar om samma näring. Håll dem på olika bäddar.' },
-      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Också nattskatta - potatisbladmögel sprider sig gärna vidare till paprika. Inte grannar!' },
+      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma familj (potatisväxter) - delar sjukdomar och konkurrerar om samma näring. Håll dem på olika bäddar.' },
+      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Också potatisväxter - potatisbladmögel sprider sig gärna vidare till paprika. Inte grannar!' },
       { id: 'fankal', name: 'Fänkål', icon: 'herb', why: 'Hämmar paprikans tillväxt genom allelopati - de pratar helt enkelt olika språk.' },
     ],
   },
   rotation: {
     avoid: [{ id: 'tomat', name: 'Tomat' }, { id: 'potatis', name: 'Potatis' }, { name: 'Aubergine' }, { id: 'chili', name: 'Chili' }],
-    avoidWhy: 'Alla nattskatta - delar sjukdomar som fusarium och bladmögel. Vänta minst 3-4 år innan du odlar nattskatta på samma plats igen.',
+    avoidWhy: 'Alla potatisväxter - delar sjukdomar som fusarium och bladmögel. Vänta minst 3-4 år innan du odlar potatisväxter på samma plats igen.',
     goodBefore: [{ name: 'Baljväxter' }, { id: 'lok', name: 'Lök' }, { name: 'Gröngödsling' }],
     goodBeforeWhy: 'Baljväxter fixerar kväve i jorden och lökväxter sanerar mot jordburna sjukdomar. Perfekt förspel.',
     goodAfter: [{ name: 'Rotgrönsaker' }, { name: 'Baljväxter' }, { id: 'sallat', name: 'Sallat' }],

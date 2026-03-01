@@ -84,11 +84,11 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'selleri', name: 'Selleri', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
   { id: 'rotselleri', name: 'Rotselleri', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
   { id: 'fankal', name: 'Fänkål', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
-  // Grönsaker — Solanaceae (Nattskatta)
-  { id: 'tomat', name: 'Tomat', icon: 'tomat', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker' },
-  { id: 'potatis', name: 'Potatis', icon: 'potatis', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'paprika', name: 'Paprika', icon: 'paprika', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker' },
-  { id: 'chili', name: 'Chili', icon: 'vegetable', family: 'Nattskatta', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
+  // Grönsaker — Solanaceae (Potatisväxter)
+  { id: 'tomat', name: 'Tomat', icon: 'tomat', family: 'Potatisväxter', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker' },
+  { id: 'potatis', name: 'Potatis', icon: 'potatis', family: 'Potatisväxter', familyLatin: 'Solanaceae', difficulty: 'Enkel', category: 'grönsaker' },
+  { id: 'paprika', name: 'Paprika', icon: 'paprika', family: 'Potatisväxter', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker' },
+  { id: 'chili', name: 'Chili', icon: 'vegetable', family: 'Potatisväxter', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
   // Grönsaker — Brassicaceae (Korsblommiga)
   { id: 'gronkal', name: 'Grönkål', icon: 'gronkal', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'radisa', name: 'Rädisa', icon: 'radisa', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },

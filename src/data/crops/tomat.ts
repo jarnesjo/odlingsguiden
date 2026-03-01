@@ -3,7 +3,7 @@ import type { Crop } from '../types'
 export const tomat: Crop = {
   name: 'Tomat',
   icon: 'tomat',
-  family: 'Nattskatta',
+  family: 'Potatisväxter',
   familyLatin: 'Solanaceae',
   difficulty: 'Medel',
   difficultyWhy: 'Kräver förodling inomhus (6-8 v), regelbunden gödsling, uppbindning och är känslig för bladmögel.',
@@ -91,14 +91,14 @@ export const tomat: Crop = {
       { id: 'persilja', name: 'Persilja', icon: 'herb', why: 'Lockar nyttiga rovinsekter' },
     ],
     bad: [
-      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar bladmögel och andra sjukdomar' },
+      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Samma familj (potatisväxter) - delar bladmögel och andra sjukdomar' },
       { id: 'fankal', name: 'Fänkål', icon: 'herb', why: 'Hämmar tomatens tillväxt genom allelopati' },
       { name: 'Kål', icon: 'vegetable', why: 'Konkurrerar om näring - båda är storätare' },
     ],
   },
   rotation: {
     avoid: [{ id: 'potatis', name: 'Potatis' }, { id: 'paprika', name: 'Paprika' }, { name: 'Aubergine' }, { id: 'chili', name: 'Chili' }],
-    avoidWhy: 'Alla nattskatta - delar bladmögel, fusarium. Vänta minst 3-4 år.',
+    avoidWhy: 'Alla potatisväxter - delar bladmögel, fusarium. Vänta minst 3-4 år.',
     goodBefore: [{ name: 'Baljväxter' }, { id: 'lok', name: 'Lök' }, { name: 'Gröngödsling' }],
     goodBeforeWhy: 'Kvävefixering från baljväxter + sanering från lökväxter.',
     goodAfter: [{ name: 'Rotgrönsaker' }, { name: 'Baljväxter' }, { id: 'sallat', name: 'Sallat' }],
