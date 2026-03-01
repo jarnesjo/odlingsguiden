@@ -11,3 +11,6 @@ dist/
 
 # TypeScript build cache
 tsconfig.tsbuildinfo
+
+# Lighthouse reports
+docs/benchmarks/
