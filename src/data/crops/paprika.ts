@@ -94,6 +94,7 @@ export const paprika: Crop = {
     bad: [
       { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma familj (potatisväxter) - delar sjukdomar och konkurrerar om samma näring. Håll dem på olika bäddar.' },
       { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Också potatisväxter - potatisbladmögel sprider sig gärna vidare till paprika. Inte grannar!' },
+      { id: 'chili', name: 'Chili', icon: 'vegetable', why: 'Samma art (Capsicum annuum) - konkurrerar om exakt samma näring och delar alla sjukdomar. Kan dessutom korsa sig och ge oförutsägbara frukter.' },
       { id: 'fankal', name: 'Fänkål', icon: 'herb', why: 'Hämmar paprikans tillväxt genom allelopati - de pratar helt enkelt olika språk.' },
     ],
   },
