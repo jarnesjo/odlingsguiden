@@ -3,7 +3,7 @@ import type { Crop } from '../types'
 export const potatis: Crop = {
   name: 'Potatis',
   icon: 'potatis',
-  family: 'Nattskatta',
+  family: 'Potatisväxter',
   familyLatin: 'Solanaceae',
   difficulty: 'Enkel',
   difficultyWhy: 'Sätts direkt utomhus, tålig, kräver bara kupning och vattning. Svårt att misslyckas helt.',
@@ -84,18 +84,18 @@ export const potatis: Crop = {
     good: [
       { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Fixerar kväve i jorden som potatisen drar nytta av' },
       { name: 'Kål', icon: 'vegetable', why: 'Kompakt rotsystem som inte konkurrerar med potatisens djupa rötter' },
-      { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', why: 'Avskräcker coloradobagge och nematoder' },
-      { name: 'Pepparrot', icon: 'herb', why: 'Traditionell samodling - pepparrot ska avskräcka potatisbagge' },
+      { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', why: 'Lockar nyttoinsekter och kan minska nematodtryck i jorden' },
+      { name: 'Pepparrot', icon: 'herb', why: 'Traditionell samodling - pepparroten har djupt rotsystem som luckrar jorden' },
     ],
     bad: [
-      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma familj (nattskatta) - delar bladmögel. En sjuk potatisplanta smittar tomaterna på dagar.' },
+      { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma familj (potatisväxter) - delar bladmögel. En sjuk potatisplanta smittar tomaterna på dagar.' },
       { id: 'squash', name: 'Squash', icon: 'vegetable', why: 'Konkurrerar hårt om näring och utrymme - båda är storätare' },
       { id: 'solros', name: 'Solros', icon: 'flower', why: 'Utsöndrar ämnen (allelopati) som hämmar potatisens tillväxt' },
     ],
   },
   rotation: {
     avoid: [{ id: 'tomat', name: 'Tomat' }, { id: 'paprika', name: 'Paprika' }, { name: 'Aubergine' }, { id: 'chili', name: 'Chili' }, { id: 'potatis', name: 'Potatis' }],
-    avoidWhy: 'Alla nattskatta - delar bladmögel, brunröta och nematoder. Vänta minst 3-4 år. Odla ALDRIG potatis på samma plats två år i rad.',
+    avoidWhy: 'Alla potatisväxter - delar bladmögel, brunröta och nematoder. Vänta minst 3-4 år. Odla ALDRIG potatis på samma plats två år i rad.',
     goodBefore: [{ name: 'Baljväxter (ärtor, bönor)' }, { name: 'Gröngödsling' }, { id: 'lok', name: 'Lök' }],
     goodBeforeWhy: 'Baljväxter fixerar kväve. Gröngödsling förbättrar jordstrukturen - perfekt före potatis.',
     goodAfter: [{ name: 'Kål' }, { id: 'sallat', name: 'Sallat' }, { id: 'morot', name: 'Morötter' }],
@@ -111,7 +111,7 @@ export const potatis: Crop = {
   problems: [
     { name: 'Bladmögel (brunröta)', symptom: 'Bruna fläckar på blad och stjälk, vit beläggning under bladen vid fukt', fix: 'Kupa högt. Välj resistenta sorter. Klipp av blasten direkt vid angrepp och bränn den. Skörda minst 2 veckor efter blastklippning.' },
     { name: 'Skorv', symptom: 'Bruna, korkliknande fläckar på skalet', fix: 'Håll pH lågt (under 6). Kalka inte samma år. Vattna jämnt under knölbildning.' },
-    { name: 'Coloradobagge', symptom: 'Gul-svartrandiga skalbaggar och röda larver äter bladen', fix: 'Handplocka dagligen. Kolla undersidan av bladen efter äggklumpar (orange). Fiberduk tidigt.' },
+    { name: 'Nematoder (potatiscystnematod)', symptom: 'Plantan gulnar och vissnar fläckvis i raden, dålig tillväxt, små knölar', fix: 'Växtföljd (minst 4 år). Välj resistenta sorter. Undvik att flytta jord mellan odlingar.' },
     { name: 'Gröna knölar', symptom: 'Grön missfärgning på potatisen', fix: 'Kupa ordentligt! Grönt = solanin = giftigt. Ät aldrig grön potatis. Skala bort grönt eller kassera.' },
   ],
   goodToKnow: [
