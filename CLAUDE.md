@@ -263,7 +263,15 @@ Background: `docs/research/f1-frodebatten.md`
 - **Never** bundle unrelated changes in one commit
 - One commit per logical change — if in doubt, split it
 - Always stage files explicitly, never `git add .`
-- Never use heredoc or $() substitution in commit commands. Use `git commit -m "line 1" -m "line 2"` for multi-line messages.
+- Never use heredoc or `$()` substitution in commit commands
+- Never use empty `-m ""` arguments (triggers security hooks)
+- For multi-line messages with Co-Authored-By, embed the newline in the last `-m`:
+
+```text
+git commit -m "type(scope): title" -m "Body text
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+```
 
 ### Commit message format
 
