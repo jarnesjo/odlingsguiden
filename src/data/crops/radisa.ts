@@ -8,7 +8,7 @@ export const radisa: Crop = {
   difficulty: 'Enkel',
   difficultyWhy: 'Odlingens sprinterkung - 3 veckor från frö till skörd! Perfekt första gröda.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6, 7, 8], indoor: null, greenhouse: null },
-  days: '20-30',
+  days: '22-35',
   spacing: '3-5 cm',
   rowSpacing: '15-20 cm',
   depth: '1 cm',
@@ -25,7 +25,7 @@ export const radisa: Crop = {
     phases: [
       { phase: 'Groning (0-1 vecka)', need: 'Hög', tip: 'Håll jorden jämnt fuktig - fröet måste ha fukt för att gro. Rädisan gror på 3-7 dagar om det är tillräckligt varmt och fuktigt.' },
       { phase: 'Tillväxt (1-3 veckor)', need: 'Medel', tip: 'Vattna 2-3 gånger i veckan om det inte regnar. Jämn fukt ger milda, krispiga rädisor. Torka ger trådiga, skarpa rädisor.' },
-      { phase: 'Rotsvällning (3-4 veckor)', need: 'Medel', tip: 'Sluta inte vattna nu! Det är här rädisan svällcr till och blir fin. Ojämn fukt ger spruckna rötter.' },
+      { phase: 'Rotsvällning (3-4 veckor)', need: 'Medel', tip: 'Sluta inte vattna nu! Det är här rädisan sväller till och blir fin. Ojämn fukt ger spruckna rötter.' },
     ],
     mistakes: [
       'Ojämn vattning (torrt-blött-torrt) ger spruckna rädisor',
@@ -62,6 +62,8 @@ export const radisa: Crop = {
       { phase: 'Skörd 1:a omgången', months: 'Jun', icon: 'harvest' },
       { phase: 'Direktså 2:a omgången', months: 'Jun-Jul', icon: 'seedling' },
       { phase: 'Skörd 2:a omgången', months: 'Jul-Aug', icon: 'harvest' },
+      { phase: 'Direktså höstsådd', months: 'Jul-Aug', icon: 'seedling' },
+      { phase: 'Skörd höstsådd', months: 'Aug-Sep', icon: 'harvest' },
     ],
   },
   nutritionData: [
@@ -96,10 +98,10 @@ export const radisa: Crop = {
     goodAfterWhy: 'Nästan allt funkar efter rädisa - hon tar så lite näring att jorden knappt märkte att hon var där.',
   },
   varieties: [
-    { name: 'Cherry Belle', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Klassisk rund, röd. Pålitlig och snabb - redo på 22 dagar.' },
-    { name: 'French Breakfast', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Avlång, röd med vit spets. Mildare smak än runda sorter.' },
-    { name: 'Runder Schwarzer', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Svart vinterrädisa. Större, kraftigare smak, lagras bra.' },
-    { name: 'Daikon', zones: [1, 2, 3, 4, 5], note: 'Japansk jätterädisa. Kan bli 30+ cm. Mild smak, fantastisk i matlagning.' },
+    { name: 'Cherry Belle', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Klassisk rund, röd OP-sort. Pålitlig och snabb - redo på 22-25 dagar.' },
+    { name: 'French Breakfast', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Avlång kulturarvssort (OP), röd med vit spets. Mildare smak än runda sorter.' },
+    { name: 'Saxa 2', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Rund, klarröd OP-sort som mognar snabbt och jämnt. Populär i svenska frökataloger.' },
+    { name: 'Plum Purple', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Rund, lila OP-sort med mild smak och krispig textur. Vacker färg i salladen.' },
   ],
   problems: [
     { name: 'Jordloppan', symptom: 'Små hål i bladen, plantor äts upp', fix: 'Fiberduk direkt vid sådd. Håll jorden fuktig - jordloppan avskyr fukt.' },
@@ -147,7 +149,7 @@ export const radisa: Crop = {
       'Förvara torrt och svalt',
     ],
     isolation: 'Korsar med andra rädissorter och vild rättika. Odla bara en sort för frö, eller isolera med 500 m.',
-    storageYears: '4-5 år',
+    storageYears: '3-5 år',
     tip: 'Rädisfrö håller sig väldigt bra - upp till 5 år om det förvaras torrt och svalt.',
   },
   storage: {
