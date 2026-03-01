@@ -1,7 +1,12 @@
+import { lazy, Suspense } from 'react'
 import type { NutritionDataPoint, NutritionTip } from '../../data/types'
-import { Section, NutritionChart } from '../ui'
+import { Section } from '../ui'
 import { ChartIcon } from '../icons'
 import styles from './NutritionSection.module.css'
+
+const NutritionChart = lazy(() =>
+  import('../ui/NutritionChart').then(m => ({ default: m.NutritionChart }))
+)
 
 interface NutritionSectionProps {
   cropName: string
@@ -15,7 +20,9 @@ export function NutritionSection({ cropName, data, tips }: NutritionSectionProps
       <p className={styles.intro}>
         Visar hur {cropName.toLowerCase()}ens behov av kväve, fosfor och kalium förändras genom säsongen.
       </p>
-      <NutritionChart data={data} />
+      <Suspense>
+        <NutritionChart data={data} />
+      </Suspense>
       <div className={styles.tips}>
         {tips.map((tip, i) => (
           <div key={i} className={styles.tip}>
