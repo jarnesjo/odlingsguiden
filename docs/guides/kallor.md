@@ -51,14 +51,25 @@ Det här dokumentet beskriver hur vi *ska* jobba med källor och verifiering - o
 
 ### Frökataloger & plantskolor
 
+| Källa | Profil | Användning |
+| --- | --- | --- |
+| **Runåbergs Fröer + NordFrö** | Enbart OP-sorter, kulturarvssorter | Sorter, odlingsråd, kulturarvsinfo |
+| **Eco Grow** | Enbart KRAV-certifierat frö | Ekologiska sorter provodlade i svenska zoner |
+| **Lindbloms Frö** | Ekologiskt, 800+ sorter | Sorter provodlade i Sverige, biodynamiskt |
+| **Impecta Fröhandel** | Blandat OP + F1, kulturarvssektion | Sorter, såtider, odlingsråd |
+| **Nelson Garden** | Stor marknadsledare, blandat | Sorter, zonhärdighet |
+| **Stångby Plantskola** | Fruktträd, bärbuskar | Härdighet, sortval frukt |
+| **Wexthuset** | Bred handel | Sortbeskrivningar, odlingsguider |
+
+### Fröbevarande & genbanker
+
 | Källa | Användning |
 | --- | --- |
-| **Impecta Fröhandel** | Sorter, såtider, odlingsråd |
-| **Runåbergs Fröer** | Kulturarvssorter, ekologiskt utsäde |
-| **Nelson Garden** | Sorter, zonhärdighet |
-| **Lindbloms Frö** | 800+ sorter provodlade i Sverige, ekologiskt |
-| **Stångby Plantskola** | Fruktträd, bärbuskar, härdighet |
-| **Wexthuset** | Sortbeskrivningar, odlingsguider |
+| **Föreningen Sesam** | Fröbevarande, kultursorter, fröbank, 40+ år |
+| **NordGen** (Nordiskt Genresurscenter) | Officiell nordisk genbank, fröprover |
+| **POM/SLU** (Programmet för odlad mångfald) | Grönt Kulturarv-märkning, växtroppar |
+| **Allkorn** | Spannmålsmångfald, äldre lantraser |
+| **FOBO + Fröpopup** | Fröbyte, politisk bevakning av EU-regler |
 
 ### Odlare & media
 
@@ -123,6 +134,26 @@ Så här verifierar vi en profil:
 
 ---
 
+## Fröfilosofi
+
+Odlingsguiden prioriterar **öppenpollinerade sorter och kulturarvssorter** i sina rekommendationer. Det betyder inte att vi aldrig nämner F1-hybrider - men vi är tydliga med skillnaden och uppmuntrar odlare att spara eget frö.
+
+**Varför?**
+- Öppenpollinerade sorter kan fröbesparas - odlaren behåller makten över sitt frö
+- Kulturarvssorter bevarar genetisk mångfald och svensk odlingshistoria
+- Fem företag kontrollerar 95% av den globala grönsaksfrö-marknaden - vi vill motverka den trenden
+- Svenska småskaliga fröföretag (Runåbergs, NordFrö, Lindbloms, Eco Grow) förtjänar stöd
+
+**Vår linje:**
+- Sortrekommendationer lyfter OP-sorter och kulturarvssorter *först*
+- F1-hybrider nämns när de ger verkligt mervärde (sjukdomsresistens, härdighet i tuffa zoner)
+- Vi markerar tydligt vilka sorter som är F1 och vilka som är OP
+- Vi uppmuntrar fröbesparing och hänvisar till Föreningen Sesam
+
+Djupare bakgrund: `docs/research/f1-frodebatten.md`
+
+---
+
 ## Begränsningar
 
 Vi är ärliga med vad Odlingsguiden är och inte är:
@@ -172,8 +203,18 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 | Hallon | Nej | - | - |
 | Basilika | Nej | - | - |
 
-_Tabellen fylls på allt eftersom profiler faktagranskas. Alla 37 profiler ska in._
+*Tabellen fylls på allt eftersom profiler faktagranskas. Alla 37 profiler ska in.*
 
 ---
 
-_Senast uppdaterad: 2026-03-01_
+## Djupare research
+
+Detaljerad research sparas i `docs/research/`:
+
+| Fil | Ämne |
+| --- | --- |
+| `f1-frodebatten.md` | F1-hybrider vs kultursorter, svenska aktörer, EU-lagstiftning |
+
+---
+
+*Senast uppdaterad: 2026-03-01*
