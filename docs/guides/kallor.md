@@ -6,9 +6,9 @@
 
 ## Nuläge (ärligt)
 
-Odlingsguiden har 37 grödprofiler. **Ingen av dem är formellt faktacheckad** mot externa källor ännu. Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap. De är strukturellt konsekventa och följer kompis-tonen, men vi kan inte garantera att varje datapunkt stämmer.
+Odlingsguiden har 37 grödprofiler. **5 av dem är faktacheckade** mot svenska källor (tomat, morot, potatis, sallat, lök). Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap och verifierade mot svenska frökataloger och myndigheter.
 
-Det här dokumentet beskriver hur vi *ska* jobba med källor och verifiering - och var vi befinner oss just nu.
+Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-groda.md`). Befintliga profiler faktagranskas i batcher.
 
 ---
 
@@ -163,7 +163,7 @@ Vi är ärliga med vad Odlingsguiden är och inte är:
 - **Näringskurvor är uppskattningar.** NPK-kurvorna visar generella mönster för att illustrera hur behoven förändras över säsongen. De är inte mätdata för specifika sorter eller jordar.
 - **Lokala variationer finns.** Mikroklimat, jordtyp och väder påverkar mer än zontabeller kan visa.
 - **Sorttillgänglighet ändras.** Frökataloger uppdateras årligen - en sort vi rekommenderar kan utgå.
-- **37 profiler, 0 verifierade.** Vi jobbar på det. Statustabellen nedan visar var vi befinner oss.
+- **37 profiler, 5 verifierade.** Vi jobbar på det. Statustabellen nedan visar var vi befinner oss.
 
 ---
 
@@ -198,13 +198,16 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 
 | Profil | Verifierad | Datum | Källor |
 | --- | --- | --- | --- |
-| Morot | Nej | - | - |
-| Tomat | Nej | - | - |
-| Potatis | Nej | - | - |
+| Tomat | Ja | 2026-03-01 | Runabergs, Impecta, Wexthuset, Riksforbundet Svensk Tradgard, Tradgardstrollet |
+| Morot | Ja | 2026-03-01 | Runabergs, Impecta, Gronskaper.se, SLU (studentuppsats), Wexthuset, Sara Backmo |
+| Potatis | Ja | 2026-03-01 | Jordbruksverket, Livsmedelsverket, Smaka Sverige, Blomsterlandet, Granngarden |
+| Sallat | Ja | 2026-03-01 | Runabergs, Wexthuset, Impecta, tunnelvaxthus.se |
+| Lok | Ja | 2026-03-01 | Runabergs, Jordbruksverket, Wexthuset, froer.nu |
 | Hallon | Nej | - | - |
 | Basilika | Nej | - | - |
 
-*Tabellen fylls på allt eftersom profiler faktagranskas. Alla 37 profiler ska in.*
+*5 av 37 profiler faktacheckade. Detaljerad rapport: `docs/research/faktacheck-2026-03-01.md`*
+*Nya profiler faktacheckas vid skapande (se checklista i `docs/guides/ny-groda.md`).*
 
 ---
 
@@ -215,7 +218,8 @@ Detaljerad research sparas i `docs/research/`:
 | Fil | Ämne |
 | --- | --- |
 | `f1-frodebatten.md` | F1-hybrider vs kultursorter, svenska aktörer, EU-lagstiftning |
+| `faktacheck-2026-03-01.md` | Faktacheck av tomat, morot, potatis, sallat, lök mot svenska källor |
 
 ---
 
-*Senast uppdaterad: 2026-03-01*
+*Senast uppdaterad: 2026-03-01 (session 16)*

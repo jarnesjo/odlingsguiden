@@ -298,6 +298,9 @@ Innan du är klar, verifiera:
 - [ ] **Sorter prioriterar OP** - öppenpollinerade och kulturarvssorter listas före eventuella F1
 - [ ] **F1 tydligt markerat** - alla F1-hybrider har "F1" i namn och förklaring i note
 - [ ] **Frötagning varnar om F1** - om hybrider finns bland sorterna
+- [ ] **Faktacheck** - verifiera kritiska datapunkter mot svenska kallor (se `docs/guides/kallor.md`)
+- [ ] **Sorter finns i Sverige** - alla sortrekommendationer ska finnas hos svenska froforetag
+- [ ] **Problem ar relevanta** - bara skadegorare som faktiskt ar etablerade i Sverige
 - [ ] **Texterna är på svenska** – naturlig, varm, tydlig svenska
 - [ ] **Tonen är personlig** – som en erfaren odlarvän som delar med sig, inte en lärobok
 - [ ] **Trivs bäst har alla 3 fält** – sun, temperature, wind (alla med level, icon/min/max, detail)

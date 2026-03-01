@@ -353,6 +353,7 @@ Ingen prioritet ännu. Plockas upp när det passar.
 | `docs/guides/svg-illustrationer.md` | SVG-illustrationsriktlinjer (200×200 + 48×48) |
 | `docs/guides/kallor.md` | Källhantering, metod, fröfilosofi, AI-transparens |
 | `docs/research/f1-frodebatten.md` | F1-hybrider vs kultursorter, svenska aktörer, EU-lagstiftning |
+| `docs/research/faktacheck-2026-03-01.md` | Faktacheck av 5 profiler mot svenska källor |
 
 ---
 
