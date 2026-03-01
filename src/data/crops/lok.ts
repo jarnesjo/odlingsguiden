@@ -98,11 +98,11 @@ export const lok: Crop = {
   varieties: [
     { name: 'Stuttgarter Riesen', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassikern bland sättlök. Pålitlig, bra lagring, mild smak.' },
     { name: 'Sturon', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Rund, fast och lagrar fantastiskt. Tålig mot sjukdomar.' },
-    { name: 'Setton F1', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Jämna, fina lökar. Hybrid med bra sjukdomsresistens och lång lagring.' },
+    { name: 'Setton', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Jämna, fina lökar. Vidareutveckling av Sturon med bra sjukdomsresistens och lång lagring.' },
     { name: 'Red Baron', zones: [1, 2, 3, 4, 5, 6], note: 'Rödlök med djup färg och mild sötma. Vacker i sallad!' },
   ],
   problems: [
-    { name: 'Lökfluga', symptom: 'Gula, slappa blad. Larver i löken vid basen.', fix: 'Täck med fiberduk i maj-juni. Samodla med morot. Strö kalkstensmmjöl vid basen.' },
+    { name: 'Lökfluga', symptom: 'Gula, slappa blad. Larver i löken vid basen.', fix: 'Täck med fiberduk i maj-juni. Samodla med morot. Strö kalkstensmjöl vid basen.' },
     { name: 'Lökröta (Botrytis)', symptom: 'Mjukt, grått mögel vid halsen. Löken ruttnar vid lagring.', fix: 'Torka lökarna ordentligt efter skörd. Bra ventilation. Skörda i torrt väder.' },
     { name: 'Falskt mjöldagg', symptom: 'Blågrå beläggning på bladen. Blasten vissnar tidigt.', fix: 'Växtföljd! Undvik övervattning. Plocka bort angripna plantor direkt.' },
     { name: 'Mjuk lök vid skörd', symptom: 'Lökarna känns mjuka och vattniga', fix: 'Ofta för mycket vatten sent i säsongen. Sluta vattna 2-3 veckor före skörd.' },
