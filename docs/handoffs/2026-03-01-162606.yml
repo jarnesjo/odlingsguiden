@@ -73,6 +73,7 @@ commands:
   - "npx tsc --noEmit # Typkontroll utan output"
 
 next_steps:
+  - "Gor loggan i navbar klickbar - navigerar till startsidan"
   - "Fortsatt faktacheck av fler profiler (hallon, basilika, artor...)"
   - "Fler profiler - manga locked crops kvar"
   - "1.5 Sasongsvy v1 - manadsbaserad startskarm"
