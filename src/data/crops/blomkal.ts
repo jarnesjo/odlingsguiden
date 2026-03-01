@@ -101,10 +101,10 @@ export const blomkal: Crop = {
     goodAfterWhy: 'Rotgrönsaker trivs i den djupt bearbetade, näringsrika restjorden. Sallat utnyttjar kvävet som blomkål lämnar kvar.',
   },
   varieties: [
-    { name: 'Snow Crown F1', zones: [1, 2, 3, 4, 5], note: 'Pålitlig och tålig hybrid - det närmaste du kommer en "enkel" blomkål. Vita, fasta huvuden och bra tolerans för temperatursvängningar. Nybörjarens val.' },
+    { name: 'Snowball', zones: [1, 2, 3, 4, 5], note: 'Klassisk OP-sort med vita, fasta huvuden. Tidig och tålig - det närmaste du kommer en "enkel" blomkål. Finns hos Runåbergs och Wexthuset.' },
     { name: 'Igloo', zones: [2, 3, 4, 5], note: 'Tidig sort med kompakta huvuden. Bra för kortare säsonger. Hon klarar lite mer kyla än de flesta - namnet ljuger inte.' },
     { name: 'Erfurt', zones: [1, 2, 3, 4], note: 'Den klassiska europeiska sorten som odlats i generationer. Fina, vita huvuden med mild smak. Kräver lång, sval säsong.' },
-    { name: 'Romanesco', zones: [1, 2, 3, 4, 5], note: 'Gröna, fantastiska fraktalmönster-huvuden! Faktiskt lättare att odla än vanlig blomkål och behöver inte blancheras. En matematisk skönhet på tallriken.' },
+    { name: 'Romanesco', zones: [1, 2, 3, 4], note: 'Gröna, fantastiska fraktalmönster-huvuden! Faktiskt lättare att odla än vanlig blomkål och behöver inte blancheras. Kräver mer plats (70-80 cm) och längre säsong (100-125 dagar). En matematisk skönhet på tallriken.' },
     { name: 'Graffiti', zones: [1, 2, 3, 4], note: 'Spektakulärt lila blomkål som behåller färgen vid tillagning! Rikare på antioxidanter. Behöver lång säsong men WOW-faktorn är enorm.' },
   ],
   problems: [
@@ -159,8 +159,8 @@ export const blomkal: Crop = {
       'Klipp av blomstjälkarna och eftertorka i papperspåsar',
       'Krossa skidorna försiktigt och blås bort agnarna',
     ],
-    isolation: 'Korsar med ALLA andra Brassica oleracea (broccoli, grönkål, vitkål, brysselkål, kålrabbi). Odla bara en sort för frö, eller isolera med minst 1 km.',
-    storageYears: '3-5 år',
+    isolation: 'Korsar med ALLA andra Brassica oleracea (broccoli, grönkål, vitkål, brysselkål, kålrabbi). Odla bara en sort för frö, eller isolera med minst 500 m (helst 1 km+).',
+    storageYears: '4-5 år',
     tip: 'De flesta blomkålssorter i handeln är F1-hybrider vars frön INTE ger samma sort. För seriös frötagning, välj öppet pollinerade sorter som Erfurt.',
   },
   storage: {
@@ -178,5 +178,5 @@ export const blomkal: Crop = {
       'Hela huvudet håller sig bättre än uppdelat - dela först när du ska använda',
     ],
   },
-  harvestCalc: { minPerSqm: 0.6, maxPerSqm: 1.2, unit: 'kg' },
+  harvestCalc: { minPerSqm: 1.5, maxPerSqm: 3.0, unit: 'kg' },
 }
