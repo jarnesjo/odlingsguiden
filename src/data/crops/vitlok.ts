@@ -7,12 +7,12 @@ export const vitlok: Crop = {
   familyLatin: 'Amaryllidaceae',
   difficulty: 'Medel',
   difficultyWhy: 'Inte svårt att få upp - men tajmingen, torkningen och lagringen kräver lite erfarenhet. Höstplantering ger bäst resultat, och det kräver framförhållning.',
-  zones: { outdoor: [1, 2, 3, 4, 5, 6], indoor: null, greenhouse: [1, 2, 3, 4, 5, 6, 7] },
+  zones: { outdoor: [1, 2, 3, 4, 5, 6, 7], indoor: null, greenhouse: [1, 2, 3, 4, 5, 6, 7, 8] },
   days: '240-300',
   spacing: '15 cm',
   rowSpacing: '30 cm',
-  depth: '5-8 cm',
-  ph: { min: 6.0, max: 7.5, ideal: 6.5 },
+  depth: '4-6 cm',
+  ph: { min: 6.0, max: 7.5, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Vitlöken vill ha minst 6 timmars direkt sol om dagen. I skugga blir klyvorna små och plantan lägger all energi på bladen istället. Full sol ger stora, fasta lökar med bra smak.' },
     temperature: { min: -20, max: 30, ideal: '10-20°C', detail: 'Tålig dam som klarar rejäl kyla - hon BEHÖVER faktiskt en köldperiod (vernalisering) för att bilda klyftor. Därför ger höstplantering bäst resultat. Trivs i svalt väder under tillväxten och vill ha värme när lökarna mognar.' },
@@ -45,12 +45,12 @@ export const vitlok: Crop = {
   ],
   timeline: {
     1: [
-      { phase: 'Plantera (höst)', months: 'Okt', icon: 'seedling' },
-      { phase: 'Övervintring', months: 'Nov-Mar', icon: 'snowflake' },
-      { phase: 'Tillväxt', months: 'Apr-Maj', icon: 'leaf' },
-      { phase: 'Klipp vitlökspipar', months: 'Jun', icon: 'scissors' },
-      { phase: 'Mognad', months: 'Jun-Jul', icon: 'sun' },
-      { phase: 'Skörd och torkning', months: 'Jul', icon: 'harvest' },
+      { phase: 'Plantera (höst)', months: 'Sep-Okt', icon: 'seedling' },
+      { phase: 'Övervintring', months: 'Nov-Apr', icon: 'snowflake' },
+      { phase: 'Tillväxt', months: 'Maj-Jun', icon: 'leaf' },
+      { phase: 'Klipp vitlökspipar', months: 'Jun-Jul', icon: 'scissors' },
+      { phase: 'Mognad', months: 'Jul', icon: 'sun' },
+      { phase: 'Skörd och torkning', months: 'Jul-Aug', icon: 'harvest' },
     ],
     4: [
       { phase: 'Plantera (höst)', months: 'Okt', icon: 'seedling' },
@@ -61,7 +61,7 @@ export const vitlok: Crop = {
       { phase: 'Skörd och torkning', months: 'Jul-Aug', icon: 'harvest' },
     ],
     6: [
-      { phase: 'Plantera (höst)', months: 'Sep', icon: 'seedling' },
+      { phase: 'Plantera (höst)', months: 'Okt-Nov', icon: 'seedling' },
       { phase: 'Övervintring', months: 'Okt-Apr', icon: 'snowflake' },
       { phase: 'Tillväxt', months: 'Maj-Jun', icon: 'leaf' },
       { phase: 'Klipp vitlökspipar', months: 'Jul', icon: 'scissors' },
@@ -92,7 +92,6 @@ export const vitlok: Crop = {
     bad: [
       { id: 'artor', name: 'Ärtor', icon: 'vegetable', why: 'Vitlöken hämmar ärtornas tillväxt och kvävefixering - de pratar helt enkelt olika språk' },
       { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Samma problem som ärtor - alla baljväxter och lökväxter trivs dåligt ihop' },
-      { id: 'sallat', name: 'Sallat', icon: 'vegetable', why: 'Vitlökens utsöndringar kan hämma sallatens tillväxt. Håll dem åtskilda.' },
     ],
   },
   rotation: {
@@ -104,15 +103,15 @@ export const vitlok: Crop = {
     goodAfterWhy: 'Baljväxter fixerar kväve i jorden och bygger upp näringen. Perfekta efterföljare som förbereder marken för nästa omgång.',
   },
   varieties: [
-    { name: 'Thermidrome', zones: [1, 2, 3, 4, 5], note: 'Pålitlig hardneck-sort med stor, fast lök och tydliga klyftor. Stark smak som mjuknar vid tillagning. Favorit bland svenska odlare.' },
-    { name: 'Sprint', zones: [1, 2, 3, 4, 5, 6], note: 'Softneck som mognar tidigt. Lagrar bra och flätar fint. Mildare smak som passar i sallader.' },
-    { name: 'Ljubasha', zones: [1, 2, 3, 4, 5, 6], note: 'Rysk hardneck-sort som klarar brutal kyla. Perfekt för norra Sverige. Fantastisk, komplex smak.' },
-    { name: 'Messidrome', zones: [1, 2, 3, 4, 5], note: 'Tidig hardneck med elegant smak. Mognar bland de första och ger fina vitlökspipar att skörda.' },
-    { name: 'Flavor', zones: [1, 2, 3, 4], note: 'Softneck med mild, söt smak och massor av klyftor. Lagrar extremt länge - upp till 10 månader.' },
+    { name: 'Thermidrome', zones: [1, 2, 3, 4, 5, 6], note: 'Pålitlig softneck-sort (OP) med stor, fast lök. Mild smak som mjuknar vid tillagning. Flätar fint och lagrar länge.' },
+    { name: 'Sprint', zones: [1, 2, 3, 4, 5, 6], note: 'Tidig hardneck (OP) som mognar snabbt. Bildar vitlökspipar och topplök. Stark, komplex smak.' },
+    { name: 'Ivan', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Rysk hardneck (OP) som klarar brutal kyla. Perfekt för norra Sverige. Stor lök med kraftig smak.' },
+    { name: 'Messidrome', zones: [1, 2, 3, 4, 5, 6], note: 'Tidig softneck (OP) med elegant, mild smak. Mognar bland de första och lagrar bra. Flätar fint.' },
+    { name: 'Flavor', zones: [1, 2, 3, 4, 5, 6], note: 'Softneck (OP) med mild, söt smak och massor av klyftor. Lagrar extremt länge - upp till 10 månader.' },
   ],
   problems: [
     { name: 'Vitröta (Sclerotium cepivorum)', symptom: 'Gula, vissnande blad. Vit, luddig svamp vid lökens bas. Lökarna ruttnar underifrån.', fix: 'Tyvärr ingen bot - svampens vilosporer lever i jorden i 20+ år. Växtföljd är enda skyddet. Ta bort angripna plantor direkt och odla ALDRIG lökväxter på samma plats igen.' },
-    { name: 'Lökfluga', symptom: 'Slappa, gula blad. Små larver i lökens bas som äter sig inåt.', fix: 'Täck med fiberduk under maj-juni när flugan lägger ägg. Strö kalkstensmmjöl eller aska runt plantorna. Samodla med morot.' },
+    { name: 'Lökfluga', symptom: 'Slappa, gula blad. Små larver i lökens bas som äter sig inåt.', fix: 'Täck med fiberduk under maj-juni när flugan lägger ägg. Strö kalkstensmjöl eller aska runt plantorna. Samodla med morot.' },
     { name: 'Rost', symptom: 'Orangea, pudriga fläckar på bladen. Bladen gulnar och vissnar i förtid.', fix: 'Bra ventilation mellan plantorna - plantera inte för tätt. Ta bort angripna blad. God växtföljd minskar risken avsevärt.' },
     { name: 'Gröna klyftor (ingen lökbildning)', symptom: 'Plantan växer fint men bildar bara en enda rund lök utan klyftor.', fix: 'Beror nästan alltid på att vitlöken inte fått tillräcklig köldperiod (vernalisering). Höstplantera istället för vårplantering, eller välj en sort som klarar kortare kyla.' },
   ],
@@ -131,7 +130,7 @@ export const vitlok: Crop = {
     steps: [
       'Dela försiktigt lökknölen i enskilda klyftor - skada inte basen',
       'Välj de största, friskaste klyvorna (de yttre). Små klyftor ger små lökar',
-      'Plantera med spetsen uppåt, 5-8 cm djupt (dubbla klyvans höjd)',
+      'Plantera med spetsen uppåt, 4-6 cm djupt (dubbla klyvans höjd)',
       'Avstånd 15 cm i raden, 30 cm mellan raderna',
       'Täck med jord och mulcha med 5-10 cm halm eller löv',
       'Vattna lätt om jorden är torr - höstregnet sköter vanligtvis resten',
