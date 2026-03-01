@@ -8,10 +8,10 @@ export const tomat: Crop = {
   difficulty: 'Medel',
   difficultyWhy: 'Kräver förodling inomhus (6-8 v), regelbunden gödsling, uppbindning och är känslig för bladmögel.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6], indoor: null, greenhouse: [1, 2, 3, 4, 5, 6, 7, 8] },
-  days: '60-85',
+  days: '60-100',
   spacing: '40-50 cm',
   rowSpacing: '60-80 cm',
-  depth: '0,5 cm',
+  depth: '0,5-1 cm',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 8 timmar direkt sol per dag. Tomater ÄLSKAR sol - mer sol = sötare tomater. I halvskugga får du mest blad och lite frukt.' },
