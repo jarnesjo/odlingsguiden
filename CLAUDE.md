@@ -215,6 +215,7 @@ The app uses "kompis-tonen" (friend's tone) — warm, personal, sometimes humoro
 - Avoid marketing speak — "Enkel" not "Superenkelt"
 - Include hard-won wisdom and real grower experience
 - **Never use en-dash `–` (U+2013) in source code** — always use plain hyphen `-` (U+002D). En-dashes trigger IDE warnings and add no value in app text.
+- **Alltid korrekt åäö i all källkod** — kommentarer, strängar, variabelnamn. Aldrig ASCII-approximationer som "hoger" (höger), "vanster" (vänster), "pa" (på), "ovre" (övre), "stjalke" (stjälke). Detta gäller hela kodbasen inklusive SVG-kommentarer.
 
 ## Seed Philosophy (Fröfilosofi)
 
