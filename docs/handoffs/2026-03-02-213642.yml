@@ -1,0 +1,86 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 35. Batch 2 verifierad, faktacheckad och integrerad.
+
+    KLART (batch 2 - 4 nya gronsaksprofiler, fran bakgrundsagenter i session 34):
+    - Pak choi (Korsblommiga, Enkel) - 2 KRITISKA + 2 VIKTIGA + 1 MINDRE rattade
+    - Brysselkal (Korsblommiga, Medel) - 4 VIKTIGA + 3 MINDRE rattade
+    - Jordartskocka (Korgblommiga, Enkel) - 5 VIKTIGA + 1 MINDRE rattade
+    - Fankal (Flockblommiga, Medel) - 6 VIKTIGA + 3 MINDRE rattade
+
+    Faktacheck-resultat (28 fel totalt):
+    - Pak choi: Joi Choi & Mei Qing Choi var F1 inte OP (KRITISKT), fel froleverantorer
+    - Brysselkal: zon 6 for optimistiskt, Roodnerf->Rubine, Nautic->Igor F1
+    - Jordartskocka: koldtalighet -30->-20C, Impecta/Runabergs saljer inte knolar
+    - Fankal: zon 7 vaxthus saknar stod, biennial false->true, sadjup/dagar justerade
+
+    Alla med illustrationer (200x200 + 48x48), integrerade i appen.
+    Typkontroll OK, bygge OK.
+
+    Commits (6 st):
+    - 9fd4802 fix(crops): fact-check pak choi against Swedish sources
+    - 447e487 fix(crops): fact-check brysselkal against Swedish sources
+    - fd93a63 fix(crops): fact-check jordartskocka against Swedish sources
+    - 7700996 fix(crops): fact-check fankal against Swedish sources
+    - a4c6e6f feat(ui): add illustrations for pak-choi, brysselkal, jordartskocka, fankal
+    - 8be5edd feat(ui): register pak-choi, brysselkal, jordartskocka, fankal in app
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+  src:
+    - "src/data/crops/index.ts (58 profiler)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (58 illustrationer)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Uppdatera docs/ROADMAP.md - markera 36 av ~43 groansaker klara"
+  - "Uppdatera docs/guides/kallor.md - lagg till batch 2 faktacheck i statustabellen"
+  - "Fler groansaker (7 kvar: selleri, rotselleri, kinakal, savoykal, melon, kronartskocka, endiv)"
+  - "Bar: 7 av ~16 klara - fortsatt med fler barprofiler"
+  - "CropPage chunk ~645 KB - overavag code splitting"
+
+context:
+  decisions:
+    - "Batch 2 faktacheckades grundligt mot svenska kallor (Wexthuset, Runabergs, Impecta, Odla atbart, odla.nu)"
+    - "28 fel rattades - vanligaste var felaktiga froleverantorsreferenser och optimistiska zonbedomningar"
+    - "Pak choi: Joi Choi och Mei Qing Choi ersatta/markerade som F1 (var felaktigt listade som OP)"
+    - "Jordartskocka: Impecta och Runabergs saljer inte knolar - sorternas kallor andrade"
+    - "Fankal: biologiskt tvarig (biennial: true), dill-korspollinering nyanserad"
+    - "Illustrationsguiden (docs/guides/svg-illustrationer.md) foljs for alla nya illustrationer"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Sorter maste finnas hos svenska froleverantorer"
+
+known_issues:
+  - "CropPage chunk ~645 KB (chunk warning vid bygge)"
+  - "Lighthouse Accessibility 84"
+  - "Illustrationerna ar AI-genererade SVG - visuell granskning rekommenderas"
