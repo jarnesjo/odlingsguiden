@@ -216,7 +216,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/salvia</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/mynta</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/citronmeliss</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>
@@ -227,6 +237,11 @@
   </url>
   <url>
     <loc>https://lillabosgarden.se/odlingsguiden/dill</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/koriander</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>

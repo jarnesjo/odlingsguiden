@@ -42,6 +42,9 @@ import { palsternacka } from './palsternacka'
 import { brytbona } from './brytbona'
 import { vitkal } from './vitkal'
 import { chili } from './chili'
+import { koriander } from './koriander'
+import { salvia } from './salvia'
+import { citronmeliss } from './citronmeliss'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -87,4 +90,7 @@ export const CROPS: Record<string, Crop> = {
   brytbona,
   vitkal,
   chili,
+  koriander,
+  salvia,
+  citronmeliss,
 }
