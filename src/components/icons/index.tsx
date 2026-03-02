@@ -103,17 +103,17 @@ export function WateringCanIcon({ color = '#4A7A8A', size = 24 }: IconProps) {
 export function PartialSunIcon({ color = '#C4956A', size = 24 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-      {/* Sol (halvcirkel synlig till höger) */}
-      <circle cx="10" cy="13" r="4" fill={color} opacity="0.2" />
-      <path d="M10 9a4 4 0 010 8" stroke={color} strokeWidth="1.8" />
-      {/* Strålar (bara höger sida, synliga bakom molnet) */}
-      <line x1="16" y1="13" x2="18" y2="13" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="14.8" y1="9.2" x2="16.2" y2="7.8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="14.8" y1="16.8" x2="16.2" y2="18.2" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <line x1="10" y1="7" x2="10" y2="5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      {/* Moln (täcker vänstra halvan) */}
-      <path d="M6 19a4 4 0 01-1-7.9 5 5 0 019.9-1.1 3.5 3.5 0 011.1 6.8V18H6z" fill="white" opacity="0.9" />
-      <path d="M6 19a4 4 0 01-1-7.9 5 5 0 019.9-1.1 3.5 3.5 0 011.1 6.8" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Sol uppe till höger */}
+      <circle cx="16" cy="8" r="3.5" fill={color} opacity="0.2" />
+      <circle cx="16" cy="8" r="3.5" stroke={color} strokeWidth="1.8" />
+      {/* Strålar */}
+      <line x1="16" y1="2" x2="16" y2="3" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="21.5" y1="8" x2="20.5" y2="8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="20" y1="3.5" x2="19.3" y2="4.2" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="20" y1="12.5" x2="19.3" y2="11.8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Enkel molnbåge nertill */}
+      <path d="M4 20h16" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M6 20a3.5 3.5 0 010-7c0-2.8 2.2-5 5-5 2.2 0 4 1.4 4.7 3.4a4 4 0 013.3 5.6" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
 }
