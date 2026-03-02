@@ -1,5 +1,8 @@
 .zone {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
 }
 
 .zoneRange {
@@ -7,10 +10,8 @@
   color: var(--color-text-muted);
 }
 
-.suitability {
+.suitIcon {
   font-size: var(--text-label);
-  font-weight: 600;
-  margin-top: 2px;
-  text-align: center;
+  font-weight: 700;
   color: var(--suit-color);
 }
