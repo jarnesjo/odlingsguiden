@@ -57,6 +57,10 @@ import { RedCabbageIcon } from './RedCabbageIllustration'
 import { TurnipIcon } from './TurnipIllustration'
 import { PoleBeanIcon } from './PoleBeanIllustration'
 import { ShallotIcon } from './ShallotIllustration'
+import { PakChoiIcon } from './PakChoiIllustration'
+import { BrusselsSproutsIcon } from './BrusselsSproutsIllustration'
+import { JerusalemArtichokeIcon } from './JerusalemArtichokeIllustration'
+import { FennelIcon } from './FennelIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -121,6 +125,10 @@ const ICONS: Record<string, ComponentType<SizeProps>> = {
   majrova: TurnipIcon,
   storbona: PoleBeanIcon,
   schalottenlok: ShallotIcon,
+  'pak-choi': PakChoiIcon,
+  brysselkal: BrusselsSproutsIcon,
+  jordartskocka: JerusalemArtichokeIcon,
+  fankal: FennelIcon,
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
