@@ -58,6 +58,7 @@ import { TurnipIcon } from './TurnipIllustration'
 import { PoleBeanIcon } from './PoleBeanIllustration'
 import { ShallotIcon } from './ShallotIllustration'
 import { PakChoiIcon } from './PakChoiIllustration'
+import { KinakalIcon } from './KinakalIllustration'
 import { BrusselsSproutsIcon } from './BrusselsSproutsIllustration'
 import { JerusalemArtichokeIcon } from './JerusalemArtichokeIllustration'
 import { FennelIcon } from './FennelIllustration'
@@ -129,6 +130,7 @@ const ICONS: Record<string, ComponentType<SizeProps>> = {
   storbona: PoleBeanIcon,
   schalottenlok: ShallotIcon,
   'pak-choi': PakChoiIcon,
+  kinakal: KinakalIcon,
   brysselkal: BrusselsSproutsIcon,
   jordartskocka: JerusalemArtichokeIcon,
   fankal: FennelIcon,

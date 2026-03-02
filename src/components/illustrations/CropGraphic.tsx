@@ -58,6 +58,7 @@ import { TurnipIllustration, TurnipIcon } from './TurnipIllustration'
 import { PoleBeanIllustration, PoleBeanIcon } from './PoleBeanIllustration'
 import { ShallotIllustration, ShallotIcon } from './ShallotIllustration'
 import { PakChoiIllustration, PakChoiIcon } from './PakChoiIllustration'
+import { KinakalIllustration, KinakalIcon } from './KinakalIllustration'
 import { BrusselsSproutsIllustration, BrusselsSproutsIcon } from './BrusselsSproutsIllustration'
 import { JerusalemArtichokeIllustration, JerusalemArtichokeIcon } from './JerusalemArtichokeIllustration'
 import { FennelIllustration, FennelIcon } from './FennelIllustration'
@@ -129,6 +130,7 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   storbona: { large: PoleBeanIllustration, small: PoleBeanIcon },
   schalottenlok: { large: ShallotIllustration, small: ShallotIcon },
   'pak-choi': { large: PakChoiIllustration, small: PakChoiIcon },
+  kinakal: { large: KinakalIllustration, small: KinakalIcon },
   brysselkal: { large: BrusselsSproutsIllustration, small: BrusselsSproutsIcon },
   jordartskocka: { large: JerusalemArtichokeIllustration, small: JerusalemArtichokeIcon },
   fankal: { large: FennelIllustration, small: FennelIcon },

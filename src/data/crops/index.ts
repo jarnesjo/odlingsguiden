@@ -59,6 +59,7 @@ import { schalottenlok } from './schalottenlok'
 import { jordartskocka } from './jordartskocka'
 import { brysselkal } from './brysselkal'
 import { pakChoi } from './pak-choi'
+import { kinakal } from './kinakal'
 import { fankal } from './fankal'
 import { selleri } from './selleri'
 import { rotselleri } from './rotselleri'
@@ -125,6 +126,7 @@ export const CROPS: Record<string, Crop> = {
   jordartskocka,
   brysselkal,
   'pak-choi': pakChoi,
+  kinakal,
   fankal,
   selleri,
   rotselleri,
