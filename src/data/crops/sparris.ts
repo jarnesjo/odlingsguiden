@@ -14,7 +14,8 @@ export const sparris: Crop = {
   days: 'Skörd år 3+',
   spacing: '30-45 cm',
   rowSpacing: '120-150 cm',
-  depth: '15-20 cm (i dike)',
+  depth: '15-20 cm',
+  depthNote: 'Planteras i dike',
   ph: { min: 6.0, max: 7.5, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Sparrisen vill ha full sol hela dagen - minst 6-8 timmar. I halvskugga blir skotten tunna och spinkiga och skörden halveras. Välj den soligaste platsen i trädgården, för här ska hon stå i 15-20 år.' },

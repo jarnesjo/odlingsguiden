@@ -14,7 +14,8 @@ export const jordgubbar: Crop = {
   days: '60-90',
   spacing: '30-40 cm',
   rowSpacing: '60-80 cm',
-  depth: 'Kronans nivå (hjärtpunkten precis i markytan)',
+  depth: 'Kronans nivå',
+  depthNote: 'Hjärtpunkten precis i markytan',
   ph: { min: 5.5, max: 6.5, ideal: 6.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Jordgubben vill ha minst 8 timmars sol om dagen - ju mer sol, desto sötare bär. Hon kan klara lite eftermiddagsskugga i södra Sverige, men i norr behöver hon allt solljus hon kan få.' },

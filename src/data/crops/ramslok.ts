@@ -13,7 +13,8 @@ export const ramslok: Crop = {
   days: 'Lökar: skörd första våren. Frö: 2-3 år till etablerad skörd',
   spacing: '10-15 cm',
   rowSpacing: '20-30 cm',
-  depth: '5-10 cm (lökar), ytså (frö)',
+  depth: '5-10 cm',
+  depthNote: 'Lökar. Frö: ytså',
   ph: { min: 5.5, max: 7.5, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Halvskugga', icon: 'partial-sun', detail: 'Ramslök är en lundväxt som trivs allra bäst i halvskugga till skugga - under lövträd är perfekt. Hon klarar full sol på våren men vill ha skugga under sommaren. Tänk skogsgolv: sol genom nakna grenar på våren, sedan svalka under lövverket.' },

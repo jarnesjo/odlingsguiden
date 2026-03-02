@@ -13,7 +13,8 @@ export const dragon: Crop = {
   days: '60-75 dagar från plantering till första skörd',
   spacing: '40 cm',
   rowSpacing: '40 cm',
-  depth: 'Samma djup som krukan (vegetativ förökning)',
+  depth: 'Krukdjup',
+  depthNote: 'Vegetativ förökning - säljs som planta',
   ph: { min: 6.5, max: 7.5, ideal: 6.8 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Dragon vill ha full sol - minst 6 timmars direkt solljus per dag. I halvskugga blir hon ranglig och aromen svagare. Söderläge mot en varm husvägg? Perfekt - hon suger in värmen precis som rosmarinen.' },

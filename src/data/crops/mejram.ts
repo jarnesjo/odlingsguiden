@@ -13,7 +13,8 @@ export const mejram: Crop = {
   days: '70-90',
   spacing: '15-20 cm',
   rowSpacing: '25-30 cm',
-  depth: 'Ytså (fröna behöver ljus)',
+  depth: 'Ytså',
+  depthNote: 'Ljusgroddare - tryck fast men täck inte',
   ph: { min: 6.5, max: 7.5, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Mejram är en medelhavsväxt som vill ha full sol - minst 6 timmars direkt solljus per dag. I halvskugga blir hon ranglig med svagare arom. Söderläge mot en varm vägg? Perfekt - hon suger in värmen.' },
