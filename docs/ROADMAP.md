@@ -120,7 +120,7 @@ Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
 
 > Lägg in alla grödor, bär och kryddor som kan odlas i Sverige
 
-- [ ] Alla grönsaker (40 av ~43 klara)
+- [x] Alla grönsaker (43 av 43 klara)
 - [ ] Alla bär (7 av ~16 klara)
 - [x] Alla kryddor (18 av 18 klara)
 
@@ -298,6 +298,7 @@ Ingen prioritet. Plockas upp när det passar.
 ### Optimering & Teknik
 
 - Fortsatt bundle-optimering - utvärdera kontinuerligt: (1) separera illustrationsfiler (Icon vs Illustration) så stora SVG inte hamnar i main chunk, (2) dynamic import per grödprofil istället for att ladda alla 37 på en gång, (3) övervaka bundle-storlekar när fler profiler tillkommer
+- Stat-fält med noter (depthNote/spacingNote) - visa förklarande text under värdet i stats-griden, t.ex. "0.5-1 cm" med nedtonad "ljusgroddare - tryck fast men täck knappt" under. Gäller sådjup, avstånd m.fl. där extra kontext behövs (krukodling, ljusgroddare etc).
 
 ### Plattform
 
