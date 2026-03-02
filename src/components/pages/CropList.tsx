@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react"
+import { useState, useRef, useEffect, lazy, Suspense } from "react"
 import type { Category, Zone } from "../../data/types"
 import { useDocumentMeta } from "../../hooks/useDocumentMeta"
 import { CATEGORIES } from "../../data/categories"
@@ -34,8 +34,26 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
 
   const [search, setSearch] = useState("")
   const [filter, setFilter] = useState("Alla")
+  const searchRef = useRef<HTMLInputElement>(null)
 
   const isSeason = view === 'sasong'
+
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault()
+        if (!isSeason && searchRef.current) {
+          searchRef.current.focus()
+          searchRef.current.select()
+        }
+      }
+      if (e.key === 'Escape' && document.activeElement === searchRef.current) {
+        searchRef.current?.blur()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isSeason])
   const category = isSeason ? 'grönsaker' : view as Category
   const catCrops = CROP_LIST.filter((c) => c.category === category)
   const families = ["Alla", ...new Set(catCrops.map((c) => c.familyLatin))]
@@ -101,6 +119,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
           {/* Search */}
           <div className={styles.searchWrapper}>
             <input
+              ref={searchRef}
               type="text"
               placeholder={`Sök ${activeCat.label.toLowerCase()}...`}
               value={search}
@@ -110,6 +129,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
             <span className={styles.searchIcon}>
               <SearchIcon size={16} color="#999" />
             </span>
+            <kbd className={styles.searchHint}>⌘K</kbd>
           </div>
 
           {/* Family filters */}

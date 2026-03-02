@@ -83,7 +83,7 @@
 
 .searchInput {
   width: 100%;
-  padding: var(--space-md) var(--space-lg) var(--space-md) 40px;
+  padding: var(--space-md) 48px var(--space-md) 40px;
   border-radius: var(--radius-button);
   border: 1px solid var(--color-border);
   font-size: 15px;
@@ -100,6 +100,26 @@
   display: flex;
   align-items: center;
   color: var(--color-text-muted);
+}
+
+.searchHint {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-ui);
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.searchInput:focus + .searchIcon + .searchHint {
+  display: none;
 }
 
 /* Family filters */
