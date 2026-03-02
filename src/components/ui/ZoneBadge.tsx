@@ -12,13 +12,17 @@ export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
   const canGrowGreenhouse = zones.greenhouse?.includes(userZone)
 
   let suitColor: string
+  let title: string
 
   if (canGrowOutdoor) {
     suitColor = colors.accent
+    title = 'Passar din zon'
   } else if (canGrowGreenhouse) {
     suitColor = colors.zoneGreenhouseText
+    title = 'Kräver växthus eller tunnel i din zon'
   } else {
     suitColor = colors.warning
+    title = 'Svårt att odla i din zon'
   }
 
   const outdoorRange = zones.outdoor
@@ -29,7 +33,7 @@ export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
     : null
 
   return (
-    <div className={styles.zone} style={{ '--zone-color': suitColor } as React.CSSProperties}>
+    <div className={styles.zone} style={{ '--zone-color': suitColor } as React.CSSProperties} title={title}>
       {outdoorRange}
       {outdoorRange && greenhouseRange && ' · '}
       {greenhouseRange}
