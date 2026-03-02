@@ -13,7 +13,8 @@ export const citronmeliss: Crop = {
   days: '75-120',
   spacing: '30-40 cm',
   rowSpacing: '30 cm',
-  depth: '0.2 cm (ljusgroddare - tryck fast men täck knappt)',
+  depth: '0.2 cm',
+  depthNote: 'Ljusgroddare - tryck fast men täck knappt',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Trivs i sol till halvskugga - minst 4-6 timmars sol per dag ger bäst smak. Full sol ger mest eteriska oljor, men halvskugga fungerar utmärkt. Mer flexibel än de flesta kryddor.' },

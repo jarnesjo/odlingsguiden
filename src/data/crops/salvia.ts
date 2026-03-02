@@ -13,7 +13,8 @@ export const salvia: Crop = {
   days: '60-70 (blad), 100-130 (från frö till full planta)',
   spacing: '30 cm',
   rowSpacing: '35 cm',
-  depth: '0.2 cm (ljusgroddare - täck knappt)',
+  depth: '0.2 cm',
+  depthNote: 'Ljusgroddare - tryck fast men täck knappt',
   ph: { min: 6.0, max: 7.5, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Medelhavsväxt som kräver minst 6 timmars direkt sol per dag. I halvskugga blir salvian gles och smaken svagare. Söderläge mot en varm mur? Perfekt - det är som ett litet medelhavsparadis.' },

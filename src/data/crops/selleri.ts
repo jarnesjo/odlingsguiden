@@ -11,7 +11,8 @@ export const selleri: Crop = {
   days: '120-180',
   spacing: '25-35 cm',
   rowSpacing: '40-60 cm',
-  depth: '0 cm (ljusgroende)',
+  depth: '0 cm',
+  depthNote: 'Ljusgroddare - lägg på ytan och tryck fast',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Trivs bäst i full sol men klarar halvskugga. I halvskugga blir stjälkarna tunnare och mindre saftiga. Minst 6 timmar sol per dag för riktigt fina stjälkar.' },

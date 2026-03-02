@@ -10,6 +10,7 @@ export const chili: Crop = {
   zones: { outdoor: [1, 2, 3], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6, 7] },
   days: '80-150',
   spacing: '30-50 cm',
+  spacingNote: 'I kruka: minst 30 cm diameter',
   rowSpacing: '50-60 cm',
   depth: '0,5-1 cm',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },

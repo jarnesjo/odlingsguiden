@@ -12,6 +12,7 @@ export const endiv: Crop = {
   spacing: '25-30 cm',
   rowSpacing: '40-50 cm',
   depth: '0.5-1 cm',
+  depthNote: 'Ljusgroddare - tryck fast men täck knappt',
   ph: { min: 6.5, max: 7.5, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'partial-sun', detail: 'Trivs i sol men uppskattar halvskugga mitt på dagen, särskilt under högsommaren. Stark sol och värme ökar bitterheten och risken för skottskjutning.' },

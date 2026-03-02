@@ -13,7 +13,8 @@ export const basilika: Crop = {
   days: '50-70',
   spacing: '20-25 cm',
   rowSpacing: '30 cm',
-  depth: '0.5 cm (ytligt, fröna behöver ljus)',
+  depth: '0.5 cm',
+  depthNote: 'Ljusgroddare - så ytligt',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Basilika kräver minst 6-8 timmars sol per dag. I halvskugga blir smaken svagare och tillväxten långsam. Söderläge är perfekt.' },

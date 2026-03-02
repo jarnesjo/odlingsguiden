@@ -12,6 +12,7 @@ export const sallat: Crop = {
   spacing: '20-25 cm',
   rowSpacing: '30 cm',
   depth: '0.5 cm',
+  depthNote: 'Ljusgroddare - täck bara lätt',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Trivs i 4-6 timmar sol, men klarar halvskugga bra. Faktum är att lite skugga mitt på dagen kan vara en fördel - sallat som får för mycket sol och värme blir bitter och skjuter i blom.' },

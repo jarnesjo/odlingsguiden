@@ -13,7 +13,8 @@ export const timjan: Crop = {
   days: '70-90',
   spacing: '15-25 cm',
   rowSpacing: '30 cm',
-  depth: '0.3 cm (ytligt, fröet vill ha ljus)',
+  depth: '0.3 cm',
+  depthNote: 'Ljusgroddare - tryck fast men täck knappt',
   ph: { min: 6.0, max: 8.0, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Timjan är en riktig solälskare - hon kommer från Medelhavets torra, solstekta backar. Ge henne minst 6-8 timmars sol per dag. I skugga blir hon ranglig, tappar smak och riskerar att ruttna. Söderläge vid en stenmur? Perfekt.' },

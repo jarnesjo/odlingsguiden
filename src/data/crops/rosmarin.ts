@@ -13,7 +13,8 @@ export const rosmarin: Crop = {
   days: '80-120',
   spacing: '40-60 cm',
   rowSpacing: '60 cm',
-  depth: '0.5 cm (ytligt)',
+  depth: '0.5 cm',
+  depthNote: 'Ytligt - fröna vill ha ljus',
   ph: { min: 6.0, max: 8.0, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Rosmarin är en riktig solälskare - hon kommer från Medelhavets torra, solstekta kuster. Ge henne minst 6-8 timmars sol per dag. I halvskugga blir hon ranglig och doften svagare. Söderläge vid en varm mur? Perfekt - hon älskar den extra värmen.' },

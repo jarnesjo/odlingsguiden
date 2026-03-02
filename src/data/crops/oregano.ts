@@ -13,7 +13,8 @@ export const oregano: Crop = {
   days: '70-90',
   spacing: '20-30 cm',
   rowSpacing: '30-40 cm',
-  depth: '0.3 cm (ytligt, fröet behöver ljus)',
+  depth: '0.3 cm',
+  depthNote: 'Ljusgroddare - tryck fast men täck knappt',
   ph: { min: 6.0, max: 8.0, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Oregano är en Medelhavsvilde som älskar sol - ju mer desto bättre. Ge henne minst 6-8 timmars direkt solljus per dag. I skugga blir hon ranglig och tappar nästan all smak. Söderlägt läge vid en varm mur? Då blir hon lyckligast.' },
