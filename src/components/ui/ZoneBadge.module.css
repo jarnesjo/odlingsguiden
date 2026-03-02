@@ -1,6 +1,51 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
 .zone {
   font-size: var(--text-label);
   font-weight: 600;
   color: var(--zone-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0;
+}
+
+.infoIcon {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.tooltip {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-text);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: var(--radius-card-sm);
+  font-size: var(--text-label);
+  line-height: 1.5;
+  width: 220px;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+.tooltipArrow {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid var(--color-text);
 }

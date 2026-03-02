@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { Zone, ZoneAvailability } from '../../data/types'
 import { colors } from '../../theme/tokens'
 import styles from './ZoneBadge.module.css'
@@ -8,21 +9,22 @@ interface ZoneBadgeProps {
 }
 
 export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
+  const [showTip, setShowTip] = useState(false)
   const canGrowOutdoor = zones.outdoor?.includes(userZone)
   const canGrowGreenhouse = zones.greenhouse?.includes(userZone)
 
   let suitColor: string
-  let title: string
+  let tip: string
 
   if (canGrowOutdoor) {
     suitColor = colors.accent
-    title = 'Passar din zon'
+    tip = 'Passar din zon - kan odlas utomhus.'
   } else if (canGrowGreenhouse) {
     suitColor = colors.zoneGreenhouseText
-    title = 'Kräver växthus eller tunnel i din zon'
+    tip = 'Kräver växthus eller tunnel i din zon.'
   } else {
     suitColor = colors.warning
-    title = 'Svårt att odla i din zon'
+    tip = 'Svårt att odla i din zon - även med växthus.'
   }
 
   const outdoorRange = zones.outdoor
@@ -33,10 +35,23 @@ export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
     : null
 
   return (
-    <div className={styles.zone} style={{ '--zone-color': suitColor } as React.CSSProperties} title={title}>
-      {outdoorRange}
-      {outdoorRange && greenhouseRange && ' · '}
-      {greenhouseRange}
+    <div className={styles.wrapper}>
+      <button
+        className={styles.zone}
+        style={{ '--zone-color': suitColor } as React.CSSProperties}
+        onClick={() => setShowTip(!showTip)}
+      >
+        {outdoorRange}
+        {outdoorRange && greenhouseRange && ' · '}
+        {greenhouseRange}
+        <span className={styles.infoIcon}>ⓘ</span>
+      </button>
+      {showTip && (
+        <div className={styles.tooltip}>
+          {tip}
+          <div className={styles.tooltipArrow} />
+        </div>
+      )}
     </div>
   )
 }
