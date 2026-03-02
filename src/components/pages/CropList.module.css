@@ -28,6 +28,47 @@
   color: var(--color-accent);
 }
 
+/* Tab toggle (Alla grödor / Säsong) */
+.tabToggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: var(--space-lg);
+  background: var(--color-card);
+  border-radius: var(--radius-badge);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.tabButton {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-body);
+  font-weight: 700;
+  font-family: var(--font-ui);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.tabActive {
+  color: #fff;
+  background: var(--color-accent);
+}
+
+.tabInactive {
+  color: var(--color-text-muted);
+  background: transparent;
+}
+
+.tabIcon {
+  display: flex;
+  align-items: center;
+}
+
 /* Category toggle */
 .categoryToggle {
   display: flex;

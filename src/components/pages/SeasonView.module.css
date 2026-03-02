@@ -1,0 +1,149 @@
+/* Månadsnavigering */
+.monthNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+  margin-bottom: var(--space-lg);
+}
+
+.monthButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  cursor: pointer;
+  color: var(--color-text-muted);
+  font-size: 18px;
+  transition: all 0.15s;
+}
+
+.monthButton:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.monthLabel {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  min-width: 140px;
+  text-align: center;
+}
+
+/* Aktivitetsgrupper */
+.group {
+  margin-bottom: var(--space-xl);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  margin-bottom: var(--space-sm);
+}
+
+.groupIcon {
+  display: flex;
+  align-items: center;
+  color: var(--color-accent);
+}
+
+.groupLabel {
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.groupCount {
+  font-family: var(--font-ui);
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+  margin-left: var(--space-xs);
+}
+
+/* Crop-rader i gruppen */
+.activityRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  margin-bottom: var(--space-sm);
+  background: var(--color-card);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: box-shadow 0.15s;
+}
+
+.activityRow:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.activityIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.activityInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.activityName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.activityMeta {
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+.activityArrow {
+  font-size: 18px;
+  color: var(--color-accent-muted);
+  flex-shrink: 0;
+}
+
+/* Tom-state */
+.empty {
+  text-align: center;
+  padding: var(--space-section) var(--space-lg);
+  color: var(--color-text-muted);
+}
+
+.emptyIcon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  color: var(--color-border);
+}
+
+.emptyTitle {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.emptyText {
+  font-size: var(--text-body);
+  line-height: 1.5;
+}

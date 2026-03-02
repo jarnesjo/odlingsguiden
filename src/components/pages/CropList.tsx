@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, lazy, Suspense } from "react"
 import type { Category, Zone } from "../../data/types"
 import { useDocumentMeta } from "../../hooks/useDocumentMeta"
 import { CATEGORIES } from "../../data/categories"
@@ -6,11 +6,15 @@ import { CROP_LIST } from "../../data/cropList"
 import { DIFFICULTY_INFO } from "../../data/difficulty"
 import { ZONE_INFO } from "../../data/zones"
 import { Icon } from "../icons/Icon"
-import { SearchIcon, DifficultyDot } from "../icons"
+import { SearchIcon, DifficultyDot, CalendarIcon } from "../icons"
 import { LogoCombined } from "../brand"
 import { SymbolSprout } from "../brand"
 import { CropIcon } from "../illustrations/CropIcon"
 import styles from "./CropList.module.css"
+
+const SeasonView = lazy(() => import('./SeasonView').then(m => ({ default: m.SeasonView })))
+
+type Tab = 'alla' | 'sasong'
 
 interface CropListProps {
   userZone: Zone
@@ -24,6 +28,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
     'Zonanpassad odlingsguide för svenska trädgårdar. Djupa profiler för grönsaker, bär och kryddor med sortval, tidslinjer och skördetips.',
   )
 
+  const [tab, setTab] = useState<Tab>("alla")
   const [search, setSearch] = useState("")
   const [filter, setFilter] = useState("Alla")
   const [category, setCategory] = useState<Category>("grönsaker")
@@ -50,97 +55,127 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
         </button>
       </div>
 
-      {/* Category Toggle */}
-      <div className={styles.categoryToggle}>
-        {CATEGORIES.filter((c) => !c.hidden).map((cat) => {
-          const isActive = category === cat.id
-          return (
-            <button
-              key={cat.id}
-              className={`${styles.categoryButton} ${isActive ? styles.categoryActive : styles.categoryInactive}`}
-              style={{ "--cat-color": cat.color } as React.CSSProperties}
-              onClick={() => {
-                setCategory(cat.id)
-                setFilter("Alla")
-              }}
-            >
-              <span className={styles.categoryIcon}>
-                <Icon name={cat.icon} size={22} color={isActive ? "#fff" : cat.color} />
-              </span>
-              <span>{cat.label}</span>
-            </button>
-          )
-        })}
+      {/* Tab Toggle */}
+      <div className={styles.tabToggle}>
+        <button
+          className={`${styles.tabButton} ${tab === 'alla' ? styles.tabActive : styles.tabInactive}`}
+          onClick={() => setTab('alla')}
+        >
+          <span className={styles.tabIcon}>
+            <Icon name="vegetable" size={18} color={tab === 'alla' ? '#fff' : 'var(--color-text-muted)'} />
+          </span>
+          Alla grödor
+        </button>
+        <button
+          className={`${styles.tabButton} ${tab === 'sasong' ? styles.tabActive : styles.tabInactive}`}
+          onClick={() => setTab('sasong')}
+        >
+          <span className={styles.tabIcon}>
+            <CalendarIcon size={18} color={tab === 'sasong' ? '#fff' : 'var(--color-text-muted)'} />
+          </span>
+          Säsong
+        </button>
       </div>
 
-      {/* Search */}
-      <div className={styles.searchWrapper}>
-        <input
-          type="text"
-          placeholder={`Sök ${activeCat.label.toLowerCase()}...`}
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className={styles.searchInput}
-        />
-        <span className={styles.searchIcon}>
-          <SearchIcon size={16} color="#999" />
-        </span>
-      </div>
+      {tab === 'sasong' ? (
+        <Suspense fallback={<div style={{ textAlign: 'center', padding: 40, color: 'var(--color-text-muted)' }}>Laddar...</div>}>
+          <SeasonView userZone={userZone} onSelect={onSelect} />
+        </Suspense>
+      ) : (
+        <>
+          {/* Category Toggle */}
+          <div className={styles.categoryToggle}>
+            {CATEGORIES.filter((c) => !c.hidden).map((cat) => {
+              const isActive = category === cat.id
+              return (
+                <button
+                  key={cat.id}
+                  className={`${styles.categoryButton} ${isActive ? styles.categoryActive : styles.categoryInactive}`}
+                  style={{ "--cat-color": cat.color } as React.CSSProperties}
+                  onClick={() => {
+                    setCategory(cat.id)
+                    setFilter("Alla")
+                  }}
+                >
+                  <span className={styles.categoryIcon}>
+                    <Icon name={cat.icon} size={22} color={isActive ? "#fff" : cat.color} />
+                  </span>
+                  <span>{cat.label}</span>
+                </button>
+              )
+            })}
+          </div>
 
-      {/* Family filters */}
-      {families.length > 2 && (
-        <div className={styles.familyFilters}>
-          {families.map((f) => (
-            <button
-              key={f}
-              className={`${styles.familyButton} ${filter === f ? styles.familyActive : styles.familyInactive}`}
-              style={{ "--cat-color": activeCat.color } as React.CSSProperties}
-              onClick={() => setFilter(f)}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
+          {/* Search */}
+          <div className={styles.searchWrapper}>
+            <input
+              type="text"
+              placeholder={`Sök ${activeCat.label.toLowerCase()}...`}
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className={styles.searchInput}
+            />
+            <span className={styles.searchIcon}>
+              <SearchIcon size={16} color="#999" />
+            </span>
+          </div>
+
+          {/* Family filters */}
+          {families.length > 2 && (
+            <div className={styles.familyFilters}>
+              {families.map((f) => (
+                <button
+                  key={f}
+                  className={`${styles.familyButton} ${filter === f ? styles.familyActive : styles.familyInactive}`}
+                  style={{ "--cat-color": activeCat.color } as React.CSSProperties}
+                  onClick={() => setFilter(f)}
+                >
+                  {f}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Crop rows */}
+          {filtered.map((crop) => {
+            const d = DIFFICULTY_INFO[crop.difficulty]
+            const dotColor = d.color === "#B7E4C7" ? "#3D6B4F" : d.color === "#FFF3CD" ? "#B8860B" : "#B54A3F"
+            return (
+              <button
+                key={crop.id}
+                className={`${styles.cropButton} ${crop.locked ? styles.cropLocked : styles.cropUnlocked}`}
+                onClick={() => !crop.locked && onSelect(crop.id)}
+              >
+                <div className={styles.cropGraphic}>
+                  <CropIcon id={crop.id} size={40} category={crop.category} />
+                </div>
+                <div className={styles.cropInfo}>
+                  <div className={styles.cropName}>{crop.name}</div>
+                  <div className={styles.cropMeta}>
+                    {crop.familyLatin} ({crop.family}) ·{" "}
+                    <span style={{ color: dotColor }}>
+                      <DifficultyDot color={dotColor} /> {crop.difficulty}
+                    </span>
+                  </div>
+                </div>
+                {crop.locked ? <span className={styles.soonBadge}>Snart</span> : <span className={styles.arrow}>→</span>}
+              </button>
+            )
+          })}
+
+          {/* Footer */}
+          <div className={styles.footer}>
+            {unlockedCount} {activeCat.label.toLowerCase()} tillgängliga · {lockedCount} kommer snart
+            <br />
+            <span className={styles.footerSub}>
+              Skapad med omtanke av{" "}
+              <a href="https://lillabosgarden.se" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
+                Lilla Bosgården
+              </a>
+            </span>
+          </div>
+        </>
       )}
-
-      {/* Crop rows */}
-      {filtered.map((crop) => {
-        const d = DIFFICULTY_INFO[crop.difficulty]
-        const dotColor = d.color === "#B7E4C7" ? "#3D6B4F" : d.color === "#FFF3CD" ? "#B8860B" : "#B54A3F"
-        return (
-          <button
-            key={crop.id}
-            className={`${styles.cropButton} ${crop.locked ? styles.cropLocked : styles.cropUnlocked}`}
-            onClick={() => !crop.locked && onSelect(crop.id)}
-          >
-            <div className={styles.cropGraphic}>
-              <CropIcon id={crop.id} size={40} category={crop.category} />
-            </div>
-            <div className={styles.cropInfo}>
-              <div className={styles.cropName}>{crop.name}</div>
-              <div className={styles.cropMeta}>
-                {crop.familyLatin} ({crop.family}) ·{" "}
-                <span style={{ color: dotColor }}>
-                  <DifficultyDot color={dotColor} /> {crop.difficulty}
-                </span>
-              </div>
-            </div>
-            {crop.locked ? <span className={styles.soonBadge}>Snart</span> : <span className={styles.arrow}>→</span>}
-          </button>
-        )
-      })}
-
-      {/* Footer */}
-      <div className={styles.footer}>
-        {unlockedCount} {activeCat.label.toLowerCase()} tillgängliga · {lockedCount} kommer snart
-        <br />
-        <span className={styles.footerSub}>
-          Skapad med omtanke av{" "}
-          <a href="https://lillabosgarden.se" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-            Lilla Bosgården
-          </a>
-        </span>
-      </div>
     </div>
   )
 }
