@@ -14,7 +14,7 @@ export const dill: Crop = {
   spacing: '15-20 cm',
   rowSpacing: '25-30 cm',
   depth: '0.5-1 cm',
-  ph: { min: 5.5, max: 6.5, ideal: 6.0 },
+  ph: { min: 5.5, max: 7.5, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Dill vill ha minst 6 timmars sol per dag för bästa smak och tillväxt. I halvskugga blir plantan ranglig och smaken svagare.' },
     temperature: { min: 5, max: 28, ideal: '15-22°C', detail: 'Gror redan vid 5°C men trivs bäst runt 15-22°C. Går i frö SNABBT i värme över 25°C - då ger hon upp bladproduktionen och fokuserar på nästa generation.' },
@@ -85,8 +85,8 @@ export const dill: Crop = {
       { id: 'gronkal', name: 'Kålväxter', icon: 'vegetable', why: 'Dillens blommor lockar parasitsteklar som tar kålfjärilslarver. En fantastisk biologisk bekämpning.' },
     ],
     bad: [
-      { id: 'morot', name: 'Morot', icon: 'vegetable', why: 'Samma familj (flockblommiga) - delar sjukdomar och skadedjur. De kan dessutom korspollera, vilket påverkar morotens smak. Ja, dill skrämmer morotsflugan - men riskerna är större än vinsten.' },
-      { id: 'fankal', name: 'Fänkål', icon: 'vegetable', why: 'Nära släkting som korspollerar med dill. Resultatet blir varken fänkål eller dill utan något konstigt däremellan.' },
+      { id: 'morot', name: 'Morot', icon: 'vegetable', why: 'Samma familj (flockblommiga) - delar skadedjur som morotsflugan. Mogen dill kan dessutom hämma morotens rotutveckling via allelopatiska ämnen.' },
+      { id: 'fankal', name: 'Fänkål', icon: 'vegetable', why: 'Nära släkting i samma familj. Traditionellt anses de störa varandra - oavsett exakt mekanism bör de hållas åtskilda i odlingen.' },
     ],
   },
   rotation: {
@@ -98,9 +98,9 @@ export const dill: Crop = {
     goodAfterWhy: 'Baljväxter berikar jorden med kväve. Potatis lämnar lucker, väldränerad jord - perfekt för dillens pålrot.',
   },
   varieties: [
-    { name: 'Mammut', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Stora, frodiga blad. DEN mest odlade sorten i Sverige. Sen i frösättning, vilket ger längre skörd.' },
+    { name: 'Mammut', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Stora, frodiga blad och sen frösättning - ger längre skörd av bladverket. Populär sort hos Runåbergs.' },
     { name: 'Bouquet', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Kompakt sort som blommar tidigt. Perfekt om du vill ha dillkronor för inläggning. Bra i mindre utrymmen.' },
-    { name: 'Fernleaf', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Dvärgdill, bara 40-45 cm hög. Skapad för krukodling på balkong och fönsterbänk. Långsammare frösättning.' },
+    { name: 'Dukat', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Bladrikare än genomsnittet med sen frösättning. Aromatisk och välkänd sort hos svenska fröhandlare.' },
   ],
   problems: [
     { name: 'Bladlöss', symptom: 'Klibbiga stammar, deformerade blad, små gröna insekter.', fix: 'Spruta med såpvatten (1 msk flytande tvål per liter). Eller vänta - dillens blommor lockar nyckelpigor som älskar bladlöss!' },
@@ -131,13 +131,13 @@ export const dill: Crop = {
       'Så i omgångar med 3 veckors mellanrum för färsk dill hela sommaren - det viktigaste tipset!',
       'Kan sås från april (zon 1-3) till juni. Dillfrö gror redan vid 5°C',
       'Sår sig själv kraftigt - låt några plantor gå i frö så har du gratis dill nästa år',
-      'Fungerar bra i kruka (minst 5 liter) - välj dvärgssorten Fernleaf för bäst resultat',
+      'Fungerar bra i kruka (minst 5 liter) - välj en kompakt sort som Bouquet för bäst resultat',
     ],
     indoorWeeks: null,
   },
   seedSaving: {
     difficulty: 'Enkel',
-    type: 'Självpollinerare',
+    type: 'Insektspollinerad',
     biennial: false,
     description: 'Dill är en av de enklaste växter att spara frö från. Låt dillkronorna torka på plantan, samla in och du har frö för många år framåt.',
     steps: [
@@ -149,7 +149,7 @@ export const dill: Crop = {
       'Skaka påsen - fröet faller av självt',
       'Förvara svalt och torrt i märkt kuvert eller glasburk',
     ],
-    isolation: 'Kan korspollera med fänkål om de står nära varandra. Håll minst 300 meters avstånd för helt sortrena frö. Andra dillsorter korsar också - men resultatet blir bara lite annorlunda dill.',
+    isolation: 'Dill pollineras av insekter och korsar lätt med andra dillsorter. Håll minst 500 meters avstånd mellan sorter för sortrena frön. Korsar inte med fänkål eller morot trots samma familj.',
     storageYears: '3-5 år',
     tip: 'Dillkronor med frö är en klassiker i köket också - använd dem för att lägga in gurka innan du sparar resten som utsäde!',
   },
