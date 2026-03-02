@@ -8,54 +8,97 @@ export function GarlicIllustration({ size = 200 }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 200 200" fill="none">
       <circle cx="100" cy="100" r="90" fill={colors.accentLight} opacity="0.15" />
-      {/* Dried stem/neck at top */}
-      <path d="M100 60 L100 28" stroke="#B8864A" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M98 28 Q100 20 102 28" stroke="#B8864A" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-      {/* Dry leaf remnants curving from stem */}
-      <path d="M100 40 Q94 32 88 22" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
-      <path d="M100 40 Q106 32 112 22" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
-      <path d="M100 48 Q92 40 84 32" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-      <path d="M100 48 Q108 40 116 32" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-      {/* Main garlic bulb - papery white fill */}
-      <path d="M100 60 Q68 66 58 100 Q52 128 62 150 Q72 166 90 174 Q96 177 100 178 Q104 177 110 174 Q128 166 138 150 Q148 128 142 100 Q132 66 100 60 Z" fill="#F5F2EB" opacity="0.6" />
-      {/* Bulb outline */}
-      <path d="M100 60 Q68 66 58 100 Q52 128 62 150 Q72 166 90 174 Q96 177 100 178 Q104 177 110 174 Q128 166 138 150 Q148 128 142 100 Q132 66 100 60" stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-      {/* Clove division lines - the characteristic garlic segments */}
-      {/* Center clove */}
-      <path d="M100 62 Q100 100 100 175" stroke="#C4956A" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
-      {/* Left cloves */}
-      <path d="M88 66 Q76 100 72 140 Q70 158 82 172" stroke="#C4956A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-      <path d="M76 74 Q64 108 62 138 Q60 154 68 166" stroke="#C4956A" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
-      {/* Right cloves */}
-      <path d="M112 66 Q124 100 128 140 Q130 158 118 172" stroke="#C4956A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-      <path d="M124 74 Q136 108 138 138 Q140 154 132 166" stroke="#C4956A" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
-      {/* Clove bulge highlights - subtle 3D effect showing individual cloves */}
-      <path d="M82 90 Q78 115 80 140 Q82 155 90 168" stroke="#E8D4B0" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
-      <path d="M94 80 Q92 110 93 145 Q94 160 100 172" stroke="#E8D4B0" strokeWidth="1.5" strokeLinecap="round" opacity="0.2" />
-      <path d="M118 90 Q122 115 120 140 Q118 155 110 168" stroke="#E8D4B0" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
-      <path d="M106 80 Q108 110 107 145 Q106 160 100 172" stroke="#E8D4B0" strokeWidth="1.5" strokeLinecap="round" opacity="0.2" />
-      {/* Papery skin texture - horizontal wisps */}
-      <path d="M65 110 Q82 106 100 108 Q118 106 135 110" stroke="#C4956A" strokeWidth="0.6" strokeLinecap="round" opacity="0.15" />
-      <path d="M60 125 Q80 121 100 123 Q120 121 140 125" stroke="#C4956A" strokeWidth="0.6" strokeLinecap="round" opacity="0.12" />
-      <path d="M62 140 Q82 137 100 138 Q118 137 138 140" stroke="#C4956A" strokeWidth="0.6" strokeLinecap="round" opacity="0.1" />
-      {/* Neck detail where stem meets bulb */}
-      <path d="M90 64 Q100 60 110 64" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.3" />
-      <path d="M93 62 Q100 59 107 62" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.2" />
-      {/* Light highlight on left side */}
-      <path d="M72 95 Q70 115 72 135" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" opacity="0.15" />
-      {/* Small roots at bottom */}
-      <path d="M100 178 L100 192" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
-      <path d="M96 177 Q90 184 86 192" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-      <path d="M104 177 Q110 184 114 192" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
-      <path d="M93 176 Q86 182 80 188" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
-      <path d="M107 176 Q114 182 120 188" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
-      <path d="M98 177 Q96 186 94 192" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
-      <path d="M102 177 Q104 186 106 192" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
+      {/* Dried stem/neck - short, sturdy, from narrow top */}
+      <path d="M100 56 L100 28" stroke="#B8864A" strokeWidth="3" strokeLinecap="round" />
+      <path d="M97 28 Q100 18 103 28" stroke="#B8864A" strokeWidth="1.5" strokeLinecap="round" opacity="0.5" />
+      {/* Dry leaf remnants */}
+      <path d="M100 38 Q93 30 86 20" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+      <path d="M100 38 Q107 30 114 20" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+      <path d="M100 44 Q92 36 84 28" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
+      <path d="M100 44 Q108 36 116 28" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
+      {/* === Individual cloves as separate shapes === */}
+      {/* This is the key difference from onion - garlic is made of distinct segments */}
+      {/* Back cloves (behind, partially hidden) */}
+      {/* Back-left clove */}
+      <path
+        d="M80 62 Q58 80 50 110 Q44 138 54 158 Q62 170 80 176 Q90 178 96 172 Q88 150 86 120 Q84 90 88 66 Z"
+        fill="#F0EDE4" opacity="0.3"
+      />
+      <path
+        d="M80 62 Q58 80 50 110 Q44 138 54 158 Q62 170 80 176"
+        stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none"
+      />
+      {/* Back-right clove */}
+      <path
+        d="M120 62 Q142 80 150 110 Q156 138 146 158 Q138 170 120 176 Q110 178 104 172 Q112 150 114 120 Q116 90 112 66 Z"
+        fill="#F0EDE4" opacity="0.3"
+      />
+      <path
+        d="M120 62 Q142 80 150 110 Q156 138 146 158 Q138 170 120 176"
+        stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none"
+      />
+      {/* Front-left clove */}
+      <path
+        d="M90 58 Q66 74 56 106 Q48 134 58 156 Q66 168 84 176 Q94 180 100 178 Q96 154 94 124 Q92 90 96 62 Z"
+        fill="#F5F2EB" opacity="0.45"
+      />
+      <path
+        d="M90 58 Q66 74 56 106 Q48 134 58 156 Q66 168 84 176"
+        stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none"
+      />
+      {/* Front-right clove */}
+      <path
+        d="M110 58 Q134 74 144 106 Q152 134 142 156 Q134 168 116 176 Q106 180 100 178 Q104 154 106 124 Q108 90 104 62 Z"
+        fill="#F5F2EB" opacity="0.45"
+      />
+      <path
+        d="M110 58 Q134 74 144 106 Q152 134 142 156 Q134 168 116 176"
+        stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none"
+      />
+      {/* Front-center clove - the one facing the viewer */}
+      <path
+        d="M100 56 Q82 68 76 100 Q70 132 78 156 Q86 172 100 178 Q114 172 122 156 Q130 132 124 100 Q118 68 100 56 Z"
+        fill="#F8F5EE" opacity="0.5"
+      />
+      <path
+        d="M100 56 Q82 68 76 100 Q70 132 78 156 Q86 172 100 178 Q114 172 122 156 Q130 132 124 100 Q118 68 100 56"
+        stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none"
+      />
+      {/* Clove division grooves - darker creases between cloves */}
+      <path d="M90 60 Q74 88 68 124 Q64 152 78 172" stroke="#9B7A50" strokeWidth="1.2" strokeLinecap="round" opacity="0.35" />
+      <path d="M110 60 Q126 88 132 124 Q136 152 122 172" stroke="#9B7A50" strokeWidth="1.2" strokeLinecap="round" opacity="0.35" />
+      <path d="M82 62 Q62 92 56 128 Q52 154 66 170" stroke="#9B7A50" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
+      <path d="M118 62 Q138 92 144 128 Q148 154 134 170" stroke="#9B7A50" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
+      {/* Clove roundness highlights - convex light on each clove */}
+      <path d="M94 70 Q88 100 90 136 Q92 158 100 174" stroke="#E8D4B0" strokeWidth="2.5" strokeLinecap="round" opacity="0.3" />
+      <path d="M106 70 Q112 100 110 136 Q108 158 100 174" stroke="#E8D4B0" strokeWidth="2.5" strokeLinecap="round" opacity="0.25" />
+      <path d="M72 80 Q64 108 66 138 Q68 156 80 170" stroke="#E8D4B0" strokeWidth="2" strokeLinecap="round" opacity="0.2" />
+      <path d="M128 80 Q136 108 134 138 Q132 156 120 170" stroke="#E8D4B0" strokeWidth="2" strokeLinecap="round" opacity="0.2" />
+      {/* Papery skin wisps - broken, not smooth rings */}
+      <path d="M56 108 Q68 104 78 106" stroke="#C4956A" strokeWidth="0.6" strokeLinecap="round" opacity="0.15" />
+      <path d="M122 106 Q132 104 144 108" stroke="#C4956A" strokeWidth="0.6" strokeLinecap="round" opacity="0.15" />
+      <path d="M52 130 Q64 126 76 128" stroke="#C4956A" strokeWidth="0.5" strokeLinecap="round" opacity="0.12" />
+      <path d="M124 128 Q136 126 148 130" stroke="#C4956A" strokeWidth="0.5" strokeLinecap="round" opacity="0.12" />
+      {/* Neck - where cloves pinch together at the top */}
+      <path d="M86 60 Q93 56 100 56 Q107 56 114 60" stroke="#B8864A" strokeWidth="1.4" strokeLinecap="round" opacity="0.4" />
+      <path d="M90 58 Q95 55 100 55 Q105 55 110 58" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.25" />
+      {/* Light highlight on front-center clove */}
+      <path d="M88 90 Q84 112 86 134" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" opacity="0.15" />
+      {/* Flat base plate - characteristic of garlic */}
+      <path d="M82 176 Q90 180 100 180 Q110 180 118 176" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.3" />
+      {/* Dense root tuft from base plate */}
+      <path d="M100 180 L100 194" stroke="#B8864A" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+      <path d="M96 179 Q90 186 86 194" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
+      <path d="M104 179 Q110 186 114 194" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.3" />
+      <path d="M92 178 Q84 184 78 190" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
+      <path d="M108 178 Q116 184 122 190" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.2" />
+      <path d="M98 179 Q96 188 94 194" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
+      <path d="M102 179 Q104 188 106 194" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" />
       {/* Soil dots */}
-      <circle cx="76" cy="190" r="1.5" fill={colors.earth} opacity="0.2" />
-      <circle cx="124" cy="188" r="1" fill={colors.earth} opacity="0.15" />
-      <circle cx="90" cy="196" r="1.2" fill={colors.earth} opacity="0.2" />
-      <circle cx="112" cy="194" r="0.8" fill={colors.earth} opacity="0.15" />
+      <circle cx="76" cy="192" r="1.5" fill={colors.earth} opacity="0.2" />
+      <circle cx="124" cy="190" r="1" fill={colors.earth} opacity="0.15" />
+      <circle cx="90" cy="198" r="1.2" fill={colors.earth} opacity="0.2" />
+      <circle cx="112" cy="196" r="0.8" fill={colors.earth} opacity="0.15" />
     </svg>
   )
 }
@@ -64,23 +107,30 @@ export function GarlicIcon({ size = 48 }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
       {/* Dried stem */}
-      <path d="M24 12 L24 5" stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M24 8 Q21.5 5 19 3" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
-      <path d="M24 8 Q26.5 5 29 3" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
-      {/* Garlic bulb fill */}
-      <path d="M24 12 Q15 14 12 24 Q10 31 13 37 Q16 41 22 43 Q24 44 24 44 Q24 44 26 43 Q32 41 35 37 Q38 31 36 24 Q33 14 24 12 Z" fill="#F5F2EB" opacity="0.6" />
-      {/* Bulb outline */}
-      <path d="M24 12 Q15 14 12 24 Q10 31 13 37 Q16 41 22 43 Q24 44 24 44 Q24 44 26 43 Q32 41 35 37 Q38 31 36 24 Q33 14 24 12" stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-      {/* Clove division lines */}
-      <path d="M20 14 Q16 24 16 34 Q16 39 20 42" stroke="#C4956A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
-      <path d="M28 14 Q32 24 32 34 Q32 39 28 42" stroke="#C4956A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
-      <path d="M24 13 Q24 28 24 43" stroke="#C4956A" strokeWidth="0.6" strokeLinecap="round" opacity="0.2" />
+      <path d="M24 11 L24 4" stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" />
+      <path d="M24 7 Q21 4 18 2" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
+      <path d="M24 7 Q27 4 30 2" stroke="#B8864A" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
+      {/* Individual clove shapes - visible segments */}
+      {/* Left clove */}
+      <path d="M21 12 Q13 18 10 28 Q9 35 13 40 Q17 44 22 45" fill="#F0EDE4" opacity="0.35" />
+      <path d="M21 12 Q13 18 10 28 Q9 35 13 40 Q17 44 22 45" stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      {/* Right clove */}
+      <path d="M27 12 Q35 18 38 28 Q39 35 35 40 Q31 44 26 45" fill="#F0EDE4" opacity="0.35" />
+      <path d="M27 12 Q35 18 38 28 Q39 35 35 40 Q31 44 26 45" stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      {/* Center clove - front */}
+      <path d="M24 11 Q17 16 15 26 Q13 34 17 40 Q21 44 24 45 Q27 44 31 40 Q35 34 33 26 Q31 16 24 11 Z" fill="#F5F2EB" opacity="0.45" />
+      <path d="M24 11 Q17 16 15 26 Q13 34 17 40 Q21 44 24 45 Q27 44 31 40 Q35 34 33 26 Q31 16 24 11" stroke="#B8864A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      {/* Clove grooves */}
+      <path d="M21 13 Q16 22 15 32 Q14 39 20 44" stroke="#9B7A50" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      <path d="M27 13 Q32 22 33 32 Q34 39 28 44" stroke="#9B7A50" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
       {/* Clove highlight */}
-      <path d="M18 20 Q17 27 18 34" stroke="#E8D4B0" strokeWidth="1.5" strokeLinecap="round" opacity="0.25" />
+      <path d="M20 18 Q18 26 19 34" stroke="#E8D4B0" strokeWidth="1.5" strokeLinecap="round" opacity="0.25" />
+      {/* Base plate */}
+      <path d="M18 44 Q24 46 30 44" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
       {/* Roots */}
-      <path d="M24 44 L24 47" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
-      <path d="M22 43.5 Q20 45 18 47" stroke="#B8864A" strokeWidth="0.7" strokeLinecap="round" opacity="0.25" />
-      <path d="M26 43.5 Q28 45 30 47" stroke="#B8864A" strokeWidth="0.7" strokeLinecap="round" opacity="0.25" />
+      <path d="M24 46 L24 48" stroke="#B8864A" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      <path d="M22 45.5 Q19 47 17 48" stroke="#B8864A" strokeWidth="0.7" strokeLinecap="round" opacity="0.25" />
+      <path d="M26 45.5 Q29 47 31 48" stroke="#B8864A" strokeWidth="0.7" strokeLinecap="round" opacity="0.25" />
     </svg>
   )
 }
