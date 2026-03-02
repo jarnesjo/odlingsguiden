@@ -6,7 +6,7 @@ import { CROP_LIST } from "../../data/cropList"
 import { DIFFICULTY_INFO } from "../../data/difficulty"
 import { ZONE_INFO } from "../../data/zones"
 import { Icon } from "../icons/Icon"
-import { SearchIcon, DifficultyDot, CalendarIcon } from "../icons"
+import { SearchIcon, DifficultyDot } from "../icons"
 import { LogoCombined } from "../brand"
 import { SymbolSprout } from "../brand"
 import { CropIcon } from "../illustrations/CropIcon"
@@ -14,7 +14,7 @@ import styles from "./CropList.module.css"
 
 const SeasonView = lazy(() => import('./SeasonView').then(m => ({ default: m.SeasonView })))
 
-type Tab = 'alla' | 'sasong'
+type View = 'sasong' | Category
 
 interface CropListProps {
   userZone: Zone
@@ -28,11 +28,12 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
     'Zonanpassad odlingsguide för svenska trädgårdar. Djupa profiler för grönsaker, bär och kryddor med sortval, tidslinjer och skördetips.',
   )
 
-  const [tab, setTab] = useState<Tab>("alla")
+  const [view, setView] = useState<View>("grönsaker")
   const [search, setSearch] = useState("")
   const [filter, setFilter] = useState("Alla")
-  const [category, setCategory] = useState<Category>("grönsaker")
 
+  const isSeason = view === 'sasong'
+  const category = isSeason ? 'grönsaker' : view as Category
   const catCrops = CROP_LIST.filter((c) => c.category === category)
   const families = ["Alla", ...new Set(catCrops.map((c) => c.familyLatin))]
   const filtered = catCrops
@@ -55,57 +56,45 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
         </button>
       </div>
 
-      {/* Tab Toggle */}
-      <div className={styles.tabToggle}>
+      {/* Unified Toggle: Säsong | Grönsaker | Kryddor | Bär */}
+      <div className={styles.categoryToggle}>
         <button
-          className={`${styles.tabButton} ${tab === 'alla' ? styles.tabActive : styles.tabInactive}`}
-          onClick={() => setTab('alla')}
+          className={`${styles.categoryButton} ${isSeason ? styles.categoryActive : styles.categoryInactive}`}
+          style={{ "--cat-color": "var(--color-accent)" } as React.CSSProperties}
+          onClick={() => setView('sasong')}
         >
-          <span className={styles.tabIcon}>
-            <Icon name="vegetable" size={18} color={tab === 'alla' ? '#fff' : 'var(--color-text-muted)'} />
+          <span className={styles.categoryIcon}>
+            <Icon name="calendar" size={22} color={isSeason ? "#fff" : "var(--color-accent)"} />
           </span>
-          Alla grödor
+          <span>Säsong</span>
         </button>
-        <button
-          className={`${styles.tabButton} ${tab === 'sasong' ? styles.tabActive : styles.tabInactive}`}
-          onClick={() => setTab('sasong')}
-        >
-          <span className={styles.tabIcon}>
-            <CalendarIcon size={18} color={tab === 'sasong' ? '#fff' : 'var(--color-text-muted)'} />
-          </span>
-          Säsong
-        </button>
+        {CATEGORIES.filter((c) => !c.hidden).map((cat) => {
+          const isActive = view === cat.id
+          return (
+            <button
+              key={cat.id}
+              className={`${styles.categoryButton} ${isActive ? styles.categoryActive : styles.categoryInactive}`}
+              style={{ "--cat-color": cat.color } as React.CSSProperties}
+              onClick={() => {
+                setView(cat.id)
+                setFilter("Alla")
+              }}
+            >
+              <span className={styles.categoryIcon}>
+                <Icon name={cat.icon} size={22} color={isActive ? "#fff" : cat.color} />
+              </span>
+              <span>{cat.label}</span>
+            </button>
+          )
+        })}
       </div>
 
-      {tab === 'sasong' ? (
+      {isSeason ? (
         <Suspense fallback={<div style={{ textAlign: 'center', padding: 40, color: 'var(--color-text-muted)' }}>Laddar...</div>}>
           <SeasonView userZone={userZone} onSelect={onSelect} />
         </Suspense>
       ) : (
         <>
-          {/* Category Toggle */}
-          <div className={styles.categoryToggle}>
-            {CATEGORIES.filter((c) => !c.hidden).map((cat) => {
-              const isActive = category === cat.id
-              return (
-                <button
-                  key={cat.id}
-                  className={`${styles.categoryButton} ${isActive ? styles.categoryActive : styles.categoryInactive}`}
-                  style={{ "--cat-color": cat.color } as React.CSSProperties}
-                  onClick={() => {
-                    setCategory(cat.id)
-                    setFilter("Alla")
-                  }}
-                >
-                  <span className={styles.categoryIcon}>
-                    <Icon name={cat.icon} size={22} color={isActive ? "#fff" : cat.color} />
-                  </span>
-                  <span>{cat.label}</span>
-                </button>
-              )
-            })}
-          </div>
-
           {/* Search */}
           <div className={styles.searchWrapper}>
             <input
