@@ -10,15 +10,15 @@ export const bjornbar: Crop = {
   lifespan: '15-25 år',
   difficulty: 'Enkel',
   difficultyWhy: 'Kraftig och livskraftig buske som klarar sig med minimal skötsel. Björnbäret är en av de mest tacksamma bärbuskarna - hon växer villigt, ger riklig skörd och ställer få krav. Enda utmaningen är att hålla henne i schack.',
-  zones: { outdoor: [1, 2, 3, 4, 5, 6], indoor: null, greenhouse: null },
+  zones: { outdoor: [1, 2, 3, 4], indoor: null, greenhouse: null },
   days: '60-80',
   spacing: '200-300 cm',
   rowSpacing: '250-350 cm',
   depth: 'Plantera i samma djup som i krukan',
-  ph: { min: 5.5, max: 7.0, ideal: 6.0 },
+  ph: { min: 5.5, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Björnbär älskar sol och ger sötast bär i fullt solljus. Men hon klarar halvskugga bättre än de flesta - i naturen växer hon ju gärna i skogsbryn. I södra Sverige uppskattar hon lite eftermiddagsskugga under hettan.' },
-    temperature: { min: -25, max: 35, ideal: '18-25°C', detail: 'Härdig och tålig. De flesta sorter klarar -20 till -25°C i vintervila. Trivs bäst runt 20°C under växtsäsongen. Blommar i juni-juli, så sent frostskador är sällsynta.' },
+    temperature: { min: -20, max: 35, ideal: '18-25°C', detail: 'Härdig och tålig. De flesta sorter klarar -15 till -20°C i vintervila. I zon 3-4 kan det vara värt att lägga ner rankorna och täcka inför vintern. Blommar i juni-juli, så sent frostskador är sällsynta.' },
     wind: { level: 'Måttligt känslig', detail: 'De långa rankorna kan piska och skadas i kraftig vind. Spaljering mot en mur eller staket ger bäst resultat - busken får vindskydd och solens värme reflekteras från väggen. En drömsituation för björnbäret!' },
   },
   watering: {
@@ -89,7 +89,7 @@ export const bjornbar: Crop = {
     ],
     bad: [
       { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Bägge är känsliga för verticillium-svamp. Håll god distans - minst 3 meter.' },
-      { id: 'hallon', name: 'Hallon', icon: 'berry', why: 'Nära släktingar som delar sjukdomar (skottsjuka, gråmögel, virus). Håll minst 50 meter avstånd om möjligt.' },
+      { id: 'hallon', name: 'Hallon', icon: 'berry', why: 'Nära släktingar som delar sjukdomar (gråmögel, virus). Plantera i separata rabatter, gärna med minst 3-5 meters avstånd.' },
       { id: 'jordgubbar', name: 'Jordgubbar', icon: 'berry', why: 'Samma familj, samma sjukdomar. Verticillium och rotröta sprids lätt mellan dem.' },
     ],
   },
@@ -102,15 +102,15 @@ export const bjornbar: Crop = {
     goodAfterWhy: 'Efter att busken tagits bort (15+ år) är jorden utarmad och behöver byggas upp. Baljväxter och gröngödsling återställer strukturen och näringen.',
   },
   varieties: [
-    { name: 'Loch Ness', zones: [1, 2, 3, 4, 5], note: 'Taggfri! Den mest populära sorten i Sverige. Upprätt växtsätt, stora söta bär. Ger skörd redan andra året.' },
-    { name: 'Chester', zones: [1, 2, 3, 4, 5, 6], note: 'Taggfri och extra härdig - klarar zon 6. Kraftig buske med riklig skörd. Lite senare mognad.' },
+    { name: 'Loch Ness', zones: [1, 2], note: 'Taggfri! Den mest populära sorten i Sverige. Upprätt växtsätt, stora söta bär. Ger skörd redan andra året. Behöver skyddad, varm plats.' },
+    { name: 'Chester', zones: [1, 2, 3], note: 'Taggfri och den härdigaste av de taggfria sorterna. Kraftig buske med riklig skörd. Lite senare mognad.' },
     { name: 'Black Satin', zones: [1, 2, 3, 4], note: 'Taggfri med halvupprätt växtsätt. Mycket stora, glänsande bär. Behöver bra stöd.' },
-    { name: 'Navaho', zones: [1, 2, 3, 4], note: 'Taggfri, upprätt buske som nästan klarar sig utan spaljering. Söta bär med bra lagringskvalitet.' },
-    { name: 'Triple Crown', zones: [1, 2, 3, 4, 5], note: 'Taggfri storvuxen sort med fantastisk smak. Namnet syftar på smak, produktivitet och vigor - kronan bland björnbär!' },
+    { name: 'Navaho', zones: [1, 2], note: 'Taggfri, upprätt buske som nästan klarar sig utan spaljering. Söta bär med bra lagringskvalitet. Vill ha varmt läge.' },
+    { name: 'Triple Crown', zones: [1, 2, 3], note: 'Taggfri storvuxen sort med fantastisk smak. Namnet syftar på smak, produktivitet och vigor - kronan bland björnbär!' },
   ],
   problems: [
     { name: 'Gråmögel (Botrytis)', symptom: 'Gråludet mögel på mogna bär, speciellt i fuktigt väder. Bären blir mjuka och grötiga.', fix: 'God luftcirkulation genom gallring och spaljering. Plocka bär ofta och lämna aldrig övermogna. Vattna vid basen, inte ovanifrån. Ta bort angripna bär direkt.' },
-    { name: 'Skottsjuka', symptom: 'Purpurfärgade fläckar på skotten som sprider sig. Skotten vissnar, barken spricker.', fix: 'Klipp bort och bränn angripna skott direkt. Förebygg med god gallring och luftcirkulation. Desinficera sekateuren mellan klipp.' },
+    { name: 'Björnbärsrost', symptom: 'Orangegula pustlar på bladens undersida, gula fläckar ovanpå. Bladen kan falla tidigt vid kraftigt angrepp.', fix: 'Ta bort och förstör angripna blad. God luftcirkulation genom gallring och spaljering. Undvik att vattna bladen ovanifrån.' },
     { name: 'Hallonänger (Byturus tomentosus)', symptom: 'Larver i bären - vita maskar ~5 mm som dyker upp när bäret öppnas. Otrevligt men ofarligt.', fix: 'Feromonfällor i maj-juni. Fin maska-nät under blomning. Plocka och släng angripna bär. Björnbär drabbas oftast mildare än hallon.' },
   ],
   goodToKnow: [
