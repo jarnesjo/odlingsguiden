@@ -1,0 +1,79 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 31. Kryddprofiler batch 1 - lagerblad, mejram, libbsticka klara.
+    14 av 18 kryddor nu klara, 2 kvar (ramslok, dragon).
+
+    Klart och committat:
+    - Lagerblad profil (feat(crops): add lagerblad crop profile)
+    - Mejram profil + illustration (feat(crops): add mejram crop profile and illustration)
+    - Libbsticka profil + illustration (feat(crops): add libbsticka crop profile and illustration)
+    - Registrerat alla tre i ikonsystemet (fix(ui): register lagerblad, mejram, libbsticka in icon system)
+
+    Alla tre faktagranskade via research-agenter (svenska + internationella kallor).
+    Encoding-check: inga en-dashes, korrekt aao, inga TypeScript-fel.
+
+    Pa disk (ocommittade illustrationer for batch 2):
+    - TarragonIllustration.tsx (dragon)
+    - WildGarlicIllustration.tsx (ramslok)
+
+    Commits (4 st):
+    - 468bb56 feat(crops): add lagerblad crop profile
+    - f379496 feat(crops): add mejram crop profile and illustration
+    - ae84008 feat(crops): add libbsticka crop profile and illustration
+    - cd3cc99 fix(ui): register lagerblad, mejram, libbsticka in icon system
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+  src:
+    - "src/data/crops/index.ts (48 profiler - lagerblad, mejram, libbsticka nya)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (48 illustrationer + CropGraphic + CropIcon)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Batch 2 (2 st): Skapa profiler for ramslok och dragon"
+  - "Illustrationer redan pa disk for bada - behover bara committas med profilerna"
+  - "Registrera ramslok, dragon i crops/index, cropList, CropGraphic, CropIcon, illustrations/index"
+  - "Uppdatera ROADMAP.md nar alla 18 kryddor ar klara"
+
+context:
+  decisions:
+    - "Lagerblad: Avancerad svarighet pga overvintringsbehovet i kruka"
+    - "Lagerblad: outdoor: null (klarar inte svensk vinter utomhus)"
+    - "Mejram: Ettarig i Sverige (perennial: false), till skillnad fran oregano"
+    - "Libbsticka: Enkel + alla zoner (1-8), extremt hardig perenn"
+    - "Libbsticka: Hog skord per kvm (0.5-1.5 kg) - hon ar en massproducent"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "2 ocommittade illustrationsfiler pa disk (dragon, ramslok)"
+  - "CropPage chunk 604 KB"
+  - "Lighthouse Accessibility 84"
