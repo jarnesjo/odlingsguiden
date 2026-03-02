@@ -1,0 +1,99 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 23. Omdesignade vitloksillustrationen.
+
+    Vitloksillustrationen sag ut som en vanlig lok (slat droppform).
+    Tre iterationer:
+    1. Forsok med klyftlinjer och bulor pa konturen - for subtilt
+    2. Bredare/rundare form med undulationer - fortfarande for likt lok
+    3. Helt ny approach: individuella klyftor som separata SVG-former
+       - 5 klyftor (2 bak, 2 fram-sidor, 1 front-center)
+       - Morka faror mellan klyftor
+       - Platt basplatta (karaktaristiskt for vitlok)
+       - Smal hals dar klyftor konvergerar
+
+    Ikonen ocksa omritad med 3 synliga klyftor.
+
+    Research: botaniska skillnader vitlok vs lok:
+    - Vitlok: kantig, oregelbunden, klyftor syns som utbuktningar
+    - Lok: slat, symmetrisk, rund, inga utbuktningar
+
+    Commits (1 st):
+    - fix(illustrations): redesign garlic with individual clove shapes
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (URL-routing)
+    - Recharts 3.7 (NutritionChart, lazy-loaded)
+    - "@fontsource/fraunces + @fontsource/lora (latin + latin-ext only)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/guides/performance.md
+    - docs/research/f1-frodebatten.md
+    - docs/research/faktacheck-2026-03-01.md
+    - docs/research/faktacheck-2026-03-02.md
+    - docs/plans/
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts
+    - src/data/cropList.ts
+    - src/data/cropUtils.ts
+    - src/data/cropSlugs.ts
+    - "src/data/crops/index.ts (43 profiler)"
+    - "src/data/crops/*.ts (43 aktiva profiler)"
+    - "src/components/illustrations/ (43 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/brand/symbols/ (SymbolSprout, SymbolLeaf)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/ + genererar sitemap"
+  - "npm run sitemap  # Generera sitemap.xml separat"
+  - "npx tsc --noEmit # Typkontroll utan output"
+
+next_steps:
+  - "Faktacheck batch 4: artor, bondbona, sparris, sockermajs"
+  - "Faktacheck batch 5: hallon, jordgubbar, svarta vinbar, roda vinbar"
+  - "Faktacheck batch 6: krusbar, bjornbar, mullbar, rabarber"
+  - "Faktacheck batch 7: basilika, persilja, dill, graslok"
+  - "Faktacheck batch 8: timjan, mynta, rosmarin, oregano"
+  - "Skriv sammanfattande faktacheck-rapport for batch 1-3"
+
+context:
+  decisions:
+    - "Vitloksillustrationen ritad med individuella klyftor som separata SVG-paths istallet for en slat kontur"
+    - "Tre iterationer kravdes - subtila andringar racker inte, behovde helt ny approach"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Aldrig unicode-pilar i commit-meddelanden"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "23 av 43 profiler faktacheckade, 20 aterstar (5 batchar)"
+  - "CropPage chunk 604 KB - kan fixas med dynamic import per profil"
+  - "Lighthouse Accessibility 84 - kontrastproblem"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
