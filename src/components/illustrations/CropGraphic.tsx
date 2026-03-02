@@ -61,6 +61,9 @@ import { PakChoiIllustration, PakChoiIcon } from './PakChoiIllustration'
 import { BrusselsSproutsIllustration, BrusselsSproutsIcon } from './BrusselsSproutsIllustration'
 import { JerusalemArtichokeIllustration, JerusalemArtichokeIcon } from './JerusalemArtichokeIllustration'
 import { FennelIllustration, FennelIcon } from './FennelIllustration'
+import { CeleryIllustration, CeleryIcon } from './CeleryIllustration'
+import { RotselleriIllustration, RotselleriIcon } from './RotselleriIllustration'
+import { SavoykalIllustration, SavoykalIcon } from './SavoykalIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -129,6 +132,9 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   brysselkal: { large: BrusselsSproutsIllustration, small: BrusselsSproutsIcon },
   jordartskocka: { large: JerusalemArtichokeIllustration, small: JerusalemArtichokeIcon },
   fankal: { large: FennelIllustration, small: FennelIcon },
+  selleri: { large: CeleryIllustration, small: CeleryIcon },
+  rotselleri: { large: RotselleriIllustration, small: RotselleriIcon },
+  savoykal: { large: SavoykalIllustration, small: SavoykalIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {

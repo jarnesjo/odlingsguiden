@@ -60,6 +60,9 @@ import { jordartskocka } from './jordartskocka'
 import { brysselkal } from './brysselkal'
 import { pakChoi } from './pak-choi'
 import { fankal } from './fankal'
+import { selleri } from './selleri'
+import { rotselleri } from './rotselleri'
+import { savoykal } from './savoykal'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -123,4 +126,7 @@ export const CROPS: Record<string, Crop> = {
   brysselkal,
   'pak-choi': pakChoi,
   fankal,
+  selleri,
+  rotselleri,
+  savoykal,
 }

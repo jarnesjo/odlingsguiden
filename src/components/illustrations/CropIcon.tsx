@@ -61,6 +61,9 @@ import { PakChoiIcon } from './PakChoiIllustration'
 import { BrusselsSproutsIcon } from './BrusselsSproutsIllustration'
 import { JerusalemArtichokeIcon } from './JerusalemArtichokeIllustration'
 import { FennelIcon } from './FennelIllustration'
+import { CeleryIcon } from './CeleryIllustration'
+import { RotselleriIcon } from './RotselleriIllustration'
+import { SavoykalIcon } from './SavoykalIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -129,6 +132,9 @@ const ICONS: Record<string, ComponentType<SizeProps>> = {
   brysselkal: BrusselsSproutsIcon,
   jordartskocka: JerusalemArtichokeIcon,
   fankal: FennelIcon,
+  selleri: CeleryIcon,
+  rotselleri: RotselleriIcon,
+  savoykal: SavoykalIcon,
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {

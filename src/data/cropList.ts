@@ -4,8 +4,8 @@ export const CROP_LIST: CropListEntry[] = [
   // Grönsaker - Apiaceae (Flockblommiga)
   { id: 'morot', name: 'Morot', icon: 'morot', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'palsternacka', name: 'Palsternacka', icon: 'palsternacka', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'selleri', name: 'Selleri', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
-  { id: 'rotselleri', name: 'Rotselleri', icon: 'vegetable', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
+  { id: 'selleri', name: 'Selleri', icon: 'selleri', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker' },
+  { id: 'rotselleri', name: 'Rotselleri', icon: 'rotselleri', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Avancerad', category: 'grönsaker' },
   { id: 'fankal', name: 'Fänkål', icon: 'fankal', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Medel', category: 'grönsaker' },
   // Grönsaker - Solanaceae (Potatisväxter)
   { id: 'tomat', name: 'Tomat', icon: 'tomat', family: 'Potatisväxter', familyLatin: 'Solanaceae', difficulty: 'Medel', category: 'grönsaker' },
@@ -23,7 +23,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'kinakal', name: 'Kinakål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker', locked: true },
   { id: 'brysselkal', name: 'Brysselkål', icon: 'brysselkal', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'kalrabbi', name: 'Kålrabbi', icon: 'kalrabbi', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'savoykal', name: 'Savoykål', icon: 'vegetable', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
+  { id: 'savoykal', name: 'Savoykål', icon: 'savoykal', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'majrova', name: 'Majrova', icon: 'majrova', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'grönsaker' },
   // Grönsaker - Cucurbitaceae (Gurkväxter)
   { id: 'squash', name: 'Squash', icon: 'squash', family: 'Gurkväxter', familyLatin: 'Cucurbitaceae', difficulty: 'Enkel', category: 'grönsaker' },
