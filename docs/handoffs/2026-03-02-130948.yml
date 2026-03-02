@@ -1,0 +1,134 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 27. Sasongsvy v1 implementerad + odlingszoner faktacheckade + routing refaktorerad.
+
+    Sasongsvy v1 (roadmap 2.3, markerad klar):
+    - monthParser.ts: parsar svenska manadsstrangar till nummer-arrayer
+    - seasonData.ts: aggregerar timeline-data per manad/zon, 9 aktivitetsgrupper
+    - SeasonView.tsx + CSS: manadsnavigering, gruppkort, tom-state
+    - Integrerad i CropList med unified toggle: Sasong | Gronsaker | Kryddor | Bar
+    - Lazy-loaded SeasonView chunk (5.19 KB)
+
+    Navigeringsrefaktor:
+    - Forst tab-toggle + category-toggle (tva rader) -> slagen ihop till en rad
+    - Sedan searchParams (?vy=sasong&manad=3) -> rena URLer
+    - / = Gronsaker, /kryddor, /bar, /sasong, /sasong/mars
+    - Tillbakanavigering bevarar vy via location.state
+
+    Odlingszoner faktacheckade:
+    - Kritiskt: Oland/Gotland flyttade fran zon 2 till zon 1
+    - Kritiskt: Malardalen flyttad fran zon 4 till zon 2
+    - Alla regionbeskrivningar uppdaterade med representativa stader
+    - Zon 1 frostdatum justerat
+    - Research sparad: docs/research/odlingszoner-faktacheck.md
+    - Kanda brister i roadmapen avbockade
+
+    Paborjat: 2.1 Fler profiler - batch kryddor (salvia, koriander, citronmeliss)
+    - Research-agenter startade men inte klara an
+    - Profilformat och illustrationsmonstret kartlagt
+    - Inga filer skrivna annu
+
+    Commits (8 st):
+    - feat(season): add month parser and season data aggregation
+    - feat(season): add season view with tab toggle on start page
+    - refactor(ui): merge tab toggle into category toggle
+    - docs(roadmap): mark 2.3 sasongsvy v1 as done
+    - docs(research): add growing zone fact-check report
+    - fix(data): fact-check growing zone regions and frost dates
+    - fix(ui): preserve view and month on back navigation
+    - refactor(routing): clean URLs for views and season months
+    - docs(roadmap): mark zone fact-check and season view as resolved
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (URL-routing med rena URLer)
+    - Recharts 3.7 (NutritionChart, lazy-loaded)
+    - "@fontsource/fraunces + @fontsource/lora (latin + latin-ext only)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/guides/performance.md
+    - docs/plans/2.3-sasongsvy.yml
+    - "docs/research/faktacheck-*.md (8 rapporter)"
+    - docs/research/odlingszoner-faktacheck.md
+    - docs/research/f1-frodebatten.md
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts
+    - src/data/cropList.ts
+    - src/data/cropUtils.ts
+    - src/data/cropSlugs.ts
+    - "src/data/crops/index.ts (43 profiler)"
+    - "src/data/crops/*.ts (43 aktiva profiler, alla faktacheckade)"
+    - src/utils/monthParser.ts (NY - parsar manadsstrangar)
+    - src/utils/seasonData.ts (NY - aggregerar sasongsdata)
+    - "src/components/illustrations/ (43 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/pages/SeasonView.tsx (NY)
+    - src/components/pages/SeasonView.module.css (NY)
+    - src/components/brand/symbols/ (SymbolSprout, SymbolLeaf)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/ + genererar sitemap"
+  - "npm run sitemap  # Generera sitemap.xml separat"
+  - "npx tsc --noEmit # Typkontroll utan output"
+
+next_steps:
+  - "Skapa profil + illustration: Salvia (Lamiaceae, perenn krydda)"
+  - "Skapa profil + illustration: Koriander (Apiaceae, ettarig krydda)"
+  - "Skapa profil + illustration: Citronmeliss (Lamiaceae, perenn krydda)"
+  - "Fortsatt med fler profiler fran 2.1 (27 gronsaker, 12 bar, 8 kryddor kvar)"
+  - "Research for de tre kryddorna startad men ej klar - kors med webbkallor"
+
+context:
+  decisions:
+    - "Sasongsvy: unified toggle (Sasong | Gronsaker | Kryddor | Bar) istallet for separata rader"
+    - "Rena URLer: /sasong/mars istallet for ?vy=sasong&manad=3"
+    - "Tillbakanavigering via location.state (inte searchParams)"
+    - "SeasonView lazy-loaded for code-splitting"
+    - "Frostfria dagar behalles som begrepp (mer relevant for gronsaker an vegetationsperiod)"
+    - "Odlingszoner: Oland/Gotland ar zon 1, Malardalen ar zon 2"
+  routing:
+    - "/ -> Gronsaker (default vy)"
+    - "/kryddor -> Kryddor-vy"
+    - "/bar -> Bar-vy"
+    - "/sasong -> Sasongsvy (aktuell manad)"
+    - "/sasong/mars -> Sasongsvy, mars"
+    - "/:cropSlug -> Grodprofil (som forut)"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "Aldrig unicode escapes"
+    - "All text pa svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "F1-hybrider ska markeras explicit"
+    - "Max-width 480px, mobile-first"
+
+known_issues:
+  - "CropPage chunk 604 KB - kan fixas med dynamic import per profil"
+  - "Lighthouse Accessibility 84 - kontrastproblem"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
+  - "Timeline-data finns bara for zon 1, 4, 6 - narmaste zon anvands"
+  - "Bundle size >500KB pga Recharts"
