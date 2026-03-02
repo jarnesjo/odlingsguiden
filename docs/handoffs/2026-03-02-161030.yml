@@ -1,0 +1,75 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 33. Tre saker klara:
+    1. PartialSunIcon (halvskugga) - sol med molnbage, registrerad som
+       'partial-sun' (ramslok) och 'sun-half' (libbsticka).
+    2. CMD+K / Ctrl+K fokuserar sokinputet i listvyn.
+    3. 1-4 tangentgenvaagar byter kategori (CMD+1-4 i sokinputet).
+
+    Commits (8 st):
+    - cabe8a2 feat(ui): add PartialSunIcon for halvskugga crops
+    - c30055f fix(ui): redesign PartialSunIcon - sol med molnbage
+    - dcea4dd feat(ui): add CMD+K keyboard shortcut to focus search
+    - 295b405 fix(ui): use type=search for native Escape-clear
+    - 363e6af style(ui): restyle search clear button position and look
+    - bd6a9af style(ui): align search clear button with input padding
+    - bb0cd49 fix(ui): show Ctrl+K on Windows/Linux, ⌘K on Mac
+    - 8b1621f feat(ui): add 1-4 keyboard shortcuts to switch category
+    - 880ad28 feat(ui): CMD+1-4 switches category from search input
+    - 75d67c9 docs(roadmap): add keyboard shortcuts to 2.5 Sokfunktion
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+  src:
+    - "src/data/crops/index.ts (50 profiler)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (50 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (PartialSunIcon ny)"
+    - "src/components/pages/CropList.tsx (keyboard shortcuts nya)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Gronsaker: 28 av ~43 klara - fortsatt med fler gronsaksprofiler"
+  - "Bar: 7 av ~16 klara - fortsatt med fler barprofiler"
+  - "2.4 Frukt som kategori - nytt datamodell + apple som forsta profil"
+  - "2.5 Sokfunktion - sok tvars over kategorier (CMD+K-basen finns)"
+
+context:
+  decisions:
+    - "PartialSunIcon: sol med molnbage (inte halverad sol eller skuggkant)"
+    - "Keyboard shortcuts: rena siffror utanfor input, CMD+siffra i input"
+    - "type=search for native Escape-clear istallet for manuell hantering"
+    - "navigator.platform for plattformsspecifik kbd-hint"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "CropPage chunk 604 KB"
+  - "Lighthouse Accessibility 84"
