@@ -38,6 +38,8 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
 
   const isSeason = view === 'sasong'
 
+  const visibleCategories = CATEGORIES.filter((c) => !c.hidden)
+
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
@@ -46,11 +48,22 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
           searchRef.current.focus()
           searchRef.current.select()
         }
+        return
+      }
+
+      // 1-4 byter kategori (ignoreras om input har fokus)
+      if (document.activeElement === searchRef.current) return
+      if (e.metaKey || e.ctrlKey || e.altKey) return
+      const views: View[] = ['sasong', ...visibleCategories.map((c) => c.id as Category)]
+      const idx = Number(e.key) - 1
+      const target = views[idx]
+      if (target) {
+        onViewChange(target)
       }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isSeason])
+  }, [isSeason, onViewChange, visibleCategories])
   const category = isSeason ? 'grönsaker' : view as Category
   const catCrops = CROP_LIST.filter((c) => c.category === category)
   const families = ["Alla", ...new Set(catCrops.map((c) => c.familyLatin))]
@@ -86,7 +99,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
           </span>
           <span>Säsong</span>
         </button>
-        {CATEGORIES.filter((c) => !c.hidden).map((cat) => {
+        {visibleCategories.map((cat) => {
           const isActive = view === cat.id
           return (
             <button
