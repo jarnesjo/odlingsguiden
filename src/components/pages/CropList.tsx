@@ -47,9 +47,6 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
           searchRef.current.select()
         }
       }
-      if (e.key === 'Escape' && document.activeElement === searchRef.current) {
-        searchRef.current?.blur()
-      }
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
@@ -120,7 +117,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
           <div className={styles.searchWrapper}>
             <input
               ref={searchRef}
-              type="text"
+              type="search"
               placeholder={`Sök ${activeCat.label.toLowerCase()}...`}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
