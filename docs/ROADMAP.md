@@ -276,6 +276,7 @@ Ingen prioritet. Plockas upp när det passar.
 
 - F1-hybrider utbildningssektion
 - Plastfritt-perspektiv i odlingstips - lyft alternativ till fiberduk, markduk och plastbaserade material. Granris, halm, jutesäckar, stärkelsebaserade dukar (bio-nedbrytbara). Gå igenom profiler och komplettera med gröna alternativ där det finns. Vara ärliga när plast fortfarande är bästa valet (t.ex. fina insektsnät).
+- Biologisk balans & bondepraktika - gammal odlingsvisdom om att jobba med ekosystemet istället for mot det. Fångstgrodor (trap crops) som lockar skadedjur bort fran huvudgrodorna. Insektbanker (insectary plants) som drar in nyttodjur. "Is i magen"-principen: lat bladlossen komma forst sa nyckelpiggorna foljer efter. Konkreta exempel: silvertistel som bladlusfalla, tagetes mot nematoder, honungsort som lockar syrflar, brannasslan som insektbank, ronn nara appeltrad, dillkronor som lockar parasitsteklar, fagelholkar i frukttrardgarden, sten/vedhog for overvintrande nyttodjur. Kan bli: (1) utokad companion-sektion med "nyttosamplanering" utover good/bad, (2) ny sektion "Biologisk balans" i profiler, (3) fristående guide i docs/guides/.
 
 ### Funktioner
 
