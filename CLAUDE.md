@@ -264,15 +264,15 @@ Background: `docs/research/f1-frodebatten.md`
 - One commit per logical change — if in doubt, split it
 - Always stage files explicitly, never `git add .`
 - Commit automatically without asking, but always as separate commits per scope
-- Never use heredoc or `$()` substitution in commit commands
-- Never use empty `-m ""` arguments (triggers security hooks)
-- Never use unicode arrows `→` or other special characters in commit messages (triggers "quoted characters" security check and blocks auto-commit). Use `->` instead.
-- For multi-line messages with Co-Authored-By, embed the newline in the last `-m`:
+- Use multiple `-m` flags: title, body (optional), co-author
+- Co-author line goes in its own `-m` flag last
 
 ```text
-git commit -m "type(scope): title" -m "Body text
-
-Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+git commit -m "fix(crops): fact-check artor profile" \
+  -m "Norli: mark as sockerart (mange tout)
+Delikett: rename to Brytsockerart
+Alderman: height 1.5-2m, heirloom 1891" \
+  -m "Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
 ```
 
 ### Commit message format
