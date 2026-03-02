@@ -23,7 +23,7 @@
 
 .tooltip {
   position: absolute;
-  top: 110%;
+  top: calc(100% + 10px);
   left: 50%;
   transform: translateX(-50%);
   background: var(--color-text);

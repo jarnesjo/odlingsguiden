@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import type { Difficulty } from '../../data/types'
 import { DIFFICULTY_INFO } from '../../data/difficulty'
 import { DifficultyDot } from '../icons'
@@ -11,11 +11,23 @@ interface DifficultyBadgeProps {
 
 export function DifficultyBadge({ difficulty, why }: DifficultyBadgeProps) {
   const [showTip, setShowTip] = useState(false)
+  const wrapperRef = useRef<HTMLDivElement>(null)
   const info = DIFFICULTY_INFO[difficulty]
   const dotColor = info.color === '#B7E4C7' ? '#3D6B4F' : info.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
 
+  useEffect(() => {
+    if (!showTip) return
+    const handleClick = (e: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+        setShowTip(false)
+      }
+    }
+    document.addEventListener('click', handleClick)
+    return () => document.removeEventListener('click', handleClick)
+  }, [showTip])
+
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} ref={wrapperRef}>
       <button
         className={styles.pill}
         style={{ '--badge-color': info.color } as React.CSSProperties}
