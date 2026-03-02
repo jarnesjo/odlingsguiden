@@ -97,9 +97,9 @@ export const artor: Crop = {
   },
   varieties: [
     { name: 'Kelvedon Wonder', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassikern bland märgärtor. Låg, kompakt, ger bra i alla zoner.' },
-    { name: 'Norli', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Svensk favorit. Tidig och pålitlig, perfekt för kortare säsonger.' },
-    { name: 'Alderman', zones: [1, 2, 3, 4, 5], note: 'Hög klätterart (1,5 m). Stora baljor med fantastisk smak. Behöver ordentligt stöd.' },
-    { name: 'Sockerärt Delikett', zones: [1, 2, 3, 4, 5, 6], note: 'Sockerärt - du äter hela baljan. Söt och krispig direkt från busken.' },
+    { name: 'Norli', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Sockerärt (mange tout) - populär nordisk sort. Tidig (54 dagar) och pålitlig, perfekt för kortare säsonger.' },
+    { name: 'Alderman', zones: [1, 2, 3, 4, 5], note: 'Hög klätterart (1,5-2 m). Stora baljor med fantastisk smak. Behöver ordentligt stöd. Kulturarvssort från 1891.' },
+    { name: 'Brytsockerärt Delikett', zones: [1, 2, 3, 4, 5, 6], note: 'Brytsockerärt (snap pea) - du äter hela den knubbiga baljan. Söt och krispig direkt från busken.' },
   ],
   problems: [
     { name: 'Mjöldagg', symptom: 'Vitt, mjölaktigt belägg på bladen, oftast sent i säsongen', fix: 'Vattna vid roten, aldrig ovanifrån. God luftcirkulation - inte för tätt. Drabbade blad kan tas bort.' },
@@ -149,7 +149,7 @@ export const artor: Crop = {
       'Torka ärtorna ytterligare en vecka på tidningspapper inomhus',
       'Förvara i papperspåse eller glasburk på sval, torr plats',
     ],
-    isolation: 'Självpollinerare - olika sorter kan odlas nära varandra utan problem. Minst 1 m avstånd räcker.',
+    isolation: 'Självpollinerare - olika sorter kan odlas nära varandra utan problem. Minst 3-5 m avstånd rekommenderas för att undvika att humlor korsar sorterna.',
     storageYears: '3-4 år',
     tip: 'Sparade ärtfrön håller sig längre än de flesta grödors frön. Perfekt nybörjarfrö att börja spara!',
   },
