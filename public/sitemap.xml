@@ -66,6 +66,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/r%C3%B6dk%C3%A5l</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/broccoli</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
@@ -77,6 +82,11 @@
   </url>
   <url>
     <loc>https://lillabosgarden.se/odlingsguiden/k%C3%A5lrabbi</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/majrova</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>
@@ -111,6 +121,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/st%C3%B6rb%C3%B6na</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/l%C3%B6k</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
@@ -122,6 +137,11 @@
   </url>
   <url>
     <loc>https://lillabosgarden.se/odlingsguiden/vitl%C3%B6k</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/schalottenl%C3%B6k</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>
@@ -226,6 +246,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/mejram</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/citronmeliss</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
@@ -246,7 +271,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/libbsticka</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/kummin</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/gr%C3%A4sl%C3%B6k</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/ramsl%C3%B6k</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/dragon</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/krasse</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/lagerblad</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
   </url>
