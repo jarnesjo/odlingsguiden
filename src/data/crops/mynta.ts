@@ -10,14 +10,14 @@ export const mynta: Crop = {
   difficulty: 'Enkel',
   difficultyWhy: 'Mynta är en av de mest lättodlade kryddväxterna som finns. Problemet är snarare att STOPPA henne - hon sprider sig aggressivt via underjordiska utlöpare och tar över hela trädgården om du inte håller henne i schack.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6, 7, 8], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },
-  days: '60-90',
-  spacing: '30-45 cm',
+  days: '90-110',
+  spacing: '25-40 cm',
   rowSpacing: '40-50 cm',
   depth: '0.5 cm',
   ph: { min: 6.0, max: 7.5, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Mynta trivs i sol men klarar halvskugga utmärkt - hon blir till och med gladare i lite skugga under höga sommaren. Full skugga ger glesare tillväxt och svagare smak, men hon överlever ändå. En av få kryddor som faktiskt gillar skuggigare läge.' },
-    temperature: { min: -25, max: 35, ideal: '15-22°C', detail: 'Mynta är en riktig nordbo som överlevt många hårda vintrar. Ovanjordiska delar dör ned vid frost, men rotsystemet klarar ner till -25°C. På våren skjuter hon upp nya skott som om inget hänt. I zon 1-8 överlever hon ute utan problem.' },
+    temperature: { min: -20, max: 35, ideal: '15-22°C', detail: 'Mynta är en riktig nordbo som överlevt många hårda vintrar. Ovanjordiska delar dör ned vid frost, men rotsystemet klarar ner till -20°C med snötäcke. På våren skjuter hon upp nya skott som om inget hänt.' },
     wind: { level: 'Tålig', detail: 'Mynta är robust och klarar vind utan bekymmer. Stjälken är stadig och bladen är tuffa nog att stå emot både blåst och regn. Inga vindskydd behövs.' },
   },
   watering: {
@@ -84,7 +84,7 @@ export const mynta: Crop = {
     good: [
       { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Myntans starka doft förvirrar bladlöss och vitfjärilar som annars hittar tomatplantorna. Men plantera mynta i kruka bredvid - ALDRIG direkt i tomatbädden, för då tar hon över.' },
       { id: 'kal', name: 'Kål', icon: 'vegetable', why: 'Myntans doft avskräcker kålfjärilar och jordloppor. Plantera mynta i nedgrävda krukor runt kållandet - skydd utan att myntan tar över.' },
-      { id: 'artor', name: 'Ärtor', icon: 'vegetable', why: 'Myntans doft håller bort ärtvivel och bladlöss. Ärtorna i sin tur fixerar kväve i jorden som mynta uppskattar.' },
+      { id: 'artor', name: 'Ärtor', icon: 'vegetable', why: 'Myntans starka doft kan hjälpa till att hålla bort bladlöss. Ärtorna i sin tur fixerar kväve i jorden som mynta uppskattar.' },
     ],
     bad: [
       { id: 'basilika', name: 'Basilika', icon: 'herb', why: 'Mynta och basilika har helt olika behov - mynta vill ha mer fukt och mindre sol. Dessutom drar myntas aggressiva rötter näring från den ömtåliga basilikan.' },
@@ -103,12 +103,12 @@ export const mynta: Crop = {
     { name: 'Grönmynta (Mentha spicata)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Den klassiska myntan som de flesta tänker på. Mild, söt smak. Perfekt till te, sås och lemonad. Mycket härdig.' },
     { name: 'Pepparmynta (Mentha x piperita)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Starkare mentolsmak än grönmynta. Fantastisk till te och chokladdessert. Korsning mellan vatten- och grönmynta.' },
     { name: 'Chokladmynta', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Mörka stjälkar och en antydan av chokladarom. Ser cool ut i trädgården och smakar fantastiskt i dessert och varm choklad.' },
-    { name: 'Marockansk mynta', zones: [1, 2, 3, 4, 5, 6], note: 'DEN myntan för marockanskt te! Kompakt växt, passar utmärkt i kruka. Lite känsligare för kyla än de andra - skydda i zon 5+.' },
-    { name: 'Vattenmynta (Mentha aquatica)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Trivs i vattensjuk jord och vid dammkanter. Allra härdigast av alla myntor. Blommar vackert och är en magnet för bin.' },
+    { name: 'Marockansk mynta', zones: [1, 2, 3, 4, 5, 6], note: 'DEN myntan för marockanskt te! Kompakt växt, passar utmärkt i kruka. Lite känsligare för kyla än de andra - skydda i zon 4 och norrut.' },
+    { name: 'Vattenmynta (Mentha aquatica)', zones: [1, 2, 3, 4], note: 'Trivs i vattensjuk jord och vid dammkanter. Halvhärdig - växer vild i Götaland och södra Svealand. Blommar vackert och är en magnet för bin.' },
   ],
   problems: [
     { name: 'Myntrost (Puccinia menthae)', symptom: 'Orangebruna pustler på bladens undersida, bladen gulnar och faller av. Vanligast i fuktigt väder.', fix: 'Klipp ner angripna delar till marken - nya friska skott kommer. Se till att luften cirkulerar bra runt plantorna. Undvik att vattna ovanifrån.' },
-    { name: 'Myntbagge', symptom: 'Runda hål i bladen, små metalliskt gröna skalbaggar (ca 1 cm) synliga på plantorna. Larverna äter också.', fix: 'Plocka bort baggarna för hand (de är lata och lätta att fånga). Klipp ner kraftigt angripna plantor - de växer tillbaka. Skadorna är mest kosmetiska.' },
+    { name: 'Myntbagge (Chrysolina herbacea)', symptom: 'Runda hål i bladen, små metalliskt gröna skalbaggar (ca 8-9 mm) synliga på plantorna. Larverna äter också. Ovanlig i Sverige men kan förekomma i södra delarna.', fix: 'Plocka bort baggarna för hand (de är lata och lätta att fånga). Klipp ner kraftigt angripna plantor - de växer tillbaka. Skadorna är mest kosmetiska.' },
     { name: 'Mjöldagg', symptom: 'Vitt, mjölaktigt lager på bladen. Vanligt vid varmt och torrt väder med svala nätter.', fix: 'Förbättra luftcirkulationen genom att gallra bland stjälkarna. Klipp bort angripna delar. Undvik att vattna på kvällen. Mjölkvatten (1 del mjölk, 9 delar vatten) kan hjälpa förebyggande.' },
   ],
   goodToKnow: [
