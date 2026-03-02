@@ -111,7 +111,7 @@ export const jordgubbar: Crop = {
   ],
   problems: [
     { name: 'Gråmögel (Botrytis)', symptom: 'Gråludet mögel på mogna bär, speciellt i fuktig väderlek. Bären blir mjuka och ruttnar.', fix: 'Mulcha med halm så bären inte ligger mot marken. Plocka bort angripna bär direkt. Vattna vid basen, aldrig ovanifrån. God luftcirkulation genom rätt avstånd.' },
-    { name: 'Sniglar', symptom: 'Gnagmärken och hål i bären, speciellt nära marken. Slemspår.', fix: 'Jordgubbens ärkefiendenr 1! Halm-mulch hjälper (sniglar ogillar halm). Snigelstängsel runt bädden. Ölbägare som fällor. Plocka sniglar på kvällen.' },
+    { name: 'Sniglar', symptom: 'Gnagmärken och hål i bären, speciellt nära marken. Slemspår.', fix: 'Jordgubbens ärkefiende nr 1! Halm-mulch hjälper (sniglar ogillar halm). Snigelstängsel runt bädden. Ölbägare som fällor. Plocka sniglar på kvällen.' },
     { name: 'Jordgubbskvalster', symptom: 'Skrynkliga, missfärgade blad. Plantorna ser tillplattade ut. Dålig tillväxt.', fix: 'Svår att bli av med. Plantera lökkransar runt bädden (lök avskräcker). Byt plats och köp nya friska plantor vid kraftigt angrepp.' },
     { name: 'Mjöldagg', symptom: 'Vitt, mjölaktigt belägg på bladens ovansida. Bladen rullar sig uppåt.', fix: 'Välj resistenta sorter. God luftcirkulation. Undvik kvävegödsling sent på säsongen. Vattna vid basen.' },
   ],
