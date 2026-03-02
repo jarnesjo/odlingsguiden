@@ -1,0 +1,83 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 34. Batch-arbete med gronsaksprofiler.
+
+    KLART (batch 1 - 4 nya gronsaksprofiler):
+    - Rodkal (Korsblommiga, Medel, 4 OP + 1 F1)
+    - Majrova (Korsblommiga, Enkel, 4 OP)
+    - Storbona (Baljvaxter, Enkel, 4 OP)
+    - Schalottenlok (Lokvaxter, Enkel, 4 OP)
+    Alla med illustrationer (200x200 + 48x48), integrerade i appen.
+    Typkontroll OK, bygge OK, aao-check OK, inga en-dash.
+
+    PAGAENDE (batch 2 - bakgrundsagenter startade, filer skapas pa disk):
+    - Pak choi (Korsblommiga, Enkel)
+    - Brysselkal (Korsblommiga, Medel)
+    - Jordartskocka (Korgblommiga, Enkel)
+    - Fankal (Flockblommiga, Medel)
+    OBS: Agenterna skriver filerna direkt till disk. Nasta session
+    MASTE verifiera att filerna skapades korrekt innan integration.
+
+    Commits (5 st):
+    - bbf6afb feat(crops): add rodkal, majrova, storbona, schalottenlok profiles
+    - 7f957f6 feat(ui): add illustrations for rodkal, majrova, storbona, schalottenlok
+    - be1669a feat(ui): register rodkal, majrova, storbona, schalottenlok in app
+    - 0c96a6b chore(config): update sitemap with new crop URLs
+    - 1989687 docs(roadmap): update groansaker count to 32 of ~43
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+  src:
+    - "src/data/crops/index.ts (54 profiler)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (54 illustrationer)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "FORST: Verifiera batch 2-filer pa disk (pak-choi.ts, brysselkal.ts, jordartskocka.ts, fankal.ts)"
+  - "Om filerna ar OK: skapa illustrationer + integrera i appen"
+  - "Om filerna saknas/ar trasiga: skapa om fran scratch"
+  - "Batch 2 behover: illustrationer, cropList unlock, index import, CropGraphic/CropIcon"
+  - "Sedan: fler groansaker (7 kvar efter batch 2: selleri, rotselleri, kinakal, savoykal, melon, kronartskocka, endiv)"
+  - "Bar: 7 av ~16 klara - fortsatt med fler barprofiler"
+
+context:
+  decisions:
+    - "Batch 1 valde rodkal, majrova, storbona, schalottenlok - alla med nara slaktingar som referens"
+    - "Batch 2 valde pak choi, brysselkal, jordartskocka, fankal - bra mix av familjer"
+    - "Parallella bakgrundsagenter for groaprofiler + manuella illustrationer"
+    - "Separata commits per scope: profiler, illustrationer, integration, sitemap, roadmap"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "CropPage chunk ~604 KB (chunk warning vid bygge)"
+  - "Lighthouse Accessibility 84"
+  - "Batch 2 groaprofiler kan vara halvfardiga pa disk - VERIFIERA forst"
