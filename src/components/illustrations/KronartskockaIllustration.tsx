@@ -1,0 +1,96 @@
+import { colors } from '../../theme/tokens'
+
+interface Props {
+  size?: number
+}
+
+export function KronartskockaIllustration({ size = 200 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 200 200" fill="none">
+      {/* Bakgrundscirkel */}
+      <circle cx="100" cy="100" r="90" fill="#D4E8C2" opacity="0.15" />
+
+      {/* Markskugga */}
+      <ellipse cx="100" cy="182" rx="35" ry="5" fill={colors.earth} opacity="0.08" />
+
+      {/* Stjälk */}
+      <path d="M100 180 L100 95" stroke="#5A8A4A" strokeWidth="3" strokeLinecap="round" />
+
+      {/* Vänster blad (stort, flikigt silverblad) */}
+      <path d="M98 150 C80 145, 55 135, 40 120 C35 115, 38 108, 45 110 C40 105, 38 95, 45 92 C50 90, 55 95, 52 100 C48 92, 50 82, 58 80 C63 78, 65 85, 60 88" stroke="#6B8E6B" strokeWidth="1.5" fill="#7BA67B" opacity="0.5" />
+      {/* Nervatur vänster blad */}
+      <path d="M98 150 C82 140, 62 125, 48 108" stroke="#5A8A4A" strokeWidth="1" fill="none" opacity="0.4" />
+
+      {/* Höger blad (stort, flikigt silverblad) */}
+      <path d="M102 150 C120 145, 145 135, 160 120 C165 115, 162 108, 155 110 C160 105, 162 95, 155 92 C150 90, 145 95, 148 100 C152 92, 150 82, 142 80 C137 78, 135 85, 140 88" stroke="#6B8E6B" strokeWidth="1.5" fill="#7BA67B" opacity="0.5" />
+      {/* Nervatur höger blad */}
+      <path d="M102 150 C118 140, 138 125, 152 108" stroke="#5A8A4A" strokeWidth="1" fill="none" opacity="0.4" />
+
+      {/* Litet blad vid stam */}
+      <path d="M100 130 C90 125, 78 128, 72 122 C78 120, 85 118, 88 124" stroke="#6B8E6B" strokeWidth="1.2" fill="#7BA67B" opacity="0.4" />
+      <path d="M100 130 C110 125, 122 128, 128 122 C122 120, 115 118, 112 124" stroke="#6B8E6B" strokeWidth="1.2" fill="#7BA67B" opacity="0.4" />
+
+      {/* Knopp - yttre fjäll (mörkt gröna, överlappande) */}
+      {/* Nedre yttre fjäll */}
+      <path d="M72 98 C72 90, 78 78, 85 72 C88 85, 82 95, 72 98Z" fill="#4A6E4A" />
+      <path d="M128 98 C128 90, 122 78, 115 72 C112 85, 118 95, 128 98Z" fill="#4A6E4A" />
+
+      {/* Mellersta yttre fjäll */}
+      <path d="M76 90 C78 80, 84 68, 90 62 C91 75, 86 88, 76 90Z" fill="#527A52" />
+      <path d="M124 90 C122 80, 116 68, 110 62 C109 75, 114 88, 124 90Z" fill="#527A52" />
+
+      {/* Mittre fjäll */}
+      <path d="M82 85 C84 72, 90 58, 96 52 C96 65, 92 80, 82 85Z" fill="#5A8A5A" />
+      <path d="M118 85 C116 72, 110 58, 104 52 C104 65, 108 80, 118 85Z" fill="#5A8A5A" />
+
+      {/* Innersta fjäll */}
+      <path d="M88 78 C90 65, 95 52, 100 46 C105 52, 110 65, 112 78 C108 72, 102 65, 100 60 C98 65, 92 72, 88 78Z" fill="#6B9E6B" />
+
+      {/* Spets */}
+      <path d="M96 55 C98 48, 100 42, 100 38 C100 42, 102 48, 104 55" stroke="#5A8A5A" strokeWidth="1.5" fill="#6B9E6B" />
+
+      {/* Ljusreflex på knopp */}
+      <ellipse cx="95" cy="70" rx="6" ry="10" fill="#8BB88B" opacity="0.3" />
+
+      {/* Knoppkontur */}
+      <path d="M72 98 C72 88, 78 72, 85 62 C90 55, 96 48, 100 42 C104 48, 110 55, 115 62 C122 72, 128 88, 128 98" stroke="#3D6B3D" strokeWidth="1.8" fill="none" />
+
+      {/* Bas av knoppen */}
+      <path d="M72 98 C80 102, 90 104, 100 104 C110 104, 120 102, 128 98" stroke="#3D6B3D" strokeWidth="1.5" fill="none" />
+
+      {/* Markprickar */}
+      <circle cx="78" cy="184" r="1.5" fill={colors.earth} opacity="0.18" />
+      <circle cx="122" cy="184" r="1.5" fill={colors.earth} opacity="0.18" />
+      <circle cx="100" cy="186" r="1" fill={colors.earth} opacity="0.12" />
+    </svg>
+  )
+}
+
+export function KronartskockaIcon({ size = 48 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+      {/* Stjälk */}
+      <path d="M24 42 L24 22" stroke="#5A8A4A" strokeWidth="2" strokeLinecap="round" />
+
+      {/* Små blad */}
+      <path d="M24 35 C18 33, 14 30, 13 27" stroke="#6B8E6B" strokeWidth="1.2" fill="none" opacity="0.5" />
+      <path d="M24 35 C30 33, 34 30, 35 27" stroke="#6B8E6B" strokeWidth="1.2" fill="none" opacity="0.5" />
+
+      {/* Yttre fjäll */}
+      <path d="M14 22 C14 18, 17 12, 20 9 C21 15, 18 20, 14 22Z" fill="#4A6E4A" />
+      <path d="M34 22 C34 18, 31 12, 28 9 C27 15, 30 20, 34 22Z" fill="#4A6E4A" />
+
+      {/* Mittre fjäll */}
+      <path d="M17 20 C18 14, 21 9, 24 6 C27 9, 30 14, 31 20 C28 16, 25 12, 24 10 C23 12, 20 16, 17 20Z" fill="#5A8A5A" />
+
+      {/* Innersta fjäll + spets */}
+      <path d="M21 16 C22 11, 24 7, 24 5 C24 7, 26 11, 27 16" fill="#6B9E6B" />
+
+      {/* Kontur */}
+      <path d="M14 22 C14 17, 18 10, 21 7 C23 5, 24 4, 24 4 C24 4, 25 5, 27 7 C30 10, 34 17, 34 22" stroke="#3D6B3D" strokeWidth="1.5" fill="none" />
+
+      {/* Bas */}
+      <path d="M14 22 C18 24, 22 25, 24 25 C26 25, 30 24, 34 22" stroke="#3D6B3D" strokeWidth="1.2" fill="none" />
+    </svg>
+  )
+}
