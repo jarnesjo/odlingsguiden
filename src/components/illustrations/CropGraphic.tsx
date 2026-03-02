@@ -53,6 +53,10 @@ import { MarjoramIllustration, MarjoramIcon } from './MarjoramIllustration'
 import { LovageIllustration, LovageIcon } from './LovageIllustration'
 import { WildGarlicIllustration, WildGarlicIcon } from './WildGarlicIllustration'
 import { TarragonIllustration, TarragonIcon } from './TarragonIllustration'
+import { RedCabbageIllustration, RedCabbageIcon } from './RedCabbageIllustration'
+import { TurnipIllustration, TurnipIcon } from './TurnipIllustration'
+import { PoleBeanIllustration, PoleBeanIcon } from './PoleBeanIllustration'
+import { ShallotIllustration, ShallotIcon } from './ShallotIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -113,6 +117,10 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   libbsticka: { large: LovageIllustration, small: LovageIcon },
   ramslok: { large: WildGarlicIllustration, small: WildGarlicIcon },
   dragon: { large: TarragonIllustration, small: TarragonIcon },
+  rodkal: { large: RedCabbageIllustration, small: RedCabbageIcon },
+  majrova: { large: TurnipIllustration, small: TurnipIcon },
+  storbona: { large: PoleBeanIllustration, small: PoleBeanIcon },
+  schalottenlok: { large: ShallotIllustration, small: ShallotIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {

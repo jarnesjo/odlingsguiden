@@ -53,6 +53,10 @@ import { MarjoramIcon } from './MarjoramIllustration'
 import { LovageIcon } from './LovageIllustration'
 import { WildGarlicIcon } from './WildGarlicIllustration'
 import { TarragonIcon } from './TarragonIllustration'
+import { RedCabbageIcon } from './RedCabbageIllustration'
+import { TurnipIcon } from './TurnipIllustration'
+import { PoleBeanIcon } from './PoleBeanIllustration'
+import { ShallotIcon } from './ShallotIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -113,6 +117,10 @@ const ICONS: Record<string, ComponentType<SizeProps>> = {
   libbsticka: LovageIcon,
   ramslok: WildGarlicIcon,
   dragon: TarragonIcon,
+  rodkal: RedCabbageIcon,
+  majrova: TurnipIcon,
+  storbona: PoleBeanIcon,
+  schalottenlok: ShallotIcon,
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {

@@ -52,6 +52,10 @@ import { mejram } from './mejram'
 import { libbsticka } from './libbsticka'
 import { ramslok } from './ramslok'
 import { dragon } from './dragon'
+import { rodkal } from './rodkal'
+import { majrova } from './majrova'
+import { storbona } from './storbona'
+import { schalottenlok } from './schalottenlok'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -107,4 +111,8 @@ export const CROPS: Record<string, Crop> = {
   libbsticka,
   ramslok,
   dragon,
+  rodkal,
+  majrova,
+  storbona,
+  schalottenlok,
 }
