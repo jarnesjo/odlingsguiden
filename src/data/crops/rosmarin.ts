@@ -9,15 +9,15 @@ export const rosmarin: Crop = {
   perennial: true,
   difficulty: 'Medel',
   difficultyWhy: 'Rosmarin är egentligen lättskött - men den svenska vintern är hennes fiende. I de flesta zoner måste hon tas in eller skyddas noggrant. Klarar du övervintringen har du en trogen vän i många, många år.',
-  zones: { outdoor: [1, 2, 3], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6] },
+  zones: { outdoor: [1, 2], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6] },
   days: '80-120',
-  spacing: '60-90 cm',
+  spacing: '40-60 cm',
   rowSpacing: '60 cm',
   depth: '0.5 cm (ytligt)',
   ph: { min: 6.0, max: 8.0, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Rosmarin är en riktig solälskare - hon kommer från Medelhavets torra, solstekta kuster. Ge henne minst 6-8 timmars sol per dag. I halvskugga blir hon ranglig och doften svagare. Söderläge vid en varm mur? Perfekt - hon älskar den extra värmen.' },
-    temperature: { min: -10, max: 35, ideal: '18-24°C', detail: 'Medelhavsväxt som trivs bäst i värme. Etablerade plantor av härdiga sorter klarar ner till -10 till -15°C om de står TORRT. Våta, kalla vintrar är det som dödar. I zon 4+ måste hon in - antingen i växthus eller i fönsterkarmen.' },
+    temperature: { min: -10, max: 35, ideal: '18-24°C', detail: 'Medelhavsväxt som trivs bäst i värme. Etablerade plantor klarar ner till -10°C, och den extra härdiga sorten Arp kan klara -15°C om hon står TORRT och skyddat. Våta, kalla vintrar är det som dödar. I zon 3+ måste hon in - antingen i växthus eller i fönsterkarmen.' },
     wind: { level: 'Tålig', detail: 'Rosmarins vedartade växtsätt och smala, läderartade barr gör henne överraskande vindtålig. Hon växer vilt på utsatta klippor vid Medelhavet. Vind hjälper till att hålla henne torr - och torrt är bra.' },
   },
   watering: {
@@ -101,10 +101,10 @@ export const rosmarin: Crop = {
     goodAfterWhy: 'Rosmarins aromatiska rester i jorden har mild desinficerande effekt. Bra för grönsaker som är känsliga för jordburna sjukdomar.',
   },
   varieties: [
-    { name: 'Salem', zones: [1, 2, 3], note: 'En av de härdigaste sorterna. Upprätt växtsätt och fin arom. Klarar ner mot -15°C om hon står torrt och skyddat. Bästa valet för utomhusodling i södra Sverige.' },
-    { name: 'Arp', zones: [1, 2, 3], note: 'Anses vara den mest vinterhärdiga sorten - klarar ner till -15°C! Ljusare, grågrön blad. Lite mildare smak men väl värd det för härdigheten. Uppkallad efter Arp i Texas.' },
-    { name: 'Vanlig rosmarin (Rosmarinus officinalis)', zones: [1, 2], note: 'Klassikern med kraftig, kamferliknande arom. Upprätt buske som kan bli 1-1.5 meter i milda klimat. Bäst i kruka i Sverige - lätt att ta in på vintern.' },
-    { name: 'Krypande rosmarin (Prostratus)', zones: [1, 2], note: 'Krypande/hängande växtsätt, perfekt i amplar och stenmurar. Vacker när hon hänger ner. Mindre härdig - måste alltid tas in. Blommar rikligt med blå blommor.' },
+    { name: 'Salem', zones: [1], note: 'Upprätt växtsätt med fin, balanserad arom. Inte speciellt härdig - odlas bäst i kruka som tas in på vintern. Populär i mildare klimat men kräver skydd i Sverige.' },
+    { name: 'Arp', zones: [1, 2], note: 'Den mest vinterhärdiga sorten - kan klara ner till -15°C i torr, väldränerad jord! Ljusare, grågrön blad. Lite mildare smak men väl värd det för härdigheten. Bästa valet om du vill prova utomhusodling.' },
+    { name: 'Vanlig rosmarin (Salvia rosmarinus)', zones: [1], note: 'Klassikern med kraftig, kamferliknande arom. Upprätt buske som kan bli 1-1.5 meter i milda klimat. Bäst i kruka i Sverige - lätt att ta in på vintern. Tidigare kallad Rosmarinus officinalis.' },
+    { name: 'Krypande rosmarin (Prostratus)', zones: [1], note: 'Krypande/hängande växtsätt, perfekt i amplar och stenmurar. Vacker när hon hänger ner. Mindre härdig - måste alltid tas in på vintern. Blommar rikligt med blå blommor.' },
   ],
   problems: [
     { name: 'Rotröta (väta)', symptom: 'Plantan gulnar och vissnar trots att jorden är fuktig. Stammens bas är mörk och mjuk. Barren faller av.', fix: 'Tyvärr ingen bot när rotröta slagit till. Förebygg med väldränerad jord och sparsam vattning. Rädda friska kvistar som sticklingar och starta om. Ren sand i botten av krukan gör underverk.' },
@@ -113,7 +113,7 @@ export const rosmarin: Crop = {
     { name: 'Bladlöss', symptom: 'Klibbiga barr, deformerade skottspetsar. Små gröna eller svarta löss samlade vid topparna.', fix: 'Ovanligt på frisk rosmarin tack vare de starka eteriska oljorna. Spola av med vatten. Stress (för mörkt, för blött) gör henne känsligare - åtgärda grundproblemet.' },
   ],
   goodToKnow: [
-    { icon: 'warning', title: 'Vintern - rosmarins stora utmaning i Sverige', text: 'Rosmarin klarar INTE svensk vinter i de flesta zoner. I zon 4-8 måste hon tas in eller stå i frostfritt utrymme. Även i zon 1-3 behöver hon skyddad plats, väldränerad jord och vinterskydd med granris. Det är kyla + väta som dödar - torr kyla klarar hon bättre.', severity: 'warning' },
+    { icon: 'warning', title: 'Vintern - rosmarins stora utmaning i Sverige', text: 'Rosmarin klarar INTE svensk vinter i de flesta zoner. I zon 3-8 måste hon tas in eller stå i frostfritt utrymme. Även i zon 1-2 behöver hon skyddad plats, väldränerad jord och vinterskydd med granris. Det är kyla + väta som dödar - torr kyla klarar hon bättre.', severity: 'warning' },
     { icon: 'warning', title: 'Dränering - viktigare än allt annat', text: 'Blöta fötter är den vanligaste dödsorsaken. Rosmarin ruttnar i tung, fuktig jord snabbare än du hinner blinka. Plantera i sandblandad jord, använd grus i botten av krukor, och välj alltid en upphöjd plats där vatten rinner undan.', severity: 'warning' },
     { icon: 'tip', title: 'Sticklingar - enklaste sättet att föröka', text: 'Glöm frö - sticklingar är det överlägset enklaste sättet att få ny rosmarin. Klipp en 10 cm kvist, ta bort nedre barren, sätt i fuktig sand. Rötter på 3-4 veckor. Vill du vara extra säker? Be en granne om en kvist - rosmarin delar man gärna.', severity: 'tip', refs: [{ id: 'timjan', name: 'Timjan' }] },
     { icon: 'tip', title: 'Ät henne - hon tål det!', text: 'Rosmarin mår faktiskt BRA av att beskäras regelbundet. Skörda genom att klippa kvistar - det stimulerar ny tillväxt och håller busken kompakt. Skörda aldrig mer än en tredjedel åt gången.', severity: 'tip' },
