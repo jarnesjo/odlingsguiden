@@ -207,6 +207,9 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 
 ### 2.5 Sökfunktion
 
+- [x] CMD+K / Ctrl+K fokuserar sökinputet i listvyn
+- [x] 1-4 tangentgenvägar byter kategori (CMD+1-4 i sökinputet)
+- [x] type=search med native Escape-clear och rensa-knapp
 - [ ] Sök tvärs över kategorier
 - [ ] Filtrering på familj, svårighetsgrad, zon
 
