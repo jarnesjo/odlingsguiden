@@ -81,6 +81,25 @@ export function WaterIcon({ color = '#4A7A8A', size = 24 }: IconProps) {
   )
 }
 
+export function WateringCanIcon({ color = '#4A7A8A', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Kropp - trapets, bredare nedtill */}
+      <path d="M6 9h10l2 11H5l1-11z" fill={color} opacity="0.12" />
+      <path d="M6 9h10l2 11H5l1-11z" stroke={color} strokeWidth="1.8" strokeLinejoin="round" strokeLinecap="round" />
+      {/* Handtag - stor öppen D-båge på vänster sida */}
+      <path d="M6 9Q1 9, 1 14.5Q1 20, 5 20" stroke={color} strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      {/* Pip - börjar vid kroppens kant, går uppåt höger */}
+      <path d="M17.5 17L21 8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Strilhuvud */}
+      <path d="M20 9L22.5 7" stroke={color} strokeWidth="1.4" strokeLinecap="round" opacity="0.5" />
+      {/* Vattendroppar */}
+      <path d="M21 11L21 12.5" stroke={color} strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+      <path d="M22 9.5L22.5 11" stroke={color} strokeWidth="1.2" strokeLinecap="round" opacity="0.35" />
+    </svg>
+  )
+}
+
 export function SoilIcon({ color = '#8B7355', size = 24 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
