@@ -86,8 +86,8 @@ export const graslok: Crop = {
       { id: 'jordgubbar', name: 'Jordgubbar', icon: 'berry', why: 'En klassisk kombo i många trädgårdar! Gräslöken hjälper till att hålla jordgubbsmögel borta med sin lökdoft, och bägge trivs i liknande jordar.' },
     ],
     bad: [
-      { id: 'artor', name: 'Ärtor', icon: 'vegetable', why: 'Lökväxter hämmar baljväxternas kvävefixerande bakterier i rötterna. Gräslök och ärtor har helt enkelt svårt att samarbeta under jord.' },
-      { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Samma problem som med ärtor - lökväxter och baljväxter bör hållas isär. Gräslökens rotutsöndring stör bönans Rhizobium-bakterier.' },
+      { id: 'artor', name: 'Ärtor', icon: 'vegetable', why: 'Lökväxter och baljväxter anses traditionellt vara dåliga grannar. Gräslök och ärtor trivs bäst var för sig i odlingen.' },
+      { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Samma princip som med ärtor - lökväxter och baljväxter hålls bäst åtskilda i odlingen.' },
     ],
   },
   rotation: {
@@ -100,9 +100,9 @@ export const graslok: Crop = {
   },
   varieties: [
     { name: 'Staro', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Den vanligaste sorten i Sverige. Pålitlig, härdig och smakar precis som gräslök ska smaka. Ett säkert val i alla zoner.' },
-    { name: 'Polyvit', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Snabbväxande sort med kraftiga strån. Lite grövre i karaktären men ger riklig skörd. Populär bland odlare som vill ha mycket gräslök.' },
+    { name: 'Polyvit F1', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Snabbväxande F1-hybrid med kraftiga strån. Lite grövre i karaktären men ger riklig skörd. Populär bland odlare som vill ha mycket gräslök. Fröna kan inte sparas sortrena.' },
     { name: 'Prager', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Tidig sort som vaknar tidigt på våren. Kompakt växtsätt och fin mild smak. Passar bra i kruka på balkongen.' },
-    { name: 'Fina', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Finbladig sort med smala, eleganta strån. Mildare smak. Perfekt som garnering och i sallader där man vill ha diskret löksmak.' },
+    { name: 'Nelly', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Finbladig och kompakt sort med elegant växtsätt. Mild smak. Fin som garnering och i sallader.' },
   ],
   problems: [
     { name: 'Lökfluga', symptom: 'Strån gulnar och vissnar. Små vita larver syns vid basen om man gräver upp tuvan. Flugan lägger ägg vid jordytan på våren.', fix: 'Täck med insektsnät tidigt på våren innan flugan börjar lägga ägg. Gräv upp och förstör angripna tuvor. Samodla med morötter - dofterna förvirrar varandra.' },
