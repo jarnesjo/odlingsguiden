@@ -97,8 +97,8 @@ export const basilika: Crop = {
   },
   varieties: [
     { name: 'Genovese', zones: [1, 2, 3, 4], note: 'Klassisk italiensk med stor, kupig blad. Bäst för pesto. DEN basilika de flesta tänker på.' },
-    { name: 'Thai-basilika', zones: [1, 2, 3, 4, 5], note: 'Anissmak, lila stjälkar. Mer köldhärdig än Genovese. Perfekt för asiatisk matlagning.' },
-    { name: 'Lemon basil', zones: [1, 2, 3, 4, 5], note: 'Fräsch citronsmak. Kompakt växt, bra i kruka. Fin till fisk och sallader.' },
+    { name: 'Thai-basilika', zones: [1, 2, 3, 4], note: 'Anissmak, lila stjälkar. Lite mer värmetålig än Genovese. Perfekt för asiatisk matlagning.' },
+    { name: 'Citronbasilika', zones: [1, 2, 3, 4], note: 'Fräsch citronsmak. Kompakt växt, bra i kruka. Fin till fisk och sallader.' },
     { name: 'Dark Opal', zones: [1, 2, 3, 4], note: 'Mörkt purpur blad. Vacker i trädgården. Något mildare smak. Fantastisk i vinäger.' },
   ],
   problems: [
@@ -135,7 +135,7 @@ export const basilika: Crop = {
   },
   seedSaving: {
     difficulty: 'Enkel',
-    type: 'Självpollinerare',
+    type: 'Insektspollinerad',
     biennial: false,
     description: 'Låt några plantor blomma i slutet av säsongen. Fröna bildas i de torkade blommorna. Enkelt och ger massor av frö.',
     steps: [
@@ -146,7 +146,7 @@ export const basilika: Crop = {
       'Rensa bort skräp och låt fröna eftertorka några dagar',
       'Förvara svalt och torrt i märkt kuvert',
     ],
-    isolation: 'Basilika är mestadels självpollinerande men kan korspollera med andra basilikasorter via insekter. Håll 30+ meters avstånd mellan sorter om du vill ha sortrena frön.',
+    isolation: 'Basilika pollineras främst av insekter och korspollerar med andra basilikasorter. Håll 45+ meters avstånd mellan sorter om du vill ha sortrena frön.',
     storageYears: '3-5 år',
     tip: 'En enda planta kan ge hundratals frön - mer än tillräckligt för flera år. Dela med odlarkompisar!',
   },
