@@ -17,7 +17,7 @@ export const persilja: Crop = {
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Sol-halvskugga', icon: 'sun', detail: 'Persilja trivs i sol men klarar halvskugga galant - faktiskt en av få kryddor som ger bra skörd även utan full sol. I söderläge kan hon till och med uppskatta lite skugga under högsommaren.' },
-    temperature: { min: -5, max: 25, ideal: '12-20°C', detail: 'Persilja är härdigare än de flesta tror! Klarar lätt frost ner till -5°C och trivs bäst i sval väderlek. I stark värme skjuter hon i blom snabbare. En riktig nordbo bland kryddorna.' },
+    temperature: { min: -10, max: 25, ideal: '12-20°C', detail: 'Persilja är härdigare än de flesta tror! Klarar frost ner till -10°C och trivs bäst i sval väderlek. I stark värme skjuter hon i blom snabbare. En riktig nordbo bland kryddorna.' },
     wind: { level: 'Tålig', detail: 'Persilja har stadiga stjälkar och sitter stabilt i marken. Hon klarar vind utan problem - inga krusiduller behövs.' },
   },
   watering: {
@@ -77,7 +77,7 @@ export const persilja: Crop = {
   companions: {
     good: [
       { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Persilja och tomat är bästa vänner! Persilja lockar nyttoinsekter som äter bladlöss på tomaterna. Dessutom sägs persilja förstärka tomaternas smak.' },
-      { id: 'morot', name: 'Morot', icon: 'vegetable', why: 'Trots att de är i samma familj funkar de fint ihop i odlingen. Persiljan avskräcker morotsflugan med sin starka doft.' },
+      { id: 'basilika', name: 'Basilika', icon: 'herb', why: 'Basilika och persilja kompletterar varandra fint - olika växtform och rotsystem. Basilikan lockar pollinatörer medan persiljan ger marktäckning.' },
       { id: 'lok', name: 'Lök', icon: 'vegetable', why: 'Lök och persilja kompletterar varandra - olika rotdjup, och lökens doft håller skadedjur borta från persiljan.' },
     ],
     bad: [
@@ -144,8 +144,8 @@ export const persilja: Crop = {
       'Gnugga loss fröna - blås bort skal och skräp',
       'Förvara svalt och torrt i märkt kuvert',
     ],
-    isolation: 'Korspollerar med andra persiljassorter via insekter. Håll minst 300 meters avstånd mellan sorter för sortrena frön. Korspollerar INTE med morot, dill eller selleri trots samma familj.',
-    storageYears: '2-3 år (groningsförmågan minskar snabbt)',
+    isolation: 'Korspollerar med andra persiljassorter via insekter. Håll minst 500 meters avstånd mellan sorter för sortrena frön. Korspollerar INTE med morot, dill eller selleri trots samma familj.',
+    storageYears: '1-2 år (groningsförmågan minskar snabbt)',
     tip: 'Persiljafrön tappar grobarhet snabbt - använd helst färska frön (max 1-2 år gamla). Det är därför man alltid ska köpa nytt fröpaket om groningen uteblir!',
   },
   storage: {
