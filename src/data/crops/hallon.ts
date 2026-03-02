@@ -85,14 +85,14 @@ export const hallon: Crop = {
   ],
   companions: {
     good: [
-      { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', why: 'Avskräcker bladlöss och gallkvalster som kan angripa hallon.' },
+      { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', why: 'Avskräcker bladlöss med sin starka doft. Klassisk kompanjon till bärbuskar.' },
       { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinatörer och nyttiga insekter. Plus att den ser fantastisk ut vid hallonraden!' },
       { id: 'rabarber', name: 'Rabarber', icon: 'vegetable', why: 'Skuggar marken, behåller fukt och samsas bra utan konkurrens om samma näring.' },
     ],
     bad: [
       { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Bägge är känsliga för verticillium-svamp. Plantera aldrig hallon där det stått potatis.' },
       { id: 'tomat', name: 'Tomat', icon: 'vegetable', why: 'Samma verticillium-risk. Håll minst 3 meters avstånd eller vänta 3 år.' },
-      { id: 'bjornbar', name: 'Björnbär', icon: 'berry', why: 'Korspollinerar och kan sprida sjukdomar mellan sig. Håll 50+ meter avstånd.' },
+      { id: 'bjornbar', name: 'Björnbär', icon: 'berry', why: 'Delar sjukdomar (virus, rotröta, rostsvamp). Håll 50+ meter avstånd.' },
     ],
   },
   rotation: {
@@ -104,11 +104,11 @@ export const hallon: Crop = {
     goodAfterWhy: 'Efter att hallonraden tagits bort (10+ år) är jorden utarmad. Baljväxter eller gröngödsling bygger upp den igen.',
   },
   varieties: [
-    { name: 'Glen Ample', zones: [1, 2, 3, 4, 5], note: 'Sommarhallon. Stora bär, tagglös, kraftig tillväxt. Den mest populära sommarsorten.' },
-    { name: 'Tulameen', zones: [1, 2, 3, 4], note: 'Sommarhallon. Fantastisk smak, stora bär. Lite frostkänsligare.' },
-    { name: 'Autumn Bliss', zones: [1, 2, 3, 4, 5, 6], note: 'Hösthallon. Bär på årets skott - enklaste beskärningen (klipp allt!). Pålitlig.' },
-    { name: 'Polka', zones: [1, 2, 3, 4, 5], note: 'Hösthallon. Stora, söta bär. Lång skördeperiod aug-okt i södra Sverige.' },
-    { name: 'Glen Coe', zones: [1, 2, 3, 4, 5], note: 'Lila hallon! Tagglös, söt smak, bra i zon 1-5.' },
+    { name: 'Glen Ample', zones: [1, 2, 3, 4], note: 'Sommarhallon. Stora bär, tagglös, kraftig tillväxt. Den mest populära sommarsorten. E-planta.' },
+    { name: 'Tulameen', zones: [1, 2, 3, 4], note: 'Sommarhallon. Fantastisk smak, stora bär. Lite frostkänsligare - börjar växa tidigt på våren.' },
+    { name: 'Autumn Bliss', zones: [1, 2, 3], note: 'Hösthallon. Bär på årets skott - enklaste beskärningen (klipp allt!). Behöver lång, varm höst för att hinna mogna.' },
+    { name: 'Polka', zones: [1, 2, 3], note: 'Hösthallon. Stora, söta bär. Mognar tidigare än Autumn Bliss. Lång skördeperiod aug-okt i södra Sverige.' },
+    { name: 'Glen Coe', zones: [1, 2, 3, 4], note: 'Lila hallon! Tagglös, söt smak. Korsning mellan svarta och röda hallon. Begränsad tillgänglighet i Sverige.' },
   ],
   problems: [
     { name: 'Hallonänger (Byturus tomentosus)', symptom: 'Larver i bären, maskhål. Vita larver ~5 mm syns när bäret öppnas.', fix: 'Feromonfällor i maj. Plocka infekterade bär. Nät med fint maska under blomning. Hösthallon angrips sällan.' },
@@ -119,7 +119,7 @@ export const hallon: Crop = {
     { icon: 'warning', title: 'Hallon sprider sig - aktivt', text: 'Hallonrötter skickar ut utlöpare och nya plantor dyker upp överallt. Använd rotspärr (nedgrävd plåt/plast 30 cm djupt) om du vill hålla dem på plats. Eller plantera i upphöjd bädd.', severity: 'warning' },
     { icon: 'warning', title: 'Sommarhallon vs hösthallon - helt olika beskärning', text: 'Sommarhallon bär frukt på fjolårets skott - klipp bara de som burit frukt. Hösthallon bär på årets skott - klipp ALLT på våren. Blandar du ihop detta förlorar du skörden!', severity: 'warning' },
     { icon: 'tip', title: 'Fryser perfekt', text: 'Hallon är ett av de bär som fryser bäst. Lägg ut dem i ett lager på en plåt, frys, flytta sedan till påse. Perfekt smak året runt.', severity: 'tip' },
-    { icon: 'tip', title: 'Plocka rätt', text: 'Mogna hallon lossnar lätt från kärnan (tappar tappar). Om du behöver dra - vänta en dag till. Plocka gärna varannan dag under högsäsong.', severity: 'tip' },
+    { icon: 'tip', title: 'Plocka rätt', text: 'Mogna hallon lossnar lätt från tappen (den vita kärnan). Om du behöver dra - vänta en dag till. Plocka gärna varannan dag under högsäsong.', severity: 'tip' },
   ],
   sowing: {
     method: 'direct',
