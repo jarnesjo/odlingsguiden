@@ -100,6 +100,24 @@ export function WateringCanIcon({ color = '#4A7A8A', size = 24 }: IconProps) {
   )
 }
 
+export function PartialSunIcon({ color = '#C4956A', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Sol (halvcirkel synlig till höger) */}
+      <circle cx="10" cy="13" r="4" fill={color} opacity="0.2" />
+      <path d="M10 9a4 4 0 010 8" stroke={color} strokeWidth="1.8" />
+      {/* Strålar (bara höger sida, synliga bakom molnet) */}
+      <line x1="16" y1="13" x2="18" y2="13" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="14.8" y1="9.2" x2="16.2" y2="7.8" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="14.8" y1="16.8" x2="16.2" y2="18.2" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      <line x1="10" y1="7" x2="10" y2="5" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Moln (täcker vänstra halvan) */}
+      <path d="M6 19a4 4 0 01-1-7.9 5 5 0 019.9-1.1 3.5 3.5 0 011.1 6.8V18H6z" fill="white" opacity="0.9" />
+      <path d="M6 19a4 4 0 01-1-7.9 5 5 0 019.9-1.1 3.5 3.5 0 011.1 6.8" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function SoilIcon({ color = '#8B7355', size = 24 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
