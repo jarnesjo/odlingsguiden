@@ -1,0 +1,92 @@
+meta:
+  date: 2026-03-03
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 37. Sista 3 grönsakerna + UI-förbättringar.
+
+    KLART:
+    - 3 sista grönsaksprofiler med illustrationer och faktacheck:
+      - Melon (Avancerad, Cucurbitaceae, zon 1-2/växthus 1-4, 5 OP-sorter)
+      - Kronärtskocka (Avancerad, Asteraceae, zon 1-3/växthus 1-4, 4 sorter)
+      - Endiv (Medel, Asteraceae, zon 1-6, 5 OP-sorter)
+    - ALLA 43 GRÖNSAKER KLARA!
+    - UI: Tooltip-förbättringar
+      - Svårighetsgrad-tooltip flyttad ner (110% -> calc(100% + 10px))
+      - Click-outside-to-close på båda tooltips (DifficultyBadge + ZoneBadge)
+    - UI: Stat-noter i info-kortet (depthNote/spacingNote)
+      - Optional fält i Crop-typen
+      - Renderas som nedtonad text under stat-värden
+      - 14 profiler uppdaterade: ljusgroddare, krukodling, fröodling etc
+      - Alla parenteser i depth/spacing-strängar borttagna i hela kodbasen
+
+    Commits (10 st):
+    - 5279580 fix(ui): improve tooltip positioning and add click-outside-to-close
+    - ef80222 feat(crops): add melon crop profile with illustrations
+    - eb20949 feat(crops): add kronärtskocka crop profile with illustrations
+    - 835996d feat(crops): add endiv crop profile with illustrations
+    - 231dcc7 refactor(data): register melon, kronärtskocka, endiv in crop system
+    - 5a591df docs(roadmap): mark all 43 grönsaker complete, add stat-note idea
+    - d783331 feat(ui): add stat notes (depthNote/spacingNote) to info card
+    - 02a632a content(crops): extract depth/spacing notes to dedicated fields
+    - 39de0fe content(crops): extract depth notes for remaining crops
+    - 1628c9a content(crops): extract spacing/depth notes for koriander, lagerblad, krasse
+    - c11763e fix(crops): simplify koriander spacing note
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+  src:
+    - "src/data/crops/index.ts (68 profiler)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (68 illustrationer)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Bär: 7 av ~16 klara - fortsätt med fler bärprofiler"
+  - "Frukt som fjärde kategori (2.4) - äpple som flagship-profil"
+  - "Sök tvärs över kategorier (2.5)"
+  - "Visuell granskning av nya illustrationer (melon, kronärtskocka, endiv)"
+  - "Bundle size 906 KB main chunk - överväg code splitting per profil"
+  - "Uppdatera docs/guides/kallor.md med batch 11 (melon, kronärtskocka, endiv)"
+
+context:
+  decisions:
+    - "depthNote/spacingNote som optional fält istället för parenteser i strängar"
+    - "Visuell hierarki: primärvärde stort, not liten och nedtonad (--text-small + color-text-muted)"
+    - "Melon: fokus på sockermelon (Cucumis melo), inte vattenmelon. Alla 5 sorter OP från Runåbergs"
+    - "Kronärtskocka: perenn i zon 1-3, ettårig norr. Herrgårds-sort förökas vegetativt (ej fröäkta)"
+    - "Endiv: blekningsguide inkluderad - nyckelkunskap som skiljer endiv från vanlig sallat"
+    - "Click-outside-to-close via useEffect + document click listener i tooltip-komponenter"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö i kommentarer och strängar"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+
+known_issues:
+  - "Main chunk 906 KB (chunk warning vid bygge)"
+  - "Lighthouse Accessibility 84"
+  - "Illustrationerna är AI-genererade SVG - visuell granskning rekommenderas"
+  - "docs/guides/kallor.md inte uppdaterad med batch 11 ännu"

@@ -298,7 +298,7 @@ Ingen prioritet. Plockas upp när det passar.
 ### Optimering & Teknik
 
 - Fortsatt bundle-optimering - utvärdera kontinuerligt: (1) separera illustrationsfiler (Icon vs Illustration) så stora SVG inte hamnar i main chunk, (2) dynamic import per grödprofil istället for att ladda alla 37 på en gång, (3) övervaka bundle-storlekar när fler profiler tillkommer
-- Stat-fält med noter (depthNote/spacingNote) - visa förklarande text under värdet i stats-griden, t.ex. "0.5-1 cm" med nedtonad "ljusgroddare - tryck fast men täck knappt" under. Gäller sådjup, avstånd m.fl. där extra kontext behövs (krukodling, ljusgroddare etc).
+- ~~Stat-fält med noter (depthNote/spacingNote)~~ ✅ Implementerat session 37
 
 ### Plattform
 
@@ -420,4 +420,4 @@ Ingen prioritet. Plockas upp när det passar.
 
 ---
 
-_Senast uppdaterad: 2026-03-02 (session 36)_
+_Senast uppdaterad: 2026-03-03 (session 37)_
