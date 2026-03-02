@@ -263,8 +263,10 @@ Background: `docs/research/f1-frodebatten.md`
 - **Never** bundle unrelated changes in one commit
 - One commit per logical change — if in doubt, split it
 - Always stage files explicitly, never `git add .`
+- Commit automatically without asking, but always as separate commits per scope
 - Never use heredoc or `$()` substitution in commit commands
 - Never use empty `-m ""` arguments (triggers security hooks)
+- Never use unicode arrows `→` or other special characters in commit messages (triggers "quoted characters" security check and blocks auto-commit). Use `->` instead.
 - For multi-line messages with Co-Authored-By, embed the newline in the last `-m`:
 
 ```text
