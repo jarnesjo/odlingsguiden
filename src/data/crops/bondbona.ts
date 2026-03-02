@@ -10,12 +10,12 @@ export const bondbona: Crop = {
   zones: { outdoor: [1, 2, 3, 4, 5, 6, 7], indoor: null, greenhouse: null },
   days: '80-100',
   spacing: '15-20 cm',
-  rowSpacing: '40-50 cm',
+  rowSpacing: '45-60 cm',
   depth: '5-8 cm',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 6 timmar sol per dag. Bondbönan vill ha ljus men gillar inte stekande hetta - hon trivs bäst i sval svensk sommar.' },
-    temperature: { min: 2, max: 25, ideal: '12-18°C', detail: 'Gror redan vid 2°C och tål frost ner till -5°C. Hon ÄLSKAR kyla och kan sås bland de allra första på våren. Over 25°C stressar hon och tappar blommor.' },
+    temperature: { min: 4, max: 25, ideal: '12-18°C', detail: 'Gror redan vid 4-5°C och tål frost ner till -5°C. Hon ÄLSKAR kyla och kan sås bland de allra första på våren. Över 25°C stressar hon och tappar blommor.' },
     wind: { level: 'Skyddat', detail: 'Plantorna blir 80-120 cm höga och tunga av baljor. Utan vindskydd eller stöd faller de omkull - speciellt när baljorna börjar tyngas.' },
   },
   watering: {
@@ -100,10 +100,10 @@ export const bondbona: Crop = {
     goodAfterWhy: 'Kvävehungriga grödor som kål, sallat och squash älskar jorden efter bondböna - den är fullpumpad med kväve.',
   },
   varieties: [
-    { name: 'Witkiem', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Tidig sort, perfekt för kortare säsonger. Ger skörd redan efter 12 veckor.' },
-    { name: 'Hangdown Grunkernig', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassikern. Pålitlig, hög avkastning, gröna kärnor som behåller färgen vid tillagning.' },
-    { name: 'Karmazyn', zones: [1, 2, 3, 4, 5, 6], note: 'Polsk sort med vackert röda bönor. Ovanlig och dekorativ - en riktig samtalsstart.' },
-    { name: 'Aguadulce Supersimonia', zones: [1, 2, 3, 4, 5], note: 'Spansk jätte - mycket stora baljor med 5-7 bönor per balja. Tidig och härdig.' },
+    { name: 'Witkiem', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Tidig sort, perfekt för kortare säsonger. Ger skörd redan efter 9-11 veckor.' },
+    { name: 'Hangdown Grünkernig', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassikern. Pålitlig, hög avkastning, gröna kärnor som behåller färgen vid tillagning. Kulturarvssort.' },
+    { name: 'Karmazyn', zones: [1, 2, 3, 4, 5, 6], note: 'Polsk sort med vackert rosa bönor som mörknar till rödbrunt vid torkning. Ovanlig och dekorativ.' },
+    { name: 'Superaguadulce', zones: [1, 2, 3, 4, 5], note: 'Medelhavsjätte - mycket stora baljor med 5-7 bönor per balja. Tidig och härdig.' },
   ],
   problems: [
     { name: 'Svarta bladlöss', symptom: 'Massiva kolonier av svarta löss på toppskott och unga baljor', fix: 'Klipp bort de översta 10 cm av plantan när de nedersta baljorna börjat sätta - det tar bort lössens favoritställe OCH ger bättre skörd. Klassiskt bondetrick!' },
@@ -114,7 +114,7 @@ export const bondbona: Crop = {
   goodToKnow: [
     { icon: 'leaf', title: 'Kvävefixerare - gratis gödsel', text: 'Bondbönan är odlingens arbetshäst - hon fixar sitt eget kväve OCH ger fantastisk mat. Klipp av plantan vid skörd men lämna rötterna kvar i jorden. Nästa gröda tackar dig.', severity: 'tip' },
     { icon: 'scissors', title: 'Toppa mot bladlöss', text: 'Svarta bladlöss är bondbönans eviga följeslagare. Det klassiska tricket: klipp av de översta 10 cm när de nedersta baljorna satt frukt. Du tar bort lössen OCH skickar energin till baljorna. Topparna kan du äta som grönsak!', severity: 'tip' },
-    { icon: 'snowflake', title: 'En av de allra tidigaste', text: 'Bondbönan gror redan vid 2°C och tål frost ner till -5°C. I zon 1 kan du så redan i mars - hon bryr sig inte om att det fortfarande är vinter.', severity: 'tip' },
+    { icon: 'snowflake', title: 'En av de allra tidigaste', text: 'Bondbönan gror redan vid 4-5°C och tål frost ner till -5°C. I zon 1 kan du så redan i mars - hon bryr sig inte om att det fortfarande är vinter.', severity: 'tip' },
     { icon: 'flower', title: 'Blommorna är magiska', text: 'Bondbönans svartvita blommor doftar fantastiskt och humlorna ÄLSKAR dem. En av de bästa pollineringsvännerna du kan ha i trädgården.', severity: 'tip' },
     { icon: 'warning', title: 'Lök och vitlök är fiender', text: 'Alla lökväxter hämmar bondbönans kvävefixering. Håll dem åtskilda i odlingen - annars förlorar du bondbönans bästa superkraft.', severity: 'warning' },
     { icon: 'warning', title: 'Höga plantor behöver stöd', text: 'Bondbönan kan bli över en meter hög och tyngs av tunga baljor. Kupa jord runt basen och sätt stöd (käppar med snöre) när plantorna är 30 cm. Annars ligger de platt efter första regnet.', severity: 'warning' },
@@ -160,7 +160,7 @@ export const bondbona: Crop = {
     methods: [
       { method: 'Färska i kylskåp', icon: 'snowflake', duration: '3-5 dagar', description: 'Skörda när baljorna är fyllda men bönorna fortfarande gröna och mjuka. Lägg i plastpåse i kylskåp. Ät så snart som möjligt - smaken är bäst dagsfärsk.', best: true },
       { method: 'Frysa (bästa långtidslagring)', icon: 'snowflake', duration: '8-12 månader', description: 'Skala ur baljorna, blanchera 2-3 minuter, kyl i isvatten. Klam av det tunna skinnet (det vita skalet runt varje böna) och frys in. Skinnet gör dem bittra.', best: false },
-      { method: 'Torka', icon: 'sun', duration: '2-5 år', description: 'Låt baljorna torka helt på plantan tills de är svarta och skramlar. Plocka ur bönorna och torka ytterligare. Torkade bondbönor håller i YEARS och är perfekta till soppor och grytor.', best: false },
+      { method: 'Torka', icon: 'sun', duration: '2-5 år', description: 'Låt baljorna torka helt på plantan tills de är svarta och skramlar. Plocka ur bönorna och torka ytterligare. Torkade bondbönor håller i åratal och är perfekta till soppor och grytor.', best: false },
       { method: 'Torka och mala', icon: 'storage', duration: '1-2 år', description: 'Torkade bondbönor kan malas till mjöl - bondbönsmjöl. Proteinrikt och glutenfritt. Blanda med vanligt mjöl i bröd.', best: false },
     ],
     tips: [
