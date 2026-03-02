@@ -92,6 +92,7 @@ next_steps:
   - "Steg 2: seasonData.ts (aggregera + gruppera)"
   - "Steg 3: SeasonView.tsx + CSS"
   - "Steg 4: Integrera i CropList.tsx (tab-toggle)"
+  - "Spana vidare pa 'Biologisk balans & bondepraktika' - format och plats i appen"
 
 context:
   decisions:
@@ -105,6 +106,19 @@ context:
     - "Rosmarin heter nu Salvia rosmarinus (omklassificerad 2017)"
     - "kallor.md har nu kallrankning A/B/C baserad pa 8 batchar"
     - "Alla 43 profiler faktacheckade - roadmap 2.2 klar"
+  ideas_discussed:
+    - |
+      Biologisk balans & bondepraktika - tva delar:
+      OVAN JORD: Fangstgrodor (silvertistel som bladlusfalla, tagetes mot nematoder),
+      insektbanker (honungsort lockar syrflar, brannassla lockar nyckelpigor tidigt),
+      ronn nara appeltrad, dillkronor som lockar parasitsteklar, fagelholkar,
+      sten/vedhog for nyttodjur. "Is i magen"-principen.
+      UNDER JORD: Mykorrhiza (svampnatverk, 90% av vaxter i symbios), rhizobium
+      (kvavefixering i baljvaxter), daggmaskar (400-500/m2, maskgodsel 5x rikare),
+      jordbakterier som antagonister mot sjukdomar, kompost som vaccination,
+      no-dig/ytkompostering, tackodling (bar jord = dod jord).
+      FORMAT: Ej bestamt - kan bli utokad companion/soil-sektion, fristående guide,
+      eller bade och. Spanas vidare pa i kommande session.
   constraints:
     - "Aldrig unicode-emojis i data eller UI"
     - "Aldrig en-dash i kallkod"
