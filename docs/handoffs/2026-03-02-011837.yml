@@ -1,0 +1,122 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 22. Faktacheck av 8 profiler (batch 2 + batch 3).
+
+    Batch 2 (rodbeta, purjolok, vitlok, radisa):
+    - 6 kritiska, 20 viktiga, 16 mindre fel fixade
+    - Vitlok: hardneck/softneck helt omkastat (Thermidrome, Sprint, Messidrome)
+    - Vitlok: Ljubasha -> Ivan (finns hos svenska frohandlare)
+    - Vitlok: Zon 6 plantering Sep -> Okt-Nov
+    - Purjolok: Jordloppar borttagen (fel skadedjur)
+    - Radisa: Rattika-sorter (Daikon, Runder Schwarzer) borttagna
+    - Radisa: Nya OP-sorter (Saxa 2, Plum Purple)
+
+    Batch 3 (squash, gurka, paprika, pumpa):
+    - 5 kritiska, 24 viktiga, 27 mindre fel fixade
+    - Squash: Butternut Waltham markerad som C. moschata (inte C. pepo)
+    - Gurka: Femdan (F1) -> Passandra (F1) (Femdan finns ej i SE)
+    - Gurka: Zon 5 tillagd for frilandsodling
+    - Paprika: Isoleringsavstand 10 m -> 30 m
+    - Paprika: Minibell + Atris F1 -> King of the North + Lipstick (OP)
+    - Pumpa: Muscade de Provence (ratt stavning), Gold Nugget ersatter Sweet Mama F1
+    - "Three Sisters" -> "Tre systrar" i squash + pumpa
+
+    Ovrigt:
+    - CLAUDE.md uppdaterad: unicode-pilar forbjudna i commit-meddelanden
+    - Vitloks-illustration noterad som forbattringskandidat (ser ut som vanlig lok)
+
+    Commits (9 st):
+    - fix(crops): fact-check rodbeta profile
+    - fix(crops): fact-check purjolok profile
+    - fix(crops): fact-check vitlok profile
+    - fix(crops): fact-check radisa profile
+    - docs(claude): add unicode arrow rule for commit messages
+    - fix(crops): fact-check squash profile
+    - fix(crops): fact-check gurka profile
+    - fix(crops): fact-check paprika profile
+    - fix(crops): fact-check pumpa profile
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (URL-routing)
+    - Recharts 3.7 (NutritionChart, lazy-loaded)
+    - "@fontsource/fraunces + @fontsource/lora (latin + latin-ext only)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/guides/performance.md
+    - docs/research/f1-frodebatten.md
+    - docs/research/faktacheck-2026-03-01.md
+    - docs/research/faktacheck-2026-03-02.md
+    - docs/plans/
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts
+    - src/data/cropList.ts
+    - src/data/cropUtils.ts
+    - src/data/cropSlugs.ts
+    - "src/data/crops/index.ts (43 profiler)"
+    - "src/data/crops/*.ts (43 aktiva profiler)"
+    - "src/components/illustrations/ (43 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/brand/symbols/ (SymbolSprout, SymbolLeaf)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/ + genererar sitemap"
+  - "npm run sitemap  # Generera sitemap.xml separat"
+  - "npx tsc --noEmit # Typkontroll utan output"
+
+next_steps:
+  - "Faktacheck batch 4: artor, bondbona, sparris, sockermajs"
+  - "Faktacheck batch 5: hallon, jordgubbar, svarta vinbar, roda vinbar"
+  - "Faktacheck batch 6: krusbar, bjornbar, mullbar, rabarber"
+  - "Faktacheck batch 7: basilika, persilja, dill, graslok"
+  - "Faktacheck batch 8: timjan, mynta, rosmarin, oregano"
+  - "Fixa vitloks-illustration (ser ut som vanlig lok, behover tydligare klyftsegment)"
+  - "Skriv sammanfattande faktacheck-rapport for batch 1-3"
+
+context:
+  decisions:
+    - "Faktacheck i batchar om 4 profiler - parallella agenter per batch"
+    - "OP-sorter forst i sortlistor per frofilosofi"
+    - "Sorter som ej finns hos svenska frohandlare byts ut (Femdan, Ljubasha, Minibell, Atris F1, Sweet Mama)"
+    - "Three Sisters -> Tre systrar (svenska genomgaende)"
+    - "Vintersquash/pumpa lagringstemperatur 10-15 grader (inte 15-20)"
+    - "Butternut Waltham ar C. moschata, markeras tydligt i squash-profilen"
+    - "Commit-format: aldrig unicode-pilar, aldrig -m tomma, aldrig heredoc"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Aldrig unicode-pilar i commit-meddelanden"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "23 av 43 profiler faktacheckade, 20 aterstar (5 batchar)"
+  - "Batch 0+1 rapport skriven, batch 2+3 rapport ej skriven annu"
+  - "CropPage chunk 604 KB - kan fixas med dynamic import per profil"
+  - "Lighthouse Accessibility 84 - kontrastproblem"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
+  - "Vitloks-illustration liknar vanlig lok - behover omarbetas"
