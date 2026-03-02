@@ -1,0 +1,123 @@
+meta:
+  roadmap_step: "2.3"
+  title: "Sasongsvy v1"
+  status: planerad
+  created: 2026-03-02
+
+overview: |
+  "Vad ska jag gora i min odling just nu?" - manadbaserad vy som aggregerar
+  timeline-data tvars over alla 43 grodprofiler, grupperat per aktivitetstyp.
+  Tva flikar pa startsidan: "Sasong" och "Alla grodor" (default).
+
+approach: |
+  Tva flikar pa startsidan (CropList). Default: "Alla grodor" (uppslagsverket
+  ar primart). Sasongsvyn visar aktuell manad med bladdringspilar.
+  All data finns redan i profilernas timeline-falt (zon 1, 4, 6).
+  Karnutmaningen ar att parsa svenska manadsstrangar till nummer.
+
+new_files:
+  - path: src/utils/monthParser.ts
+    purpose: |
+      Parsa timeline-strangar till month-arrays.
+      "Mars-april" -> [3, 4], "Maj" -> [5], "Aug-Sep" -> [8, 9]
+      Hanterar: foirkortningar, "eller", prefix ("Slutet av"), parenteser, wrap-around.
+    key_function: "parseMonthRange(months: string): number[]"
+    exports:
+      - parseMonthRange
+      - SWEDISH_MONTHS
+
+  - path: src/utils/seasonData.ts
+    purpose: |
+      Aggregera timeline-data tvars over alla grodor for en given manad/zon.
+      Grupperar per aktivitetstyp i naturlig sasongsordning.
+    key_function: "getSeasonActivities(month: number, zone: Zone): SeasonGroup[]"
+    types:
+      - name: SeasonActivity
+        fields: "cropId, cropName, cropIcon, category, phase, phaseIcon, months"
+      - name: SeasonGroup
+        fields: "key, label, icon, activities[]"
+    groups:
+      - key: indoor
+        matches: "Forodla, Fororodla"
+        label: "Forodla inomhus"
+      - key: sow
+        matches: "Direktsa, Sa, Satt"
+        label: "Sa och plantera"
+      - key: plant
+        matches: "Plantera, Utplantering"
+        label: "Plantera ut"
+      - key: harden
+        matches: "Harda"
+        label: "Harda av"
+      - key: tend
+        matches: "Godsla, Kupa, Gallra, Stod, Toppa, Sidoskott, Rensa, Beskar"
+        label: "Skota och godsla"
+      - key: bloom
+        matches: "Blomning"
+        label: "Blomning"
+      - key: harvest
+        matches: "Skord, Huvudskord"
+        label: "Skorda"
+      - key: seed
+        matches: "Frotagning"
+        label: "Fron och forvaring"
+      - key: winter
+        matches: "Vinterskydd, Overvintring, Nedklippning, Vila, Nedvissnande"
+        label: "Vintervila"
+    also_exports: "getClosestTimelineZone (extraherad fran CropPage rad 54-57)"
+
+  - path: src/components/pages/SeasonView.tsx
+    purpose: "Sasongsvy-komponent"
+    props: "userZone: Zone, onSelect: (cropId: string) => void"
+    state: "currentMonth (default: new Date().getMonth() + 1)"
+    layout: |
+      Manadsnavigering (pil vanter + manadsnamn + pil hoger)
+      Gruppkort per aktivitetstyp (rubrik med ikon + antal)
+        Crop-rader per grupp (CropIcon 40x40 + namn + manadtext + pil)
+      Tom-state om inga aktiviteter
+
+  - path: src/components/pages/SeasonView.module.css
+    purpose: "Styles for sasongsvy"
+
+modified_files:
+  - path: src/components/pages/CropList.tsx
+    changes:
+      - "Ny state: tab ('sasong' | 'alla'), default 'alla'"
+      - "Tab-toggle UI mellan header och categoryToggle"
+      - "Villkorlig rendering: tab === 'sasong' ? SeasonView : befintlig browse"
+
+  - path: src/components/pages/CropList.module.css
+    changes:
+      - "Tab-toggle styles (samma monster som categoryToggle, 2 knappar)"
+      - "Aktiv: accent-farg + vit text. Inaktiv: transparent + muted text"
+
+implementation_order:
+  - step: 1
+    desc: "monthParser.ts - parsern ar grunden"
+  - step: 2
+    desc: "seasonData.ts - aggregering och gruppering"
+  - step: 3
+    desc: "SeasonView.tsx + CSS - sjalva vyn"
+  - step: 4
+    desc: "Modifiera CropList.tsx + CSS - tab-toggle"
+  - step: 5
+    desc: "Manuell testning med npm run dev"
+  - step: 6
+    desc: "npx tsc --noEmit - typcheck"
+
+verification:
+  - "npm run dev -> byt till Sasong-fliken"
+  - "Mars (zon 4): forodling av tomat, paprika, basilika etc."
+  - "Juli: skord av flera grodor"
+  - "December: fa/inga aktiviteter, tom-state"
+  - "Byta zon -> andra grodor/tider"
+  - "Klicka groda -> navigerar till profil"
+  - "Alla grodor-fliken -> oforandrad"
+  - "npx tsc --noEmit -> inga fel"
+
+notes:
+  - "Default 'Alla grodor' - uppslagsverket ar primart"
+  - "Kan bli egen route /sasong later om det kanns battre"
+  - "Manadspilarna wrapper (dec->jan, jan->dec)"
+  - "Inga emojis - custom SVG ikoner overallt"
+  - "Zone-matching: ateranvand CropPage-logik (narmaste av 1/4/6)"

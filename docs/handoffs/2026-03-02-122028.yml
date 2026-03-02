@@ -1,0 +1,123 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 26. Faktacheck batch 8 (sista!) + kallor.md uppdatering + sasongsvy-planering.
+
+    Faktacheck batch 8 (timjan, mynta, rosmarin, oregano):
+    - 3 kritiska, 15 viktiga, 20 mindre korrigeringar
+    - Timjan: isoleringsavstand 50m alldeles for kort, zoner [1-6] -> [2-6], "Bredbladig timjan" bytt till German Winter
+    - Mynta: vattenmynta INTE hardigast (tvartom halvhardig), zoner [1-8] -> [1-4]
+    - Rosmarin: Salem ar INTE hardig (USDA zon 8-10!), latinnamn Salvia rosmarinus, zoner [1-3] -> [1-2]
+    - Oregano: temp -15 -> -25C (mycket hardigare an profilen pastad), "glansig" borttagen
+
+    kallor.md uppdaterad:
+    - Ny kallrankning-sektion (A/B/C-nivaer) baserad pa 8 batchar
+    - Faktacheck-status: alla 43 profiler markerade som checkade
+    - Lardomar fran faktacheckprocessen dokumenterade
+
+    Roadmap 2.2 (Kallhantering & faktacheck) markerad som klar med alla checkboxar.
+
+    Planering av 2.3 Sasongsvy paborkjad:
+    - Tva flikar pa startsidan: "Sasong" (ny) + "Alla grodor" (befintlig)
+    - Default: "Alla grodor" (uppslagsverket ar primart)
+    - Manadsbaserad vy med bladdringspilar
+    - Aggregerar timeline-data tvars over alla 43 grodor
+    - Grupperat per aktivitetstyp (forodla, sa, skorda, etc.)
+    - Plan: docs/plans/2.3-sasongsvy.yml
+
+    Encoding-check: alla 44 crop-filer rena (inga aao-problem).
+
+    Commits (9 st):
+    - fix(crops): fact-check timjan profile
+    - fix(crops): fact-check mynta profile
+    - fix(crops): fact-check rosmarin profile
+    - fix(crops): fact-check oregano profile
+    - docs(research): add batch 8 fact-check report
+    - docs(guides): update kallor.md with source rankings
+    - docs(roadmap): mark 2.2 kallhantering & faktacheck as done
+    - chore(config): update sitemap lastmod dates
+    - (handoff + plan committas separat)
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (URL-routing)
+    - Recharts 3.7 (NutritionChart, lazy-loaded)
+    - "@fontsource/fraunces + @fontsource/lora (latin + latin-ext only)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/guides/performance.md
+    - docs/plans/2.3-sasongsvy.yml
+    - "docs/research/faktacheck-*.md (8 rapporter)"
+    - docs/research/f1-frodebatten.md
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts
+    - src/data/cropList.ts
+    - src/data/cropUtils.ts
+    - src/data/cropSlugs.ts
+    - "src/data/crops/index.ts (43 profiler)"
+    - "src/data/crops/*.ts (43 aktiva profiler, alla faktacheckade)"
+    - "src/components/illustrations/ (43 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/brand/symbols/ (SymbolSprout, SymbolLeaf)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/ + genererar sitemap"
+  - "npm run sitemap  # Generera sitemap.xml separat"
+  - "npx tsc --noEmit # Typkontroll utan output"
+
+next_steps:
+  - "Implementera 2.3 Sasongsvy v1 (plan: docs/plans/2.3-sasongsvy.yml)"
+  - "Steg 1: monthParser.ts (parsa svenska manadsstrangar)"
+  - "Steg 2: seasonData.ts (aggregera + gruppera)"
+  - "Steg 3: SeasonView.tsx + CSS"
+  - "Steg 4: Integrera i CropList.tsx (tab-toggle)"
+
+context:
+  decisions:
+    - "Tva flikar pa startsidan, default 'Alla grodor' - uppslagsverket ar primart"
+    - "Om fliken inte kanns bra kan vi flytta till egen route /sasong later"
+    - "Manadsbladdering (ej bara aktuell manad) - 'vad ska jag gora i maj?'"
+    - "Gruppering per aktivitetstyp, inte per groda"
+    - "Salem rosmarin ar INTE hardig (USDA zon 8-10) - korrigerat"
+    - "Vattenmynta halvhardig, inte hardigast - korrigerat"
+    - "Oregano klarar -25C, inte -15C - korrigerat"
+    - "Rosmarin heter nu Salvia rosmarinus (omklassificerad 2017)"
+    - "kallor.md har nu kallrankning A/B/C baserad pa 8 batchar"
+    - "Alla 43 profiler faktacheckade - roadmap 2.2 klar"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "Aldrig unicode escapes - anvand bokstavliga tecken"
+    - "All text pa svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "F1-hybrider ska markeras explicit"
+    - "Max-width 480px, mobile-first"
+
+known_issues:
+  - "CropPage chunk 604 KB - kan fixas med dynamic import per profil"
+  - "Lighthouse Accessibility 84 - kontrastproblem"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
+  - "Timeline-data finns bara for zon 1, 4, 6 - narmaste zon anvands"
