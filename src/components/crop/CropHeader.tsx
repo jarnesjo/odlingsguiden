@@ -52,29 +52,26 @@ export function CropHeader({ cropId, crop, userZone, onBack, onZoneClick }: Crop
         <div className={styles.family}>
           {crop.familyLatin} <span className={styles.familySwedish}>({crop.family})</span>
         </div>
-        <div className={styles.badges}>
-          <div className={styles.badgeRow}>
-            <DifficultyBadge difficulty={crop.difficulty} why={crop.difficultyWhy} />
-            <span className={`${styles.pill} ${styles.daysPill}`}>
-              {isBerry ? crop.days : `${crop.days} dagar till skörd`}
-            </span>
-            {crop.perennial && (
-              <span className={`${styles.pill} ${styles.perennialPill}`}>
-                Flerårig · {crop.lifespan}
-              </span>
-            )}
-          </div>
-          <ZoneBadge zones={crop.zones} userZone={userZone} />
-        </div>
       </div>
 
-      <div className={styles.statsGrid}>
-        {stats.map((s, i) => (
-          <div key={i} className={styles.statCard}>
-            <div className={styles.statLabel}>{s.label}</div>
-            <div className={styles.statValue}>{s.value}</div>
-          </div>
-        ))}
+      <div className={styles.infoCard}>
+        <div className={styles.infoTop}>
+          <DifficultyBadge difficulty={crop.difficulty} why={crop.difficultyWhy} />
+          <span className={styles.infoMeta}>
+            {crop.perennial
+              ? `Flerårig · ${crop.lifespan}`
+              : `${crop.days} dagar till skörd`}
+          </span>
+        </div>
+        <ZoneBadge zones={crop.zones} userZone={userZone} />
+        <div className={styles.infoStats}>
+          {stats.map((s, i) => (
+            <div key={i} className={styles.infoStatCell}>
+              <div className={styles.infoStatLabel}>{s.label}</div>
+              <div className={styles.infoStatValue}>{s.value}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   )
