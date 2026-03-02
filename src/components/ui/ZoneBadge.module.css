@@ -1,17 +1,6 @@
 .zone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-sm);
-}
-
-.zoneRange {
   font-size: var(--text-label);
-  color: var(--color-text-muted);
-}
-
-.suitIcon {
-  font-size: var(--text-label);
-  font-weight: 700;
-  color: var(--suit-color);
+  font-weight: 600;
+  color: var(--zone-color);
+  text-align: center;
 }
