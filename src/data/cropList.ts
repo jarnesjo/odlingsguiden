@@ -84,13 +84,13 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'rosmarin', name: 'Rosmarin', icon: 'rosmarin', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Medel', category: 'kryddor' },
   { id: 'salvia', name: 'Salvia', icon: 'salvia', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Medel', category: 'kryddor' },
   { id: 'mynta', name: 'Mynta', icon: 'mynta', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Enkel', category: 'kryddor' },
-  { id: 'mejram', name: 'Mejram', icon: 'herb', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Medel', category: 'kryddor', locked: true },
+  { id: 'mejram', name: 'Mejram', icon: 'mejram', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Medel', category: 'kryddor' },
   { id: 'citronmeliss', name: 'Citronmeliss', icon: 'citronmeliss', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Enkel', category: 'kryddor' },
   // Kryddor - Apiaceae (Flockblommiga)
   { id: 'persilja', name: 'Persilja', icon: 'persilja', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor' },
   { id: 'dill', name: 'Dill', icon: 'dill', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor' },
   { id: 'koriander', name: 'Koriander', icon: 'koriander', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor' },
-  { id: 'libbsticka', name: 'Libbsticka', icon: 'herb', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor', locked: true },
+  { id: 'libbsticka', name: 'Libbsticka', icon: 'libbsticka', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor' },
   { id: 'kummin', name: 'Kummin', icon: 'kummin', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor' },
   // Kryddor - Amaryllidaceae (Lökväxter)
   { id: 'graslok', name: 'Gräslök', icon: 'graslok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'kryddor' },
@@ -100,7 +100,7 @@ export const CROP_LIST: CropListEntry[] = [
   // Kryddor - Brassicaceae (Korsblommiga)
   { id: 'krasse', name: 'Krasse', icon: 'krasse', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'kryddor' },
   // Kryddor - Lauraceae (Lagerväxter)
-  { id: 'lagerblad', name: 'Lagerblad', icon: 'herb', family: 'Lagerväxter', familyLatin: 'Lauraceae', difficulty: 'Avancerad', category: 'kryddor', locked: true },
+  { id: 'lagerblad', name: 'Lagerblad', icon: 'lagerblad', family: 'Lagerväxter', familyLatin: 'Lauraceae', difficulty: 'Avancerad', category: 'kryddor' },
   // Blommor - Asteraceae (Korgblommiga)
   { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
   { id: 'solros', name: 'Solros', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
