@@ -83,7 +83,7 @@
 
 .searchInput {
   width: 100%;
-  padding: var(--space-md) 48px var(--space-md) 40px;
+  padding: var(--space-md) var(--space-lg) var(--space-md) 40px;
   border-radius: var(--radius-button);
   border: 1px solid var(--color-border);
   font-size: 15px;
@@ -98,8 +98,6 @@
   width: 16px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237A7568' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E") center/contain no-repeat;
   cursor: pointer;
-  position: relative;
-  right: -4px;
 }
 
 .searchIcon {
