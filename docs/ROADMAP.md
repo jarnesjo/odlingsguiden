@@ -393,8 +393,8 @@ Ingen prioritet. Plockas upp när det passar.
 
 - [x] ~~Emojis används överallt istället för custom SVG-ikoner~~ (åtgärdat: 1.3 grafisk profil)
 - [x] ~~Potatis saknar illustration~~ (åtgärdat: 1.3 grafisk profil)
-- [ ] Odlingszonerna och landskapstilldelning behöver faktagranskas (Gotland = zon 1, m.fl.)
-- [ ] Ingen säsongsvy/kalender
+- [x] ~~Odlingszonerna och landskapstilldelning behöver faktagranskas (Gotland = zon 1, m.fl.)~~ (åtgärdat: Öland/Gotland→zon 1, Mälardalen→zon 2, alla regioner uppdaterade)
+- [x] ~~Ingen säsongsvy/kalender~~ (åtgärdat: 2.3 säsongsvy v1)
 - [x] ~~Inga korsreferenser~~ (åtgärdat: 1.4 korsreferenser)
 - [ ] Frukt saknas som kategori
 - [ ] Bundle size >500KB pga Recharts
