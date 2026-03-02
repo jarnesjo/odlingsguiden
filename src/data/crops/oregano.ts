@@ -11,13 +11,13 @@ export const oregano: Crop = {
   difficultyWhy: 'Oregano är en av de mest lättskötta kryddväxterna du kan odla. Hon är torktålig, härdig och ger starkare smak ju mer hon får kämpa. Det enda misstaget du kan göra är att ge henne för mycket omsorg - oregano vill ha det tufft.',
   zones: { outdoor: [1, 2, 3, 4, 5], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },
   days: '70-90',
-  spacing: '25-30 cm',
+  spacing: '20-30 cm',
   rowSpacing: '30-40 cm',
   depth: '0.3 cm (ytligt, fröet behöver ljus)',
   ph: { min: 6.0, max: 8.0, ideal: 7.0 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Oregano är en Medelhavsvilde som älskar sol - ju mer desto bättre. Ge henne minst 6-8 timmars direkt solljus per dag. I skugga blir hon ranglig och tappar nästan all smak. Söderlägt läge vid en varm mur? Då blir hon lyckligast.' },
-    temperature: { min: -15, max: 35, ideal: '18-25°C', detail: 'Oregano överraskar med sin härdighet - etablerade plantor klarar -15°C om de står torrt. Sommarvärme är bara ett plus, ju varmare desto mer koncentrerade eteriska oljor. Kyla plus väta är däremot en dödlig kombination.' },
+    temperature: { min: -25, max: 35, ideal: '18-25°C', detail: 'Oregano är riktigt härdig - etablerade plantor klarar ner till -25°C i väldränerad jord! Sommarvärme är bara ett plus, ju varmare desto mer koncentrerade eteriska oljor. Kyla plus väta är däremot en dödlig kombination.' },
     wind: { level: 'Tålig', detail: 'Med sitt låga, buskiga växtsätt klarar oregano vind bra. Hon växer vilt på vindpiskade bergssidor i Medelhavet - svensk vind är ingen utmaning.' },
   },
   watering: {
@@ -100,14 +100,14 @@ export const oregano: Crop = {
   },
   varieties: [
     { name: 'Grekisk oregano (Origanum vulgare subsp. hirtum)', zones: [1, 2, 3, 4, 5], note: 'Starkast smak av alla! Det här är oreganon du vill ha på pizzan. Kompakt växtsätt med små, håriga grågrönablad. Intensiv, nästan pepperaktig arom. DEN oregano du letar efter.' },
-    { name: 'Italiensk oregano (korsning)', zones: [1, 2, 3, 4, 5], note: 'Korsning mellan oregano och mejram. Mildare och rundare smak än grekisk. Större blad och frodigare växt. Perfekt för såsen och grytor.' },
+    { name: 'Italiensk oregano (Origanum x majoricum)', zones: [1, 2, 3, 4, 5], note: 'Korsning mellan oregano och mejram. Mildare och rundare smak än grekisk. Större blad och frodigare växt. Perfekt för såser och grytor.' },
     { name: 'Gyllene oregano (Origanum vulgare Aureum)', zones: [1, 2, 3, 4], note: 'Vackert gulgröna blad som lyser upp rabatten! Något mildare smak, men fantastisk som marktäckare. Både vacker och ätbar.' },
     { name: 'Origanum vulgare (kungsmynta)', zones: [1, 2, 3, 4, 5, 6], note: 'Svensk vild form! Växer vilt i hela södra och mellersta Sverige. Mildare smak än de odlade sorterna, men härdigast av alla. Blommorna är älskade av bin och fjärilar.' },
   ],
   problems: [
     { name: 'Rotröta (väta)', symptom: 'Plantan gulnar och vissnar trots att jorden är fuktig. Stammens bas är mörk och mjuk. Rötter är bruna och luktar illa.', fix: 'Tyvärr ingen bot när rotröta slagit till. Förebygg med väldränerad jord och sparsam vattning. Är det en stor planta kan du försöka ta sticklingar från friska grenar och starta om.' },
     { name: 'Mjöldagg', symptom: 'Vitt, mjölaktigt pulver på bladen. Vanligast vid fuktig luft och dålig luftcirkulation.', fix: 'Klipp bort angripna delar. Se till att plantan står luftigt och inte för tätt med andra växter. En blandning av vatten och lite bakpulver kan sprayas på friska blad som skydd.' },
-    { name: 'Vedartade grenar (åldring)', symptom: 'Plantan blir gles, vedartad och glansig efter 3-5 år. Få blad, mest bara torr ved.', fix: 'Förebygg genom att klippa tillbaka oregano kraftigt varje vår - men aldrig in i den vedartade delen. När plantan är för gammal är det dags att ersätta med en ny. Ta sticklingar eller dela roten först!' },
+    { name: 'Vedartade grenar (åldring)', symptom: 'Plantan blir gles och vedartad efter 3-5 år. Få blad, mest bara torr ved.', fix: 'Förebygg genom att klippa tillbaka oregano kraftigt varje vår - men aldrig in i den vedartade delen. När plantan är för gammal är det dags att ersätta med en ny. Ta sticklingar eller dela roten först!' },
     { name: 'Bladlöss', symptom: 'Klibbiga blad, deformerade skottspetsar. Små gröna eller svarta löss synliga.', fix: 'Ovanligt på oregano tack vare de eteriska oljorna, men kan hända på svaga plantor. Spola av med vatten eller behandla med såplösning. Stark och frisk oregano är sällan angripen.' },
   ],
   goodToKnow: [
