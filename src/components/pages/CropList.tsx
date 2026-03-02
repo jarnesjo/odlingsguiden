@@ -51,13 +51,15 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
         return
       }
 
-      // 1-4 byter kategori (ignoreras om input har fokus)
-      if (document.activeElement === searchRef.current) return
-      if (e.metaKey || e.ctrlKey || e.altKey) return
+      // 1-4 byter kategori (ren siffra eller CMD/Ctrl+siffra i sökinput)
+      const inSearch = document.activeElement === searchRef.current
+      if (inSearch && !(e.metaKey || e.ctrlKey)) return
+      if (!inSearch && (e.metaKey || e.ctrlKey || e.altKey)) return
       const views: View[] = ['sasong', ...visibleCategories.map((c) => c.id as Category)]
       const idx = Number(e.key) - 1
       const target = views[idx]
       if (target) {
+        e.preventDefault()
         onViewChange(target)
       }
     }
