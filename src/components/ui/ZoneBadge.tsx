@@ -18,13 +18,13 @@ export function ZoneBadge({ zones, userZone }: ZoneBadgeProps) {
 
   if (canGrowOutdoor) {
     suitColor = colors.accent
-    tip = 'Passar din zon - kan odlas utomhus.'
+    tip = `Passar i zon ${userZone} utomhus.`
   } else if (canGrowGreenhouse) {
     suitColor = colors.zoneGreenhouseText
-    tip = 'Kräver växthus eller tunnel i din zon.'
+    tip = `Zon ${userZone} kräver växthus eller tunnel.`
   } else {
     suitColor = colors.warning
-    tip = 'Svårt att odla i din zon - även med växthus.'
+    tip = `Svårt att odla i zon ${userZone} - även med växthus.`
   }
 
   const outdoorRange = zones.outdoor
