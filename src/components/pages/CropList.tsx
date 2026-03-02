@@ -126,7 +126,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
             <span className={styles.searchIcon}>
               <SearchIcon size={16} color="#999" />
             </span>
-            <kbd className={styles.searchHint}>⌘K</kbd>
+            <kbd className={styles.searchHint}>{navigator.platform?.includes('Mac') ? '⌘K' : 'Ctrl+K'}</kbd>
           </div>
 
           {/* Family filters */}
