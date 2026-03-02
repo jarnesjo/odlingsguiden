@@ -12,7 +12,7 @@ export const koriander: Crop = {
   zones: { outdoor: [1, 2, 3, 4, 5, 6], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6, 7, 8] },
   days: '50-70 (blad), 90-120 (frö)',
   spacing: '5-10 cm',
-  spacingNote: 'Blad. Fröodling: 15-20 cm',
+  spacingNote: 'Fröodling: 15-20 cm',
   rowSpacing: '25-30 cm',
   depth: '0.5-1 cm',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
