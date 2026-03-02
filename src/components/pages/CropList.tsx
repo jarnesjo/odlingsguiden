@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense } from "react"
+import { useSearchParams } from "react-router-dom"
 import type { Category, Zone } from "../../data/types"
 import { useDocumentMeta } from "../../hooks/useDocumentMeta"
 import { CATEGORIES } from "../../data/categories"
@@ -28,7 +29,26 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
     'Zonanpassad odlingsguide för svenska trädgårdar. Djupa profiler för grönsaker, bär och kryddor med sortval, tidslinjer och skördetips.',
   )
 
-  const [view, setView] = useState<View>("grönsaker")
+  const [searchParams, setSearchParams] = useSearchParams()
+  const viewParam = searchParams.get('vy') as View | null
+  const view: View = viewParam && (viewParam === 'sasong' || CATEGORIES.some(c => c.id === viewParam)) ? viewParam : 'grönsaker'
+  const monthParam = searchParams.get('manad')
+  const currentMonth = monthParam ? Math.max(1, Math.min(12, Number(monthParam))) || (new Date().getMonth() + 1) : (new Date().getMonth() + 1)
+
+  function setView(v: View) {
+    if (v === 'grönsaker') {
+      setSearchParams({}, { replace: true })
+    } else if (v === 'sasong') {
+      setSearchParams({ vy: v, manad: String(currentMonth) }, { replace: true })
+    } else {
+      setSearchParams({ vy: v }, { replace: true })
+    }
+  }
+
+  function setMonth(m: number) {
+    setSearchParams({ vy: 'sasong', manad: String(m) }, { replace: true })
+  }
+
   const [search, setSearch] = useState("")
   const [filter, setFilter] = useState("Alla")
 
@@ -91,7 +111,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
 
       {isSeason ? (
         <Suspense fallback={<div style={{ textAlign: 'center', padding: 40, color: 'var(--color-text-muted)' }}>Laddar...</div>}>
-          <SeasonView userZone={userZone} onSelect={onSelect} />
+          <SeasonView userZone={userZone} currentMonth={currentMonth} onMonthChange={setMonth} onSelect={onSelect} />
         </Suspense>
       ) : (
         <>

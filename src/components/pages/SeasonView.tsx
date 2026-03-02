@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import type { Zone } from '../../data/types'
 import { MONTH_NAMES } from '../../utils/monthParser'
 import { getSeasonActivities } from '../../utils/seasonData'
@@ -8,20 +7,20 @@ import styles from './SeasonView.module.css'
 
 interface SeasonViewProps {
   userZone: Zone
+  currentMonth: number
+  onMonthChange: (month: number) => void
   onSelect: (cropId: string) => void
 }
 
-export function SeasonView({ userZone, onSelect }: SeasonViewProps) {
-  const [currentMonth, setCurrentMonth] = useState(() => new Date().getMonth() + 1)
-
+export function SeasonView({ userZone, currentMonth, onMonthChange, onSelect }: SeasonViewProps) {
   const groups = getSeasonActivities(currentMonth, userZone)
 
   function prevMonth() {
-    setCurrentMonth(m => (m === 1 ? 12 : m - 1))
+    onMonthChange(currentMonth === 1 ? 12 : currentMonth - 1)
   }
 
   function nextMonth() {
-    setCurrentMonth(m => (m === 12 ? 1 : m + 1))
+    onMonthChange(currentMonth === 12 ? 1 : currentMonth + 1)
   }
 
   return (
