@@ -12,7 +12,7 @@ export const pumpa: Crop = {
   spacing: '100-200 cm',
   rowSpacing: '200-300 cm',
   depth: '2-3 cm',
-  ph: { min: 5.8, max: 7.0, ideal: 6.5 },
+  ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Minst 8 timmar sol per dag. Pumpa vill ha det varmt och soligt - i halvskugga får du massor av blad men knappt en enda frukt.' },
     temperature: { min: 10, max: 35, ideal: '20-28°C', detail: 'Pumpa är en riktig solälskare. Sätts aldrig ut innan nattfrosten är helt förbi och jorden är minst 15°C. Redan en enda frostnatt är dödlig.' },
@@ -79,7 +79,7 @@ export const pumpa: Crop = {
   ],
   companions: {
     good: [
-      { id: 'sockermajs', name: 'Majs', icon: 'vegetable', why: 'Klassiska "Three Sisters" - majsen ger vertikalt stöd, pumpa skuggar marken och håller ogräs borta' },
+      { id: 'sockermajs', name: 'Majs', icon: 'vegetable', why: 'Klassiska "Tre systrar" - majsen ger vertikalt stöd, bönor fixar kväve och pumpa skuggar marken' },
       { id: 'artor', name: 'Ärtor', icon: 'vegetable', why: 'Ärtorna fixar kväve i jorden som pumpa är så hungrig efter - ett perfekt par' },
       { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Samma princip som ärtor - baljväxterna levererar gratis kväve till den hungriga pumpan' },
       { id: 'radisa', name: 'Rädisa', icon: 'vegetable', why: 'Snabb mellanskörd innan pumpans rankor breder ut sig och tar över all plats' },
@@ -99,11 +99,11 @@ export const pumpa: Crop = {
     goodAfterWhy: 'Lättfödda rotgrönsaker trivs efter pumpa som har luckrat och gödslat jorden grundligt.',
   },
   varieties: [
-    { name: 'Uchiki Kuri', zones: [1, 2, 3, 4, 5], note: 'Japansk hokkaido-pumpa. Nötig, söt smak och kompakt storlek. Skalet går att äta - underbart i ugn!' },
-    { name: 'Atlantic Giant', zones: [1, 2, 3], note: 'Jättepumpa för tävlingar och skryt. Kan bli hundratals kilo. Inte den godaste - men vilken show!' },
-    { name: 'Jack O\'Lantern', zones: [1, 2, 3, 4], note: 'Klassisk halloween-pumpa. Orange, rund och perfekt att göra lykta av. Köttet funkar i soppa.' },
-    { name: 'Muscat de Provence', zones: [1, 2, 3, 4], note: 'Vacker, räfflad och elegant med djupt orange kött. Fantastisk smak till soppa och gratäng.' },
-    { name: 'Sweet Mama (F1)', zones: [1, 2, 3, 4, 5], note: 'Kompakt buttercup-typ som mognar tidigt. Fungerar även i zon 5. Söt och krämig. F1-hybrid.' },
+    { name: 'Uchiki Kuri', zones: [1, 2, 3, 4, 5], note: 'Japansk hokkaido-pumpa (OP, C. maxima). Nötig, söt smak och kompakt storlek. Skalet går att äta!' },
+    { name: 'Atlantic Giant', zones: [1, 2, 3], note: 'OP-jättepumpa (C. maxima) för tävlingar och skryt. Kan bli hundratals kilo. Inte den godaste - men vilken show!' },
+    { name: 'Jack O\'Lantern', zones: [1, 2, 3, 4], note: 'Klassisk OP-halloweenpumpa (C. pepo). Orange, rund och perfekt att göra lykta av. Köttet funkar i soppa.' },
+    { name: 'Muscade de Provence', zones: [1, 2, 3, 4], note: 'Vacker, räfflad OP-myskpumpa (C. moschata). Djupt orange kött med fantastisk smak till soppa och gratäng.' },
+    { name: 'Gold Nugget', zones: [1, 2, 3, 4, 5], note: 'Kompakt, tidig OP-sort (C. maxima, finns hos Runåbergs). Mognar snabbt, perfekt för kortare säsonger.' },
   ],
   problems: [
     { name: 'Mjöldagg', symptom: 'Vitt, pudrigt belägg på bladen, börjar ofta i slutet av säsongen', fix: 'Vattna vid roten, aldrig på bladen. God luftcirkulation runt plantorna. Drabbade blad kan klippas bort - plantan överlever det.' },
@@ -156,12 +156,12 @@ export const pumpa: Crop = {
     ],
     isolation: 'Korspollinerare via insekter. Odla bara en sort per art (C. maxima, C. moschata, C. pepo) för rent frö, eller handpollera och tejpa igen blommorna.',
     storageYears: '4-6 år',
-    tip: 'Pumpafrön håller sig länge! Men undvik att spara frö från F1-hybrider (som Sweet Mama) - de ger helt oförutsägbara resultat nästa generation.',
+    tip: 'Pumpafrön håller sig länge! Alla rekommenderade sorter ovan är öppenpollinerade och perfekta för fröbesparing.',
   },
   storage: {
     shelfLife: '2-6 månader (beroende på sort)',
     methods: [
-      { method: 'Torr lagring i rumstemperatur', icon: 'storage', duration: '3-6 månader', description: 'Vinterpumpor lagras bäst i ett torrt, svalt rum (12-18°C). Härda dem i solen en vecka efter skörd först. Kontrollera regelbundet och ät de mjuka först.', best: true },
+      { method: 'Torr lagring i rumstemperatur', icon: 'storage', duration: '3-6 månader', description: 'Vinterpumpor lagras bäst i ett torrt, svalt rum (10-15°C). Härda dem i solen en vecka efter skörd först. Kontrollera regelbundet och ät de mjuka först.', best: true },
       { method: 'Kylskåp (uppskuren)', icon: 'snowflake', duration: '5-7 dagar', description: 'Uppskuren pumpa i plastfolie eller låda med lock i kylskåp. Använd inom en vecka. Skär bort märg och frön först.', best: false },
       { method: 'Frysa (tillagad)', icon: 'snowflake', duration: '8-12 månader', description: 'Skala, skär i bitar och koka eller ugnsrosta. Mosa eller frys i bitar. Perfekt för soppor, pajer och gratänger.', best: false },
       { method: 'Puré att frysa', icon: 'snowflake', duration: '6-10 månader', description: 'Ugnsrosta pumpan, mosa till puré och frys i portionspåsar. Redo att använda direkt i soppa, bröd eller bakverk.', best: false },
