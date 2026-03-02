@@ -12,7 +12,7 @@ export const sparris: Crop = {
   difficultyWhy: 'Kräver tålamod som en zen-mästare - du planterar år 1 och skördar inte ordentligt förrän år 3. Dessutom behöver sparrisen djupbearbetad jord, korrekt plantering och förståelse för när man ska sluta skörda. Men när den väl är etablerad ger hon troget i 15-20 år.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6], indoor: null, greenhouse: [1, 2, 3, 4, 5, 6, 7] },
   days: 'Skörd år 3+',
-  spacing: '40-50 cm',
+  spacing: '30-45 cm',
   rowSpacing: '120-150 cm',
   depth: '15-20 cm (i dike)',
   ph: { min: 6.0, max: 7.5, ideal: 6.5 },
@@ -96,7 +96,7 @@ export const sparris: Crop = {
     bad: [
       { id: 'lok', name: 'Lök', icon: 'vegetable', why: 'Lökväxter hämmar sparrisens rottillväxt. De pratar helt enkelt inte samma språk under marken.' },
       { id: 'vitlok', name: 'Vitlök', icon: 'vegetable', why: 'Samma problem som lök - hämmar sparrisens rotutveckling. Håll bra avstånd.' },
-      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Konkurrerar om samma jorddjup och kan sprida rotsjukdomar. Potatisens kupning stör dessutom sparrisrötterna.' },
+      { id: 'potatis', name: 'Potatis', icon: 'vegetable', why: 'Konkurrerar om samma jorddjup och båda är känsliga för liknande jordburna sjukdomar. Potatisens kupning stör dessutom sparrisrötterna.' },
     ],
   },
   rotation: {
@@ -110,7 +110,7 @@ export const sparris: Crop = {
   varieties: [
     { name: 'Gijnlim', zones: [1, 2, 3, 4, 5], note: 'Hanplanta, tidig skörd, mycket produktiv. Den vanligaste sorten i Sverige och det finns en anledning - pålitlig och generös.' },
     { name: 'Backlim', zones: [1, 2, 3, 4, 5, 6], note: 'Hanplanta, härdigare än Gijnlim och fungerar längre norrut. Kraftiga, tjocka skott med fin smak.' },
-    { name: 'Millennium', zones: [1, 2, 3, 4, 5, 6], note: 'Utvecklad i Kanada - extremt härdig. Klarar tuffa vintrar och ger bra skörd även i zon 5-6.' },
+    { name: 'Millennium', zones: [1, 2, 3, 4, 5], note: 'Utvecklad i Kanada (University of Guelph) - extremt härdig F1-hanplanta. Klarar tuffa vintrar.' },
     { name: 'Mary Washington', zones: [1, 2, 3, 4], note: 'Klassisk gammaldags sort med både han- och honplantor. Mindre produktiv men nostalgisk charm och bra smak.' },
     { name: 'Erasmus', zones: [1, 2, 3, 4, 5], note: 'Holländsk hanplanta. Tjocka, gröna skott med lila toppar. Sen men pålitlig och sjukdomstolerant.' },
   ],
@@ -150,7 +150,7 @@ export const sparris: Crop = {
   },
   seedSaving: {
     difficulty: 'Medel',
-    type: 'Korspollinerare',
+    type: 'Insektspollinerare',
     biennial: false,
     description: 'Sparris är tvåbyggare - han- och honplantor var för sig. Bara honplantor ger bär och frö. Moderna sorter är renodlade hanplantor och ger inga frö alls.',
     steps: [
@@ -161,7 +161,7 @@ export const sparris: Crop = {
       'Torka fröna på hushållspapper i rumstemperatur i en vecka',
       'Förvara torrt och svalt i märkt påse',
     ],
-    isolation: 'Sparris vindpollineras - 500+ meter isolering för sortrenhet. I hemträdgården spelar det mindre roll.',
+    isolation: 'Sparris pollineras av insekter (bin, humlor) - 250-500 meter isolering för sortrenhet. I hemträdgården spelar det mindre roll.',
     storageYears: '3-4 år',
     tip: 'Moderna F1-hansorter (Gijnlim, Backlim) ger inga frön. Om du vill spara frö behöver du en gammal sort som Mary Washington med honplantor.',
   },
