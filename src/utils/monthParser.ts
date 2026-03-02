@@ -48,6 +48,28 @@ export const MONTH_NAMES = [
   'December',
 ] as const
 
+/** Lowercase month slugs for URLs: index 1 = 'januari', etc. */
+export const MONTH_SLUGS = [
+  '',
+  'januari',
+  'februari',
+  'mars',
+  'april',
+  'maj',
+  'juni',
+  'juli',
+  'augusti',
+  'september',
+  'oktober',
+  'november',
+  'december',
+] as const
+
+/** Lookup slug → month number. Handles both full names and abbreviations. */
+export function monthSlugToNumber(slug: string): number | null {
+  return SWEDISH_MONTHS[slug.toLowerCase()] ?? null
+}
+
 /**
  * Parsar en månadssträng till en array av månadsnummer (1-12).
  *

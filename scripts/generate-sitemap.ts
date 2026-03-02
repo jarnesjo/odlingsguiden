@@ -14,12 +14,19 @@ const today = new Date().toISOString().split('T')[0]
 
 const unlockedCrops = CROP_LIST.filter(c => !c.locked)
 
+const viewPages = ['kryddor', 'bär', 'säsong']
+
 const urls = [
   `  <url>
     <loc>${BASE_URL}/</loc>
     <lastmod>${today}</lastmod>
     <priority>1.0</priority>
   </url>`,
+  ...viewPages.map(page => `  <url>
+    <loc>${BASE_URL}/${encodeURI(page)}</loc>
+    <lastmod>${today}</lastmod>
+    <priority>0.9</priority>
+  </url>`),
   ...unlockedCrops.map(crop => {
     const slug = toSlug(crop.name)
     return `  <url>

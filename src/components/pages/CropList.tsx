@@ -1,5 +1,4 @@
 import { useState, lazy, Suspense } from "react"
-import { useSearchParams } from "react-router-dom"
 import type { Category, Zone } from "../../data/types"
 import { useDocumentMeta } from "../../hooks/useDocumentMeta"
 import { CATEGORIES } from "../../data/categories"
@@ -19,35 +18,19 @@ type View = 'sasong' | Category
 
 interface CropListProps {
   userZone: Zone
+  view: View
+  currentMonth: number
+  onViewChange: (view: View) => void
+  onMonthChange: (month: number) => void
   onSelect: (cropId: string) => void
   onZoneClick: () => void
 }
 
-export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
+export function CropList({ userZone, view, currentMonth, onViewChange, onMonthChange, onSelect, onZoneClick }: CropListProps) {
   useDocumentMeta(
     'Odlingsguiden - Allt du behöver veta, en gröda i taget',
     'Zonanpassad odlingsguide för svenska trädgårdar. Djupa profiler för grönsaker, bär och kryddor med sortval, tidslinjer och skördetips.',
   )
-
-  const [searchParams, setSearchParams] = useSearchParams()
-  const viewParam = searchParams.get('vy') as View | null
-  const view: View = viewParam && (viewParam === 'sasong' || CATEGORIES.some(c => c.id === viewParam)) ? viewParam : 'grönsaker'
-  const monthParam = searchParams.get('manad')
-  const currentMonth = monthParam ? Math.max(1, Math.min(12, Number(monthParam))) || (new Date().getMonth() + 1) : (new Date().getMonth() + 1)
-
-  function setView(v: View) {
-    if (v === 'grönsaker') {
-      setSearchParams({}, { replace: true })
-    } else if (v === 'sasong') {
-      setSearchParams({ vy: v, manad: String(currentMonth) }, { replace: true })
-    } else {
-      setSearchParams({ vy: v }, { replace: true })
-    }
-  }
-
-  function setMonth(m: number) {
-    setSearchParams({ vy: 'sasong', manad: String(m) }, { replace: true })
-  }
 
   const [search, setSearch] = useState("")
   const [filter, setFilter] = useState("Alla")
@@ -81,7 +64,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
         <button
           className={`${styles.categoryButton} ${isSeason ? styles.categoryActive : styles.categoryInactive}`}
           style={{ "--cat-color": "var(--color-accent)" } as React.CSSProperties}
-          onClick={() => setView('sasong')}
+          onClick={() => onViewChange('sasong')}
         >
           <span className={styles.categoryIcon}>
             <Icon name="calendar" size={22} color={isSeason ? "#fff" : "var(--color-accent)"} />
@@ -96,7 +79,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
               className={`${styles.categoryButton} ${isActive ? styles.categoryActive : styles.categoryInactive}`}
               style={{ "--cat-color": cat.color } as React.CSSProperties}
               onClick={() => {
-                setView(cat.id)
+                onViewChange(cat.id)
                 setFilter("Alla")
               }}
             >
@@ -111,7 +94,7 @@ export function CropList({ userZone, onSelect, onZoneClick }: CropListProps) {
 
       {isSeason ? (
         <Suspense fallback={<div style={{ textAlign: 'center', padding: 40, color: 'var(--color-text-muted)' }}>Laddar...</div>}>
-          <SeasonView userZone={userZone} currentMonth={currentMonth} onMonthChange={setMonth} onSelect={onSelect} />
+          <SeasonView userZone={userZone} currentMonth={currentMonth} onMonthChange={onMonthChange} onSelect={onSelect} />
         </Suspense>
       ) : (
         <>

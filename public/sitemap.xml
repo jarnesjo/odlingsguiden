@@ -6,6 +6,21 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/kryddor</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/b%C3%A4r</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lillabosgarden.se/odlingsguiden/s%C3%A4song</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lillabosgarden.se/odlingsguiden/morot</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.8</priority>
