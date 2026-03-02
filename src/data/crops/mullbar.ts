@@ -18,7 +18,7 @@ export const mullbar: Crop = {
   ph: { min: 6.0, max: 7.5, ideal: 6.8 },
   optimalConditions: {
     sun: { level: 'Full sol', icon: 'sun', detail: 'Mullbärsträdet kräver full sol för att sätta riklig frukt. I halvskugga växer han fortfarande fint men skörden minskar drastiskt. Ge honom den soligaste, varmaste platsen du har - gärna mot en södervägg där värmen reflekteras.' },
-    temperature: { min: -30, max: 35, ideal: '20-25°C', detail: 'Morus alba (vitt mullbär) är härdigt ner till -30°C i vintervila - en äkta nordbo! Han bryter sent på våren (smart nog att undvika vårfrost) och trivs bäst i sommarens värme. Morus nigra (svart mullbär) klarar bara -15°C och fungerar enbart i zon 1-2.' },
+    temperature: { min: -30, max: 35, ideal: '20-25°C', detail: 'Morus alba (vitt mullbär) är härdigt ner till -30°C i vintervila - en äkta nordbo! Han bryter sent på våren (smart nog att undvika vårfrost) och trivs bäst i sommarens värme. Morus nigra (svart mullbär) klarar ca -20 till -23°C men behöver lång, varm sommar och fungerar enbart i zon 1-2.' },
     wind: { level: 'Skyddat', detail: 'Unga träd behöver vindskydd de första åren. Etablerade träd klarar vind bra men de bästa bären får du i en skyddad, varm position. Grenvinklar kan vara spröda - kraftig vind med tunga bärklaser kan ge grenbrott.' },
   },
   watering: {
@@ -102,10 +102,10 @@ export const mullbar: Crop = {
     goodAfterWhy: 'Om ett träd tas bort efter 50+ år behöver jorden byggas upp. Baljväxter och gröngödsling återställer struktur och näring.',
   },
   varieties: [
-    { name: 'Mulle', zones: [1, 2, 3, 4], note: 'DEN sort du ska välja i Sverige. Svenskutvecklad hybrid, buskform, börjar bära redan efter 2-3 år. Svarta, söta bär. Härdig och pålitlig - skapad för nordiskt klimat.' },
-    { name: 'Morus alba (vitt mullbär)', zones: [1, 2, 3], note: 'Det klassiska mullbärsträdet. Blir 8-10 meter. Vita till rosa bär med mild smak. Extremt härdig men trädformen kräver utrymme och tålamod.' },
-    { name: 'Morus alba Pendula', zones: [1, 2, 3], note: 'Hängande, graciös form som är lika vacker som den är användbar. Söta små bär och ett fantastiskt prydnadsträd. Vuxen höjd 3-4 meter.' },
-    { name: 'Illinois Everbearing', zones: [1, 2, 3, 4], note: 'Snabbväxande hybrid med stora, mörka bär och fantastisk smak. Klarar ner till -30°C. Det närmaste du kommer svart mullbärs smak i nordligt klimat.' },
+    { name: 'Mulle', zones: [1, 2, 3, 4], note: 'DEN sort du ska välja i Sverige. E-planta-certifierad, buskform, börjar bära redan efter 2-3 år. Svarta, söta bär. Fröplantsfynd från Balsgård (SLU) på 1960-talet - utvald för nordiskt klimat.' },
+    { name: 'Morus alba (vitt mullbär)', zones: [1, 2], note: 'Det klassiska mullbärsträdet. Blir 8-10 meter. Vita till rosa bär med mild smak. Härdig men trädformen kräver utrymme och tålamod. Kan fungera i zon 3 i gynnsamt läge.' },
+    { name: 'Morus alba Pendula', zones: [1, 2], note: 'Hängande, graciös form som är lika vacker som den är användbar. Söta små bär och ett fantastiskt prydnadsträd. Vuxen höjd 3-4 meter.' },
+    { name: 'Illinois Everbearing', zones: [1, 2, 3], note: 'Snabbväxande Morus alba x rubra-hybrid med stora, mörka bär och fantastisk smak. Det närmaste du kommer svart mullbärs smak i nordligt klimat.' },
     { name: 'Morus nigra (svart mullbär)', zones: [1, 2], note: 'Den godaste av alla - intensiv, komplex smak. Men bara för de mildaste delarna av Sverige (Skåne, Gotland, Öland). Behöver skyddad, varm plats.' },
   ],
   problems: [
