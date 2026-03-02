@@ -124,16 +124,17 @@ Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
 - [ ] Alla bär (7 av ~15 klara)
 - [ ] Alla kryddor (8 av ~20 klara)
 
-### 2.2 Källhantering & faktacheck
+### 2.2 Källhantering & faktacheck ✅
 
 > Trovärdighet kräver transparens - visa var informationen kommer ifrån
 
-- [ ] Skapa `docs/guides/kallor.md` (metod, källtyper, ansvarsfriskrivning)
-- [ ] Faktacheck befintliga profiler mot svenska källor (SLU, Impecta, Runåbergs)
-- [ ] Verifiera zondata och sorter mot svenska frökataloger
-- [ ] Verifiera tidslinjer mot SLU:s odlingskalender
-- [ ] Ansvarsfriskrivning på sajten
-- [ ] AI-transparens: öppen om att AI använts, utan att göra det till huvudsaken
+- [x] Skapa `docs/guides/kallor.md` (metod, källtyper, ansvarsfriskrivning)
+- [x] Faktacheck befintliga profiler mot svenska källor (SLU, Impecta, Runåbergs)
+- [x] Verifiera zondata och sorter mot svenska frökataloger
+- [x] Verifiera tidslinjer mot SLU:s odlingskalender
+- [x] Ansvarsfriskrivning på sajten
+- [x] AI-transparens: öppen om att AI använts, utan att göra det till huvudsaken
+- [x] Källrankning baserad på 8 batchar faktacheck-erfarenhet
 
 ### 2.3 Säsongsvy v1
 
@@ -405,8 +406,8 @@ Ingen prioritet. Plockas upp när det passar.
 | `docs/guides/svg-illustrationer.md` | SVG-illustrationsriktlinjer (200×200 + 48×48) |
 | `docs/guides/kallor.md` | Källhantering, metod, fröfilosofi, AI-transparens |
 | `docs/research/f1-frodebatten.md` | F1-hybrider vs kultursorter, svenska aktörer, EU-lagstiftning |
-| `docs/research/faktacheck-2026-03-01.md` | Faktacheck av 5 profiler mot svenska källor |
+| `docs/research/faktacheck-*.md` | Faktacheck-rapporter (8 batchar, alla 43 profiler) |
 
 ---
 
-_Senast uppdaterad: 2026-03-01_
+_Senast uppdaterad: 2026-03-02_
