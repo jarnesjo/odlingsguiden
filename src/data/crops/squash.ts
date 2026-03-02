@@ -78,7 +78,7 @@ export const squash: Crop = {
     good: [
       { id: 'artor', name: 'Ärtor', icon: 'vegetable', why: 'Ärtornas kvävefixering ger squashen det kväve hon är så hungrig efter' },
       { id: 'bondbona', name: 'Bondböna', icon: 'vegetable', why: 'Samma sak som ärtor - baljväxter fixar kväve som squash älskar' },
-      { name: 'Majs', icon: 'vegetable', why: 'Klassiska "Three Sisters" - majsen ger stöd, squashen skuggar marken' },
+      { id: 'sockermajs', name: 'Majs', icon: 'vegetable', why: 'Klassiska "Tre systrar" - majsen ger stöd, squashen skuggar marken' },
       { id: 'radisa', name: 'Rädisa', icon: 'vegetable', why: 'Snabb mellanskörd innan squashen tar över all plats' },
     ],
     bad: [
@@ -96,15 +96,15 @@ export const squash: Crop = {
     goodAfterWhy: 'Lättfödda rotgrönsaker trivs efter squash som har luckrat och gödslat jorden ordentligt.',
   },
   varieties: [
-    { name: 'Black Beauty', zones: [1, 2, 3, 4, 5], note: 'Klassisk mörkgrön zucchini. Tidig, pålitlig och otroligt produktiv.' },
-    { name: 'Gold Rush', zones: [1, 2, 3, 4, 5], note: 'Gul zucchini - lika produktiv som gröna, men vackrare på tallriken.' },
-    { name: 'Ronde de Nice', zones: [1, 2, 3, 4], note: 'Rund, ljusgrön, perfekt att fylla och gratinera. Fransk charm.' },
-    { name: 'Vegetable Spaghetti', zones: [1, 2, 3, 4, 5], note: 'Spagettisquash - köttet blir som spaghetti när man kokar den. Rolig överraskning!' },
-    { name: 'Butternut Waltham', zones: [1, 2, 3, 4], note: 'Vintersquash - lagras i månader. Söt, nötig smak. Behöver lång säsong.' },
+    { name: 'Black Beauty', zones: [1, 2, 3, 4, 5], note: 'Klassisk mörkgrön OP-zucchini. Tidig, pålitlig och otroligt produktiv.' },
+    { name: 'Gold Rush', zones: [1, 2, 3, 4, 5], note: 'Gul OP-zucchini (finns hos Runåbergs) - lika produktiv som gröna, men vackrare på tallriken.' },
+    { name: 'Ronde de Nice', zones: [1, 2, 3, 4], note: 'Rund, ljusgrön OP-sort (även kallad Tondo Chiaro di Nizza). Perfekt att fylla och gratinera.' },
+    { name: 'Vegetable Spaghetti', zones: [1, 2, 3, 4, 5], note: 'OP-vintersquash (C. pepo) - köttet blir som spaghetti! Kräver 90-100 dagar, så starta tidigt.' },
+    { name: 'Butternut Waltham', zones: [1, 2, 3, 4], note: 'OP-vintersquash (C. moschata, inte C. pepo). Lagras i månader. Söt, nötig smak. Kräver 100+ dagar.' },
   ],
   problems: [
     { name: 'Mjöldagg', symptom: 'Vitt, pudrigt belägg på bladen, börjar ofta sent i säsongen', fix: 'Vattna vid roten, aldrig på bladen. God luftcirkulation. Drabbade blad kan klippas bort - plantan överlever det.' },
-    { name: 'Frukten ruttnar', symptom: 'Unga frukter gulnar och ruttnar i ena änden', fix: 'Blomänderöta - orsakas av kalciumbrist (ofta pga ojämn vattning). Vattna jämnt och mulcha. Inte kalcium som saknas utan vatten som transporterar det.' },
+    { name: 'Blomänderöta', symptom: 'Mörk, insjunken fläck i blomänden av frukten som mjuknar och ruttnar', fix: 'Orsakas av kalciumbrist (ofta pga ojämn vattning). Vattna jämnt och mulcha. Det är inte kalcium som saknas i jorden utan vatten som transporterar det.' },
     { name: 'Dålig pollinering', symptom: 'Frukten börjar växa men torkar in och faller av', fix: 'Handpollera med en mjuk pensel - för pollen från hanblomman (lång rak stjälk) till honblomman (liten frukt vid basen). Gör det tidigt på morgonen.' },
     { name: 'Sniglar', symptom: 'Stora hål i blad och frukter, slemspår', fix: 'Snigelkorn (järnfosfat), ölsaxar, eller kopparhinder runt plantorna. Vattna på morgonen så att marken hinner torka.' },
   ],
@@ -139,7 +139,7 @@ export const squash: Crop = {
     difficulty: 'Medel',
     type: 'Korspollinerare',
     biennial: false,
-    description: 'Squash korspolleras av insekter inom samma art. Om du odlar flera sorter av samma art (C. pepo) kommer de korsa sig.',
+    description: 'Squash korspolleras av insekter inom samma art. Sorter av samma art (C. pepo) korsar sig, men C. pepo korsar INTE med C. moschata (butternut).',
     steps: [
       'Välj en fin, typisk frukt från den starkaste plantan',
       'Låt frukten ligga kvar på plantan tills den är helt mogen (hård, gulnad zucchini, orange butternut)',
@@ -156,7 +156,7 @@ export const squash: Crop = {
     shelfLife: '1-6 månader (beroende på typ)',
     methods: [
       { method: 'Färsk i kylskåp (zucchini)', icon: 'snowflake', duration: '1-2 veckor', description: 'Zucchini och sommarsquash förvaras i plastpåse med hål i kylskåpet. Ät inom en vecka för bäst smak och konsistens.', best: true },
-      { method: 'Rumstemperatur (vintersquash)', icon: 'storage', duration: '3-6 månader', description: 'Butternut, spagetti och andra vintersquash lagras i rumstemperatur (15-20°C) på en torr plats. Härda i solen en vecka först.', best: false },
+      { method: 'Rumstemperatur (vintersquash)', icon: 'storage', duration: '3-6 månader', description: 'Butternut, spagetti och andra vintersquash lagras svalt (12-15°C) på en torr plats. Härda i solen en vecka först.', best: false },
       { method: 'Frysa', icon: 'snowflake', duration: '8-12 månader', description: 'Skär i skivor/tärningar, blanchera 2 minuter, kyl och frys. Fungerar bra i soppor och grytor. Konsistensen ändras - inte för sallad.', best: false },
       { method: 'Riva och frysa', icon: 'snowflake', duration: '6-8 månader', description: 'Riv rå zucchini och frys i portionspåsar. Perfekt för plättar, bröd och gratänger. Inget behov av blanchering.', best: false },
     ],
