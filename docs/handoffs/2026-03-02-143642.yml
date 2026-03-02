@@ -1,0 +1,77 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 30. Kryddprofiler batch - kummin och krasse klara, 5 kvar.
+
+    Klart och committat:
+    - Kummin profil + illustration (feat(crops): add kummin crop profile and illustration)
+    - Krasse profil + illustration (feat(crops): add krasse crop profile and illustration)
+    - Registrerat kummin, krasse, lagerblad i ikonsystemet (fix(ui): register kummin, krasse, lagerblad in icon system)
+    - BayLeafIllustration.tsx skapad och committad
+
+    Pa disk (ocommittade illustrationer):
+    - MarjoramIllustration.tsx (mejram)
+    - LovageIllustration.tsx (libbsticka)
+    - WildGarlicIllustration.tsx (ramslok)
+    - TarragonIllustration.tsx (dragon)
+
+    Research-agenter korade for alla 5 kvarvarande kryddor men kontexten tog slut
+    innan profilerna skrevs. Research maste goras om i nasta session.
+
+    Commits (3 st):
+    - feat(crops): add kummin crop profile and illustration
+    - feat(crops): add krasse crop profile and illustration
+    - fix(ui): register kummin, krasse, lagerblad in icon system
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+  src:
+    - "src/data/crops/index.ts (45 profiler - kummin + krasse nya)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (45 illustrationer + CropGraphic + CropIcon)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Batch 1 (3 st): Skapa profiler for lagerblad, mejram, libbsticka"
+  - "Batch 2 (2 st): Skapa profiler for ramslok, dragon"
+  - "Registrera mejram, libbsticka, ramslok, dragon i crops/index, cropList, CropGraphic, CropIcon, illustrations/index"
+  - "Illustrationer redan pa disk for alla 4 - behover bara committas med profilerna"
+  - "Lagerblad illustration redan committad och registrerad - behover bara profil"
+
+context:
+  decisions:
+    - "Kora i mindre batchar (3+2) for att undvika kontextoverflod"
+    - "Research-agenter maste koras om - resultaten gick forlorade med kontexten"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "4 ocommittade illustrationsfiler pa disk (mejram, libbsticka, ramslok, dragon)"
+  - "CropPage chunk 604 KB"
+  - "Lighthouse Accessibility 84"
