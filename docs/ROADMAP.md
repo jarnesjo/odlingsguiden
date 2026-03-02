@@ -136,14 +136,16 @@ Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
 - [x] AI-transparens: öppen om att AI använts, utan att göra det till huvudsaken
 - [x] Källrankning baserad på 8 batchar faktacheck-erfarenhet
 
-### 2.3 Säsongsvy v1
+### 2.3 Säsongsvy v1 ✅
 
 > "Vad ska jag göra i min odling just nu?"
 
-- [ ] Månadsbaserad startskärm
-- [ ] Visar aktiva grödor/bär/kryddor och vad som behöver göras
-- [ ] Zonmedveten - anpassar sig efter vald zon
-- [ ] Varje åtgärd länkar till relevant profil och sektion
+- [x] Månadsbaserad startskärm
+- [x] Visar aktiva grödor/bär/kryddor och vad som behöver göras
+- [x] Zonmedveten - anpassar sig efter vald zon
+- [x] Varje åtgärd länkar till relevant profil och sektion
+
+Plan: `docs/plans/2.3-sasongsvy.yml`
 
 ### 2.4 Frukt som fjärde kategori
 
