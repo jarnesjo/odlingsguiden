@@ -94,9 +94,9 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'kummin', name: 'Kummin', icon: 'kummin', family: 'Flockblommiga', familyLatin: 'Apiaceae', difficulty: 'Enkel', category: 'kryddor' },
   // Kryddor - Amaryllidaceae (Lökväxter)
   { id: 'graslok', name: 'Gräslök', icon: 'graslok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'kryddor' },
-  { id: 'ramslok', name: 'Ramslök', icon: 'herb', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'kryddor', locked: true },
+  { id: 'ramslok', name: 'Ramslök', icon: 'ramslok', family: 'Lökväxter', familyLatin: 'Amaryllidaceae', difficulty: 'Enkel', category: 'kryddor' },
   // Kryddor - Asteraceae (Korgblommiga)
-  { id: 'dragon', name: 'Dragon', icon: 'herb', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Medel', category: 'kryddor', locked: true },
+  { id: 'dragon', name: 'Dragon', icon: 'dragon', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Medel', category: 'kryddor' },
   // Kryddor - Brassicaceae (Korsblommiga)
   { id: 'krasse', name: 'Krasse', icon: 'krasse', family: 'Korsblommiga', familyLatin: 'Brassicaceae', difficulty: 'Enkel', category: 'kryddor' },
   // Kryddor - Lauraceae (Lagerväxter)

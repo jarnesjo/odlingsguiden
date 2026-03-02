@@ -51,6 +51,8 @@ import { CressIcon } from './CressIllustration'
 import { BayLeafIcon } from './BayLeafIllustration'
 import { MarjoramIcon } from './MarjoramIllustration'
 import { LovageIcon } from './LovageIllustration'
+import { WildGarlicIcon } from './WildGarlicIllustration'
+import { TarragonIcon } from './TarragonIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -109,6 +111,8 @@ const ICONS: Record<string, ComponentType<SizeProps>> = {
   lagerblad: BayLeafIcon,
   mejram: MarjoramIcon,
   libbsticka: LovageIcon,
+  ramslok: WildGarlicIcon,
+  dragon: TarragonIcon,
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
