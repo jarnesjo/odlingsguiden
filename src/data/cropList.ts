@@ -29,7 +29,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'squash', name: 'Squash', icon: 'squash', family: 'Gurkväxter', familyLatin: 'Cucurbitaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'gurka', name: 'Gurka', icon: 'gurka', family: 'Gurkväxter', familyLatin: 'Cucurbitaceae', difficulty: 'Medel', category: 'grönsaker' },
   { id: 'pumpa', name: 'Pumpa', icon: 'pumpa', family: 'Gurkväxter', familyLatin: 'Cucurbitaceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'melon', name: 'Melon', icon: 'vegetable', family: 'Gurkväxter', familyLatin: 'Cucurbitaceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
+  { id: 'melon', name: 'Melon', icon: 'melon', family: 'Gurkväxter', familyLatin: 'Cucurbitaceae', difficulty: 'Avancerad', category: 'grönsaker' },
   // Grönsaker - Fabaceae (Baljväxter)
   { id: 'artor', name: 'Ärtor', icon: 'artor', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker' },
   { id: 'bondbona', name: 'Bondböna', icon: 'bondbona', family: 'Baljväxter', familyLatin: 'Fabaceae', difficulty: 'Enkel', category: 'grönsaker' },
@@ -46,9 +46,9 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'mangold', name: 'Mangold', icon: 'mangold', family: 'Mållväxter', familyLatin: 'Amaranthaceae', difficulty: 'Enkel', category: 'grönsaker' },
   // Grönsaker - Asteraceae (Korgblommiga)
   { id: 'sallat', name: 'Sallat', icon: 'sallat', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'kronartskocka', name: 'Kronärtskocka', icon: 'vegetable', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Avancerad', category: 'grönsaker', locked: true },
+  { id: 'kronartskocka', name: 'Kronärtskocka', icon: 'kronartskocka', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Avancerad', category: 'grönsaker' },
   { id: 'jordartskocka', name: 'Jordärtskocka', icon: 'jordartskocka', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'grönsaker' },
-  { id: 'endiv', name: 'Endiv', icon: 'vegetable', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Medel', category: 'grönsaker', locked: true },
+  { id: 'endiv', name: 'Endiv', icon: 'endiv', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Medel', category: 'grönsaker' },
   // Grönsaker - Poaceae (Gräs)
   { id: 'sockermajs', name: 'Sockermajs', icon: 'sockermajs', family: 'Gräs', familyLatin: 'Poaceae', difficulty: 'Medel', category: 'grönsaker' },
   // Grönsaker - Polygonaceae (Slideväxter)
