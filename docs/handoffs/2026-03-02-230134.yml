@@ -1,0 +1,88 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 36. Dokumentation + 4 nya profiler + UI-refaktor av CropHeader.
+
+    KLART:
+    - docs/ROADMAP.md uppdaterad: groansaker 36->40 av ~43
+    - docs/guides/kallor.md uppdaterad: 43->65 profiler, batch 9-10 tillagda
+    - 4 nya groansaker med illustrationer och faktacheck:
+      - Selleri (Avancerad, Apiaceae, zon 1-4)
+      - Rotselleri (Avancerad, Apiaceae, zon 1-4, 180-220 dagar)
+      - Savoykal (Medel, Brassicaceae, zon 1-6, frosttalig -10C)
+      - Kinakal (Enkel, Brassicaceae, zon 1-5, kritisk borrningsrisk)
+    - UI: CropHeader refaktorerad till samlat infokort
+      - Svarighetsgrad + dagar pa samma rad
+      - Zon-info fargkodad (gron/gul/rod) med klickbar tooltip
+      - Stats-grid integrerad i kortet med border-top avdelare
+      - Kompaktare och renare an tidigare losa pills + separata kort
+
+    Commits (10 st):
+    - f68149e docs(roadmap): update groansaker count to 36 of ~43
+    - 8bf8b7d docs(guides): update kallor.md to 61 profiler, add batch 9-10
+    - bedcc58 refactor(ui): consolidate crop header into unified info card
+    - 81c690b feat(crops): add selleri, rotselleri, savoykal profiles with illustrations
+    - 0b8fe1c feat(crops): add kinakal crop profile with illustrations
+    - 8581fb5 style(ui): simplify zone badge to color-coded text only
+    - 22c576c style(ui): add styled tooltip to zone badge matching difficulty badge
+    - 243e079 fix(ui): center zone badge in info card
+    - 44e364c fix(ui): increase zone tooltip offset
+    - b9a1fdb fix(ui): make zone tooltip contextual with user's zone number
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+  src:
+    - "src/data/crops/index.ts (65 profiler)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (65 illustrationer)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Uppdatera docs/ROADMAP.md - markera 40 av ~43 groansaker klara"
+  - "3 groansaker kvar: melon, kronartskocka, endiv"
+  - "Bar: 7 av ~16 klara - fortsatt med fler barprofiler"
+  - "CropPage chunk ~645->809 KB - overavag code splitting (dynamic import per profil)"
+  - "Visuell granskning av nya illustrationer (selleri, rotselleri, savoykal, kinakal)"
+
+context:
+  decisions:
+    - "CropHeader refaktorerad fran losa pills + separat stats-grid till ett samlat infokort"
+    - "ZoneBadge forenklad: fargkodad text (gron=passar, gul=vaxthus, rod=svart) med klickbar tooltip"
+    - "Tooltip visar kontextuell info baserat pa anvandardens zon ('Passar i zon 3 utomhus')"
+    - "Kinakal: starkt borrningsvarning - maste sas i juli, inte pa varen"
+    - "Selleri/Rotselleri: bada Avancerad - lang odlingssasong, kravande"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "CropPage chunk ~809 KB (chunk warning vid bygge)"
+  - "Lighthouse Accessibility 84"
+  - "Illustrationerna ar AI-genererade SVG - visuell granskning rekommenderas"
+  - "Worktree-mappar kvar i .claude/worktrees/ (kan rensas)"
