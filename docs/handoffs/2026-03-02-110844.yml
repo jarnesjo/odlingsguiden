@@ -1,0 +1,118 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 25. Faktacheck batch 6 och 7 (8 profiler totalt).
+
+    Batch 6 (krusbar, bjornbar, mullbar, rabarber):
+    - 6 kritiska, 10 viktiga, 6 mindre korrigeringar
+    - Bjornbar: zonerna kraftigt uppblasta (1-6 -> 1-4), Loch Ness bara zon 1-2
+    - Rabarber: rabarbervivel (Lixus concavus) ar nordamerikansk, finns inte i Sverige - borttagen
+    - Mullbar: Mulle ar inte "svenskutvecklad hybrid" utan froplanstfynd fran Balsgard/SLU
+    - Krusbar: alla sorters zoner overskattade (1-8 -> 1-6)
+
+    Batch 7 (basilika, persilja, dill, graslok):
+    - 3 kritiska, 9 viktiga, 5 mindre korrigeringar
+    - Dill: korspollinering med fankal/morot ar botanisk myt (olika genus)
+    - Dill och basilika: inte sjalvpollinerare utan insektspollinerade
+    - Persilja: frost -5C -> -10C, morot borttagen som companion (delar morotsfluga)
+    - Graslok: Polyvit markerad som F1, Fina ersatt med Nelly
+
+    Aven: uppdaterat CLAUDE.md commit-format (enklare, inga security hook-workarounds)
+
+    Commits (12 st):
+    - docs(claude): simplify git commit format instructions
+    - fix(crops): fact-check krusbar profile
+    - fix(crops): fact-check bjornbar profile
+    - fix(crops): fact-check mullbar profile
+    - fix(crops): fact-check rabarber profile
+    - docs(research): add batch 6 fact-check report
+    - fix(crops): fact-check basilika profile
+    - fix(crops): fact-check persilja profile
+    - fix(crops): fact-check dill profile
+    - fix(crops): fact-check graslok profile
+    - docs(research): add batch 7 fact-check report
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (URL-routing)
+    - Recharts 3.7 (NutritionChart, lazy-loaded)
+    - "@fontsource/fraunces + @fontsource/lora (latin + latin-ext only)"
+    - CSS Modules + CSS custom properties
+  planned:
+    app: "React Native + Expo (framtida, betald version)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/designsystem.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+    - docs/guides/performance.md
+    - docs/research/f1-frodebatten.md
+    - docs/research/faktacheck-2026-03-01.md
+    - docs/research/faktacheck-2026-03-02.md
+    - docs/research/faktacheck-2026-03-02-batch4.md
+    - docs/research/faktacheck-2026-03-02-batch5.md
+    - docs/research/faktacheck-2026-03-02-batch6.md
+    - docs/research/faktacheck-2026-03-02-batch7.md
+    - docs/plans/
+    - docs/handoffs/
+  src:
+    - src/data/types.ts
+    - src/data/categories.ts
+    - src/data/cropList.ts
+    - src/data/cropUtils.ts
+    - src/data/cropSlugs.ts
+    - "src/data/crops/index.ts (43 profiler)"
+    - "src/data/crops/*.ts (43 aktiva profiler)"
+    - "src/components/illustrations/ (43 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (48 ikoner)"
+    - src/components/brand/symbols/ (SymbolSprout, SymbolLeaf)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/ + genererar sitemap"
+  - "npm run sitemap  # Generera sitemap.xml separat"
+  - "npx tsc --noEmit # Typkontroll utan output"
+
+next_steps:
+  - "Faktacheck batch 8: timjan, mynta, rosmarin, oregano (sista batchen)"
+  - "Skriv sammanfattande faktacheck-rapport for alla 8 batchar"
+  - "Uppdatera ROADMAP.md steg 2.2 med faktacheck-progress"
+
+context:
+  decisions:
+    - "Lokvaxter (Amaryllidaceae) behalles som familjenamn i hela kodbasen for konsistens, trots att Amaryllidaceae egentligen ar Amaryllisvaxter"
+    - "Dill korspollerar INTE med fankal eller morot - botanisk myt (olika genus)"
+    - "Basilika och dill ar insektspollinerade, inte sjalvpollinerare"
+    - "Rabarbervivel (Lixus concavus) ar endemisk i Nordamerika, inte relevant for Sverige"
+    - "Mullbar Mulle ar Morus accidosa, froplanstfynd fran Balsgard - inte hybrid"
+    - "Bjornbar max zon 1-4 i Sverige, Loch Ness bara zon 1-2"
+    - "Persilja talar -10C frost, inte -5C"
+    - "Git commit-format: multi-flag (-m title -m body -m co-author), inga workarounds langre"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "Aldrig unicode escapes - anvand bokstavliga tecken"
+    - "All text pa svenska, kompis-ton"
+    - "SVG: 1.8px stroke, round caps, 24x24 ikoner"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "F1-hybrider ska markeras explicit"
+
+known_issues:
+  - "4 av 43 profiler kvar att faktachecka (batch 8: timjan, mynta, rosmarin, oregano)"
+  - "CropPage chunk 604 KB - kan fixas med dynamic import per profil"
+  - "Lighthouse Accessibility 84 - kontrastproblem"
+  - "NPK-kurvor ar uppskattningar, ej matdata"
+  - "public/sitemap.xml har ocommittade andringar"
