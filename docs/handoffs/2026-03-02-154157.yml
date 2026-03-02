@@ -1,0 +1,80 @@
+meta:
+  date: 2026-03-02
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 32. Alla 18 kryddor nu klara! Ramslok och dragon var de sista tva.
+    Plus ny WateringCanIcon i vattningssektionens rubrik.
+
+    Klart och committat:
+    - Ramslok profil + illustration (feat(crops): add ramslok crop profile and illustration)
+    - Dragon profil + illustration (feat(crops): add dragon crop profile and illustration)
+    - Registrerat bada i ikonsystemet (fix(ui): register ramslok, dragon in icon system)
+    - ROADMAP uppdaterad - alla 18 kryddor markerade klara
+    - Ny WateringCanIcon (feat(ui): add watering can icon for watering section)
+
+    Research-agenter anvandes parallellt for faktacheck av bada profiler.
+    Encoding-check: inga en-dashes, korrekt aao, inga TypeScript-fel.
+    Tre stavfel fixade (finhackade, smaklos, ortsmor).
+
+    Commits (5 st):
+    - a418427 feat(crops): add ramslok crop profile and illustration
+    - f3591c1 feat(crops): add dragon crop profile and illustration
+    - b93100a fix(ui): register ramslok, dragon in icon system
+    - 160e284 docs(roadmap): alla 18 kryddor klara
+    - 8df4799 feat(ui): add watering can icon for watering section
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+  src:
+    - "src/data/crops/index.ts (50 profiler - ramslok, dragon nya)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (50 illustrationer + CropGraphic + CropIcon)"
+    - "src/components/icons/index.tsx (WateringCanIcon ny)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Skapa PartialSunIcon (halvskugga) for Trivs bast-sektionen"
+  - "Gronsaker: 28 av ~43 klara - fortsatt med fler gronsaksprofiler"
+  - "Bar: 7 av ~16 klara - fortsatt med fler barprofiler"
+  - "CropPage chunk 604 KB - optimera om det blir storre"
+
+context:
+  decisions:
+    - "Ramslok: Enkel svarighet, zon 1-5 utomhus, flerarig lundvaxt"
+    - "Ramslok: Halvskugga till skugga (skogsvaxt), ingen greenhouse-zon"
+    - "Dragon: Medel svarighet, zon 1-3 utomhus (fransk dragon)"
+    - "Dragon: Kan INTE odlas fran fro (sterila blommor) - vegetativ forokning"
+    - "Dragon: Tre sorter listade (fransk, rysk, mexikansk) med tydliga skillnader"
+    - "WateringCanIcon ersatter WaterIcon i vattningsrubriken, droppen finns kvar"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "Saknar PartialSunIcon (halvskugga) - visas som fallback i Trivs bast"
+  - "CropPage chunk 604 KB"
+  - "Lighthouse Accessibility 84"
