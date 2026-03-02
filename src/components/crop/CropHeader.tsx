@@ -19,14 +19,14 @@ export function CropHeader({ cropId, crop, userZone, onBack, onZoneClick }: Crop
 
   const stats = isBerry
     ? [
-        { label: 'Plantavstånd', value: crop.spacing },
+        { label: 'Plantavstånd', value: crop.spacing, note: crop.spacingNote },
         { label: 'Radavstånd', value: crop.rowSpacing },
-        { label: 'Plantering', value: crop.depth },
+        { label: 'Plantering', value: crop.depth, note: crop.depthNote },
       ]
     : [
-        { label: 'Avstånd', value: crop.spacing },
+        { label: 'Avstånd', value: crop.spacing, note: crop.spacingNote },
         { label: 'Radavstånd', value: crop.rowSpacing },
-        { label: 'Sådjup', value: crop.depth },
+        { label: 'Sådjup', value: crop.depth, note: crop.depthNote },
       ]
 
   return (
@@ -69,6 +69,7 @@ export function CropHeader({ cropId, crop, userZone, onBack, onZoneClick }: Crop
             <div key={i} className={styles.infoStatCell}>
               <div className={styles.infoStatLabel}>{s.label}</div>
               <div className={styles.infoStatValue}>{s.value}</div>
+              {s.note && <div className={styles.infoStatNote}>{s.note}</div>}
             </div>
           ))}
         </div>

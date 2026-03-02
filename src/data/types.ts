@@ -259,8 +259,10 @@ export interface Crop {
   zones: ZoneAvailability
   days: string
   spacing: string
+  spacingNote?: string
   rowSpacing: string
   depth: string
+  depthNote?: string
   ph: PhRange
   optimalConditions: OptimalConditions
   watering: Watering

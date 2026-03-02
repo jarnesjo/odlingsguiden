@@ -138,3 +138,10 @@
   font-size: 14px;
   font-weight: 700;
 }
+
+.infoStatNote {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  line-height: 1.3;
+}
