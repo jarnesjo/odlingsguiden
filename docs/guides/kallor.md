@@ -6,7 +6,7 @@
 
 ## Nuläge (ärligt)
 
-Odlingsguiden har 43 grödprofiler. **Alla 43 är faktacheckade** mot svenska och internationella källor (8 batchar, mars 2026). Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap och verifierade mot svenska frökataloger och myndigheter.
+Odlingsguiden har 61 grödprofiler. **Alla 61 är faktacheckade** mot svenska och internationella källor (8+2 batchar, mars 2026). Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap och verifierade mot svenska frökataloger och myndigheter.
 
 Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-groda.md`). Befintliga profiler faktagranskas i batcher.
 
@@ -207,7 +207,7 @@ Vi är ärliga med vad Odlingsguiden är och inte är:
 - **Näringskurvor är uppskattningar.** NPK-kurvorna visar generella mönster för att illustrera hur behoven förändras över säsongen. De är inte mätdata för specifika sorter eller jordar.
 - **Lokala variationer finns.** Mikroklimat, jordtyp och väder påverkar mer än zontabeller kan visa.
 - **Sorttillgänglighet ändras.** Frökataloger uppdateras årligen - en sort vi rekommenderar kan utgå.
-- **43 profiler, alla faktacheckade.** Detaljerad källoggning per profil är nästa steg.
+- **61 profiler, alla faktacheckade.** Detaljerad källoggning per profil är nästa steg.
 
 ---
 
@@ -240,7 +240,9 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 
 ## Faktacheck-status
 
-**Alla 43 profiler faktacheckade** i 8 batchar (mars 2026).
+**Alla 61 profiler faktacheckade** (mars 2026).
+
+### Batch 1-8: Ursprungliga 43 profiler
 
 | Batch | Profiler | Kritiska | Viktiga | Mindre | Rapport |
 | --- | --- | --- | --- | --- | --- |
@@ -253,7 +255,14 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 | 7 | Basilika, persilja, dill, graslok | 3 | 9 | 5 | `faktacheck-2026-03-02-batch7.md` |
 | 8 | Timjan, mynta, rosmarin, oregano | 3 | 15 | 20 | `faktacheck-2026-03-02-batch8.md` |
 
-*Nya profiler faktacheckas vid skapande (se checklista i `docs/guides/ny-groda.md`).*
+### Batch 9-10: Nya profiler (faktacheckade vid skapande)
+
+| Batch | Profiler | Kritiska | Viktiga | Mindre | Notering |
+| --- | --- | --- | --- | --- | --- |
+| 9 | Spenat, sparris, rodbeta, vitlok, mangold, kalrabbi, palsternacka, brytbona, chili, vitkal, rodkal, majrova, storbona, schalottenlok | 0 | - | - | Faktacheckade vid skapande (session 29-33) |
+| 10 | Pak choi, brysselkal, jordartskocka, fankal | 2 | 17 | 8 | Faktacheckade i session 35. 28 fel rattade totalt. |
+
+*Alla nya profiler faktacheckas vid skapande (se checklista i `docs/guides/ny-groda.md`).*
 
 ---
 
@@ -274,4 +283,4 @@ Detaljerad research sparas i `docs/research/`:
 
 ---
 
-*Senast uppdaterad: 2026-03-02 (session 26)*
+*Senast uppdaterad: 2026-03-02 (session 36)*
