@@ -6,7 +6,7 @@
 
 ## Nuläge (ärligt)
 
-Odlingsguiden har 37 grödprofiler. **5 av dem är faktacheckade** mot svenska källor (tomat, morot, potatis, sallat, lök). Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap och verifierade mot svenska frökataloger och myndigheter.
+Odlingsguiden har 43 grödprofiler. **Alla 43 är faktacheckade** mot svenska och internationella källor (8 batchar, mars 2026). Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap och verifierade mot svenska frökataloger och myndigheter.
 
 Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-groda.md`). Befintliga profiler faktagranskas i batcher.
 
@@ -26,7 +26,7 @@ Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-
 5. **Källoggning** - Vilka källor som användes dokumenteras per profil.
 6. **Status uppdateras** - Profilen markeras som verifierad i statustabellen.
 
-**Vi är i steg 1-3.** Steg 4-6 är nästa fas.
+**Alla 43 profiler har genomgått steg 1-4.** Steg 5-6 (detaljerad källoggning per profil) är nästa fas.
 
 ---
 
@@ -82,6 +82,50 @@ Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-
 ### AI (verktyg)
 
 - **Claude (Anthropic)** - Används som skrivverktyg för att skapa utkast. AI:n ersätter inte källor - den strukturerar och formulerar text som sedan ska verifieras mot ovanstående källor.
+
+---
+
+## Källrankning (baserad på 8 batchar faktacheck)
+
+Efter att ha faktacheckat alla 43 profiler har vi byggt upp erfarenhet om vilka källor som är mest pålitliga för svenska odlingsförhållanden.
+
+### Nivå A: Förstahandskällor (konsekvent pålitliga)
+
+| Källa | Styrka | Notering |
+| --- | --- | --- |
+| **Wexthuset** | Zoninfo, odlingsråd, sortbeskrivningar | Konsekvent bra data, ofta mest realistiska zonbedömningar |
+| **Runåbergs Fröer** | Sorter (enbart OP), spacing, såtider | Pålitlig för allt de säljer, konservativa zoner |
+| **Impecta Fröhandel** | Brett sortiment, odlingsråd | Bra komplement till Runåbergs, blandar OP + F1 |
+| **perenner.se** | Härdighetsklassning (A/B/C-systemet) | Ovärderlig för att verifiera perenners vinterhärdighet |
+| **SLU** | Forskning, sortförsök, växtskydd | Vetenskaplig tyngd, men inte alltid lättillgängligt |
+
+### Nivå B: Bra komplement
+
+| Källa | Styrka | Notering |
+| --- | --- | --- |
+| **Odla Ätbart** | Sammanfattande odlingsdata | Bra översikt men dubbelkolla mot nivå A-källor |
+| **Jordbruksverket** | Växtskydd, sjukdomar, ekologisk odling | Auktoritativ för sjukdomar/skadedjur |
+| **Nelson Garden** | Sortutbud, zonhärdighet | Stor marknadsledare, ibland generösa zonbedömningar |
+| **Odlarglädjen** | Sortinfo, praktiska tips | Bra för ovanligare sorter |
+| **Grobar.se** | Härdighetsinfo | Bra snabbkoll men inte alltid detaljerad |
+
+### Nivå C: Internationella referenskällor
+
+| Källa | Styrka | Notering |
+| --- | --- | --- |
+| **PFAF** (Plants for a Future) | Temperaturdata, ätlighet | Bra för temperaturintervall, men brittiskt klimat |
+| **Kew POWO** | Taxonomi, artbestämning | Auktoritativ för vetenskapliga namn |
+| **Missouri Botanical Garden** | Sortbeskrivningar, USDA-zoner | Bra referens men amerikanskt klimat |
+| **GBIF** | Artförekomst, fynd i Sverige | Bekräftar om en art/sjukdom finns i Sverige |
+| **Seed Savers Exchange** | Fröbesparing, isoleringsavstånd | Standardreferens för seed saving |
+
+### Lärdomar från faktacheckprocessen
+
+- **Zoner är den vanligaste felkällan.** Frökataloger och AI-genererade profiler tenderar att överskatta zonhärdighet. Svenska perenner.se med A/B/C-systemet är bästa verifikationskällan.
+- **Temperaturangivelser varierar kraftigt** mellan källor. USDA-zoner mappar inte direkt till svenska zoner - svenska vintrar är blötare.
+- **Companion planting-påståenden** är ofta traditionell visdom utan vetenskapligt stöd. Vi behåller dem men bör använda mjukare formuleringar ("kan hjälpa" istället för "avskräcker").
+- **Latinska namn ändras.** Rosmarin omklassificerades 2017 (Rosmarinus → Salvia). Kew POWO är auktoritativ källa.
+- **Nordamerikanska skadedjur** dyker ibland upp i AI-genererade profiler (t.ex. rabarbervivel). Alltid verifiera mot Jordbruksverket/SLU.
 
 ---
 
@@ -163,7 +207,7 @@ Vi är ärliga med vad Odlingsguiden är och inte är:
 - **Näringskurvor är uppskattningar.** NPK-kurvorna visar generella mönster för att illustrera hur behoven förändras över säsongen. De är inte mätdata för specifika sorter eller jordar.
 - **Lokala variationer finns.** Mikroklimat, jordtyp och väder påverkar mer än zontabeller kan visa.
 - **Sorttillgänglighet ändras.** Frökataloger uppdateras årligen - en sort vi rekommenderar kan utgå.
-- **37 profiler, 5 verifierade.** Vi jobbar på det. Statustabellen nedan visar var vi befinner oss.
+- **43 profiler, alla faktacheckade.** Detaljerad källoggning per profil är nästa steg.
 
 ---
 
@@ -196,17 +240,19 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 
 ## Faktacheck-status
 
-| Profil | Verifierad | Datum | Källor |
-| --- | --- | --- | --- |
-| Tomat | Ja | 2026-03-01 | Runabergs, Impecta, Wexthuset, Riksforbundet Svensk Tradgard, Tradgardstrollet |
-| Morot | Ja | 2026-03-01 | Runabergs, Impecta, Gronskaper.se, SLU (studentuppsats), Wexthuset, Sara Backmo |
-| Potatis | Ja | 2026-03-01 | Jordbruksverket, Livsmedelsverket, Smaka Sverige, Blomsterlandet, Granngarden |
-| Sallat | Ja | 2026-03-01 | Runabergs, Wexthuset, Impecta, tunnelvaxthus.se |
-| Lok | Ja | 2026-03-01 | Runabergs, Jordbruksverket, Wexthuset, froer.nu |
-| Hallon | Nej | - | - |
-| Basilika | Nej | - | - |
+**Alla 43 profiler faktacheckade** i 8 batchar (mars 2026).
 
-*5 av 37 profiler faktacheckade. Detaljerad rapport: `docs/research/faktacheck-2026-03-01.md`*
+| Batch | Profiler | Kritiska | Viktiga | Mindre | Rapport |
+| --- | --- | --- | --- | --- | --- |
+| 1 | Tomat, morot, potatis, sallat, lok | 0 | 8 | 5 | `faktacheck-2026-03-01.md` |
+| 2 | Hallon, jordgubbar, blabar, vinbar | 2 | 6 | 4 | `faktacheck-2026-03-02.md` |
+| 3 | Gurka, squash, pumpor, zucchini | - | - | - | `faktacheck-2026-03-02.md` |
+| 4 | Artor, bonor, majs, purjolok | - | - | - | `faktacheck-2026-03-02-batch4.md` |
+| 5 | Paprika, aubergine, broccoli, blomkal | - | - | - | `faktacheck-2026-03-02-batch5.md` |
+| 6 | Krusbar, bjornbar, mullbar, rabarber | 6 | 10 | 6 | `faktacheck-2026-03-02-batch6.md` |
+| 7 | Basilika, persilja, dill, graslok | 3 | 9 | 5 | `faktacheck-2026-03-02-batch7.md` |
+| 8 | Timjan, mynta, rosmarin, oregano | 3 | 15 | 20 | `faktacheck-2026-03-02-batch8.md` |
+
 *Nya profiler faktacheckas vid skapande (se checklista i `docs/guides/ny-groda.md`).*
 
 ---
@@ -218,8 +264,14 @@ Detaljerad research sparas i `docs/research/`:
 | Fil | Ämne |
 | --- | --- |
 | `f1-frodebatten.md` | F1-hybrider vs kultursorter, svenska aktörer, EU-lagstiftning |
-| `faktacheck-2026-03-01.md` | Faktacheck av tomat, morot, potatis, sallat, lök mot svenska källor |
+| `faktacheck-2026-03-01.md` | Batch 1: tomat, morot, potatis, sallat, lok |
+| `faktacheck-2026-03-02.md` | Batch 2-3: bar, cucurbits |
+| `faktacheck-2026-03-02-batch4.md` | Batch 4: artor, bonor, majs, purjolok |
+| `faktacheck-2026-03-02-batch5.md` | Batch 5: paprika, aubergine, broccoli, blomkal |
+| `faktacheck-2026-03-02-batch6.md` | Batch 6: krusbar, bjornbar, mullbar, rabarber |
+| `faktacheck-2026-03-02-batch7.md` | Batch 7: basilika, persilja, dill, graslok |
+| `faktacheck-2026-03-02-batch8.md` | Batch 8: timjan, mynta, rosmarin, oregano (sista) |
 
 ---
 
-*Senast uppdaterad: 2026-03-01 (session 16)*
+*Senast uppdaterad: 2026-03-02 (session 26)*
