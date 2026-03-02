@@ -11,5 +11,8 @@ export { StrawberryIllustration, StrawberryIcon } from './StrawberryIllustration
 export { ParsleyIllustration, ParsleyIcon } from './ParsleyIllustration'
 export { BlackcurrantIllustration, BlackcurrantIcon } from './BlackcurrantIllustration'
 export { DillIllustration, DillIcon } from './DillIllustration'
+export { KumminIllustration, KumminIcon } from './KumminIllustration'
+export { CressIllustration, CressIcon } from './CressIllustration'
+export { BayLeafIllustration, BayLeafIcon } from './BayLeafIllustration'
 export { CropGraphic } from './CropGraphic'
 export { CropIcon } from './CropIcon'

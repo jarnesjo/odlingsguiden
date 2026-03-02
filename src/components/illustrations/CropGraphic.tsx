@@ -46,6 +46,9 @@ import { SnapBeanIllustration, SnapBeanIcon } from './SnapBeanIllustration'
 import { CorianderIllustration, CorianderIcon } from './CorianderIllustration'
 import { SageIllustration, SageIcon } from './SageIllustration'
 import { LemonBalmIllustration, LemonBalmIcon } from './LemonBalmIllustration'
+import { KumminIllustration, KumminIcon } from './KumminIllustration'
+import { CressIllustration, CressIcon } from './CressIllustration'
+import { BayLeafIllustration, BayLeafIcon } from './BayLeafIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -99,6 +102,9 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   koriander: { large: CorianderIllustration, small: CorianderIcon },
   salvia: { large: SageIllustration, small: SageIcon },
   citronmeliss: { large: LemonBalmIllustration, small: LemonBalmIcon },
+  kummin: { large: KumminIllustration, small: KumminIcon },
+  krasse: { large: CressIllustration, small: CressIcon },
+  lagerblad: { large: BayLeafIllustration, small: BayLeafIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
