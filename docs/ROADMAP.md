@@ -122,7 +122,7 @@ Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
 
 - [ ] Alla grönsaker (28 av ~43 klara)
 - [ ] Alla bär (7 av ~16 klara)
-- [ ] Alla kryddor (11 av ~18 klara)
+- [x] Alla kryddor (18 av 18 klara)
 
 ### 2.2 Källhantering & faktacheck ✅
 
