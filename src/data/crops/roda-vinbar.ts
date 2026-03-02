@@ -4,7 +4,7 @@ export const rodaVinbar: Crop = {
   name: 'Röda vinbär',
   icon: 'roda-vinbar',
   category: 'bär',
-  family: 'Krusväxter',
+  family: 'Ripsväxter',
   familyLatin: 'Grossulariaceae',
   perennial: true,
   lifespan: '15-20 år',
@@ -101,10 +101,10 @@ export const rodaVinbar: Crop = {
     goodAfterWhy: 'Efter 15-20 år med vinbär är jorden utarmad. Gröngödsling och baljväxter bygger upp den igen.',
   },
   varieties: [
-    { name: 'Jonkheer van Tets', zones: [1, 2, 3, 4, 5, 6], note: 'Holländsk klassiker och den vanligaste sorten i Sverige. Tidig, rikbärande med långa, fina klasar. Pålitlig som en gammal vän.' },
-    { name: 'Rovada', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Sen sort med enormt långa klasar - upp till 15 cm! Stora bär som är lätta att plocka. Ger fantastisk skörd.' },
-    { name: 'Röda Holländska', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Den riktiga veteranen. Extremt härdig och tålig. Kanske inte de största bären, men aldrig sviker. Fungerar överallt i Sverige.' },
-    { name: 'Tatran', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Slovakisk sort med hög skörd och god smak. Medelstora bär på fina, jämna klasar. Bra sjukdomsresistens.' },
+    { name: 'Jonkheer van Tets', zones: [1, 2, 3, 4, 5], note: 'Holländsk klassiker och den vanligaste sorten i Sverige. Tidig, rikbärande med långa, fina klasar. Pålitlig som en gammal vän.' },
+    { name: 'Rovada', zones: [1, 2, 3, 4, 5], note: 'Sen sort med enormt långa klasar. Stora bär som är lätta att plocka. Ger fantastisk skörd.' },
+    { name: 'Röda Holländska', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Den riktiga veteranen - odlad i over 300 år. Extremt härdig och tålig. Kanske inte de största bären, men aldrig sviker.' },
+    { name: 'Rondom', zones: [1, 2, 3, 4, 5], note: 'Sen sort med fina, jämna klasar. Stora bär och hög skörd. Finns hos Blomsterlandet.' },
   ],
   problems: [
     { name: 'Bladlöss (vinbärsbladlus)', symptom: 'Bladen bubblar och krälar ihop sig, ofta med rödfärgade blåsor på ovansidan. Ser dramatiskt ut men busken klarar det.', fix: 'Spola av med hård vattenstråle tidigt på säsongen. Locka nyckelpigor och blomflugor med blommande växter intill. Busken klarar sig - det ser värre ut än det är.' },

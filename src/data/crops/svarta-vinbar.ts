@@ -4,7 +4,7 @@ export const svartaVinbar: Crop = {
   name: 'Svarta vinbär',
   icon: 'svarta-vinbar',
   category: 'bär',
-  family: 'Krusväxter',
+  family: 'Ripsväxter',
   familyLatin: 'Grossulariaceae',
   perennial: true,
   lifespan: '15-20 år',
@@ -100,10 +100,10 @@ export const svartaVinbar: Crop = {
     goodAfterWhy: 'Efter 15-20 år med vinbär är jorden utarmad. Gröngödsling och baljväxter bygger upp den igen.',
   },
   varieties: [
-    { name: 'Öjebyn', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Klassisk svensk sort. Extremt härdig, pålitlig och smakar precis som svarta vinbär ska smaka. Den som fungerar överallt.' },
-    { name: 'Ben Lomond', zones: [1, 2, 3, 4, 5, 6], note: 'Skotsk storsäljare. Stora bär, hög skörd, upprätt växtsätt som gör plockning enkel.' },
-    { name: 'Titania', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Sjukdomsresistent och produktiv. Stora bär med mild smak. Bra val om mjöldagg är problem.' },
-    { name: 'Ben Sarek', zones: [1, 2, 3, 4, 5], note: 'Kompakt buske - perfekt för liten trädgård. Stora bär trots liten buske. Behöver bra jord.' },
+    { name: 'Öjebyn', zones: [1, 2, 3, 4, 5, 6], note: 'Klassisk svensk sort (funnen i Norrbotten 1940-talet). Extremt härdig, pålitlig och smakar precis som svarta vinbär ska smaka. E-planta.' },
+    { name: 'Ben Lomond', zones: [1, 2, 3, 4, 5, 6], note: 'Skotsk storsäljare (SCRI). Stora bär, hög skörd, upprätt växtsätt som gör plockning enkel.' },
+    { name: 'Titania', zones: [1, 2, 3, 4, 5, 6], note: 'Svenskodlad, sjukdomsresistent och produktiv. Stora bär med mild smak. Bra val om mjöldagg är problem.' },
+    { name: 'Ben Sarek', zones: [1, 2, 3, 4, 5], note: 'Kompakt buske (ca 1,5 m) - perfekt för liten trädgård. Stora bär trots liten buske. Behöver bra jord.' },
   ],
   problems: [
     { name: 'Mjöldagg', symptom: 'Vitt, mjöligt belägg på blad och skottspetsar. Bladen krälar ihop sig och nya skott hämmas.', fix: 'Välj resistenta sorter (Titania!). God luftcirkulation genom gallring. Klipp bort angripna skottspetsar tidigt.' },

@@ -4,7 +4,7 @@ export const krusbar: Crop = {
   name: 'Krusbär',
   icon: 'krusbar',
   category: 'bär',
-  family: 'Krusväxter',
+  family: 'Ripsväxter',
   familyLatin: 'Grossulariaceae',
   perennial: true,
   lifespan: '15-20 år',

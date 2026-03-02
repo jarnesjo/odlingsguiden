@@ -61,12 +61,12 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'bjornbar', name: 'Björnbär', icon: 'bjornbar', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'aronia', name: 'Aronia', icon: 'berry', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär', locked: true },
   { id: 'tayberry', name: 'Tayberry', icon: 'berry', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär', locked: true },
-  // Bär - Grossulariaceae (Krusväxter)
-  { id: 'svarta-vinbar', name: 'Svarta vinbär', icon: 'svarta-vinbar', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
-  { id: 'roda-vinbar', name: 'Röda vinbär', icon: 'roda-vinbar', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
-  { id: 'vita-vinbar', name: 'Vita vinbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
-  { id: 'krusbar', name: 'Krusbär', icon: 'krusbar', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
-  { id: 'guldvinbar', name: 'Guldvinbär', icon: 'berry', family: 'Krusväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
+  // Bär - Grossulariaceae (Ripsväxter)
+  { id: 'svarta-vinbar', name: 'Svarta vinbär', icon: 'svarta-vinbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
+  { id: 'roda-vinbar', name: 'Röda vinbär', icon: 'roda-vinbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
+  { id: 'vita-vinbar', name: 'Vita vinbär', icon: 'berry', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
+  { id: 'krusbar', name: 'Krusbär', icon: 'krusbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
+  { id: 'guldvinbar', name: 'Guldvinbär', icon: 'berry', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
   // Bär - Moraceae (Mullbärsväxter)
   { id: 'mullbar', name: 'Mullbär', icon: 'mullbar', family: 'Mullbärsväxter', familyLatin: 'Moraceae', difficulty: 'Enkel', category: 'bär' },
   // Bär - Ericaceae (Ljungväxter)
