@@ -187,11 +187,11 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 
 **Checkboxar:**
 
-- [ ] Ny flik i kategori-togglen + `category: "frukt"` i datamodellen
-- [ ] Nya typer och fält i `types.ts`
+- [x] Ny flik i kategori-togglen + `category: "frukt"` i datamodellen
+- [x] Nya typer och fält i `types.ts`
 - [ ] Kategori-specifika sektioner (Pollinationspartners, Beskärningsguide, Sortguide, Etablering, Mognadsklocka)
-- [ ] Färg i designsystem + tokens
-- [ ] Första fruktprofil: Äpple (flagship - bevisar att kategorin fungerar)
+- [x] Färg i designsystem + tokens
+- [x] Första fruktprofil: Äpple (flagship - bevisar att kategorin fungerar)
 
 **Prioriterade fruktprofiler:**
 
