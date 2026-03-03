@@ -1,0 +1,109 @@
+meta:
+  date: 2026-03-03
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 41. Frukt-kategori + datakvalitet.
+
+    KLART:
+    - 2.4 Frukt som fjärde kategori (fas 1+2):
+      - Infrastruktur: Category type, tokens, CSS, FruitIcon, route, CATEGORY_ICONS
+      - CropPage/CropHeader behandlar frukt som bär (pruning/propagation)
+      - Äpple som flagship-profil: 15 OP/kulturarvssorter, zon 1-6, kompis-ton
+      - AppleIllustration (200x200 + 48x48)
+      - 78 profiler totalt (43 grönsaker, 16 bär, 18 kryddor, 1 frukt)
+    - Gurka-profil fixad: kallväxthus som primär, realistiska tider
+    - Odlingsfokus-princip dokumenterad: friland först, kallväxthus sekundärt
+    - 6 profiler fixade med korrekt bakåträkning av förodlingstider:
+      - Chili (alla zoner), Paprika (alla zoner), Purjolök (zon 4+6),
+        Selleri (zon 1+6), Broccoli (zon 6)
+    - Roadmap uppdaterad med frost-review + monorepo-plan
+
+    DISKUTERAT (ej implementerat):
+    - React Native + Expo som native app-lösning
+    - Monorepo-struktur: packages/shared + packages/web + packages/app
+    - Expo Go för snabb test-loop, EAS Build för TestFlight
+    - Frostdatum behöver SMHI-förankring med sannolikheter
+    - Zon 1/2 har samma vårfrost men bör skilja sig
+    - Trädgårdsmästare i Kalmar rapporterar nattfrost mitten-slutet av maj
+
+    Commits:
+    - 733f0ba feat(ui): add fruit category infrastructure
+    - 04a25db feat(crops): add apple crop profile
+    - f75688d feat(ui): add apple illustration
+    - c934fb3 chore: regenerate sitemap with apple profile
+    - f6a4b4a docs(roadmap): mark 2.4 fruit category progress
+    - be684de fix(crops): adjust gurka timeline for cold greenhouse
+    - e43e72a docs(guides): add outdoor-first growing focus principle
+    - 8fc841e docs(claude): add outdoor-first growing focus convention
+    - b8c1395 fix(crops): correct chili indoor sowing times
+    - 4458a89 fix(crops): correct paprika indoor sowing times
+    - 4a63f11 fix(crops): correct purjolök indoor sowing times
+    - 89b78f6 fix(crops): correct selleri indoor sowing times
+    - fc73215 fix(crops): correct broccoli indoor sowing time zon 6
+    - b31d03a docs(roadmap): add frost data review + native app monorepo plan
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/plans/2.4-frukt-kategori.yml
+    - docs/guides/kallor.md
+    - docs/guides/ny-groda.md (uppdaterad med odlingsfokus)
+  src:
+    - "src/data/crops/index.ts (78 profiler, dynamic import)"
+    - "src/data/crops/apple.ts (ny fruktprofil)"
+    - src/data/cropList.ts
+    - src/data/categories.ts (4 synliga kategorier + blommor hidden)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "SMHI-frostdatum: förankra zones.ts mot statistik med sannolikheter (50/75/90%)"
+  - "Faktacheck gurka + batch 3-profiler mot svenska källor"
+  - "2.4 Frukt: kategori-specifika sektioner (pollinationspartners, mognadsklocka)"
+  - "Fler fruktprofiler: päron, plommon, körsbär"
+  - "Monorepo-setup när native app blir aktuellt"
+  - "2.5 Sök tvärs över kategorier"
+
+context:
+  decisions:
+    - "Friland först, kallväxthus sekundärt - dokumenterat i CLAUDE.md och ny-groda.md"
+    - "Förodlingstider beräknas alltid bakåt från utplanteringstid med indoorWeeks"
+    - "React Native + Expo vald som native-lösning (premium-känsla prioriterat)"
+    - "Monorepo med packages/shared + packages/web + packages/app"
+    - "Expo Go för utvecklings-testloop, EAS Build för TestFlight"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+    - "Frilandsodling som primär odlingsform"
+    - "Varmväxthus nämns aldrig - ovanligt bland målgruppen"
+
+known_issues:
+  - "Frostdatum i zones.ts ej förankrade mot SMHI-statistik"
+  - "Zon 1 och 2 har samma vårfrost - bör skilja sig"
+  - "Trädgårdsmästare rapporterar nattfrost i Kalmar (zon 1) i mitten-slutet av maj"
+  - "Gurka och batch 3-profiler saknar dokumenterade källhänvisningar"
+  - "Lighthouse Accessibility 84"
+  - "2.4 Frukt: kategori-specifika sektioner saknas ännu"
