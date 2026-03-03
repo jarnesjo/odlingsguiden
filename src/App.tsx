@@ -81,8 +81,8 @@ function App() {
   const zoneClick = () => setShowZoneModal(true)
 
   return (
-    <div style={{ padding: '0 16px 0', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ flex: 1, paddingBottom: 40 }}>
+    <div style={{ padding: '0 16px 0' }}>
+      <div style={{ paddingBottom: 40 }}>
         <Routes>
           <Route path="/" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="grönsaker" />} />
           <Route path="/kryddor" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="kryddor" />} />
