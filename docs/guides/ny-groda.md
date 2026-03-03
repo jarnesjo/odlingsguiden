@@ -16,11 +16,20 @@ Följ denna prompt exakt för att säkerställa att varje post håller samma kva
 
 Innan du skriver koden, researcha grödan grundligt. Svara på ALLA dessa frågor:
 
+### Odlingsfokus: friland först, kallväxthus sekundärt
+
+All data ska utgå från **frilandsodling** som primär odlingsform - det är så de flesta svenska odlare faktiskt odlar. Kallväxthus (ouppvärmt) tas med som komplement där det gör verklig skillnad (tomat, gurka, paprika, chili), men ska aldrig vara default.
+
+- **Tidslinjer**: utgå från frilandsodling. Nämn kallväxthus som alternativ där det är relevant.
+- **Zoner**: `outdoor` är primär. `greenhouse` läggs till där det utökar zonerna.
+- **Sowing/tips**: skriv för den som odlar på friland. Kallväxthus-tips som tillägg.
+- **Varmväxthus**: nämns aldrig - det är ovanligt bland målgruppen (hemmaodlare, småbruk).
+
 ### Grunddata
 - Vad heter grödan? (svenskt namn, emoji)
 - Vilken växtfamilj tillhör den? (latinskt namn primärt, svenskt sekundärt – det latinska är det vedertagna bland odlare och i frökataloger)
 - Svårighetsgrad: Enkel / Medel / Avancerad? Och VARFÖR – vad gör den enkel/svår?
-- I vilka odlingszoner (1–8) kan den odlas utomhus? Behövs växthus i vissa zoner?
+- I vilka odlingszoner (1–8) kan den odlas utomhus? Behövs kallväxthus i vissa zoner?
 - Hur många dagar från sådd/plantering till skörd?
 - Plantavstånd, radavstånd, sådjup?
 - Idealt pH-värde (min, max, ideal)?
