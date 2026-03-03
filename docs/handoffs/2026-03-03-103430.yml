@@ -1,0 +1,86 @@
+meta:
+  date: 2026-03-03
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 39. Alla 16 bärprofiler klara!
+
+    KLART:
+    - 6 nya bärprofiler med illustrationer, faktacheck och åäö-kontroll:
+      - Aronia (Enkel, Rosaceae, zon 1-8, pH 5.0-7.0, sorter Viking/Hugin/Nero/Aron)
+      - Tayberry (Enkel, Rosaceae, zon 1-5, hallon x björnbär, Skottland 1979)
+      - Vita vinbär (Enkel, Grossulariaceae, zon 1-8, samma art som röda vinbär)
+      - Guldvinbär (Enkel, Grossulariaceae, zon 1-8, prärieväxt, doftande blommor)
+      - Tranbär (Avancerad, Ericaceae, zon 1-6, pH 4.0-5.5, myrmarksväxt)
+      - Honungsbär (Enkel, Caprifoliaceae, zon 1-8, -45C, korspollinering krävs)
+    - 6 SVG-illustrationer (200x200 detaljerad + 48x48 ikon per bär)
+    - Alla registrerade i index.ts, cropList.ts, CropIcon.tsx, CropGraphic.tsx
+    - Roadmap uppdaterad: "Alla bär (16 av 16 klara)" checkad
+
+    Commits:
+    - 52a730b feat(crops): add aronia, tayberry and vita vinbär crop profiles
+    - 8847028 feat(ui): add illustrations for aronia, tayberry and vita vinbär
+    - 93e254c refactor(data): register aronia, tayberry, vita vinbär in crop system
+    - f4f1637 feat(crops): add guldvinbär, tranbär and honungsbär crop profiles
+    - 63a74ad feat(ui): add illustrations for guldvinbär, tranbär and honungsbär
+    - af584e1 refactor(data): register guldvinbär, tranbär, honungsbär in crop system
+    - e9d4788 docs(roadmap): mark all 16 berry profiles complete
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+  src:
+    - "src/data/crops/index.ts (77 profiler)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (77 illustrationer)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Frukt som fjärde kategori (2.4) - äpple som flagship-profil"
+  - "Sök tvärs över kategorier (2.5)"
+  - "Visuell granskning av 9 nya bärillustrationer (batch 11-13)"
+  - "Bundle size - överväg code splitting per profil (main chunk 1043 KB)"
+  - "Uppdatera docs/guides/kallor.md med batch 11-13"
+  - "Lighthouse Accessibility 84 - förbättra"
+
+context:
+  decisions:
+    - "Aronia: Enkel trots att bären är sträva färska - odlingen i sig är enkel"
+    - "Tayberry: zon 1-5 utomhus, 1-6 växthus. Mindre härdig än hallon (-20C vs -30C)"
+    - "Vita vinbär: samma art som röda (Ribes rubrum) - all odlingsinfo identisk"
+    - "Guldvinbär: Ribes aureum, helt annan art än röda/svarta vinbär. Torktålig prärieväxt"
+    - "Tranbär: Avancerad - kräver specialbädd med sur, konstant fuktig jord (myrmark)"
+    - "Honungsbär: Lonicera caerulea, -45C, MÅSTE ha 2 sorter för korspollinering"
+    - "Illustration-färger: aronia mörkviolett, tayberry mörkröd konform, vita vinbär gyllene genomskinliga, guldvinbär gul-orange, tranbär djupröda på krypande rankor, honungsbär avlånga blåvioletta"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö i kommentarer och strängar"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+
+known_issues:
+  - "Main chunk 1043 KB (chunk warning vid bygge)"
+  - "Lighthouse Accessibility 84"
+  - "Illustrationerna är AI-genererade SVG - visuell granskning rekommenderas"
+  - "docs/guides/kallor.md inte uppdaterad med batch 11-13 ännu"
