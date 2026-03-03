@@ -297,7 +297,7 @@ Ingen prioritet. Plockas upp när det passar.
 
 ### Optimering & Teknik
 
-- Fortsatt bundle-optimering - utvärdera kontinuerligt: (1) separera illustrationsfiler (Icon vs Illustration) så stora SVG inte hamnar i main chunk, (2) dynamic import per grödprofil istället for att ladda alla 37 på en gång, (3) övervaka bundle-storlekar när fler profiler tillkommer
+- ~~Fortsatt bundle-optimering~~ ✅ Implementerat session 40 - dynamic import för alla illustrationer och grödprofiler. Main bundle: 1043 KB → 253 KB
 - ~~Stat-fält med noter (depthNote/spacingNote)~~ ✅ Implementerat session 37
 
 ### Plattform
@@ -401,7 +401,7 @@ Ingen prioritet. Plockas upp när det passar.
 - [x] ~~Ingen säsongsvy/kalender~~ (åtgärdat: 2.3 säsongsvy v1)
 - [x] ~~Inga korsreferenser~~ (åtgärdat: 1.4 korsreferenser)
 - [ ] Frukt saknas som kategori
-- [ ] Bundle size >500KB pga Recharts
+- [x] ~~Bundle size >500KB pga Recharts~~ (åtgärdat: session 40, dynamic import - main bundle 1043→253 KB. Recharts redan lazy-loaded i egen chunk)
 
 ### Filer
 
