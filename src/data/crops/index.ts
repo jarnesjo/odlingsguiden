@@ -85,6 +85,7 @@ const ID_TO_PATH: Record<string, string> = {
   guldvinbar: './guldvinbar.ts',
   tranbar: './tranbar.ts',
   honungsbar: './honungsbar.ts',
+  apple: './apple.ts',
 }
 
 // Cache laddade grödor
