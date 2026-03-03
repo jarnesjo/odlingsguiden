@@ -73,6 +73,9 @@ import { havtorn } from './havtorn'
 import { aronia } from './aronia'
 import { tayberry } from './tayberry'
 import { vitaVinbar } from './vita-vinbar'
+import { guldvinbar } from './guldvinbar'
+import { tranbar } from './tranbar'
+import { honungsbar } from './honungsbar'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -149,4 +152,7 @@ export const CROPS: Record<string, Crop> = {
   aronia,
   tayberry,
   'vita-vinbar': vitaVinbar,
+  guldvinbar,
+  tranbar,
+  honungsbar,
 }

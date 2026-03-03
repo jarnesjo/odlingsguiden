@@ -66,17 +66,17 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'roda-vinbar', name: 'Röda vinbär', icon: 'roda-vinbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'vita-vinbar', name: 'Vita vinbär', icon: 'vita-vinbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'krusbar', name: 'Krusbär', icon: 'krusbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
-  { id: 'guldvinbar', name: 'Guldvinbär', icon: 'berry', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär', locked: true },
+  { id: 'guldvinbar', name: 'Guldvinbär', icon: 'guldvinbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
   // Bär - Moraceae (Mullbärsväxter)
   { id: 'mullbar', name: 'Mullbär', icon: 'mullbar', family: 'Mullbärsväxter', familyLatin: 'Moraceae', difficulty: 'Enkel', category: 'bär' },
   // Bär - Ericaceae (Ljungväxter)
   { id: 'blabar', name: 'Blåbär (odlade)', icon: 'blabar', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär' },
   { id: 'lingon', name: 'Lingon', icon: 'lingon', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär' },
-  { id: 'tranbar', name: 'Tranbär', icon: 'berry', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Avancerad', category: 'bär', locked: true },
+  { id: 'tranbar', name: 'Tranbär', icon: 'tranbar', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Avancerad', category: 'bär' },
   // Bär - Elaeagnaceae (Havtornsväxter)
   { id: 'havtorn', name: 'Havtorn', icon: 'havtorn', family: 'Havtornsväxter', familyLatin: 'Elaeagnaceae', difficulty: 'Medel', category: 'bär' },
   // Bär - Caprifoliaceae (Kaprifolväxter)
-  { id: 'honungsbar', name: 'Honungsbär', icon: 'berry', family: 'Kaprifolväxter', familyLatin: 'Caprifoliaceae', difficulty: 'Enkel', category: 'bär', locked: true },
+  { id: 'honungsbar', name: 'Honungsbär', icon: 'honungsbar', family: 'Kaprifolväxter', familyLatin: 'Caprifoliaceae', difficulty: 'Enkel', category: 'bär' },
   // Kryddor - Lamiaceae (Kransblommiga)
   { id: 'basilika', name: 'Basilika', icon: 'basilika', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Medel', category: 'kryddor' },
   { id: 'timjan', name: 'Timjan', icon: 'timjan', family: 'Kransblommiga', familyLatin: 'Lamiaceae', difficulty: 'Enkel', category: 'kryddor' },

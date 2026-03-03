@@ -74,6 +74,9 @@ import { SeaBuckthornIllustration, SeaBuckthornIcon } from './SeaBuckthornIllust
 import { AroniaIllustration, AroniaIcon } from './AroniaIllustration'
 import { TayberryIllustration, TayberryIcon } from './TayberryIllustration'
 import { WhiteCurrantIllustration, WhiteCurrantIcon } from './WhiteCurrantIllustration'
+import { GoldCurrantIllustration, GoldCurrantIcon } from './GoldCurrantIllustration'
+import { CranberryIllustration, CranberryIcon } from './CranberryIllustration'
+import { HoneyberryIllustration, HoneyberryIcon } from './HoneyberryIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -155,6 +158,9 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   aronia: { large: AroniaIllustration, small: AroniaIcon },
   tayberry: { large: TayberryIllustration, small: TayberryIcon },
   'vita-vinbar': { large: WhiteCurrantIllustration, small: WhiteCurrantIcon },
+  guldvinbar: { large: GoldCurrantIllustration, small: GoldCurrantIcon },
+  tranbar: { large: CranberryIllustration, small: CranberryIcon },
+  honungsbar: { large: HoneyberryIllustration, small: HoneyberryIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
