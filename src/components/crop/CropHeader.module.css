@@ -107,7 +107,7 @@
   justify-content: space-between;
 }
 
-.infoMeta {
+.infoPill {
   font-size: var(--text-label);
   font-weight: 600;
   color: var(--color-text-muted);

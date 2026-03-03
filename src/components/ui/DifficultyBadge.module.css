@@ -4,16 +4,17 @@
 }
 
 .pill {
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-badge);
-  font-size: var(--text-badge, 12px);
+  padding: 0;
+  border-radius: 0;
+  font-size: var(--text-label);
   font-weight: 600;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  background: var(--badge-color);
+  background: none;
+  color: var(--color-text-muted);
 }
 
 .infoIcon {
