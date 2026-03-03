@@ -230,6 +230,45 @@ export interface Propagation {
   tip: string
 }
 
+// ─── Fruit-specific types ────────────────────────────────
+
+export interface PollinationGroup {
+  name: string
+  varieties: string[]
+}
+
+export interface Pollination {
+  selfFertile: boolean
+  description: string
+  groups: PollinationGroup[]
+  tip: string
+}
+
+export interface EstablishmentYear {
+  year: string
+  tasks: string[]
+}
+
+export interface Establishment {
+  description: string
+  years: EstablishmentYear[]
+  protection: string[]
+  tip: string
+}
+
+export interface RipeningEntry {
+  variety: string
+  from: string
+  to: string
+  type: string
+}
+
+export interface RipeningGuide {
+  description: string
+  entries: RipeningEntry[]
+  tip: string
+}
+
 // ─── Herb-specific types ─────────────────────────────────
 
 export interface HarvestUse {
@@ -286,6 +325,12 @@ export interface Crop {
   propagation?: Propagation
   /** Herb-specific: harvest & usage info */
   harvest?: HarvestInfo
+  /** Fruit-specific: pollination partners */
+  pollination?: Pollination
+  /** Fruit-specific: establishment guide (first years) */
+  establishment?: Establishment
+  /** Fruit-specific: ripening timeline */
+  ripeningGuide?: RipeningGuide
 }
 
 // ─── Crop List Entry ─────────────────────────────────────

@@ -1,0 +1,99 @@
+.description {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-label);
+  color: var(--color-text-muted);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.chart {
+  margin-bottom: var(--space-md);
+  overflow-x: auto;
+}
+
+.monthRow {
+  display: flex;
+  gap: 0;
+  margin-bottom: 4px;
+}
+
+.monthCell {
+  flex: 1;
+  min-width: 40px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 2px 0;
+}
+
+.labelCell {
+  min-width: 100px;
+  max-width: 100px;
+  font-size: var(--text-label);
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 4px 8px 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.barTrack {
+  flex: 1;
+  display: grid;
+  gap: 0;
+  min-height: 24px;
+}
+
+.barCell {
+  min-width: 40px;
+  height: 24px;
+}
+
+.barActive {
+  min-height: 24px;
+}
+
+.tipCard {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  background: #EDF7F0;
+  border-radius: var(--radius-card-sm);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.tipCard svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}

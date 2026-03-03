@@ -22,6 +22,9 @@ import {
   StorageSection,
   SeedSavingSection,
   PropagationSection,
+  PollinationSection,
+  EstablishmentSection,
+  RipeningSection,
 } from '../crop'
 import styles from './CropPage.module.css'
 
@@ -50,6 +53,7 @@ export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: 
   if (!crop) return null
 
   const isBerry = crop.category === 'bär' || crop.category === 'frukt'
+  const isFruit = crop.category === 'frukt'
   const isHerb = crop.category === 'kryddor'
 
   // Get zone-appropriate timeline (find closest matching zone key)
@@ -84,6 +88,12 @@ export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: 
         <CompanionSection companions={crop.companions} onNavigate={onNavigate} />
         <RotationSection rotation={crop.rotation} onNavigate={onNavigate} />
         <VarietiesSection varieties={crop.varieties} userZone={userZone} />
+
+        {/* Fruit-specific sections */}
+        {isFruit && crop.pollination && <PollinationSection pollination={crop.pollination} />}
+        {isFruit && crop.establishment && <EstablishmentSection establishment={crop.establishment} />}
+        {isFruit && crop.ripeningGuide && <RipeningSection guide={crop.ripeningGuide} />}
+
         <ProblemsSection problems={crop.problems} />
         <HarvestCalcSection calc={crop.harvestCalc} cropName={crop.name} />
         <StorageSection storage={crop.storage} />

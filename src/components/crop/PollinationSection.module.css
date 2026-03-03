@@ -1,0 +1,71 @@
+.statusBadge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--radius-badge);
+  font-size: var(--text-label);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.selfFertile {
+  background: #EDF7F0;
+  color: var(--color-accent);
+}
+
+.needsPartner {
+  background: #FFF3E0;
+  color: #B8653B;
+}
+
+.description {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md);
+}
+
+.group {
+  margin-bottom: var(--space-md);
+}
+
+.group:last-of-type {
+  margin-bottom: var(--space-md);
+}
+
+.groupName {
+  font-size: var(--text-body);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.varieties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.varietyPill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-badge);
+  background: #F5F2EB;
+  font-size: var(--text-label);
+  color: var(--color-text);
+}
+
+.tipCard {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  background: #EDF7F0;
+  border-radius: var(--radius-card-sm);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.tipCard svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
