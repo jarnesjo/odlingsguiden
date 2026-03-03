@@ -46,66 +46,66 @@ export function TayberryIllustration({ size = 200 }: Props) {
 
       {/* === Main berry - elongated drupelet cluster hanging down === */}
       {/* Row 1 (top, widest) */}
-      <circle cx="91" cy="106" r="6.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="91" cy="106" r="6.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="98" cy="104" r="6.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="98" cy="104" r="6.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="105" cy="106" r="6.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="105" cy="106" r="6.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="91" cy="106" r="6.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="91" cy="106" r="6.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="98" cy="104" r="6.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="98" cy="104" r="6.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="105" cy="106" r="6.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="105" cy="106" r="6.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 2 */}
-      <circle cx="88" cy="117" r="6.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="88" cy="117" r="6.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="96" cy="116" r="6" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="96" cy="116" r="6" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="104" cy="117" r="6.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="104" cy="117" r="6.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="88" cy="117" r="6.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="88" cy="117" r="6.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="96" cy="116" r="6" fill="#8B3068" opacity="0.18" />
+      <circle cx="96" cy="116" r="6" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="104" cy="117" r="6.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="104" cy="117" r="6.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 3 (narrowing) */}
-      <circle cx="90" cy="128" r="6" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="90" cy="128" r="6" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="98" cy="127" r="6" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="98" cy="127" r="6" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="106" cy="128" r="6" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="106" cy="128" r="6" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="90" cy="128" r="6" fill="#8B3068" opacity="0.18" />
+      <circle cx="90" cy="128" r="6" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="98" cy="127" r="6" fill="#8B3068" opacity="0.18" />
+      <circle cx="98" cy="127" r="6" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="106" cy="128" r="6" fill="#8B3068" opacity="0.18" />
+      <circle cx="106" cy="128" r="6" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 4 */}
-      <circle cx="92" cy="138" r="5.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="92" cy="138" r="5.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="100" cy="137" r="5.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="100" cy="137" r="5.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="92" cy="138" r="5.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="92" cy="138" r="5.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="100" cy="137" r="5.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="100" cy="137" r="5.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 5 (narrowing more) */}
-      <circle cx="94" cy="147" r="5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="94" cy="147" r="5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="102" cy="147" r="5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="102" cy="147" r="5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="94" cy="147" r="5" fill="#8B3068" opacity="0.18" />
+      <circle cx="94" cy="147" r="5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="102" cy="147" r="5" fill="#8B3068" opacity="0.18" />
+      <circle cx="102" cy="147" r="5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 6 (tip) */}
-      <circle cx="98" cy="155" r="4" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="98" cy="155" r="4" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="98" cy="155" r="4" fill="#8B3068" opacity="0.18" />
+      <circle cx="98" cy="155" r="4" stroke="#7B2858" strokeWidth="1.8" fill="none" />
 
       {/* Highlights on main berry */}
-      <circle cx="88" cy="104" r="2.5" fill="#D87080" opacity="0.3" />
-      <circle cx="85" cy="115" r="2" fill="#D87080" opacity="0.25" />
+      <circle cx="88" cy="104" r="2.5" fill="#C070A0" opacity="0.3" />
+      <circle cx="85" cy="115" r="2" fill="#C070A0" opacity="0.25" />
       {/* Shadows */}
-      <circle cx="106" cy="116" r="1" fill="#6B0F1A" opacity="0.15" />
-      <circle cx="100" cy="136" r="1" fill="#6B0F1A" opacity="0.12" />
+      <circle cx="106" cy="116" r="1" fill="#7B2858" opacity="0.15" />
+      <circle cx="100" cy="136" r="1" fill="#7B2858" opacity="0.12" />
 
       {/* === Second berry - smaller, semi-ripe, on side spur === */}
       {/* Calyx */}
       <path d="M52 56 C50 52, 48 54, 50 58" stroke="#3D6B4F" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
       <path d="M62 56 C64 52, 62 50, 58 52" stroke="#3D6B4F" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
       {/* Row 1 */}
-      <circle cx="53" cy="62" r="5" fill="#A83030" opacity="0.16" />
-      <circle cx="53" cy="62" r="5" stroke="#8B2020" strokeWidth="1.8" fill="none" />
-      <circle cx="60" cy="61" r="5" fill="#A83030" opacity="0.16" />
-      <circle cx="60" cy="61" r="5" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+      <circle cx="53" cy="62" r="5" fill="#A85080" opacity="0.16" />
+      <circle cx="53" cy="62" r="5" stroke="#8B4068" strokeWidth="1.8" fill="none" />
+      <circle cx="60" cy="61" r="5" fill="#A85080" opacity="0.16" />
+      <circle cx="60" cy="61" r="5" stroke="#8B4068" strokeWidth="1.8" fill="none" />
       {/* Row 2 */}
-      <circle cx="54" cy="71" r="5" fill="#A83030" opacity="0.16" />
-      <circle cx="54" cy="71" r="5" stroke="#8B2020" strokeWidth="1.8" fill="none" />
-      <circle cx="61" cy="70" r="4.5" fill="#A83030" opacity="0.16" />
-      <circle cx="61" cy="70" r="4.5" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+      <circle cx="54" cy="71" r="5" fill="#A85080" opacity="0.16" />
+      <circle cx="54" cy="71" r="5" stroke="#8B4068" strokeWidth="1.8" fill="none" />
+      <circle cx="61" cy="70" r="4.5" fill="#A85080" opacity="0.16" />
+      <circle cx="61" cy="70" r="4.5" stroke="#8B4068" strokeWidth="1.8" fill="none" />
       {/* Row 3 (tip) */}
-      <circle cx="56" cy="79" r="4" fill="#A83030" opacity="0.16" />
-      <circle cx="56" cy="79" r="4" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+      <circle cx="56" cy="79" r="4" fill="#A85080" opacity="0.16" />
+      <circle cx="56" cy="79" r="4" stroke="#8B4068" strokeWidth="1.8" fill="none" />
       {/* Highlight */}
-      <circle cx="51" cy="61" r="1.8" fill="#D89080" opacity="0.25" />
+      <circle cx="51" cy="61" r="1.8" fill="#C888A8" opacity="0.25" />
 
       {/* Ground shadow */}
       <ellipse cx="98" cy="170" rx="30" ry="4" fill="#8B7355" opacity="0.08" />
@@ -128,26 +128,26 @@ export function TayberryIcon({ size = 48 }: Props) {
 
       {/* Elongated drupelet cluster hanging down */}
       {/* Row 1 */}
-      <circle cx="21" cy="24" r="4" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="21" cy="24" r="4" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="27" cy="24" r="4" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="27" cy="24" r="4" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="21" cy="24" r="4" fill="#8B3068" opacity="0.18" />
+      <circle cx="21" cy="24" r="4" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="27" cy="24" r="4" fill="#8B3068" opacity="0.18" />
+      <circle cx="27" cy="24" r="4" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 2 */}
-      <circle cx="21" cy="31" r="3.8" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="21" cy="31" r="3.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="27" cy="31" r="3.8" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="27" cy="31" r="3.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="21" cy="31" r="3.8" fill="#8B3068" opacity="0.18" />
+      <circle cx="21" cy="31" r="3.8" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="27" cy="31" r="3.8" fill="#8B3068" opacity="0.18" />
+      <circle cx="27" cy="31" r="3.8" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 3 (narrowing) */}
-      <circle cx="22" cy="37.5" r="3.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="22" cy="37.5" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
-      <circle cx="27" cy="37.5" r="3.5" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="27" cy="37.5" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="22" cy="37.5" r="3.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="22" cy="37.5" r="3.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
+      <circle cx="27" cy="37.5" r="3.5" fill="#8B3068" opacity="0.18" />
+      <circle cx="27" cy="37.5" r="3.5" stroke="#7B2858" strokeWidth="1.8" fill="none" />
       {/* Row 4 (tip) */}
-      <circle cx="24" cy="43" r="3" fill="#8B1A2A" opacity="0.18" />
-      <circle cx="24" cy="43" r="3" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="24" cy="43" r="3" fill="#8B3068" opacity="0.18" />
+      <circle cx="24" cy="43" r="3" stroke="#7B2858" strokeWidth="1.8" fill="none" />
 
       {/* Highlight */}
-      <circle cx="19" cy="23" r="1.5" fill="#D87080" opacity="0.3" />
+      <circle cx="19" cy="23" r="1.5" fill="#C070A0" opacity="0.3" />
     </svg>
   )
 }
