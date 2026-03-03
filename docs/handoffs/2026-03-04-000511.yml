@@ -76,7 +76,7 @@ commands:
 
 next_steps:
   - "Implementera Odlingskalender (horisontell tidslinje) - plan finns i docs/plans/magical-stirring-grove.md"
-  - "Säsongsvy: visa 2-3 per sektion med 'Visa mer'-knapp (tillagt i roadmap Idéer)"
+  - "2.10 Säsongsvy v2: visa 2-3 per sektion med 'Visa mer'-knapp"
   - "2.4 Frukt: fler profiler (päron, plommon, körsbär, rabarber)"
   - "Faktacheck gurka + batch 3-profiler mot svenska källor"
   - "SMHI-frostdatum: förankra zones.ts mot statistik"
