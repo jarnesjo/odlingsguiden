@@ -1,0 +1,91 @@
+meta:
+  date: 2026-03-03
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 38. UI-styling + 3 nya barprofile.
+
+    KLART:
+    - UI: Enhetlig info-kort styling i profilvy
+      - DifficultyBadge, ZoneBadge och meta-text alla som ren text (inte pills)
+      - Samma visuella sprak som listningen
+    - UI: Vaxtfokuserade difficulty-labels
+      - Enkel -> Lattodlad
+      - Medel -> Kraver lite omsorg
+      - Avancerad -> Kraver extra omsorg
+      - Fokus pa vaxtens behov, inte odlarens niva
+      - Applicerat bade i profilvy och listvy
+    - Data: lifespan pa alla 11 fleraeriga kryddor (lagerblad, timjan, etc)
+    - Fix: "Flerarig - undefined" -> visar bara "Flerarig" om lifespan saknas
+    - 3 nya barprofiler med illustrationer och faktacheck:
+      - Blabar (Medel, Ericaceae, surjord pH 4.0-5.5, zon 1-4/vaxthus 1-6)
+      - Lingon (Medel, Ericaceae, surjord pH 4.0-5.5, zon 1-8, inhemsk)
+      - Havtorn (Medel, Elaeagnaceae, zon 1-8, kvavefixerare, han+honplantor)
+
+    Commits:
+    - 3b3633d fix(ui): handle missing lifespan for perennial crops
+    - 6c6a060 content(crops): add lifespan to all 11 perennial herbs
+    - 9860cc5 style(ui): unify info card to plain text style
+    - 9b6fa12 style(ui): replace difficulty levels with plant-focused labels
+    - 0e99555 feat(crops): add blabar, lingon and havtorn crop profiles
+    - f2df53c feat(ui): add illustrations for blabar, lingon and havtorn
+    - c426868 refactor(data): register blabar, lingon, havtorn in crop system
+    - bd6f184 fix(ui): register blabar, lingon, havtorn icons in CropIcon
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/guides/ny-groda.md
+    - docs/guides/svg-illustrationer.md
+    - docs/guides/kallor.md
+  src:
+    - "src/data/crops/index.ts (71 profiler)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (71 illustrationer)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Bar: 10 av 16 klara - 6 kvar: Aronia, Tayberry, Vita vinbar, Guldvinbar, Tranbar, Honungsbar"
+  - "Frukt som fjarde kategori (2.4) - apple som flagship-profil"
+  - "Sok tvars over kategorier (2.5)"
+  - "Visuell granskning av nya illustrationer (blabar, lingon, havtorn)"
+  - "Bundle size - overavag code splitting per profil"
+  - "Uppdatera docs/guides/kallor.md med batch 11+12"
+
+context:
+  decisions:
+    - "Difficulty-labels bytta till vaxtfokuserade: Lattodlad, Kraver lite omsorg, Kraver extra omsorg"
+    - "Info-kort styling: alla element som ren text istallet for pills - matchar listningen"
+    - "Blabar: konservativ zon 1-4 utomhus, 1-6 vaxthus. Surjord pH 4.0-5.5 ar nyckeln"
+    - "Lingon: zon 1-8, inhemsk vaxt. Kultursorter ger battre skoerd an vilda"
+    - "Havtorn: zon 1-8, maste ha bade han- och honplantor. Kvavefixerare via Frankia"
+    - "CropIcon.tsx har separat ikon-registry fran CropGraphic.tsx - bada maste uppdateras"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao i kommentarer och strangar"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+
+known_issues:
+  - "Main chunk 906+ KB (chunk warning vid bygge)"
+  - "Lighthouse Accessibility 84"
+  - "Illustrationerna ar AI-genererade SVG - visuell granskning rekommenderas"
+  - "docs/guides/kallor.md inte uppdaterad med batch 11+12 annu"
