@@ -49,6 +49,9 @@
 }
 
 .tipTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
   font-weight: 600;
   margin-bottom: var(--space-xs);
 }
