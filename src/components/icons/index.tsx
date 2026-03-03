@@ -417,6 +417,23 @@ export function StorageIcon({ color = '#8B7355', size = 24 }: IconProps) {
   )
 }
 
+export function FruitIcon({ color = '#B8653B', size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
+      {/* Äppleform */}
+      <path d="M12 22c-4 0-7-3.5-7-8 0-3.5 2-6 4-7.5.5-.4 1-.6 1.5-.7a2 2 0 013 0c.5.1 1 .3 1.5.7 2 1.5 4 4 4 7.5 0 4.5-3 8-7 8z" fill={color} opacity="0.12" />
+      <path d="M12 22c-4 0-7-3.5-7-8 0-3.5 2-6 4-7.5.5-.4 1-.6 1.5-.7a2 2 0 013 0c.5.1 1 .3 1.5.7 2 1.5 4 4 4 7.5 0 4.5-3 8-7 8z" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Mittlinje */}
+      <path d="M12 6.5v15" stroke={color} strokeWidth="1.2" strokeLinecap="round" opacity="0.3" />
+      {/* Stjälk */}
+      <path d="M12 6.5V3" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
+      {/* Blad */}
+      <path d="M12 4c1.5-1 3.5-1 4.5 0-1 1.5-3 2-4.5 0z" fill={color} opacity="0.15" />
+      <path d="M12 4c1.5-1 3.5-1 4.5 0-1 1.5-3 2-4.5 0z" stroke={color} strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
 export function FlowerIcon({ color = '#C4956A', size = 24 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">

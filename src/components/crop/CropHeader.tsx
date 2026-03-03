@@ -15,7 +15,7 @@ interface CropHeaderProps {
 }
 
 export function CropHeader({ cropId, crop, userZone, onBack, onZoneClick }: CropHeaderProps) {
-  const isBerry = crop.category === 'bär'
+  const isBerry = crop.category === 'bär' || crop.category === 'frukt'
 
   const stats = isBerry
     ? [

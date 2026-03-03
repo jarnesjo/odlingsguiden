@@ -1,6 +1,6 @@
 import { useState, useEffect, type ComponentType } from 'react'
 import type { Category } from '../../data/types'
-import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
+import { VegetableIcon, BerryIcon, HerbIcon, FruitIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
   size?: number
@@ -91,6 +91,7 @@ const ID_TO_PATH: Record<string, string> = {
   guldvinbar: './GoldCurrantIllustration.tsx',
   tranbar: './CranberryIllustration.tsx',
   honungsbar: './HoneyberryIllustration.tsx',
+  apple: './AppleIllustration.tsx',
 }
 
 // Cache laddade ikoner
@@ -132,6 +133,7 @@ const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
   'grönsaker': VegetableIcon,
   'bär': BerryIcon,
   'kryddor': HerbIcon,
+  'frukt': FruitIcon,
   'blommor': FlowerIcon,
 }
 

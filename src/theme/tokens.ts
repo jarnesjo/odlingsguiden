@@ -19,6 +19,7 @@ export const colors = {
     vegetables: { primary: '#3D6B4F', light: '#C8DEC9' },
     berries: { primary: '#7B4B6A', light: '#E8D1DF' },
     herbs: { primary: '#6B7D3E', light: '#DDE5C8' },
+    fruits: { primary: '#B8653B', light: '#F0DDD0' },
   },
 
   // Accent variants

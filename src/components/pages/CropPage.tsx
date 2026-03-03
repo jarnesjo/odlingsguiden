@@ -49,7 +49,7 @@ export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: 
 
   if (!crop) return null
 
-  const isBerry = crop.category === 'bär'
+  const isBerry = crop.category === 'bär' || crop.category === 'frukt'
   const isHerb = crop.category === 'kryddor'
 
   // Get zone-appropriate timeline (find closest matching zone key)

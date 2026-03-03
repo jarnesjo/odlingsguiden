@@ -87,6 +87,7 @@ function App() {
           <Route path="/" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="grönsaker" />} />
           <Route path="/kryddor" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="kryddor" />} />
           <Route path="/bär" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="bär" />} />
+          <Route path="/frukt" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="frukt" />} />
           <Route path="/säsong" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="sasong" />} />
           <Route path="/säsong/:monthSlug" element={<SeasonRoute userZone={userZone} onZoneClick={zoneClick} />} />
           <Route
