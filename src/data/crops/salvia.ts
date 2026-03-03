@@ -7,6 +7,7 @@ export const salvia: Crop = {
   family: 'Kransblommiga',
   familyLatin: 'Lamiaceae',
   perennial: true,
+  lifespan: '4-6 år (förvedas med tiden)',
   difficulty: 'Medel',
   difficultyWhy: 'Själva odlingen är enkel, men övervintring är den stora utmaningen. Salvia hatar blöta fötter på vintern och kräver väldränerad jord och skydd i kallare zoner. Behöver också föryngringsbeskärning vart 3-4 år.',
   zones: { outdoor: [1, 2, 3, 4, 5], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6, 7, 8] },

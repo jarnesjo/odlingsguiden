@@ -7,6 +7,7 @@ export const ramslok: Crop = {
   family: 'Lökväxter',
   familyLatin: 'Amaryllidaceae',
   perennial: true,
+  lifespan: '20+ år (sprider sig sakta)',
   difficulty: 'Enkel',
   difficultyWhy: 'Ramslök är en av de mest lättskötta kryddväxterna du kan ha i trädgården. Väl etablerad sköter hon sig helt själv - sprider sig, kommer tillbaka varje vår och kräver nästan ingen skötsel alls. Det enda som kräver tålamod är att få igång henne från frö, men köper du lökar är du igång direkt.',
   zones: { outdoor: [1, 2, 3, 4, 5], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },

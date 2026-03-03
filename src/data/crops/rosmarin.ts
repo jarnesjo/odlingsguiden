@@ -7,6 +7,7 @@ export const rosmarin: Crop = {
   family: 'Kransblommiga',
   familyLatin: 'Lamiaceae',
   perennial: true,
+  lifespan: '10-15+ år (i kruka 5-10 år)',
   difficulty: 'Medel',
   difficultyWhy: 'Rosmarin är egentligen lättskött - men den svenska vintern är hennes fiende. I de flesta zoner måste hon tas in eller skyddas noggrant. Klarar du övervintringen har du en trogen vän i många, många år.',
   zones: { outdoor: [1, 2], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6] },

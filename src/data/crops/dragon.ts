@@ -7,6 +7,7 @@ export const dragon: Crop = {
   family: 'Korgblommiga',
   familyLatin: 'Asteraceae',
   perennial: true,
+  lifespan: '3-5 år (dela vart tredje år)',
   difficulty: 'Medel',
   difficultyWhy: 'Dragon (den franska sorten) är inte svår att sköta väl etablerad, men kräver lite extra: hon övervintrar inte alltid i svenska jordar, måste förökas vegetativt (inga frön!) och vill ha perfekt dränering. Men belöningen är en av kökets mest raffinerade kryddor.',
   zones: { outdoor: [1, 2, 3], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5] },

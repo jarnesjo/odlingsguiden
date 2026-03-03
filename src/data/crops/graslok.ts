@@ -7,6 +7,7 @@ export const graslok: Crop = {
   family: 'Lökväxter',
   familyLatin: 'Amaryllidaceae',
   perennial: true,
+  lifespan: '10+ år (dela vart tredje år)',
   difficulty: 'Enkel',
   difficultyWhy: 'En av de allra enklaste kryddväxterna att odla. Härdig som en björk, trivs i nästan alla lägen och klarar vintern ända upp i zon 8. Perfekt förstaval för alla som vill börja odla kryddor.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6, 7, 8], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },

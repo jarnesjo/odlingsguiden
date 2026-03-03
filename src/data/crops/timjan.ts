@@ -7,6 +7,7 @@ export const timjan: Crop = {
   family: 'Kransblommiga',
   familyLatin: 'Lamiaceae',
   perennial: true,
+  lifespan: '4-6 år (föryngra genom delning)',
   difficulty: 'Enkel',
   difficultyWhy: 'Timjan är otroligt lättskött när hon väl etablerat sig. Torktålig, härdig och självgående - den enda utmaningen är att inte ge henne för mycket omtanke. Perfekt för den som vill ha en krydda som sköter sig själv.',
   zones: { outdoor: [2, 3, 4, 5, 6], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },

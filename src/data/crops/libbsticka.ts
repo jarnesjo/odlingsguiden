@@ -7,6 +7,7 @@ export const libbsticka: Crop = {
   family: 'Flockblommiga',
   familyLatin: 'Apiaceae',
   perennial: true,
+  lifespan: '10-20+ år',
   difficulty: 'Enkel',
   difficultyWhy: 'Libbsticka är en av de mest lättskötta kryddväxterna du kan ha. Extremt härdig, klarar alla svenska zoner, växer som ogräs och ger massvis med blad utan att kräva mycket till. Den enda utmaningen? Att hålla henne i schack - en etablerad libbsticka kan bli 2 meter hög!',
   zones: { outdoor: [1, 2, 3, 4, 5, 6, 7, 8], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },

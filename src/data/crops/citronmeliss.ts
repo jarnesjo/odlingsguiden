@@ -7,6 +7,7 @@ export const citronmeliss: Crop = {
   family: 'Kransblommiga',
   familyLatin: 'Lamiaceae',
   perennial: true,
+  lifespan: '5-10 år (sprider sig villigt)',
   difficulty: 'Enkel',
   difficultyWhy: 'Härdig perenn som klarar sig i de flesta svenska zoner med minimal skötsel. Sprider sig gärna - ibland lite för gärna. Det svåra är inte att få den att växa, utan att hindra den från att ta över.',
   zones: { outdoor: [1, 2, 3, 4, 5], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6, 7, 8] },

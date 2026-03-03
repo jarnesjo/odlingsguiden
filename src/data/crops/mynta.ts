@@ -7,6 +7,7 @@ export const mynta: Crop = {
   family: 'Kransblommiga',
   familyLatin: 'Lamiaceae',
   perennial: true,
+  lifespan: '10+ år (sprider sig kraftigt!)',
   difficulty: 'Enkel',
   difficultyWhy: 'Mynta är en av de mest lättodlade kryddväxterna som finns. Problemet är snarare att STOPPA henne - hon sprider sig aggressivt via underjordiska utlöpare och tar över hela trädgården om du inte håller henne i schack.',
   zones: { outdoor: [1, 2, 3, 4, 5, 6, 7, 8], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },

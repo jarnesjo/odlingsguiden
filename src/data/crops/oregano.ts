@@ -7,6 +7,7 @@ export const oregano: Crop = {
   family: 'Kransblommiga',
   familyLatin: 'Lamiaceae',
   perennial: true,
+  lifespan: '5-8 år (dela vart fjärde år)',
   difficulty: 'Enkel',
   difficultyWhy: 'Oregano är en av de mest lättskötta kryddväxterna du kan odla. Hon är torktålig, härdig och ger starkare smak ju mer hon får kämpa. Det enda misstaget du kan göra är att ge henne för mycket omsorg - oregano vill ha det tufft.',
   zones: { outdoor: [1, 2, 3, 4, 5], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },
