@@ -131,6 +131,75 @@ export const apple: Crop = {
     { name: 'Äppelvecklare (Cydia pomonella)', symptom: 'Maskhål i äpplena med brunaktig larvgång. Larven äter sig in till kärnhuset.', fix: 'Häng feromonfällor i maj-juni. Korrugerad papp runt stammen på hösten fångar övervintrande larver. Plocka upp fallfrukt.' },
     { name: 'Bladlöss', symptom: 'Ihopkrullade blad, klibbigt honungsdagg. Skottspetsarna deformeras. Ofta tidigt på säsongen.', fix: 'Locka nyckelpigor och parasitsteklar genom att ha blommande växter intill. Spola av med vattenslang. I de flesta fall sköter naturen balansen.' },
   ],
+  pollination: {
+    selfFertile: false,
+    description: 'De flesta äppelsorter är självsterila - du behöver minst två olika sorter som blommar samtidigt, inom ca 50 meters avstånd. Bin och humlor sköter jobbet, men de måste kunna flyga mellan träden. Triploida sorter (Gravensteiner, Belle de Boskoop) producerar dåligt pollen och behöver TVÅ andra pollinatörer.',
+    groups: [
+      { name: 'Tidiga (blommar tidigt maj)', varieties: ['Transparente Blanche', 'Discovery', 'Oranie'] },
+      { name: 'Mellanblommande (mitten av maj)', varieties: ['Aroma', 'Katja', 'Ingrid Marie', 'Cox Orange', 'Alice', 'Frida'] },
+      { name: 'Sena (sent maj)', varieties: ['Åkerö', 'Antonovka', 'Wealthy'] },
+      { name: 'Triploida (behöver 2 pollinatörer)', varieties: ['Gravensteiner'] },
+    ],
+    tip: 'Prydnadsäpple (Malus) är den ultimata pollinatören - de blommar länge och rikligt. Ett enda prydnadsäpple kan pollinera hela kvarteret! Om du bara har plats för ett träd, kolla om grannarna har äppelträd. Annars: ympa en gren av en annan sort direkt på ditt träd.',
+  },
+  establishment: {
+    description: 'De första åren avgör trädets hela framtid. Ett äppelträd som får rätt start de första 3-5 åren ger decennier av skörd. Slarvar du här märks det i 30 år.',
+    years: [
+      {
+        year: 'År 1',
+        tasks: [
+          'Vattna 20-30 liter per vecka hela första sommaren - rötterna har inget förråd',
+          'Plocka bort ALL frukt som sätts - trädet ska bygga rötter, inte bära frukt',
+          'Kontrollera att bindningen till stödpålen sitter lagom löst (inte stryper stammen)',
+          'Mulcha med gräsklipp eller kompost i 1 meters radie (inte intill stammen)',
+        ],
+      },
+      {
+        year: 'År 2',
+        tasks: [
+          'Första uppbyggnadsbeskärningen: välj 3-4 huvudgrenar jämnt fördelade runt stammen',
+          'Fortsätt vattna vid torka (mindre kritiskt än år 1, men fortfarande viktigt)',
+          'Tillåt några frukter men tunna till max 5-10 stycken',
+          'Gödsla försiktigt med kompost på våren',
+        ],
+      },
+      {
+        year: 'År 3-5',
+        tasks: [
+          'Årlig vinterbeskärning för att forma kronan (öppet, luftigt, ljust)',
+          'Öka antalet tillåtna frukter gradvis - full skörd först år 4-5 (dvärgträd) eller 6-8 (halvstam)',
+          'Börja sommarbeskärning: bryt vattenskott, gallra fruktklungor',
+          'Trädet blir alltmer självgående - minska vattningen om det inte är extrem torka',
+        ],
+      },
+    ],
+    protection: [
+      'Stamskydd mot gnagare (nät eller spiral runt stammen) - MÅSTE finnas första vintrarna, kaniner och sorkar gnager bark',
+      'Viltskydd om rådjur finns i området - de älskar unga fruktträd',
+      'Stammskydd mot solbränna (vit latex/kalkmjölk) på sydvästra sidan vintertid',
+      'Vindskydd vid utsatta lägen - ett ungt träd behöver lä',
+    ],
+    tip: 'Det bästa du kan göra för ett nyplanterat äppelträd: vattna, vattna, vattna. Det låter tråkigt, men 90% av alla misslyckanden med nya fruktträd beror på vattenbrist det första året. Sätt en påminnelse i telefonen.',
+  },
+  ripeningGuide: {
+    description: 'Äpplen mognar från juli till november beroende på sort. Sommaräpplen äts direkt - de håller bara dagar. Höstäpplen kan lagras några veckor. Vinteräpplen förbättras faktiskt efter lagring och håller till våren.',
+    entries: [
+      { variety: 'Transparente Blanche', from: 'jul', to: 'aug', type: 'Sommaräpple' },
+      { variety: 'Discovery', from: 'aug', to: 'sep', type: 'Sommaräpple' },
+      { variety: 'Rescue', from: 'aug', to: 'sep', type: 'Sommaräpple' },
+      { variety: 'Katja', from: 'sep', to: 'sep', type: 'Höstäpple' },
+      { variety: 'Oranie', from: 'sep', to: 'okt', type: 'Höstäpple' },
+      { variety: 'Aroma', from: 'sep', to: 'okt', type: 'Höstäpple' },
+      { variety: 'Cox Orange', from: 'sep', to: 'okt', type: 'Höstäpple' },
+      { variety: 'Alice', from: 'sep', to: 'okt', type: 'Höstäpple' },
+      { variety: 'Frida', from: 'sep', to: 'okt', type: 'Höstäpple' },
+      { variety: 'Gravensteiner', from: 'sep', to: 'okt', type: 'Höstäpple' },
+      { variety: 'Ingrid Marie', from: 'okt', to: 'okt', type: 'Vinteräpple' },
+      { variety: 'Åkerö', from: 'okt', to: 'nov', type: 'Vinteräpple' },
+      { variety: 'Antonovka', from: 'okt', to: 'nov', type: 'Vinteräpple' },
+    ],
+    tip: 'Bästa testet: lyft äpplet lätt och vrid - lossnar det enkelt är det moget. Kärnan ska vara mörkbrun. Smaka! Sommaräpplen ska ätas inom dagar, höstäpplen inom veckor, och vinteräpplen läggs direkt i kallförvar och smakar bäst efter 4-8 veckors lagring.',
+  },
   goodToKnow: [
     { icon: 'warning', title: 'Du behöver en pollinatör!', text: 'De flesta äppelsorter är självsterila - du behöver minst ett annat äppelträd av en annan sort som blommar samtidigt. Eller ha tur med grannens träd! Crabapple (prydnadsäpple) är en utmärkt pollinatör.', severity: 'warning' },
     { icon: 'warning', title: 'Ympstället - livsviktigt', text: 'Den knöl du ser på stammen nere vid marken är ympstället. Plantera ALDRIG ympstället under marknivå - då tar ädelsorten egna rötter och du förlorar dvärgeffekten. Ympstället ska vara minst 10 cm ovan jord.', severity: 'warning' },
