@@ -215,13 +215,13 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 
 Plan: `docs/plans/2.9-odlingskalender.yml`
 
-### 2.10 Säsongsvy v2 - överskådlighet
+### 2.10 Säsongsvy v2 - överskådlighet ✅
 
 > Säsongsvyn blir lång och oöverskådlig - visa 2-3 grödor per sektion med "Visa mer"
 
-- [ ] Begränsa varje sektion till 2-3 grödor som standard
-- [ ] "Visa mer"-knapp som expanderar hela listan
-- [ ] Behåll full info men gör det lättare att skanna
+- [x] Begränsa varje sektion till 3 grödor som standard
+- [x] "Visa mer"-knapp som expanderar hela listan
+- [x] Behåll full info men gör det lättare att skanna
 
 ### 2.5 Sökfunktion
 
