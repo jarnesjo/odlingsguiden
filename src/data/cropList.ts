@@ -70,11 +70,11 @@ export const CROP_LIST: CropListEntry[] = [
   // Bär - Moraceae (Mullbärsväxter)
   { id: 'mullbar', name: 'Mullbär', icon: 'mullbar', family: 'Mullbärsväxter', familyLatin: 'Moraceae', difficulty: 'Enkel', category: 'bär' },
   // Bär - Ericaceae (Ljungväxter)
-  { id: 'blabar', name: 'Blåbär (odlade)', icon: 'berry', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär', locked: true },
-  { id: 'lingon', name: 'Lingon', icon: 'berry', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär', locked: true },
+  { id: 'blabar', name: 'Blåbär (odlade)', icon: 'blabar', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär' },
+  { id: 'lingon', name: 'Lingon', icon: 'lingon', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Medel', category: 'bär' },
   { id: 'tranbar', name: 'Tranbär', icon: 'berry', family: 'Ljungväxter', familyLatin: 'Ericaceae', difficulty: 'Avancerad', category: 'bär', locked: true },
   // Bär - Elaeagnaceae (Havtornsväxter)
-  { id: 'havtorn', name: 'Havtorn', icon: 'berry', family: 'Havtornsväxter', familyLatin: 'Elaeagnaceae', difficulty: 'Medel', category: 'bär', locked: true },
+  { id: 'havtorn', name: 'Havtorn', icon: 'havtorn', family: 'Havtornsväxter', familyLatin: 'Elaeagnaceae', difficulty: 'Medel', category: 'bär' },
   // Bär - Caprifoliaceae (Kaprifolväxter)
   { id: 'honungsbar', name: 'Honungsbär', icon: 'berry', family: 'Kaprifolväxter', familyLatin: 'Caprifoliaceae', difficulty: 'Enkel', category: 'bär', locked: true },
   // Kryddor - Lamiaceae (Kransblommiga)

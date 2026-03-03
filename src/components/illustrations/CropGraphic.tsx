@@ -68,6 +68,9 @@ import { SavoykalIllustration, SavoykalIcon } from './SavoykalIllustration'
 import { MelonIllustration, MelonIcon } from './MelonIllustration'
 import { KronartskockaIllustration, KronartskockaIcon } from './KronartskockaIllustration'
 import { EndivIllustration, EndivIcon } from './EndivIllustration'
+import { BlueberryIllustration, BlueberryIcon } from './BlueberryIllustration'
+import { LingonIllustration, LingonIcon } from './LingonIllustration'
+import { SeaBuckthornIllustration, SeaBuckthornIcon } from './SeaBuckthornIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -143,6 +146,9 @@ const ILLUSTRATIONS: Record<string, { large: ComponentType<SizeProps>; small: Co
   melon: { large: MelonIllustration, small: MelonIcon },
   kronartskocka: { large: KronartskockaIllustration, small: KronartskockaIcon },
   endiv: { large: EndivIllustration, small: EndivIcon },
+  blabar: { large: BlueberryIllustration, small: BlueberryIcon },
+  lingon: { large: LingonIllustration, small: LingonIcon },
+  havtorn: { large: SeaBuckthornIllustration, small: SeaBuckthornIcon },
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
