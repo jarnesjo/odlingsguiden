@@ -59,7 +59,7 @@ export function CropHeader({ cropId, crop, userZone, onBack, onZoneClick }: Crop
           <DifficultyBadge difficulty={crop.difficulty} why={crop.difficultyWhy} />
           <span className={styles.infoMeta}>
             {crop.perennial
-              ? `Flerårig · ${crop.lifespan}`
+              ? crop.lifespan ? `Flerårig · ${crop.lifespan}` : 'Flerårig'
               : `${crop.days} dagar till skörd`}
           </span>
         </div>
