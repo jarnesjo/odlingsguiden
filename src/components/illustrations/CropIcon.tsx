@@ -68,6 +68,9 @@ import { SavoykalIcon } from './SavoykalIllustration'
 import { MelonIcon } from './MelonIllustration'
 import { KronartskockaIcon } from './KronartskockaIllustration'
 import { EndivIcon } from './EndivIllustration'
+import { BlueberryIcon } from './BlueberryIllustration'
+import { LingonIcon } from './LingonIllustration'
+import { SeaBuckthornIcon } from './SeaBuckthornIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
@@ -143,6 +146,9 @@ const ICONS: Record<string, ComponentType<SizeProps>> = {
   melon: MelonIcon,
   kronartskocka: KronartskockaIcon,
   endiv: EndivIcon,
+  blabar: BlueberryIcon,
+  lingon: LingonIcon,
+  havtorn: SeaBuckthornIcon,
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
