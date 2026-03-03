@@ -124,6 +124,16 @@ function lookupMonth(str: string): number | null {
   return SWEDISH_MONTHS[normalized] ?? null
 }
 
+/**
+ * Returnerar start- och slutmånad (1-12) för en månadssträng.
+ * Används för rundade hörn på bar-endpoints i tidslinjen.
+ */
+export function parseMonthEdges(months: string): { start: number; end: number } | null {
+  const range = parseMonthRange(months)
+  if (range.length === 0) return null
+  return { start: range[0]!, end: range[range.length - 1]! }
+}
+
 function expandRange(start: number, end: number): number[] {
   const result: number[] = []
   if (start <= end) {
