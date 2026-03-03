@@ -108,7 +108,7 @@ function useIllustration(id: string): IllustrationEntry | null {
 
   useEffect(() => {
     if (illustrationCache.has(id)) {
-      setEntry(illustrationCache.get(id)!)
+      setEntry(() => illustrationCache.get(id)!)
       return
     }
     const path = ID_TO_PATH[id]
@@ -127,7 +127,7 @@ function useIllustration(id: string): IllustrationEntry | null {
       if (large && small) {
         const result = { large, small }
         illustrationCache.set(id, result)
-        setEntry(result)
+        setEntry(() => result)
       }
     })
     return () => { cancelled = true }

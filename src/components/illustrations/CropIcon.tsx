@@ -103,7 +103,7 @@ function useIcon(id: string): ComponentType<SizeProps> | null {
 
   useEffect(() => {
     if (iconCache.has(id)) {
-      setIcon(iconCache.get(id)!)
+      setIcon(() => iconCache.get(id)!)
       return
     }
     const path = ID_TO_PATH[id]
@@ -119,7 +119,7 @@ function useIcon(id: string): ComponentType<SizeProps> | null {
       if (iconExport && !cancelled) {
         const comp = iconExport[1] as ComponentType<SizeProps>
         iconCache.set(id, comp)
-        setIcon(comp)
+        setIcon(() => comp)
       }
     })
     return () => { cancelled = true }
