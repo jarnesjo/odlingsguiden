@@ -13,11 +13,15 @@ interface SeasonViewProps {
   onSelect: (cropId: string) => void
 }
 
+const PREVIEW_COUNT = 3
+
 export function SeasonView({ userZone, currentMonth, onMonthChange, onSelect }: SeasonViewProps) {
   const [groups, setGroups] = useState<SeasonGroup[]>([])
+  const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
   useEffect(() => {
     getSeasonActivities(currentMonth, userZone).then(setGroups)
+    setExpanded(new Set())
   }, [currentMonth, userZone])
 
   function prevMonth() {
@@ -53,22 +57,39 @@ export function SeasonView({ userZone, currentMonth, onMonthChange, onSelect }: 
               <span className={styles.groupCount}>{group.activities.length}</span>
             </div>
 
-            {group.activities.map(activity => (
-              <button
-                key={`${activity.cropId}-${activity.phase}`}
-                className={styles.activityRow}
-                onClick={() => onSelect(activity.cropId)}
-              >
-                <div className={styles.activityIcon}>
-                  <CropIcon id={activity.cropId} size={40} category={activity.category} />
-                </div>
-                <div className={styles.activityInfo}>
-                  <div className={styles.activityName}>{activity.cropName}</div>
-                  <div className={styles.activityMeta}>{activity.phase} · {activity.months}</div>
-                </div>
-                <span className={styles.activityArrow}>→</span>
-              </button>
-            ))}
+            {(() => {
+              const isExpanded = expanded.has(group.key)
+              const visible = isExpanded ? group.activities : group.activities.slice(0, PREVIEW_COUNT)
+              const remaining = group.activities.length - PREVIEW_COUNT
+              return (
+                <>
+                  {visible.map(activity => (
+                    <button
+                      key={`${activity.cropId}-${activity.phase}`}
+                      className={styles.activityRow}
+                      onClick={() => onSelect(activity.cropId)}
+                    >
+                      <div className={styles.activityIcon}>
+                        <CropIcon id={activity.cropId} size={40} category={activity.category} />
+                      </div>
+                      <div className={styles.activityInfo}>
+                        <div className={styles.activityName}>{activity.cropName}</div>
+                        <div className={styles.activityMeta}>{activity.phase} · {activity.months}</div>
+                      </div>
+                      <span className={styles.activityArrow}>→</span>
+                    </button>
+                  ))}
+                  {remaining > 0 && !isExpanded && (
+                    <button
+                      className={styles.showMore}
+                      onClick={() => setExpanded(prev => new Set(prev).add(group.key))}
+                    >
+                      Visa {remaining} till
+                    </button>
+                  )}
+                </>
+              )
+            })()}
           </div>
         ))
       ) : (

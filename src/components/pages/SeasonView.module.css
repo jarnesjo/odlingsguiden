@@ -121,6 +121,27 @@
   flex-shrink: 0;
 }
 
+/* Visa mer */
+.showMore {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-card);
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-size: var(--text-label);
+  font-weight: 600;
+  color: var(--color-accent);
+  transition: all 0.15s;
+}
+
+.showMore:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
 /* Tom-state */
 .empty {
   text-align: center;
