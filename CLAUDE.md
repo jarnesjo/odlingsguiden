@@ -217,6 +217,14 @@ The app uses "kompis-tonen" (friend's tone) — warm, personal, sometimes humoro
 - **Never use en-dash `–` (U+2013) in source code** — always use plain hyphen `-` (U+002D). En-dashes trigger IDE warnings and add no value in app text.
 - **Alltid korrekt åäö i all källkod** — kommentarer, strängar, variabelnamn. Aldrig ASCII-approximationer som "hoger" (höger), "vanster" (vänster), "pa" (på), "ovre" (övre), "stjalke" (stjälke). Detta gäller hela kodbasen inklusive SVG-kommentarer.
 
+## Growing Focus (Odlingsfokus)
+
+All data ska utgå från **frilandsodling** som primär odlingsform - det är så de flesta svenska odlare faktiskt odlar. Kallväxthus (ouppvärmt) tas med som komplement där det gör verklig skillnad (tomat, gurka, paprika, chili), men ska aldrig vara default. Varmväxthus nämns aldrig - det är ovanligt bland målgruppen.
+
+- **Tidslinjer**: utgå från friland. Kallväxthus som tillägg där relevant.
+- **Zoner**: `outdoor` är primär. `greenhouse` utökar zonerna där det behövs.
+- **Tips och råd**: skriv för frilandsodlaren. Kallväxthus-tips som bonus.
+
 ## Seed Philosophy (Fröfilosofi)
 
 Odlingsguiden prioriterar öppenpollinerade sorter (OP) och kulturarvssorter. F1-hybrider nämns bara när de ger verkligt mervärde (sjukdomsresistens, härdighet i tuffa zoner).
