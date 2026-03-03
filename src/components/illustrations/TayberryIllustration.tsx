@@ -42,55 +42,119 @@ export function TayberryIllustration({ size = 200 }: Props) {
       <path d="M80 108 Q88 102, 98 100" stroke="#3D6B4F" strokeWidth="1.5" strokeLinecap="round" fill="none" />
       <path d="M98 100 Q92 97, 82 102" stroke="#3D6B4F" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.4" />
 
-      {/* --- Tayberry fruits - elongated cone shape, dark red --- */}
+      {/* --- Berry 1 - ripe, drupelet cluster, hanging from spur --- */}
+      <g transform="rotate(-12 66 94)">
+        {/* Calyx */}
+        <path d="M60 92 L57 88 M64 91 L62 87 M68 91 L70 87 M72 92 L75 89" stroke="#3D6B4F" strokeWidth="0.8" strokeLinecap="round" opacity="0.5" />
+        {/* Drupelets - row 1 (top, wide) */}
+        <circle cx="62" cy="96" r="3.8" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="62" cy="96" r="3.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="70" cy="96" r="3.8" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="70" cy="96" r="3.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Row 2 */}
+        <circle cx="59" cy="103" r="3.8" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="59" cy="103" r="3.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="66" cy="102" r="3.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="66" cy="102" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="73" cy="103" r="3.8" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="73" cy="103" r="3.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Row 3 */}
+        <circle cx="61" cy="110" r="3.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="61" cy="110" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="69" cy="110" r="3.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="69" cy="110" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Row 4 (narrowing) */}
+        <circle cx="63" cy="116" r="3" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="63" cy="116" r="3" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="70" cy="116" r="3" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="70" cy="116" r="3" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Row 5 (tip) */}
+        <circle cx="66" cy="121" r="2.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="66" cy="121" r="2.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Highlight */}
+        <circle cx="60" cy="96" r="1.8" fill="#D87080" opacity="0.3" />
+        <circle cx="57" cy="103" r="1.5" fill="#D87080" opacity="0.25" />
+      </g>
 
-      {/* Berry 1 - ripe, deep dark red, conical */}
-      <ellipse cx="66" cy="92" rx="7" ry="12" transform="rotate(-15 66 92)" fill="#8B1A1A" opacity="0.35" />
-      <ellipse cx="66" cy="92" rx="7" ry="12" transform="rotate(-15 66 92)" stroke="#6B0F0F" strokeWidth="1.8" fill="none" />
-      {/* Drupelet texture */}
-      <circle cx="63" cy="86" r="2.2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.25" />
-      <circle cx="68" cy="87" r="2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.2" />
-      <circle cx="65" cy="91" r="2.2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.2" />
-      <circle cx="63" cy="96" r="2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.18" />
-      <circle cx="68" cy="94" r="2.2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.2" />
-      {/* Highlight */}
-      <ellipse cx="62" cy="86" rx="2.5" ry="3.5" fill="#C86060" opacity="0.2" />
-      {/* Calyx */}
-      <path d="M60 82 L58 78 M64 81 L63 77 M68 82 L70 78 M72 83 L74 79" stroke="#3D6B4F" strokeWidth="0.8" strokeLinecap="round" opacity="0.5" />
+      {/* --- Berry 2 - ripe, slightly smaller --- */}
+      <g transform="rotate(-8 80 70)">
+        {/* Calyx */}
+        <path d="M74 68 L72 64 M78 67 L77 63 M82 68 L84 64" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.45" />
+        {/* Drupelets - row 1 */}
+        <circle cx="75" cy="72" r="3.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="75" cy="72" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="83" cy="72" r="3.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="83" cy="72" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Row 2 */}
+        <circle cx="73" cy="79" r="3.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="73" cy="79" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="79" cy="78" r="3.2" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="79" cy="78" r="3.2" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="85" cy="79" r="3.5" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="85" cy="79" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Row 3 */}
+        <circle cx="75" cy="85" r="3.2" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="75" cy="85" r="3.2" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="82" cy="85" r="3.2" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="82" cy="85" r="3.2" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Row 4 (tip) */}
+        <circle cx="77" cy="90" r="2.8" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="77" cy="90" r="2.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        <circle cx="83" cy="90" r="2.8" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="83" cy="90" r="2.8" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Tip */}
+        <circle cx="80" cy="95" r="2.2" fill="#8B1A2A" opacity="0.2" />
+        <circle cx="80" cy="95" r="2.2" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+        {/* Highlight */}
+        <circle cx="73" cy="72" r="1.5" fill="#D87080" opacity="0.3" />
+      </g>
 
-      {/* Berry 2 - ripe */}
-      <ellipse cx="78" cy="68" rx="6.5" ry="11" transform="rotate(-10 78 68)" fill="#8B1A1A" opacity="0.35" />
-      <ellipse cx="78" cy="68" rx="6.5" ry="11" transform="rotate(-10 78 68)" stroke="#6B0F0F" strokeWidth="1.8" fill="none" />
-      {/* Drupelet texture */}
-      <circle cx="76" cy="62" r="2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.22" />
-      <circle cx="80" cy="63" r="1.8" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.2" />
-      <circle cx="77" cy="68" r="2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.2" />
-      <circle cx="80" cy="72" r="1.8" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.18" />
-      {/* Highlight */}
-      <ellipse cx="74" cy="62" rx="2" ry="3" fill="#C86060" opacity="0.2" />
-      {/* Calyx */}
-      <path d="M73 58 L71 55 M76 58 L75 54 M80 58 L82 55" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.45" />
+      {/* --- Berry 3 - semi-ripe, lighter --- */}
+      <g transform="rotate(-3 98 54)">
+        {/* Calyx */}
+        <path d="M94 52 L92 49 M97 51 L96 48 M101 52 L103 49" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.4" />
+        {/* Drupelets - row 1 */}
+        <circle cx="95" cy="56" r="3.2" fill="#A83030" opacity="0.18" />
+        <circle cx="95" cy="56" r="3.2" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        <circle cx="101" cy="56" r="3.2" fill="#A83030" opacity="0.18" />
+        <circle cx="101" cy="56" r="3.2" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        {/* Row 2 */}
+        <circle cx="93" cy="62" r="3.2" fill="#A83030" opacity="0.18" />
+        <circle cx="93" cy="62" r="3.2" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        <circle cx="99" cy="61" r="3" fill="#A83030" opacity="0.18" />
+        <circle cx="99" cy="61" r="3" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        <circle cx="105" cy="62" r="3.2" fill="#A83030" opacity="0.18" />
+        <circle cx="105" cy="62" r="3.2" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        {/* Row 3 */}
+        <circle cx="95" cy="68" r="3" fill="#A83030" opacity="0.18" />
+        <circle cx="95" cy="68" r="3" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        <circle cx="101" cy="68" r="3" fill="#A83030" opacity="0.18" />
+        <circle cx="101" cy="68" r="3" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        {/* Tip */}
+        <circle cx="98" cy="73" r="2.5" fill="#A83030" opacity="0.18" />
+        <circle cx="98" cy="73" r="2.5" stroke="#8B2020" strokeWidth="1.8" fill="none" />
+        {/* Highlight */}
+        <circle cx="93" cy="56" r="1.5" fill="#D89080" opacity="0.25" />
+      </g>
 
-      {/* Berry 3 - semi-ripe, lighter red */}
-      <ellipse cx="96" cy="52" rx="6" ry="10" transform="rotate(-5 96 52)" fill="#A83030" opacity="0.3" />
-      <ellipse cx="96" cy="52" rx="6" ry="10" transform="rotate(-5 96 52)" stroke="#8B2020" strokeWidth="1.8" fill="none" />
-      {/* Drupelet texture */}
-      <circle cx="94" cy="47" r="1.8" stroke="#8B2020" strokeWidth="0.5" fill="none" opacity="0.2" />
-      <circle cx="98" cy="48" r="1.8" stroke="#8B2020" strokeWidth="0.5" fill="none" opacity="0.18" />
-      <circle cx="95" cy="53" r="1.8" stroke="#8B2020" strokeWidth="0.5" fill="none" opacity="0.18" />
-      {/* Highlight */}
-      <ellipse cx="92" cy="47" rx="2" ry="3" fill="#D08060" opacity="0.2" />
-      {/* Calyx */}
-      <path d="M92 43 L90 40 M95 42 L94 39 M99 43 L101 40" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.4" />
-
-      {/* Berry 4 - unripe, green-red */}
-      <ellipse cx="114" cy="42" rx="5.5" ry="9" transform="rotate(5 114 42)" fill="#7A5030" opacity="0.25" />
-      <ellipse cx="114" cy="42" rx="5.5" ry="9" transform="rotate(5 114 42)" stroke="#6B4020" strokeWidth="1.8" fill="none" />
-      {/* Drupelet texture */}
-      <circle cx="112" cy="38" r="1.5" stroke="#6B4020" strokeWidth="0.5" fill="none" opacity="0.18" />
-      <circle cx="116" cy="39" r="1.5" stroke="#6B4020" strokeWidth="0.5" fill="none" opacity="0.15" />
-      {/* Calyx */}
-      <path d="M110 34 L108 31 M113 33 L112 30 M117 34 L119 31" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.4" />
+      {/* --- Berry 4 - unripe, green-tinged --- */}
+      <g transform="rotate(5 115 44)">
+        {/* Calyx */}
+        <path d="M111 42 L109 39 M114 41 L113 38 M118 42 L120 39" stroke="#3D6B4F" strokeWidth="0.7" strokeLinecap="round" opacity="0.4" />
+        {/* Drupelets - row 1 */}
+        <circle cx="112" cy="46" r="2.8" fill="#7A5030" opacity="0.15" />
+        <circle cx="112" cy="46" r="2.8" stroke="#6B4020" strokeWidth="1.8" fill="none" />
+        <circle cx="118" cy="46" r="2.8" fill="#7A5030" opacity="0.15" />
+        <circle cx="118" cy="46" r="2.8" stroke="#6B4020" strokeWidth="1.8" fill="none" />
+        {/* Row 2 */}
+        <circle cx="111" cy="52" r="2.8" fill="#7A5030" opacity="0.15" />
+        <circle cx="111" cy="52" r="2.8" stroke="#6B4020" strokeWidth="1.8" fill="none" />
+        <circle cx="119" cy="52" r="2.8" fill="#7A5030" opacity="0.15" />
+        <circle cx="119" cy="52" r="2.8" stroke="#6B4020" strokeWidth="1.8" fill="none" />
+        {/* Tip */}
+        <circle cx="115" cy="57" r="2.3" fill="#7A5030" opacity="0.15" />
+        <circle cx="115" cy="57" r="2.3" stroke="#6B4020" strokeWidth="1.8" fill="none" />
+      </g>
 
       {/* Small thorns on cane */}
       <path d="M72 118 L68 116" stroke="#8B7355" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
@@ -109,27 +173,41 @@ export function TayberryIllustration({ size = 200 }: Props) {
 export function TayberryIcon({ size = 48 }: Props) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
-      {/* Short stem */}
-      <path d="M24 4 Q24 8, 24 12" stroke="#5C4033" strokeWidth="1.8" strokeLinecap="round" />
+      {/* Stem */}
+      <path d="M24 4 Q24 8, 24 10" stroke="#5C4033" strokeWidth="1.8" strokeLinecap="round" />
 
       {/* Calyx leaves */}
-      <path d="M20 8 L16 5 M24 7 L24 3 M28 8 L32 5" stroke="#3D6B4F" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
+      <path d="M20 8 L17 5 M24 7 L24 3 M28 8 L31 5" stroke="#3D6B4F" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
 
-      {/* Main berry - elongated cone shape */}
-      <ellipse cx="24" cy="26" rx="9" ry="15" fill="#8B1A1A" opacity="0.35" />
-      <ellipse cx="24" cy="26" rx="9" ry="15" stroke="#6B0F0F" strokeWidth="1.8" fill="none" />
-
-      {/* Drupelet texture */}
-      <circle cx="21" cy="18" r="2.5" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.22" />
-      <circle cx="27" cy="19" r="2.5" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.2" />
-      <circle cx="22" cy="24" r="2.5" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.2" />
-      <circle cx="27" cy="25" r="2.5" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.18" />
-      <circle cx="24" cy="30" r="2.2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.18" />
-      <circle cx="21" cy="34" r="2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.15" />
-      <circle cx="27" cy="33" r="2" stroke="#6B0F0F" strokeWidth="0.5" fill="none" opacity="0.15" />
+      {/* Drupelet cluster - elongated cone, 5 rows */}
+      {/* Row 1 */}
+      <circle cx="21" cy="15" r="4" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="21" cy="15" r="4" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="27" cy="15" r="4" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="27" cy="15" r="4" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      {/* Row 2 */}
+      <circle cx="19" cy="22" r="4" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="19" cy="22" r="4" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="24" cy="21" r="3.5" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="24" cy="21" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="29" cy="22" r="4" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="29" cy="22" r="4" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      {/* Row 3 */}
+      <circle cx="21" cy="29" r="3.5" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="21" cy="29" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="27" cy="29" r="3.5" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="27" cy="29" r="3.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      {/* Row 4 */}
+      <circle cx="22" cy="35" r="3" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="22" cy="35" r="3" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      <circle cx="27" cy="35" r="3" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="27" cy="35" r="3" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
+      {/* Row 5 (tip) */}
+      <circle cx="24" cy="40" r="2.5" fill="#8B1A2A" opacity="0.2" />
+      <circle cx="24" cy="40" r="2.5" stroke="#6B0F1A" strokeWidth="1.8" fill="none" />
 
       {/* Highlight */}
-      <ellipse cx="19" cy="18" rx="3" ry="4" fill="#C86060" opacity="0.2" />
+      <circle cx="19" cy="14" r="1.5" fill="#D87080" opacity="0.3" />
     </svg>
   )
 }
