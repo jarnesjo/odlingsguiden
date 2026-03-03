@@ -1,0 +1,71 @@
+meta:
+  roadmap_step: "2.9"
+  title: "Odlingskalender - horisontell tidslinje (Gantt-stil)"
+  status: planerad
+  created: 2026-03-04
+
+context: |
+  Nuvarande TimelineSection är en vertikal punkt-lista ("Förodla inomhus: Mar-Apr").
+  Mognadsklockan (RipeningSection) använder horisontella färgkodade staplar över månader -
+  mycket mer visuell och intuitiv. Skriv om tidslinjen i samma stil.
+
+  Ingen ändring av crop-data - befintlig parseMonthRange() hanterar alla månadsformat.
+
+files:
+  - path: src/utils/monthParser.ts
+    action: "Lägg till parseMonthEdges() - returnerar { start, end } för bar-endpoints"
+  - path: src/components/crop/TimelineSection.tsx
+    action: "Skriv om: vertikal punkt-lista -> horisontell bar-chart"
+  - path: src/components/crop/TimelineSection.module.css
+    action: "Skriv om: ta bort vertikal CSS, lägg till chart-grid + legend"
+
+implementation:
+  - step: 1
+    title: "monthParser.ts - parseMonthEdges()"
+    detail: |
+      export function parseMonthEdges(months: string): { start: number; end: number } | null
+      Returnerar start- och slutmånad (1-12). Används för rundade hörn på bar-endpoints.
+      Återanvänder befintlig parsing-logik.
+
+  - step: 2
+    title: "TimelineSection.tsx - skriv om"
+    detail: |
+      Färgmappning per fas-ikon:
+        seedling/indoor = varm amber (#FFF8E7 / #D4A843)
+        leaf/growth/hardening = grön (#EDF7F0 / #7BAF8E)
+        water = teal (#E6F4F1 / #5BA89D)
+        harvest = varm orange (#FFF0E5 / #C4956A)
+        scissors = neutral (#F0EDE8 / #8B8578)
+        snowflake = blå (#E8F0F8 / #7AADE6)
+        bloom = rosa (#FBE8F0 / #C47BA0)
+        stake/support = jordig (#F5F0E8 / #A89070)
+
+      Dataflöde:
+        1. TimelineEntry -> parseMonthRange(t.months) ger aktiva månader
+        2. parseMonthEdges(t.months) ger start/slut för rundade hörn
+        3. Beräkna visningsintervall (min-max med 1 månads padding, alla 12 om wrap-around)
+        4. Rendera month-headers + bar-rows (samma grid-layout som RipeningSection)
+
+      Wrap-around (t.ex. "Nov-apr"):
+        - Om någon fas har start > end -> visa alla 12 månader
+        - Aktiva celler via months.includes(cellMonth)
+
+  - step: 3
+    title: "TimelineSection.module.css - skriv om"
+    detail: |
+      Ta bort: .timeline, .line, .entry, .dot, .phase, .months
+      Lägg till (från RipeningSection): .chart, .monthRow, .monthCell, .labelCell,
+        .barRow, .barTrack, .barCell, .barActive, .legend, .legendItem, .legendDot
+      Behåll: .zoneBanner
+
+edge_cases:
+  - "Eller-separator ('Okt-nov eller april-maj' i guldvinbär): parseMonthRange tar första delen"
+  - "Långa fasnamn: labelCell 120px med text-overflow: ellipsis"
+  - "12-månadersvy: 12x36px + 120px = ~550px, overflow-x: auto"
+  - "Enstaka månad ('Apr'): bar med rundade hörn på alla sidor"
+
+verification:
+  - "npx tsc --noEmit"
+  - "npm run dev - kolla morot, tomat, hallon, äpple"
+  - "Byt zon i UI:t - verifiera att staplarna ändras"
+  - "RipeningSection (Mognadsklocka) opåverkad"

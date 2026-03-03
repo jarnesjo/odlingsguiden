@@ -205,6 +205,16 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 
 > Notering: Alla topp-4 är Rosaceae - samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband.
 
+### 2.9 Odlingskalender
+
+> Skriv om tidslinjen till horisontell bar-chart (Gantt-stil) - samma visuella stil som Mognadsklockan
+
+- [ ] `parseMonthEdges()` hjälpfunktion i monthParser.ts
+- [ ] Skriv om TimelineSection till horisontell bar-chart med färgkodade faser
+- [ ] CSS: chart-grid + legend (mönster från RipeningSection)
+
+Plan: `docs/plans/2.9-odlingskalender.yml`
+
 ### 2.5 Sökfunktion
 
 - [x] CMD+K / Ctrl+K fokuserar sökinputet i listvyn

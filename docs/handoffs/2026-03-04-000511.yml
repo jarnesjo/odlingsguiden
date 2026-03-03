@@ -25,7 +25,8 @@ meta:
       - Samma visuella stil som Mognadsklockan (RipeningSection)
       - Färgkodade faser: amber (så), grön (tillväxt), teal (skötsel), orange (skörd), blå (vintervila)
       - parseMonthEdges() ny hjälpfunktion i monthParser.ts
-      - Plan sparad: docs/plans/magical-stirring-grove.md
+      - Plan sparad: docs/plans/2.9-odlingskalender.yml
+      - Roadmap-steg 2.9 tillagt
 
     Commits:
     - bd2cc60 fix(ui): align tip icon beside text in PropagationSection
@@ -54,7 +55,7 @@ tech_stack:
 structure:
   docs:
     - docs/ROADMAP.md
-    - docs/plans/magical-stirring-grove.md (odlingskalender-plan)
+    - docs/plans/2.9-odlingskalender.yml (odlingskalender-plan)
   src:
     - "src/components/crop/PropagationSection.module.css (flex-fix)"
     - "src/components/crop/TimelineSection.tsx (nästa: skriv om till bar-chart)"
