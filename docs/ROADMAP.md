@@ -295,6 +295,11 @@ Ingen prioritet. Plockas upp när det passar.
 
 - Strukturerad data (JSON-LD) - schema.org markup per grödprofil for bättre synlighet i Google och AI-svar. Article + HowTo + BreadcrumbList. Data finns redan i profilerna, handlar om att mappa till JSON-LD och injektera i head.
 
+### Datakvalitet
+
+- Frostdatum per zon - förankra mot SMHI-statistik med sannolikheter (50/75/90%). Zon 1 och 2 har idag samma vårfrost ("slutet av april") men bör skilja sig. Trädgårdsmästare i Kalmar (zon 1) rapporterar nattfrost i mitten-slutet av maj. Skriv om zones.ts med konservativa datum. Genomgång av alla tidslinjer som berörs.
+- Faktacheck gurka och andra batch 3-profiler som saknar dokumenterade källor
+
 ### Optimering & Teknik
 
 - ~~Fortsatt bundle-optimering~~ ✅ Implementerat session 40 - dynamic import för alla illustrationer och grödprofiler. Main bundle: 1043 KB → 253 KB
@@ -302,7 +307,13 @@ Ingen prioritet. Plockas upp när det passar.
 
 ### Plattform
 
-- Native-app (iOS/Android) som betald version med offline-åtkomst
+- Native-app (React Native + Expo) som betald version med offline-åtkomst och premium-känsla
+  - Monorepo-struktur: `packages/shared` (data, typer), `packages/web` (nuvarande Vite-app), `packages/app` (Expo)
+  - Delar all crop-data, typer, kategorier, zoner via shared-paket
+  - UI skrivs om i RN-komponenter (React DOM och React Native är olika)
+  - SVG-illustrationer: path-data kan delas, renderare skiljer sig (svg vs react-native-svg)
+  - Expo Go för snabb test-loop på telefon under utveckling
+  - EAS Build för TestFlight-distribution
 - Push-notiser i native-app (säsongsbaserade)
 
 ### Projekt
