@@ -58,7 +58,7 @@ export const broccoli: Crop = {
       { phase: 'Sidoskott', months: 'Aug-Sep', icon: 'harvest' },
     ],
     6: [
-      { phase: 'Förodla inomhus', months: 'Apr', icon: 'seedling' },
+      { phase: 'Förodla inomhus', months: 'Maj', icon: 'seedling' },
       { phase: 'Plantera ut', months: 'Jun', icon: 'leaf' },
       { phase: 'Gödsla', months: 'Jun-Jul', icon: 'water' },
       { phase: 'Huvudskörd', months: 'Aug-Sep', icon: 'harvest' },
