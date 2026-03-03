@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
-import type { Zone, TimelineZone } from '../../data/types'
-import { CROPS } from '../../data/crops'
+import { useState, useEffect } from 'react'
+import type { Crop, Zone, TimelineZone } from '../../data/types'
+import { loadCrop } from '../../data/crops'
 import { ZONE_INFO } from '../../data/zones'
 import { useDocumentMeta } from '../../hooks/useDocumentMeta'
 import {
@@ -34,10 +34,12 @@ interface CropPageProps {
 }
 
 export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: CropPageProps) {
-  const crop = CROPS[cropId]
+  const [crop, setCrop] = useState<Crop | null>(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    setCrop(null)
+    loadCrop(cropId).then(c => c && setCrop(c))
   }, [cropId])
 
   useDocumentMeta(

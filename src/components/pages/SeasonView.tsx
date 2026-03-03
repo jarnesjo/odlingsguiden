@@ -1,6 +1,7 @@
+import { useState, useEffect } from 'react'
 import type { Zone } from '../../data/types'
 import { MONTH_NAMES } from '../../utils/monthParser'
-import { getSeasonActivities } from '../../utils/seasonData'
+import { getSeasonActivities, type SeasonGroup } from '../../utils/seasonData'
 import { Icon } from '../icons/Icon'
 import { CropIcon } from '../illustrations/CropIcon'
 import styles from './SeasonView.module.css'
@@ -13,7 +14,11 @@ interface SeasonViewProps {
 }
 
 export function SeasonView({ userZone, currentMonth, onMonthChange, onSelect }: SeasonViewProps) {
-  const groups = getSeasonActivities(currentMonth, userZone)
+  const [groups, setGroups] = useState<SeasonGroup[]>([])
+
+  useEffect(() => {
+    getSeasonActivities(currentMonth, userZone).then(setGroups)
+  }, [currentMonth, userZone])
 
   function prevMonth() {
     onMonthChange(currentMonth === 1 ? 12 : currentMonth - 1)

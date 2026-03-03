@@ -6,7 +6,7 @@
  */
 
 import type { Zone, TimelineZone, Category } from '../data/types'
-import { CROPS } from '../data/crops'
+import { loadAllCrops } from '../data/crops'
 import { CROP_LIST } from '../data/cropList'
 import { parseMonthRange } from './monthParser'
 
@@ -68,7 +68,8 @@ function matchGroup(phase: string): GroupDef | undefined {
  * Hämtar alla säsongsaktiviteter för en given månad och zon.
  * Returnerar grupperade aktiviteter i naturlig säsongsordning.
  */
-export function getSeasonActivities(month: number, zone: Zone): SeasonGroup[] {
+export async function getSeasonActivities(month: number, zone: Zone): Promise<SeasonGroup[]> {
+  const CROPS = await loadAllCrops()
   const groups = new Map<string, SeasonGroup>()
 
   // Initiera alla grupper (behåller ordningen)
@@ -76,7 +77,7 @@ export function getSeasonActivities(month: number, zone: Zone): SeasonGroup[] {
     groups.set(def.key, { key: def.key, label: def.label, icon: def.icon, activities: [] })
   }
 
-  // Bygg en snabb lookup: cropId → CropListEntry
+  // Bygg en snabb lookup: cropId -> CropListEntry
   const listLookup = new Map(CROP_LIST.map(c => [c.id, c]))
 
   for (const [cropId, crop] of Object.entries(CROPS)) {
