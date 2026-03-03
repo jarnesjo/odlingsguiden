@@ -60,7 +60,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'jordgubbar', name: 'Jordgubbar', icon: 'jordgubbar', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'bjornbar', name: 'Björnbär', icon: 'bjornbar', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'aronia', name: 'Aronia', icon: 'aronia', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
-  { id: 'tayberry', name: 'Tayberry', icon: 'tayberry', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
+  { id: 'tayberry', name: 'Björnbärshallon', icon: 'tayberry', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Enkel', category: 'bär' },
   // Bär - Grossulariaceae (Ripsväxter)
   { id: 'svarta-vinbar', name: 'Svarta vinbär', icon: 'svarta-vinbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
   { id: 'roda-vinbar', name: 'Röda vinbär', icon: 'roda-vinbar', family: 'Ripsväxter', familyLatin: 'Grossulariaceae', difficulty: 'Enkel', category: 'bär' },
