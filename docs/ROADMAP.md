@@ -290,6 +290,7 @@ Ingen prioritet. Plockas upp när det passar.
 
 - Mörkt läge / dark mode
 - AI-rådgivare för växtproblem ("Min tomat har gula blad - vad är fel?")
+- Säsongsvy: visa 2-3 grödor per sektion med "Visa mer"-knapp (listan blir lång och oöverskådlig)
 
 ### SEO & Synlighet
 
