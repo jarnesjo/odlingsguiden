@@ -201,7 +201,6 @@ export const apple: Crop = {
     tip: 'Bästa testet: lyft äpplet lätt och vrid - lossnar det enkelt är det moget. Kärnan ska vara mörkbrun. Smaka! Sommaräpplen ska ätas inom dagar, höstäpplen inom veckor, och vinteräpplen läggs direkt i kallförvar och smakar bäst efter 4-8 veckors lagring.',
   },
   goodToKnow: [
-    { icon: 'warning', title: 'Du behöver en pollinatör!', text: 'De flesta äppelsorter är självsterila - du behöver minst ett annat äppelträd av en annan sort som blommar samtidigt. Eller ha tur med grannens träd! Crabapple (prydnadsäpple) är en utmärkt pollinatör.', severity: 'warning' },
     { icon: 'warning', title: 'Ympstället - livsviktigt', text: 'Den knöl du ser på stammen nere vid marken är ympstället. Plantera ALDRIG ympstället under marknivå - då tar ädelsorten egna rötter och du förlorar dvärgeffekten. Ympstället ska vara minst 10 cm ovan jord.', severity: 'warning' },
     { icon: 'tip', title: 'Grundstam bestämmer storleken', text: 'M9 ger ett litet träd (2-3 m) som bär frukt redan år 2-3. M26 ger halvstorlek (3-4 m). Frösådd/A2 ger fullstort träd (6-8 m) som lever i 100+ år. Fråga plantskolan vilken grundstam du köper!', severity: 'tip' },
     { icon: 'tip', title: 'Tunna frukten', text: 'I juni faller naturligt en del småfrukter (junifall). Tunna gärna ut ytterligare till 1-2 frukter per fruktklunga. Det känns brutalt, men det ger större, godare äpplen och förhindrar att trädet tar "viloår".', severity: 'tip' },
