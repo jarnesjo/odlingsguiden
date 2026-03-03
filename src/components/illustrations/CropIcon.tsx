@@ -1,166 +1,131 @@
-import type { ComponentType } from 'react'
+import { useState, useEffect, type ComponentType } from 'react'
 import type { Category } from '../../data/types'
-import { CarrotIcon } from './CarrotIllustration'
-import { TomatoIcon } from './TomatoIllustration'
-import { RaspberryIcon } from './RaspberryIllustration'
-import { BasilIcon } from './BasilIllustration'
-import { PotatoIcon } from './PotatoIllustration'
-import { PeaIcon } from './PeaIllustration'
-import { SquashIcon } from './SquashIllustration'
-import { LettuceIcon } from './LettuceIllustration'
-import { OnionIcon } from './OnionIllustration'
-import { KaleIcon } from './KaleIllustration'
-import { RadishIcon } from './RadishIllustration'
-import { FavaBeanIcon } from './FavaBeanIllustration'
-import { StrawberryIcon } from './StrawberryIllustration'
-import { ParsleyIcon } from './ParsleyIllustration'
-import { BlackcurrantIcon } from './BlackcurrantIllustration'
-import { DillIcon } from './DillIllustration'
-import { BeetrootIcon } from './BeetrootIllustration'
-import { RhubarbIcon } from './RhubarbIllustration'
-import { SweetcornIcon } from './SweetcornIllustration'
-import { AsparagusIcon } from './AsparagusIllustration'
-import { CucumberIcon } from './CucumberIllustration'
-import { SpinachIcon } from './SpinachIllustration'
-import { BroccoliIcon } from './BroccoliIllustration'
-import { LeekIcon } from './LeekIllustration'
-import { GarlicIcon } from './GarlicIllustration'
-import { PepperIcon } from './PepperIllustration'
-import { ChivesIcon } from './ChivesIllustration'
-import { GooseberryIcon } from './GooseberryIllustration'
-import { ThymeIcon } from './ThymeIllustration'
-import { MintIcon } from './MintIllustration'
-import { RedcurrantIcon } from './RedcurrantIllustration'
-import { PumpkinIcon } from './PumpkinIllustration'
-import { BlackberryIcon } from './BlackberryIllustration'
-import { OreganoIcon } from './OreganoIllustration'
-import { RosemaryIcon } from './RosemaryIllustration'
-import { CauliflowerIcon } from './CauliflowerIllustration'
-import { MulberryIcon } from './MulberryIllustration'
-import { ChiliIcon } from './ChiliIllustration'
-import { CabbageIcon } from './CabbageIllustration'
-import { ChardIcon } from './ChardIllustration'
-import { KohlrabiIcon } from './KohlrabiIllustration'
-import { ParsnipIcon } from './ParsnipIllustration'
-import { SnapBeanIcon } from './SnapBeanIllustration'
-import { CorianderIcon } from './CorianderIllustration'
-import { SageIcon } from './SageIllustration'
-import { LemonBalmIcon } from './LemonBalmIllustration'
-import { KumminIcon } from './KumminIllustration'
-import { CressIcon } from './CressIllustration'
-import { BayLeafIcon } from './BayLeafIllustration'
-import { MarjoramIcon } from './MarjoramIllustration'
-import { LovageIcon } from './LovageIllustration'
-import { WildGarlicIcon } from './WildGarlicIllustration'
-import { TarragonIcon } from './TarragonIllustration'
-import { RedCabbageIcon } from './RedCabbageIllustration'
-import { TurnipIcon } from './TurnipIllustration'
-import { PoleBeanIcon } from './PoleBeanIllustration'
-import { ShallotIcon } from './ShallotIllustration'
-import { PakChoiIcon } from './PakChoiIllustration'
-import { KinakalIcon } from './KinakalIllustration'
-import { BrusselsSproutsIcon } from './BrusselsSproutsIllustration'
-import { JerusalemArtichokeIcon } from './JerusalemArtichokeIllustration'
-import { FennelIcon } from './FennelIllustration'
-import { CeleryIcon } from './CeleryIllustration'
-import { RotselleriIcon } from './RotselleriIllustration'
-import { SavoykalIcon } from './SavoykalIllustration'
-import { MelonIcon } from './MelonIllustration'
-import { KronartskockaIcon } from './KronartskockaIllustration'
-import { EndivIcon } from './EndivIllustration'
-import { BlueberryIcon } from './BlueberryIllustration'
-import { LingonIcon } from './LingonIllustration'
-import { SeaBuckthornIcon } from './SeaBuckthornIllustration'
-import { AroniaIcon } from './AroniaIllustration'
-import { TayberryIcon } from './TayberryIllustration'
-import { WhiteCurrantIcon } from './WhiteCurrantIllustration'
-import { GoldCurrantIcon } from './GoldCurrantIllustration'
-import { CranberryIcon } from './CranberryIllustration'
-import { HoneyberryIcon } from './HoneyberryIllustration'
 import { VegetableIcon, BerryIcon, HerbIcon, FlowerIcon } from '../icons'
 
 interface SizeProps {
   size?: number
 }
 
-const ICONS: Record<string, ComponentType<SizeProps>> = {
-  morot: CarrotIcon,
-  tomat: TomatoIcon,
-  potatis: PotatoIcon,
-  hallon: RaspberryIcon,
-  basilika: BasilIcon,
-  artor: PeaIcon,
-  squash: SquashIcon,
-  sallat: LettuceIcon,
-  lok: OnionIcon,
-  gronkal: KaleIcon,
-  radisa: RadishIcon,
-  bondbona: FavaBeanIcon,
-  jordgubbar: StrawberryIcon,
-  persilja: ParsleyIcon,
-  'svarta-vinbar': BlackcurrantIcon,
-  dill: DillIcon,
-  rodbeta: BeetrootIcon,
-  rabarber: RhubarbIcon,
-  sockermajs: SweetcornIcon,
-  sparris: AsparagusIcon,
-  gurka: CucumberIcon,
-  spenat: SpinachIcon,
-  broccoli: BroccoliIcon,
-  purjolok: LeekIcon,
-  vitlok: GarlicIcon,
-  paprika: PepperIcon,
-  graslok: ChivesIcon,
-  krusbar: GooseberryIcon,
-  timjan: ThymeIcon,
-  mynta: MintIcon,
-  'roda-vinbar': RedcurrantIcon,
-  pumpa: PumpkinIcon,
-  bjornbar: BlackberryIcon,
-  oregano: OreganoIcon,
-  rosmarin: RosemaryIcon,
-  blomkal: CauliflowerIcon,
-  mullbar: MulberryIcon,
-  chili: ChiliIcon,
-  vitkal: CabbageIcon,
-  mangold: ChardIcon,
-  kalrabbi: KohlrabiIcon,
-  palsternacka: ParsnipIcon,
-  brytbona: SnapBeanIcon,
-  koriander: CorianderIcon,
-  salvia: SageIcon,
-  citronmeliss: LemonBalmIcon,
-  kummin: KumminIcon,
-  krasse: CressIcon,
-  lagerblad: BayLeafIcon,
-  mejram: MarjoramIcon,
-  libbsticka: LovageIcon,
-  ramslok: WildGarlicIcon,
-  dragon: TarragonIcon,
-  rodkal: RedCabbageIcon,
-  majrova: TurnipIcon,
-  storbona: PoleBeanIcon,
-  schalottenlok: ShallotIcon,
-  'pak-choi': PakChoiIcon,
-  kinakal: KinakalIcon,
-  brysselkal: BrusselsSproutsIcon,
-  jordartskocka: JerusalemArtichokeIcon,
-  fankal: FennelIcon,
-  selleri: CeleryIcon,
-  rotselleri: RotselleriIcon,
-  savoykal: SavoykalIcon,
-  melon: MelonIcon,
-  kronartskocka: KronartskockaIcon,
-  endiv: EndivIcon,
-  blabar: BlueberryIcon,
-  lingon: LingonIcon,
-  havtorn: SeaBuckthornIcon,
-  aronia: AroniaIcon,
-  tayberry: TayberryIcon,
-  'vita-vinbar': WhiteCurrantIcon,
-  guldvinbar: GoldCurrantIcon,
-  tranbar: CranberryIcon,
-  honungsbar: HoneyberryIcon,
+// Lazy glob: varje illustration-fil blir en dynamic import
+const modules = import.meta.glob<Record<string, ComponentType<SizeProps>>>(
+  './*Illustration.tsx',
+  { eager: false }
+)
+
+// Crop id (svenska) → glob-nyckel (engelska filnamn)
+const ID_TO_PATH: Record<string, string> = {
+  morot: './CarrotIllustration.tsx',
+  tomat: './TomatoIllustration.tsx',
+  potatis: './PotatoIllustration.tsx',
+  hallon: './RaspberryIllustration.tsx',
+  basilika: './BasilIllustration.tsx',
+  artor: './PeaIllustration.tsx',
+  squash: './SquashIllustration.tsx',
+  sallat: './LettuceIllustration.tsx',
+  lok: './OnionIllustration.tsx',
+  gronkal: './KaleIllustration.tsx',
+  radisa: './RadishIllustration.tsx',
+  bondbona: './FavaBeanIllustration.tsx',
+  jordgubbar: './StrawberryIllustration.tsx',
+  persilja: './ParsleyIllustration.tsx',
+  'svarta-vinbar': './BlackcurrantIllustration.tsx',
+  dill: './DillIllustration.tsx',
+  rodbeta: './BeetrootIllustration.tsx',
+  rabarber: './RhubarbIllustration.tsx',
+  sockermajs: './SweetcornIllustration.tsx',
+  sparris: './AsparagusIllustration.tsx',
+  gurka: './CucumberIllustration.tsx',
+  spenat: './SpinachIllustration.tsx',
+  broccoli: './BroccoliIllustration.tsx',
+  purjolok: './LeekIllustration.tsx',
+  vitlok: './GarlicIllustration.tsx',
+  paprika: './PepperIllustration.tsx',
+  graslok: './ChivesIllustration.tsx',
+  krusbar: './GooseberryIllustration.tsx',
+  timjan: './ThymeIllustration.tsx',
+  mynta: './MintIllustration.tsx',
+  'roda-vinbar': './RedcurrantIllustration.tsx',
+  pumpa: './PumpkinIllustration.tsx',
+  bjornbar: './BlackberryIllustration.tsx',
+  oregano: './OreganoIllustration.tsx',
+  rosmarin: './RosemaryIllustration.tsx',
+  blomkal: './CauliflowerIllustration.tsx',
+  mullbar: './MulberryIllustration.tsx',
+  chili: './ChiliIllustration.tsx',
+  vitkal: './CabbageIllustration.tsx',
+  mangold: './ChardIllustration.tsx',
+  kalrabbi: './KohlrabiIllustration.tsx',
+  palsternacka: './ParsnipIllustration.tsx',
+  brytbona: './SnapBeanIllustration.tsx',
+  koriander: './CorianderIllustration.tsx',
+  salvia: './SageIllustration.tsx',
+  citronmeliss: './LemonBalmIllustration.tsx',
+  kummin: './KumminIllustration.tsx',
+  krasse: './CressIllustration.tsx',
+  lagerblad: './BayLeafIllustration.tsx',
+  mejram: './MarjoramIllustration.tsx',
+  libbsticka: './LovageIllustration.tsx',
+  ramslok: './WildGarlicIllustration.tsx',
+  dragon: './TarragonIllustration.tsx',
+  rodkal: './RedCabbageIllustration.tsx',
+  majrova: './TurnipIllustration.tsx',
+  storbona: './PoleBeanIllustration.tsx',
+  schalottenlok: './ShallotIllustration.tsx',
+  'pak-choi': './PakChoiIllustration.tsx',
+  kinakal: './KinakalIllustration.tsx',
+  brysselkal: './BrusselsSproutsIllustration.tsx',
+  jordartskocka: './JerusalemArtichokeIllustration.tsx',
+  fankal: './FennelIllustration.tsx',
+  selleri: './CeleryIllustration.tsx',
+  rotselleri: './RotselleriIllustration.tsx',
+  savoykal: './SavoykalIllustration.tsx',
+  melon: './MelonIllustration.tsx',
+  kronartskocka: './KronartskockaIllustration.tsx',
+  endiv: './EndivIllustration.tsx',
+  blabar: './BlueberryIllustration.tsx',
+  lingon: './LingonIllustration.tsx',
+  havtorn: './SeaBuckthornIllustration.tsx',
+  aronia: './AroniaIllustration.tsx',
+  tayberry: './TayberryIllustration.tsx',
+  'vita-vinbar': './WhiteCurrantIllustration.tsx',
+  guldvinbar: './GoldCurrantIllustration.tsx',
+  tranbar: './CranberryIllustration.tsx',
+  honungsbar: './HoneyberryIllustration.tsx',
+}
+
+// Cache laddade ikoner
+const iconCache = new Map<string, ComponentType<SizeProps>>()
+
+function useIcon(id: string): ComponentType<SizeProps> | null {
+  const [Icon, setIcon] = useState<ComponentType<SizeProps> | null>(
+    () => iconCache.get(id) ?? null
+  )
+
+  useEffect(() => {
+    if (iconCache.has(id)) {
+      setIcon(iconCache.get(id)!)
+      return
+    }
+    const path = ID_TO_PATH[id]
+    if (!path) return
+
+    const loader = modules[path]
+    if (!loader) return
+
+    let cancelled = false
+    loader().then((mod) => {
+      // Hitta exporten som slutar på "Icon" (t.ex. CarrotIcon)
+      const iconExport = Object.entries(mod).find(([name]) => name.endsWith('Icon'))
+      if (iconExport && !cancelled) {
+        const comp = iconExport[1] as ComponentType<SizeProps>
+        iconCache.set(id, comp)
+        setIcon(comp)
+      }
+    })
+    return () => { cancelled = true }
+  }, [id])
+
+  return Icon
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
@@ -177,7 +142,7 @@ interface Props {
 }
 
 export function CropIcon({ id, size = 48, category }: Props) {
-  const Icon = ICONS[id]
+  const Icon = useIcon(id)
   if (Icon) {
     return <Icon size={size} />
   }
