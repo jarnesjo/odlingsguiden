@@ -121,7 +121,7 @@ Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
 > Lägg in alla grödor, bär och kryddor som kan odlas i Sverige
 
 - [x] Alla grönsaker (43 av 43 klara)
-- [ ] Alla bär (7 av ~16 klara)
+- [x] Alla bär (16 av 16 klara)
 - [x] Alla kryddor (18 av 18 klara)
 
 ### 2.2 Källhantering & faktacheck ✅
