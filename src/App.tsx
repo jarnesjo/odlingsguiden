@@ -5,6 +5,8 @@ import { SLUG_TO_ID, ID_TO_SLUG } from './data/cropSlugs'
 import { MONTH_SLUGS, monthSlugToNumber } from './utils/monthParser'
 import { CropList, ZoneSelector } from './components/pages'
 import { useLocalStorage } from './hooks/useLocalStorage'
+import { CATEGORIES } from './data/categories'
+import { CROP_LIST } from './data/cropList'
 
 const CropPage = lazy(() =>
   import('./components/pages/CropPage').then(m => ({ default: m.CropPage }))
@@ -106,7 +108,14 @@ function App() {
         fontSize: '13px',
         color: '#7A7568',
         fontFamily: 'var(--font-body)',
+        lineHeight: 1.8,
       }}>
+        {CATEGORIES.filter(c => !c.hidden).map((cat, i, arr) => (
+          <span key={cat.id}>
+            {CROP_LIST.filter(c => c.category === cat.id && !c.locked).length} {cat.label.toLowerCase()}{i < arr.length - 1 ? ' · ' : ''}
+          </span>
+        ))}
+        <br />
         Skapad med omtanke av{' '}
         <a
           href="https://lillabosgarden.se"

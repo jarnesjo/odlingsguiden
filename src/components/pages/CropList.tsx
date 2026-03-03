@@ -186,17 +186,6 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
             )
           })}
 
-          {/* Footer */}
-          <div className={styles.footer}>
-            {CATEGORIES.filter(c => !c.hidden).map((cat, i, arr) => {
-              const count = CROP_LIST.filter(c => c.category === cat.id && !c.locked).length
-              return (
-                <span key={cat.id}>
-                  {count} {cat.label.toLowerCase()}{i < arr.length - 1 ? ' · ' : ''}
-                </span>
-              )
-            })}
-          </div>
         </>
       )}
     </div>
