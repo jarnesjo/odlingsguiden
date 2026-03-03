@@ -14,6 +14,7 @@ export function DifficultyBadge({ difficulty, why }: DifficultyBadgeProps) {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const info = DIFFICULTY_INFO[difficulty]
   const dotColor = info.color === '#B7E4C7' ? '#3D6B4F' : info.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
+  const label = difficulty === 'Enkel' ? 'Lättodlad' : difficulty === 'Medel' ? 'Kräver lite omsorg' : 'Kräver extra omsorg'
 
   useEffect(() => {
     if (!showTip) return
@@ -33,7 +34,7 @@ export function DifficultyBadge({ difficulty, why }: DifficultyBadgeProps) {
         style={{ '--badge-color': info.color } as React.CSSProperties}
         onClick={() => setShowTip(!showTip)}
       >
-        <DifficultyDot color={dotColor} /> Svårighetsgrad: {difficulty}
+        <span style={{ color: dotColor }}><DifficultyDot color={dotColor} /> {label}</span>
         <span className={styles.infoIcon}>ⓘ</span>
       </button>
       {showTip && (
