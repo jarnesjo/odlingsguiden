@@ -236,15 +236,3 @@
   font-size: var(--text-body);
 }
 
-.footerSub {
-  font-size: var(--text-label);
-}
-
-.footerLink {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-.footerLink:hover {
-  text-decoration: underline;
-}

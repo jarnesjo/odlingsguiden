@@ -114,7 +114,7 @@ function App() {
           rel="noopener noreferrer"
           style={{ color: '#3D6B4F', textDecoration: 'none' }}
         >
-          Lilla Bosgarden
+          Lilla Bosgården
         </a>
       </footer>
       {showZoneModal && (

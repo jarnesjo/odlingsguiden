@@ -77,8 +77,6 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
     })
 
   const activeCat = CATEGORIES.find((c) => c.id === category)!
-  const unlockedCount = filtered.filter((c) => !c.locked).length
-  const lockedCount = filtered.filter((c) => c.locked).length
 
   return (
     <div className={styles.container}>
@@ -190,14 +188,14 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
 
           {/* Footer */}
           <div className={styles.footer}>
-            {unlockedCount} {activeCat.label.toLowerCase()} tillgängliga · {lockedCount} kommer snart
-            <br />
-            <span className={styles.footerSub}>
-              Skapad med omtanke av{" "}
-              <a href="https://lillabosgarden.se" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>
-                Lilla Bosgården
-              </a>
-            </span>
+            {CATEGORIES.filter(c => !c.hidden).map((cat, i, arr) => {
+              const count = CROP_LIST.filter(c => c.category === cat.id && !c.locked).length
+              return (
+                <span key={cat.id}>
+                  {count} {cat.label.toLowerCase()}{i < arr.length - 1 ? ' · ' : ''}
+                </span>
+              )
+            })}
           </div>
         </>
       )}
