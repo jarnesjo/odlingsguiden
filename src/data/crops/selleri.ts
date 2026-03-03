@@ -46,7 +46,7 @@ export const selleri: Crop = {
   ],
   timeline: {
     1: [
-      { phase: 'Förodla inomhus', months: 'Feb-Mar', icon: 'seedling' },
+      { phase: 'Förodla inomhus', months: 'Feb', icon: 'seedling' },
       { phase: 'Härda av', months: 'Apr-Maj', icon: 'sun' },
       { phase: 'Plantera ut', months: 'Maj', icon: 'seedling' },
       { phase: 'Tillväxt och skötsel', months: 'Jun-Aug', icon: 'water' },
@@ -62,7 +62,7 @@ export const selleri: Crop = {
       { phase: 'Skörd', months: 'Sep-Okt', icon: 'harvest' },
     ],
     6: [
-      { phase: 'Förodla inomhus', months: 'Mar-Apr', icon: 'seedling' },
+      { phase: 'Förodla inomhus', months: 'Feb-Mar', icon: 'seedling' },
       { phase: 'Plantera ut (växthus)', months: 'Jun', icon: 'seedling' },
       { phase: 'Tillväxt', months: 'Jul-Aug', icon: 'water' },
       { phase: 'Skörd', months: 'Sep', icon: 'harvest' },
