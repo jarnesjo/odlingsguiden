@@ -51,13 +51,13 @@ export const purjolok: Crop = {
       { phase: 'Övervintring möjlig', months: 'Dec-Feb', icon: 'snowflake' },
     ],
     4: [
-      { phase: 'Förodling inomhus', months: 'Feb-Mar', icon: 'seedling' },
+      { phase: 'Förodling inomhus', months: 'Mar', icon: 'seedling' },
       { phase: 'Utplantering', months: 'Maj-Jun', icon: 'plant' },
       { phase: 'Kupning (2-3 ggr)', months: 'Jul-Sep', icon: 'leaf' },
       { phase: 'Skörd', months: 'Okt-Nov', icon: 'harvest' },
     ],
     6: [
-      { phase: 'Förodling inomhus', months: 'Feb-Mar', icon: 'seedling' },
+      { phase: 'Förodling inomhus', months: 'Mar-Apr', icon: 'seedling' },
       { phase: 'Utplantering', months: 'Jun', icon: 'plant' },
       { phase: 'Kupning (2 ggr)', months: 'Jul-Sep', icon: 'leaf' },
       { phase: 'Skörd', months: 'Sep-Okt', icon: 'harvest' },
