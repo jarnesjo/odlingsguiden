@@ -70,6 +70,9 @@ import { endiv } from './endiv'
 import { lingon } from './lingon'
 import { blabar } from './blabar'
 import { havtorn } from './havtorn'
+import { aronia } from './aronia'
+import { tayberry } from './tayberry'
+import { vitaVinbar } from './vita-vinbar'
 
 export const CROPS: Record<string, Crop> = {
   morot,
@@ -143,4 +146,7 @@ export const CROPS: Record<string, Crop> = {
   lingon,
   blabar,
   havtorn,
+  aronia,
+  tayberry,
+  'vita-vinbar': vitaVinbar,
 }
