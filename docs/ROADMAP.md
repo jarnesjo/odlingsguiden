@@ -189,7 +189,7 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 
 - [x] Ny flik i kategori-togglen + `category: "frukt"` i datamodellen
 - [x] Nya typer och fält i `types.ts`
-- [ ] Kategori-specifika sektioner (Pollinationspartners, Beskärningsguide, Sortguide, Etablering, Mognadsklocka)
+- [x] Kategori-specifika sektioner (Pollinationspartners, Etablering, Mognadsklocka) - beskärning och sortval via befintliga sektioner
 - [x] Färg i designsystem + tokens
 - [x] Första fruktprofil: Äpple (flagship - bevisar att kategorin fungerar)
 
@@ -431,4 +431,4 @@ Ingen prioritet. Plockas upp när det passar.
 
 ---
 
-_Senast uppdaterad: 2026-03-03 (session 37)_
+_Senast uppdaterad: 2026-03-03 (session 42)_

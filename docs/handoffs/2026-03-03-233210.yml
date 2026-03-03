@@ -1,0 +1,104 @@
+meta:
+  date: 2026-03-03
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 42. Frukt-specifika sektioner + faktacheck + bugfixar.
+
+    KLART:
+    - 2.4 Frukt kategori-specifika sektioner:
+      - PollinationSection: självfertil/behöver-pollinatör badge, pollinationsgrupper, sortpills
+      - EstablishmentSection: år-för-år guide (år 1-5), skyddsåtgärder
+      - RipeningSection (mognadsklocka): visuell tidslinje med färgkodade staplar per sorttyp
+      - Nya typer i types.ts: Pollination, Establishment, RipeningGuide
+      - CropPage renderar sektionerna villkorligt för category=frukt
+      - Äpple-profilen har full data för alla tre sektioner
+    - Faktacheck äpple mot svenska källor:
+      - Pollinationsgrupper korrigerade per E-planta/SPR (Åkerö, Alice till tidig; Aroma, Ingrid Marie till medelsen)
+      - Mognadstider korrigerade (Transparente Blanche aug ej jul, Cox Orange/Frida/Ingrid Marie = vinteräpplen)
+      - Zondata korrigerade (Aroma 1-4, Gravensteiner 1-3, Frida 1-3, Rescue 1-6)
+      - Kaniker = Oranie (regionalt namn) dokumenterat
+      - Landskapsäpplen och SLU Grönt kulturarv markerade i sortnoter
+      - Forskningsrapport sparad: docs/research/faktacheck-apple.md
+    - Tayberry -> Björnbärshallon (tayberry/taybär invävt i texter för sökbarhet)
+    - Font-fix: Fraunces latin-ext hade buggig Ä-glyph vid weight 800, borttagen
+    - Redundant pollinerings-goodToKnow borttagen från äpple (nu i PollinationSection)
+
+    Commits:
+    - cc8c004 feat(ui): add fruit-specific sections (pollination, establishment, ripening)
+    - 1978963 content(crops): add pollination, establishment and ripening data for apple
+    - b7dc02f style(ui): add letter-spacing to crop name heading
+    - c2dd96d content(crops): rename tayberry to björnbärshallon
+    - 7094057 fix(crops): remove redundant pollination goodToKnow from apple
+    - 5b983eb fix(fonts): remove Fraunces latin-ext causing broken Ä rendering
+    - 30705e5 fix(crops): fact-check apple profile against Swedish sources
+    - 86d80ab docs(research): add apple fact-check report with Swedish sources
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/research/faktacheck-apple.md (ny)
+  src:
+    - "src/data/types.ts (3 nya fruit-types: Pollination, Establishment, RipeningGuide)"
+    - "src/components/crop/PollinationSection.tsx (ny)"
+    - "src/components/crop/EstablishmentSection.tsx (ny)"
+    - "src/components/crop/RipeningSection.tsx (ny)"
+    - "src/data/crops/apple.ts (faktacheckad, 3 nya sektioner)"
+    - "src/data/crops/tayberry.ts (namn: Björnbärshallon)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Förökning 'Tips' layout-bugg: text hamnar under ikon istället för bredvid i PropagationSection"
+  - "Björnbärshallon-illustration: nuvarande ser inte ut som riktiga taybär - bör vara avlånga hallonliknande bär"
+  - "Footer: 'Skapad med omtanke' visas dubbelt på startsidan, uppdatera med statistik per kategori"
+  - "Tidslinje-sektion: undersök om mognadsklocka-stilen kan användas mer, alternativa visuella presentationer"
+  - "2.4 Frukt: fler profiler (päron, plommon, körsbär, rabarber)"
+  - "2.4 Frukt: roadmap-checkbox 'Kategori-specifika sektioner' kan bockas av"
+  - "SMHI-frostdatum: förankra zones.ts mot statistik med sannolikheter (50/75/90%)"
+  - "Faktacheck gurka + batch 3-profiler mot svenska källor"
+  - "Lora latin-ext: kontrollera om samma bugg finns (behålls tills vidare)"
+
+context:
+  decisions:
+    - "Fraunces latin-ext borttagen pga buggig Ä-glyph vid weight 800. Latin subset innehåller åäö."
+    - "Björnbärshallon som svenskt namn, tayberry/taybär invävt för sökbarhet. ID förblir 'tayberry'."
+    - "Pollinationsgrupper enligt E-planta/SPR numrering (grupp 1-4)"
+    - "Mognadstider gäller zon 1-3, med not om 2-4 veckors förskjutning norrut"
+    - "Kaniker = Oranie bekräftat (SAOB) - behålls som egen sortpost med förklaring"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+    - "Frilandsodling som primär odlingsform"
+
+known_issues:
+  - "PropagationSection tip-text hamnar under ikon istället för bredvid"
+  - "Björnbärshallon-illustration ser inte ut som riktiga taybär (avlånga, hallonliknande)"
+  - "Footer 'Skapad med omtanke av Lilla Bosgården' visas dubbelt på startsidan"
+  - "Frostdatum i zones.ts ej förankrade mot SMHI-statistik"
+  - "Zon 1 och 2 har samma vårfrost - bör skilja sig"
+  - "Gurka och batch 3-profiler saknar dokumenterade källhänvisningar"
+  - "Lighthouse Accessibility 84"
+  - "Lora latin-ext eventuellt samma font-bugg (ej testat)"
