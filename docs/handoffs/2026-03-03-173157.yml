@@ -1,0 +1,79 @@
+meta:
+  date: 2026-03-03
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 40. Bundle-optimering + kallor.md uppdatering + frukt-plan.
+
+    KLART:
+    - docs/guides/kallor.md uppdaterad med batch 11-14 (61 -> 77 profiler)
+    - Bundle size: 1043 KB -> 253 KB (gzip: 304 -> 74 KB)
+      - CropIcon.tsx: 79 statiska SVG-imports -> import.meta.glob lazy
+      - CropGraphic.tsx: samma mönster
+      - crops/index.ts: statisk CROPS barrel -> async loadCrop()/loadAllCrops()
+      - CropPage.tsx: async gröddata-laddning
+      - SeasonView.tsx: async seasonData
+    - Fix: setState med komponent-värden (React updater function gotcha)
+    - Chunk size warning borta
+    - Plan för 2.4 Frukt sparad i docs/plans/2.4-frukt-kategori.yml
+    - Roadmap uppdaterad: bundle-optimering markerad som klar
+
+    Commits:
+    - 2048167 docs(guides): update kallor.md with batch 11-14 (77 profiler)
+    - 8b2bb43 refactor(ui): lazy-load all crop illustrations with dynamic import
+    - af7e9ff refactor(data): lazy-load crop profiles with dynamic import
+    - ff8c0e0 fix(ui): use callback form for setState with component values
+    - 79ff4a6 docs(roadmap): mark bundle optimization complete (1043->253 KB)
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (rena URLer)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/plans/2.4-frukt-kategori.yml
+    - docs/guides/kallor.md (uppdaterad 77 profiler)
+  src:
+    - "src/data/crops/index.ts (77 profiler, dynamic import)"
+    - src/data/cropList.ts
+    - "src/components/illustrations/ (77 illustrationer, dynamic import)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "2.4 Frukt som fjärde kategori - plan klar, börja med infrastruktur (fas 1)"
+  - "Äpple som flagship-profil (fas 2 i 2.4-planen)"
+  - "Sök tvärs över kategorier (2.5)"
+  - "Lighthouse Accessibility 84 - förbättra"
+
+context:
+  decisions:
+    - "Dynamic import med import.meta.glob istf statiska barrel-imports"
+    - "ID_TO_PATH maps i CropIcon/CropGraphic/crops index (svenska id -> filnamn)"
+    - "Category-ikon som fallback medan grödikon laddas"
+    - "loadCrop(id) + loadAllCrops() med in-memory cache"
+    - "setState(() => comp) för att undvika React updater function gotcha"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö i kommentarer och strängar"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+
+known_issues:
+  - "Lighthouse Accessibility 84"
+  - "Illustrationerna är AI-genererade SVG - visuell granskning rekommenderas"

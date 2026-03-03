@@ -1,0 +1,79 @@
+meta:
+  roadmap_step: "2.4"
+  title: "Frukt som fjärde kategori"
+  status: planerad
+  created: 2026-02-27
+  updated: 2026-03-03
+
+context: |
+  Roadmap steg 2.4 - Frukt som fjärde kategori. Vi har 77 profiler
+  (43 grönsaker, 16 bär, 18 kryddor). Frukt beter sig som bär i kodbasen:
+  perenna, beskärning istället för sådd, förökning istället för fröbesparing.
+  Vi återanvänder befintliga typer.
+
+  OBS: Sedan session 40 använder kodbasen dynamic import (import.meta.glob)
+  för gröddata och illustrationer. Nya profiler registreras i ID_TO_PATH-maps
+  istället för statiska imports.
+
+fas_1_infrastruktur:
+  description: "Frukt-flik synlig i appen (utan profiler)"
+  files:
+    - path: src/data/types.ts
+      change: "Lägg till 'frukt' i Category-union"
+    - path: src/data/categories.ts
+      change: "Ny entry: { id: 'frukt', label: 'Frukt', icon: 'fruit', color: '#B8653B' }"
+    - path: src/theme/tokens.ts
+      change: "Lägg till fruits: { primary: '#B8653B', light: '#F0DDD0' } i colors.category"
+    - path: src/theme/global.css
+      change: "Lägg till --color-cat-fruits och --color-cat-fruits-light CSS-variabler"
+    - path: src/components/icons/index.tsx
+      change: "Skapa FruitIcon - abstrakt äppleform, 1.8px stroke, round caps, 24x24"
+    - path: src/components/icons/Icon.tsx
+      change: "Importera FruitIcon, lägg till fruit: FruitIcon i ICON_MAP"
+    - path: src/components/illustrations/CropIcon.tsx
+      change: "Lägg till 'frukt': FruitIcon i CATEGORY_ICONS"
+    - path: src/components/illustrations/CropGraphic.tsx
+      change: "Lägg till 'frukt': FruitIcon i CATEGORY_ICONS"
+    - path: src/App.tsx
+      change: "Ny route /frukt, uppdatera getViewPath"
+    - path: src/components/pages/CropPage.tsx
+      change: "Lägg till isFruit, använd PruningSection + PropagationSection som bär"
+    - path: src/components/crop/CropHeader.tsx
+      change: "Lägg till isFruit - samma labels som bär (Plantavstånd, Plantering)"
+
+fas_2_apple_profil:
+  description: "Äpple som flagship-profil - bevisar att kategorin fungerar"
+  files:
+    - path: src/data/crops/apple.ts
+      change: "Komplett profil: category frukt, perennial, pruning, propagation, 15+ sorter"
+    - path: src/data/cropList.ts
+      change: "Registrera äpple med category: 'frukt'"
+    - path: src/data/crops/index.ts
+      change: "Lägg till apple i ID_TO_PATH (dynamic import)"
+    - path: src/components/illustrations/AppleIllustration.tsx
+      change: "200x200 detaljerad + 48x48 ikon"
+    - path: src/components/illustrations/CropIcon.tsx
+      change: "Lägg till apple i ID_TO_PATH"
+    - path: src/components/illustrations/CropGraphic.tsx
+      change: "Lägg till apple i ID_TO_PATH"
+    - path: src/data/cropSlugs.ts
+      change: "Lägg till slug-mappning"
+
+fruit_list:
+  description: "Framtida fruktprofiler (efter äpple)"
+  rosaceae:
+    - { id: paron, name: Päron, difficulty: Medel }
+    - { id: plommon, name: Plommon, difficulty: Medel }
+    - { id: korsbar, name: Körsbär, difficulty: Medel }
+    - { id: surkorsbar, name: Surkörsbär, difficulty: Medel }
+    - { id: krikon, name: Krikon, difficulty: Enkel }
+  other:
+    - { id: fikon, name: Fikon, difficulty: Avancerad, family: Moraceae }
+    - { id: valnot, name: Valnöt, difficulty: Avancerad, family: Juglandaceae }
+    - { id: hasselnot, name: Hasselnöt, difficulty: Medel, family: Betulaceae }
+
+verification:
+  - "npx tsc --noEmit - inga typfel"
+  - "npm run build - main chunk fortfarande <300 KB"
+  - "npm run dev - frukt-flik syns, äpple-profil renderas korrekt"
+  - "Navigering lista -> profil -> tillbaka fungerar"
