@@ -1,0 +1,105 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: aktiv
+  session_notes: |
+    Session 43. Bugfixar + illustration-polering + odlingskalender-plan.
+
+    KLART:
+    - PropagationSection tip-layout: flex på tipTitle (ikon + text bredvid varandra)
+    - Footer deduplicerad: borttagen från CropList, kvar i App.tsx global footer
+    - Footer konsoliderad: kategorisammanfattning (43 grönsaker / 18 kryddor / 16 bär / 1 frukt) + "Skapad med omtanke av Lilla Bosgården"
+    - Footer position: minHeight/flex borttagen, footer följer innehållet
+    - "Bosgarden" -> "Bosgården" typo i App.tsx
+    - Björnbärshallon-illustration: helt omgjord 2x
+      - Först: drupelet-kluster istället för enkla ellipser
+      - Sen: hallonlik komposition (gren från övre vänster, bär hänger ned)
+      - Färg: vinröd-plommonlila (#8B3068) mellan hallon och björnbär
+    - Svarta vinbär: omgjord till lång hängande klase (raceme) med individuella skaft
+    - Röda vinbär: samma klasform, genomskinliga röda bär med glansiga highlights
+    - Jordgubb: omgjord med tandade trifoliata blad, vit blomma, synlig reva
+
+    PLANERAT (godkänt, ej implementerat):
+    - Odlingskalender: skriv om TimelineSection till horisontell bar-chart (Gantt-stil)
+      - Samma visuella stil som Mognadsklockan (RipeningSection)
+      - Färgkodade faser: amber (så), grön (tillväxt), teal (skötsel), orange (skörd), blå (vintervila)
+      - parseMonthEdges() ny hjälpfunktion i monthParser.ts
+      - Plan sparad: docs/plans/magical-stirring-grove.md
+
+    Commits:
+    - bd2cc60 fix(ui): align tip icon beside text in PropagationSection
+    - 4071843 fix(ui): redesign tayberry illustration with drupelet clusters
+    - bc0053f fix(ui): deduplicate footer and show category summary
+    - 1212808 fix(ui): move footer closer to content instead of viewport bottom
+    - 37efba5 refactor(ui): move category summary from CropList to global footer
+    - 9155f42 fix(ui): redesign tayberry illustration with raspberry-style composition
+    - 2fdeeef fix(ui): tayberry berry color to plum-purple between raspberry and blackberry
+    - 13ab084 fix(ui): redesign blackcurrant with proper raceme cluster
+    - 992e281 fix(ui): redesign redcurrant with proper raceme cluster
+    - efdfbb1 fix(ui): redesign strawberry with characteristic leaves and flower
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/plans/magical-stirring-grove.md (odlingskalender-plan)
+  src:
+    - "src/components/crop/PropagationSection.module.css (flex-fix)"
+    - "src/components/crop/TimelineSection.tsx (nästa: skriv om till bar-chart)"
+    - "src/components/illustrations/TayberryIllustration.tsx (omgjord 2x)"
+    - "src/components/illustrations/BlackcurrantIllustration.tsx (raceme-klase)"
+    - "src/components/illustrations/RedcurrantIllustration.tsx (raceme-klase)"
+    - "src/components/illustrations/StrawberryIllustration.tsx (blad+blomma+reva)"
+    - "src/App.tsx (footer konsoliderad)"
+    - "src/components/pages/CropList.tsx (footer borttagen)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Implementera Odlingskalender (horisontell tidslinje) - plan finns i docs/plans/magical-stirring-grove.md"
+  - "Säsongsvy: visa 2-3 per sektion med 'Visa mer'-knapp (tillagt i roadmap Idéer)"
+  - "2.4 Frukt: fler profiler (päron, plommon, körsbär, rabarber)"
+  - "Faktacheck gurka + batch 3-profiler mot svenska källor"
+  - "SMHI-frostdatum: förankra zones.ts mot statistik"
+
+context:
+  decisions:
+    - "Ingen delad BarChart-komponent: TimelineSection och RipeningSection hålls separata (olika datamodeller, enklare underhåll)"
+    - "parseMonthRange() redan i monthParser.ts klarar alla månadsformat - ingen dataändring krävs"
+    - "Wrap-around månader (Nov-apr): visa alla 12 månader, aktiva celler via includes()"
+    - "Björnbärshallon färg: #8B3068 plommonlila (mitt mellan hallon #C4506A och björnbär)"
+    - "Vinbär: raceme-klase med individuella skaft, inte drupelet-kluster"
+    - "Jordgubb: tandade trifoliata blad + vit blomma + reva = karaktäristisk"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+    - "Frilandsodling som primär odlingsform"
+
+known_issues:
+  - "Frostdatum i zones.ts ej förankrade mot SMHI-statistik"
+  - "Zon 1 och 2 har samma vårfrost - bör skilja sig"
+  - "Gurka och batch 3-profiler saknar dokumenterade källhänvisningar"
+  - "Lighthouse Accessibility 84"
+  - "Lora latin-ext eventuellt samma font-bugg som Fraunces (ej testat)"
+  - "Säsongsvy blir lång och oöverskådlig - behöver 'Visa mer'-knapp"
