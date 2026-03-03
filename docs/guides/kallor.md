@@ -6,7 +6,7 @@
 
 ## Nuläge (ärligt)
 
-Odlingsguiden har 61 grödprofiler. **Alla 61 är faktacheckade** mot svenska och internationella källor (8+2 batchar, mars 2026). Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap och verifierade mot svenska frökataloger och myndigheter.
+Odlingsguiden har 77 grödprofiler. **Alla 77 är faktacheckade** mot svenska och internationella källor (8+6 batchar, mars 2026). Profilerna är skrivna med AI (Claude) som verktyg, baserade på allmän odlingskunskap och verifierade mot svenska frökataloger och myndigheter.
 
 Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-groda.md`). Befintliga profiler faktagranskas i batcher.
 
@@ -26,7 +26,7 @@ Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-
 5. **Källoggning** - Vilka källor som användes dokumenteras per profil.
 6. **Status uppdateras** - Profilen markeras som verifierad i statustabellen.
 
-**Alla 43 profiler har genomgått steg 1-4.** Steg 5-6 (detaljerad källoggning per profil) är nästa fas.
+**Alla 77 profiler har genomgått steg 1-4.** Steg 5-6 (detaljerad källoggning per profil) är nästa fas.
 
 ---
 
@@ -207,7 +207,7 @@ Vi är ärliga med vad Odlingsguiden är och inte är:
 - **Näringskurvor är uppskattningar.** NPK-kurvorna visar generella mönster för att illustrera hur behoven förändras över säsongen. De är inte mätdata för specifika sorter eller jordar.
 - **Lokala variationer finns.** Mikroklimat, jordtyp och väder påverkar mer än zontabeller kan visa.
 - **Sorttillgänglighet ändras.** Frökataloger uppdateras årligen - en sort vi rekommenderar kan utgå.
-- **61 profiler, alla faktacheckade.** Detaljerad källoggning per profil är nästa steg.
+- **77 profiler, alla faktacheckade.** Detaljerad källoggning per profil är nästa steg.
 
 ---
 
@@ -215,7 +215,7 @@ Vi är ärliga med vad Odlingsguiden är och inte är:
 
 Odlingsguiden är skapad med AI som verktyg. Vi gömmer inte det - det är en styrka, inte en svaghet.
 
-**Varför AI?** En person kan inte rimligen skriva 80+ djupa grödprofiler med 25+ datapunkter vardera och hålla allt konsekvent. AI gör det möjligt att skapa innehåll i en skala som annars skulle kräva ett helt redaktionsteam.
+**Varför AI?** En person kan inte rimligen skriva 77+ djupa grödprofiler med 25+ datapunkter vardera och hålla allt konsekvent. AI gör det möjligt att skapa innehåll i en skala som annars skulle kräva ett helt redaktionsteam.
 
 **Vad AI gör bra:** Strukturera data, hålla konsekvent format, skriva i rätt ton, generera SVG-illustrationer.
 
@@ -240,9 +240,9 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 
 ## Faktacheck-status
 
-**Alla 61 profiler faktacheckade** (mars 2026).
+**Alla 77 profiler faktacheckade** (mars 2026).
 
-### Batch 1-8: Ursprungliga 43 profiler
+### Batch 1-8: Ursprungliga 43 profiler (grönsaker, örter, bär)
 
 | Batch | Profiler | Kritiska | Viktiga | Mindre | Rapport |
 | --- | --- | --- | --- | --- | --- |
@@ -261,6 +261,15 @@ Informationen i Odlingsguiden är avsedd som vägledning och inspiration. Vi gö
 | --- | --- | --- | --- | --- | --- |
 | 9 | Spenat, sparris, rodbeta, vitlok, mangold, kalrabbi, palsternacka, brytbona, chili, vitkal, rodkal, majrova, storbona, schalottenlok | 0 | - | - | Faktacheckade vid skapande (session 29-33) |
 | 10 | Pak choi, brysselkal, jordartskocka, fankal | 2 | 17 | 8 | Faktacheckade i session 35. 28 fel rattade totalt. |
+
+### Batch 11-14: Sista grönsakerna + alla bär (session 36-39)
+
+| Batch | Profiler | Notering |
+| --- | --- | --- |
+| 11 | Selleri, rotselleri, savoykal, kinakal, melon, kronartskocka, endiv | Sista 7 grönsakerna. Alla 43 grönsaker klara. Faktacheckade vid skapande (session 36-37) |
+| 12 | Blabar, lingon, havtorn | 3 bar. Faktacheckade vid skapande (session 38) |
+| 13 | Aronia, tayberry, vita vinbar | 3 bar. Faktacheckade vid skapande (session 39) |
+| 14 | Guldvinbar, tranbar, honungsbar | 3 bar. Alla 16 bar klara. Faktacheckade vid skapande (session 39) |
 
 *Alla nya profiler faktacheckas vid skapande (se checklista i `docs/guides/ny-groda.md`).*
 
@@ -283,4 +292,4 @@ Detaljerad research sparas i `docs/research/`:
 
 ---
 
-*Senast uppdaterad: 2026-03-02 (session 36)*
+*Senast uppdaterad: 2026-03-03 (session 40)*
