@@ -1,0 +1,103 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 45. Faktacheck batch 9 + två nya fruktprofiler + konkurrentanalys.
+
+    KLART:
+    - Faktacheck batch 9: gurka, paprika, chili
+      - 4 kritiska fel, 9 viktiga korrigeringar, 8 mindre noteringar
+      - Gurka: Beit Alpha felaktigt som ren växthusgurka (Lindbloms), days 55-75, indoor 4-5v
+      - Paprika: isolering 30m -> 50m+, groningstemperatur 22-28C
+      - Chili: "ljusgroende" FALSKT (Wexthuset), isolering 10-15m -> 50m+,
+        Jalapeño Scoville 2500-8000, Sibirisk "kompakt" -> "busig" (100cm)
+    - Nya fruktprofiler: päron + plommon (roadmap 2.4)
+      - Päron: 10 OP-sorter (8 Grönt kulturarv), zon 1-5, pollinering, JAS-beskärning
+      - Plommon: 10 OP-sorter (8 GK), zon 1-5, självfertila, ALDRIG vinterbeskärning
+      - SVG-illustrationer för båda (200x200 + 48x48)
+      - Faktacheck-rapport vid skapande
+    - Konkurrentanalys: Grodd app tillagd (fröpåsescanning, 49 kr/mån)
+    - Fix: päron/plommon saknades i CROP_LIST (syntes inte i listningen)
+
+    Commits:
+    - 243ee8c docs(research): add batch 9 fact-check report
+    - db61929 fix(crops): fact-check gurka profile
+    - 04f5f04 fix(crops): fact-check paprika profile
+    - 21b40ca fix(crops): fact-check chili profile
+    - a5f130f docs(research): add Grodd app to competitor analysis
+    - 68c6f4a feat(crops): add päron profile with illustration
+    - 9eb6c68 feat(crops): add plommon profile with illustration
+    - 9192ccf docs(research): add fact-check report for päron and plommon
+    - 800e324 fix(data): add päron and plommon to CROP_LIST
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/research/faktacheck-2026-03-04-batch9.md (gurka, paprika, chili)
+    - docs/research/faktacheck-2026-03-04-paron-plommon.md (nya profiler)
+    - docs/research/konkurrentanalys.md (uppdaterad med Grodd)
+  src:
+    - "src/data/crops/gurka.ts (faktacheckad: Beit Alpha, days, indoor weeks)"
+    - "src/data/crops/paprika.ts (faktacheckad: isolering, groningstemperatur)"
+    - "src/data/crops/chili.ts (faktacheckad: ljusgroende, isolering, Scoville)"
+    - "src/data/crops/paron.ts (NY: 10 sorter, pollination, establishment)"
+    - "src/data/crops/plommon.ts (NY: 10 sorter, JAS-beskärning, gummiflöde)"
+    - "src/data/cropList.ts (uppdaterad: päron + plommon)"
+    - "src/data/crops/index.ts (uppdaterad: paron + plommon)"
+    - "src/components/illustrations/PearIllustration.tsx (NY)"
+    - "src/components/illustrations/PlumIllustration.tsx (NY)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "2.4 Frukt: fler profiler (körsbär nästa naturliga steg)"
+  - "2.5 Sökfunktion: sök tvärs kategorier + filtrering"
+  - "Faktacheck: ~41 av 79 profiler klara, 38 kvar"
+  - "Groningstemperatur + köldtolerans som nya datapunkter"
+  - "Ätbara blommor: första profiler i blommor-kategorin"
+  - "Lighthouse Accessibility: höja från 84"
+  - "Roadmap: uppdatera 2.4 med päron/plommon klara"
+
+context:
+  decisions:
+    - "Päron zon 1-5: motiveras av ryska/baltiska sorter (Detskaja, Suvenirs) som klarar zon 5-6"
+    - "Plommon zon 1-5: motiveras av Czar (zon 4-5) och Hanita (zon 5)"
+    - "Plommon: BARA JAS-beskärning (juli-aug-sept) pga gummiflöde vid vintersnitt"
+    - "Päron: plockas INNAN full mognad (eftermognad) - viktig skillnad mot plommon"
+    - "Chili ljusgroende = myt - Wexthuset har dedikerad artikel som motbevisar"
+    - "Isoleringsavstånd: 10-15m (chili) och 30m (paprika) var för korta, höjt till 50m+"
+    - "Grodd-appen: komplementär (verktyg) snarare än konkurrerande (kunskap)"
+  constraints:
+    - "CROP_LIST i cropList.ts måste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+    - "Frilandsodling som primär odlingsform"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga mätstationer)"
+  - "38 profiler saknar formell faktacheck"
+  - "Lighthouse Accessibility 84"
+  - "Lora latin-ext eventuellt samma font-bugg som Fraunces (ej testat)"
+  - "Roadmap 2.4 inte uppdaterad med päron/plommon-checkbox ännu"
