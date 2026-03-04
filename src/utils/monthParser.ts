@@ -17,6 +17,7 @@ const SWEDISH_MONTHS: Record<string, number> = {
   maj: 5,
   jun: 6,
   juni: 6,
+  midsommar: 6,
   jul: 7,
   juli: 7,
   aug: 8,
