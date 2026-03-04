@@ -105,10 +105,10 @@ export const aronia: Crop = {
     goodAfterWhy: 'Efter 20+ år med aronia kan jorden behöva förnyelse. Gröngödsling eller baljväxter bygger upp den.',
   },
   varieties: [
-    { name: 'Viking', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Den vanligaste sorten i Sverige och Norden. Stora bär i rikliga klasar. Upprätt, kraftig buske (1.5-2 m). Pålitlig och lättskörd. Finländskt ursprung.' },
-    { name: 'Hugin', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Svensk sort! Framtagen i Balsgård. Kompaktare buske (1-1.5 m), perfekt för mindre trädgårdar. Stora bär och fin höstfärg. Rekommenderas varmt.' },
-    { name: 'Nero', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Tjeckisk sort med extra stora bär. Något lägre buske (1-1.5 m). Hög bärproduktion och milt smak jämfört med Viking. Populär i kommersiell odling.' },
-    { name: 'Aron', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Dansk sort med kompakt växtsätt. Stora, fasta bär. Bra val för häck eller begränsade utrymmen. Fin höstfärg.' },
+    { name: 'Viking', zones: [1, 2, 3, 4, 5], note: 'Den vanligaste sorten i Sverige och Norden. Stora bär i rikliga klasar. Upprätt, kraftig buske (1.5-2 m). Pålitlig och lättskörd. Ryskt ursprung (Mitchurin), namngiven i Finland.' },
+    { name: 'Hugin', zones: [1, 2, 3, 4, 5], note: 'E-planta! Utvald vid SLU Alnarp från vilt material från Kanada. Kompaktare buske (1-1.5 m), perfekt för mindre trädgårdar. Stora bär och fin höstfärg. Rekommenderas varmt.' },
+    { name: 'Nero', zones: [1, 2, 3, 4, 5], note: 'Ryskt ursprung (Mitchurin), spridd via Östeuropa. Extra stora bär. Något lägre buske (1-1.5 m). Hög bärproduktion och mild smak jämfört med Viking. Populär i kommersiell odling.' },
+    { name: 'Aron', zones: [1, 2, 3, 4, 5, 6], note: 'Populär i dansk odling. Kompakt växtsätt. Stora, fasta bär. Bra val för häck eller begränsade utrymmen. Fin höstfärg.' },
   ],
   problems: [
     { name: 'Fåglar', symptom: 'Bären försvinner innan du hinner skörda. Trastar och starar är de vanligaste bovarna.', fix: 'Nät är det enda pålitliga skyddet. Sätt upp nät när bären börjar färgas (juli-aug). Aronia ger rikligt - det finns oftast gott om bär till alla om du har flera buskar.' },

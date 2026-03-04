@@ -103,9 +103,8 @@ export const guldvinbar: Crop = {
     goodAfterWhy: 'Jorden behöver återhämta sig efter 15+ år med samma buske.',
   },
   varieties: [
-    { name: 'Josta (korsning)', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Egentligen en korsning med svarta vinbär! Stora, svarta bär med mild smak. Kraftig buske. Taggfri och sjukdomsresistent. Ger riklig skörd.' },
-    { name: 'Guldvinbär (standard)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Originalarten (Ribes aureum). Gula-orangea bär, doftande blommor. Extremt härdig. Ofta såld utan sortnamn - bra ändå!' },
-    { name: 'Crandall', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Amerikansk sort med stora, svarta bär och söt smak utan strävhet. Sötare än vanliga guldvinbär. Fin höstfärg. En av de bästa sorternas för ätning färska.' },
+    { name: 'Gullrips (standard)', zones: [1, 2, 3, 4, 5, 6], note: 'Originalarten (Ribes aureum), säljs även som doftrips. Gula-orangea bär, doftande blommor. Härdig och anspråkslös. Ofta såld utan sortnamn hos plantskolor som prydnadsbuske - men bären är fullt ätbara!' },
+    { name: 'Crandall', zones: [1, 2, 3, 4, 5, 6], note: 'Amerikansk sort från 1888 med stora, svarta bär och söt smak utan strävhet. Säljs som doftrips Crandall hos svenska plantskolor. Fin höstfärg. En av de bästa sorterna för ätning färska.' },
   ],
   problems: [
     { name: 'Bladlöss', symptom: 'Krusiga blad och klibbig honungsdagg. Guldvinbär drabbas mildare än andra vinbär.', fix: 'Spola av med vatten. Locka nyckelpigor och blomflugor. Sällan ett allvarligt problem.' },

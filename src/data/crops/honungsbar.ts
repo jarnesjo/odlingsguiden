@@ -101,11 +101,10 @@ export const honungsbar: Crop = {
     goodAfterWhy: 'Honungsbär lämnar jorden i gott skick. Inga speciella restriktioner.',
   },
   varieties: [
-    { name: 'Blue Velvet', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Kanadensisk sort med stora, söta bär. Kompakt buske (120-150 cm). Tidig mognad. God smak med lite syrlighet. Pollinera med Indigo Gem eller Berry Blue.' },
-    { name: 'Indigo Gem', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Kanadensisk sort, en av de bästa! Stora, avlånga bär med utmärkt smak - söt med balanserad syra. Kompakt buske. Bra pollinatör för Blue Velvet.' },
-    { name: 'Berry Blue', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Rysk-kanadensisk sort. Stora bär, god skörd. Upprätt buske (150-180 cm). Sötare smak. God pollinatör för de flesta andra sorter.' },
-    { name: 'Duet', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Två sorter i samma förpackning - löser pollineringsfrågan direkt! Perfekt startpaket. Kompakta buskar med god skörd.' },
-    { name: 'Baktsjarskaja', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Rysk sort, extremt härdig (utvecklad i Sibirien). Stora bär med god smak. Bland de tidigast mognande - bär redan i maj i södra Sverige!' },
+    { name: 'Indigo Gem', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Kanadensisk sort (University of Saskatchewan), en av de bästa! Stora, avlånga bär med utmärkt smak - söt med balanserad syra. Kompakt buske. Bra pollinatör för Blue Velvet.' },
+    { name: 'Blue Velvet', zones: [1, 2, 3, 4, 5, 6], note: 'Stora, söta bär. Kompakt buske (120-150 cm). Tidig mognad. God smak med lite syrlighet. Pollinera med Indigo Gem eller Bakczarskaja.' },
+    { name: 'Bakczarskaja', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Rysk sort (Bakczarskaja Jubilejnaja), extremt härdig. Stora bär med god smak. Bland de tidigast mognande - bär redan i maj i södra Sverige!' },
+    { name: 'Duet', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Polsk sort med god skörd. Kompakt buske. Trots namnet behöver du fortfarande en annan sort för korspollinering!' },
   ],
   problems: [
     { name: 'Fåglar', symptom: 'Bären försvinner. Honungsbär mognar tidigt (maj-juni) när fåglarna är som hungrigast efter vintern.', fix: 'Nät är det enda pålitliga skyddet. Fåglarna älskar honungsbär och de mognar just när det finns minst annan mat. Sätt upp nät i god tid!' },

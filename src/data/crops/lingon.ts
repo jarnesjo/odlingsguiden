@@ -107,10 +107,10 @@ export const lingon: Crop = {
     goodAfterWhy: 'Efter lingon (20+ år) är jorden sur och utarmad på kalk. Gröngödsling eller barrträd trivs. Kalka och bearbeta om du vill odla grönsaker efteråt.',
   },
   varieties: [
-    { name: 'Sanna', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Svensk sort! Framtagen i Rejmyre. Stora bär, hög avkastning, kompakt växtsätt. Den bästa sorten för trädgårdsodling i hela Sverige.' },
-    { name: 'Ida', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Norsk sort med mycket stora bär. Remonterar (ger två skördar). Upprätt, kompakt växt som fungerar utmärkt som marktäckare. Populär i Norden.' },
-    { name: 'Koralle', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Tysk sort med riklig bärsättning och upprätt växtsätt. Stora, djupröda bär. Lite mindre härdig i allra nordligaste zonerna.' },
-    { name: 'Red Pearl', zones: [1, 2, 3, 4, 5, 6], note: 'Holländsk sort med extra stora bär. Kraftig tillväxt och bra som marktäckare. Mognar jämnt. Behöver lite mildare klimat.' },
+    { name: 'Sanna', zones: [1, 2, 3, 4, 5], note: 'Svensk sort! Framtagen vid SLU Balsgård 1988, utvald från vilda lingonkloner i Småland. Stora bär, hög avkastning, kompakt växtsätt. Den bästa sorten för trädgårdsodling.' },
+    { name: 'Ida', zones: [1, 2, 3, 4, 5], note: 'Svensk sort! Framtagen vid SLU Balsgård 1997, från samma urvalsprogram som Sanna. Mycket stora bär. Remonterar (ger två skördar). Upprätt, kompakt växt som fungerar utmärkt som marktäckare.' },
+    { name: 'Koralle', zones: [1, 2, 3, 4, 5], note: 'Tysk sort med riklig bärsättning och upprätt växtsätt. Stora, djupröda bär. Den vanligaste lingonsorten i svensk handel.' },
+    { name: 'Red Pearl', zones: [1, 2, 3, 4, 5], note: 'Holländsk sort med extra stora bär. Kraftig tillväxt och bra som marktäckare. Mognar jämnt. Växer 30-40 cm hög.' },
   ],
   problems: [
     { name: 'Fåglar', symptom: 'Bären försvinner innan du hinner plocka. Trastar och andra bärfåglar älskar lingon.', fix: 'Täck med nät när bären börjar färgas. Fåglarna är snabba - väntar du tills bären är röda är det för sent. Välj finmaskigt nät som inte skadar fåglarna.' },

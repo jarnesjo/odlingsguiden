@@ -107,12 +107,12 @@ export const blabar: Crop = {
     goodAfterWhy: 'Efter 20+ år med blåbär är jorden sur och utarmad. Gröngödsling och kalkspridning krävs innan du odlar grönsaker här.',
   },
   varieties: [
-    { name: 'Northblue', zones: [1, 2, 3, 4, 5, 6], note: 'Halvhög sort (60-90 cm). Extremt härdig - klarar -35°C. Stora, mörkblå bär med fin smak. Pålitlig producent. Bästa valet för norrlandsodlare.' },
-    { name: 'Northcountry', zones: [1, 2, 3, 4, 5, 6], note: 'Halvhög sort (40-60 cm). Mycket härdig och kompakt. Ljusblå, söta bär. Fantastisk höstfärg. Perfekt för mindre trädgårdar och krukor.' },
+    { name: 'Northblue', zones: [1, 2, 3, 4, 5], note: 'Halvhög sort (50-70 cm). Extremt härdig - klarar -35°C. Stora, mörkblå bär med fin smak. Pålitlig producent. Bästa valet för norrlandsodlare.' },
+    { name: 'Northcountry', zones: [1, 2, 3, 4, 5], note: 'Halvhög sort (40-60 cm). Mycket härdig och kompakt. Ljusblå, söta bär. Fantastisk höstfärg. Perfekt för mindre trädgårdar och krukor.' },
     { name: 'Patriot', zones: [1, 2, 3, 4], note: 'Högbuskblåbär (120-150 cm). Stora bär med utmärkt smak. Tidig mognad (juli). Tål våtare förhållanden bättre än de flesta. God härdighet till zon 4.' },
     { name: 'Duke', zones: [1, 2, 3, 4], note: 'Högbuskblåbär (120-180 cm). Mycket tidig mognad - bland de första att mogna. Stora, fasta bär. Blommar sent men mognar tidigt, vilket minskar frostrisk.' },
     { name: 'Bluecrop', zones: [1, 2, 3], note: 'Den mest odlade sorten i världen. Högbuske (120-180 cm). Stora, ljusblå bär med klassisk blåbärssmak. Rik skörd men behöver milt klimat i Sverige.' },
-    { name: 'Polaris', zones: [1, 2, 3, 4, 5, 6], note: 'Halvhög sort (60-120 cm). Utvecklad i Minnesota för kallt klimat. Söta bär med intensiv smak. Mycket härdig och produktiv.' },
+    { name: 'Polaris', zones: [1, 2, 3, 4, 5], note: 'Halvhög sort (60-120 cm). Utvecklad i Minnesota för kallt klimat. Söta bär med intensiv smak. Mycket härdig och produktiv.' },
   ],
   problems: [
     { name: 'Klorosförgulning (järnbrist)', symptom: 'Bladen gulnar mellan nerverna medan nerverna förblir gröna. Börjar på yngsta bladen. Busken ser sjuk och blek ut.', fix: 'Nästan alltid orsakat av för högt pH - kolla pH först! Sänk med trädgårdssvavel. Akut: ge järnchelat (EDDHA-järn) som bladspray. Lös orsaken - inte bara symptomen.' },

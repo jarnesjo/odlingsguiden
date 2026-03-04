@@ -100,10 +100,9 @@ export const vitaVinbar: Crop = {
     goodAfterWhy: 'Efter 15-20 år med vinbär behöver jorden byggas upp igen.',
   },
   varieties: [
-    { name: 'Vita Versailles', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Den absoluta klassikern! Odlats sedan 1800-talet. Stora, gyllene bär med söt smak. Långa, lättplockade klasar. Om du bara väljer en sort - ta denna.' },
-    { name: 'Blanka', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Svensk sort! Framtagen i Balsgård. Mycket härdig, rikbärande med fina klasar. Milt söt smak. Perfekt för nordligare zoner.' },
-    { name: 'White Pearl', zones: [1, 2, 3, 4, 5], note: 'Stor buske med riklig skörd. Stora, genomskinliga bär med söt, mild smak. Vacker i trädgården tack vare de ljusa, lysande klasarna.' },
-    { name: 'Vit Jätte', zones: [1, 2, 3, 4, 5, 6], note: 'Extra stora bär - namnet ljuger inte! Söt smak och fina klasar. Kraftig buske. Bra val om du vill ha de största bären.' },
+    { name: 'Versailles Blanche', zones: [1, 2], note: 'Den absoluta klassikern! Fransk sort från 1843. Stora, gyllene bär med söt smak. Långa, lättplockade klasar. Om du bara väljer en sort i södra Sverige - ta denna.' },
+    { name: 'Vit Jätte', zones: [1, 2, 3, 4], note: 'Svensk sort utvecklad av Åke Truedsson, E-planta. Extra stora bär - namnet ljuger inte! Söt smak och fina klasar. Kraftig buske. Bra val om du vill ha de största bären.' },
+    { name: 'White Pearl', zones: [1, 2, 3, 4], note: 'Också känd som Witte Parel. Stor buske med riklig skörd. Stora, genomskinliga bär med söt, mild smak. Vacker i trädgården tack vare de ljusa, lysande klasarna.' },
   ],
   problems: [
     { name: 'Bladlöss (vinbärsbladlus)', symptom: 'Bladen bubblar och krälar ihop sig. Ser dramatiskt ut men busken klarar det.', fix: 'Spola av med hård vattenstråle. Locka nyckelpigor med blommande växter intill. Sällan allvarligt - busken klarar sig bra.' },

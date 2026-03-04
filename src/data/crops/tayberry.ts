@@ -10,7 +10,7 @@ export const tayberry: Crop = {
   lifespan: '10-15 år',
   difficulty: 'Enkel',
   difficultyWhy: 'Björnbärshallon (tayberry/taybär) odlas precis som sommarhallon - rankande skott, stöd och årlig beskärning av fruktbärande skott. Lite mindre härdig än hallon men i zon 1-4 trivs hon fint. En korsning mellan hallon och björnbär som ger det bästa av båda världar.',
-  zones: { outdoor: [1, 2, 3, 4, 5], indoor: null, greenhouse: [1, 2, 3, 4, 5, 6] },
+  zones: { outdoor: [1, 2, 3], indoor: null, greenhouse: [1, 2, 3, 4, 5] },
   days: 'Skörd år 2+',
   spacing: '200-250 cm',
   spacingNote: 'Björnbärshallon behöver mer utrymme än hallon - de rankande skotten blir långa',
@@ -103,9 +103,8 @@ export const tayberry: Crop = {
     goodAfterWhy: 'Efter 10+ år med björnbärshallon är jorden utarmad. Gröngödsling och baljväxter bygger upp den.',
   },
   varieties: [
-    { name: 'Tayberry (original)', zones: [1, 2, 3, 4, 5], note: 'Originalsorten från 1979. Stora, långsträckta mörkröda bär med intensiv, aromatisk smak. Har taggar men ger bäst skörd. Kräver stöd för de långa skotten.' },
-    { name: 'Buckingham Tayberry', zones: [1, 2, 3, 4], note: 'Taggfri variant! Lite mindre bär och något lägre skörd än originalet, men så mycket trevligare att skörda och beskära. Samma fantastiska smak. Rekommenderas för hemträdgården.' },
-    { name: 'Medana Tayberry', zones: [1, 2, 3, 4], note: 'Förbättrad sort med tåligare skott och jämnare mognad. Stora bär med god smak. Något mer kompakt växtsätt. Nyare selektion.' },
+    { name: 'Tayberry (original)', zones: [1, 2, 3], note: 'Originalsorten från 1979, Scottish Crop Research Institute. Stora, långsträckta mörkröda bär med intensiv, aromatisk smak. Har taggar men ger bäst skörd. Kräver stöd för de långa skotten.' },
+    { name: 'Buckingham Tayberry', zones: [1, 2, 3], note: 'Taggfri mutation upptäckt 1998 i Buckinghamshire, England. Lite mindre bär och något lägre skörd än originalet, men så mycket trevligare att skörda och beskära. Samma fantastiska smak. Rekommenderas för hemträdgården.' },
   ],
   problems: [
     { name: 'Gråmögel (Botrytis)', symptom: 'Gråludigt mögel på mogna bär, speciellt i fuktig väderlek. Värst under regniga somrar.', fix: 'God luftcirkulation genom gallring. Plocka bär ofta - lämna inte övermogna. Vattna vid basen, inte ovanifrån. Björnbärshallon är lite mer känslig för mögel än hallon.' },

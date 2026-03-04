@@ -106,12 +106,10 @@ export const havtorn: Crop = {
     goodAfterWhy: 'Efter havtorn är jorden kväveanrikad tack vare Frankia-bakterierna. Perfekt startplats för näringskrävande grödor som grönsaker.',
   },
   varieties: [
-    { name: 'Leikora', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Honplanta. Tysk sort som blivit standard i Sverige. Stora, orangeröda bär med hög vitaminhalt. Produktiv och relativt lättskördad - bären sitter inte lika hårt som på vilda buskar.' },
-    { name: 'Hergo', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Honplanta. Tyska sorten med längre bärstjälk - gör skörden lite enklare. Orangea bär, god smak. Kompaktare växt än Leikora.' },
-    { name: 'Botanisjtjeskaja', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Honplanta. Rysk sort med ovanligt stora bär och kortare taggar. Lättare att skörda tack vare mjukare fruktskaft. Bland de bästa för handplockning.' },
-    { name: 'Otradnaja', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Honplanta. Rysk sort, tidig mognad. Mörkare, orangeröda bär. Busken har färre taggar än vilda havtorn. Bra för nordliga lägen.' },
-    { name: 'Pollmix', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'HANPLANTA - pollinatör! Producerar rikligt med pollen och blommar länge. Du MÅSTE ha minst en hanplanta per 5-6 honplantor. Utan hane - inga bär. Placera i vindriktningen från honplantorna.' },
-    { name: 'Fridur', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Honplanta. Svensk sort! Stor buske med orangea bär. Härdig och anpassad till svenska förhållanden. Mindre vanlig i handeln men värd att leta efter.' },
+    { name: 'Botanitjeskaja Ljubitelskaja', zones: [1, 2, 3, 4, 5], note: 'Honplanta. Rysk sort med ovanligt stora bär och kortare taggar. Lättare att skörda tack vare mjukare fruktskaft. Bland de bästa för handplockning. Finns hos Blomsterlandet, Klostra och Svartbackens.' },
+    { name: 'Leikora', zones: [1, 2, 3, 4], note: 'Honplanta. Tysk sort som blivit standard i svensk handel. Stora, orangeröda bär med hög vitaminhalt. Produktiv och relativt lättskördad. Bäst i södra och mellersta Sverige.' },
+    { name: 'Hergo', zones: [1, 2, 3], note: 'Honplanta. Tysk sort med längre bärstjälk - gör skörden lite enklare. Orangea bär, god smak. Kompaktare växt än Leikora. Trivs bäst i milt klimat, begränsad härdighet i Sverige.' },
+    { name: 'Pollmix', zones: [1, 2, 3, 4], note: 'HANPLANTA - pollinatör! Tysk klon som producerar rikligt med pollen och blommar länge. Du MÅSTE ha minst en hanplanta per 5-6 honplantor. Utan hane - inga bär. Placera i vindriktningen från honplantorna.' },
   ],
   problems: [
     { name: 'Silverbladssjuka (Verticillium)', symptom: 'Bladen blir silverglänsande och grenarna dör tillbaka. Vanligast i varma, fuktiga somrar. Kan spridas snabbt om man inte agerar.', fix: 'Klipp bort angripna grenar minst 30 cm under synliga symptom. Desinficera sekatören mellan varje klipp. Bränn det sjuka materialet. God dränering minskar risken - havtorn i sandig jord drabbas sällan.' },

@@ -101,10 +101,9 @@ export const tranbar: Crop = {
     goodAfterWhy: 'Efter tranbär (som kan leva 100+ år) är jorden extremt sur. Kalkspridning krävs för annan odling.',
   },
   varieties: [
-    { name: 'Stevens', zones: [1, 2, 3, 4, 5, 6], note: 'Den vanligaste sorten i kommersiell odling. Stora, djupröda bär. God skörd och pålitlig. Standardvalet för trädgårdsodling i Sverige.' },
-    { name: 'Ben Lear', zones: [1, 2, 3, 4, 5], note: 'Tidig mognad - mognar 1-2 veckor före Stevens. Medelstora bär med fin färg. Bra val i nordligare zoner där hösten kommer tidigt.' },
-    { name: 'Pilgrim', zones: [1, 2, 3, 4, 5, 6], note: 'Sen sort med extra stora bär. Ljusare röd färg. Ger hög skörd men behöver lång, mild höst för full mognad.' },
-    { name: 'Europeiskt tranbär (Vaccinium oxycoccos)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Vild svensk art! Mindre bär än amerikanska sorter men klarar alla svenska zoner. Kan plockas vilt i myrar. Intensivare smak.' },
+    { name: 'Stevens', zones: [1, 2, 3, 4], note: 'Den vanligaste sorten i kommersiell odling och i svensk handel. Stora, djupröda bär. God skörd och pålitlig. Standardvalet för trädgårdsodling i Sverige.' },
+    { name: 'Pilgrim', zones: [1, 2, 3, 4], note: 'Sen sort med extra stora bär. Ljusare röd färg. Ger hög skörd men behöver lång, mild höst för full mognad.' },
+    { name: 'Europeiskt tranbär (Vaccinium oxycoccos)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Vild svensk art! En annan art än de odlade amerikanska (V. macrocarpon). Mindre bär men klarar alla svenska zoner. Kan plockas vilt i myrar. Intensivare smak. Sällan till salu - leta i naturen istället.' },
   ],
   problems: [
     { name: 'Fruktröta', symptom: 'Bären blir mjuka, bruna och ruttnar. Värst i fuktigt väder under mognad.', fix: 'God luftcirkulation. Undvik att plantera för tätt. Skörda i tid. Friska, välskötta plantor drabbas sällan allvarligt.' },
