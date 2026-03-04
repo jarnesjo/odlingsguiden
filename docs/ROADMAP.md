@@ -255,6 +255,8 @@ Plan: `docs/plans/1.10-code-splitting.yml`
 
 - [x] Lazy-ladda SVG-ikoner i listan (IntersectionObserver, första 8 direkt)
 - [x] Resultat: LCP 3.1s → 2.3s, Performance 91 → 97
+- [ ] Virtualisera grödlistan (rendera bara synliga rader)
+- [ ] Splitta index-bundlen (cropList-data i egen chunk)
 
 Plan: `docs/plans/4.2-lcp-optimering.yml`
 
