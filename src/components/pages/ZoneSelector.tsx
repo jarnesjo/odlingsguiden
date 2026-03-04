@@ -61,6 +61,10 @@ export function ZoneSelector({ currentZone, onSelect, onClose }: ZoneSelectorPro
             </button>
           )
         })}
+        <p className={styles.source}>
+          Frostdatum baserade på SMHI-statistik (70% sannolikhet för vårfrost, 50% för höstfrost).
+          Källa: odlaatbart.se
+        </p>
       </div>
     </div>
   )
