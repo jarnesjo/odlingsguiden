@@ -107,7 +107,7 @@ export const rodkal: Crop = {
     { name: 'Rodynda', zones: [1, 2, 3, 4, 5, 6], note: 'Svensk tidig-medelsort med runda, jämna huvuden. Pålitlig och lättodlad med fin färg. Finns hos Impecta.' },
     { name: 'Kalibos', zones: [1, 2, 3, 4, 5], note: 'Unik spetskålsform med lös struktur - perfekt för sallader! Mildare smak än runda sorter och vackert rubinröd. Ekofrö hos Runåbergs.' },
     { name: 'Marner Lagerrot', zones: [1, 2, 3, 4, 5], note: 'Pålitlig lagringssort med meddelstora, fasta huvuden. Bra sjukdomstolerans och lagrar fint i månader. Finns hos Impecta.' },
-    { name: 'Integro F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med mycket jämna huvuden och bra sjukdomsresistens. Ger pålitliga resultat men fröna kan inte sparas. Finns hos Nelson Garden.' },
+    { name: 'Integro F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med mycket jämna huvuden och bra sjukdomsresistens. Ger pålitliga resultat men fröna kan inte sparas. Ekofrö hos Semenco.' },
   ],
   problems: [
     { name: 'Kålfjäril', symptom: 'Gröna larver som tuggar stora hål i bladen. Lämnar gröna spillningshögar och kan förstöra hela plantor på kort tid.', fix: 'Fiberduk från dag ett - det enda helt säkra skyddet! Handplocka larver regelbundet. Spruta med Bacillus thuringiensis (Bt) mot larverna. Samodla med dill och lök för att förvirra fjärilarna. Pudra med stenmjöl på fuktiga blad.' },

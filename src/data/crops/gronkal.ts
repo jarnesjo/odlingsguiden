@@ -133,7 +133,7 @@ export const gronkal: Crop = {
       'Härda av förodlade plantor en vecka före utplantering - ställ ut dem dagtid',
       'Grönkål kan direktsås ända till midsommar och ändå hinna ge bra skörd',
     ],
-    indoorWeeks: '5',
+    indoorWeeks: '4-6 veckor',
   },
   seedSaving: {
     difficulty: 'Medel',

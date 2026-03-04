@@ -104,7 +104,7 @@ export const vitkal: Crop = {
   },
   varieties: [
     { name: 'Golden Acre', zones: [1, 2, 3, 4, 5, 6], note: 'Klassisk tidig kulturarvssort med fasta, runda huvuden runt 1.5-2 kg. Snabb och pålitlig - perfekt som sommarkål. Ekofrö hos Runåbergs.' },
-    { name: 'Donator', zones: [1, 2, 3, 4, 5], note: 'Svenskodlad höstkål, 2-4 kg. Utmärkt för surkål och kortare lagring. Fins hos NordFrö - odlad i Tidaholm!' },
+    { name: 'Donator', zones: [1, 2, 3, 4, 5], note: 'Svenskodlad höstkål, 2-4 kg. Utmärkt för surkål och kortare lagring. Finns hos NordFrö - odlad i Tidaholm!' },
     { name: 'Brunswijker', zones: [1, 2, 3, 4, 5], note: 'Kulturarvssort från 1847! Stor, plattund lagringskål. Utvecklas fint i nordiskt klimat. Finns hos Impecta.' },
     { name: 'Premiere', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Mycket tidig sommarkål med väl samlade huvuden på 1-2 kg. Bra val för korta säsonger. Ekofrö hos Runåbergs.' },
     { name: 'Dottenfelder Dauer', zones: [1, 2, 3, 4], note: 'Sen lagringskål som håller hela vintern. Holländsk sort som trivs bäst i södra och mellersta Sverige. Ekofrö hos Runåbergs.' },
@@ -138,7 +138,7 @@ export const vitkal: Crop = {
       'Tryck till jorden ordentligt runt stammen, vattna rikligt och sätt kålkragar + fiberduk direkt',
     ],
     tips: [
-      'Sena lagringssorter behöver förodlas redan i mars-april for att hinna mogna innan vintern',
+      'Sena lagringssorter behöver förodlas redan i mars-april för att hinna mogna innan vintern',
       'Tidiga sorter (spetskål) kan förodlas lite senare och ger snabb skörd redan efter 60-70 dagar',
       'Kålkragar runt stjälken vid utplantering skyddar mot kålfluga - gör dem av kartong, filt eller köp färdiga',
     ],
@@ -159,7 +159,7 @@ export const vitkal: Crop = {
       'Klipp av blomstjälkarna och eftertorka i papperspåse',
       'Krossa skidorna försiktigt och blås bort agnarna. Förvara svalt och torrt.',
     ],
-    isolation: 'Korsar med ALLA andra Brassica oleracea (grönkål, broccoli, blomkål, brysselkål, kålrabbi). Odla bara en sort for frö, eller isolera med minst 1 km.',
+    isolation: 'Korsar med ALLA andra Brassica oleracea (grönkål, broccoli, blomkål, brysselkål, kålrabbi). Odla bara en sort för frö, eller isolera med minst 1 km.',
     storageYears: '4-5 år',
     tip: 'Frötagning av vitkål kräver att du kan förvara en hel kålplanta över vintern - det är inte för alla! Men för gamla kulturarvssorter som Brunswijker är det värt besväret. OP-sorter ger äkta avkomma, F1-hybrider gör det inte.',
   },
@@ -169,7 +169,7 @@ export const vitkal: Crop = {
       { method: 'Källarlagring', icon: 'storage', duration: '3-6 månader', description: 'Sena lagringssorter hängs upp och ner i en sval källare (0-4°C) med roten kvar. Hög luftfuktighet (90-95%) är nyckeln. Gammalt svenskt lagringsknep som funkar lika bra idag.', best: true },
       { method: 'Kylskåp', icon: 'snowflake', duration: '1-3 veckor', description: 'Lägg i plastpåse med några hål i grönsakslådan. Hela huvuden håller mycket längre än delad kål. Skuren kål torkar ut snabbt - täck snittytan med plastfolie.', best: false },
       { method: 'Surkål (fermentering)', icon: 'storage', duration: '6-12 månader', description: 'Strimla kålen fint, blanda med 2% salt och packa hårt i burk. Gammal svensk tradition som ger en hälsosam och smakrik konserveringsmetod. Fullt av nyttiga bakterier!', best: false },
-      { method: 'Frysa', icon: 'snowflake', duration: '8-12 månader', description: 'Strimla, blanchera 1-2 minuter, kyl i isvatten och frys i portionspåsar. Perfekt for soppor, grytor och wok. Texturen ändras men smaken består.', best: false },
+      { method: 'Frysa', icon: 'snowflake', duration: '8-12 månader', description: 'Strimla, blanchera 1-2 minuter, kyl i isvatten och frys i portionspåsar. Perfekt för soppor, grytor och wok. Texturen ändras men smaken består.', best: false },
       { method: 'Torka', icon: 'storage', duration: '6-12 månader', description: 'Strimla tunt och torka i ugn på 50°C eller i torkmaskin. Kompakt och platssnålt. Bra i soppor och grytor under vintern.', best: false },
     ],
     tips: [

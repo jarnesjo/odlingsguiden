@@ -95,7 +95,7 @@ export const majrova: Crop = {
   },
   varieties: [
     { name: 'Purple Top Milan', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassisk OP-sort med vacker lila topp och vitt kött. Snabb och pålitlig - den mest odlade majrovan. Impecta.' },
-    { name: 'Goldana', zones: [1, 2, 3, 4, 5, 6], note: 'Gul OP-sort med söt, mild smak. Fantastisk rostad eller i soppa. Runåbergs.' },
+    { name: 'Guldboll', zones: [1, 2, 3, 4, 5, 6], note: 'Gul OP-kulturarvssort (1863) med söt, mild smak. Fantastisk rostad eller i soppa. Ekofrö hos Runåbergs.' },
     { name: 'Blanc dur d\'hiver', zones: [1, 2, 3, 4, 5], note: 'Stor, vit OP-sort som är gjord för vinterlagring. Sås sent och lagras i sand i källaren. Runåbergs.' },
     { name: 'Petrowski', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Gul, plattund rysk kulturarvssort (OP). Söt och nötig smak, pålitlig i kalla klimat. En favorit bland fröbevarare. Runåbergs.' },
   ],
