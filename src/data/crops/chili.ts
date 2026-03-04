@@ -8,10 +8,10 @@ export const chili: Crop = {
   difficulty: 'Medel',
   difficultyWhy: 'Kräver tidig förodling (8-12 veckor), massor av värme och en lång säsong. I stora delar av Sverige krävs växthus eller kruka inomhus - men lyckas du? Belöningen är enorm.',
   zones: { outdoor: [1, 2, 3], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6, 7] },
-  days: '80-150',
+  days: '60-150',
   spacing: '30-50 cm',
   spacingNote: 'I kruka: minst 30 cm diameter',
-  rowSpacing: '50-60 cm',
+  rowSpacing: '50-70 cm',
   depth: '0,5-1 cm',
   ph: { min: 6.0, max: 7.0, ideal: 6.5 },
   optimalConditions: {
@@ -109,11 +109,11 @@ export const chili: Crop = {
     goodAfterWhy: 'Jorden har fortfarande bra struktur och näring kvar efter chili. Rotgrönsaker och sallat utnyttjar det som blir över.',
   },
   varieties: [
-    { name: 'Jalapeño', zones: [1, 2, 3, 4, 5], note: 'Klassikern bland chilisorter. Medelheta frukter (5 000-8 000 Scoville) som passar till allt från nachos till inlagd. Pålitlig och generös - perfekt förstachili.' },
+    { name: 'Jalapeño', zones: [1, 2, 3, 4, 5], note: 'Klassikern bland chilisorter. Medelheta frukter (2 500-8 000 Scoville) som passar till allt från nachos till inlagd. Pålitlig och generös - perfekt förstachili.' },
     { name: 'Cayenne', zones: [1, 2, 3, 4, 5], note: 'Långa, smala frukter med rejäl hetta (30 000-50 000 Scoville). Torkar fantastiskt och ger chiliflingor för hela vintern. OP-sort som funnits i århundraden.' },
-    { name: 'Padron', zones: [1, 2, 3, 4], note: 'Den berömda tapaschilin - mild och ljuvlig, men var tionde frukt biter ifrån! Tidig och rikbärande. Perfekt stekt i olivolja med flingsalt.' },
-    { name: 'Sibirisk chili', zones: [1, 2, 3, 4, 5, 6], note: 'Otroligt produktiv och kompakt. 30-40 frukter per planta är inte ovanligt. Härdig och snabb - ett säkert val för norra Sverige och balkongodling.' },
-    { name: 'Habanero', zones: [1, 2, 3], note: 'För den som vill ha riktig hetta (100 000-350 000 Scoville). Fruktig smak bakom brännandet. Kräver lång säsong och mycket värme - bäst i växthus.' },
+    { name: 'Padron', zones: [1, 2, 3, 4], note: 'Den berömda tapaschilin - mild (500-2 500 Scoville) och ljuvlig, men var tionde frukt biter ifrån! Tidig och rikbärande. Perfekt stekt i olivolja med flingsalt.' },
+    { name: 'Sibirisk chili', zones: [1, 2, 3, 4, 5, 6], note: 'Otroligt produktiv och busig (~30 000 Scoville). 30-40 frukter per planta är inte ovanligt. Härdig och snabb - ett säkert val för norra Sverige och balkongodling.' },
+    { name: 'Habanero', zones: [1, 2, 3], note: 'För den som vill ha riktig hetta (100 000-350 000 Scoville). Capsicum chinense - kräver ännu längre säsong än andra chilisorter. Fruktig smak bakom brännandet, bäst i växthus.' },
   ],
   problems: [
     { name: 'Bladlöss', symptom: 'Kladdiga blad, krusiga skottspetsar, små gröna eller svarta insekter på bladens undersida', fix: 'Spola av med vatten. Samodla med tagetes och basilika. Vid kraftigt angrepp: såpvatten (1 msk flytande såpa per liter vatten). Nyckelpigornas larver är dina bästa vänner.' },
@@ -136,7 +136,7 @@ export const chili: Crop = {
     description: 'Chili måste förodlas inomhus i Sverige - den extremt långa mognadstiden gör direktsådd utomhus helt omöjlig. Börja tidigt, redan i januari för heta sorter, för att ge henne den tid hon behöver.',
     steps: [
       'Fyll små krukor eller pluggbrätten med fuktig såjord',
-      'Lägg 1-2 frön per kruka, knappt 1 cm djupt - chilifrön är ljusgroende så täck bara lätt',
+      'Lägg 1-2 frön per kruka, 0,5-1 cm djupt, täck lätt med jord eller vermiculit',
       'Täck med plastfolie eller miniväxthus - chilifrön behöver fukt och värme för att gro',
       'Placera VARMT (25-28°C) - gärna på en värmematta. Chilifrön kan ta 10-25 dagar att gro, ibland ännu längre för heta sorter',
       'När groddarna syns: ta bort plasten och ge maximalt ljus (växtbelysning 14-16 timmar per dag)',
@@ -165,8 +165,8 @@ export const chili: Crop = {
       'Lägg fröna på hushållspapper och låt torka helt i rumstemperatur (5-7 dagar)',
       'Förvara i märkt papperspåse på svalt, torrt ställe',
     ],
-    isolation: 'Chili korsar sig lätt med andra Capsicum annuum-sorter (inklusive paprika och andra chilisorter). Isolera med minst 10-15 meters avstånd eller täck blommorna med tyll för sortäkta frö.',
-    storageYears: '2-4 år',
+    isolation: 'Chili korsar sig lätt med andra Capsicum annuum-sorter (inklusive paprika och andra chilisorter). Isolera med minst 50 meter, helst mer, eller täck blommorna med tyll för sortäkta frö. Tyll är enklast för hemmaodlare.',
+    storageYears: '2-5 år',
     tip: 'Vill du bevara en specifik sort? Isolera blommorna med tyll före de öppnar sig. Och kom ihåg - ta aldrig frö från F1-hybrider om du vill ha samma resultat nästa år.',
   },
   storage: {
