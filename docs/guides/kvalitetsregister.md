@@ -8,8 +8,8 @@
 
 | Status | Antal |
 |--------|-------|
-| Faktacheckade profiler | 65 |
-| Saknar faktacheck | 20 |
+| Faktacheckade profiler | 74 |
+| Saknar faktacheck | 11 |
 | **Totalt** | **85** |
 
 ---
@@ -20,9 +20,9 @@
 |-------|--------|------------|--------|--------------|--------|---------|
 | Morot | 2026-02-26 | 2026-03-01 | 4 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
 | Palsternacka | 2026-03-01 | 2026-03-02 | 5 | Ja | 9 | [batch1](../research/faktacheck-2026-03-02-batch1.md) |
-| Selleri | 2026-03-02 | 2026-03-03 | 5 | **Nej** | - | - |
+| Selleri | 2026-03-02 | 2026-03-04 | 5 | Ja | 8 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Rotselleri | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
-| Fänkål | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
+| Fänkål | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Tomat | 2026-02-26 | 2026-03-01 | 4 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
 | Potatis | 2026-02-26 | 2026-03-01 | 5 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
 | Paprika | 2026-02-27 | 2026-03-04 | 5 | Ja | 8 | [batch3](../research/faktacheck-2026-03-02-batch3.md), [batch9](../research/faktacheck-2026-03-04-batch9.md) |
@@ -42,24 +42,24 @@
 | Squash | 2026-02-27 | 2026-03-02 | 5 | Ja | 6 | [batch3](../research/faktacheck-2026-03-02-batch3.md) |
 | Gurka | 2026-02-27 | 2026-03-04 | 5 | Ja | 6+8 | [batch3](../research/faktacheck-2026-03-02-batch3.md), [batch9](../research/faktacheck-2026-03-04-batch9.md) |
 | Pumpa | 2026-02-27 | 2026-03-02 | 5 | Ja | 6 | [batch3](../research/faktacheck-2026-03-02-batch3.md) |
-| Melon | 2026-03-02 | 2026-03-02 | 5 | **Nej** | - | - |
+| Melon | 2026-03-02 | 2026-03-04 | 5 | Ja | 8 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Lök | 2026-02-27 | 2026-03-01 | 4 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
 | Purjolök | 2026-02-27 | 2026-03-03 | 5 | Ja | 5 | [batch2](../research/faktacheck-2026-03-02-batch2.md) |
 | Vitlök | 2026-02-27 | 2026-03-02 | 5 | Ja | 5 | [batch2](../research/faktacheck-2026-03-02-batch2.md) |
-| Schalottenlök | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
+| Schalottenlök | 2026-03-02 | 2026-03-04 | 4 | Ja | 8 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Sallat | 2026-02-27 | 2026-03-02 | 5 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
-| Spenat | 2026-02-27 | 2026-03-02 | 5 | **Nej** | - | - |
+| Spenat | 2026-02-27 | 2026-03-04 | 5 | Ja | 6 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Mangold | 2026-03-01 | 2026-03-02 | 5 | Ja | 9 | [batch1](../research/faktacheck-2026-03-02-batch1.md) |
-| Endiv | 2026-03-02 | 2026-03-02 | 5 | **Nej** | - | - |
+| Endiv | 2026-03-02 | 2026-03-04 | 5 | Ja | 8 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Rödbeta | 2026-02-27 | 2026-03-02 | 5 | Ja | 5 | [batch2](../research/faktacheck-2026-03-02-batch2.md) |
 | Ärtor | 2026-02-27 | 2026-03-02 | 4 | Ja | 17 | [batch4](../research/faktacheck-2026-03-02-batch4.md) |
 | Bondböna | 2026-02-27 | 2026-03-02 | 4 | Ja | 17 | [batch4](../research/faktacheck-2026-03-02-batch4.md) |
 | Brytböna | 2026-03-01 | 2026-03-02 | 5 | Ja | 9 | [batch1](../research/faktacheck-2026-03-02-batch1.md) |
-| Störböna | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
+| Störböna | 2026-03-02 | 2026-03-04 | 4 | Ja | 8 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Sparris | 2026-02-27 | 2026-03-02 | 5 | Ja | 17 | [batch4](../research/faktacheck-2026-03-02-batch4.md) |
 | Sockermajs | 2026-02-27 | 2026-03-02 | 5 | Ja | 17 | [batch4](../research/faktacheck-2026-03-02-batch4.md) |
-| Jordärtskocka | 2026-03-02 | 2026-03-02 | 3 | **Nej** | - | - |
-| Kronärtskocka | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
+| Jordärtskocka | 2026-03-02 | 2026-03-04 | 3 | Ja | 6 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
+| Kronärtskocka | 2026-03-02 | 2026-03-04 | 4 | Ja | 8 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 
 ## Bär (16 st)
 
@@ -140,10 +140,11 @@
 | [körsbär-rabarber](../research/faktacheck-2026-03-04-korsbar-rabarber.md) | 2026-03-04 | körsbär, rabarber | - | 12 |
 | [fikon-valnöt-hasselnöt-vindruva](../research/faktacheck-2026-03-04-fikon-valnot-hasselnut-vindruva.md) | 2026-03-04 | fikon, valnöt, hasselnöt, vindruva | - | 31 |
 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) | 2026-03-04 | koriander, kummin, mejram, dragon, salvia, citronmeliss, krasse, lagerblad, libbsticka, ramslök | 0 | 6+ |
+| [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) | 2026-03-04 | selleri, fänkål, melon, schalottenlök, spenat, endiv, störböna, jordärtskocka, kronärtskocka | 3 | 8+ |
 
 ---
 
-## Profiler som saknar faktacheck (20 st)
+## Profiler som saknar faktacheck (11 st)
 
-### Grönsaker (20 st)
-- Selleri, Rotselleri, Fänkål, Grönkål, Vitkål, Rödkål, Broccoli, Blomkål, Pak choi, Kinakål, Brysselkål, Savoykål, Majrova, Melon, Schalottenlök, Spenat, Endiv, Störböna, Jordärtskocka, Kronärtskocka
+### Grönsaker (11 st)
+- Rotselleri, Grönkål, Vitkål, Rödkål, Broccoli, Blomkål, Pak choi, Kinakål, Brysselkål, Savoykål, Majrova
