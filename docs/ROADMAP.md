@@ -315,8 +315,16 @@ Ingen prioritet. Plockas upp när det passar.
 
 ### Datakvalitet
 
-- Frostdatum per zon - förankra mot SMHI-statistik med sannolikheter (50/75/90%). Zon 1 och 2 har idag samma vårfrost ("slutet av april") men bör skilja sig. Trädgårdsmästare i Kalmar (zon 1) rapporterar nattfrost i mitten-slutet av maj. Skriv om zones.ts med konservativa datum. Genomgång av alla tidslinjer som berörs.
+- ~~Frostdatum per zon~~ ✅ Uppdaterat mot SMHI-statistik (session 44). 70% vårfrost + 50% höstfrost. Zon 1/2 differentierade. Käll-notis i UI. Research: `docs/research/smhi-frostdatum.md`
 - Faktacheck gurka och andra batch 3-profiler som saknar dokumenterade källor
+
+### Utbyggnad av datapunkter
+
+Identifierat vid jämförelse med odlaatbart.se och andra svenska odlingssidor (session 44). Inget kritiskt - vi är redan mer kompletta än de flesta - men skulle höja värdet ytterligare.
+
+- Groningstemperatur (min/optimal) per gröda - praktiskt vid förodling. Vi har `temperature.min` i optimalConditions men det avser växten, inte groningen. Ny datapunkt `germination: { min, optimal }` i SowingInfo.
+- Köldtolerans per gröda - konkret gradtal (-2°C, -5°C etc.) som anger vad plantan överlever. Hjälper odlaren bedöma frostrisker på hösten och avgöra om den behöver skydd. Ny datapunkt i optimalConditions.
+- Ätbara blommor - vi har `blommor` som kategori men inga profiler ännu. Lavendel, tagetes, penséer, ringblomma etc. Bra komplement till kryddorna.
 
 ### Optimering & Teknik
 
