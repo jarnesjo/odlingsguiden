@@ -1,0 +1,116 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 47. Batch fruktprofiler + fixar.
+
+    KLART:
+    - Fix: basilika.ts "Tips:" (engelska) -> "Sorten 'Nufar' har viss resistens mot vishnesjuka"
+    - Fix: rabarber skördebubbla saknades i Odlingskalender (monthParser kände inte igen "midsommar")
+    - Fix: rabarber skördetips flyttat från storage till sowing, formulering fixad
+    - Ny fruktprofil: Fikon (fikon.ts)
+      - 4 sorter: Bornholms Diamant, Brown Turkey, Hardy Chicago, Negronne
+      - Krukodling primärt, friland zon 1, kallväxthus zon 1-3
+      - Partenokarp - ingen pollinerare behövs
+    - Ny fruktprofil: Valnöt (valnot.ts)
+      - 4 sorter: Broadview, Buccaneer, Fernor, Loiko
+      - Zon 1-3, livslängd 200+ år, juglon-allelopati
+      - JAS-beskärning (blöder vid vårbeskärning)
+    - Ny fruktprofil: Hasselnöt (hasselnut.ts)
+      - 5 sorter: Nottingham Prolific, Cosford, Jättenöt från Halle, Gunslebert, Röd Zellernöt
+      - Zon 1-5, inhemsk sedan 9500 år, vindpollinerad, självsteril
+      - Nötvivel (Curculio nucum) som huvudskadegörare
+    - Ny fruktprofil: Vindruva (vindruva.ts)
+      - 6 sorter: Zilga (-40°C!), Solaris (PIWI), Rondo, Somerset Seedless, Boskoop Glory, Hasanski Sladki
+      - Staketdruvor zon 1-5, vinodlingsdruvor zon 1-2
+      - Vinterbeskärning + sommarpincering, spaljé/sydvägg
+    - SVG-illustrationer för alla 4 frukter
+    - Mognadsklocka-färger för fikon, valnöt, hasselnöt, vindruva
+    - Faktacheck-rapport med alla källor
+    - Roadmap uppdaterad: alla 9 fruktprofiler klara
+
+    Commits:
+    - 526e516 fix(content): replace English 'Tips:' with Swedish in basilika
+    - 378a3f9 fix(ui): add 'midsommar' as month alias in parser
+    - 9926d5a fix(content): move harvest tip to sowing section in rabarber
+    - ab1166c feat(crops): add fikon profile with illustration
+    - 0f60dd5 feat(crops): add valnöt profile with illustration
+    - 57cf9c5 feat(crops): add hasselnöt profile with illustration
+    - 50e1b51 feat(crops): add vindruva profile with illustration
+    - b22d7b5 feat(ui): register fikon, valnöt, hasselnöt, vindruva
+    - c6a5a9c docs(research): fact-check fikon, valnöt, hasselnöt, vindruva
+    - abb5a4b docs(roadmap): mark fikon, valnöt, hasselnöt, vindruva as done
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/research/faktacheck-2026-03-04-fikon-valnot-hasselnut-vindruva.md
+  src:
+    - "src/data/crops/fikon.ts (NY: 4 sorter, krukodling, partenokarp)"
+    - "src/data/crops/valnot.ts (NY: 4 sorter, juglon, 200+ år)"
+    - "src/data/crops/hasselnut.ts (NY: 5 sorter, vindpollinerad, nötvivel)"
+    - "src/data/crops/vindruva.ts (NY: 6 sorter, staketdruvor/vindruvor, PIWI)"
+    - "src/components/illustrations/FigIllustration.tsx (NY)"
+    - "src/components/illustrations/WalnutIllustration.tsx (NY)"
+    - "src/components/illustrations/HazelnutIllustration.tsx (NY)"
+    - "src/components/illustrations/GrapeIllustration.tsx (NY)"
+    - "src/components/crop/RipeningSection.tsx (4 nya frukters färger)"
+    - "src/data/cropList.ts (4 nya frukter)"
+    - "src/data/crops/index.ts (4 nya frukter)"
+    - "src/components/illustrations/CropGraphic.tsx (4 nya frukter)"
+    - "src/components/illustrations/CropIcon.tsx (4 nya frukter)"
+    - "src/utils/monthParser.ts (midsommar som månadsalias)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "2.5 Sökfunktion: sök tvärs kategorier + filtrering"
+  - "Faktacheck: ~44 av 86 profiler klara, ~42 kvar"
+  - "Bär: fläder, nypon, smultron, saskatoonbär som nya profiler"
+  - "Lighthouse Accessibility: höja från 84"
+  - "Visuell granskning: alla 4 nya illustrationer + mognadsklocka-färger"
+
+context:
+  decisions:
+    - "Fikon primärt som krukväxt - friland bara zon 1 (realistiskt för Sverige)"
+    - "Valnöt zon 1-3 konservativt, Loiko zon 4 markerad som 'varierar'"
+    - "Hasselnöt zon 1-5 (vild hassel), storfruktiga 1-3(4)"
+    - "Vindruva: tydlig separation staketdruvor vs vinodlingsdruvor"
+    - "Zilga som flagship-sort för vindruva (tål -40°C)"
+    - "monthParser: 'midsommar' = juni (fixar rabarber i kalender)"
+    - "Rabarber skördetips: 'använd aldrig kniv' (inte 'klipp inte med kniv')"
+  constraints:
+    - "CropIcon.tsx och CropGraphic.tsx har DUPLICERADE ID_TO_PATH - båda måste uppdateras"
+    - "CROP_LIST i cropList.ts måste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+    - "Frilandsodling som primär odlingsform"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga mätstationer)"
+  - "~42 profiler saknar formell faktacheck"
+  - "Lighthouse Accessibility 84"
+  - "Hardy Chicago (fikon): begränsad svensk erfarenhet"
+  - "Loiko (valnöt): baserat på en källa"
