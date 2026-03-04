@@ -202,6 +202,10 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 | 3    | Plommon ✅ | Rosaceae     | Härdigt, populärt, finns sorter som klarar zon 5-6.             |
 | 4    | Körsbär ✅ | Rosaceae     | Både söt och sur. Fågelproblem = bra "drama" i profilen.        |
 | 5    | Rabarber ✅ | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
+| 6    | Fikon       | Moraceae     | Funkar i zon 1-2 med rätt sort (Hardy Chicago). Växande trend.  |
+| 7    | Valnöt      | Juglandaceae | Flerårig investering. Broadview klarar zon 1-3. Nöt som frukt.  |
+| 8    | Hasselnöt   | Betulaceae   | Buskar, zon 1-5. Svensk kulturhistoria. Enkel etablering.       |
+| 9    | Vindruva    | Vitaceae     | Zon 1-3 mot sydvägg. Populärt intresse, kräver rätt sort.      |
 
 > Notering: Alla topp-4 är Rosaceae - samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband.
 
