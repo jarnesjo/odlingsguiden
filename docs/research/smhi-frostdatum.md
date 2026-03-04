@@ -1,6 +1,8 @@
 # SMHI-frostdatum - research
 
-Källa: [odlaatbart.se/sista-frost](https://odlaatbart.se/sista-frost/) (baserat på SMHI-statistik)
+Källor:
+- [odlaatbart.se/sista-frost](https://odlaatbart.se/sista-frost/) - sista vårfrost (SMHI-baserad)
+- [odlaatbart.se/host-10-forsta-frost](https://odlaatbart.se/host-10-forsta-frost/) - första höstfrost (SMHI-baserad)
 
 ## Sista vårfrost per ort (50% / 70% / 90% sannolikhet)
 
@@ -31,24 +33,53 @@ Källa: [odlaatbart.se/sista-frost](https://odlaatbart.se/sista-frost/) (baserat
 | Örnsköldsvik | 29 maj | 7 jun | 13 jun |
 | Kiruna | 7 jun | 11 jun | 17 jun |
 
+## Första höstfrost per ort (50% / 70% sannolikhet)
+
+| Ort | 50% | 70% |
+|-----|-----|-----|
+| Kiruna | 30 aug | 5 sep |
+| Umeå | 11 sep | 15 sep |
+| Örnsköldsvik | 14 sep | 23 sep |
+| Luleå | 18 sep | 25 sep |
+| Skellefteå | 18 sep | 23 sep |
+| Borlänge | 23 sep | 1 okt |
+| Östersund | 23 sep | 29 sep |
+| Gävle | 24 sep | 30 sep |
+| Örebro | 25 sep | 10 okt |
+| Uppsala | 2 okt | 12 okt |
+| Växjö | 2 okt | 10 okt |
+| Karlstad | 3 okt | 8 okt |
+| Sundsvall | 3 okt | 9 okt |
+| Västerås | 3 okt | 11 okt |
+| Jönköping | 7 okt | 26 okt |
+| Linköping | 7 okt | 14 okt |
+| Kalmar | 11 okt | 18 okt |
+| Kristianstad | 14 okt | 29 okt |
+| Skövde | 15 okt | 23 okt |
+| Göteborg | 16 okt | 1 nov |
+| Malmö | 19 okt | 30 okt |
+| Stockholm | 22 okt | 29 okt |
+| Helsingborg | 15 nov | 23 nov |
+| Visby | 1 nov | 12 nov |
+
 ## Mappning till odlingszoner
 
-Rekommendation: använda **70%-datum** som "sista vårfrost" - balans mellan trygghet och verklighet.
+Metod: **70% vårfrost** (konservativ start) → **50% höstfrost** (medelkonservativt slut).
 
-| Zon | Representativa orter | 70%-datum | Frostfria dagar (ca) |
-|-----|---------------------|-----------|---------------------|
-| 1 | Malmö, Helsingborg, Göteborg | ~25 apr | ~200 |
-| 2 | Stockholm, Skövde, Visby | ~8 maj | ~180 |
-| 3 | Jönköping, Karlstad, Växjö, Örebro | ~12 maj | ~165 |
-| 4 | Sundsvall, Gävle, Västerås, Borlänge | ~20 maj | ~150 |
-| 5 | Luleå, Skellefteå, Umeå | ~25 maj | ~130 |
-| 6 | Östersund, Örnsköldsvik | ~3 jun | ~110 |
-| 7 | Inlands-Norrland (inga mätstationer) | ~mitten jun | ~90 |
-| 8 | Kiruna, fjälltrakterna | ~11 jun+ | ~70 |
+| Zon | Representativa orter | Vårfrost (70%) | Höstfrost (50%) | Frostfria dagar |
+|-----|---------------------|----------------|-----------------|-----------------|
+| 1 | Malmö, Helsingborg, Göteborg | ~25 apr | ~19 okt | ~175 |
+| 2 | Stockholm, Skövde, Visby | ~8 maj | ~22 okt | ~165 |
+| 3 | Jönköping, Karlstad, Växjö, Örebro | ~12 maj | ~3 okt | ~145 |
+| 4 | Sundsvall, Gävle, Västerås, Borlänge | ~20 maj | ~28 sep | ~130 |
+| 5 | Luleå, Skellefteå, Umeå | ~25 maj | ~15 sep | ~115 |
+| 6 | Östersund, Örnsköldsvik | ~3 jun | ~18 sep | ~105 |
+| 7 | Inlands-Norrland (interpolerat) | ~mitten jun | ~5 sep | ~80 |
+| 8 | Kiruna, fjälltrakterna | ~11 jun | ~30 aug | ~80 |
 
 ## Noteringar
 
-- Zon 1 bör ha **tidigare** vårfrost (~25 apr) jämfört med zon 2 (~8 maj)
-- Zon 7 saknar bra mätdata - uppskattning baserad på interpolation
+- Zon 7 saknar bra mätdata - interpolerat mellan zon 6 och 8
 - Lokala variationer (mikroklimat, sydsluttning etc.) kan skilja 1-2 veckor
-- Frostfria dagar beräknade som sista vårfrost till första höstfrost (ca mitten okt i zon 1, mitten sep i zon 6)
+- Helsingborg och Visby har anmärkningsvärt sen höstfrost (kusteffekt) men räknas ändå till zon 1 p.g.a. vårfrosten
+- Gamla värden (200/180/165/150/130/110/90/70) var för optimistiska i zon 1-3
