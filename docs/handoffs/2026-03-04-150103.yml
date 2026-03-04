@@ -1,0 +1,93 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 50. Faktacheck batch 12 - 10 kryddprofiler.
+
+    KLART:
+    - Faktacheck batch 12: koriander, kummin, mejram, dragon, salvia,
+      citronmeliss, krasse, lagerblad, libbsticka, ramslok
+    - Alla sorter verifierade mot svenska frokataloger via websok
+    - Kryddprofilerna var av hog kvalitet - inga fabricerade sorter
+    - 1 sort borttagen (Kryddmejram - dubblettnamn for O. majorana)
+    - 2 zoner nedjusterade:
+      Citronmeliss: 1-5 -> 1-4 (Lindbloms anger zon III som tak)
+      Rysk dragon: 1-6 -> 1-5 (zon 6 ej verifierat)
+    - 1 zon utokad:
+      Ramslok: 1-5 -> 1-6 (odlingsbar i skyddade lagen)
+    - Kummin Finland-pastaende mjukat ("ett av ledande" ist for "storsta")
+    - Kummin korspollinering med dill/fankal omformulerad (botaniskt
+      missvisande - akta korsning osannolik, men separation rekommenderas)
+    - Libbsticka NordFro-certifiering korrigerad (ej ekologiskt certifierade)
+    - Kvalitetsregister uppdaterat: 65/85 profiler faktacheckade
+
+    Commits:
+    - c25a5e3 fix(content): fact-check 10 herb profiles
+    - e569fed docs(research): fact-check batch 12 - 10 herb profiles
+    - 2ba0435 docs(guides): update kvalitetsregister after batch 12
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/research/faktacheck-2026-03-04-batch12-kryddor.md
+    - "docs/guides/kvalitetsregister.md (65/85 faktacheckade)"
+  src:
+    - "src/data/crops/koriander.ts (4 sorter, Jantar+Confetti+Leisure fixade)"
+    - "src/data/crops/kummin.ts (1 sort, Finland-pastaende + isolation fixat)"
+    - "src/data/crops/mejram.ts (1 sort, -1 Kryddmejram)"
+    - "src/data/crops/dragon.ts (3 sorter, rysk dragon zoner nedjusterade)"
+    - "src/data/crops/salvia.ts (4 sorter, inga andringar)"
+    - "src/data/crops/citronmeliss.ts (4 sorter, zoner nedjusterade, Compacta+Citronella fixade)"
+    - "src/data/crops/krasse.ts (3 sorter, inga andringar)"
+    - "src/data/crops/lagerblad.ts (2 sorter, inga andringar)"
+    - "src/data/crops/libbsticka.ts (1 sort, NordFro-certifiering fixad)"
+    - "src/data/crops/ramslok.ts (1 sort, zoner utokade 1-5 -> 1-6)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Faktacheck batch 13: Ovriga gronsaker (10 st) - selleri, rotselleri, fankal, melon, schalottenlok, spenat, endiv, storbona, jordartskocka, kronartskocka"
+  - "Faktacheck batch 14: Resterande gronsaker (10 st) - gronkal, vitkal, rodkal, broccoli, blomkal, pak choi, kinakål, brysselkal, savoykål, majrova"
+  - "Uppdatera kvalitetsregister efter alla batchar (65 klara, 20 kvar)"
+
+context:
+  decisions:
+    - "Kryddprofiler hade hogre kvalitet an barprofiler - farre fel, inga fabricerade sorter"
+    - "Kryddmejram ar dubblettnamn for O. majorana, inte en egen sort"
+    - "Kummin kan inte akta korsa med dill/fankal (olika slakten) men separation rekommenderas andå"
+    - "NordFro ar inte ekologiskt certifierade - ska inte grupperas med Lindbloms/Impecta"
+    - "Ramslok kan odlas i zon 6 i skyddade lagen trots att den vaxer vild bara till Uppland"
+  constraints:
+    - "CropIcon.tsx och CropGraphic.tsx har DUPLICERADE ID_TO_PATH - bada maste uppdateras"
+    - "CROP_LIST i cropList.ts maste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Frilandsodling som primar odlingsform"
+    - "Sorter maste verifieras mot svenska frokataloger/plantskolor"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "20 profiler saknar formell faktacheck (alla gronsaker)"
+  - "Lighthouse Accessibility 84"
