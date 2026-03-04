@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
 
+const isServer = typeof window === 'undefined'
+
 export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T | ((prev: T) => T)) => void] {
   const [stored, setStored] = useState<T>(() => {
+    if (isServer) return initialValue
     try {
       const item = localStorage.getItem(key)
       return item !== null ? (JSON.parse(item) as T) : initialValue
