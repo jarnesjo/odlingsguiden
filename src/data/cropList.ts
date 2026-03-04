@@ -106,6 +106,14 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'paron', name: 'Päron', icon: 'paron', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
   { id: 'plommon', name: 'Plommon', icon: 'plommon', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
   { id: 'korsbar', name: 'Körsbär', icon: 'korsbar', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
+  // Frukt - Moraceae (Mullbärsväxter)
+  { id: 'fikon', name: 'Fikon', icon: 'fikon', family: 'Mullbärsväxter', familyLatin: 'Moraceae', difficulty: 'Medel', category: 'frukt' },
+  // Frukt - Juglandaceae (Valnötsväxter)
+  { id: 'valnot', name: 'Valnöt', icon: 'valnot', family: 'Valnötsväxter', familyLatin: 'Juglandaceae', difficulty: 'Medel', category: 'frukt' },
+  // Frukt - Betulaceae (Björkväxter)
+  { id: 'hasselnut', name: 'Hasselnöt', icon: 'hasselnut', family: 'Björkväxter', familyLatin: 'Betulaceae', difficulty: 'Enkel', category: 'frukt' },
+  // Frukt - Vitaceae (Vinväxter)
+  { id: 'vindruva', name: 'Vindruva', icon: 'vindruva', family: 'Vinväxter', familyLatin: 'Vitaceae', difficulty: 'Medel', category: 'frukt' },
   // Blommor - Asteraceae (Korgblommiga)
   { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
   { id: 'solros', name: 'Solros', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },

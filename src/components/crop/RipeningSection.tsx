@@ -31,6 +31,24 @@ const TYPE_COLORS: Record<string, { bg: string; border: string }> = {
   'Tidigt surkörsbär': { bg: '#FFF0E5', border: '#C4784A' },
   'Surkörsbär': { bg: '#EDF7F0', border: '#5A8B5A' },
   'Sent surkörsbär': { bg: '#E3F2FD', border: '#5A7DAD' },
+  // Fikon (grön -> brun -> mörk -> violett)
+  'Gröngult fikon': { bg: '#F0F5E0', border: '#8B9B4A' },
+  'Brunrött fikon': { bg: '#FFF0E5', border: '#A8653B' },
+  'Mörkt fikon': { bg: '#F0E4E8', border: '#6B3040' },
+  'Violett fikon': { bg: '#F0E4F5', border: '#7B4B8F' },
+  // Valnöt (brun -> grön -> blandad)
+  'Tidig valnöt': { bg: '#FFF8E7', border: '#B8953A' },
+  'Mellansäsong': { bg: '#EDF7F0', border: '#6B8B4A' },
+  'Sen valnöt': { bg: '#F5EDE0', border: '#8B6B3D' },
+  'Varierar': { bg: '#F5F2EB', border: '#9B8B6B' },
+  // Hasselnöt (brun -> grön -> sen)
+  'Tidig hasselnöt': { bg: '#FFF8E7', border: '#C4956A' },
+  'Sen hasselnöt': { bg: '#F5EDE0', border: '#8B6B3D' },
+  // Vindruva (blå -> röd -> grön)
+  'Tidig staketdruva': { bg: '#E8E0F5', border: '#6B4B8F' },
+  'Staketdruva': { bg: '#E3F2FD', border: '#5A7DAD' },
+  'Vindruva': { bg: '#F0E4F5', border: '#8B45A6' },
+  'Trädgårdsdruva': { bg: '#EDF7F0', border: '#5A8B5A' },
 }
 
 const DEFAULT_COLOR = { bg: '#F5F2EB', border: '#C4956A' }
