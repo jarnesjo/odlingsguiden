@@ -1,0 +1,80 @@
+// Päron - Detaljerad illustration + listikon
+// Stil: mjuk blyertsskiss, handritad känsla, botaniskt korrekt
+
+interface SizeProps {
+  size?: number
+}
+
+export function PearIllustration({ size = 200 }: SizeProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 200 200" fill="none">
+      {/* Bakgrundscirkel - frukt-kategori */}
+      <circle cx="100" cy="100" r="90" fill="#F0DDD0" opacity="0.15" />
+
+      {/* Stjälk */}
+      <path d="M100 42V28" stroke="#6B4E3D" strokeWidth="2.5" strokeLinecap="round" />
+
+      {/* Blad */}
+      <path d="M100 32c8-5 18-6 26-2-3 7-13 10-26 2z" fill="#3D6B4F" opacity="0.15" />
+      <path d="M100 32c8-5 18-6 26-2-3 7-13 10-26 2z" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Bladnerv */}
+      <path d="M104 31c4-1 9-2 15-1" stroke="#3D6B4F" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
+
+      {/* Huvudkropp - päronform (smalare upptill, bredare nedtill) */}
+      <path d="M100 165c-32 0-48-24-48-52 0-18 6-32 14-42 6-8 14-16 22-22a12 12 0 0124 0c8 6 16 14 22 22 8 10 14 24 14 42 0 28-16 52-48 52z" fill="#7D9B4F" opacity="0.12" />
+      <path d="M100 165c-32 0-48-24-48-52 0-18 6-32 14-42 6-8 14-16 22-22a12 12 0 0124 0c8 6 16 14 22 22 8 10 14 24 14 42 0 28-16 52-48 52z" stroke="#5C7A3A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+
+      {/* Mittlinje (päronets karaktäristiska vertikala linje) */}
+      <path d="M100 50v115" stroke="#5C7A3A" strokeWidth="0.8" strokeLinecap="round" opacity="0.15" />
+
+      {/* Ljusreflex - vänster */}
+      <ellipse cx="82" cy="110" rx="10" ry="22" fill="#E8D8B0" opacity="0.2" transform="rotate(-8 82 110)" />
+
+      {/* Ljusreflex - höger, subtil */}
+      <ellipse cx="116" cy="115" rx="6" ry="15" fill="#E8D8B0" opacity="0.12" transform="rotate(5 116 115)" />
+
+      {/* Solsida (lätt guldton) */}
+      <path d="M118 75c12 12 20 30 20 42 0 16-6 32-20 42" stroke="#B8953A" strokeWidth="0.8" strokeLinecap="round" opacity="0.12" />
+
+      {/* Texturlinjer - päronets kurvor */}
+      <path d="M70 90c4 18 4 40-2 55" stroke="#5C7A3A" strokeWidth="0.7" strokeLinecap="round" opacity="0.12" />
+      <path d="M130 90c-4 18-4 40 2 55" stroke="#5C7A3A" strokeWidth="0.7" strokeLinecap="round" opacity="0.12" />
+
+      {/* Rostiga prickar (karaktäristiskt för päron) */}
+      <circle cx="90" cy="100" r="1" fill="#8B7355" opacity="0.15" />
+      <circle cx="108" cy="120" r="1.2" fill="#8B7355" opacity="0.12" />
+      <circle cx="95" cy="135" r="0.8" fill="#8B7355" opacity="0.15" />
+      <circle cx="112" cy="95" r="0.9" fill="#8B7355" opacity="0.12" />
+
+      {/* Blomfäste (botten) */}
+      <circle cx="100" cy="162" r="3" stroke="#6B4E3D" strokeWidth="1.2" opacity="0.3" />
+      <path d="M97 162h6" stroke="#6B4E3D" strokeWidth="0.8" opacity="0.3" />
+
+      {/* Skugga */}
+      <ellipse cx="100" cy="185" rx="32" ry="5" fill="#8B7355" opacity="0.08" />
+    </svg>
+  )
+}
+
+export function PearIcon({ size = 48 }: SizeProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+      {/* Stjälk */}
+      <path d="M24 10V6" stroke="#6B4E3D" strokeWidth="1.8" strokeLinecap="round" />
+
+      {/* Blad */}
+      <path d="M24 8c3-2 6-2 9-1-1 3-4 4-9 1z" fill="#3D6B4F" opacity="0.15" />
+      <path d="M24 8c3-2 6-2 9-1-1 3-4 4-9 1z" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+
+      {/* Päronkropp */}
+      <path d="M24 42c-9 0-14-7-14-15 0-5 2-10 4-13 2-2 4-5 6-6a4 4 0 018 0c2 1 4 4 6 6 2 3 4 8 4 13 0 8-5 15-14 15z" fill="#7D9B4F" opacity="0.15" />
+      <path d="M24 42c-9 0-14-7-14-15 0-5 2-10 4-13 2-2 4-5 6-6a4 4 0 018 0c2 1 4 4 6 6 2 3 4 8 4 13 0 8-5 15-14 15z" stroke="#5C7A3A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+
+      {/* Ljusreflex */}
+      <ellipse cx="20" cy="27" rx="3" ry="5" fill="#E8D8B0" opacity="0.2" transform="rotate(-5 20 27)" />
+
+      {/* Mittlinje */}
+      <path d="M24 12v30" stroke="#5C7A3A" strokeWidth="0.8" strokeLinecap="round" opacity="0.15" />
+    </svg>
+  )
+}
