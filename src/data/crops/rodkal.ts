@@ -104,9 +104,9 @@ export const rodkal: Crop = {
   },
   varieties: [
     { name: 'Langedijker Bewaar', zones: [1, 2, 3, 4, 5], note: 'Klassisk holländsk lagringssort med stora, fasta huvuden. Håller hela vintern i källaren. Djupt violett färg och mild smak. Ekofrö hos Runåbergs.' },
-    { name: 'Rodynda', zones: [1, 2, 3, 4, 5, 6], note: 'Svensk tidig-medelsort med runda, jämna huvuden. Pålitlig och lättodlad med fin färg. Finns hos Impecta.' },
+    { name: 'Rodynda', zones: [1, 2, 3, 4, 5, 6], note: 'Svensk tidig-medelsort med runda, jämna huvuden. Pålitlig och lättodlad med fin färg. Ekofrö hos Lindbloms.' },
     { name: 'Kalibos', zones: [1, 2, 3, 4, 5], note: 'Unik spetskålsform med lös struktur - perfekt för sallader! Mildare smak än runda sorter och vackert rubinröd. Ekofrö hos Runåbergs.' },
-    { name: 'Marner Lagerrot', zones: [1, 2, 3, 4, 5], note: 'Pålitlig lagringssort med meddelstora, fasta huvuden. Bra sjukdomstolerans och lagrar fint i månader. Finns hos Impecta.' },
+    { name: 'Langedijker Bewaar 2', zones: [1, 2, 3, 4, 5], note: 'Sen lagringssort med stora, fasta huvuden. Håller sig hela vintern i källare. Klassisk holländsk sort med lång ståndtid i fält.' },
     { name: 'Integro F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med mycket jämna huvuden och bra sjukdomsresistens. Ger pålitliga resultat men fröna kan inte sparas. Ekofrö hos Semenco.' },
   ],
   problems: [
@@ -172,7 +172,7 @@ export const rodkal: Crop = {
       { method: 'Torka', icon: 'storage', duration: '6-12 månader', description: 'Strimla tunt och torka i ugn på 50°C eller i torkmaskin. Kompakt och platssnålt. Färgen bleknar något men smaken håller sig bra.', best: false },
     ],
     tips: [
-      'Lagringssorter (Langedijker Bewaar, Marner Lagerrot) håller MYCKET längre än tidiga sorter - välj rätt sort om du vill lagra',
+      'Lagringssorter (Langedijker Bewaar) håller MYCKET längre än tidiga sorter - välj rätt sort om du vill lagra',
       'Skörda lagringskål så sent som möjligt på hösten - gärna efter en lätt frost. Det förbättrar hållbarheten.',
       'Häng kålhuvudena upp och ner i källaren med roten kvar - det förlänger lagringstiden rejält',
       'Syrad rödkål är enklare att göra än du tror och resultatet blir fantastiskt till jul och höstmiddagar',

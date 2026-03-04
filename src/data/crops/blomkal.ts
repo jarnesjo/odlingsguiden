@@ -105,7 +105,7 @@ export const blomkal: Crop = {
     { name: 'Igloo', zones: [2, 3, 4, 5], note: 'Tidig sort med kompakta huvuden. Bra för kortare säsonger. Hon klarar lite mer kyla än de flesta - namnet ljuger inte.' },
     { name: 'Erfurt', zones: [1, 2, 3, 4], note: 'Den klassiska europeiska sorten som odlats i generationer. Fina, vita huvuden med mild smak. Kräver lång, sval säsong.' },
     { name: 'Romanesco', zones: [1, 2, 3, 4], note: 'Gröna, fantastiska fraktalmönster-huvuden! Faktiskt lättare att odla än vanlig blomkål och behöver inte blancheras. Kräver mer plats (70-80 cm) och längre säsong (100-125 dagar). En matematisk skönhet på tallriken.' },
-    { name: 'Graffiti', zones: [1, 2, 3, 4], note: 'Spektakulärt lila blomkål som behåller färgen vid tillagning! Rikare på antioxidanter. Behöver lång säsong men WOW-faktorn är enorm.' },
+    { name: 'Graffiti F1', zones: [1, 2, 3, 4], note: 'Spektakulärt lila F1-blomkål som behåller färgen vid tillagning! Rikare på antioxidanter. Behöver lång säsong men WOW-faktorn är enorm. Finns hos Impecta. OBS: F1 - ger inte sortäkta frö.' },
   ],
   problems: [
     { name: 'Kålfjäril', symptom: 'Gröna larver som tuggar sig genom bladen. Gröna spillningshögar överallt.', fix: 'Fiberduk från dag ett - det är det enda 100% säkra skyddet! Handplocka larver. Spruta med Bacillus thuringiensis (Bt). Samodla med dill och lök.' },

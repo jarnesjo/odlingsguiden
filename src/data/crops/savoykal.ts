@@ -106,7 +106,7 @@ export const savoykal: Crop = {
     { name: 'Vertus 2', zones: [1, 2, 3, 4, 5, 6], note: 'Klassisk OP-sort med mörkgröna, krusiga blad och fasta huvuden. Milt och sött - den självklara savoykålen för svenska odlare. Finns hos Impecta.' },
     { name: 'Vorbote 3', zones: [1, 2, 3, 4, 5], note: 'Tidig OP-sort som mognar snabbt. Kompakta, fina huvuden som är perfekta för den som vill ha tidig skörd. Funkar bra i kortare säsonger.' },
     { name: 'Wirosa F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med utmärkt köldhärdighet och kompakta, blågröna huvuden. Tål frost extremt bra och har lång ståndtid i fält. Välj denna om du vill ha maximal frosttålighet.' },
-    { name: 'Famosa F1', zones: [1, 2, 3, 4, 5], note: 'F1-hybrid med mycket fina, jämna huvuden. Bra sjukdomsresistens och fin smak. Ett pålitligt val för den som vill ha jämn kvalitet.' },
+    { name: 'Deadon F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med utmärkt vinterhärdighet och vackra blågröna blad med lila ton. God sjukdomsresistens och fin smak. Ekofrö hos Semenco. OBS: F1 - ger inte sortäkta frö.' },
   ],
   problems: [
     { name: 'Kålfjäril', symptom: 'Gröna larver som tuggar stora hål i de krusiga bladen. Lämnar spillningshögar och kan förstöra plantor snabbt. Larverna gömmer sig extra bra bland savoykålens krusade bladverk.', fix: 'Fiberduk från dag ett - det enda helt säkra skyddet! Handplocka larver regelbundet (kolla extra noga i vecken). Spruta med Bacillus thuringiensis (Bt) mot larverna. Samodla med dill och lök.' },
