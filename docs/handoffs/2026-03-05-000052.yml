@@ -1,0 +1,85 @@
+meta:
+  date: 2026-03-05
+  author: claude
+  phase: "Epic: Performance & Kvalitet"
+  status: avslutad
+  session_notes: |
+    Session 54. Slutforde prerendering (SSG) - steg 4.3 i roadmap.
+
+    PRERENDERING KOMPLETT:
+    - 102 routes prerenderas till statisk HTML (85 grodor, 4 kategorier,
+      12 sasongsmanader, startsida)
+    - Flash-fri hydration: groddata och sasongsdata inbaddad som JSON
+      i prerenderade sidor (__CROP_DATA__, __SEASON_DATA__)
+    - Korrekta title och meta description per route
+    - Alla CSS-filer (inklusive lazy chunks) injiceras i <head>
+
+    BUGGAR LOSTA:
+    - Template-reuse: /-routen skrev over dist/index.html (mallen),
+      sa alla efterfoljande routes fick startsidans HTML. Fixat genom
+      att spara mallen i minnet innan loopen.
+    - Suspense/hidden div: React 19 prerender() placerade Suspense-innehall
+      i <div hidden> som forst visades nar JS laddats. Fixat genom att
+      ta bort lazy() for CropPage och SeasonView (eager imports).
+    - Hydration mismatch: Server renderade utan Suspense, klient med.
+      Fixat genom att anvanda samma komponenttrad.
+    - Tom sasongssida: SSR hade [] som groups, useEffect kors inte.
+      Fixat med ssrSeasonCache och __SEASON_DATA__ JSON.
+    - Saknade manadsroutes: /sasong/april gav 404. Fixat genom att
+      generera alla 12 manadsroutes.
+    - Fel titlar: useDocumentMeta(useEffect) skrev over prerenderade
+      titlar vid hydration. Fixat genom att gora CropList kategori-
+      och manadsmedveten.
+
+    Branch: feature/prerendering (ej mergad till main an)
+
+tech_stack:
+  current:
+    - Vite 7.3 (build + SSR)
+    - React 19 (hooks, prerender() API)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (StaticRouter for SSR)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Eget prerender-script (scripts/prerender.ts)"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  key_files:
+    - scripts/prerender.ts (bygger SSR-bundle + renderar 102 routes)
+    - src/entry-server.tsx (React 19 prerender() + StaticRouter)
+    - src/utils/ssrSeasonCache.ts (SSR-cache for sasongsdata)
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsx scripts/prerender.ts  # Prerendera alla routes"
+  - "npx serve dist -l 4273  # Testa prerenderad build lokalt"
+
+next_steps:
+  - "Merga feature/prerendering till main"
+  - "Kor Lighthouse pa prerenderad build och jamfor"
+  - "Lagg till npm script: 'prerender' i package.json"
+  - "Accessibility (4.4): kontrastproblem, lankfarger"
+  - "Illustrationsflash: crop/category-ikoner laddar asynkront (kosmetiskt)"
+
+context:
+  decisions:
+    - "Eget prerender-script istf vike/vite-ssg - inga extra deps"
+    - "CropPage och SeasonView eager (inte lazy) - forhindrar hydration flash"
+    - "Groddata inbaddas som JSON (__CROP_DATA__) per sida"
+    - "Sasongsdata inbaddas som JSON (__SEASON_DATA__) med ssrSeasonCache"
+    - "Alla CSS (inklusive lazy chunks) injiceras i <head>"
+    - "Title/description satts i prerender-scriptet OCH i klient-koden"
+  constraints:
+    - "feature/prerendering branch - ej mergad till main an"
+    - "Illustrationer (85 filer, 640KB) laddas fortfarande asynkront"
+    - "Sasongsdata prebakat for zon 4 - andra zoner laddas dynamiskt"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "Lighthouse Accessibility 84 - oforandrat"
+  - "Illustrationsflash: CropIcon/CropGraphic laddar via import.meta.glob"
+  - "dist-ssr/ genereras vid prerender - ligger i .gitignore"
+  - "Vite-varning: monthParser.ts dynamiskt importerad i entry-server men statiskt i andra filer"
