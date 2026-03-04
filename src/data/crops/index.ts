@@ -114,6 +114,11 @@ export async function loadCrop(id: string): Promise<Crop | undefined> {
   return crop
 }
 
+/** Hämta en gröda synkront från cache (för SSR). Returnerar undefined om ej cachad. */
+export function getCachedCrop(id: string): Crop | undefined {
+  return cropCache.get(id)
+}
+
 /** Ladda alla grödor (för säsongsvy). Resultat cachas. */
 export async function loadAllCrops(): Promise<Record<string, Crop>> {
   const entries = Object.entries(ID_TO_PATH)

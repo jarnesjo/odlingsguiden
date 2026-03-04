@@ -7,10 +7,13 @@ import { CropList, ZoneSelector } from './components/pages'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { CATEGORIES } from './data/categories'
 import { CROP_LIST } from './data/cropList'
+import { CropPage as CropPageEager } from './components/pages/CropPage'
 
-const CropPage = lazy(() =>
-  import('./components/pages/CropPage').then(m => ({ default: m.CropPage }))
-)
+// Under SSR: eager import (lazy resolvas aldrig under prerender)
+// I klienten: lazy import för code splitting
+const CropPage = import.meta.env.SSR
+  ? CropPageEager
+  : lazy(() => import('./components/pages/CropPage').then(m => ({ default: m.CropPage })))
 
 /** Resolves which view the current route represents */
 type View = 'sasong' | Category

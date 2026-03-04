@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import type { Crop, Zone, TimelineZone } from '../../data/types'
-import { loadCrop } from '../../data/crops'
+import { loadCrop, getCachedCrop } from '../../data/crops'
 import { ZONE_INFO } from '../../data/zones'
 import { useDocumentMeta } from '../../hooks/useDocumentMeta'
 import {
@@ -37,11 +37,12 @@ interface CropPageProps {
 }
 
 export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: CropPageProps) {
-  const [crop, setCrop] = useState<Crop | null>(null)
+  const [crop, setCrop] = useState<Crop | null>(() => getCachedCrop(cropId) ?? null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    setCrop(null)
+    // Under SSR har vi redan data via getCachedCrop, men i klienten
+    // behöver vi ladda asynkront (eller vid navigation till ny gröda)
     loadCrop(cropId).then(c => c && setCrop(c))
   }, [cropId])
 
