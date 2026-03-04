@@ -1,0 +1,90 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 52. Faktacheck batch 14 - 10 kalvaxter + rotselleri. ALLA 85/85 profiler nu faktacheckade.
+
+    KLART:
+    - Faktacheck batch 14: gronkal, vitkal, rodkal, broccoli, blomkal, pak choi, kinakal, brysselkal, savoykal, majrova
+    - Faktacheck rotselleri (sista profilen)
+    - 43 sorter verifierade mot svenska frokataloger via websok
+    - 0 fabricerade sorter (bra kvalitet)
+    - 3 felaktiga leverantorsreferenser korrigerade:
+      Langedijker Bewaar: "Runåbergs" -> finns ej hos Runåbergs
+      Monarch rotselleri: "Impecta" -> ej bekraftad hos Impecta
+      Ibis rotselleri: "Impecta" -> finns ej hos Impecta, andrad till Lindbloms
+    - 3 felaktiga pastaenden korrigerade:
+      Rasmus broccoli: "Svensk OP-favorit" -> tysk, foradlad av Kultursaat
+      Romanesco blomkal: "100-125 dagar" -> 75-100 dagar
+      Prinz rotselleri: "F1" -> F1-status osakert, svenska aterforsaljare listar utan F1
+    - 1 dubblett sammanfogad: Langedijker Bewaar + Langedijker Bewaar 2
+    - 2 historiska nyanseringar: De Cicco 1890 = USA-introduktion, Brunswijker 1847 = bokreferens
+    - Kvalitetsregister uppdaterat: 85/85 profiler faktacheckade
+
+    Commits:
+    - df29d3d fix(content): fact-check batch 14 - 11 profiles
+    - 799df6e docs(research): fact-check batch 14 - 11 kal/rotselleri profiles
+    - f5d3f33 docs(guides): update kvalitetsregister - 85/85 profiles fact-checked
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/research/faktacheck-2026-03-04-batch14-kal-rotselleri.md
+    - "docs/guides/kvalitetsregister.md (85/85 faktacheckade)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Kontrollera att alla fruktprofiler har sortzoner som matchar profilzoner (samma problem som fikon?)"
+  - "Fortsatt med roadmap Fas 2 - nasta funktionssteg"
+  - "Lighthouse Accessibility forbattring (nu 84)"
+
+context:
+  decisions:
+    - "Alla 85 profiler nu formellt faktacheckade - milstolpe!"
+    - "Batch 14 hade 0 fabricerade sorter - konsekvent hog kvalitet"
+    - "3 felaktiga leverantorsreferenser - vanligaste felet ar sorter som tillskrivs fel frokatalog"
+    - "Rasmus broccoli ar INTE svensk - foradlad av Christina Henatsch vid Kultursaat (Tyskland)"
+    - "Romanesco blomkal tar 75-100 dagar (ej 100-125 som profilen pastad)"
+    - "Prinz rotselleri: svenska aterforsaljare listar inte som F1 - F1-beteckning borttagen"
+    - "Langedijker Bewaar (utan 2) = vitkal, Langedijker Bewaar 2 = rodkal - dubbletten sammanfogad"
+    - "Red Russian gronkal ar Brassica napus (ej oleracea) - noterat i research men ej andrat i profil"
+    - "Prize Choi pak choi finns i Runåbergs katalog men ar slut i lager"
+    - "Guldboll majrova: Runåbergs sager 1863, internationella kallor sager 1854 - behallt Runåbergs datum"
+  constraints:
+    - "CropIcon.tsx och CropGraphic.tsx har DUPLICERADE ID_TO_PATH - bada maste uppdateras"
+    - "CROP_LIST i cropList.ts maste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Frilandsodling som primar odlingsform"
+    - "Sorter maste verifieras mot svenska frokataloger/plantskolor"
+    - "Sortzoner maste matcha profilzoner (outdoor + greenhouse)"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "Lighthouse Accessibility 84"
+  - "Andra fruktprofiler kan ha samma zonproblem som fikon - bor kontrolleras"
+  - "Red Russian gronkal ar B. napus, inte B. oleracea - kan paverka korspollineringsinformation"
+  - "Prize Choi pak choi slut i lager hos Runåbergs - kan behova alternativ sort"
