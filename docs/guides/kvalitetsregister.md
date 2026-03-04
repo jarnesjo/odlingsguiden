@@ -8,8 +8,8 @@
 
 | Status | Antal |
 |--------|-------|
-| Faktacheckade profiler | 55 |
-| Saknar faktacheck | 30 |
+| Faktacheckade profiler | 65 |
+| Saknar faktacheck | 20 |
 | **Totalt** | **85** |
 
 ---
@@ -94,16 +94,16 @@
 | Mynta | 2026-02-27 | 2026-03-03 | 5 | Ja | 4+ | [batch8](../research/faktacheck-2026-03-02-batch8.md) |
 | Rosmarin | 2026-02-28 | 2026-03-03 | 4 | Ja | 4+ | [batch8](../research/faktacheck-2026-03-02-batch8.md) |
 | Oregano | 2026-02-28 | 2026-03-03 | 4 | Ja | 4+ | [batch8](../research/faktacheck-2026-03-02-batch8.md) |
-| Koriander | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
-| Kummin | 2026-03-02 | 2026-03-02 | 1 | **Nej** | - | - |
-| Mejram | 2026-03-02 | 2026-03-02 | 2 | **Nej** | - | - |
-| Dragon | 2026-03-02 | 2026-03-03 | 3 | **Nej** | - | - |
-| Salvia | 2026-03-02 | 2026-03-03 | 4 | **Nej** | - | - |
-| Citronmeliss | 2026-03-02 | 2026-03-03 | 4 | **Nej** | - | - |
-| Krasse | 2026-03-02 | 2026-03-02 | 3 | **Nej** | - | - |
-| Lagerblad | 2026-03-02 | 2026-03-02 | 2 | **Nej** | - | - |
-| Libbsticka | 2026-03-02 | 2026-03-03 | 1 | **Nej** | - | - |
-| Ramslök | 2026-03-02 | 2026-03-03 | 1 | **Nej** | - | - |
+| Koriander | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Kummin | 2026-03-02 | 2026-03-04 | 1 | Ja | 4 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Mejram | 2026-03-02 | 2026-03-04 | 1 | Ja | 4 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Dragon | 2026-03-02 | 2026-03-04 | 3 | Ja | 8 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Salvia | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Citronmeliss | 2026-03-02 | 2026-03-04 | 4 | Ja | 4 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Krasse | 2026-03-02 | 2026-03-04 | 3 | Ja | 4 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Lagerblad | 2026-03-02 | 2026-03-04 | 2 | Ja | 4 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Libbsticka | 2026-03-02 | 2026-03-04 | 1 | Ja | 6 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
+| Ramslök | 2026-03-02 | 2026-03-04 | 1 | Ja | 4 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) |
 
 ## Frukt (8 st)
 
@@ -139,16 +139,11 @@
 | [päron-plommon](../research/faktacheck-2026-03-04-paron-plommon.md) | 2026-03-04 | päron, plommon | - | 5 |
 | [körsbär-rabarber](../research/faktacheck-2026-03-04-korsbar-rabarber.md) | 2026-03-04 | körsbär, rabarber | - | 12 |
 | [fikon-valnöt-hasselnöt-vindruva](../research/faktacheck-2026-03-04-fikon-valnot-hasselnut-vindruva.md) | 2026-03-04 | fikon, valnöt, hasselnöt, vindruva | - | 31 |
+| [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) | 2026-03-04 | koriander, kummin, mejram, dragon, salvia, citronmeliss, krasse, lagerblad, libbsticka, ramslök | 0 | 6+ |
 
 ---
 
-## Profiler som saknar faktacheck (39 st)
+## Profiler som saknar faktacheck (20 st)
 
-### Grönsaker (18 st)
+### Grönsaker (20 st)
 - Selleri, Rotselleri, Fänkål, Grönkål, Vitkål, Rödkål, Broccoli, Blomkål, Pak choi, Kinakål, Brysselkål, Savoykål, Majrova, Melon, Schalottenlök, Spenat, Endiv, Störböna, Jordärtskocka, Kronärtskocka
-
-### Bär (8 st)
-- Vita vinbär, Guldvinbär, Tayberry, Blåbär, Lingon, Havtorn, Aronia, Tranbär, Honungsbär
-
-### Kryddor (10 st)
-- Koriander, Kummin, Mejram, Dragon, Salvia, Citronmeliss, Krasse, Lagerblad, Libbsticka, Ramslök
