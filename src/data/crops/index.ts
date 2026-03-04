@@ -98,6 +98,19 @@ const ID_TO_PATH: Record<string, string> = {
 // Cache laddade grödor
 const cropCache = new Map<string, Crop>()
 
+// Hydrera cache från inbäddad JSON (satt av prerender-scriptet)
+if (typeof document !== 'undefined') {
+  const el = document.getElementById('__CROP_DATA__')
+  if (el?.textContent) {
+    try {
+      const data = JSON.parse(el.textContent) as Record<string, Crop>
+      for (const [id, crop] of Object.entries(data)) {
+        cropCache.set(id, crop)
+      }
+    } catch { /* ignorera parsningsfel */ }
+  }
+}
+
 /** Ladda en enskild gröda on-demand */
 export async function loadCrop(id: string): Promise<Crop | undefined> {
   if (cropCache.has(id)) return cropCache.get(id)

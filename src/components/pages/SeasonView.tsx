@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import type { Zone } from '../../data/types'
 import { MONTH_NAMES } from '../../utils/monthParser'
 import { getSeasonActivities, type SeasonGroup } from '../../utils/seasonData'
+import { ssrSeasonCache } from '../../utils/ssrSeasonCache'
 import { Icon } from '../icons/Icon'
 import { CropIcon } from '../illustrations/CropIcon'
 import styles from './SeasonView.module.css'
@@ -16,7 +17,19 @@ interface SeasonViewProps {
 const PREVIEW_COUNT = 3
 
 export function SeasonView({ userZone, currentMonth, onMonthChange, onSelect }: SeasonViewProps) {
-  const [groups, setGroups] = useState<SeasonGroup[]>([])
+  const [groups, setGroups] = useState<SeasonGroup[]>(() => {
+    // SSR: läs från SSR-cache (fylld av entry-server.tsx)
+    const ssrData = ssrSeasonCache.get(currentMonth)
+    if (ssrData) return ssrData
+    // Klient: hydrera från inbäddad JSON (satt av prerender-scriptet)
+    if (typeof document !== 'undefined') {
+      const el = document.getElementById('__SEASON_DATA__')
+      if (el?.textContent) {
+        try { return JSON.parse(el.textContent) as SeasonGroup[] } catch { /* ignorera */ }
+      }
+    }
+    return []
+  })
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
   useEffect(() => {

@@ -64,12 +64,21 @@ function matchGroup(phase: string): GroupDef | undefined {
   )
 }
 
+/** Synkron version - fungerar bara om cropCache redan är fylld (SSR) */
+export function getSeasonActivitiesSync(month: number, zone: Zone, allCrops: Record<string, import('../data/types').Crop>): SeasonGroup[] {
+  return buildSeasonGroups(month, zone, allCrops)
+}
+
 /**
  * Hämtar alla säsongsaktiviteter för en given månad och zon.
  * Returnerar grupperade aktiviteter i naturlig säsongsordning.
  */
 export async function getSeasonActivities(month: number, zone: Zone): Promise<SeasonGroup[]> {
   const CROPS = await loadAllCrops()
+  return buildSeasonGroups(month, zone, CROPS)
+}
+
+function buildSeasonGroups(month: number, zone: Zone, CROPS: Record<string, import('../data/types').Crop>): SeasonGroup[] {
   const groups = new Map<string, SeasonGroup>()
 
   // Initiera alla grupper (behåller ordningen)
