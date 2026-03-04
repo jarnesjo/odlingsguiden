@@ -1,0 +1,115 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 46. Fixar för päron/plommon + körsbär + rabarber + kodkvalitet.
+
+    KLART:
+    - Fix: päron/plommon-illustrationer saknades i CropIcon (listvy) och CropGraphic
+    - Fix: mognadsklocka hade samma färg för alla typer inom päron/plommon
+      - Nu distinkta nyanser: gul/grön/orange/blå (päron), rosa/lila/terrakotta/blågrön (plommon)
+    - Ny fruktprofil: Körsbär (korsbar.ts)
+      - 8 sorter: 5 sötkörsbär (Gårdebo, Fryksås, Stella, Sunburst, Stor Svart Bigarrå)
+        + 3 surkörsbär (Skuggmorell, Nordia, Lettisk Låg)
+      - Zon 1-6, faktacheckat mot Blomsterlandet/Wexthuset/Trädgårdstrollet/SLU
+      - JAS-beskärning, silversjuka, fågelskydd, pollineringsgrupper
+      - Mognadsklocka med 6 distinkta färger (söt/sur x tidig/mitt/sen)
+      - SVG-illustration (körsbärspar med Y-formade stjälkar)
+    - Rabarber: kategori grönsaker -> frukt
+      - Uppdaterade sorter: +Barbro (SLU Balsgård), +Elmsblitz, +Champagne Red
+      - Nyanserad midsommarregel (Sara Backmo)
+      - Ny goodToKnow: "Grönsak eller frukt?"
+      - Lifespan 10-15+ -> 15-30+
+    - Roadmap: alla 5 prioriterade fruktprofiler klara
+    - Roadmap: 4 nya frukter tillagda (fikon, valnöt, hasselnöt, vindruva)
+    - Fix: engelska fraser borttagna ("the hard way", "Win-win")
+    - Retroaktiva faktacheck-rapporter för batch 2+3 (session 22)
+    - Alla faktacheck-filer omdöpta till konsekvent namnmönster (datum + batch)
+
+    Commits:
+    - c65b923 fix(crops): register päron and plommon illustrations
+    - 0474956 fix(ui): add mognadsklocka colors for päron and plommon
+    - 5c6b156 fix(crops): register päron and plommon in CropIcon
+    - 939b936 fix(ui): improve mognadsklocka color contrast
+    - 2a8b978 docs(roadmap): mark päron and plommon as done in 2.4
+    - bf86407 feat(crops): add körsbär profile with illustration
+    - b0be97e refactor(crops): move rabarber to frukt category
+    - be053fe docs(research): fact-check körsbär and rabarber
+    - b04688e docs(roadmap): mark körsbär and rabarber as done
+    - 8376c26 docs(roadmap): add fikon, valnöt, hasselnöt, vindruva
+    - f97baa9 fix(content): remove English phrases
+    - abe52bf docs(research): retroactive batch 2+3 reports
+    - add9721 docs(research): rename fact-check files to batch pattern
+    - a6ad0ac docs(research): rename apple fact-check to include date
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/research/faktacheck-2026-03-04-korsbar-rabarber.md
+    - docs/research/faktacheck-2026-03-02-batch2.md (retroaktiv)
+    - docs/research/faktacheck-2026-03-02-batch3.md (retroaktiv)
+  src:
+    - "src/data/crops/korsbar.ts (NY: 8 sorter, pollinering, JAS-beskärning)"
+    - "src/data/crops/rabarber.ts (uppdaterad: frukt, 7 sorter, midsommarregel)"
+    - "src/data/cropList.ts (körsbär tillagd, rabarber -> frukt)"
+    - "src/data/crops/index.ts (körsbär tillagd)"
+    - "src/components/illustrations/CherryIllustration.tsx (NY)"
+    - "src/components/illustrations/CropGraphic.tsx (päron, plommon, körsbär)"
+    - "src/components/illustrations/CropIcon.tsx (päron, plommon, körsbär)"
+    - "src/components/crop/RipeningSection.tsx (färger för päron, plommon, körsbär)"
+    - "src/components/crop/GoodToKnow.tsx (engelska borttagen)"
+    - "src/data/crops/guldvinbar.ts (Win-win borttagen)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "2.4 Frukt: fikon, valnöt, hasselnöt, vindruva (prio 6-9)"
+  - "2.5 Sökfunktion: sök tvärs kategorier + filtrering"
+  - "Faktacheck: ~44 av 82 profiler klara, ~38 kvar"
+  - "Bär: fläder, nypon, smultron, saskatoonbär som nya profiler"
+  - "Lighthouse Accessibility: höja från 84"
+
+context:
+  decisions:
+    - "Rabarber under frukt: trädgårdsmästarens beslut. Botaniskt grönsak men kulturellt frukt."
+    - "Körsbär zon 1-5 sötkörsbär, 1-6 surkörsbär (Nordia, Lettisk Låg härdigast)"
+    - "Gårdebo och Fryksås 'sannolikt' självfertila - uppgifter varierar"
+    - "JAS-beskärning för alla Prunus - silversjuka vid vinterbeskärning"
+    - "Mognadsklocka: distinkta nyanser per frukttyp, aldrig bara ljusare/mörkare av samma"
+    - "Faktacheck-filer: konsekvent namnmönster datum-batch"
+    - "Aldrig engelska uttryck i app-text (the hard way, Win-win)"
+  constraints:
+    - "CropIcon.tsx och CropGraphic.tsx har DUPLICERADE ID_TO_PATH - båda måste uppdateras"
+    - "CROP_LIST i cropList.ts måste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+    - "Frilandsodling som primär odlingsform"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga mätstationer)"
+  - "~38 profiler saknar formell faktacheck"
+  - "Lighthouse Accessibility 84"
+  - "Batch 2+3 rapporter skapade retroaktivt - kan sakna detaljer"
+  - "Prototyp (grodguiden-wireframe.jsx) har kvar 'the hard way' - legacy"
