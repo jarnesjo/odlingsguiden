@@ -249,15 +249,44 @@ Laddtider, accessibility, bundle-optimering och teknisk kvalitet.
 
 Plan: `docs/plans/1.10-code-splitting.yml`
 
-### 4.2 LCP-optimering
+### 4.2 LCP-optimering ✅
 
 > Render Delay står för 85% av LCP-tiden (2.6s) - grödlistan är flaskhalsen
 
-- [ ] Virtualisera grödlistan (rendera bara synliga rader)
-- [ ] Lazy-ladda SVG-ikoner i listan
-- [ ] Splitta index-bundlen (cropList-data i egen chunk)
+- [x] Lazy-ladda SVG-ikoner i listan (IntersectionObserver, första 8 direkt)
+- [x] Resultat: LCP 3.1s → 2.3s, Performance 91 → 97
 
-### 4.3 Accessibility
+Plan: `docs/plans/4.2-lcp-optimering.yml`
+
+### 4.3 Prerendering (SSG)
+
+> Statisk HTML vid byggtid + React-hydration - snabb FCP/LCP utan att tappa SPA-känslan
+
+Prerendering renderar varje route till statisk HTML vid byggtid. Användaren ser innehåll direkt (ingen vit sida medan JS laddar), sen tar React över via hydration och appen fungerar som vanlig SPA med snabb navigation, zonväljare, filter etc.
+
+**Varför det passar Odlingsguiden:**
+- 85+ grödprofiler med statiskt innehåll - perfekt för SSG
+- Varje gröda har egen URL redan (`/morot`, `/basilika`) - en HTML-fil per route
+- SEO-boost: sökmotorer och AI-svar får riktig HTML istället för tom `<div id="root">`
+- Drastisk LCP-förbättring: HTML renderas utan att vänta på JS-bundle
+
+**Verktyg som passar vår Vite-setup:**
+- **vike** (f.d. vite-plugin-ssr) - SSR/SSG direkt i Vite, minst omskrivning
+- **vite-ssg** - enklare, bara statisk generering
+- Alternativt **Astro** med React-öar, men större omskrivning
+
+**Flöde:**
+1. Byggtid: Vite renderar alla routes → `dist/morot/index.html`, `dist/basilika/index.html` etc.
+2. Första besöket: Användaren ser HTML direkt (snabb LCP)
+3. Hydration (~1-2s): React tar över, appen blir interaktiv
+4. Efter hydration: Full SPA-känsla - snabb navigation, inga omladdningar
+
+- [ ] Utvärdera vike vs vite-ssg för vår setup
+- [ ] Implementera SSG-bygge för alla routes
+- [ ] Verifiera att hydration fungerar korrekt (zonväljare, filter, navigation)
+- [ ] Mäta LCP-förbättring
+
+### 4.4 Accessibility
 
 > Lighthouse Accessibility 84 - kontrastproblem och länkfärger
 

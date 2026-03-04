@@ -1,0 +1,38 @@
+meta:
+  step: "4.2"
+  title: LCP-optimering
+  status: klar
+  created: 2026-03-04
+
+problem: |
+  Lighthouse LCP 3.1s, varav Render Delay 85% (2.6s).
+  LCP-elementet: cropMeta-div i grödlistan.
+  Orsak: alla 42+ CropIcon mountar samtidigt, var och en triggar
+  useEffect med dynamisk import(). 42 parallella modulförfrågningar
+  + 42 re-renders via setState.
+
+approach: |
+  Lazy-prop på CropIcon med IntersectionObserver.
+  Första 8 ikonerna (above the fold) laddas direkt.
+  Resten laddas när de scrollas in i vy (200px rootMargin).
+  Inga nya dependencies.
+
+changes:
+  - file: src/components/illustrations/CropIcon.tsx
+    what: |
+      - Lade till lazy-prop (default false)
+      - IntersectionObserver med rootMargin 200px
+      - useIcon gated på enabled-parameter
+      - Fallback-ikon visas tills riktiga ikonen laddats
+
+  - file: src/components/pages/CropList.tsx
+    what: |
+      - En ändring: lazy={index >= 8} på CropIcon
+      - Första 8 laddas direkt, resten lazy
+
+results:
+  performance: "91 -> 97 (+6)"
+  lcp: "3.1s -> 2.3s (-26%)"
+  fcp: "2.4s -> 2.0s"
+  render_delay: "2617ms -> 1816ms (-31%)"
+  dynamic_imports_at_mount: "42 -> 8"
