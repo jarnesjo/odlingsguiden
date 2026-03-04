@@ -8,8 +8,8 @@
 
 | Status | Antal |
 |--------|-------|
-| Faktacheckade profiler | 74 |
-| Saknar faktacheck | 11 |
+| Faktacheckade profiler | 85 |
+| Saknar faktacheck | 0 |
 | **Totalt** | **85** |
 
 ---
@@ -21,24 +21,24 @@
 | Morot | 2026-02-26 | 2026-03-01 | 4 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
 | Palsternacka | 2026-03-01 | 2026-03-02 | 5 | Ja | 9 | [batch1](../research/faktacheck-2026-03-02-batch1.md) |
 | Selleri | 2026-03-02 | 2026-03-04 | 5 | Ja | 8 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
-| Rotselleri | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
+| Rotselleri | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
 | Fänkål | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) |
 | Tomat | 2026-02-26 | 2026-03-01 | 4 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
 | Potatis | 2026-02-26 | 2026-03-01 | 5 | Ja | 5+ | [batch0](../research/faktacheck-2026-03-01-batch0.md) |
 | Paprika | 2026-02-27 | 2026-03-04 | 5 | Ja | 8 | [batch3](../research/faktacheck-2026-03-02-batch3.md), [batch9](../research/faktacheck-2026-03-04-batch9.md) |
 | Chili | 2026-03-01 | 2026-03-04 | 5 | Ja | 8 | [batch9](../research/faktacheck-2026-03-04-batch9.md) |
-| Grönkål | 2026-02-27 | 2026-03-02 | 4 | **Nej** | - | - |
+| Grönkål | 2026-02-27 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
 | Rädisa | 2026-02-27 | 2026-03-02 | 4 | Ja | 5 | [batch2](../research/faktacheck-2026-03-02-batch2.md) |
-| Vitkål | 2026-03-01 | 2026-03-01 | 5 | **Nej** | - | - |
-| Rödkål | 2026-03-02 | 2026-03-02 | 5 | **Nej** | - | - |
-| Broccoli | 2026-02-27 | 2026-03-03 | 5 | **Nej** | - | - |
-| Blomkål | 2026-02-28 | 2026-03-02 | 5 | **Nej** | - | - |
-| Pak choi | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
-| Kinakål | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
-| Brysselkål | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
+| Vitkål | 2026-03-01 | 2026-03-04 | 5 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
+| Rödkål | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
+| Broccoli | 2026-02-27 | 2026-03-04 | 5 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
+| Blomkål | 2026-02-28 | 2026-03-04 | 5 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
+| Pak choi | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
+| Kinakål | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
+| Brysselkål | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
 | Kålrabbi | 2026-03-01 | 2026-03-02 | 5 | Ja | 9 | [batch1](../research/faktacheck-2026-03-02-batch1.md) |
-| Savoykål | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
-| Majrova | 2026-03-02 | 2026-03-02 | 4 | **Nej** | - | - |
+| Savoykål | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
+| Majrova | 2026-03-02 | 2026-03-04 | 4 | Ja | 6 | [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) |
 | Squash | 2026-02-27 | 2026-03-02 | 5 | Ja | 6 | [batch3](../research/faktacheck-2026-03-02-batch3.md) |
 | Gurka | 2026-02-27 | 2026-03-04 | 5 | Ja | 6+8 | [batch3](../research/faktacheck-2026-03-02-batch3.md), [batch9](../research/faktacheck-2026-03-04-batch9.md) |
 | Pumpa | 2026-02-27 | 2026-03-02 | 5 | Ja | 6 | [batch3](../research/faktacheck-2026-03-02-batch3.md) |
@@ -141,10 +141,10 @@
 | [fikon-valnöt-hasselnöt-vindruva](../research/faktacheck-2026-03-04-fikon-valnot-hasselnut-vindruva.md) | 2026-03-04 | fikon, valnöt, hasselnöt, vindruva | - | 31 |
 | [batch12](../research/faktacheck-2026-03-04-batch12-kryddor.md) | 2026-03-04 | koriander, kummin, mejram, dragon, salvia, citronmeliss, krasse, lagerblad, libbsticka, ramslök | 0 | 6+ |
 | [batch13](../research/faktacheck-2026-03-04-batch13-gronsaker.md) | 2026-03-04 | selleri, fänkål, melon, schalottenlök, spenat, endiv, störböna, jordärtskocka, kronärtskocka | 3 | 8+ |
+| [batch14](../research/faktacheck-2026-03-04-batch14-kal-rotselleri.md) | 2026-03-04 | grönkål, vitkål, rödkål, broccoli, blomkål, pak choi, kinakål, brysselkål, savoykål, majrova, rotselleri | 7 | 6+ |
 
 ---
 
-## Profiler som saknar faktacheck (11 st)
+## Alla profiler faktacheckade
 
-### Grönsaker (11 st)
-- Rotselleri, Grönkål, Vitkål, Rödkål, Broccoli, Blomkål, Pak choi, Kinakål, Brysselkål, Savoykål, Majrova
+85/85 profiler har genomgått formell faktacheck med websökning mot svenska frökataloger.
