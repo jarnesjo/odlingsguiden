@@ -74,6 +74,178 @@
 
 ---
 
+## Oh!Garden (ohgarden.se)
+
+**Analyserad:** 2026-03-04 (session 44)
+
+### Tjänsten
+
+- App (iOS/Android) + webb
+- 22 000+ växtporträtt (inte bara ätbart - hela trädgården)
+- Utvecklat av OhGarden AB, Vaxholm
+- Kategori: Lifestyle (App Store)
+- Community: 50 000+ medlemmar (enligt sajten)
+
+### Prissättning
+
+| Plan | Pris |
+|------|------|
+| Gratis | Växtdatabas, dagbok, trädgårdskartan |
+| Oh!More månadsabonnemang | 29 kr/mån |
+| Oh!More årsabonnemang | 249 kr/år (~21 kr/mån) |
+
+Halverat pris jämfört med Odla ätbart. Generöst gratis-lager.
+
+### App Store-data
+
+- Betyg: 4.7 stjärnor (48 betyg) - bäst i kategorin
+- Betydligt fler betyg och högre snitt än Odla ätbart (4.0 / 27 st)
+
+### Funktioner
+
+**Gratis:**
+- 22 000+ växtporträtt med skötselinfo
+- Digital trädgårdskarta med växtplacering
+- Dagbok med foton och anteckningar
+- Community-forum
+
+**Oh!More (betald):**
+- AI-växtidentifiering (foto)
+- Smart så- och skördekalender anpassad per zon
+- Samplanteringshjälp
+- Planeringsverktyg
+- Blomnings- och skördescheman
+
+### Deras styrkor
+
+- **Bredast databas** - 22 000 växter (prydnad, träd, buskar - inte bara ätbart)
+- **AI-växtidentifiering** - populär feature, sänker tröskeln
+- **Rimligt pris** - 29 kr/mån / 249 kr/år, generöst gratis-lager
+- **Störst community** - 50 000+ medlemmar
+- **Bra betyg** - 4.7 stjärnor
+- **Granskad av trädgårdsexperter** enligt FAQ
+- **Multi-plattform** - iPhone, iPad, Mac, Apple Vision Pro, Android
+
+### Deras svagheter
+
+- **Bredd över djup** - 22 000 växter men profiler troligen tunna jämfört med våra 25+ datapunkter per gröda
+- **Generell trädgård, inte odlingsfokus** - deras DNA är "din trädgård" snarare än "odla mat"
+- **Begränsningar** - bara en trädgård per konto, ingen delning
+- **Sökning** - FAQ medger att sökning fungerar bäst med ett ord
+- **Ingen fröfilosofi** - blandar allt utan ställningstagande
+- **Ingen zonanpassad tidslinje per gröda** (som vår)
+- **Ingen NPK/näringskurva**
+
+### Jämförelse: Oh!Garden vs Odlingsguiden
+
+| Aspekt | Oh!Garden | Odlingsguiden |
+|--------|-----------|---------------|
+| Antal växter | 22 000+ (hela trädgården) | 77 ätbara (djupa profiler) |
+| Profildjup | Basinfo + skötsel | 25+ datapunkter, NPK, vatteningsfaser, fröbesparing |
+| Zonspecifika tidslinjer | Generell kalender | Ja (3 referenszoner) |
+| AI-identifiering | Ja (betald) | Nej |
+| Community | 50 000+ | Nej |
+| Dagbok/foton | Ja | Nej |
+| Samplantering | Ja (betald) | Ja (gratis, med förklaringar) |
+| Fröfilosofi | Ingen | OP-först, uppmuntrar fröbesparing |
+| Faktacheckade profiler | "Granskade av experter" | Alla 77 faktacheckade mot svenska källor |
+| Pris | 29 kr/mån / 249 kr/år | Gratis (webb) |
+
+### Insikter för oss
+
+- Oh!Garden är den **starkaste konkurrenten** i svensk trädgårds-app-marknaden: bra betyg, rimligt pris, bred databas, community
+- Men de är **en mil bred och en tum djup** - deras styrka (22 000 växter) är också deras svaghet (kan inte gå djupt)
+- Vår nisch (**djup kunskap om ätbart, zonanpassat, faktacheckat**) är tydligt differentierad
+- AI-växtidentifiering är en feature som driver nedladdningar - värt att notera
+- Community-aspekten (50 000 medlemmar) ger nätverkseffekter vi saknar
+- Deras prispunkt (29 kr/mån) verkar fungera bättre än Odla ätbarts 69 kr/mån
+
+---
+
+## Mitt trädgårdsår (My Garden Year AB)
+
+**Analyserad:** 2026-03-04 (session 44)
+
+### Tjänsten
+
+- App (iOS) - oklart om Android finns
+- Personlig trädgårdskalender med månatliga att-göra-listor
+- Utvecklat av My Garden Year AB, Lidingö
+- Kategori: Lifestyle (App Store)
+- Storlek: 28.5 MB (liten och enkel)
+
+### Prissättning
+
+| Plan | Pris |
+|------|------|
+| Gratis | Växter A-C, max 5 växter |
+| Premium | 69 kr/år |
+
+Billigast av alla - 69 kr/år (inte per månad). Aggressiv freemium-modell.
+
+### App Store-data
+
+- Betyg: 4.6 stjärnor (44 betyg)
+- Bra betyg men begränsat antal
+
+### Funktioner
+
+**Gratis:**
+- Växtdatabas (bara A-C)
+- Max 5 växter i trädgården
+- Zonanpassade skötselråd
+
+**Premium (69 kr/år):**
+- Hela växtdatabasen
+- Obegränsat antal växter
+- Exklusiva erbjudanden och rabattkoder
+- Månatliga nyhetsbrev med tips
+
+### Deras styrkor
+
+- **Extremt billigt** - 69 kr/år är impulskopsnivå
+- **Bra betyg** - 4.6 stjärnor
+- **Enkel och fokuserad** - månatlig kalender, inga överflödiga features
+- **Zonanpassat** innehåll
+- **Partnerskap** med trädgårdsföretag (rabattkoder)
+
+### Deras svagheter
+
+- **Begränsad gratis-version** - bara A-C och 5 växter, hård paywall
+- **Liten app** - 28.5 MB tyder på begränsat innehåll
+- **Oklart profildjup** - verkar vara kalender-fokuserad snarare än kunskapsdjup
+- **Ingen community**
+- **Ingen växtidentifiering**
+- **Bara iOS** (oklart om Android)
+
+### Insikter för oss
+
+- 69 kr/år-modellen visar att det finns betalvilja även vid låga prispunkter
+- Deras A-C-begränsning i gratis-versionen är smart men frustrerande för användaren
+- Partnerskap med trädgårdsföretag (rabattkoder) är en intressant intäktsmodell vi inte tänkt på
+- Kalender-fokus = komplementärt till vår kunskaps-fokus
+
+---
+
+## Sammanfattning: svenska odlingsappar
+
+| App | Betyg | Pris | Fokus | Växter | Community |
+|-----|-------|------|-------|--------|-----------|
+| **Oh!Garden** | 4.7 (48) | 29 kr/mån | Hela trädgården | 22 000+ | 50 000+ |
+| **Mitt trädgårdsår** | 4.6 (44) | 69 kr/år | Kalender/att-göra | Okänt | Nej |
+| **Odla ätbart** | 4.0 (27) | 69 kr/mån | Grönsaksodling | 110+ | Nej |
+| **Odlingsguiden** | - | Gratis | Djup kunskap, ätbart | 77 (faktacheckade) | Nej |
+
+### Vår position i landskapet
+
+- **Ingen annan erbjuder djupet vi har** - 25+ datapunkter, NPK-kurvor, zonspecifika tidslinjer, fröbesparing
+- **Gratis + djup** är en unik kombination - alla andra tar betalt for premiuminnehåll
+- **Faktacheckade profiler** - ingen annan marknadsför detta explicit
+- **Fröfilosofi och OP-fokus** - unikt ställningstagande som ingen konkurrent har
+- **Vi saknar planering, community och AI-ID** - det är vad folk betalar for
+
+---
+
 ## Övriga konkurrenter
 
 ### Lantmännens Odla-app
@@ -87,6 +259,12 @@
 - Community-forum, ej app
 - Används som nivå B-källa i vår källrankning
 - Styrka: erfarenhetsbaserad kunskap från verkliga odlare
+
+### Gardenize
+
+- Internationell app (svensk grundare)
+- Trädgårdsdagbok-fokus
+- Ej analyserad i detalj ännu
 
 ---
 
