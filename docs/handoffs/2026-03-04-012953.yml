@@ -1,0 +1,107 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehåll & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 44. Tre roadmap-steg klara + research.
+
+    KLART:
+    - 2.9 Odlingskalender: TimelineSection omskriven till horisontell Gantt-stil
+      - Färgkodade staplar per fas-ikon (amber/grön/teal/orange/blå/rosa)
+      - 3-bokstavs månadsheaders, lodräta gridlines
+      - Tvåradiga labels (110px), side-by-side layout utan sidoscroll
+      - parseMonthEdges() i monthParser.ts
+    - 2.10 Säsongsvy v2: "Visa mer"-knapp (max 3 per grupp)
+      - Nollställs vid månadsbyte
+      - Streckad knapp med accentfärg
+    - SMHI-frostdatum: alla 8 zoner uppdaterade
+      - 24 orter med 50/70/90% vårfrost + 50/70% höstfrost
+      - Zon 1 (25 apr) och zon 2 (8 maj) nu differentierade
+      - Frostfria dagar omräknade (gamla var för optimistiska)
+      - Käll-notis i ZoneSelector för transparens
+      - Research: docs/research/smhi-frostdatum.md
+    - Odla ätbart-källa uppgraderad i kallor.md
+    - Konkurrentanalys: docs/research/konkurrentanalys.md
+    - Nya idéer i roadmap: groningstemperatur, köldtolerans, ätbara blommor
+
+    Commits:
+    - 05e9b46 feat(ui): rewrite timeline to horizontal Gantt-style bar chart
+    - 09b7deb docs(roadmap): mark step 2.9 odlingskalender as done
+    - c734e53 feat(ui): add 'Visa mer' truncation to season view
+    - 168dcd1 docs(roadmap): mark step 2.10 säsongsvy v2 as done
+    - 654bea7 docs(research): add SMHI frost date statistics per city
+    - a8410a2 fix(data): update frost dates from SMHI statistics
+    - 84d164e docs(research): add autumn frost data and frost-free day calculations
+    - a65b546 fix(data): correct frost-free days from SMHI autumn frost data
+    - d8e7795 feat(ui): add frost data source note to zone selector
+    - 5d3e518 docs(guides): update kallor.md with SMHI frost methodology
+    - 94c4826 docs(guides): upgrade Odla Ätbart description in source ranking
+    - 0b81ef0 docs(roadmap): mark frost data done, add data expansion ideas
+    - 846095e docs(research): add competitor analysis - Odla ätbart
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/ROADMAP.md
+    - docs/research/smhi-frostdatum.md (ny)
+    - docs/research/konkurrentanalys.md (ny)
+    - docs/guides/kallor.md (uppdaterad)
+  src:
+    - "src/components/crop/TimelineSection.tsx (omskriven: Gantt-stil)"
+    - "src/components/crop/TimelineSection.module.css (omskriven)"
+    - "src/components/pages/SeasonView.tsx (visa mer-knapp)"
+    - "src/components/pages/SeasonView.module.css (showMore-stil)"
+    - "src/components/pages/ZoneSelector.tsx (käll-notis)"
+    - "src/components/pages/ZoneSelector.module.css (source-stil)"
+    - "src/data/zones.ts (SMHI-förankrade frostdatum)"
+    - "src/utils/monthParser.ts (parseMonthEdges)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "2.4 Frukt: fler profiler (päron, plommon, körsbär, rabarber)"
+  - "2.5 Sökfunktion: sök tvärs kategorier + filtrering"
+  - "Faktacheck gurka + batch 3-profiler mot svenska källor"
+  - "Groningstemperatur + köldtolerans som nya datapunkter"
+  - "Ätbara blommor: första profiler i blommor-kategorin"
+  - "Lighthouse Accessibility: höja från 84"
+
+context:
+  decisions:
+    - "Odlingskalender: side-by-side layout med 110px tvåradiga labels, 3-bokstavs månader, lodräta gridlines"
+    - "Frostdatum: 70% sannolikhet för vårfrost, 50% för höstfrost - balans mellan trygghet och verklighet"
+    - "Frostfria dagar omräknade nedåt (t.ex. zon 1: 200->175) - gamla var för optimistiska"
+    - "Odla Ätbart kvar på nivå B i källrankning - frostdata nivå A men grödguider medeldjupa"
+    - "Vår position: gratis djup kunskap > betalapp med planeringsverktyg"
+  constraints:
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i källkod"
+    - "Alltid korrekt åäö"
+    - "All text på svenska, kompis-ton"
+    - "OP-sorter först i alla sortrekommendationer"
+    - "Frilandsodling som primär odlingsform"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga mätstationer)"
+  - "Gurka och batch 3-profiler saknar dokumenterade källhänvisningar"
+  - "Lighthouse Accessibility 84"
+  - "Lora latin-ext eventuellt samma font-bugg som Fraunces (ej testat)"
+  - "TimelineSection gridlines bryts vid tvåradiga labels (accepterad trade-off)"
