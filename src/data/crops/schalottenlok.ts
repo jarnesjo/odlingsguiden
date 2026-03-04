@@ -97,10 +97,10 @@ export const schalottenlok: Crop = {
     goodAfterWhy: 'Baljväxter fixerar kväve i jorden och bygger upp näringen inför nästa säsong.',
   },
   varieties: [
-    { name: 'Jermor', zones: [1, 2, 3, 4, 5], note: 'Halvlång, kopparröd och en riktig lagringskunglighet. Pålitlig sort som ger jämna, fina klungor. Runåbergs.' },
-    { name: 'Zebrune', zones: [1, 2, 3, 4, 5], note: 'Avlång och elegant med mild, fin smak och silkig textur. En favorit bland kockar. Impecta.' },
-    { name: 'Longor', zones: [1, 2, 3, 4, 5], note: 'Lång, rödskälig sort med bra skörd och fin smak. Lagrar bra. Impecta.' },
-    { name: 'Golden Gourmet', zones: [1, 2, 3, 4, 5, 6], note: 'Rund, gul och mild. Tidig sort som passar bra även i kallare zoner. Nelson Garden.' },
+    { name: 'Jermor', zones: [1, 2, 3, 4, 5], note: 'Halvlång bananschalottenlök och en riktig lagringskunglighet. Pålitlig sort som ger jämna, fina klungor. Larsviken.' },
+    { name: 'Zebrune', zones: [1, 2, 3, 4, 5], note: 'Avlång och elegant med mild, fin smak och silkig textur. En favorit bland kockar. Fröodlad. Impecta.' },
+    { name: 'Longor', zones: [1, 2, 3, 4, 5], note: 'Lång, rödskälig bananschalottenlök med bra skörd och fin smak. Lagrar bra. Nelson Garden (sättlök).' },
+    { name: 'Golden Gourmet', zones: [1, 2, 3, 4, 5, 6], note: 'Rund, gul och mild. Tidig sort som passar bra även i kallare zoner. Wexthuset, Plantagen m.fl.' },
   ],
   problems: [
     { name: 'Lökfluga', symptom: 'Gula, slappa blad. Larver vid lökarnas bas som äter sig in.', fix: 'Täck med fiberduk i maj-juni. Samodla med morot. Strö kalkstensmjöl vid basen av klungan.' },

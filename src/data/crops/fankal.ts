@@ -114,7 +114,7 @@ export const fankal: Crop = {
   varieties: [
     { name: 'Zefa Fino', zones: [1, 2, 3, 4, 5], note: 'Pålitlig OP-sort med kompakta knölar. Snabb mognad och bra motståndskraft mot skottbildning. Finns hos Runåbergs.' },
     { name: 'Finale', zones: [1, 2, 3, 4], note: 'Sen OP-sort som ger stora, tunga knölar. Passar bäst i södra Sverige där säsongen är längre. Finns hos Impecta.' },
-    { name: 'Romanesco', zones: [1, 2, 3, 4], note: 'Italiensk OP-sort med kraftig anissmak. Perfekt för den som vill ha den "riktiga" fänkålssmaken. Finns hos Impecta.' },
+    { name: 'Romanesco', zones: [1, 2, 3, 4], note: 'Italiensk OP-sort med kraftig anissmak. Perfekt för den som vill ha den "riktiga" fänkålssmaken. Internationella fröhus.' },
     { name: 'Perfection', zones: [1, 2, 3, 4, 5], note: 'Pålitlig OP-sort med jämna, runda knölar. Utvecklad för kallare, nordligare klimat. Finns hos Runåbergs.' },
   ],
   problems: [

@@ -101,9 +101,9 @@ export const melon: Crop = {
   },
   varieties: [
     { name: 'Sweet Granite', zones: [1, 2, 3], note: 'En av de allra tidigaste sorterna - helt avgörande i Sverige. Något avlånga frukter med svag nätning. Söt, aromatisk smak. Runåbergs, ekologiskt frö.' },
-    { name: 'Jenny Lind', zones: [1, 2, 3], note: 'Kulturarvssort från 1850-talet, ursprungligen från Armenien. Ger många små, platta frukter. Pålitlig och bra för nybörjare. Runåbergs, ekologiskt.' },
+    { name: 'Jenny Lind', zones: [1, 2, 3], note: 'Amerikansk kulturarvssort från 1850-talet med armeniskt ursprung. Ger många små, platta frukter. Pålitlig och bra för nybörjare. Runåbergs, ekologiskt.' },
     { name: 'Petit Gris de Rennes', zones: [1, 2, 3], note: 'Creme de la creme bland franska cantaloupe-meloner. Små frukter med intensiv, söt smak. Kräver värme men belönar den som väntar. Runåbergs, ekologiskt.' },
-    { name: 'Herma', zones: [1, 2], note: 'Svensk kulturarvssort! Natmelon med söt, krispig, rosa-tonat fruktkött. Kräver god värme men har kulturhistoriskt värde. Runåbergs, ekologiskt.' },
+    { name: 'Herma', zones: [1, 2], note: 'Svensk natmelon med söt, krispig, rosa-tonat fruktkött. Introducerad av Weibulls, numera sällsynt och återupptagen. Kräver god värme. Runåbergs, ekologiskt.' },
     { name: 'Charentais', zones: [1, 2], note: 'Den klassiska franska melonen - otrolig smak men kräver absolut bästa läge eller växthus. Värd besväret om du kan ge henne värme. Runåbergs, ekologiskt.' },
   ],
   problems: [

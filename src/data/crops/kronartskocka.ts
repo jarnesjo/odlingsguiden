@@ -100,9 +100,9 @@ export const kronartskocka: Crop = {
     goodAfterWhy: 'Rotgrönsaker och lök tillhör helt andra familjer och drar nytta av den djupt bearbetade jorden kronärtskockan lämnar efter sig.',
   },
   varieties: [
-    { name: 'Imperial Star', zones: [1, 2, 3, 4], note: 'Snabbast till skörd - ger knoppar redan första året! Utvecklad för ettårig odling. Söta, stora knoppar. 70 cm hög, kompaktare än de flesta. Runåbergs, ekologiskt frö.' },
+    { name: 'Imperial Star', zones: [1, 2, 3, 4], note: 'Snabbast till skörd - ger knoppar redan första året! Utvecklad för ettårig odling. Söta, stora knoppar. Drygt 1 meter hög. Runåbergs, ekologiskt frö.' },
     { name: 'Green Globe', zones: [1, 2, 3], note: 'Den klassiska sorten sedan 1863. Stora gröna knoppar, 8-10 cm, 3-5 per planta. Beprövad och pålitlig. Sara Bäckmo har övervintrat den framgångsrikt tre år i rad!' },
-    { name: 'Herrgårds', zones: [1, 2, 3, 4], note: 'Svensk perenn sort! Silvriga blad, 15-30 knoppar per år (!!!). 150 cm hög. Härdigt till zon 4 enligt SLU. Säljs som plantor/delning - ej fröäkta. Jordkommissionen.' },
+    { name: 'Herrgårds', zones: [1, 2, 3, 4], note: 'Svensk perenn sort (Grönt Kulturarv 2014)! Silvriga blad, 15-30 knoppar per år på etablerade plantor. 150 cm hög. Härdig till zon 4 enligt SLU. Säljs som plantor/delning via Elitplantstationen - ej fröäkta.' },
     { name: 'Violet de Provence', zones: [1, 2], note: 'Vacker grön-violett sort från södra Frankrike. Dekorativ och smakrik men kräver bra värme. Impecta.' },
   ],
   problems: [

@@ -100,9 +100,9 @@ export const jordartskocka: Crop = {
     goodAfterWhy: 'Baljväxter återställer kvävet som jordärtskockan tagit. Dessutom fixerar de kväve som gynnar eventuella kvarglömda knölar.',
   },
   varieties: [
-    { name: 'Fuseau', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Slät och avlång - mycket lättare att skala än de knotiga sorterna. Mild, nötaktig smak. Finns hos plantskolor och specialhandlare.' },
-    { name: 'Bianca', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Vit, rund knöl. Extremt härdig - klarar även zon 8. Bra avkastning. Blomsterlandet.' },
-    { name: 'Rema', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Svensk OP-sort med jämna, runda knölar och god smak. Pålitlig och lättskördad. Larsviken.' },
+    { name: 'Fuseau', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Slät och avlång fransk sort - mycket lättare att skala än de knotiga sorterna. Mild, nötaktig smak.' },
+    { name: 'Bianka', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Vit knöl. Extremt härdig - klarar även zon 8. Bra avkastning. Blomsterlandet (Säve Plantskola).' },
+    { name: 'Rema', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Sen tysk sort med jämna knölar och god smak. Pålitlig och lättskördad. Larsviken.' },
   ],
   problems: [
     { name: 'Sork och mullvad', symptom: 'Knölarna försvinner eller gnags sönder under jorden. Gångar i jorden nära plantorna.', fix: 'Sätt i upphöjd bädd med nätbotten (hönsnät). Eller odla i stor kruka/tunna. Fällor vid behov. Sorkar ÄLSKAR jordärtskockor.' },

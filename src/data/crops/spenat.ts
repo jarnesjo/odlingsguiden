@@ -97,7 +97,7 @@ export const spenat: Crop = {
   varieties: [
     { name: 'Matador', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Klassisk, pålitlig sort med mörkgröna, tjocka blad. Relativt långsam att gå i blom. Funkar överallt.' },
     { name: 'Bloomsdale Long Standing', zones: [1, 2, 3, 4, 5, 6], note: 'Krispiga, bubbliga blad och en av de mest blomtåliga sorterna. Perfekt för sommarsådd.' },
-    { name: 'Butterflay', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Snabbväxande, ger skörd redan efter 30 dagar. Mjuka blad som är fantastiska färska.' },
+    { name: 'Butterflay', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Snabbväxande, ger skörd redan efter 35 dagar. Mjuka blad som är fantastiska färska. Lindbloms (demeter/ekologiskt).' },
     { name: 'Monstrueux de Viroflay', zones: [1, 2, 3, 4, 5, 6], note: 'Fransk heirloom (1866) med stora, breda blad. Ger riklig skörd men kräver bra näring. Finns hos Impecta.' },
     { name: 'Palco F1', zones: [1, 2, 3, 4, 5, 6, 7], note: 'Hybrid med hög bladmögelresistens. Bra i fuktigt klimat men spara inte frö (F1).' },
   ],

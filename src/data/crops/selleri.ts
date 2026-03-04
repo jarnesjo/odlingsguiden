@@ -122,11 +122,11 @@ export const selleri: Crop = {
     goodAfterWhy: 'Sellerin lämnar efter sig en välgödslad, väl bearbetad plats som kål och sallat drar nytta av.',
   },
   varieties: [
-    { name: 'Tall Utah', zones: [1, 2, 3, 4], note: 'Den stora klassikern! Hög, mörkgrön och upprätt med kompakt växtsätt. Pålitlig och smakrik - finns hos både Runåbergs, Lindbloms (ekologisk/demeter) och Impecta.' },
-    { name: 'Giant Pascal', zones: [1, 2, 3, 4], note: 'Gammal kulturarvssort med tjocka, breda stjälkar. Behöver lång säsong men belönar med saftiga, milda stjälkar perfekta för blekning.' },
+    { name: 'Tall Utah', zones: [1, 2, 3, 4], note: 'Den stora klassikern! Hög, mörkgrön och upprätt med kompakt växtsätt. Pålitlig och smakrik - finns hos Runåbergs och Lindbloms (demeter/ekologiskt).' },
+    { name: 'Giant Pascal', zones: [1, 2, 3, 4], note: 'Gammal kulturarvssort (Vilmorin 1885) med tjocka, breda stjälkar. Behöver lång säsong men belönar med saftiga, milda stjälkar perfekta för blekning. Internationella fröhus.' },
     { name: 'Redventure', zones: [1, 2, 3], note: 'Vacker OP-sort med violettröda stjälkar från Runåbergs. Ger färg i köksträdgården och på tallriken.' },
     { name: 'Chinese Pink Celery', zones: [1, 2, 3, 4], note: 'Nyhet hos Runåbergs 2026! Ljust rosa-lila stjälkar. Vacker och ovanlig - ett samtalsämne i trädgården.' },
-    { name: 'Victoria F1', zones: [1, 2, 3, 4, 5], note: 'F1-hybrid med extra stark motståndskraft mot borrning (för tidig blomning). Bra val i kalla lägen där temperaturen kan svänga. Finns hos Impecta.' },
+    { name: 'Victoria F1', zones: [1, 2, 3, 4, 5], note: 'F1-hybrid med extra stark motståndskraft mot borrning (för tidig blomning). Bra val i kalla lägen där temperaturen kan svänga.' },
   ],
   problems: [
     { name: 'Selleriflugan', symptom: 'Bruna gångar och blåsor i bladen - larverna äter sig genom bladskivan', fix: 'Fiberduk från utplantering! Kolla bladen regelbundet och klipp bort angripna blad direkt. Samodla med lök.' },

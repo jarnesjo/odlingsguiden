@@ -95,8 +95,8 @@ export const storbona: Crop = {
   varieties: [
     { name: 'Neckarkönigin', zones: [1, 2, 3, 4, 5], note: 'Rikbärande OP-klassiker med gröna, raka baljor. Pålitlig och lättodlad - det säkra valet. Finns hos Impecta och Runåbergs.' },
     { name: 'Blauhilde', zones: [1, 2, 3, 4, 5], note: 'Fantastiskt vacker OP-sort med djupt blålila baljor. Lika god som snygg - baljorna blir gröna vid tillagning. Finns hos Impecta.' },
-    { name: 'Goldmarie', zones: [1, 2, 3, 4], note: 'Gul vaxböna med mild, smörig smak. OP-sort som ger vackra gula baljor - fint som kontrast till gröna sorter. Finns hos Lindbloms.' },
-    { name: 'Cobra', zones: [1, 2, 3, 4, 5], note: 'Tidig och pålitlig OP-sort med gröna, trådlösa baljor. Sätter baljor rikligt och tidigt - bra val för kortare säsonger. Finns hos Nelson Garden.' },
+    { name: 'Goldmarie', zones: [1, 2, 3, 4], note: 'Gul vaxböna med mild, smörig smak. Kulturarvsmärkt svensk sort som ger vackra gula baljor - fint som kontrast till gröna sorter. Finns hos Impecta.' },
+    { name: 'Cobra', zones: [1, 2, 3, 4, 5], note: 'Tidig och pålitlig OP-sort med gröna, trådlösa baljor. Sätter baljor rikligt och tidigt - bra val för kortare säsonger. Finns hos Impecta och Lindbloms.' },
   ],
   problems: [
     { name: 'Bönflugan', symptom: 'Fröna gror dåligt eller inte alls - larverna äter fröna inifrån', fix: 'Så i varm jord (minst 12°C) så att fröna gror snabbt förbi det känsliga stadiet. Täck med fiberduk de första veckorna.' },
