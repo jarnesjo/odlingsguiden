@@ -142,6 +142,7 @@ export const rabarber: Crop = {
       'Plantera på hösten om möjligt - ger bäst etablering',
       'Ge varje planta ordentligt med plats (minst 1 meter) - hon blir stor!',
       'Motstå frestelsen att skörda första året - det lönar sig i längden',
+      'Skörda genom att vrida och dra stjälken vid basen - använd aldrig kniv',
     ],
     indoorWeeks: null,
   },
@@ -172,7 +173,6 @@ export const rabarber: Crop = {
       { method: 'Saft', icon: 'storage', duration: '6+ månader', description: 'Rabarbersaft är sommar på flaska. Koka med socker och vatten, sila och häll upp. Fantastisk att blanda med jordgubbssaft!', best: false },
     ],
     tips: [
-      'Skörda genom att vrida och dra stjälken vid basen - klipp inte med kniv',
       'Frys i portionspåsar (3-4 dl per påse) - perfekt till en paj',
       'Rabarbern behöver inte skalas, bara sköljas',
       'Kombinera med jordgubbar i allt - de är ett drömpar',
