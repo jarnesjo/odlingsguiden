@@ -103,7 +103,7 @@ Efter att ha faktacheckat alla 43 profiler har vi byggt upp erfarenhet om vilka 
 
 | Källa | Styrka | Notering |
 | --- | --- | --- |
-| **Odla Ätbart** | Sammanfattande odlingsdata | Bra översikt men dubbelkolla mot nivå A-källor |
+| **Odla Ätbart** (odlaatbart.se) | Odlingsdata, SMHI-froststatistik, companion planting | Utbildade trädgårdsmästare. Frostdatum pålitliga (nivå A-kvalitet). Gröd-guider medeldjupa - bra komplement |
 | **Jordbruksverket** | Växtskydd, sjukdomar, ekologisk odling | Auktoritativ för sjukdomar/skadedjur |
 | **Nelson Garden** | Sortutbud, zonhärdighet | Stor marknadsledare, ibland generösa zonbedömningar |
 | **Odlarglädjen** | Sortinfo, praktiska tips | Bra för ovanligare sorter |
