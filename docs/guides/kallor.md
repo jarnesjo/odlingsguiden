@@ -39,7 +39,7 @@ Nya profiler faktacheckas vid skapande (inbyggt i checklistan i `docs/guides/ny-
 | **SLU** (Sveriges lantbruksuniversitet) | Odlingstider, växtskydd, sortförsök |
 | **Jordbruksverket** - odlingsbeskrivningar | Ekologisk odling, växtnäring, jordförbättring |
 | **Jordbruksverket** - Växtskyddsinfo (databas) | Sjukdomar och skadedjur - sök per gröda |
-| **SMHI** | Frostdatum, vegetationsperiod, klimatdata per ort |
+| **SMHI** (via odlaatbart.se) | Frostdatum per ort (50/70/90%), vegetationsperiod. Zondata baseras på 70%-sannolikhet for varfrost och 50% for hostfrost. Se `docs/research/smhi-frostdatum.md` |
 | **Hushållningssällskapet** | Regionala odlingsråd, "Frilandsgrönsaker i norr" (PDF) |
 
 ### Organisationer & zondata
@@ -289,7 +289,8 @@ Detaljerad research sparas i `docs/research/`:
 | `faktacheck-2026-03-02-batch6.md` | Batch 6: krusbar, bjornbar, mullbar, rabarber |
 | `faktacheck-2026-03-02-batch7.md` | Batch 7: basilika, persilja, dill, graslok |
 | `faktacheck-2026-03-02-batch8.md` | Batch 8: timjan, mynta, rosmarin, oregano (sista) |
+| `smhi-frostdatum.md` | SMHI-baserad froststatistik: 24 orter, var/host, mappning till zoner |
 
 ---
 
-*Senast uppdaterad: 2026-03-03 (session 40)*
+*Senast uppdaterad: 2026-03-04 (session 44)*
