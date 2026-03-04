@@ -105,9 +105,9 @@ export const fikon: Crop = {
     goodAfterWhy: 'Bygg upp jordstrukturen med gröngödsling.',
   },
   varieties: [
-    { name: 'Bornholms Diamant', zones: [1, 2, 3, 4, 5, 6], note: 'Den vanligaste sorten i Sverige. Medelstor, gröngul frukt med underbar smak. Partenokarp (sätter frukt utan pollinering). Krukodlas i alla zoner, friland zon 1.' },
-    { name: 'Brown Turkey', zones: [1, 2, 3, 4, 5, 6], note: 'Stor, brunröd frukt. Riklig bärare med mild, söt smak. Något tåligare köldmässigt. Nybörjarvänlig.' },
-    { name: 'Hardy Chicago', zones: [1, 2, 3, 4, 5, 6], note: 'Känd för härdighet i USA - stammar tål -12°C, rötter ner till -29°C. Svårare att hitta i Sverige men värd att leta efter.' },
+    { name: 'Bornholms Diamant', zones: [1, 2, 3], note: 'Den vanligaste sorten i Sverige. Medelstor, gröngul frukt med underbar smak. Partenokarp (sätter frukt utan pollinering). Friland zon 1, växthus/kruka zon 2-3.' },
+    { name: 'Brown Turkey', zones: [1, 2, 3], note: 'Stor, brunröd frukt. Riklig bärare med mild, söt smak. Något tåligare köldmässigt. Nybörjarvänlig. Friland zon 1, växthus/kruka zon 2-3.' },
+    { name: 'Hardy Chicago', zones: [1, 2, 3], note: 'Känd för härdighet i USA - stammar tål -12°C, rötter ner till -29°C. Svårare att hitta i Sverige men värd att leta efter. Friland zon 1, växthus/kruka zon 2-3.' },
     { name: 'Negronne', zones: [1, 2, 3], note: 'Liten, mörkviolett frukt med intensiv, rik smak. Kompakt träd - perfekt i kruka. Något känsligare för kyla.' },
   ],
   problems: [
