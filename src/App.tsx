@@ -1,19 +1,13 @@
-import { lazy, Suspense, useState } from 'react'
+import { useState } from 'react'
 import { Routes, Route, useNavigate, useParams, useLocation } from 'react-router-dom'
 import type { Category, Zone } from './data/types'
 import { SLUG_TO_ID, ID_TO_SLUG } from './data/cropSlugs'
 import { MONTH_SLUGS, monthSlugToNumber } from './utils/monthParser'
 import { CropList, ZoneSelector } from './components/pages'
+import { CropPage } from './components/pages/CropPage'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { CATEGORIES } from './data/categories'
 import { CROP_LIST } from './data/cropList'
-import { CropPage as CropPageEager } from './components/pages/CropPage'
-
-// Under SSR: eager import (lazy resolvas aldrig under prerender)
-// I klienten: lazy import för code splitting
-const CropPage = import.meta.env.SSR
-  ? CropPageEager
-  : lazy(() => import('./components/pages/CropPage').then(m => ({ default: m.CropPage })))
 
 /** Resolves which view the current route represents */
 type View = 'sasong' | Category
@@ -97,11 +91,7 @@ function App() {
           <Route path="/säsong/:monthSlug" element={<SeasonRoute userZone={userZone} onZoneClick={zoneClick} />} />
           <Route
             path="/:cropSlug"
-            element={
-              <Suspense fallback={null}>
-                <CropRoute userZone={userZone} onZoneClick={zoneClick} />
-              </Suspense>
-            }
+            element={<CropRoute userZone={userZone} onZoneClick={zoneClick} />}
           />
         </Routes>
       </div>
