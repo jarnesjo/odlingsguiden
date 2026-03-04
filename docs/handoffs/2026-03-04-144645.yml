@@ -1,0 +1,95 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 49. Faktacheck batch 11 - 9 barprofiler.
+
+    KLART:
+    - Faktacheck batch 11: vita vinbar, guldvinbar, tayberry, blabar,
+      lingon, havtorn, aronia, tranbar, honungsbar
+    - 38 sorter verifierade mot svenska plantskolor via websok
+    - Systematiskt uppblasta zondata korrigerade (de flesta hade 1-8, korrekta ar 1-4/1-5)
+    - 5 sorter borttagna (ej tillgangliga, felklassificerade, eller existerar ej):
+      Josta (fel kategori), Blanka (ovanlig), Medana Tayberry (dublett),
+      Fridur havtorn (existerar ej), Otradnaja havtorn (saljs ej i Sverige)
+    - Ursprungsangivelser korrigerade:
+      Sanna lingon: Rejmyre -> SLU Balsgard/Smaland
+      Ida lingon: norsk -> svensk (Balsgard)
+      Hugin aronia: Balsgard -> SLU Alnarp (kanadensiskt vilt material)
+      Viking/Nero aronia: finskt/tjeckiskt -> ryskt (Mitchurin)
+    - Stavfel: Botanisjtjeskaja -> Botanitjeskaja Ljubitelskaja,
+      Baktsjarskaja -> Bakczarskaja
+    - Duet honungsbar: inte "tva sorter i ett" utan polsk sort
+    - Ben Lear tranbar borttagen (ej tillganglig i Sverige)
+    - Kvalitetsregister uppdaterat: 55/85 profiler faktacheckade
+
+    Commits:
+    - d6fd454 fix(content): fact-check 9 berry profiles
+    - 434dbbf docs(research): fact-check batch 11 - 9 berry profiles
+    - df4f3ed docs(guides): update kvalitetsregister after batch 11
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/research/faktacheck-2026-03-04-batch11-bar.md
+    - "docs/guides/kvalitetsregister.md (55/85 faktacheckade)"
+  src:
+    - "src/data/crops/vita-vinbar.ts (3 sorter, -1 Blanka)"
+    - "src/data/crops/guldvinbar.ts (2 sorter, -1 Josta)"
+    - "src/data/crops/tayberry.ts (2 sorter, -1 Medana, zoner nedjusterade)"
+    - "src/data/crops/blabar.ts (6 sorter, zoner 1-5 ist for 1-6)"
+    - "src/data/crops/lingon.ts (4 sorter, ursprung och zoner fixade)"
+    - "src/data/crops/havtorn.ts (4 sorter, -2 Fridur+Otradnaja, zoner kraftigt nedjusterade)"
+    - "src/data/crops/aronia.ts (4 sorter, ursprung och zoner fixade)"
+    - "src/data/crops/tranbar.ts (3 sorter, -1 Ben Lear, zoner nedjusterade)"
+    - "src/data/crops/honungsbar.ts (4 sorter, -1 Berry Blue, Duet+Bakczarskaja fixade)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Faktacheck batch 12: Kryddor (10 st) - koriander, kummin, mejram, dragon, salvia, citronmeliss, krasse, lagerblad, libbsticka, ramslok"
+  - "Faktacheck batch 13: Ovriga gronsaker (10 st) - selleri, rotselleri, fankal, melon, schalottenlok, spenat, endiv, storbona, jordartskocka, kronartskocka"
+  - "Faktacheck batch 14: Resterande bar (jordgubbar, hallon, bjornbar, roda vinbar, svarta vinbar, krusbar, rabarber)"
+  - "Uppdatera kvalitetsregister efter alla batchar (55 klara, 30 kvar)"
+
+context:
+  decisions:
+    - "Zondata i barprofiler var systematiskt uppblasta - framtida profiler maste verifieras mot Tradgardstrollets sortguider och E-planta"
+    - "Josta ar krusvinbar (Ribes x nidigrolaria), inte guldvinbar - borttagning korrekt"
+    - "Fridur havtorn existerar inte som sort - fabricerat"
+    - "Medana Tayberry ar inte en egen sort utan virusfritt certifikat av original-Tayberry"
+    - "Duet honungsbar ar en enskild polsk sort, inte tva sorter i en forpackning"
+  constraints:
+    - "CropIcon.tsx och CropGraphic.tsx har DUPLICERADE ID_TO_PATH - bada maste uppdateras"
+    - "CROP_LIST i cropList.ts maste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Frilandsodling som primar odlingsform"
+    - "Sorter maste verifieras mot svenska frokataloger/plantskolor"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "30 profiler saknar formell faktacheck"
+  - "Lighthouse Accessibility 84"
