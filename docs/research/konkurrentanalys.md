@@ -227,12 +227,90 @@ Billigast av alla - 69 kr/år (inte per månad). Aggressiv freemium-modell.
 
 ---
 
+## Grodd: Från frö till skörd (groddapp.com)
+
+**Analyserad:** 2026-03-04
+
+### Tjänsten
+
+- App (iOS + Android) + webb
+- Fröhantering och odlingsplanering
+- Utvecklat av Grodd app AB, Stockholm (Sortuna Fridhem 1, 619 95)
+- Kategori: Lifestyle (App Store)
+- Storlek: 38.1 MB
+
+### Prissättning
+
+| Plan | Pris |
+|------|------|
+| Gratis | Grundfunktioner |
+| Månadsabonnemang | 49 kr/mån |
+| Årsabonnemang | 349 kr/år (~29 kr/mån) |
+| Livstidsåtkomst | 1 499 kr |
+
+Mellan Odla ätbart och Oh!Garden i pris. Livstidsoption är ovanligt - kan locka entusiaster.
+
+### App Store-data
+
+- Betyg: 5.0 stjärnor (1 betyg) - för tidigt att bedöma
+- Version 1.0.4 (2025-07-16) - relativt ny
+- Språk: Engelska (trots svenskt bolag)
+
+### Funktioner
+
+- **Scanna fröpåsar** med mobilkameran - fröna läggs automatiskt i digital samling
+- **Frödatabas** - sök och organisera frön
+- **Odlingskalender** - planera och följa odlingen
+- **Digital frösamling** - samla alla frön på ett ställe (köpta och sparade)
+- **Anteckningar** och dokumentation
+- **Skördspårning** och sådatumhantering
+
+### Deras styrkor
+
+- **Unik feature: scanna fröpåsar** - ingen annan svensk app erbjuder detta. Smart onboarding som sänker tröskeln.
+- **Frösamlingsfokus** - löser ett verkligt problem (vilka frön har jag?) som ingen annan adresserar
+- **Multi-plattform** - iOS + Android
+- **Livstidsoption** - visar att de tror på långsiktigt värde, inte bara churn
+- **Modernt bolag** med dedikerad domän och AB-registrering
+
+### Deras svagheter
+
+- **Extremt ny** - version 1.0.4, bara 1 betyg. Oklart om den har traction
+- **Språk: engelska** - konstigt för en svensk app riktad mot svenska odlare
+- **Oklart kunskapsdjup** - verkar vara planerings/verktygsapp, inte kunskapsapp
+- **Inga zonspecifika guider** synliga i beskrivningen
+- **Ingen community**
+- **Facebook SDK** i senaste uppdateringen - integritetsfråga
+
+### Jämförelse: Grodd vs Odlingsguiden
+
+| Aspekt | Grodd | Odlingsguiden |
+|--------|-------|---------------|
+| Fokus | Fröhantering + planering | Djup kunskap per gröda |
+| Unik feature | Scanna fröpåsar | NPK-kurvor, vatteningsfaser, fröbesparing |
+| Zonspecifikt | Oklart | Ja (3 referenszoner) |
+| Grödprofiler | Frödatabas (okänt djup) | 77 djupa profiler (25+ datapunkter) |
+| Fröfilosofi | Ingen synlig | OP-först, uppmuntrar fröbesparing |
+| Pris | 49 kr/mån / 349 kr/år | Gratis (webb) |
+| Plattform | App (iOS + Android) | Webb (app planerad) |
+
+### Insikter för oss
+
+- **Scanna fröpåsar** är en smart feature vi bör ha på radarn - det löser ett konkret problem
+- Grodd fokuserar på **verktyg** (organisera, planera), vi på **kunskap** (lär dig odla) - komplementärt
+- Frösamlings-konceptet passar bra ihop med vår fröfilosofi - vi kunde differentiera genom att koppla frösamling till OP/F1-info och fröbesparingstips
+- Ny aktör (2025) visar att marknaden fortfarande attraherar nya entreprenörer
+- Deras engelska gränssnitt trots svenskt bolag tyder på ambitioner utanför Sverige, eller att produkten inte är färdigpolerad ännu
+
+---
+
 ## Sammanfattning: svenska odlingsappar
 
 | App | Betyg | Pris | Fokus | Växter | Community |
 |-----|-------|------|-------|--------|-----------|
 | **Oh!Garden** | 4.7 (48) | 29 kr/mån | Hela trädgården | 22 000+ | 50 000+ |
 | **Mitt trädgårdsår** | 4.6 (44) | 69 kr/år | Kalender/att-göra | Okänt | Nej |
+| **Grodd** | 5.0 (1) | 49 kr/mån | Fröhantering + planering | Frödatabas | Nej |
 | **Odla ätbart** | 4.0 (27) | 69 kr/mån | Grönsaksodling | 110+ | Nej |
 | **Odlingsguiden** | - | Gratis | Djup kunskap, ätbart | 77 (faktacheckade) | Nej |
 
@@ -268,4 +346,4 @@ Billigast av alla - 69 kr/år (inte per månad). Aggressiv freemium-modell.
 
 ---
 
-*Senast uppdaterad: 2026-03-04 (session 44)*
+*Senast uppdaterad: 2026-03-04 (session 45)*
