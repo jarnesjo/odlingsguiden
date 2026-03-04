@@ -260,33 +260,19 @@ Plan: `docs/plans/1.10-code-splitting.yml`
 
 Plan: `docs/plans/4.2-lcp-optimering.yml`
 
-### 4.3 Prerendering (SSG)
+### 4.3 Prerendering (SSG) ✅
 
 > Statisk HTML vid byggtid + React-hydration - snabb FCP/LCP utan att tappa SPA-känslan
 
-Prerendering renderar varje route till statisk HTML vid byggtid. Användaren ser innehåll direkt (ingen vit sida medan JS laddar), sen tar React över via hydration och appen fungerar som vanlig SPA med snabb navigation, zonväljare, filter etc.
+Eget prerender-script (inga extra deps) med React 19 `prerender()` API och `StaticRouter`. Renderar 102 routes till statisk HTML med korrekt title, description, och inbäddad JSON-data för flash-fri hydration.
 
-**Varför det passar Odlingsguiden:**
-- 85+ grödprofiler med statiskt innehåll - perfekt för SSG
-- Varje gröda har egen URL redan (`/morot`, `/basilika`) - en HTML-fil per route
-- SEO-boost: sökmotorer och AI-svar får riktig HTML istället för tom `<div id="root">`
-- Drastisk LCP-förbättring: HTML renderas utan att vänta på JS-bundle
-
-**Verktyg som passar vår Vite-setup:**
-- **vike** (f.d. vite-plugin-ssr) - SSR/SSG direkt i Vite, minst omskrivning
-- **vite-ssg** - enklare, bara statisk generering
-- Alternativt **Astro** med React-öar, men större omskrivning
-
-**Flöde:**
-1. Byggtid: Vite renderar alla routes → `dist/morot/index.html`, `dist/basilika/index.html` etc.
-2. Första besöket: Användaren ser HTML direkt (snabb LCP)
-3. Hydration (~1-2s): React tar över, appen blir interaktiv
-4. Efter hydration: Full SPA-känsla - snabb navigation, inga omladdningar
-
-- [ ] Utvärdera vike vs vite-ssg för vår setup
-- [ ] Implementera SSG-bygge för alla routes
-- [ ] Verifiera att hydration fungerar korrekt (zonväljare, filter, navigation)
-- [ ] Mäta LCP-förbättring
+- [x] Eget prerender-script (`scripts/prerender.ts`) - inga extra deps
+- [x] SSR entry point (`src/entry-server.tsx`) med React 19 prerender() API
+- [x] Alla 102 routes prerenderas (85 grödor, 4 kategorier, 12 säsongsmånader, startsida)
+- [x] Flash-fri hydration: gröddata och säsongsdata inbäddad som JSON
+- [x] Korrekt title och meta description per route
+- [x] Alla CSS-filer (inklusive lazy chunks) injiceras i `<head>`
+- [x] useLocalStorage SSR-guard
 
 ### 4.4 Accessibility
 
