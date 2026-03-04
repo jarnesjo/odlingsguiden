@@ -1,0 +1,87 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 51. Faktacheck batch 13 - 9 gronsaker + fikonfix.
+
+    KLART:
+    - Faktacheck batch 13: selleri, fankal, melon, schalottenlok, spenat,
+      endiv, storbona, jordartskocka, kronartskocka
+    - Rotselleri EXKLUDERAD - gors separat av anvandaren
+    - 43 sorter verifierade mot svenska frokataloger via websok
+    - 0 fabricerade sorter (bra kvalitet)
+    - 10 felaktiga leverantorsreferenser korrigerade
+    - 3 felaktiga pastaenden korrigerade:
+      Herma: "Svensk kulturarvssort" -> nej, Runåbergs sager explicit nej
+      Rema jordartskocka: "Svensk OP-sort" -> tysk sort, vegetativ forokning
+      Imperial Star kronartskocka: 70 cm hojd -> 100 cm (Runåbergs)
+    - 1 tidskorrektion: Butterflay spenat 35 dagar (ej 30)
+    - 1 historisk nyansering: Jenny Lind melon ursprung
+    - Fikon sortzoner fixade: 1-6 -> 1-3 (matchade inte profilzoner)
+    - Kvalitetsregister uppdaterat: 74/85 profiler faktacheckade
+
+    Commits:
+    - 37c86ef fix(content): fact-check 9 vegetable profiles
+    - a38c767 docs(research): fact-check batch 13 - 9 vegetable profiles
+    - 1b0c0aa docs(guides): update kvalitetsregister after batch 13
+    - e743fed fix(crops): correct fikon variety zones to match profile zones
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - docs/research/faktacheck-2026-03-04-batch13-gronsaker.md
+    - "docs/guides/kvalitetsregister.md (74/85 faktacheckade)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Faktacheck rotselleri - gors manuellt av anvandaren"
+  - "Faktacheck batch 14: Resterande gronsaker (10 st) - gronkal, vitkal, rodkal, broccoli, blomkal, pak choi, kinakal, brysselkal, savoykal, majrova"
+  - "Uppdatera kvalitetsregister efter alla batchar (74 klara, 11 kvar)"
+  - "Kontrollera att alla fruktprofiler har sortzoner som matchar profilzoner (samma problem som fikon?)"
+
+context:
+  decisions:
+    - "Gronsaksprofilerna hade 0 fabricerade sorter - hogre kvalitet an tidiga batchar"
+    - "10 felaktiga leverantorsreferenser - vanligaste felet ar att sorter tillskrivs fel frokatalog"
+    - "Herma melon ar INTE kulturarvssort enligt Runåbergs - introducerad av Weibulls 1900-talet"
+    - "Rema jordartskocka ar tysk, inte svensk - och OP ar irrelevant for vegetativt forökade"
+    - "Imperial Star kronartskocka ar 100 cm, inte 70 cm"
+    - "Jordkommissionen ar en redaktionell sajt, saljer inga vaxter"
+    - "Cobra storbona ar bekraftad OP (ej F1) via Johnny's Selected Seeds"
+  constraints:
+    - "CropIcon.tsx och CropGraphic.tsx har DUPLICERADE ID_TO_PATH - bada maste uppdateras"
+    - "CROP_LIST i cropList.ts maste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Frilandsodling som primar odlingsform"
+    - "Sorter maste verifieras mot svenska frokataloger/plantskolor"
+    - "Sortzoner maste matcha profilzoner (outdoor + greenhouse)"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "11 profiler saknar formell faktacheck (rotselleri + 10 kal/gronsaker)"
+  - "Lighthouse Accessibility 84"
+  - "Andra fruktprofiler kan ha samma zonproblem som fikon - bor kontrolleras"
