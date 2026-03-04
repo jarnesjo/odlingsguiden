@@ -88,7 +88,7 @@ export const guldvinbar: Crop = {
     good: [
       { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', why: 'Lockar pollinatörer. Guldvinbär behöver korspollinering för bäst skörd - humlor och bin behövs!' },
       { name: 'Andra guldvinbärsplantor', icon: 'berry', why: 'Korspollinering är viktigt! Plantera minst 2 buskar - gärna olika sorter - för ordentlig bärsättning.' },
-      { name: 'Vildblommor', icon: 'flower', why: 'Ängsblommor lockar pollinatörer och guldvinbärets doftande blommor lockar ännu fler. Win-win för alla.' },
+      { name: 'Vildblommor', icon: 'flower', why: 'Ängsblommor lockar pollinatörer och guldvinbärets doftande blommor lockar ännu fler. Alla vinner på det.' },
     ],
     bad: [
       { name: 'Tallbecksväxt (Ribes)-värdar för tallbarrsrost', icon: 'vegetable', why: 'Ribes-arter kan vara mellanvärdar för tallbarrsrost (Cronartium ribicola). Undvik att plantera nära fembarriga tallar.' },

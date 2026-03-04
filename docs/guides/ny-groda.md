@@ -330,7 +330,7 @@ Tonen är det som skiljer Grödguiden från en tråkig faktadatabas. Varje text 
 
 3. **Dramatisera viktiga moment.** "Kritisk period! Vattenstress nu ger att blommorna faller av." Inte: "Vattna regelbundet under blomning."
 
-4. **Humor och igenkänning.** Lägg in "hard way"-lärdomar. "...istället för 40 kg morötter samtidigt i september." Saker som erfarna odlare skrattar igenkännande åt.
+4. **Humor och igenkänning.** Lägg in "lärde-sig-på-egen-hand"-lärdomar. "...istället för 40 kg morötter samtidigt i september." Saker som erfarna odlare skrattar igenkännande åt.
 
 5. **Känsla istället för procent.** "Blanda ungefär 7 delar jord med 3 delar perlit – hon måste kunna andas." Inte: "Använd 70% jord + 30% perlit."
 

@@ -52,7 +52,7 @@ export function GoodToKnow({ items, onNavigate }: GoodToKnowProps) {
   return (
     <Section title="Bra att veta" icon={<TipIcon size={20} />}>
       <p className={styles.intro}>
-        Saker som erfarna odlare vet - och nybörjare ofta lär sig the hard way.
+        Saker som erfarna odlare vet - och nybörjare ofta får lära sig på egen hand.
       </p>
       {items.map((item, i) => (
         <div
