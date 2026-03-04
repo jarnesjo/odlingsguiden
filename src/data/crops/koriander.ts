@@ -97,10 +97,10 @@ export const koriander: Crop = {
     goodAfterWhy: 'Baljväxter berikar jorden med kväve. Potatis lämnar lucker jord som koriandens rötter uppskattar.',
   },
   varieties: [
-    { name: 'Jantar', zones: [1, 2, 3, 4, 5, 6], note: 'Europas mest odlade sort. Sen blomning, riklig bladmassa och aromatiska frön med en fin apelsindoft. 50-70 cm. Ekologiskt frö hos Lindbloms.' },
+    { name: 'Jantar', zones: [1, 2, 3, 4, 5, 6], note: 'Troligen Europas mest odlade sort. Sen blomning, riklig bladmassa och aromatiska frön med en fin apelsindoft. 50-70 cm. Ekologiskt frö hos Lindbloms.' },
     { name: 'Filtro (bladkoriander)', zones: [1, 2, 3, 4, 5, 6], note: 'Slow-bolt bladkoriander - extra sen blomning och kompakt växtsätt. Bästa valet om du främst vill ha blad. Finns hos Runåbergs.' },
-    { name: 'Confetti', zones: [1, 2, 3, 4, 5, 6], note: 'Ovanlig sort med mycket finflikiga blad som påminner om morotsblast. Sötare, mildare smak. Vacker i sallad.' },
-    { name: 'Leisure', zones: [1, 2, 3, 4, 5], note: 'Stora, breda blad och sen blomning. Ger riklig bladskörd. Bra val för den som vill maximera färska blad.' },
+    { name: 'Confetti', zones: [1, 2, 3, 4, 5, 6], note: 'Särpräglad sort med mycket finflikiga blad som påminner om morotsblast. Sötare, mildare smak. Vacker i sallad. Finns hos Impecta.' },
+    { name: 'Leisure', zones: [1, 2, 3, 4, 5], note: 'Slow-bolt-sort med stora blad och sen blomning. 60-90 cm. Ger riklig bladskörd. Finns hos Impecta.' },
   ],
   problems: [
     { name: 'Skottning (bolting)', symptom: 'Plantan sträcker sig, bildar tunna dillliknande blad och blomställning. Bladsmaken blir bitter.', fix: 'Det vanligaste problemet! Välj slow-bolt-sorter (Jantar, Filtro), ge skugga under varmaste timmarna, håll jämn fukt. Successionsådd var 3:e vecka är den bästa försäkringen.' },

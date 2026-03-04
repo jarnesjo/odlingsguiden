@@ -10,7 +10,7 @@ export const citronmeliss: Crop = {
   lifespan: '5-10 år (sprider sig villigt)',
   difficulty: 'Enkel',
   difficultyWhy: 'Härdig perenn som klarar sig i de flesta svenska zoner med minimal skötsel. Sprider sig gärna - ibland lite för gärna. Det svåra är inte att få den att växa, utan att hindra den från att ta över.',
-  zones: { outdoor: [1, 2, 3, 4, 5], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6, 7, 8] },
+  zones: { outdoor: [1, 2, 3, 4], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: [1, 2, 3, 4, 5, 6, 7, 8] },
   days: '75-120',
   spacing: '30-40 cm',
   rowSpacing: '30 cm',
@@ -98,9 +98,9 @@ export const citronmeliss: Crop = {
     goodAfterWhy: 'Baljväxter berikar jorden med kväve. Men citronmeliss är perenn - rotation gäller mest när du tar bort en gammal planta.',
   },
   varieties: [
-    { name: 'Citronmeliss (standard)', zones: [1, 2, 3, 4, 5], note: 'Den klassiska arten. 50-70 cm, härdig och pålitlig. Ekologiskt frö hos Runåbergs och Lindbloms. Den som funkar överallt.' },
-    { name: 'Citronella', zones: [1, 2, 3, 4, 5], note: 'Kompakt sort med extra bra motståndskraft mot mjöldagg. Bra val om du haft problem med svampsjukdomar.' },
-    { name: 'Compacta', zones: [1, 2, 3, 4], note: 'Dvärgform på bara 15 cm. Perfekt för krukor och rabattkanter. Söt och kompakt.' },
+    { name: 'Citronmeliss (standard)', zones: [1, 2, 3, 4], note: 'Den klassiska arten. 50-70 cm, härdig och pålitlig. Ekologiskt frö hos Runåbergs och Lindbloms. Den som funkar överallt.' },
+    { name: 'Citronella', zones: [1, 2, 3, 4], note: 'Kompakt sort (ca 25 cm) med extra bra motståndskraft mot mjöldagg. Bra val om du haft problem med svampsjukdomar. Säljs främst som planta.' },
+    { name: 'Compacta', zones: [1, 2, 3], note: 'Kompakt dvärgform, perfekt för krukor och rabattkanter. Självsår sig inte - steril sort som håller sig i styr. Säljs som planta.' },
     { name: 'All Gold', zones: [1, 2, 3], note: 'Guldgula blad som lyser upp i trädgården. Främst dekorativ men med samma goda citronsmak.' },
   ],
   problems: [

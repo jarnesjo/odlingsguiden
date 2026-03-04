@@ -101,7 +101,7 @@ export const dragon: Crop = {
   },
   varieties: [
     { name: 'Fransk dragon (Artemisia dracunculus var. sativa)', zones: [1, 2, 3], note: 'DEN kulinariska dragonarten. Intensiv anis/lakritssmak, grågröna blanka blad. Kan INTE odlas från frö - måste köpas som planta eller förökas via delning. Köp på Blomsterlandet, Perennfolket eller Klostra (KRAV). OP.' },
-    { name: 'Rysk dragon (Artemisia dracunculus var. inodora)', zones: [1, 2, 3, 4, 5, 6], note: 'Mycket härdigare men SVAGARE smak - nästan smaklös jämfört med franska. Kan odlas från frö (Runåbergs, Impecta). Fungerar i norr där franska inte klarar vintern. OP.' },
+    { name: 'Rysk dragon (Artemisia dracunculus var. inodora)', zones: [1, 2, 3, 4, 5], note: 'Mycket härdigare men SVAGARE smak - nästan smaklös jämfört med franska. Kan odlas från frö (Runåbergs, Impecta). Fungerar i norr där franska inte klarar vintern. OP.' },
     { name: 'Mexikansk dragon (Tagetes lucida)', zones: [1, 2, 3], note: 'Egentligen inte dragon utan en tagetes - men smaken påminner mer om fransk dragon än rysk gör! Ettårig i Sverige. Frö hos Runåbergs och Lindbloms. Bra alternativ i kruka. OP.' },
   ],
   problems: [

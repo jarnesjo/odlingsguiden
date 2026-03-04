@@ -99,7 +99,7 @@ export const libbsticka: Crop = {
     goodAfterWhy: 'När libbsticka till slut tas bort efter 10-15 år lämnar pålroten djupa kanaler i jorden. Perfekt för kål och lök som uppskattar luckrad jord.',
   },
   varieties: [
-    { name: 'Libbsticka (standardart)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Det finns i princip bara en sort i odling - arten i sig. Ekologiskt frö hos Lindbloms (Demeter-certifierat), Impecta och NordFrö. Alla ger samma kraftfulla, sellerilikande smak.' },
+    { name: 'Libbsticka (standardart)', zones: [1, 2, 3, 4, 5, 6, 7, 8], note: 'Det finns i princip bara en sort i odling - arten i sig. Ekologiskt frö hos Lindbloms (Demeter-certifierat) och Impecta. NordFrö säljer också frö odlat utan syntetiska bekämpningsmedel. Alla ger samma kraftfulla, sellerilikande smak.' },
   ],
   problems: [
     { name: 'Sellerifluga', symptom: 'Bruna, pappersliknande fläckar i bladen där larverna minerar (äter sig fram inuti bladet). Två generationer per år.', fix: 'Klipp bort angripna blad. Insektsnät under våren och sensommaren. Samma skadedjur som på selleri och palsternacka - växtföljd hjälper.' },

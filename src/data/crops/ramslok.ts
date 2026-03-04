@@ -10,7 +10,7 @@ export const ramslok: Crop = {
   lifespan: '20+ år (sprider sig sakta)',
   difficulty: 'Enkel',
   difficultyWhy: 'Ramslök är en av de mest lättskötta kryddväxterna du kan ha i trädgården. Väl etablerad sköter hon sig helt själv - sprider sig, kommer tillbaka varje vår och kräver nästan ingen skötsel alls. Det enda som kräver tålamod är att få igång henne från frö, men köper du lökar är du igång direkt.',
-  zones: { outdoor: [1, 2, 3, 4, 5], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },
+  zones: { outdoor: [1, 2, 3, 4, 5, 6], indoor: [1, 2, 3, 4, 5, 6, 7, 8], greenhouse: null },
   days: 'Lökar: skörd första våren. Frö: 2-3 år till etablerad skörd',
   spacing: '10-15 cm',
   rowSpacing: '20-30 cm',
@@ -104,7 +104,7 @@ export const ramslok: Crop = {
     goodAfterWhy: 'Alliumväxternas naturliga ämnen i jorden har mild sanerande effekt som gynnar efterföljande grödor.',
   },
   varieties: [
-    { name: 'Ramslök (Allium ursinum)', zones: [1, 2, 3, 4, 5], note: 'Vildarten - det enda som finns att köpa. Ekologiskt frö hos Runåbergs och Impecta. Lökar från specialistodlare. 100% öppenpollinerad vildväxt. OP.' },
+    { name: 'Ramslök (Allium ursinum)', zones: [1, 2, 3, 4, 5, 6], note: 'Vildarten - det enda som finns att köpa. Växer vild i södra Sverige upp till Uppland, men kan odlas i skyddade, skuggiga lägen upp till zon 6. Ekologiskt frö hos Runåbergs och Impecta. Lökar från specialistodlare. 100% öppenpollinerad vildväxt. OP.' },
   ],
   problems: [
     { name: 'Invasiv spridning', symptom: 'Ramslök sprider sig villigt via både frö och lökdelning. Efter några år kan du ha en hel matta.', fix: 'Begränsa med kantband eller odla i ett avgränsat område. Eller njut av det - en hel ramslöksmatta på våren är magisk!' },

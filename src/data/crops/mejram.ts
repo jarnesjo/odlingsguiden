@@ -99,8 +99,7 @@ export const mejram: Crop = {
     goodAfterWhy: 'Mejrams aromatiska rester i jorden har mild desinficerande effekt som kan gynna efterföljande grödor.',
   },
   varieties: [
-    { name: 'Mejram (Origanum majorana)', zones: [1, 2, 3, 4], note: 'Standardarten. Kompakta, aromatiska plantor med små runda blad och karaktäristiska knutformade blomställningar. Ekologiskt frö hos Lindbloms och Impecta. OP.' },
-    { name: 'Kryddmejram', zones: [1, 2, 3, 4], note: 'Samma art, ibland såld under detta namn. Syftar på den klassiska kökskryddan till skillnad från prydnadsmejram. OP.' },
+    { name: 'Mejram (Origanum majorana)', zones: [1, 2, 3, 4], note: 'Standardarten - den klassiska kökskryddan. Kompakta, aromatiska plantor med små runda blad och karaktäristiska knutformade blomställningar. Ekologiskt frö hos Lindbloms, Runåbergs och Impecta. OP.' },
   ],
   problems: [
     { name: 'Bladlöss', symptom: 'Klibbiga blad, deformerade skottspetsar. Små gröna löss på bladens undersida.', fix: 'Spola av med vatten. Spraya med utspädd såplösning. Mejram i full sol och luftigt läge angrips sällan.' },

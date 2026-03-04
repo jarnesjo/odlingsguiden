@@ -104,7 +104,7 @@ export const kummin: Crop = {
     { icon: 'tip', title: 'Sveriges mest svenska krydda', text: 'Kummin definierar svensk matkultur som ingen annan krydda. Knäckebröd, akvavit, kryddost, korv, surkål - kummin finns överallt. O.P. Anderson Prima Aquavit har haft kummin som huvudsmak sedan 1891.', severity: 'tip' },
     { icon: 'tip', title: 'Tvåårig med dubbel nytta', text: 'Kummin ger dig TVÅ skördar: späda blad att använda som krydda första året, och de aromatiska fröna andra året. Bladen smakar milt av kummin och är fina i sallad och soppa.', severity: 'tip' },
     { icon: 'tip', title: 'Roten är ätbar', text: 'Kummins rot kan ätas som palsternacka - en bortglömd delikatess! Koka eller stek den som vilken rotfrukt som helst. Smaken påminner om palsternacka med en fin kummindoft.', severity: 'tip' },
-    { icon: 'tip', title: 'Världens äldsta krydda', text: 'Kummin har använts som krydda sedan stenåldern - arkeologer har hittat kumminfrön i 5000 år gamla bosättningar. Finland är idag världens största exportör, vilket visar hur väl kummin trivs i nordiskt klimat.', severity: 'tip' },
+    { icon: 'tip', title: 'Världens äldsta krydda', text: 'Kummin har använts som krydda sedan stenåldern - arkeologer har hittat kumminfrön i 5000 år gamla bosättningar. Finland är ett av världens ledande exportländer för kummin - de långa sommardagarna ger frön med extra rik halt eteriska oljor.', severity: 'tip' },
     { icon: 'warning', title: 'Direktså alltid - flytta aldrig kummin', text: 'Kummin har en djup pålrot och HATAR att bli omflyttad. Förodling fungerar inte. Så direkt på friland - fröna gror lätt ändå.', severity: 'warning' },
   ],
   sowing: {
@@ -140,7 +140,7 @@ export const kummin: Crop = {
       'Rensa bort skräp och förvara torrt i glasburk',
       'Spara en del som utsäde, använd resten i köket!',
     ],
-    isolation: 'Kummin kan korsa med dill och fänkål om de blommar samtidigt. Håll avstånd mellan dessa för sortrena frön.',
+    isolation: 'Håll kummin borta från dill och fänkål vid frötagning. De tillhör samma familj och pollinatörer rör sig mellan dem, vilket kan ge frön med förändrad smak. Äkta korsning mellan dessa släkten är osannolik, men separation rekommenderas för sortrena frön.',
     storageYears: '2-3 år',
     tip: 'En planta ger massor av frön - mer än du behöver för både matlagning och utsäde. Dela med odlarkompisar!',
   },
