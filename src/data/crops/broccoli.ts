@@ -102,8 +102,8 @@ export const broccoli: Crop = {
   },
   varieties: [
     { name: 'Ramoso Calabrese', zones: [1, 2, 3, 4, 5], note: 'Den klassiska italienska sorten. Öppenpollinerad med rikliga sidoskott - skördar i veckor! Finns hos Impecta och Lindbloms.' },
-    { name: 'Rasmus', zones: [1, 2, 3, 4, 5, 6], note: 'Svensk OP-favorit från Runåbergs med stora huvuden. Bevisad i svenska odlingsförsök - pålitlig och produktiv.' },
-    { name: 'De Cicco', zones: [1, 2, 3, 4, 5], note: 'Italiensk heirloom-sort (1890-tal) med många sidoskott. Öppenpollinerad och perfekt för frösparing.' },
+    { name: 'Rasmus', zones: [1, 2, 3, 4, 5, 6], note: 'OP-sort (Kultursaat, Tyskland) med stora huvuden (~20 cm) och ihålighetsfria stjälkar. Rikliga sidoskott långt in på hösten. Ekofrö hos Runåbergs.' },
+    { name: 'De Cicco', zones: [1, 2, 3, 4, 5], note: 'Gammal italiensk kulturarvssort, introducerad i USA 1890. Många sidoskott och öppenpollinerad - perfekt för frösparing.' },
     { name: 'Marathon F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid som är tålig och sjukdomsresistent. Perfekt för den som vill ha ett säkert kort. Kompakta, fina huvuden.' },
     { name: 'Atlantis F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med stora huvuden och bra sidoskott efter huvudskörd. Finns hos Wexthuset.' },
   ],

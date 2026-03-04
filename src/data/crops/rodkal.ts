@@ -103,10 +103,9 @@ export const rodkal: Crop = {
     goodAfterWhy: 'Rotgrönsaker trivs i den djupt bearbetade, näringsrika restjorden efter kål. Sallat gillar kvävet som kålen lämnar efter sig.',
   },
   varieties: [
-    { name: 'Langedijker Bewaar', zones: [1, 2, 3, 4, 5], note: 'Klassisk holländsk lagringssort med stora, fasta huvuden. Håller hela vintern i källaren. Djupt violett färg och mild smak. Ekofrö hos Runåbergs.' },
-    { name: 'Rodynda', zones: [1, 2, 3, 4, 5, 6], note: 'Svensk tidig-medelsort med runda, jämna huvuden. Pålitlig och lättodlad med fin färg. Ekofrö hos Lindbloms.' },
+    { name: 'Langedijker Bewaar 2', zones: [1, 2, 3, 4, 5], note: 'Klassisk holländsk lagringssort med stora, fasta huvuden. Håller hela vintern i källaren. Djupt violett färg och mild smak. Finns hos Nelson Garden och Svedberga.' },
+    { name: 'Rodynda', zones: [1, 2, 3, 4, 5, 6], note: 'Tidig-medelsort (Kultursaat) med runda, jämna huvuden på 2-3 kg. Pålitlig och lättodlad med fin färg. Ekofrö hos Lindbloms (demeter/eko).' },
     { name: 'Kalibos', zones: [1, 2, 3, 4, 5], note: 'Unik spetskålsform med lös struktur - perfekt för sallader! Mildare smak än runda sorter och vackert rubinröd. Ekofrö hos Runåbergs.' },
-    { name: 'Langedijker Bewaar 2', zones: [1, 2, 3, 4, 5], note: 'Sen lagringssort med stora, fasta huvuden. Håller sig hela vintern i källare. Klassisk holländsk sort med lång ståndtid i fält.' },
     { name: 'Integro F1', zones: [1, 2, 3, 4, 5, 6], note: 'F1-hybrid med mycket jämna huvuden och bra sjukdomsresistens. Ger pålitliga resultat men fröna kan inte sparas. Ekofrö hos Semenco.' },
   ],
   problems: [
@@ -160,19 +159,19 @@ export const rodkal: Crop = {
     ],
     isolation: 'Korsar med ALLA andra Brassica oleracea (vitkål, grönkål, broccoli, blomkål, brysselkål, kålrabbi). Odla bara en sort för frö, eller isolera med minst 1 km.',
     storageYears: '4-5 år',
-    tip: 'Frötagning av rödkål kräver att du kan förvara en hel kålplanta över vintern. Välj OP-sorter som Langedijker Bewaar eller Kalibos - de ger äkta avkomma. F1-hybrider som Integro ger inte sortriktiga frön.',
+    tip: 'Frötagning av rödkål kräver att du kan förvara en hel kålplanta över vintern. Välj OP-sorter som Langedijker Bewaar 2 eller Kalibos - de ger äkta avkomma. F1-hybrider som Integro ger inte sortriktiga frön.',
   },
   storage: {
     shelfLife: '1-2 veckor (färsk), 3-6 månader (källare), 12 månader (syrad/fryst)',
     methods: [
-      { method: 'Källarlagring', icon: 'storage', duration: '3-6 månader', description: 'Sena lagringssorter som Langedijker Bewaar hängs upp och ner i en sval källare (0-4°C) med roten kvar. Hög luftfuktighet (90-95%) är nyckeln. Rödkål lagrar generellt lika bra som vitkål.', best: true },
+      { method: 'Källarlagring', icon: 'storage', duration: '3-6 månader', description: 'Sena lagringssorter som Langedijker Bewaar 2 hängs upp och ner i en sval källare (0-4°C) med roten kvar. Hög luftfuktighet (90-95%) är nyckeln. Rödkål lagrar generellt lika bra som vitkål.', best: true },
       { method: 'Kylskåp', icon: 'snowflake', duration: '2-4 veckor', description: 'Lägg i plastpåse med några hål i grönsakslådan. Hela huvuden håller längre än delad kål. Rödkål håller sig faktiskt lite bättre i kylskåp än vitkål tack vare de tätare bladen.', best: false },
       { method: 'Syra/inlägga', icon: 'storage', duration: '6-12 månader', description: 'Strimla kålen fint, koka med ättika, socker och kryddnejlika. Klassisk svensk inläggning som passar perfekt till julbordet och viltkött. Kan även fermenteras som surkål.', best: false },
       { method: 'Frysa', icon: 'snowflake', duration: '8-12 månader', description: 'Strimla, blanchera 1-2 minuter, kyl i isvatten och frys i portionspåsar. Perfekt för grytor och tillagade rätter. Texturen ändras men smaken och den fina färgen består.', best: false },
       { method: 'Torka', icon: 'storage', duration: '6-12 månader', description: 'Strimla tunt och torka i ugn på 50°C eller i torkmaskin. Kompakt och platssnålt. Färgen bleknar något men smaken håller sig bra.', best: false },
     ],
     tips: [
-      'Lagringssorter (Langedijker Bewaar) håller MYCKET längre än tidiga sorter - välj rätt sort om du vill lagra',
+      'Lagringssorter (Langedijker Bewaar 2) håller MYCKET längre än tidiga sorter - välj rätt sort om du vill lagra',
       'Skörda lagringskål så sent som möjligt på hösten - gärna efter en lätt frost. Det förbättrar hållbarheten.',
       'Häng kålhuvudena upp och ner i källaren med roten kvar - det förlänger lagringstiden rejält',
       'Syrad rödkål är enklare att göra än du tror och resultatet blir fantastiskt till jul och höstmiddagar',

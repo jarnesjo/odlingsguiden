@@ -118,10 +118,10 @@ export const rotselleri: Crop = {
     goodAfterWhy: 'Baljväxter och lättnärda grönsaker fungerar bra efter sellerins intensiva näringsuttag. Lök sanerar jorden mot svampsjukdomar.',
   },
   varieties: [
-    { name: 'Monarch', zones: [1, 2, 3, 4], note: 'Klassisk, pålitlig OP-sort med stora, släta knölar och fin smak. Lagrar bra. Finns hos Runåbergs och Impecta.' },
-    { name: 'Giant Prague', zones: [1, 2, 3, 4], note: 'Kulturarvssort med rejäla knölar. Gammal favorit som fortfarande levererar. Gedigen smak och bra lagringsförmåga.' },
-    { name: 'Ibis', zones: [1, 2, 3, 4], note: 'OP-sort med jämna, runda knölar och få birötter. Lättskördad och rensar fint. Finns hos Impecta.' },
-    { name: 'Prinz F1', zones: [1, 2, 3, 4, 5], note: 'F1-hybrid med mycket jämna knölar och bra motståndskraft mot sjukdomar. Tål tuffare förhållanden. Överväg om du odlar i zon 5 där säsongen är kort.' },
+    { name: 'Monarch', zones: [1, 2, 3, 4], note: 'Klassisk, pålitlig OP-kulturarvssort med stora, släta knölar och fin smak. Lagrar bra. Ekofrö hos Runåbergs.' },
+    { name: 'Giant Prague', zones: [1, 2, 3, 4], note: 'Kulturarvssort (1871) med rejäla knölar. Gammal favorit som fortfarande levererar. Gedigen smak och bra lagringsförmåga.' },
+    { name: 'Ibis', zones: [1, 2, 3, 4], note: 'OP-sort med jämna, runda knölar och få birötter. Lättskördad och rensar fint. Finns hos Lindbloms.' },
+    { name: 'Prinz', zones: [1, 2, 3, 4, 5], note: 'OP-sort med mycket jämna knölar och bra motståndskraft mot sjukdomar. Tål tuffare förhållanden. Ekofrö hos Lindbloms och Semenco.' },
   ],
   problems: [
     { name: 'Sellerifluga (Euleia heraclei)', symptom: 'Blåsor och bruna gångar i bladen, larver minerar inuti bladskivan', fix: 'Fiberduk vid utplantering och hela säsongen. Plocka bort angripna blad. Samodla med lök som förvirrar flugan.' },
