@@ -1,10 +1,11 @@
-import { useState, useRef, useEffect, lazy, Suspense } from "react"
+import { useState, useRef, useEffect } from "react"
 import type { Category, Zone } from "../../data/types"
 import { useDocumentMeta } from "../../hooks/useDocumentMeta"
 import { CATEGORIES } from "../../data/categories"
 import { CROP_LIST } from "../../data/cropList"
 import { DIFFICULTY_INFO } from "../../data/difficulty"
 import { ZONE_INFO } from "../../data/zones"
+import { MONTH_NAMES } from "../../utils/monthParser"
 import { Icon } from "../icons/Icon"
 import { SearchIcon, DifficultyDot } from "../icons"
 import { LogoCombined } from "../brand"
@@ -12,7 +13,7 @@ import { SymbolSprout } from "../brand"
 import { CropIcon } from "../illustrations/CropIcon"
 import styles from "./CropList.module.css"
 
-const SeasonView = lazy(() => import('./SeasonView').then(m => ({ default: m.SeasonView })))
+import { SeasonView } from './SeasonView'
 
 type View = 'sasong' | Category
 
@@ -27,16 +28,24 @@ interface CropListProps {
 }
 
 export function CropList({ userZone, view, currentMonth, onViewChange, onMonthChange, onSelect, onZoneClick }: CropListProps) {
+  const isSeason = view === 'sasong'
+
+  const pageTitle = isSeason
+    ? `${MONTH_NAMES[currentMonth]} - Säsongsguide - Odlingsguiden`
+    : view !== 'grönsaker'
+      ? `${CATEGORIES.find(c => c.id === view)?.label} - Odlingsguiden`
+      : 'Odlingsguiden - Allt du behöver veta, en gröda i taget'
+
   useDocumentMeta(
-    'Odlingsguiden - Allt du behöver veta, en gröda i taget',
-    'Zonanpassad odlingsguide för svenska trädgårdar. Djupa profiler för grönsaker, bär och kryddor med sortval, tidslinjer och skördetips.',
+    pageTitle,
+    isSeason
+      ? `Vad kan du så, plantera och skörda i ${(MONTH_NAMES[currentMonth] ?? '').toLowerCase()}? Säsongsguide för svenska trädgårdar.`
+      : 'Zonanpassad odlingsguide för svenska trädgårdar. Djupa profiler för grönsaker, bär och kryddor med sortval, tidslinjer och skördetips.',
   )
 
   const [search, setSearch] = useState("")
   const [filter, setFilter] = useState("Alla")
   const searchRef = useRef<HTMLInputElement>(null)
-
-  const isSeason = view === 'sasong'
 
   const visibleCategories = CATEGORIES.filter((c) => !c.hidden)
 
@@ -121,9 +130,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
       </div>
 
       {isSeason ? (
-        <Suspense fallback={<div style={{ textAlign: 'center', padding: 40, color: 'var(--color-text-muted)' }}>Laddar...</div>}>
-          <SeasonView userZone={userZone} currentMonth={currentMonth} onMonthChange={onMonthChange} onSelect={onSelect} />
-        </Suspense>
+        <SeasonView userZone={userZone} currentMonth={currentMonth} onMonthChange={onMonthChange} onSelect={onSelect} />
       ) : (
         <>
           {/* Search */}
