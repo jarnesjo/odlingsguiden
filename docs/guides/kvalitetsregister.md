@@ -8,8 +8,8 @@
 
 | Status | Antal |
 |--------|-------|
-| Faktacheckade profiler | 46 |
-| Saknar faktacheck | 39 |
+| Faktacheckade profiler | 55 |
+| Saknar faktacheck | 30 |
 | **Totalt** | **85** |
 
 ---
@@ -69,18 +69,18 @@
 | Jordgubbar | 2026-02-27 | 2026-03-02 | 4 | Ja | 4+ | [batch5](../research/faktacheck-2026-03-02-batch5.md) |
 | Svarta vinbär | 2026-02-27 | 2026-03-02 | 4 | Ja | 4+ | [batch5](../research/faktacheck-2026-03-02-batch5.md) |
 | Röda vinbär | 2026-02-27 | 2026-03-02 | 4 | Ja | 4+ | [batch5](../research/faktacheck-2026-03-02-batch5.md) |
-| Vita vinbär | 2026-03-03 | 2026-03-03 | 4 | **Nej** | - | - |
-| Guldvinbär | 2026-03-03 | 2026-03-04 | 3 | **Nej** | - | - |
+| Vita vinbär | 2026-03-03 | 2026-03-04 | 3 | Ja | 8 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
+| Guldvinbär | 2026-03-03 | 2026-03-04 | 2 | Ja | 6 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
 | Krusbär | 2026-02-27 | 2026-03-02 | 5 | Ja | 4+ | [batch6](../research/faktacheck-2026-03-02-batch6.md) |
 | Björnbär | 2026-02-28 | 2026-03-02 | 5 | Ja | 4+ | [batch6](../research/faktacheck-2026-03-02-batch6.md) |
 | Mullbär | 2026-03-01 | 2026-03-02 | 5 | Ja | 4+ | [batch6](../research/faktacheck-2026-03-02-batch6.md) |
-| Tayberry | 2026-03-03 | 2026-03-03 | 3 | **Nej** | - | - |
-| Blåbär | 2026-03-03 | 2026-03-03 | 6 | **Nej** | - | - |
-| Lingon | 2026-03-03 | 2026-03-03 | 4 | **Nej** | - | - |
-| Havtorn | 2026-03-03 | 2026-03-03 | 6 | **Nej** | - | - |
-| Aronia | 2026-03-03 | 2026-03-03 | 4 | **Nej** | - | - |
-| Tranbär | 2026-03-03 | 2026-03-03 | 4 | **Nej** | - | - |
-| Honungsbär | 2026-03-03 | 2026-03-03 | 5 | **Nej** | - | - |
+| Tayberry | 2026-03-03 | 2026-03-04 | 2 | Ja | 6 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
+| Blåbär | 2026-03-03 | 2026-03-04 | 6 | Ja | 6 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
+| Lingon | 2026-03-03 | 2026-03-04 | 4 | Ja | 6 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
+| Havtorn | 2026-03-03 | 2026-03-04 | 4 | Ja | 8 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
+| Aronia | 2026-03-03 | 2026-03-04 | 4 | Ja | 8 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
+| Tranbär | 2026-03-03 | 2026-03-04 | 3 | Ja | 6 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
+| Honungsbär | 2026-03-03 | 2026-03-04 | 4 | Ja | 6 | [batch11](../research/faktacheck-2026-03-04-batch11-bar.md) |
 
 ## Kryddor (18 st)
 
