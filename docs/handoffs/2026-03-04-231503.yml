@@ -1,0 +1,113 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Epic: Performance & Kvalitet"
+  status: aktiv
+  session_notes: |
+    Session 53. Tre huvudsakliga arbeten:
+
+    1. ROADMAP OMSTRUKTURERING (klar)
+       Bytte från "Faser" till "Epics" i ROADMAP.md och CLAUDE.md.
+       Fas 1-4 -> Epic: Grundplattan, Innehall, Funktioner, Performance & Kvalitet,
+       Webb & Lansering, Expansion. Steg omnumrerade per epic.
+       Committed och pushat.
+
+    2. LCP-OPTIMERING (klar, mergat till main)
+       Lazy CropIcon via IntersectionObserver. Forsta 8 ikoner laddas direkt,
+       resten nar de scrollas in i vy (200px rootMargin).
+       Resultat: LCP 3.1s -> 2.3s, Performance 91 -> 97.
+       Committed och pushat.
+
+    3. PRERENDERING SSG (pagaende, feature branch)
+       Branch: feature/prerendering
+       Skapade prerender-script som bygger SSR-bundle med Vite och renderar
+       alla 90 routes till statisk HTML.
+
+       KLART:
+       - entry-server.tsx med React 19 prerender() API
+       - prerender.ts script som bygger SSR-bundle och renderar alla routes
+       - useLocalStorage SSR-guard (typeof window === 'undefined')
+       - Startsidan prerenderas korrekt med fullt innehall
+
+       PROBLEM SOM KVARSTAR:
+       - Grodprofiler renderas TOMMA under SSR
+       - Orsak: CropPage anvander useEffect + loadCrop() for att ladda groddata
+       - useEffect kors inte under SSR, sa crop === null -> returnerar null
+       - SENASTE FORSOK: preladda alla grodor via loadAllCrops() innan rendering
+         men loadCrop/loadAllCrops anvander import.meta.glob som ar dynamisk
+         - Aven om cropCache ar fylld sa anvander CropPage useEffect + setState
+           for att hamta data, och useEffect kors aldrig under SSR
+
+       LOSNINGSALTERNATIV (inte implementerat an):
+       a) Skapa SSR-version av CropPage som tar crop som prop direkt (renast)
+       b) Andra CropPage att kolla cropCache synkront i useState-init
+       c) Suspense-resource pattern (mer omskrivning)
+
+       Alternativ (b) ar enklast: andra CropPage useState-init fran null till
+       cropCache.get(cropId) sa den har data direkt under SSR.
+
+    Lighthouse-rapporter sparade i docs/benchmarks/.
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  new_files:
+    - src/entry-server.tsx
+    - scripts/prerender.ts
+    - docs/plans/4.2-lcp-optimering.yml
+    - docs/benchmarks/lighthouse-2026-03-04.json
+    - docs/benchmarks/lighthouse-2026-03-04.html
+  modified:
+    - src/components/illustrations/CropIcon.tsx (lazy prop + IntersectionObserver)
+    - src/components/pages/CropList.tsx (lazy={index >= 8})
+    - src/hooks/useLocalStorage.ts (SSR guard)
+    - docs/ROADMAP.md (epics + nya steg 4.2, 4.3, 4.4)
+    - CLAUDE.md (epic format)
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+  - "npx tsx scripts/prerender.ts  # Prerendera alla routes till dist/"
+
+next_steps:
+  - "PRERENDERING: Fixa tomma grodprofiler under SSR"
+  - "  -> Enklast: exportera getCachedCrop() fran crops/index.ts"
+  - "  -> Andra CropPage useState-init: loadCropSync(cropId) ?? null"
+  - "  -> Eller: SSR-specifik CropPage i entry-server.tsx som tar crop som prop"
+  - "Kor Lighthouse pa prerenderad build och jamfor"
+  - "Om bra resultat: merga feature/prerendering till main"
+  - "Accessibility (4.4): kontrastproblem, lankfarger"
+
+context:
+  decisions:
+    - "Epics istallet for Faser i roadmap - speglar hur vi faktiskt jobbar"
+    - "IntersectionObserver for lazy CropIcon - enklaste losningen, stor effekt"
+    - "Eget prerender-script istf. vite-ssg/vike - inga nya deps, full kontroll"
+    - "React 19 prerender() API istf. renderToString - vantar pa Suspense"
+    - "SSR-App i entry-server duplicerar App.tsx routing - nodvandigt for att undvika lazy()"
+    - "Reverterade SSR-App, anvander original App + preladdar data istallet"
+  constraints:
+    - "CropIcon lazy-prop ar opt-in (default false) sa befintliga anvandningar opaverkade"
+    - "import.meta.glob eager:false gor att groddata ar asynkron"
+    - "useEffect kors aldrig under SSR - CropPage maste fa data pa annat satt"
+    - "feature/prerendering branch - ej mergad till main an"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "Lighthouse Accessibility 84 - oforandrat"
+  - "Prerendering: grodprofiler tomma under SSR (pagaende)"
+  - "dist-ssr/ genereras vid prerender - bor laggas i .gitignore"
