@@ -52,7 +52,7 @@ export const CROP_LIST: CropListEntry[] = [
   // Grönsaker - Poaceae (Gräs)
   { id: 'sockermajs', name: 'Sockermajs', icon: 'sockermajs', family: 'Gräs', familyLatin: 'Poaceae', difficulty: 'Medel', category: 'grönsaker' },
   // Grönsaker - Polygonaceae (Slideväxter)
-  { id: 'rabarber', name: 'Rabarber', icon: 'rabarber', family: 'Slideväxter', familyLatin: 'Polygonaceae', difficulty: 'Enkel', category: 'grönsaker' },
+  { id: 'rabarber', name: 'Rabarber', icon: 'rabarber', family: 'Slideväxter', familyLatin: 'Polygonaceae', difficulty: 'Enkel', category: 'frukt' },
   // Grönsaker - Asparagaceae (Sparrisväxter)
   { id: 'sparris', name: 'Sparris', icon: 'sparris', family: 'Sparrisväxter', familyLatin: 'Asparagaceae', difficulty: 'Avancerad', category: 'grönsaker' },
   // Bär - Rosaceae (Rosväxter)
@@ -105,6 +105,7 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'apple', name: 'Äpple', icon: 'apple', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
   { id: 'paron', name: 'Päron', icon: 'paron', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
   { id: 'plommon', name: 'Plommon', icon: 'plommon', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
+  { id: 'korsbar', name: 'Körsbär', icon: 'korsbar', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
   // Blommor - Asteraceae (Korgblommiga)
   { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
   { id: 'solros', name: 'Solros', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },

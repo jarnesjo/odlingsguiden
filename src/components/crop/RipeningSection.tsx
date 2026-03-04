@@ -24,6 +24,13 @@ const TYPE_COLORS: Record<string, { bg: string; border: string }> = {
   'Sommarplommon': { bg: '#F0E4F5', border: '#9660A8' },
   'Höstplommon': { bg: '#FFF0E5', border: '#B8653B' },
   'Sent plommon': { bg: '#E5F0F0', border: '#5A8F8F' },
+  // Körsbär (röd -> mörkröd -> rosa -> brun, tydligt skilda)
+  'Tidigt sötkörsbär': { bg: '#FFE8E8', border: '#D45A5A' },
+  'Sötkörsbär': { bg: '#F5E0E8', border: '#A83E5A' },
+  'Sent sötkörsbär': { bg: '#F0E4F5', border: '#8B45A6' },
+  'Tidigt surkörsbär': { bg: '#FFF0E5', border: '#C4784A' },
+  'Surkörsbär': { bg: '#EDF7F0', border: '#5A8B5A' },
+  'Sent surkörsbär': { bg: '#E3F2FD', border: '#5A7DAD' },
 }
 
 const DEFAULT_COLOR = { bg: '#F5F2EB', border: '#C4956A' }

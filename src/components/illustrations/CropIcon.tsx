@@ -94,6 +94,7 @@ const ID_TO_PATH: Record<string, string> = {
   apple: './AppleIllustration.tsx',
   paron: './PearIllustration.tsx',
   plommon: './PlumIllustration.tsx',
+  korsbar: './CherryIllustration.tsx',
 }
 
 // Cache laddade ikoner
