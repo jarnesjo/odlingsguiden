@@ -103,6 +103,8 @@ export const CROP_LIST: CropListEntry[] = [
   { id: 'lagerblad', name: 'Lagerblad', icon: 'lagerblad', family: 'Lagerväxter', familyLatin: 'Lauraceae', difficulty: 'Avancerad', category: 'kryddor' },
   // Frukt - Rosaceae (Rosväxter)
   { id: 'apple', name: 'Äpple', icon: 'apple', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
+  { id: 'paron', name: 'Päron', icon: 'paron', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
+  { id: 'plommon', name: 'Plommon', icon: 'plommon', family: 'Rosväxter', familyLatin: 'Rosaceae', difficulty: 'Medel', category: 'frukt' },
   // Blommor - Asteraceae (Korgblommiga)
   { id: 'ringblomma', name: 'Ringblomma', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
   { id: 'solros', name: 'Solros', icon: 'flower', family: 'Korgblommiga', familyLatin: 'Asteraceae', difficulty: 'Enkel', category: 'blommor', locked: true },
