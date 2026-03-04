@@ -1,0 +1,92 @@
+meta:
+  date: 2026-03-04
+  author: claude
+  phase: "Fas 2: Innehall & Funktioner"
+  status: avslutad
+  session_notes: |
+    Session 48. Faktacheck-genomgang + kvalitetsregister.
+
+    KLART:
+    - Skapat docs/guides/kvalitetsregister.md - sparningstabell for alla 85 profiler
+      med skapad, uppdaterad, antal sorter, faktacheckstatus, kallor, rapport-referens
+    - Faststalit att 46/85 profiler har formella faktacheck-rapporter, 39 saknar
+    - Faktacheck batch 10: 10 Brassicaceae-profiler (broccoli, blomkal, brysselkal,
+      vitkal, rodkal, savoykal, pak choi, kinakal, gronkal, majrova)
+    - 48 sorter verifierade mot svenska frokataloger via websok
+    - Korrigeringar:
+      - blomkal: Graffiti ar F1, inte OP
+      - rodkal: Rodynda finns hos Lindbloms (inte Impecta), Marner Lagerrot
+        ej tillganglig i Sverige - ersatt med Langedijker Bewaar 2,
+        Integro F1 hos Semenco (inte Nelson Garden)
+      - savoykal: Famosa F1 ej tillganglig i Sverige - ersatt med Deadon F1 (Semenco)
+      - majrova: Goldana heter Guldboll hos Runabergs, Blanc dur d'hiver
+        ej tillganglig - ersatt med Snowball, Petrowski hos Lindbloms (inte Runabergs)
+      - vitkal: 4 stavfel (for->for, Fins->Finns)
+      - gronkal: indoorWeeks format konsekvent
+
+    Commits:
+    - 8fa6d9c docs(guides): add kvalitetsregister for crop quality tracking
+    - b6003fb fix(content): fact-check 10 brassicaceae profiles
+    - 04214c6 docs(research): fact-check batch 10 - 10 brassicaceae profiles
+    - af65774 fix(content): fact-check corrections from batch 10 verification
+
+tech_stack:
+  current:
+    - Vite 7.3 (build)
+    - React 19 (hooks, JSX)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - "Dynamic imports: import.meta.glob for crops + illustrations"
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+structure:
+  docs:
+    - "docs/guides/kvalitetsregister.md (NY: sparningstabell for alla 85 profiler)"
+    - docs/research/faktacheck-2026-03-04-batch10-kalsorter.md
+  src:
+    - "src/data/crops/blomkal.ts (Graffiti F1 korrekt markerad)"
+    - "src/data/crops/rodkal.ts (3 sortkorrigeringar)"
+    - "src/data/crops/savoykal.ts (Famosa -> Deadon F1)"
+    - "src/data/crops/majrova.ts (3 sortkorrigeringar)"
+    - "src/data/crops/vitkal.ts (4 stavfel)"
+    - "src/data/crops/gronkal.ts (indoorWeeks format)"
+
+database: null
+api_endpoints: null
+
+commands:
+  - "npm run dev      # Starta Vite dev server"
+  - "npm run build    # Bygger till dist/"
+  - "npx tsc --noEmit # Typkontroll"
+
+next_steps:
+  - "Faktacheck batch 11: Bar (9 st) - vita vinbar, guldvinbar, tayberry, blabar, lingon, havtorn, aronia, tranbar, honungsbar"
+  - "Faktacheck batch 12: Kryddor (10 st) - koriander, kummin, mejram, dragon, salvia, citronmeliss, krasse, lagerblad, libbsticka, ramslok"
+  - "Faktacheck batch 13: Ovriga gronsaker (10 st) - selleri, rotselleri, fankal, melon, schalottenlok, spenat, endiv, storbona, jordartskocka, kronartskocka"
+  - "Uppdatera kvalitetsregister efter alla batchar (46+10=56 klara, 29 kvar)"
+
+context:
+  decisions:
+    - "Kvalitetsregister i docs/guides/kvalitetsregister.md - sparar skapad, uppdaterad, sorter, faktacheckstatus, kallor"
+    - "Marner Lagerrot (rodkal) ej tillganglig i Sverige - ersatt med Langedijker Bewaar 2"
+    - "Famosa F1 (savoykal) ej tillganglig i Sverige - ersatt med Deadon F1 (Semenco)"
+    - "Blanc dur d'hiver (majrova) ej tillganglig i Sverige - ersatt med Snowball (Runabergs)"
+    - "Goldana -> Guldboll (korrekt Runabergs-namn)"
+  constraints:
+    - "CropIcon.tsx och CropGraphic.tsx har DUPLICERADE ID_TO_PATH - bada maste uppdateras"
+    - "CROP_LIST i cropList.ts maste uppdateras manuellt vid nya profiler"
+    - "Aldrig unicode-emojis i data eller UI"
+    - "Aldrig en-dash i kallkod"
+    - "Alltid korrekt aao"
+    - "All text pa svenska, kompis-ton"
+    - "OP-sorter forst i alla sortrekommendationer"
+    - "Frilandsodling som primar odlingsform"
+    - "Sorter maste verifieras mot svenska frokataloger"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "29 profiler saknar formell faktacheck"
+  - "Lighthouse Accessibility 84"
