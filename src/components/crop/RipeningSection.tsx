@@ -10,9 +10,20 @@ interface RipeningSectionProps {
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec']
 
 const TYPE_COLORS: Record<string, { bg: string; border: string }> = {
+  // Äpple
   'Sommaräpple': { bg: '#FFF8E7', border: '#E6C97A' },
   'Höstäpple': { bg: '#EDF7F0', border: '#7BAF8E' },
   'Vinteräpple': { bg: '#E3F2FD', border: '#7AADE6' },
+  // Päron
+  'Sommarpäron': { bg: '#FFF8E7', border: '#D4A843' },
+  'Höstpäron': { bg: '#F0EDE3', border: '#A89060' },
+  'Sent höstpäron': { bg: '#EDE7D9', border: '#8B7642' },
+  'Vinterpäron': { bg: '#E3EBF2', border: '#6B8FAD' },
+  // Plommon
+  'Tidigt plommon': { bg: '#F5EDF8', border: '#B07DC4' },
+  'Sommarplommon': { bg: '#F0E4F5', border: '#9660A8' },
+  'Höstplommon': { bg: '#E8D8F0', border: '#7B4B8F' },
+  'Sent plommon': { bg: '#E0CEE8', border: '#6B3D7D' },
 }
 
 const DEFAULT_COLOR = { bg: '#F5F2EB', border: '#C4956A' }
