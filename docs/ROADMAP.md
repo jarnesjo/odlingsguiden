@@ -200,8 +200,8 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 | 1    | Äpple ✅  | Rosaceae     | Sveriges mest odlade frukt. Enormt sortutbud. Zonberoende.      |
 | 2    | Päron ✅  | Rosaceae     | Näst populärast. Kräver pollinatör. Lagringsvärdig.             |
 | 3    | Plommon ✅ | Rosaceae     | Härdigt, populärt, finns sorter som klarar zon 5-6.             |
-| 4    | Körsbär  | Rosaceae     | Både söt och sur. Fågelproblem = bra "drama" i profilen.        |
-| 5    | Rabarber | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
+| 4    | Körsbär ✅ | Rosaceae     | Både söt och sur. Fågelproblem = bra "drama" i profilen.        |
+| 5    | Rabarber ✅ | Polygonaceae | Tekniskt en grönsak men odlas som frukt. Extremt härdig. Enkel. |
 
 > Notering: Alla topp-4 är Rosaceae - samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband.
 
