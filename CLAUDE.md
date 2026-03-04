@@ -6,12 +6,12 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## Roadmap-Driven Workflow
 
-`docs/ROADMAP.md` is the source of truth for what to build. It uses numbered phases (Fas 1, 2, 3...) with substeps (1.1, 1.2, 1.3...) and checkboxes. The order within a phase is flexible — we pick what gives most value right now.
+`docs/ROADMAP.md` is the source of truth for what to build. It uses thematic Epics (Innehåll, Funktioner, Performance, etc.) with numbered substeps and checkboxes. Epics are independent — we pick what gives most value right now, across any epic.
 
 - **On session start:** Read `docs/ROADMAP.md` and the latest `docs/handoffs/*.yml` to understand current progress.
-- **Before starting work:** Check which roadmap step is next. Suggest it if the user hasn't specified a task. The user may choose any step — we don't follow the order slavishly.
+- **Before starting work:** Check which roadmap step is next. Suggest it if the user hasn't specified a task. The user may choose any step from any epic.
 - **After completing work:** Update `docs/ROADMAP.md` — check off completed items and mark steps with ✅.
-- **When proposing tasks:** Reference the relevant roadmap step (e.g., "1.3 Grafisk profil").
+- **When proposing tasks:** Reference the relevant roadmap step (e.g., "4.2 LCP-optimering").
 - **New ideas:** Add to the "Idéer" section in ROADMAP.md. No priority needed — they get picked up when the time is right.
 
 ### ROADMAP.md Format
@@ -29,9 +29,9 @@ The roadmap follows a structured format designed for AI-assisted development. Th
 
 Short vision statement.
 
-## Fas 1: Namn
+## Epic: Namn
 
-Description of what the phase achieves.
+Description of what the epic covers.
 
 ### 1.1 Step name ✅ (when done)
 
@@ -49,7 +49,7 @@ Plan: `docs/plans/1.1-slug.yml`
 - [ ] Subtask 1
 - [ ] Subtask 2
 
-## Fas 2: Namn
+## Epic: Annat namn
 
 ...
 
@@ -67,11 +67,11 @@ Stable reference material: design principles, tech stack, competitor analysis, f
 
 **Key rules:**
 
-- **Numbered phases** (Fas 1, 2, 3...) with **numbered substeps** (1.1, 1.2, 1.3...)
+- **Thematic Epics** (Epic: Innehåll, Epic: Funktioner, etc.) with **numbered substeps** (1.1, 1.2, 2.1, 2.2...)
 - **Checkboxes** on every actionable item — never just prose
 - **✅ after step title** when all checkboxes are done
 - **`> quote`** under each step title = one-line scope description
-- **Flexible order** within a phase — pick what gives most value now
+- **Epics are independent** — pick what gives most value now, from any epic
 - **Idéer section** at the bottom — unordered, unprioritized ideas
 - **Referens section** — stable info that rarely changes (design principles, tech stack, competitor analysis, file table)
 - Steps can have **context blocks** (tables, explanations) below the checkboxes for complex steps

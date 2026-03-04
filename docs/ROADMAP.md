@@ -14,9 +14,11 @@ Long tail-filosofin: börja smått och nischat (svenska odlingszoner 1–8), byg
 
 ---
 
-## Fas 1: Grundplattan ✅
+## Epic: Grundplattan ✅
 
-Arkitektur, design, navigering och build-pipeline - allt som behövs innan vi kan skala innehåll.
+Arkitektur, design, navigering och build-pipeline - allt som behövdes innan vi kunde skala innehåll.
+
+> Planfiler under `docs/plans/` använder original-numrering (1.x, 2.x) från innan epic-omstruktureringen.
 
 ### 1.1 Tonpass – Basilika ✅
 
@@ -60,7 +62,7 @@ Plan: `docs/plans/1.3-grafisk-profil.yml`
 - [x] UI renderar klickbara chips istället för ren text
 - [x] Fungerar i: samodling, växtföljd, bra att veta
 
-### 1.8 Navigering i grödvy ✅
+### 1.5 Navigering i grödvy ✅
 
 > Behåll appens identitet inne i grödprofiler - sticky navbar med logga och zonväljare
 
@@ -70,7 +72,7 @@ Plan: `docs/plans/1.3-grafisk-profil.yml`
 
 Plan: `docs/plans/1.8-grod-navigering.yml`
 
-### 1.9 URL-routing och SEO ✅
+### 1.6 URL-routing och SEO ✅
 
 > Delbara URLer med svenska tecken, webbläsarhistorik och sökbarhet - `/bondböna`, `/ärtor`
 
@@ -98,25 +100,13 @@ Plan: `docs/plans/1.8-grod-navigering.yml`
 
 Plan: `docs/plans/1.7-fler-profiler.yml`
 
-### 1.10 Code-splitting och build-optimering ✅
-
-> Snabbare laddning - startsidan behöver bara ~200KB av 998KB
-
-- [x] Lazy-load CropPage-routen med React.lazy
-- [x] Bryt CROPS-beroendet i cropUtils (använd CROP_LIST)
-- [x] Separera CROP_LIST till egen fil (cropList.ts)
-- [x] Separera CropIcon (48px) från CropGraphic (120px)
-- [x] Ta bort chunkSizeWarningLimit
-
-Plan: `docs/plans/1.10-code-splitting.yml`
-
 ---
 
-## Fas 2: Innehåll & Funktioner
+## Epic: Innehåll
 
-Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
+Alla grödprofiler, fruktkategori, källhantering och faktacheck.
 
-### 2.1 Alla profiler
+### 2.1 Alla profiler ✅
 
 > Lägg in alla grödor, bär och kryddor som kan odlas i Sverige
 
@@ -136,18 +126,7 @@ Fyll på med innehåll, lägg till nya funktioner och kvalitetssäkra.
 - [x] AI-transparens: öppen om att AI använts, utan att göra det till huvudsaken
 - [x] Källrankning baserad på 8 batchar faktacheck-erfarenhet
 
-### 2.3 Säsongsvy v1 ✅
-
-> "Vad ska jag göra i min odling just nu?"
-
-- [x] Månadsbaserad startskärm
-- [x] Visar aktiva grödor/bär/kryddor och vad som behöver göras
-- [x] Zonmedveten - anpassar sig efter vald zon
-- [x] Varje åtgärd länkar till relevant profil och sektion
-
-Plan: `docs/plans/2.3-sasongsvy.yml`
-
-### 2.4 Frukt som fjärde kategori
+### 2.3 Frukt som fjärde kategori
 
 > Fruktträd och bärbuskar med flerårig karaktär - "planterar du rätt från början, skördar du i 30 år"
 
@@ -209,7 +188,24 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 
 > Notering: Alla topp-4 är Rosaceae - samma familj som hallon och jordgubbar. Det öppnar för riktigt bra korsreferenser kring växtföljd, sjukdomar som sprids inom familjen, och pollinationssamband.
 
-### 2.9 Odlingskalender ✅
+---
+
+## Epic: Funktioner
+
+Sök, säsongsvyer, kalender och andra användardrivna funktioner.
+
+### 3.1 Säsongsvy v1 ✅
+
+> "Vad ska jag göra i min odling just nu?"
+
+- [x] Månadsbaserad startskärm
+- [x] Visar aktiva grödor/bär/kryddor och vad som behöver göras
+- [x] Zonmedveten - anpassar sig efter vald zon
+- [x] Varje åtgärd länkar till relevant profil och sektion
+
+Plan: `docs/plans/2.3-sasongsvy.yml`
+
+### 3.2 Odlingskalender ✅
 
 > Skriv om tidslinjen till horisontell bar-chart (Gantt-stil) - samma visuella stil som Mognadsklockan
 
@@ -219,7 +215,7 @@ Frukt är extra naturligt - om ni odlar eller planerar att odla frukt på gårde
 
 Plan: `docs/plans/2.9-odlingskalender.yml`
 
-### 2.10 Säsongsvy v2 - överskådlighet ✅
+### 3.3 Säsongsvy v2 - överskådlighet ✅
 
 > Säsongsvyn blir lång och oöverskådlig - visa 2-3 grödor per sektion med "Visa mer"
 
@@ -227,7 +223,7 @@ Plan: `docs/plans/2.9-odlingskalender.yml`
 - [x] "Visa mer"-knapp som expanderar hela listan
 - [x] Behåll full info men gör det lättare att skanna
 
-### 2.5 Sökfunktion
+### 3.4 Sökfunktion
 
 - [x] CMD+K / Ctrl+K fokuserar sökinputet i listvyn
 - [x] 1-4 tangentgenvägar byter kategori (CMD+1-4 i sökinputet)
@@ -235,61 +231,94 @@ Plan: `docs/plans/2.9-odlingskalender.yml`
 - [ ] Sök tvärs över kategorier
 - [ ] Filtrering på familj, svårighetsgrad, zon
 
-### 2.6 Webb-version (Statamic)
+---
+
+## Epic: Performance & Kvalitet
+
+Laddtider, accessibility, bundle-optimering och teknisk kvalitet.
+
+### 4.1 Code-splitting och build-optimering ✅
+
+> Snabbare laddning - startsidan behöver bara ~200KB av 998KB
+
+- [x] Lazy-load CropPage-routen med React.lazy
+- [x] Bryt CROPS-beroendet i cropUtils (använd CROP_LIST)
+- [x] Separera CROP_LIST till egen fil (cropList.ts)
+- [x] Separera CropIcon (48px) från CropGraphic (120px)
+- [x] Ta bort chunkSizeWarningLimit
+
+Plan: `docs/plans/1.10-code-splitting.yml`
+
+### 4.2 LCP-optimering
+
+> Render Delay står för 85% av LCP-tiden (2.6s) - grödlistan är flaskhalsen
+
+- [ ] Virtualisera grödlistan (rendera bara synliga rader)
+- [ ] Lazy-ladda SVG-ikoner i listan
+- [ ] Splitta index-bundlen (cropList-data i egen chunk)
+
+### 4.3 Accessibility
+
+> Lighthouse Accessibility 84 - kontrastproblem och länkfärger
+
+- [ ] Fixa kontrastproblem (zonknappar, viss text)
+- [ ] Länkar ska skilja sig från omgivande text (inte bara färg)
+
+---
+
+## Epic: Webb & Lansering
+
+Statamic-integration, användartest, gårdskoppling och go-live.
+
+### 5.1 Webb-version (Statamic)
 
 - [ ] Webb-version live på lillabosgarden.se/odlingsguiden
 - [ ] Server-renderad HTML via Statamic - varje gröda får egen URL
 - [ ] SEO-optimerat
 
-### 2.7 Användartest
+### 5.2 Användartest
 
 - [ ] Test med 10-15 svenska odlare
 - [ ] Samla feedback, prioritera förbättringar
 
-### 2.8 Gårdskoppling
+### 5.3 Gårdskoppling
 
 - [ ] Koppling till gårdens produkter i relevanta profiler
 - [ ] "Vill du inte odla själv? Moroten finns i våra grönsakskassar."
 
----
-
-## Fas 3: Lansering
-
-Gå live och bygg publik.
-
-### 3.1 Innehållsmål
+### 5.4 Innehållsmål
 
 - [ ] 30+ grönsaker, 10+ bär, 12+ kryddor, 5+ frukt
 
-### 3.2 Lansering
+### 5.5 Lansering
 
 - [ ] Webbapp live på lillabosgarden.se/odlingsguiden
 - [ ] Lanseringskampanj via @lillabosgarden Instagram + odlarforum
 - [ ] Korsmarknadsföring: grönsakskassar ↔ webbapp, gårdsbutik ↔ webb
 
-### 3.3 Utvärdering
+### 5.6 Utvärdering
 
 - [ ] Utvärdera behov av native-app baserat på användartrafik
 
 ---
 
-## Fas 4: Expansion
+## Epic: Expansion
 
-Väx och bredda.
+Nordisk och global expansion, community och partnerskap.
 
-### 4.1 Nordisk expansion
+### 6.1 Nordisk expansion
 
 - [ ] Norge, Danmark, Finland
 
-### 4.2 Globalt
+### 6.2 Globalt
 
 - [ ] Tempererade zoner: UK, Nordtyskland, Kanada
 
-### 4.3 Community
+### 6.3 Community
 
 - [ ] Dela tips, bilder, skördrapporter
 
-### 4.4 Partnerskap
+### 6.4 Partnerskap
 
 - [ ] Fröföretag: Impecta, Runåbergs, Nelson Garden
 
@@ -439,9 +468,9 @@ Identifierat vid jämförelse med odlaatbart.se och andra svenska odlingssidor (
 - [x] ~~Emojis används överallt istället för custom SVG-ikoner~~ (åtgärdat: 1.3 grafisk profil)
 - [x] ~~Potatis saknar illustration~~ (åtgärdat: 1.3 grafisk profil)
 - [x] ~~Odlingszonerna och landskapstilldelning behöver faktagranskas (Gotland = zon 1, m.fl.)~~ (åtgärdat: Öland/Gotland→zon 1, Mälardalen→zon 2, alla regioner uppdaterade)
-- [x] ~~Ingen säsongsvy/kalender~~ (åtgärdat: 2.3 säsongsvy v1)
+- [x] ~~Ingen säsongsvy/kalender~~ (åtgärdat: 3.1 säsongsvy v1)
 - [x] ~~Inga korsreferenser~~ (åtgärdat: 1.4 korsreferenser)
-- [ ] Frukt saknas som kategori
+- [x] ~~Frukt saknas som kategori~~ (åtgärdat: 2.3 frukt som fjärde kategori)
 - [x] ~~Bundle size >500KB pga Recharts~~ (åtgärdat: session 40, dynamic import - main bundle 1043→253 KB. Recharts redan lazy-loaded i egen chunk)
 
 ### Filer
@@ -461,4 +490,4 @@ Identifierat vid jämförelse med odlaatbart.se och andra svenska odlingssidor (
 
 ---
 
-_Senast uppdaterad: 2026-03-03 (session 42)_
+_Senast uppdaterad: 2026-03-04 (session 53)_
