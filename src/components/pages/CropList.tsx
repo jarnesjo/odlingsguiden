@@ -159,7 +159,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
           )}
 
           {/* Crop rows */}
-          {filtered.map((crop) => {
+          {filtered.map((crop, index) => {
             const d = DIFFICULTY_INFO[crop.difficulty]
             const dotColor = d.color === "#B7E4C7" ? "#3D6B4F" : d.color === "#FFF3CD" ? "#B8860B" : "#B54A3F"
             const diffLabel = crop.difficulty === 'Enkel' ? 'Lättodlad' : crop.difficulty === 'Medel' ? 'Kräver lite omsorg' : 'Kräver extra omsorg'
@@ -170,7 +170,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
                 onClick={() => !crop.locked && onSelect(crop.id)}
               >
                 <div className={styles.cropGraphic}>
-                  <CropIcon id={crop.id} size={40} category={crop.category} />
+                  <CropIcon id={crop.id} size={40} category={crop.category} lazy={index >= 8} />
                 </div>
                 <div className={styles.cropInfo}>
                   <div className={styles.cropName}>{crop.name}</div>

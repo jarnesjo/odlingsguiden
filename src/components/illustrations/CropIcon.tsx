@@ -1,4 +1,4 @@
-import { useState, useEffect, type ComponentType } from 'react'
+import { useState, useEffect, useRef, type ComponentType } from 'react'
 import type { Category } from '../../data/types'
 import { VegetableIcon, BerryIcon, HerbIcon, FruitIcon, FlowerIcon } from '../icons'
 
@@ -104,12 +104,13 @@ const ID_TO_PATH: Record<string, string> = {
 // Cache laddade ikoner
 const iconCache = new Map<string, ComponentType<SizeProps>>()
 
-function useIcon(id: string): ComponentType<SizeProps> | null {
+function useIcon(id: string, enabled: boolean): ComponentType<SizeProps> | null {
   const [Icon, setIcon] = useState<ComponentType<SizeProps> | null>(
     () => iconCache.get(id) ?? null
   )
 
   useEffect(() => {
+    if (!enabled) return
     if (iconCache.has(id)) {
       setIcon(() => iconCache.get(id)!)
       return
@@ -131,7 +132,7 @@ function useIcon(id: string): ComponentType<SizeProps> | null {
       }
     })
     return () => { cancelled = true }
-  }, [id])
+  }, [id, enabled])
 
   return Icon
 }
@@ -148,13 +149,34 @@ interface Props {
   id: string
   size?: number
   category?: Category
+  lazy?: boolean
 }
 
-export function CropIcon({ id, size = 48, category }: Props) {
-  const Icon = useIcon(id)
-  if (Icon) {
-    return <Icon size={size} />
-  }
+export function CropIcon({ id, size = 48, category, lazy = false }: Props) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const [inView, setInView] = useState(!lazy)
+
+  useEffect(() => {
+    if (!lazy || inView) return
+    const el = ref.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setInView(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '200px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [lazy, inView])
+
+  const Icon = useIcon(id, inView)
   const FallbackIcon = category ? CATEGORY_ICONS[category] : VegetableIcon
-  return <FallbackIcon size={size} />
+  const content = Icon ? <Icon size={size} /> : <FallbackIcon size={size} />
+
+  return lazy ? <span ref={ref}>{content}</span> : content
 }
