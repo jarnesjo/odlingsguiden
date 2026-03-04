@@ -8,7 +8,7 @@ export const gurka: Crop = {
   difficulty: 'Medel',
   difficultyWhy: 'Gurkan är en liten diva som vill ha det varmt, fuktigt och vindstilla. I kallväxthus är hon ganska snäll, men utomhus i Sverige är det en utmaning - framför allt norr om zon 3.',
   zones: { outdoor: [1, 2, 3, 4, 5], indoor: null, greenhouse: [1, 2, 3, 4, 5, 6] },
-  days: '50-70',
+  days: '55-75',
   spacing: '40-60 cm',
   rowSpacing: '100-120 cm',
   depth: '1-2 cm',
@@ -98,9 +98,9 @@ export const gurka: Crop = {
     goodAfterWhy: 'Lättfödda rotgrönsaker och kålväxter trivs efter gurka. Jorden är fortfarande lucker och näringsrik men utan gurkväxtsjukdomar i ytan.',
   },
   varieties: [
-    { name: 'Marketmore 76', zones: [1, 2, 3, 4, 5], note: 'Klassisk OP-frilandsgurka framtagen för nordliga förhållanden. Tålig, pålitlig och ger raka, fina gurkor.' },
+    { name: 'Marketmore 76', zones: [1, 2, 3, 4, 5], note: 'Klassisk OP-frilandsgurka som trivs utmärkt i nordligt klimat. Sjuktålig, pålitlig och ger raka, fina gurkor.' },
     { name: 'Lemon', zones: [1, 2, 3, 4, 5], note: 'Rund, gul OP-frilandsgurka (även kallad Crystal Apple hos Runåbergs). Mild, fräsch smak - en favorit hos barn.' },
-    { name: 'Beit Alpha', zones: [1, 2, 3, 4, 5, 6], note: 'Kompakt OP-växthusgurka med tunna, släta frukter. Fantastisk i sallad och perfekt för växthus i hela landet.' },
+    { name: 'Beit Alpha', zones: [1, 2, 3, 4, 5, 6], note: 'Mångsidig OP-gurka med tunna, släta frukter. Fungerar både på friland och i växthus - fantastisk i sallad.' },
     { name: 'Passandra (F1)', zones: [1, 2, 3, 4, 5, 6], note: 'Partenokarp växthusgurka (F1), enbart honblommor. Pålitlig och sjuktålig - men spara inte frö.' },
     { name: 'Burpless Tasty Green (F1)', zones: [1, 2, 3, 4, 5], note: 'Lång, slät F1-gurka utan bitterhet. Fungerar både i växthus och på friland i gynnsamt läge.' },
   ],
@@ -111,8 +111,8 @@ export const gurka: Crop = {
     { name: 'Bittra gurkor', symptom: 'Gurkorna smakar beskt och bittert, speciellt i änden närmast stjälken', fix: 'Inte en sjukdom utan stress! Ojämn vattning, kyla eller näringsbrist. Vattna jämnt, skydda mot kyla och gödsla regelbundet. Skär bort den bittra änden - resten kan vara fin.' },
   ],
   goodToKnow: [
-    { icon: 'warning', title: 'Kallväxthus = bästa valet i Sverige', text: 'De flesta svenska odlare kör gurka i kallväxthus - och det med all rätt. Du behöver inget uppvärmt växthus, men skyddet från vind och kalla nätter gör enorm skillnad. Friland funkar i zon 1-3 med frilandssorter, men räkna med ojämnare skörd.', severity: 'warning' },
-    { icon: 'warning', title: 'Frilandssorter och växthussorter - helt olika', text: 'Blanda inte ihop dem! Växthusgurkor (Beit Alpha, Passandra) klarar inte kyla och vind. Frilandssorter (Marketmore, Lemon) blir för kompakta i växthus. Välj rätt sort för din odlingsplats.', severity: 'warning' },
+    { icon: 'warning', title: 'Kallväxthus = bästa valet i Sverige', text: 'De flesta svenska odlare kör gurka i kallväxthus - och det med all rätt. Du behöver inget uppvärmt växthus, men skyddet från vind och kalla nätter gör enorm skillnad. Friland funkar i zon 1-4 med frilandssorter, men räkna med ojämnare skörd.', severity: 'warning' },
+    { icon: 'warning', title: 'Frilandssorter och växthussorter - olika behov', text: 'Partenokarpa växthusgurkor (som Passandra) klarar inte kyla och vind. Frilandssorter (Marketmore, Lemon) är tåligare men ger mindre skörd i växthus. Beit Alpha är flexibel och fungerar på båda ställen. Välj rätt sort för din odlingsplats.', severity: 'warning' },
     { icon: 'warning', title: 'Bitterhet = stress', text: 'Bittra gurkor beror nästan alltid på ojämn vattning eller kalla nätter. Håll jämn fukt och skydda mot kyla så slipper du problemet.', severity: 'warning' },
     { icon: 'harvest', title: 'Skörda ofta!', text: 'Plocka gurkorna medan de är unga och fasta. Lämnar du dem för länge slutar plantan sätta nya frukter. Skörda varannan dag under högsäsong.', severity: 'tip' },
     { icon: 'leaf', title: 'Klätterväxt - spaljera!', text: 'Gurkan klättrar naturligt med klängen. Led henne uppåt på spaljé eller nät - det sparar plats, ger renare frukter och bättre luftcirkulation.', severity: 'tip' },
@@ -122,7 +122,7 @@ export const gurka: Crop = {
   sowing: {
     method: 'indoor',
     label: 'Förodling inomhus',
-    description: 'Förodla alltid gurka inomhus - hon behöver värme och tid. I kallväxthus (det vanligaste för hemmaodlare) planterar du ut när växthuset håller minst 12-15°C på natten, oftast inte förrän mitten av maj i söder och juni i norr. Räkna 3-4 veckor bakåt för sådd.',
+    description: 'Förodla alltid gurka inomhus - hon behöver värme och tid. I kallväxthus (det vanligaste för hemmaodlare) planterar du ut när växthuset håller minst 12-15°C på natten, oftast inte förrän mitten av maj i söder och juni i norr. Räkna 4-5 veckor bakåt för sådd.',
     steps: [
       'Så 1-2 frön per kruka, 1-2 cm djupt, i stor kruka (minst 8 cm). Gurkan hatar att bli omskollad, så gärna direkt i nedbrytbar kruka.',
       'Håll varmt (22-25°C) - fröna gror på 4-7 dagar. En fönsterbräda ovanför ett element fungerar perfekt.',
@@ -132,12 +132,12 @@ export const gurka: Crop = {
       'Sätt upp spaljé eller nät direkt vid plantering - att göra det senare skadar rötterna.',
     ],
     tips: [
-      'Så INTE för tidigt! 3-4 veckor innan utplantering räcker. Gurkplantor som väntar för länge inomhus blir stressade och ger sämre skörd.',
+      'Så INTE för tidigt! 4-5 veckor innan utplantering räcker. Gurkplantor som väntar för länge inomhus blir stressade och ger sämre skörd.',
       'Blötlägg fröna 12-24 timmar före sådd - det snabbar upp groningen märkbart',
       'I kallväxthus planterar du ut i mitten av maj (zon 1-2), slutet av maj (zon 3-4) eller juni (zon 5-6)',
       'Frilandsodling funkar i zon 1-3 med frilandssorter (Marketmore, Lemon) - men kallväxthus ger alltid bättre resultat i Sverige',
     ],
-    indoorWeeks: '3-4 veckor',
+    indoorWeeks: '4-5 veckor',
   },
   seedSaving: {
     difficulty: 'Medel',
