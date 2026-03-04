@@ -104,7 +104,7 @@ export const basilika: Crop = {
   ],
   problems: [
     { name: 'Bladlöss', symptom: 'Klibbiga blad, deformerad tillväxt, löss synliga på undersidan av blad.', fix: 'Såpvatten räddar läget (1 msk flytande tvål per liter). Spruta var 3:e dag. Har du tur hittar nyckelpige-larver dem först - de älskar bladlöss.' },
-    { name: 'Vishnesjuka (Fusarium)', symptom: 'Plantan vissnar plötsligt trots vattning. Bruna strimmor i stjälken.', fix: 'Tyvärr ingen bot. Dra upp och förstör plantan. Odla inte basilika på samma plats igen på 3 år. Tips: sorten \'Nufar\' har viss resistens.' },
+    { name: 'Vishnesjuka (Fusarium)', symptom: 'Plantan vissnar plötsligt trots vattning. Bruna strimmor i stjälken.', fix: 'Tyvärr ingen bot. Dra upp och förstör plantan. Odla inte basilika på samma plats igen på 3 år. Sorten \'Nufar\' har viss resistens mot vishnesjuka.' },
     { name: 'Kyla-skador', symptom: 'Svarta fläckar på blad, slappe blad efter kall natt.', fix: 'Förebygg! Ta in krukodlad basilika så fort nattemperaturen kryper under 10°C. Frilandsodlad? Fiberduk under kalla nätter kan rädda henne.' },
   ],
   goodToKnow: [
