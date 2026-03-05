@@ -17,6 +17,7 @@ import { MONTH_NAMES, MONTH_SLUGS } from '../src/utils/monthParser.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
+const BASE_PATH = '/odlingsguiden'
 
 function getAllRoutes(): string[] {
   const routes: string[] = []
@@ -76,7 +77,7 @@ async function prerender() {
     .filter(f => f.endsWith('.css'))
   const missingCss = allCssFiles
     .filter(f => !template.includes(f))
-    .map(f => `<link rel="stylesheet" crossorigin href="/assets/${f}">`)
+    .map(f => `<link rel="stylesheet" crossorigin href="${BASE_PATH}/assets/${f}">`)
   if (missingCss.length > 0) {
     template = template.replace('</head>', `  ${missingCss.join('\n  ')}\n  </head>`)
     console.log(`Injected ${missingCss.length} lazy CSS files into template`)
@@ -87,7 +88,7 @@ async function prerender() {
 
   let count = 0
   for (const route of routes) {
-    const html = await render(route)
+    const html = await render(BASE_PATH + route)
 
     // Bädda in data som JSON för hydration (undviker flash)
     const dataScripts: string[] = []

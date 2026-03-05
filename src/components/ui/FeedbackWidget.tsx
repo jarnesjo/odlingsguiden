@@ -16,7 +16,7 @@ export function FeedbackWidget({ page }: FeedbackWidgetProps) {
 
     setStatus('sending')
     try {
-      const res = await fetch('/api/feedback', {
+      const res = await fetch('/odlingsguiden/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ page, message: message.trim() }),
@@ -64,18 +64,18 @@ export function FeedbackWidget({ page }: FeedbackWidgetProps) {
         />
         <div className={styles.actions}>
           <button
-            type="button"
-            className={styles.cancel}
-            onClick={() => { setOpen(false); setMessage(''); setStatus('idle') }}
-          >
-            Avbryt
-          </button>
-          <button
             type="submit"
             className={styles.submit}
             disabled={!message.trim() || status === 'sending'}
           >
             {status === 'sending' ? 'Skickar...' : 'Skicka'}
+          </button>
+          <button
+            type="button"
+            className={styles.cancel}
+            onClick={() => { setOpen(false); setMessage(''); setStatus('idle') }}
+          >
+            Avbryt
           </button>
         </div>
         {status === 'error' && (

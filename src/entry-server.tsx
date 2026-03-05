@@ -12,8 +12,9 @@ export { loadAllCrops, getCachedCrop, SLUG_TO_ID, getSeasonActivities }
 
 export async function render(url: string): Promise<string> {
   // Fyll SSR-cache för säsongsdata om det är en säsongsroute
-  if (url.startsWith('/säsong')) {
-    const monthSlug = url.split('/')[2]
+  const seasonPrefix = '/odlingsguiden/säsong'
+  if (url.startsWith(seasonPrefix)) {
+    const monthSlug = url.slice(seasonPrefix.length + 1) || undefined
     const month = monthSlug ? (monthSlugToNumber(monthSlug) ?? new Date().getMonth() + 1) : new Date().getMonth() + 1
     const seasonData = await getSeasonActivities(month, 4)
     ssrSeasonCache.set(month, seasonData)
@@ -21,7 +22,7 @@ export async function render(url: string): Promise<string> {
 
   const { prelude } = await prerender(
     <React.StrictMode>
-      <StaticRouter location={url}>
+      <StaticRouter basename="/odlingsguiden" location={url}>
         <App />
       </StaticRouter>
     </React.StrictMode>,
