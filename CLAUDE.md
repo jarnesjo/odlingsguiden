@@ -316,12 +316,19 @@ npm run preview      # Förhandsgranska bygget
 
 ## Git & Commits
 
+### Branch-strategi
+
+- **main** = produktion. Push till main triggar Forge autodeploy.
+- **Feature branches** för allt utvecklingsarbete. Namngivning: `feature/kort-beskrivning`
+- Mergea till main när användaren är nöjd och redo att deploya
+- Tagga releaser: `v1.0.0`, `v1.1.0` etc. (triggar inte deploy)
+
 ### Commit strategy
 
 - **Never** bundle unrelated changes in one commit
 - One commit per logical change — if in doubt, split it
 - Always stage files explicitly, never `git add .`
-- Commit automatically without asking, but always as separate commits per scope
+- **Fråga alltid användaren innan commit och push** — committa inte automatiskt
 - Use multiple `-m` flags: title, body (optional), co-author
 - Co-author line goes in its own `-m` flag last
 
@@ -367,5 +374,7 @@ docs(claude): update CLAUDE.md for Claude Code workflow
 
 - Never commit `CLAUDE.md` changes together with feature code
 - Never commit multiple features in one commit
-- Commit automatically without asking, but always as separate commits per scope
+- **Aldrig pusha direkt till main under utveckling** — jobba på feature branch
+- **Fråga alltid innan commit och push** — användaren måste godkänna
 - If multiple files changed, group by scope and propose separate commits
+- Bygg `dist/` lokalt innan commit till main: `npm run build && npm run prerender`
