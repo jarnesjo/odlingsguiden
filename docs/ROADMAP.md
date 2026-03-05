@@ -363,13 +363,14 @@ Ingen prioritet. Plockas upp när det passar.
 
 ### Funktioner
 
-- Mörkt läge / dark mode
+- Mörkt läge / dark mode - CSS custom properties finns redan, favicon har dark mode-stöd, LogoCombined har `dark`-prop. Approach: (1) migrera inline color-references till CSS custom properties, (2) flippa alla properties i `[data-theme="dark"]`-block, (3) illustrationer och grafer sist. En ordentlig session.
 - AI-rådgivare för växtproblem ("Min tomat har gula blad - vad är fel?")
 
 ### SEO & Synlighet
 
-- OG-image (brand/og-image.jpg) - snygg delningsbild för sociala medier. 1200x630px. Används av alla sidor via og:image-taggen som redan finns.
+- ~~OG-image~~ ✅ Rotfrukter-variant vald. Fyra V5-varianter sparade. Generator-script: `scripts/generate-og.py`
 - Strukturerad data (JSON-LD) - schema.org markup per grödprofil for bättre synlighet i Google och AI-svar. Article + HowTo + BreadcrumbList. Data finns redan i profilerna, handlar om att mappa till JSON-LD och injektera i head.
+- PWA-grund: `site.webmanifest` (namn, tema-färg, ikoner), `apple-touch-icon` (PNG 180x180), cache-busting på favicon (`?v=`). Filer i `public/` har ingen content hash - favicons cachas aggressivt av mobila webbläsare.
 
 ### Datakvalitet
 
