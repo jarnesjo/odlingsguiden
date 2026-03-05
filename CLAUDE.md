@@ -176,12 +176,12 @@ Odlingsguiden (formerly Grödguiden) is a Swedish growing guide app — a deep, 
 
 ## Current State
 
-**Prototype-only codebase** — no package.json, build system, tests, or linting configured yet. The prototypes are standalone JSX files designed for use in Codesandbox or similar environments.
+**Vite + React 19 + TypeScript webbapp** med prerenderade routes (102 sidor). Serveras som statisk HTML under `lillabosgarden.se/odlingsguiden` via nginx alias.
 
-- `prototypes/grodguiden-wireframe.jsx` — Main app prototype with all crop data and UI
-- `prototypes/grodguiden-designguide.jsx` — Design system & color palettes
-- `prototypes/grodguiden-illustrationer.jsx` — SVG crop illustrations
-- `prototypes/grodguiden-logotyper.jsx` — Logo concepts & branding (migrerat till `src/components/brand/` + `public/brand/`)
+- `src/` — Huvudkod (komponenter, data, hooks, theme, utils)
+- `scripts/` — Prerender och sitemap-generering
+- `server/` — Feedback API (PHP + SMTP)
+- `prototypes/` — Äldre standalone JSX-prototyper (Codesandbox)
 
 ## Key Documentation
 
@@ -192,16 +192,14 @@ Odlingsguiden (formerly Grödguiden) is a Swedish growing guide app — a deep, 
 
 ## Architecture & Data Model
 
-All crop data lives in the `CROPS` object in `grodguiden-wireframe.jsx`. Each crop has 25+ required fields organized into sections: basic info, zones, growing data, optimal conditions, watering, soil, timeline (zone-specific for zones 1/4/6), nutrition data (N-P-K curves), companions, rotation, varieties, problems, sowing, seed saving, storage, and harvest calculations.
+Gröddata finns som separata TypeScript-filer i `src/data/crops/` (en fil per gröda). Laddas lazy via `import()`. Varje gröda har 25+ fält: basic info, zoner, odlingsdata, optimala förhållanden, bevattning, jord, tidslinje (zonspecifik för zon 1/4/6), näringskurvor (N-P-K), samodling, växtföljd, sorter, problem, sådd, fröbesparing, lagring och skördeberäkningar.
 
 Key data structures:
 
 - **ZONE_INFO** — Sweden's 8 growing zones with frost dates and frost-free days
 - **DIFFICULTY_INFO** — Enkel/Medel/Avancerad difficulty levels
-- **CROPS** — Full crop profiles (currently: morot, tomat, potatis, hallon, basilika)
-- **CROP_LIST** — Registry with id, name, emoji, family, difficulty, category
-
-Libraries: React (hooks), Recharts (nutrition graphs), pure SVG for icons/illustrations, CSS-in-JS (inline styles).
+- **CROP_LIST** — Registry i `src/data/cropList.ts` med id, name, family, difficulty, category
+- **Crop files** — `src/data/crops/{id}.ts` (lazy-loaded per gröda)
 
 ## Tone & Voice (Critical Convention)
 
@@ -249,18 +247,55 @@ Background: `docs/research/f1-frodebatten.md`
 
 ## Tech Stack
 
-**Current focus: Free web app**
+**Webbapp (nuvarande fokus):**
 
-- Web: Statamic (Laravel CMS) on lillabosgarden.se
-- Data: Shared JSON/TS files
-- Charts: Recharts
-- Prototypes: Standalone JSX (Codesandbox)
+- Vite 7 (build + SSR prerender)
+- React 19 (hooks, prerender() API)
+- TypeScript 5.9 (strict mode)
+- React Router 7 (BrowserRouter, StaticRouter for SSR)
+- Recharts 3 (lazy-loaded)
+- CSS Modules + CSS custom properties
+- Base path: `/odlingsguiden/` (serveras under lillabosgarden.se)
 
-**Future (native app, paid):**
+**Server:**
+
+- Laravel Forge + Digital Ocean
+- Huvudsajt: Statamic (Laravel CMS) on lillabosgarden.se
+- Odlingsguiden: statisk HTML via nginx alias till subdomän-sitens dist/
+- Feedback API: standalone PHP med SMTP (`server/feedback.php`)
+
+**Framtid (native app):**
 
 - React Native + Expo (iOS/Android)
-- Same data files as web
+- Delad data med webben
 - Charts: react-native-svg + victory-native
+
+## Deploy
+
+**Hosting:** Laravel Forge + Digital Ocean. Odlingsguiden deployar som eget site i Forge (subdomän) men serveras under `lillabosgarden.se/odlingsguiden` via nginx alias.
+
+**Deploy-flöde:**
+
+1. Push till main -> Forge autodeploy
+2. Deploy-script: `npm install && npm run build && npm run prerender`
+3. Nginx-snippet i Statamics server-block pekar `/odlingsguiden` till dist-mappen
+4. Se `nginx.conf` i repo-roten för komplett konfiguration
+
+**Feedback API:**
+
+- `server/feedback.php` - tar emot POST med `{ page, message }`, skickar mail via SMTP
+- Konfiguration i `server/.env` (inte i git) - se `server/.env.example`
+- Rate-limited: max 3 requests per IP per 5 min
+- Endpoint: `/odlingsguiden/api/feedback`
+
+**Kommandon:**
+
+```bash
+npm run dev          # Vite dev server (localhost:5173/odlingsguiden/)
+npm run build        # Bygg till dist/ (inkl. sitemap)
+npm run prerender    # Prerendera alla 102 routes
+npm run preview      # Förhandsgranska bygget
+```
 
 ---
 
