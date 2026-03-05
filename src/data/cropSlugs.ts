@@ -1,12 +1,5 @@
 import { CROP_LIST } from './cropList'
-
-/** Convert a crop name to a URL-friendly slug, preserving åäö */
-function toSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[()]/g, '')
-}
+import { toSlug } from '../utils/slug'
 
 /** Map from URL slug (with åäö) to crop id */
 export const SLUG_TO_ID: Record<string, string> = {}

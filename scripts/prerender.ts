@@ -7,26 +7,16 @@
  * 3. För varje route: rendera HTML, injicera i mallen, spara till dist/
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rmSync } from 'fs'
 import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { build } from 'vite'
 import { CROP_LIST } from '../src/data/cropList.ts'
+import { toSlug } from '../src/utils/slug.ts'
+import { MONTH_NAMES, MONTH_SLUGS } from '../src/utils/monthParser.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
-
-const MONTH_NAMES = ['', 'Januari', 'Februari', 'Mars', 'April', 'Maj', 'Juni',
-  'Juli', 'Augusti', 'September', 'Oktober', 'November', 'December']
-const MONTH_SLUGS_LIST = ['', 'januari', 'februari', 'mars', 'april', 'maj', 'juni',
-  'juli', 'augusti', 'september', 'oktober', 'november', 'december']
-
-function toSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[()]/g, '')
-}
 
 function getAllRoutes(): string[] {
   const routes: string[] = []
@@ -38,7 +28,7 @@ function getAllRoutes(): string[] {
   // Säsong (alla 12 månader)
   routes.push('/säsong')
   for (let m = 1; m <= 12; m++) {
-    routes.push(`/säsong/${MONTH_SLUGS_LIST[m]}`)
+    routes.push(`/säsong/${MONTH_SLUGS[m]}`)
   }
 
   // Alla grödprofiler
@@ -67,7 +57,10 @@ async function prerender() {
   })
 
   // Importera render-funktionen och helpers från SSR-bundlen
-  const { render, getCachedCrop, SLUG_TO_ID, getSeasonActivities } = await import(resolve(root, 'dist-ssr/entry-server.js'))
+  const { render, loadAllCrops, getCachedCrop, SLUG_TO_ID, getSeasonActivities } = await import(resolve(root, 'dist-ssr/entry-server.js'))
+
+  // Ladda alla grödor en gång (cachas internt)
+  await loadAllCrops()
 
   // Läs den byggda index.html som mall (innan den skrivs över av /-routen)
   let template = readFileSync(resolve(root, 'dist/index.html'), 'utf-8')
@@ -125,7 +118,7 @@ async function prerender() {
     if (route.startsWith('/säsong')) {
       const monthSlug = route.split('/')[2]
       const monthNum = monthSlug
-        ? MONTH_SLUGS_LIST.indexOf(monthSlug)
+        ? MONTH_SLUGS.indexOf(monthSlug)
         : new Date().getMonth() + 1
       if (monthNum > 0) {
         const seasonData = await getSeasonActivities(monthNum, 4)
@@ -166,7 +159,13 @@ async function prerender() {
 
     writeFileSync(filePath, page)
     count++
+    if (count % 20 === 0) {
+      console.log(`  ${count}/${routes.length} routes...`)
+    }
   }
+
+  // Rensa temporär SSR-bundle
+  rmSync(resolve(root, 'dist-ssr'), { recursive: true, force: true })
 
   console.log(`Prerendered ${count} pages.`)
 }

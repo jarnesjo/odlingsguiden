@@ -1,14 +1,8 @@
 import { CROP_LIST } from '../src/data/cropList.ts'
+import { toSlug } from '../src/utils/slug.ts'
 import { writeFileSync } from 'fs'
 
 const BASE_URL = 'https://lillabosgarden.se/odlingsguiden'
-
-function toSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[()]/g, '')
-}
 
 const today = new Date().toISOString().split('T')[0]
 
