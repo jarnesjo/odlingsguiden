@@ -274,12 +274,12 @@ Eget prerender-script (inga extra deps) med React 19 `prerender()` API och `Stat
 - [x] Alla CSS-filer (inklusive lazy chunks) injiceras i `<head>`
 - [x] useLocalStorage SSR-guard
 
-### 4.4 Accessibility
+### 4.4 Accessibility ✅
 
-> Lighthouse Accessibility 84 - kontrastproblem och länkfärger
+> Lighthouse Accessibility 84 → 100 - WCAG AA-kontrast och länksynlighet
 
-- [ ] Fixa kontrastproblem (zonknappar, viss text)
-- [ ] Länkar ska skilja sig från omgivande text (inte bara färg)
+- [x] Fixa kontrastproblem (zonknappar, viss text)
+- [x] Länkar ska skilja sig från omgivande text (inte bara färg)
 
 ---
 
