@@ -1,0 +1,75 @@
+meta:
+  date: 2026-03-05
+  author: claude
+  phase: "Epic: Performance & Kvalitet + Webb & Lansering"
+  status: avslutad
+  session_notes: |
+    Session 55. Prerender-cleanup, accessibility 100, UI-polish, feedback-widget.
+
+    PRERENDER CLEANUP:
+    - Deduplicated toSlug() till src/utils/slug.ts (var i 3 filer)
+    - Centraliserade manadskonstanter (prerender importerar fran monthParser)
+    - loadAllCrops() anropas en gang innan loop (var per route)
+    - Statisk import av monthSlugToNumber (fixar Vite-varning)
+    - npm run prerender tillagt i package.json
+    - dist-ssr/ rensas automatiskt efter prerender
+    - Progress-loggning var 20:e route
+
+    ACCESSIBILITY 84 -> 100:
+    - --color-text-muted #7A7568 -> #695F52 (5.6:1 kontrast)
+    - Difficulty dot #B8860B -> #7B6200 (5.3:1 kontrast)
+    - .familySwedish: opacity 0.5 -> explicit muted-farg
+    - Footer-lank: understruken (inte bara farg)
+    - tokens.ts synkad med global.css
+
+    SASONGSBANNER:
+    - Sasong utbruten fran kategorivarljaren till egen CTA-banner
+    - Varm fargtema (warm-light bg, warm-dark text/ikon/border)
+    - "Vad ska jag gora i mars?" - dynamisk manad
+    - Kategorivarljaren 4 knappar istf 5 - gronsaksikonen har plats
+    - Tangenter: S = sasong, 1-4 = kategorier
+
+    FEEDBACK-WIDGET:
+    - "Hittade du ett fel? Beratta!" langst ner i varje grodprofil
+    - Inline textfalt, postar till POST /api/feedback
+    - Backend (Laravel mail) byggs separat
+
+    MERGE: feature/prerendering mergad till main, gamla worktree-branches stadade.
+
+tech_stack:
+  current:
+    - Vite 7.3 (build + SSR)
+    - React 19 (hooks, prerender() API)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (StaticRouter for SSR)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - Eget prerender-script (scripts/prerender.ts)
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+commands:
+  - "npm run dev          # Starta Vite dev server"
+  - "npm run build        # Bygger till dist/"
+  - "npm run prerender    # Prerendera alla 102 routes"
+  - "npx serve dist -l 4273  # Testa prerenderad build lokalt"
+
+next_steps:
+  - "Deploy till DO via Laravel Forge (5.1)"
+  - "Bygg POST /api/feedback endpoint i Laravel (skicka mail)"
+  - "Kor Lighthouse pa produktionsdomanen"
+  - "Sokfunktion: sok tvars kategorier, filtrering (3.4)"
+
+context:
+  decisions:
+    - "Warm fargschema for sasongsbanner (skiljer fran grona kategorier)"
+    - "Egen feedback-endpoint istf extern tjanst (Tally/Formspree)"
+    - "toSlug() och manadskonstanter deduplicerade till delade filer"
+    - "Accessibility fixat via CSS-variabler (en andring = alla element)"
+  constraints:
+    - "Feedback-widget frontend klar men backend saknas an"
+    - "Zon 4 hardcoded for prerenderad sasongsdata"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "Illustrationsflash: CropIcon/CropGraphic laddar via import.meta.glob"
