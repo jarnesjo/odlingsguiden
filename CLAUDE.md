@@ -321,7 +321,24 @@ npm run preview      # Förhandsgranska bygget
 - **main** = produktion. Push till main triggar Forge autodeploy.
 - **Feature branches** för allt utvecklingsarbete. Namngivning: `feature/kort-beskrivning`
 - Mergea till main när användaren är nöjd och redo att deploya
-- Tagga releaser: `v1.0.0`, `v1.1.0` etc. (triggar inte deploy)
+
+### Release-flöde
+
+Release hanteras via `npm version` som bumpar version, bygger, committar och taggar:
+
+```bash
+npm version patch   # 1.0.0 -> 1.0.1 (buggfix)
+npm version minor   # 1.0.0 -> 1.1.0 (ny funktion)
+npm version major   # 1.0.0 -> 2.0.0 (breaking change)
+git push && git push --tags
+```
+
+Flödet (automatiskt via npm hooks):
+1. Bumpar version i `package.json`
+2. Kör `build` + `prerender`
+3. Stagar `dist/` + `package.json`
+4. Committar och skapar git tag (`v1.0.1`)
+5. Manuellt: pusha till main för deploy
 
 ### Commit strategy
 
