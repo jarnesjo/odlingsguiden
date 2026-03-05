@@ -3,6 +3,7 @@ import type { Crop, Zone, TimelineZone } from '../../data/types'
 import { loadCrop, getCachedCrop } from '../../data/crops'
 import { ZONE_INFO } from '../../data/zones'
 import { useDocumentMeta } from '../../hooks/useDocumentMeta'
+import { FeedbackWidget } from '../ui/FeedbackWidget'
 import {
   CropHeader,
   OptimalConditions,
@@ -105,6 +106,8 @@ export function CropPage({ cropId, userZone, onBack, onZoneClick, onNavigate }: 
         ) : crop.seedSaving ? (
           <SeedSavingSection seedSaving={crop.seedSaving} />
         ) : null}
+
+        <FeedbackWidget page={crop.name} />
       </div>
     </div>
   )

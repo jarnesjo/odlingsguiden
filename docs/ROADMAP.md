@@ -293,27 +293,34 @@ Statamic-integration, användartest, gårdskoppling och go-live.
 - [ ] Server-renderad HTML via Statamic - varje gröda får egen URL
 - [ ] SEO-optimerat
 
-### 5.2 Användartest
+### 5.2 Feedback-funktion
+
+> Diskret "Rapportera fel"-knapp i grödprofiler - skickar mail via egen endpoint
+
+- [ ] Frontend: inline feedback-ruta i CropPage footer
+- [ ] Backend: POST /api/feedback → mail (Laravel)
+
+### 5.3 Användartest
 
 - [ ] Test med 10-15 svenska odlare
 - [ ] Samla feedback, prioritera förbättringar
 
-### 5.3 Gårdskoppling
+### 5.4 Gårdskoppling
 
 - [ ] Koppling till gårdens produkter i relevanta profiler
 - [ ] "Vill du inte odla själv? Moroten finns i våra grönsakskassar."
 
-### 5.4 Innehållsmål
+### 5.5 Innehållsmål
 
 - [ ] 30+ grönsaker, 10+ bär, 12+ kryddor, 5+ frukt
 
-### 5.5 Lansering
+### 5.6 Lansering
 
 - [ ] Webbapp live på lillabosgarden.se/odlingsguiden
 - [ ] Lanseringskampanj via @lillabosgarden Instagram + odlarforum
 - [ ] Korsmarknadsföring: grönsakskassar ↔ webbapp, gårdsbutik ↔ webb
 
-### 5.6 Utvärdering
+### 5.7 Utvärdering
 
 - [ ] Utvärdera behov av native-app baserat på användartrafik
 
