@@ -18,6 +18,7 @@ import { MONTH_NAMES, MONTH_SLUGS } from '../src/utils/monthParser.ts'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 const BASE_PATH = '/odlingsguiden'
+const BASE_URL = 'https://lillabosgarden.se/odlingsguiden'
 
 function getAllRoutes(): string[] {
   const routes: string[] = []
@@ -129,7 +130,10 @@ async function prerender() {
       }
     }
 
-    // Injicera renderad HTML, title, description och data
+    // OG-metadata
+    const ogUrl = route === '/' ? `${BASE_URL}/` : `${BASE_URL}${route}`
+
+    // Injicera renderad HTML, title, description, OG-taggar och data
     const page = template
       .replace(
         '<div id="root"></div>',
@@ -142,6 +146,18 @@ async function prerender() {
       .replace(
         /<meta name="description" content="[^"]*"/,
         `<meta name="description" content="${description}"`
+      )
+      .replace(
+        /<meta property="og:title" content="[^"]*"/,
+        `<meta property="og:title" content="${title}"`
+      )
+      .replace(
+        /<meta property="og:description" content="[^"]*"/,
+        `<meta property="og:description" content="${description}"`
+      )
+      .replace(
+        /<meta property="og:url" content="[^"]*"/,
+        `<meta property="og:url" content="${ogUrl}"`
       )
       .replace(
         '</body>',
