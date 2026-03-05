@@ -11,7 +11,7 @@ interface PropagationSectionProps {
 
 export function PropagationSection({ propagation }: PropagationSectionProps) {
   const diffInfo = DIFFICULTY_INFO[propagation.difficulty]
-  const dotColor = diffInfo.color === '#B7E4C7' ? '#3D6B4F' : diffInfo.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
+  const dotColor = diffInfo.color === '#B7E4C7' ? '#3D6B4F' : diffInfo.color === '#FFF3CD' ? '#7B6200' : '#B54A3F'
 
   return (
     <Section title="Förökning" icon={<SeedlingIcon size={20} />}>

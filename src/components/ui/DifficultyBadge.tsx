@@ -13,7 +13,7 @@ export function DifficultyBadge({ difficulty, why }: DifficultyBadgeProps) {
   const [showTip, setShowTip] = useState(false)
   const wrapperRef = useRef<HTMLDivElement>(null)
   const info = DIFFICULTY_INFO[difficulty]
-  const dotColor = info.color === '#B7E4C7' ? '#3D6B4F' : info.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
+  const dotColor = info.color === '#B7E4C7' ? '#3D6B4F' : info.color === '#FFF3CD' ? '#7B6200' : '#B54A3F'
   const label = difficulty === 'Enkel' ? 'Lättodlad' : difficulty === 'Medel' ? 'Kräver lite omsorg' : 'Kräver extra omsorg'
 
   useEffect(() => {

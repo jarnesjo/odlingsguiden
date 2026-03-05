@@ -29,7 +29,7 @@ export const colors = {
   background: '#F5F2EB',
   card: '#FEFDFB',
   text: '#2C3028',
-  textMuted: '#7A7568',
+  textMuted: '#695F52',
   border: '#E2DDD4',
   warning: '#B54A3F',
   warningLight: '#F5DDD9',

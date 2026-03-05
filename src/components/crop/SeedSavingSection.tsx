@@ -11,7 +11,7 @@ interface SeedSavingSectionProps {
 export function SeedSavingSection({ seedSaving }: SeedSavingSectionProps) {
   const diffInfo = DIFFICULTY_INFO[seedSaving.difficulty]
   const isSelfPollinator = seedSaving.type === 'Självpollinerare'
-  const dotColor = diffInfo.color === '#B7E4C7' ? '#3D6B4F' : diffInfo.color === '#FFF3CD' ? '#B8860B' : '#B54A3F'
+  const dotColor = diffInfo.color === '#B7E4C7' ? '#3D6B4F' : diffInfo.color === '#FFF3CD' ? '#7B6200' : '#B54A3F'
 
   return (
     <Section title="Ta eget frö" icon={<SeedIcon size={20} />}>

@@ -168,7 +168,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
           {/* Crop rows */}
           {filtered.map((crop, index) => {
             const d = DIFFICULTY_INFO[crop.difficulty]
-            const dotColor = d.color === "#B7E4C7" ? "#3D6B4F" : d.color === "#FFF3CD" ? "#B8860B" : "#B54A3F"
+            const dotColor = d.color === "#B7E4C7" ? "#3D6B4F" : d.color === "#FFF3CD" ? "#7B6200" : "#B54A3F"
             const diffLabel = crop.difficulty === 'Enkel' ? 'Lättodlad' : crop.difficulty === 'Medel' ? 'Kräver lite omsorg' : 'Kräver extra omsorg'
             return (
               <button

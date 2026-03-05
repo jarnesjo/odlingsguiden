@@ -99,7 +99,7 @@ function App() {
         textAlign: 'center',
         padding: '24px 0 32px',
         fontSize: '13px',
-        color: '#7A7568',
+        color: 'var(--color-text-muted)',
         fontFamily: 'var(--font-body)',
         lineHeight: 1.8,
       }}>
@@ -114,7 +114,7 @@ function App() {
           href="https://lillabosgarden.se"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: '#3D6B4F', textDecoration: 'none' }}
+          style={{ color: '#3D6B4F', textDecoration: 'underline' }}
         >
           Lilla Bosgården
         </a>
