@@ -368,6 +368,7 @@ Ingen prioritet. Plockas upp när det passar.
 
 ### SEO & Synlighet
 
+- OG-image (brand/og-image.jpg) - snygg delningsbild för sociala medier. 1200x630px. Används av alla sidor via og:image-taggen som redan finns.
 - Strukturerad data (JSON-LD) - schema.org markup per grödprofil for bättre synlighet i Google och AI-svar. Article + HowTo + BreadcrumbList. Data finns redan i profilerna, handlar om att mappa till JSON-LD och injektera i head.
 
 ### Datakvalitet
