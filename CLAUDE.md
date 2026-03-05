@@ -259,10 +259,12 @@ Background: `docs/research/f1-frodebatten.md`
 
 **Server:**
 
-- Laravel Forge + Digital Ocean
-- Huvudsajt: Statamic (Laravel CMS) on lillabosgarden.se
-- Odlingsguiden: statisk HTML via nginx alias till subdomän-sitens dist/
+- Laravel Forge + Digital Ocean (zero downtime deploy)
+- Huvudsajt: Statamic (Laravel CMS) på lillabosgarden.se
+- Odlingsguiden: eget Forge-site (subdomän), serveras via symlink under huvudsajten
+- Symlink: `public/odlingsguiden -> odlingsguiden.lillabosgarden.se/current/dist`
 - Feedback API: standalone PHP med SMTP (`server/feedback.php`)
+- `.env` i projektroten (symlinkad av Forge, delas med feedback.php)
 
 **Framtid (native app):**
 
@@ -272,19 +274,32 @@ Background: `docs/research/f1-frodebatten.md`
 
 ## Deploy
 
-**Hosting:** Laravel Forge + Digital Ocean. Odlingsguiden deployar som eget site i Forge (subdomän) men serveras under `lillabosgarden.se/odlingsguiden` via nginx alias.
+**Hosting:** Laravel Forge + Digital Ocean med zero downtime deploy. Odlingsguiden är ett eget Forge-site (subdomän) men serveras under `lillabosgarden.se/odlingsguiden` via symlink i Statamics public-mapp.
 
 **Deploy-flöde:**
 
-1. Push till main -> Forge autodeploy
-2. Deploy-script: `npm install && npm run build && npm run prerender`
-3. Nginx-snippet i Statamics server-block pekar `/odlingsguiden` till dist-mappen
-4. Se `nginx.conf` i repo-roten för komplett konfiguration
+1. Bygg lokalt: `npm run build && npm run prerender`
+2. Committa `dist/` och pusha till main
+3. Forge autodeploy kör `git pull` (inget bygge på servern)
+4. Forges `current/`-symlink uppdateras -> Statamics `public/odlingsguiden`-symlink pekar rätt
+
+**Serverstruktur:**
+
+```text
+/home/forge/lillabosgarden.se/public/
+  odlingsguiden -> /home/forge/odlingsguiden.lillabosgarden.se/current/dist  (symlink)
+
+/home/forge/odlingsguiden.lillabosgarden.se/
+  current -> releases/YYYYMMDDHHMMSS  (Forge zero downtime)
+  .env                                (symlinkad av Forge till current/.env)
+```
+
+**Nginx:** `location ^~ /odlingsguiden` i Statamics server-block, se `nginx.conf` i repot.
 
 **Feedback API:**
 
 - `server/feedback.php` - tar emot POST med `{ page, message }`, skickar mail via SMTP
-- Konfiguration i `server/.env` (inte i git) - se `server/.env.example`
+- Konfiguration i `.env` i projektroten (symlinkad av Forge) - se `.env.example`
 - Rate-limited: max 3 requests per IP per 5 min
 - Endpoint: `/odlingsguiden/api/feedback`
 

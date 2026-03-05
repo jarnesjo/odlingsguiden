@@ -45,7 +45,6 @@ scripts/
   generate-sitemap.ts
 server/
   feedback.php      Feedback API endpoint
-  .env.example      SMTP-konfiguration (kopiera till .env)
 docs/
   ROADMAP.md        Utvecklingsplan
   guides/           Kvalitetsguider (ny-gröda, designsystem, SVG)
@@ -56,11 +55,14 @@ nginx.conf          Nginx-snippet för Statamic-siten
 
 ## Deploy (Laravel Forge + Digital Ocean)
 
-1. Skapa site i Forge för subdomänen (autodeploy från GitHub)
-2. Deploy-script: `npm install && npm run build && npm run prerender`
-3. Lägg till nginx-snippet från `nginx.conf` i Statamics server-block
-4. Kopiera `server/.env.example` till `server/.env` och fyll i SMTP-uppgifter
-5. Appen serveras på `lillabosgarden.se/odlingsguiden`
+Forge zero downtime deploy. Inget bygge på servern - dist/ committas i git.
+
+1. Bygg lokalt: `npm run build && npm run prerender`
+2. Committa `dist/` och pusha till main
+3. Forge autodeploy kör `git pull`
+4. Symlink i Statamics `public/odlingsguiden` pekar på `current/dist`
+5. SMTP-config i `.env` (projektroten) - se `.env.example`
+6. Nginx-snippet: se `nginx.conf` i repot
 
 ## Dokumentation
 
