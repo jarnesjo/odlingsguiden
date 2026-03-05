@@ -60,11 +60,16 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
         return
       }
 
-      // 1-4 byter kategori (ren siffra eller CMD/Ctrl+siffra i sökinput)
+      // 1-4 byter kategori, S öppnar säsong
       const inSearch = document.activeElement === searchRef.current
       if (inSearch && !(e.metaKey || e.ctrlKey)) return
       if (!inSearch && (e.metaKey || e.ctrlKey || e.altKey)) return
-      const views: View[] = ['sasong', ...visibleCategories.map((c) => c.id as Category)]
+      if (e.key.toLowerCase() === 's' && !inSearch) {
+        e.preventDefault()
+        onViewChange('sasong')
+        return
+      }
+      const views: View[] = visibleCategories.map((c) => c.id as Category)
       const idx = Number(e.key) - 1
       const target = views[idx]
       if (target) {
@@ -96,18 +101,22 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
         </button>
       </div>
 
-      {/* Unified Toggle: Säsong | Grönsaker | Kryddor | Bär */}
+      {/* Season CTA banner */}
+      <button
+        className={`${styles.seasonBanner} ${isSeason ? styles.seasonBannerActive : ''}`}
+        onClick={() => onViewChange('sasong')}
+      >
+        <span className={styles.seasonBannerIcon}>
+          <Icon name="calendar" size={24} color={isSeason ? "#fff" : "var(--color-warm-dark)"} />
+        </span>
+        <span className={styles.seasonBannerText}>
+          Vad ska jag göra i {(MONTH_NAMES[currentMonth] ?? '').toLowerCase()}?
+        </span>
+        <span className={styles.seasonBannerArrow}>{isSeason ? '' : '→'}</span>
+      </button>
+
+      {/* Category toggle */}
       <div className={styles.categoryToggle}>
-        <button
-          className={`${styles.categoryButton} ${isSeason ? styles.categoryActive : styles.categoryInactive}`}
-          style={{ "--cat-color": "var(--color-accent)" } as React.CSSProperties}
-          onClick={() => onViewChange('sasong')}
-        >
-          <span className={styles.categoryIcon}>
-            <Icon name="calendar" size={22} color={isSeason ? "#fff" : "var(--color-accent)"} />
-          </span>
-          <span>Säsong</span>
-        </button>
         {visibleCategories.map((cat) => {
           const isActive = view === cat.id
           return (

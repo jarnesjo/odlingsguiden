@@ -28,7 +28,64 @@
   color: var(--color-accent);
 }
 
-/* Category toggle (Säsong | Grönsaker | Kryddor | Bär) */
+/* Season CTA banner */
+.seasonBanner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-xl);
+  background: var(--color-warm-light);
+  border: 1px solid rgba(150, 105, 74, 0.2);
+  border-radius: var(--radius-card-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.seasonBanner:hover {
+  background: #e6d5c2;
+}
+
+.seasonBannerActive {
+  background: var(--color-warm-dark);
+  border-color: var(--color-warm-dark);
+}
+
+.seasonBannerActive:hover {
+  background: #7D5638;
+}
+
+.seasonBannerIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.seasonBannerText {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--color-warm-dark);
+}
+
+.seasonBannerActive .seasonBannerText {
+  color: #fff;
+}
+
+.seasonBannerArrow {
+  font-size: 16px;
+  color: var(--color-warm-dark);
+  flex-shrink: 0;
+}
+
+.seasonBannerActive .seasonBannerArrow {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Category toggle (Grönsaker | Kryddor | Bär | Frukt) */
 .categoryToggle {
   display: flex;
   gap: 0;
