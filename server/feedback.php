@@ -10,7 +10,7 @@
  */
 
 // --- Ladda .env ---
-$envFile = __DIR__ . '/.env';
+$envFile = dirname(__DIR__) . '/.env';
 if (!file_exists($envFile)) {
     http_response_code(500);
     echo json_encode(['error' => 'Server misconfigured']);
