@@ -37,12 +37,12 @@ export function TurnipIllustration({ size = 200 }: Props) {
 
       {/* Rova - ovandel (lila-vit gradient-effekt) */}
       {/* Lila topp */}
-      <path d="M62 112 Q64 88 100 82 Q136 88 138 112" fill="#8B5E7A" opacity="0.18" />
+      <path d="M62 112 Q64 88 100 82 Q136 88 138 112" fill="#8B5E7A" opacity="0.35" />
       <path d="M62 112 Q64 88 100 82 Q136 88 138 112" stroke="#7A4D6A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
 
       {/* Vit underdel */}
-      <path d="M62 112 Q60 132 70 148 Q80 160 100 164 Q120 160 130 148 Q140 132 138 112" fill="#E8DDD0" opacity="0.18" />
-      <path d="M62 112 Q60 132 70 148 Q80 160 100 164 Q120 160 130 148 Q140 132 138 112" stroke="#C4A888" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M62 112 Q60 132 70 148 Q80 160 100 164 Q120 160 130 148 Q140 132 138 112" fill="#E8DDD0" opacity="0.45" />
+      <path d="M62 112 Q60 132 70 148 Q80 160 100 164 Q120 160 130 148 Q140 132 138 112" stroke="#C4A888" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.7" />
 
       {/* Rotspets */}
       <path d="M100 164 Q100 172 102 180" stroke="#C4A888" strokeWidth="1.5" strokeLinecap="round" />
@@ -91,12 +91,12 @@ export function TurnipIcon({ size = 48 }: Props) {
       <path d="M25 12 Q34 6 38 6 Q40 8 36 12 Q32 14 28 14 Z" fill="#3D6B4F" opacity="0.12" />
 
       {/* Rova - lila topp */}
-      <path d="M12 26 Q13 18 24 16 Q35 18 36 26" fill="#8B5E7A" opacity="0.18" />
+      <path d="M12 26 Q13 18 24 16 Q35 18 36 26" fill="#8B5E7A" opacity="0.35" />
       <path d="M12 26 Q13 18 24 16 Q35 18 36 26" stroke="#7A4D6A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
 
       {/* Rova - vit underdel */}
-      <path d="M12 26 Q11 34 16 38 Q20 42 24 43 Q28 42 32 38 Q37 34 36 26" fill="#E8DDD0" opacity="0.18" />
-      <path d="M12 26 Q11 34 16 38 Q20 42 24 43 Q28 42 32 38 Q37 34 36 26" stroke="#C4A888" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M12 26 Q11 34 16 38 Q20 42 24 43 Q28 42 32 38 Q37 34 36 26" fill="#E8DDD0" opacity="0.45" />
+      <path d="M12 26 Q11 34 16 38 Q20 42 24 43 Q28 42 32 38 Q37 34 36 26" stroke="#C4A888" strokeWidth="1.8" strokeLinecap="round" fill="none" opacity="0.7" />
 
       {/* Texturrander */}
       <path d="M14 24 Q20 20 24 20 Q28 20 34 24" stroke="#7A4D6A" strokeWidth="0.7" strokeLinecap="round" opacity="0.18" />
