@@ -1,0 +1,70 @@
+meta:
+  date: 2026-03-06
+  author: claude
+  phase: "Epic: Native App - 7.5 Grödprofil"
+  status: aktiv
+  session_notes: |
+    Session 61. Fullständig grödprofil i Expo-appen med alla sektioner från webben.
+
+    GRÖDPROFIL (22 sektionskomponenter):
+    - Section.tsx: kollapsbar wrapper med LayoutAnimation
+    - CropHeader: illustration, namn, familj, svårighetsbadge med tooltip,
+      zonbadge med tooltip, stats-grid med skiljelinjer (matchar webben exakt)
+    - OptimalConditions: 2x2 grid (sol, temperatur, vind, vatten)
+    - GoodToKnow: tips/varningar med severity, korsnavigering
+    - SowingSection (grönsaker/kryddor), PruningSection (bär)
+    - HerbHarvestSection (kryddor)
+    - NutritionSection: NPK mini-barer + gödslingstips (chart v2)
+    - SoilSection + PhBar: jordbeskrivning, pH-visualisering
+    - WateringSection: faser, misstag, bästa tipset
+    - TimelineSection: månadskalender med färgade fasbarer
+    - CompanionSection: bra/dåliga grannar med CropIcon, navigering
+    - RotationSection: undvik/förfrukt/efterfrukt med pills, navigering
+    - VarietiesSection: filtrerade per zon
+    - PollinationSection (frukt), EstablishmentSection (frukt)
+    - RipeningSection (frukt): mognadstid med bars
+    - ProblemsSection: problem, symptom, åtgärd
+    - HarvestCalcSection: skörderäknare med +/- stepper
+    - StorageSection: hållbarhet, metoder, tips
+    - SeedSavingSection (grönsaker/kryddor), PropagationSection (bär)
+
+    POLERING:
+    - CropHeader centrerad text (namn, familj)
+    - InfoCard matchar webben: border, gap, skiljelinjer, centrerade stats
+    - DifficultyBadge med tooltip (tap för info, tap utanför stänger)
+    - ZoneBadge med tooltip (zonrange, färgkodad)
+    - Dismiss-overlay för att stänga tooltips
+
+    PLAN: docs/plans/7.5-grodprofil.yml
+
+    BRANCH: feature/expo-scaffold (4 nya commits)
+
+commands:
+  - "npm run start:app      # Startar Expo dev server"
+  - "npm run dev             # Vite dev (web)"
+  - "npm run build           # Bygger web"
+
+next_steps:
+  - "Fortsätt polera grödprofilen - testa alla kategorier (grönsak, krydda, bär, frukt)"
+  - "Visuell finjustering av sektionerna (spacing, typografi, färger)"
+  - "NutritionSection chart med react-native-svg (v2)"
+  - "Tidslinje - verifiera med olika zoner och grödor"
+  - "Testa korsnavigering (companion/rotation till annan profil)"
+  - "Roadmap: bocka av 7.2-7.4 (redan klara), uppdatera 7.5 checkboxar"
+
+context:
+  decisions:
+    - "Tooltips med position absolute + dismiss-overlay (inte Modal)"
+    - "NutritionSection visar mini-barer istället for chart i v1"
+    - "HarvestCalcSection använder +/- stepper istället for slider"
+    - "LayoutAnimation for Section expand/collapse"
+    - "router.push direkt i sektioner istället for onNavigate prop-drilling"
+  constraints:
+    - "Alla sektioner skapade men inte visuellt testade med alla grödtyper"
+    - "NutritionChart (SVG area chart) skjuts till v2"
+    - "RipeningSection MONTH_MAP behöver verifiera mot faktisk data"
+
+known_issues:
+  - "Pre-existing TS-fel i icons/index.tsx (SvgText, inline-block)"
+  - "Bundle size stor (alla illustrationer statiskt importerade)"
+  - "Tooltips kan behöva justering på små skärmar"
