@@ -11,19 +11,10 @@ import '@fontsource/lora/latin-ext-700.css'
 import './theme/global.css'
 import App from './App'
 
-const root = document.getElementById('root')!
-
-// Hydrera om prerenderad HTML finns, annars skapa ny root (dev)
-const app = (
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 )
-
-if (root.children.length > 0) {
-  ReactDOM.hydrateRoot(root, app)
-} else {
-  ReactDOM.createRoot(root).render(app)
-}
