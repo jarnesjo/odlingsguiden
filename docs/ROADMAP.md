@@ -430,6 +430,7 @@ Ingen prioritet. Plockas upp när det passar.
 
 ### Innehåll
 
+- Nya grödor: kålrot
 - F1-hybrider utbildningssektion
 - Plastfritt-perspektiv i odlingstips - lyft alternativ till fiberduk, markduk och plastbaserade material. Granris, halm, jutesäckar, stärkelsebaserade dukar (bio-nedbrytbara). Gå igenom profiler och komplettera med gröna alternativ där det finns. Vara ärliga när plast fortfarande är bästa valet (t.ex. fina insektsnät).
 - Biologisk balans & bondepraktika - gammal odlingsvisdom om att jobba med ekosystemet istället för mot det. Två delar:
