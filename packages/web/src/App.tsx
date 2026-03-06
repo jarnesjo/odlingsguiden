@@ -4,6 +4,7 @@ import type { Category, Zone } from '@odlingsguiden/shared'
 import { SLUG_TO_ID, ID_TO_SLUG } from '@odlingsguiden/shared'
 import { MONTH_SLUGS, monthSlugToNumber } from '@odlingsguiden/shared'
 import { CropList, ZoneSelector } from './components/pages'
+import { TrackingPixel } from './components/TrackingPixel'
 import { CropPage } from './components/pages/CropPage'
 import { useLocalStorage } from './hooks/useLocalStorage'
 import { CATEGORIES } from '@odlingsguiden/shared'
@@ -126,6 +127,7 @@ function App() {
           onClose={() => setShowZoneModal(false)}
         />
       )}
+      <TrackingPixel />
     </main>
   )
 }
