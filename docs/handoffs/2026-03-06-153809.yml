@@ -1,0 +1,62 @@
+meta:
+  date: 2026-03-06
+  author: claude
+  phase: "Epic: Native App - 7.1 Monorepo"
+  status: avslutad
+  session_notes: |
+    Session 59. Monorepo-omstrukturering genomford.
+
+    MONOREPO:
+    - npm workspaces: packages/shared, packages/web, packages/app
+    - @odlingsguiden/shared: 85 crop-filer, types, zones, categories,
+      difficulty, cropList, cropSlugs, cropUtils, slug, monthParser,
+      seasonData (sync), tokens
+    - @odlingsguiden/web: Vite-app med alla komponenter, hooks,
+      illustrationer, SSR, CSS
+    - @odlingsguiden/app: placeholder for Expo
+    - ~110 filer uppdaterade med @odlingsguiden/shared imports
+    - import.meta.glob eliminerat for crop-data (explicita imports)
+    - seasonData delad: sync i shared, async wrapper i web
+
+    DEPLOY:
+    - dist/ nu i packages/web/dist/
+    - Symlink uppdaterad pa servern
+    - nginx feedback.php-sokvag uppdaterad
+    - feedback.php .env-sokvag fixad (dirname(__DIR__, 3))
+
+    CONFIG:
+    - tsconfig.base.json i root (delad TS-config)
+    - Workspace-symlinks loser @odlingsguiden/shared utan byggsteg
+    - Root package.json har proxy-scripts till web
+    - version-script i root kor build+prerender+git add dist
+
+    RELEASE:
+    - v1.2.0: monorepo-omstrukturering
+
+commands:
+  - "npm run dev          # Vite dev (proxar till packages/web)"
+  - "npm run build        # Bygger packages/web till dist/"
+  - "npm run prerender    # Prerenderar alla 102 routes"
+  - "npm run preview      # Preview packages/web"
+  - "npm version patch    # Release: bump + build + prerender + tag"
+
+next_steps:
+  - "7.2 Expo-scaffold: skapa Expo-projekt i packages/app/"
+  - "Expo Router, Metro-config for workspaces"
+  - "Data layer: importera fran @odlingsguiden/shared"
+  - "Theme: RN-tokens baserade pa shared tokens"
+
+context:
+  decisions:
+    - "Explicita imports istallet for import.meta.glob (plattformsoberoende)"
+    - "Shared-paketet exponerar src/index.ts direkt (inget byggsteg)"
+    - "seasonData delad: sync-funktioner i shared, async wrapper i web"
+    - "tsconfig.base.json utan jsx/include (paketspecifikt)"
+  constraints:
+    - "Webben maste fortsatta fungera identiskt efter omstruktureringen"
+    - "Deploy-symlink pekar nu pa packages/web/dist/"
+    - "feedback.php laser .env fran dirname(__DIR__, 3)"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga maetstationer)"
+  - "Vite varnar for chunk >600KB (crop-data 1185KB)"

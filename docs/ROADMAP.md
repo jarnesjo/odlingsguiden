@@ -326,15 +326,15 @@ Statamic-integration, användartest, gårdskoppling och go-live.
 
 Monorepo-omstrukturering och React Native-app med Expo. Samma data, design och upplevelse som webben.
 
-### 7.1 Monorepo-omstrukturering
+### 7.1 Monorepo-omstrukturering ✅
 
 > Flytta till npm workspaces: packages/shared, packages/web, packages/app
 
-- [ ] Root workspace med `package.json` och `tsconfig.base.json`
-- [ ] `packages/shared/` — data, typer, utils, plattformsoberoende tokens
-- [ ] `packages/web/` — flytta nuvarande Vite-app, uppdatera imports
-- [ ] Verifiera: webben bygger och fungerar som vanligt
-- [ ] Deploy-flow fungerar (dist/ i packages/web/)
+- [x] Root workspace med `package.json` och `tsconfig.base.json`
+- [x] `packages/shared/` — data, typer, utils, plattformsoberoende tokens
+- [x] `packages/web/` — flytta nuvarande Vite-app, uppdatera imports
+- [x] Verifiera: webben bygger och fungerar som vanligt
+- [x] Deploy-flow fungerar (dist/ i packages/web/)
 
 Plan: `docs/plans/7.1-monorepo-expo.md`
 
@@ -583,4 +583,4 @@ Identifierat vid jämförelse med odlaatbart.se och andra svenska odlingssidor (
 
 ---
 
-_Senast uppdaterad: 2026-03-06 (session 58 - Epic: Native App tillagd)_
+_Senast uppdaterad: 2026-03-06 (session 59 - 7.1 Monorepo-omstrukturering klar)_
