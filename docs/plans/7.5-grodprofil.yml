@@ -1,0 +1,96 @@
+title: "7.5 Grödprofil - alla sektioner i React Native"
+status: aktiv
+created: 2026-03-06
+
+scope: |
+  Bygga ut grödprofilen i Expo-appen med alla sektioner från webben.
+  Idag visar crop/[id].tsx bara namn, familj, svårighetsgrad och zon.
+  Målet är full paritet med webbens CropPage.
+
+approach: |
+  Individuella komponenter i packages/app/src/components/crop/.
+  Återanvändbar Section-wrapper (kollapsbar med LayoutAnimation).
+  Samma villkorslogik som webben (isBerry/isFruit/isHerb).
+
+files:
+  new:
+    - packages/app/src/components/crop/Section.tsx
+    - packages/app/src/components/crop/CropHeader.tsx
+    - packages/app/src/components/crop/OptimalConditions.tsx
+    - packages/app/src/components/crop/GoodToKnow.tsx
+    - packages/app/src/components/crop/SowingSection.tsx
+    - packages/app/src/components/crop/PruningSection.tsx
+    - packages/app/src/components/crop/HerbHarvestSection.tsx
+    - packages/app/src/components/crop/NutritionSection.tsx
+    - packages/app/src/components/crop/SoilSection.tsx
+    - packages/app/src/components/crop/PhBar.tsx
+    - packages/app/src/components/crop/WateringSection.tsx
+    - packages/app/src/components/crop/TimelineSection.tsx
+    - packages/app/src/components/crop/CompanionSection.tsx
+    - packages/app/src/components/crop/RotationSection.tsx
+    - packages/app/src/components/crop/VarietiesSection.tsx
+    - packages/app/src/components/crop/ProblemsSection.tsx
+    - packages/app/src/components/crop/HarvestCalcSection.tsx
+    - packages/app/src/components/crop/StorageSection.tsx
+    - packages/app/src/components/crop/SeedSavingSection.tsx
+    - packages/app/src/components/crop/PropagationSection.tsx
+    - packages/app/src/components/crop/PollinationSection.tsx
+    - packages/app/src/components/crop/EstablishmentSection.tsx
+    - packages/app/src/components/crop/index.ts
+  modified:
+    - packages/app/app/crop/[id].tsx
+
+steps:
+  - title: "Section wrapper + CropHeader"
+    tasks:
+      - "Section.tsx: Pressable trigger, LayoutAnimation, chevron, ikon + titel"
+      - "CropHeader.tsx: illustration, namn, familyLatin, badges, stats-grid"
+
+  - title: "Enkla textsektioner (9 st)"
+    tasks:
+      - "OptimalConditions.tsx - 2x2 grid (flexWrap)"
+      - "GoodToKnow.tsx - tips med severity-ikon, korsnavigering"
+      - "SowingSection.tsx - metod, steg, tips"
+      - "PruningSection.tsx - beskärningstyper med steg (bär)"
+      - "HerbHarvestSection.tsx - skördemetod + användningar (kryddor)"
+      - "ProblemsSection.tsx - symptom + åtgärd per problem"
+      - "StorageSection.tsx - hållbarhet, metoder, tips"
+      - "SeedSavingSection.tsx - svårighet, typ, steg, isolering"
+      - "PropagationSection.tsx - svårighet, metoder (bär)"
+
+  - title: "Medium sektioner (navigering + layout)"
+    tasks:
+      - "WateringSection.tsx - fasekort, misstag, bästa tipset"
+      - "CompanionSection.tsx - bra/dåliga grannar, CropIcon, navigering"
+      - "RotationSection.tsx - tre kort med pills, navigering"
+      - "VarietiesSection.tsx - filtrerade per userZone, zon-badges"
+      - "PollinationSection.tsx - självfertil badge, grupper (frukt)"
+      - "EstablishmentSection.tsx - år-för-år kort (frukt)"
+
+  - title: "Komplexa sektioner"
+    tasks:
+      - "PhBar.tsx - View-baserad pH-visualisering"
+      - "SoilSection.tsx - jordbeskrivning + PhBar"
+      - "TimelineSection.tsx - flexbox-rader, färgade bars"
+      - "NutritionSection.tsx - näringsfas-tips (chart v2)"
+      - "HarvestCalcSection.tsx - stepper (+/- knappar)"
+
+  - title: "Integration"
+    tasks:
+      - "index.ts barrel export"
+      - "Rewrite crop/[id].tsx med alla sektioner"
+
+rn_decisions:
+  - "CSS Grid → flexDirection: 'row' + flex: 1"
+  - "CSS vars → inline style"
+  - "onNavigate prop-drilling → router.push direkt"
+  - "Recharts → skippas v1, tips som kort"
+  - "HTML Slider → +/- stepper-knappar"
+  - "LayoutAnimation för expand/collapse"
+
+reuse:
+  - "packages/app/src/components/icons/Icon.tsx (40+ ikoner)"
+  - "packages/app/src/components/illustrations/CropIcon.tsx"
+  - "packages/app/src/theme/tokens.ts"
+  - "packages/app/src/hooks/useZone.ts"
+  - "@odlingsguiden/shared (getCachedCrop, CROP_LIST, ZONE_INFO, parseMonthRange, hasProfile)"
