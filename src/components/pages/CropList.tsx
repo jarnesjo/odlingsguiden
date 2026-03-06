@@ -107,7 +107,7 @@ export function CropList({ userZone, view, currentMonth, onViewChange, onMonthCh
         onClick={() => onViewChange('sasong')}
       >
         <span className={styles.seasonBannerIcon}>
-          <Icon name="calendar" size={24} color={isSeason ? "#fff" : "var(--color-warm-dark)"} />
+          <Icon name="calendar" size={24} color={isSeason ? "#fff" : "#6B4D35"} />
         </span>
         <span className={styles.seasonBannerText}>
           Vad ska jag göra i {(MONTH_NAMES[currentMonth] ?? '').toLowerCase()}?

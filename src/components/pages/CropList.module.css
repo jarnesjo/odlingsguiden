@@ -68,7 +68,7 @@
   font-family: var(--font-body);
   font-size: var(--text-body);
   font-weight: 600;
-  color: var(--color-warm-dark);
+  color: #6B4D35;
 }
 
 .seasonBannerActive .seasonBannerText {
@@ -77,7 +77,7 @@
 
 .seasonBannerArrow {
   font-size: 16px;
-  color: var(--color-warm-dark);
+  color: #6B4D35;
   flex-shrink: 0;
 }
 

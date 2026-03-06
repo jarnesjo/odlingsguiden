@@ -80,7 +80,7 @@ function App() {
   const zoneClick = () => setShowZoneModal(true)
 
   return (
-    <div style={{ padding: '0 16px 0' }}>
+    <main style={{ padding: '0 16px 0' }}>
       <div style={{ paddingBottom: 40 }}>
         <Routes>
           <Route path="/" element={<ListRoute userZone={userZone} onZoneClick={zoneClick} view="grönsaker" />} />
@@ -126,7 +126,7 @@ function App() {
           onClose={() => setShowZoneModal(false)}
         />
       )}
-    </div>
+    </main>
   )
 }
 
