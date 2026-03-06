@@ -1,0 +1,102 @@
+import { colors } from '@odlingsguiden/shared'
+import { Circle, Ellipse, Path, Svg } from 'react-native-svg'
+
+interface Props {
+  size?: number
+}
+
+export function KinakalIllustration({ size = 200 }: Props) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 200 200" fill="none">
+      {/* Bakgrundscirkel */}
+      <Circle cx="100" cy="100" r="90" fill="#C8DEC9" opacity="0.15" />
+
+      {/* Markskugga */}
+      <Ellipse cx="100" cy="180" rx="38" ry="5" fill={colors.earth} opacity="0.08" />
+
+      {/* Huvudkropp - tunnformad, hog kinakål */}
+      {/* Yttre kontur - ljusgron med vit bas */}
+      <Path d="M68 175 Q58 150 55 120 Q52 90 56 68 Q60 50 70 40 Q80 30 90 28 Q100 26 110 28 Q120 30 130 40 Q140 50 144 68 Q148 90 145 120 Q142 150 132 175 Z" fill="#8DB580" opacity="0.16" />
+      <Path d="M68 175 Q58 150 55 120 Q52 90 56 68 Q60 50 70 40 Q80 30 90 28 Q100 26 110 28 Q120 30 130 40 Q140 50 144 68 Q148 90 145 120 Q142 150 132 175 Z" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+
+      {/* Vit bas - den karaktaristiska ljusa nederdelen */}
+      <Path d="M68 175 Q62 158 60 140 Q58 125 62 115 Q70 118 80 120 Q90 122 100 122 Q110 122 120 120 Q130 118 138 115 Q142 125 140 140 Q138 158 132 175 Z" fill="#F0EDE5" opacity="0.22" />
+      <Path d="M68 175 Q62 158 60 140 Q58 125 62 115" stroke="#C4A888" strokeWidth="1.2" strokeLinecap="round" opacity="0.25" />
+      <Path d="M132 175 Q138 158 140 140 Q142 125 138 115" stroke="#C4A888" strokeWidth="1.2" strokeLinecap="round" opacity="0.25" />
+
+      {/* Ljusreflex pa huvudkroppen */}
+      <Ellipse cx="88" cy="100" rx="10" ry="35" fill="#B8D4A8" opacity="0.18" />
+
+      {/* Vanster yttre blad - krusat, utstaende */}
+      <Path d="M68 175 Q50 155 44 130 Q40 110 44 90 Q48 74 56 62 Q62 54 70 48" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <Path d="M70 48 Q60 56 52 70 Q44 86 42 105 Q40 125 48 148 Q54 162 64 172" fill="#7BA86C" opacity="0.12" />
+      {/* Krusning vanster blad */}
+      <Path d="M48 100 Q44 95 46 88 Q48 82 52 78" stroke="#5A8A4A" strokeWidth="1.0" strokeLinecap="round" opacity="0.20" />
+      <Path d="M46 118 Q42 112 44 105 Q46 98 50 94" stroke="#5A8A4A" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" />
+
+      {/* Hoger yttre blad - krusat, utstaende */}
+      <Path d="M132 175 Q150 155 156 130 Q160 110 156 90 Q152 74 144 62 Q138 54 130 48" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <Path d="M130 48 Q140 56 148 70 Q156 86 158 105 Q160 125 152 148 Q146 162 136 172" fill="#7BA86C" opacity="0.12" />
+      {/* Krusning hoger blad */}
+      <Path d="M152 100 Q156 95 154 88 Q152 82 148 78" stroke="#5A8A4A" strokeWidth="1.0" strokeLinecap="round" opacity="0.20" />
+      <Path d="M154 118 Q158 112 156 105 Q154 98 150 94" stroke="#5A8A4A" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" />
+
+      {/* Vanster mittblad - inuti huvudet */}
+      <Path d="M72 165 Q62 140 60 112 Q58 88 64 70 Q68 58 76 48" stroke="#6B9A5C" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+
+      {/* Hoger mittblad - inuti huvudet */}
+      <Path d="M128 165 Q138 140 140 112 Q142 88 136 70 Q132 58 124 48" stroke="#6B9A5C" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+
+      {/* Toppblad - ovandel av huvudet, delvis oppna */}
+      <Path d="M76 48 Q72 36 78 26 Q86 18 96 18 Q100 18 100 22" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <Path d="M76 48 Q72 36 78 26 Q86 18 96 18 Q100 18 100 22 Q96 30 90 40 Q84 48 80 52 Z" fill="#7BA86C" opacity="0.13" />
+
+      <Path d="M124 48 Q128 36 122 26 Q114 18 104 18 Q100 18 100 22" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <Path d="M124 48 Q128 36 122 26 Q114 18 104 18 Q100 18 100 22 Q104 30 110 40 Q116 48 120 52 Z" fill="#7BA86C" opacity="0.13" />
+
+      {/* Bladveck pa toppbladen */}
+      <Path d="M82 38 Q78 30 82 24" stroke="#4A7A3C" strokeWidth="0.7" strokeLinecap="round" opacity="0.18" />
+      <Path d="M118 38 Q122 30 118 24" stroke="#4A7A3C" strokeWidth="0.7" strokeLinecap="round" opacity="0.18" />
+
+      {/* Mittnerv pa huvudet - vita, breda nerver karaktaristiska for kinakål */}
+      <Path d="M100 170 Q100 140 100 110 Q100 80 100 55" stroke="#E8E2D8" strokeWidth="2.2" strokeLinecap="round" opacity="0.30" />
+      <Path d="M82 168 Q78 140 76 115 Q74 90 78 68" stroke="#E8E2D8" strokeWidth="1.5" strokeLinecap="round" opacity="0.20" />
+      <Path d="M118 168 Q122 140 124 115 Q126 90 122 68" stroke="#E8E2D8" strokeWidth="1.5" strokeLinecap="round" opacity="0.20" />
+
+      {/* Texturlinjer - horisontella veck pa bladet */}
+      <Path d="M66 140 Q80 136 100 136 Q120 136 134 140" stroke="#5A8A4A" strokeWidth="0.6" strokeLinecap="round" opacity="0.12" />
+      <Path d="M62 110 Q80 106 100 106 Q120 106 138 110" stroke="#5A8A4A" strokeWidth="0.6" strokeLinecap="round" opacity="0.12" />
+      <Path d="M64 80 Q80 76 100 76 Q120 76 136 80" stroke="#5A8A4A" strokeWidth="0.6" strokeLinecap="round" opacity="0.12" />
+
+      {/* Markprickar */}
+      <Circle cx="76" cy="183" r="1.5" fill={colors.earth} opacity="0.18" />
+      <Circle cx="124" cy="182" r="1.0" fill={colors.earth} opacity="0.14" />
+      <Circle cx="95" cy="185" r="1.2" fill={colors.earth} opacity="0.16" />
+      <Circle cx="108" cy="184" r="0.8" fill={colors.earth} opacity="0.13" />
+    </Svg>
+  )
+}
+
+export function KinakalIcon({ size = 48 }: Props) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+      {/* Huvudkropp - tunnformad */}
+      <Path d="M16 42 Q12 34 10 24 Q9 16 12 10 Q16 5 20 3 Q24 2 28 3 Q32 5 36 10 Q39 16 38 24 Q36 34 32 42 Z" fill="#8DB580" opacity="0.18" />
+      <Path d="M16 42 Q12 34 10 24 Q9 16 12 10 Q16 5 20 3 Q24 2 28 3 Q32 5 36 10 Q39 16 38 24 Q36 34 32 42 Z" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+
+      {/* Vit bas */}
+      <Path d="M16 42 Q14 36 13 30 Q15 28 20 29 Q24 29 28 29 Q33 28 35 30 Q34 36 32 42 Z" fill="#F0EDE5" opacity="0.22" />
+
+      {/* Toppblad - delvis oppna */}
+      <Path d="M18 8 Q16 4 20 2 Q24 1 24 4" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <Path d="M30 8 Q32 4 28 2 Q24 1 24 4" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+
+      {/* Mittnerv - vit, bred */}
+      <Path d="M24 40 Q24 28 24 14" stroke="#E8E2D8" strokeWidth="1.8" strokeLinecap="round" opacity="0.30" />
+
+      {/* Texturlinjer */}
+      <Path d="M14 22 Q20 20 24 20 Q28 20 34 22" stroke="#5A8A4A" strokeWidth="0.7" strokeLinecap="round" opacity="0.14" />
+      <Path d="M15 32 Q20 30 24 30 Q28 30 33 32" stroke="#5A8A4A" strokeWidth="0.7" strokeLinecap="round" opacity="0.14" />
+    </Svg>
+  )
+}

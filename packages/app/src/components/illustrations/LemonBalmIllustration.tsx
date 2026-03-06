@@ -1,0 +1,99 @@
+import { colors } from '@odlingsguiden/shared'
+import { Circle, Ellipse, Path, Svg } from 'react-native-svg'
+
+interface Props {
+  size?: number
+}
+
+export function LemonBalmIllustration({ size = 200 }: Props) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 200 200" fill="none">
+      {/* Bakgrundscirkel */}
+      <Circle cx="100" cy="100" r="90" fill="#DDE5C8" opacity="0.15" />
+      {/* Huvudstam - fyrkantig karaktär */}
+      <Path d="M100 185 C100 170, 100 155, 100 140 C100 125, 100 110, 99 95 C98 80, 98 65, 97 55" stroke="#4A7A3F" strokeWidth="2.4" strokeLinecap="round" />
+      {/* Vänster sidostam */}
+      <Path d="M100 130 Q84 118, 66 112" stroke="#4A7A3F" strokeWidth="1.6" strokeLinecap="round" />
+      {/* Höger sidostam */}
+      <Path d="M100 120 Q116 108, 134 102" stroke="#4A7A3F" strokeWidth="1.6" strokeLinecap="round" />
+      {/* Bladpar 1 nedre - hjärtformade blad med tandad kant */}
+      {/* Vänster */}
+      <Path d="M98 148 Q80 140, 58 142 Q46 144, 40 136 Q36 128, 42 120 Q50 114, 66 118 Q82 124, 96 138Z" fill="#5A8A3F" opacity="0.13" />
+      <Path d="M98 148 Q80 140, 58 142 Q46 144, 40 136 Q36 128, 42 120 Q50 114, 66 118 Q82 124, 96 138" stroke="#3D7A2F" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      {/* Tandad kant vänster blad */}
+      <Path d="M58 142 Q54 140, 52 142" stroke="#3D7A2F" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      <Path d="M48 140 Q46 138, 44 140" stroke="#3D7A2F" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      <Path d="M42 132 Q40 130, 42 128" stroke="#3D7A2F" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
+      {/* Bladnerv */}
+      <Path d="M96 144 Q72 132, 44 128" stroke="#3D7A2F" strokeWidth="0.7" strokeLinecap="round" opacity="0.2" />
+      <Path d="M86 140 Q68 130, 50 126" stroke="#3D7A2F" strokeWidth="0.5" strokeLinecap="round" opacity="0.15" />
+      {/* Höger */}
+      <Path d="M102 148 Q120 140, 142 142 Q154 144, 160 136 Q164 128, 158 120 Q150 114, 134 118 Q118 124, 104 138Z" fill="#5A8A3F" opacity="0.11" />
+      <Path d="M102 148 Q120 140, 142 142 Q154 144, 160 136 Q164 128, 158 120 Q150 114, 134 118 Q118 124, 104 138" stroke="#3D7A2F" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <Path d="M104 144 Q128 132, 156 128" stroke="#3D7A2F" strokeWidth="0.7" strokeLinecap="round" opacity="0.2" />
+      {/* Bladpar 2 mellannivå */}
+      {/* Vänster */}
+      <Path d="M99 118 Q82 110, 62 112 Q52 114, 48 108 Q46 102, 50 96 Q56 92, 68 94 Q82 98, 98 112Z" fill="#5A8A3F" opacity="0.15" />
+      <Path d="M99 118 Q82 110, 62 112 Q52 114, 48 108 Q46 102, 50 96 Q56 92, 68 94 Q82 98, 98 112" stroke="#3D7A2F" strokeWidth="1.6" strokeLinecap="round" fill="none" />
+      <Path d="M96 114 Q74 104, 52 100" stroke="#3D7A2F" strokeWidth="0.6" strokeLinecap="round" opacity="0.18" />
+      {/* Höger */}
+      <Path d="M101 118 Q118 110, 138 112 Q148 114, 152 108 Q154 102, 150 96 Q144 92, 132 94 Q118 98, 102 112Z" fill="#5A8A3F" opacity="0.13" />
+      <Path d="M101 118 Q118 110, 138 112 Q148 114, 152 108 Q154 102, 150 96 Q144 92, 132 94 Q118 98, 102 112" stroke="#3D7A2F" strokeWidth="1.6" strokeLinecap="round" fill="none" />
+      <Path d="M104 114 Q126 104, 148 100" stroke="#3D7A2F" strokeWidth="0.6" strokeLinecap="round" opacity="0.18" />
+      {/* Bladpar 3 övre */}
+      {/* Vänster */}
+      <Path d="M98 88 Q84 80, 70 82 Q62 84, 60 78 Q58 72, 64 68 Q70 66, 80 70 Q90 76, 98 84Z" fill="#6B9E4A" opacity="0.14" />
+      <Path d="M98 88 Q84 80, 70 82 Q62 84, 60 78 Q58 72, 64 68 Q70 66, 80 70" stroke="#3D7A2F" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+      {/* Höger */}
+      <Path d="M100 88 Q114 80, 128 82 Q136 84, 138 78 Q140 72, 134 68 Q128 66, 118 70 Q108 76, 100 84Z" fill="#6B9E4A" opacity="0.12" />
+      <Path d="M100 88 Q114 80, 128 82 Q136 84, 138 78 Q140 72, 134 68 Q128 66, 118 70" stroke="#3D7A2F" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+      {/* Toppskott med unga blad */}
+      <Path d="M97 60 Q90 54, 84 52 Q80 50, 82 46 Q86 44, 92 48 Q96 52, 97 56" stroke="#7AAE55" strokeWidth="1.2" strokeLinecap="round" fill="none" />
+      <Path d="M97 60 Q90 54, 84 52 Q80 50, 82 46 Q86 44, 92 48Z" fill="#7AAE55" opacity="0.1" />
+      <Path d="M99 60 Q106 54, 112 52 Q116 50, 114 46 Q110 44, 104 48 Q100 52, 99 56" stroke="#7AAE55" strokeWidth="1.2" strokeLinecap="round" fill="none" />
+      <Path d="M99 60 Q106 54, 112 52 Q116 50, 114 46 Q110 44, 104 48Z" fill="#7AAE55" opacity="0.08" />
+      {/* Små blommor i bladvecken (vita/ljuslila) */}
+      <Circle cx="96" cy="94" r="2" fill="#E8E0F0" opacity="0.6" />
+      <Circle cx="104" cy="94" r="2" fill="#E8E0F0" opacity="0.55" />
+      <Circle cx="96" cy="124" r="1.8" fill="#E8E0F0" opacity="0.5" />
+      <Circle cx="104" cy="124" r="1.8" fill="#E8E0F0" opacity="0.5" />
+      {/* Citrus-doft indikation - subtila gula accenter */}
+      <Circle cx="44" cy="130" r="1.5" fill="#D4C654" opacity="0.15" />
+      <Circle cx="156" cy="130" r="1.5" fill="#D4C654" opacity="0.12" />
+      {/* Ljusreflexer */}
+      <Ellipse cx="72" cy="120" rx="4" ry="7" fill={colors.accentLight} opacity="0.08" transform="rotate(-10 72 120)" />
+      <Ellipse cx="130" cy="112" rx="4" ry="7" fill={colors.accentLight} opacity="0.06" transform="rotate(10 130 112)" />
+      {/* Markprickar */}
+      <Circle cx="88" cy="186" r="1.5" fill={colors.earth} opacity="0.2" />
+      <Circle cx="100" cy="188" r="2" fill={colors.earth} opacity="0.15" />
+      <Circle cx="112" cy="186" r="1.5" fill={colors.earth} opacity="0.2" />
+      <Circle cx="82" cy="190" r="1" fill={colors.earth} opacity="0.12" />
+      <Circle cx="118" cy="190" r="1" fill={colors.earth} opacity="0.12" />
+    </Svg>
+  )
+}
+
+export function LemonBalmIcon({ size = 48 }: Props) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+      {/* Stam */}
+      <Path d="M24 44 Q24 36, 24 28 Q24 20, 23.5 14" stroke="#4A7A3F" strokeWidth="1.8" strokeLinecap="round" />
+      {/* Nedre bladpar - hjärtformade */}
+      <Path d="M23 34 Q14 30, 8 32 Q6 28, 10 26 Q14 25, 22 30" stroke="#3D7A2F" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+      <Path d="M23 34 Q14 30, 8 32 Q6 28, 10 26 Q14 25, 22 30Z" fill="#5A8A3F" opacity="0.13" />
+      <Path d="M25 34 Q34 30, 40 32 Q42 28, 38 26 Q34 25, 26 30" stroke="#3D7A2F" strokeWidth="1.4" strokeLinecap="round" fill="none" />
+      <Path d="M25 34 Q34 30, 40 32 Q42 28, 38 26 Q34 25, 26 30Z" fill="#5A8A3F" opacity="0.11" />
+      {/* Övre bladpar */}
+      <Path d="M23 24 Q16 20, 12 22 Q10 18, 14 16 Q18 15, 23 20" stroke="#3D7A2F" strokeWidth="1.2" strokeLinecap="round" fill="none" />
+      <Path d="M23 24 Q16 20, 12 22 Q10 18, 14 16 Q18 15, 23 20Z" fill="#6B9E4A" opacity="0.14" />
+      <Path d="M25 24 Q32 20, 36 22 Q38 18, 34 16 Q30 15, 25 20" stroke="#3D7A2F" strokeWidth="1.2" strokeLinecap="round" fill="none" />
+      <Path d="M25 24 Q32 20, 36 22 Q38 18, 34 16 Q30 15, 25 20Z" fill="#6B9E4A" opacity="0.12" />
+      {/* Toppskott */}
+      <Path d="M23 14 Q20 10, 18 8 Q16 6, 18 4 Q22 5, 23 10" stroke="#7AAE55" strokeWidth="1" strokeLinecap="round" />
+      <Path d="M24 14 Q27 10, 29 8 Q31 6, 29 4 Q25 5, 24 10" stroke="#7AAE55" strokeWidth="1" strokeLinecap="round" />
+      {/* Små blommor */}
+      <Circle cx="22" cy="28" r="1.2" fill="#E8E0F0" opacity="0.6" />
+      <Circle cx="26" cy="28" r="1.2" fill="#E8E0F0" opacity="0.55" />
+    </Svg>
+  )
+}
