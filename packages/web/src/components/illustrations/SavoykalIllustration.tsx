@@ -1,0 +1,144 @@
+import { colors } from '@odlingsguiden/shared'
+
+interface Props {
+  size?: number
+}
+
+// Savoykål - rund kålhuvud med karaktäristiskt krusigt/bubbligt bladverk, blågrön färg
+export function SavoykalIllustration({ size = 200 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 200 200" fill="none">
+      {/* Bakgrundscirkel - grönsak */}
+      <circle cx="100" cy="100" r="90" fill="#C8DEC9" opacity="0.15" />
+
+      {/* Markskugga */}
+      <ellipse cx="100" cy="178" rx="38" ry="6" fill={colors.earth} opacity="0.08" />
+
+      {/* Kort stjälk */}
+      <path d="M100 173 L100 158" stroke="#8B7355" strokeWidth="3.5" strokeLinecap="round" />
+
+      {/* Yttre vänster blad - stort, omslutande, med krusig kant */}
+      <path d="M94 168 Q50 156 36 130 Q28 112 40 94 Q50 80 66 86 Q78 92 82 104 Q86 116 88 130" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M94 168 Q50 156 36 130 Q28 112 40 94 Q50 80 66 86 Q78 92 82 104 Q86 116 88 130 L93 152 Z" fill="#3D6B4F" opacity="0.12" />
+      {/* Krusig bladkant - vänster */}
+      <path d="M36 130 Q32 124 36 118 Q40 112 37 106 Q34 100 40 94" stroke="#3D6B4F" strokeWidth="1.0" strokeLinecap="round" opacity="0.25" />
+      {/* Bladnerver - vänster */}
+      <path d="M91 158 Q56 146 42 120" stroke="#3D6B4F" strokeWidth="0.8" strokeLinecap="round" opacity="0.20" />
+      <path d="M88 148 Q60 136 50 116" stroke="#3D6B4F" strokeWidth="0.6" strokeLinecap="round" opacity="0.15" />
+
+      {/* Yttre höger blad - stort, omslutande, med krusig kant */}
+      <path d="M106 168 Q150 156 164 130 Q172 112 160 94 Q150 80 134 86 Q122 92 118 104 Q114 116 112 130" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M106 168 Q150 156 164 130 Q172 112 160 94 Q150 80 134 86 Q122 92 118 104 Q114 116 112 130 L107 152 Z" fill="#3D6B4F" opacity="0.12" />
+      {/* Krusig bladkant - höger */}
+      <path d="M164 130 Q168 124 164 118 Q160 112 163 106 Q166 100 160 94" stroke="#3D6B4F" strokeWidth="1.0" strokeLinecap="round" opacity="0.25" />
+      {/* Bladnerver - höger */}
+      <path d="M109 158 Q144 146 158 120" stroke="#3D6B4F" strokeWidth="0.8" strokeLinecap="round" opacity="0.20" />
+      <path d="M112 148 Q140 136 150 116" stroke="#3D6B4F" strokeWidth="0.6" strokeLinecap="round" opacity="0.15" />
+
+      {/* Mellanblad vänster - kurvar uppåt */}
+      <path d="M90 150 Q60 134 54 110 Q50 94 62 82 Q72 74 84 80 Q92 86 93 98" stroke="#4A7A5C" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M90 150 Q60 134 54 110 Q50 94 62 82 Q72 74 84 80 Q92 86 93 98 L94 126 Z" fill="#4A7A5C" opacity="0.10" />
+      {/* Krusig kant mellanblad vänster */}
+      <path d="M54 110 Q50 104 54 98 Q58 92 55 88 Q52 84 56 80" stroke="#4A7A5C" strokeWidth="0.8" strokeLinecap="round" opacity="0.20" />
+
+      {/* Mellanblad höger - kurvar uppåt */}
+      <path d="M110 150 Q140 134 146 110 Q150 94 138 82 Q128 74 116 80 Q108 86 107 98" stroke="#4A7A5C" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M110 150 Q140 134 146 110 Q150 94 138 82 Q128 74 116 80 Q108 86 107 98 L106 126 Z" fill="#4A7A5C" opacity="0.10" />
+      {/* Krusig kant mellanblad höger */}
+      <path d="M146 110 Q150 104 146 98 Q142 92 145 88 Q148 84 144 80" stroke="#4A7A5C" strokeWidth="0.8" strokeLinecap="round" opacity="0.20" />
+
+      {/* Kålhuvud - djup basfyllning (blågrön ton for savoykål) */}
+      <ellipse cx="100" cy="108" rx="46" ry="42" fill="#5A8B72" opacity="0.14" />
+
+      {/* Kålhuvud - huvudform (rund med blågrön ton) */}
+      <path d="M56 108 Q56 72 100 68 Q144 72 144 108 Q144 140 100 144 Q56 140 56 108 Z" fill="#8CB8A0" opacity="0.16" />
+      <path d="M56 108 Q56 72 100 68 Q144 72 144 108 Q144 140 100 144 Q56 140 56 108 Z" stroke="#5A8B72" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+
+      {/* Krusig yta - bubblor och veck (signatur for savoykål) */}
+      {/* Bubbeltextur - vänster sida */}
+      <path d="M68 96 Q72 90 78 92 Q82 95 80 100 Q76 104 70 100 Q66 98 68 96" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" fill="none" />
+      <path d="M64 110 Q68 106 74 108 Q78 112 74 116 Q70 118 66 114 Q62 112 64 110" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.22" fill="none" />
+      <path d="M72 124 Q76 120 82 122 Q86 126 82 130 Q78 132 74 128 Q70 126 72 124" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.20" fill="none" />
+      {/* Bubbeltextur - höger sida */}
+      <path d="M122 96 Q126 90 132 92 Q136 96 132 100 Q128 104 124 100 Q120 98 122 96" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.25" fill="none" />
+      <path d="M126 110 Q130 106 136 108 Q140 112 136 116 Q132 118 128 114 Q124 112 126 110" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.22" fill="none" />
+      <path d="M118 124 Q122 120 128 122 Q132 126 128 130 Q124 132 120 128 Q116 126 118 124" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.20" fill="none" />
+      {/* Bubbeltextur - mitten */}
+      <path d="M94 86 Q98 82 104 84 Q108 88 104 92 Q100 94 96 90 Q92 88 94 86" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.22" fill="none" />
+      <path d="M90 104 Q94 100 100 102 Q104 106 100 110 Q96 112 92 108 Q88 106 90 104" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.20" fill="none" />
+      <path d="M104 104 Q108 100 114 102 Q118 106 114 110 Q110 112 106 108 Q102 106 104 104" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.20" fill="none" />
+
+      {/* Inre bladlager - bladomslutning */}
+      <path d="M68 130 Q62 112 72 94 Q80 80 100 78" stroke="#5A8B72" strokeWidth="1.2" strokeLinecap="round" opacity="0.22" fill="none" />
+      <path d="M132 130 Q138 112 128 94 Q120 80 100 78" stroke="#5A8B72" strokeWidth="1.2" strokeLinecap="round" opacity="0.22" fill="none" />
+
+      {/* Bladnerver från centrum */}
+      <path d="M100 108 Q82 100 72 88" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" />
+      <path d="M100 108 Q118 100 128 88" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" />
+      <path d="M100 108 Q96 88 100 78" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.16" />
+      <path d="M100 108 Q85 114 76 124" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.15" />
+      <path d="M100 108 Q115 114 124 124" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.15" />
+
+      {/* Tätare inre huvud */}
+      <ellipse cx="100" cy="100" rx="28" ry="26" fill="#A0CCB0" opacity="0.14" />
+      <path d="M72 100 Q74 80 100 76 Q126 80 128 100 Q126 120 100 124 Q74 120 72 100 Z" stroke="#6A9A80" strokeWidth="1.0" strokeLinecap="round" fill="none" opacity="0.22" />
+
+      {/* Innersta krusiga kärnan */}
+      <ellipse cx="100" cy="96" rx="16" ry="14" fill="#B8D8C4" opacity="0.18" />
+      {/* Liten bubbla i kärnan */}
+      <path d="M94 94 Q98 90 102 92 Q104 96 100 98 Q96 98 94 94" stroke="#6A9A80" strokeWidth="0.6" strokeLinecap="round" opacity="0.20" fill="none" />
+
+      {/* Ljusreflex - övre vänster */}
+      <ellipse cx="86" cy="88" rx="14" ry="10" fill="#C8E8D4" opacity="0.22" />
+
+      {/* Jordpartiklar */}
+      <circle cx="74" cy="182" r="1.5" fill={colors.earth} opacity="0.20" />
+      <circle cx="126" cy="180" r="1.0" fill={colors.earth} opacity="0.15" />
+      <circle cx="90" cy="186" r="1.2" fill={colors.earth} opacity="0.18" />
+      <circle cx="112" cy="184" r="0.8" fill={colors.earth} opacity="0.15" />
+    </svg>
+  )
+}
+
+// Listikon - förenklad
+export function SavoykalIcon({ size = 48 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+      {/* Kort stjälk */}
+      <path d="M24 43 L24 36" stroke="#8B7355" strokeWidth="2.5" strokeLinecap="round" />
+
+      {/* Vänster yttre blad med krusig kant */}
+      <path d="M22 40 Q10 36 8 26 Q6 18 12 14 Q16 11 20 14 Q22 17 22 22" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M22 40 Q10 36 8 26 Q6 18 12 14 Q16 11 20 14 Q22 17 22 22 L22 32 Z" fill="#3D6B4F" opacity="0.12" />
+      {/* Krusig kant */}
+      <path d="M8 26 Q6 22 8 20 Q10 18 9 16" stroke="#3D6B4F" strokeWidth="0.8" strokeLinecap="round" opacity="0.22" />
+
+      {/* Höger yttre blad med krusig kant */}
+      <path d="M26 40 Q38 36 40 26 Q42 18 36 14 Q32 11 28 14 Q26 17 26 22" stroke="#3D6B4F" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M26 40 Q38 36 40 26 Q42 18 36 14 Q32 11 28 14 Q26 17 26 22 L26 32 Z" fill="#3D6B4F" opacity="0.12" />
+      {/* Krusig kant */}
+      <path d="M40 26 Q42 22 40 20 Q38 18 39 16" stroke="#3D6B4F" strokeWidth="0.8" strokeLinecap="round" opacity="0.22" />
+
+      {/* Kålhuvud - rund form (blågrön ton) */}
+      <path d="M10 24 Q10 10 24 8 Q38 10 38 24 Q38 36 24 38 Q10 36 10 24 Z" fill="#8CB8A0" opacity="0.16" />
+      <path d="M10 24 Q10 10 24 8 Q38 10 38 24 Q38 36 24 38 Q10 36 10 24 Z" stroke="#5A8B72" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+
+      {/* Inre bladomslutning */}
+      <path d="M15 30 Q13 22 18 15 Q22 10 24 10" stroke="#5A8B72" strokeWidth="1.0" strokeLinecap="round" opacity="0.22" fill="none" />
+      <path d="M33 30 Q35 22 30 15 Q26 10 24 10" stroke="#5A8B72" strokeWidth="1.0" strokeLinecap="round" opacity="0.22" fill="none" />
+
+      {/* Krusig bubbeltextur (signatur) */}
+      <path d="M17 20 Q19 18 21 19 Q22 21 20 22 Q18 22 17 20" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.25" fill="none" />
+      <path d="M27 20 Q29 18 31 19 Q32 21 30 22 Q28 22 27 20" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.25" fill="none" />
+      <path d="M22 26 Q24 24 26 25 Q27 27 25 28 Q23 28 22 26" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.22" fill="none" />
+
+      {/* Bladnerver */}
+      <path d="M24 24 Q18 20 15 16" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" />
+      <path d="M24 24 Q30 20 33 16" stroke="#5A8B72" strokeWidth="0.8" strokeLinecap="round" opacity="0.18" />
+      <path d="M24 24 Q24 16 24 11" stroke="#5A8B72" strokeWidth="0.7" strokeLinecap="round" opacity="0.16" />
+
+      {/* Ljusreflex */}
+      <ellipse cx="19" cy="17" rx="5" ry="4" fill="#C8E8D4" opacity="0.22" />
+    </svg>
+  )
+}

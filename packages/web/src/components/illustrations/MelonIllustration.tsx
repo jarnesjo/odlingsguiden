@@ -1,0 +1,96 @@
+import { colors } from '@odlingsguiden/shared'
+
+interface Props {
+  size?: number
+}
+
+export function MelonIllustration({ size = 200 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 200 200" fill="none">
+      {/* Bakgrundscirkel */}
+      <circle cx="100" cy="100" r="90" fill="#D4E8C2" opacity="0.15" />
+
+      {/* Markskugga */}
+      <ellipse cx="100" cy="178" rx="50" ry="6" fill={colors.earth} opacity="0.08" />
+
+      {/* Rankorna på marken */}
+      <path d="M30 155 C45 150, 55 158, 70 153" stroke="#5A8A4A" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4" />
+      <path d="M130 153 C145 148, 155 156, 170 150" stroke="#5A8A4A" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4" />
+
+      {/* Bladrankor */}
+      <path d="M55 130 C45 120, 35 125, 30 115" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+      <path d="M145 130 C155 120, 165 125, 170 115" stroke="#5A8A4A" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+
+      {/* Vänster blad */}
+      <path d="M30 115 C25 105, 32 95, 42 100 C38 95, 28 88, 22 95 C18 100, 25 112, 30 115Z" fill="#6B9E5A" opacity="0.7" />
+      <path d="M30 115 C28 107, 32 98, 35 103" stroke="#5A8A4A" strokeWidth="1" fill="none" opacity="0.5" />
+
+      {/* Höger blad */}
+      <path d="M170 115 C175 105, 168 95, 158 100 C162 95, 172 88, 178 95 C182 100, 175 112, 170 115Z" fill="#6B9E5A" opacity="0.7" />
+      <path d="M170 115 C172 107, 168 98, 165 103" stroke="#5A8A4A" strokeWidth="1" fill="none" opacity="0.5" />
+
+      {/* Stjälk */}
+      <path d="M100 88 C100 80, 98 72, 95 65" stroke="#5A8A4A" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+
+      {/* Litet blad vid stjälk */}
+      <path d="M95 65 C88 58, 80 60, 78 67 C82 62, 90 60, 95 65Z" fill="#6B9E5A" opacity="0.6" />
+      <path d="M95 65 C90 68, 85 72, 82 68" stroke="#5A8A4A" strokeWidth="1.2" strokeLinecap="round" fill="none" />
+
+      {/* Klänge (tendril) */}
+      <path d="M98 73 C105 68, 112 70, 115 65 C118 62, 116 58, 120 55" stroke="#5A8A4A" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5" />
+
+      {/* Melon - huvudkropp (cantaloupe med nätning) */}
+      <ellipse cx="100" cy="130" rx="48" ry="42" fill="#E8C97A" />
+      <ellipse cx="100" cy="130" rx="48" ry="42" fill="#D4A84A" opacity="0.3" />
+
+      {/* Nätmönster (karaktäristiskt för cantaloupe) */}
+      <path d="M60 120 C70 115, 85 118, 100 115 C115 118, 130 115, 140 120" stroke="#C49640" strokeWidth="1" fill="none" opacity="0.4" />
+      <path d="M55 133 C70 128, 85 131, 100 128 C115 131, 130 128, 145 133" stroke="#C49640" strokeWidth="1" fill="none" opacity="0.4" />
+      <path d="M60 145 C75 140, 85 143, 100 140 C115 143, 125 140, 140 145" stroke="#C49640" strokeWidth="1" fill="none" opacity="0.4" />
+      <path d="M78 95 C80 110, 82 125, 78 155" stroke="#C49640" strokeWidth="0.8" fill="none" opacity="0.3" />
+      <path d="M100 90 C100 110, 100 130, 100 165" stroke="#C49640" strokeWidth="0.8" fill="none" opacity="0.3" />
+      <path d="M122 95 C120 110, 118 125, 122 155" stroke="#C49640" strokeWidth="0.8" fill="none" opacity="0.3" />
+
+      {/* Ljusreflex */}
+      <ellipse cx="82" cy="118" rx="12" ry="8" fill="#F5E6B8" opacity="0.4" />
+
+      {/* Kontur */}
+      <ellipse cx="100" cy="130" rx="48" ry="42" stroke="#B8862A" strokeWidth="1.8" fill="none" />
+
+      {/* Litet segment-märke vid botten */}
+      <ellipse cx="100" cy="170" rx="5" ry="3" fill="#B8862A" opacity="0.3" />
+
+      {/* Markprickar */}
+      <circle cx="70" cy="180" r="1.5" fill={colors.earth} opacity="0.18" />
+      <circle cx="130" cy="180" r="1.5" fill={colors.earth} opacity="0.18" />
+      <circle cx="95" cy="182" r="1" fill={colors.earth} opacity="0.12" />
+    </svg>
+  )
+}
+
+export function MelonIcon({ size = 48 }: Props) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+      {/* Stjälk */}
+      <path d="M24 13 C24 10, 23 8, 22 6" stroke="#5A8A4A" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+
+      {/* Litet blad */}
+      <path d="M22 6 C19 4, 17 5, 18 7 C18.5 5.5, 20 5, 22 6Z" fill="#6B9E5A" opacity="0.7" />
+
+      {/* Melon kropp */}
+      <ellipse cx="24" cy="27" rx="14" ry="12" fill="#E8C97A" />
+      <ellipse cx="24" cy="27" rx="14" ry="12" fill="#D4A84A" opacity="0.3" />
+
+      {/* Nätmönster */}
+      <path d="M12 25 C16 23, 20 24, 24 23 C28 24, 32 23, 36 25" stroke="#C49640" strokeWidth="0.8" fill="none" opacity="0.35" />
+      <path d="M11 30 C16 28, 20 29, 24 28 C28 29, 32 28, 37 30" stroke="#C49640" strokeWidth="0.8" fill="none" opacity="0.35" />
+      <path d="M24 16 C24 22, 24 28, 24 38" stroke="#C49640" strokeWidth="0.6" fill="none" opacity="0.25" />
+
+      {/* Ljusreflex */}
+      <ellipse cx="19" cy="24" rx="4" ry="3" fill="#F5E6B8" opacity="0.4" />
+
+      {/* Kontur */}
+      <ellipse cx="24" cy="27" rx="14" ry="12" stroke="#B8862A" strokeWidth="1.5" fill="none" />
+    </svg>
+  )
+}

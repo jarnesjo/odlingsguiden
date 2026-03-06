@@ -1,29 +1,13 @@
 {
-  "name": "odlingsguiden",
+  "name": "odlingsguiden-monorepo",
   "private": true,
   "version": "1.1.1",
   "type": "module",
+  "workspaces": ["packages/*"],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build && npx tsx scripts/generate-sitemap.ts",
-    "sitemap": "npx tsx scripts/generate-sitemap.ts",
-    "prerender": "npx tsx scripts/prerender.ts",
-    "preview": "vite preview",
-    "version": "npm run build && npm run prerender && git add dist/"
-  },
-  "dependencies": {
-    "@fontsource/fraunces": "^5.2.9",
-    "@fontsource/lora": "^5.2.8",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.1",
-    "recharts": "^3.7.0"
-  },
-  "devDependencies": {
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.4",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "dev": "npm run dev -w packages/web",
+    "build": "npm run build -w packages/web",
+    "prerender": "npm run prerender -w packages/web",
+    "preview": "npm run preview -w packages/web"
   }
 }

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://lillabosgarden.se/odlingsguiden/sitemap.xml
