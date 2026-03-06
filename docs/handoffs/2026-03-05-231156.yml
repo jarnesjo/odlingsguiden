@@ -1,0 +1,101 @@
+meta:
+  date: 2026-03-05
+  author: claude
+  phase: "Epic: Webb & Lansering"
+  status: aktiv
+  session_notes: |
+    Session 56. Deploy, feedback API, OG-taggar, release-flow.
+
+    FEEDBACK API:
+    - server/feedback.php med SMTP (STARTTLS, AUTH LOGIN)
+    - Rate limiting (3 req/5min per IP, filbaserad)
+    - CORS for prod + localhost
+    - .env i projektroten (symlinkad av Forge)
+
+    DEPLOY SETUP:
+    - Laravel Forge + Digital Ocean, zero downtime deploy
+    - Eget Forge-site (subdoman), serveras via symlink under lillabosgarden.se/odlingsguiden
+    - Symlink: public/odlingsguiden -> current/dist
+    - Nginx: location ^~ /odlingsguiden (loser alias-problem)
+    - dist/ committas i git, inget bygge pa servern
+    - Deploy = git pull
+
+    BASE PATH:
+    - Vite base: /odlingsguiden/
+    - BrowserRouter + StaticRouter basename
+    - Prerender med BASE_PATH
+    - Feedback endpoint: /odlingsguiden/api/feedback
+
+    RELEASE FLOW:
+    - npm version patch/minor/major
+    - Automatiskt: bump -> build -> prerender -> commit + tag
+    - v1.0.0 taggad
+
+    GIT WORKFLOW:
+    - Feature branches for utveckling, main = produktion
+    - Aldrig pusha direkt till main under dev
+    - Fraga alltid anvandaren innan commit/push
+
+    OG-TAGGAR:
+    - og:title, og:description, og:url per sida via prerender
+    - og:image pekar pa brand/og-image.jpg
+    - twitter:card summary_large_image
+
+    OG-BILD (PAGAENDE):
+    - Python-script: scripts/generate-og.py (kraver Pillow + cairosvg)
+    - 4 varianter genererade, anvandaren ska valja favorit
+    - V1: gronsakskasse centrerad, V2: gronsakskasse inline
+    - V3: odlingar centrerad, V4: odlingar inline
+    - Alla med gron tagline, L:a Bosgarden logo nere vanster, url nere hoger
+
+    DOCS:
+    - README.md skapad (intern utvecklar-README)
+    - CLAUDE.md uppdaterad: deploy, serverstruktur, branch-strategi, release-flow
+    - nginx.conf uppdaterad: symlink + ^~ + current/ paths
+
+tech_stack:
+  current:
+    - Vite 7.3 (build + SSR)
+    - React 19 (hooks, prerender() API)
+    - TypeScript 5.9 (strict mode)
+    - React Router 7.13 (StaticRouter for SSR)
+    - Recharts 3.7 (lazy-loaded)
+    - CSS Modules + CSS custom properties
+    - Eget prerender-script (scripts/prerender.ts)
+    - Laravel Forge + Digital Ocean (zero downtime deploy)
+    - PHP 8.3 (feedback endpoint)
+  planned:
+    app: "React Native + Expo (monorepo med delad data)"
+
+commands:
+  - "npm run dev          # Starta Vite dev server"
+  - "npm run build        # Bygger till dist/"
+  - "npm run prerender    # Prerendera alla 102 routes"
+  - "npm version patch    # Release: bump + build + commit + tag"
+
+next_steps:
+  - "Valj OG-bild variant (V1-V4) och committa"
+  - "Kor scriptet: python3 -m venv /tmp/ogimg && source /tmp/ogimg/bin/activate && pip install Pillow cairosvg && python3 scripts/generate-og.py"
+  - "Rensa bort testbilder fran public/brand/ (behall bara vald og-image.jpg)"
+  - "Bygg, committa dist/, pusha, deploya"
+  - "Testa OG-taggar med Facebook debugger / Twitter card validator"
+  - "Sokfunktion (3.4 i roadmap)"
+
+context:
+  decisions:
+    - "Subpath /odlingsguiden via symlink istf subdoman-URL"
+    - "dist/ committas i git - inget bygge pa servern"
+    - "npm version hooks for release-flow"
+    - "Feature branches, fraga innan commit/push"
+    - "Gron tagline (#8CBE8C) istf warm (#C4956A) i OG-bild"
+    - "L:a Bosgarden logo nere vanster, URL nere hoger"
+  constraints:
+    - "Forge zero downtime deploy: current/ symlink"
+    - "Nginx ^~ kravs for att prioritera over Statamics regex-locations"
+    - "OG-bild script kraver Python venv (Pillow + cairosvg)"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga matstationer)"
+  - "Illustrationsflash: CropIcon/CropGraphic laddar via import.meta.glob"
+  - "Ocommittade andringar: OG-taggar, release-flow, OG-bilder, scripts/generate-og.py"
+  - "Testbilder i public/brand/ (og-image-v1-*.jpg etc) ska rensas efter val"

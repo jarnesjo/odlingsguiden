@@ -1,0 +1,59 @@
+meta:
+  date: 2026-03-06
+  author: claude
+  phase: "Epic: Webb & Lansering"
+  status: avslutad
+  session_notes: |
+    Session 57. OG-bild, favicon, bugfix.
+
+    OG-BILD:
+    - Rotfrukter-varianten vald som og-image.jpg
+    - Fyra V5-varianter sparade (odlingar, rotfrukter, kasse, kasse-darker)
+    - Bättre logo-proportioner: titel 58px, tagline 26px (2.2:1, närmare appens 2:1)
+    - Generator-script: scripts/generate-og.py (kräver Python venv med Pillow + cairosvg)
+    - Gamla V1-V4 testbilder bortrensade
+
+    FAVICON:
+    - Ny favicon matchar SymbolSprout (jordcirkel, bladpar, toppblad, solstråle)
+    - Dark mode via prefers-color-scheme i SVG
+    - Light: mörkgrön grodd mot transparent bg
+    - Dark: ljusgrön grodd mot transparent bg
+    - Cache-busting: ?v=1 på favicon-referensen
+
+    BUGFIX:
+    - Zonväljaren hade blå text på mobil Safari (browser default button color)
+    - Fix: explicit color: var(--color-text) på .zoneRegion
+
+    BRAND ASSETS:
+    - Lilla Bosgården-loggor: public/brand/lilla-bosgarden/
+    - Källbilder: public/images/ (gronsakskasse, rotfrukter, odlingar)
+
+    RELEASES:
+    - v1.0.1: OG-bild + favicon
+    - v1.0.2: favicon cache-busting + roadmap
+    - v1.0.3: zonväljare blå text fix
+
+commands:
+  - "npm run dev          # Starta Vite dev server"
+  - "npm run build        # Bygger till dist/"
+  - "npm run prerender    # Prerendera alla 102 routes"
+  - "npm version patch    # Release: bump + build + commit + tag"
+
+next_steps:
+  - "PWA-grund: site.webmanifest, apple-touch-icon (180x180), favicon cache-busting automatik"
+  - "Sökfunktion 3.4: sök tvärs kategorier + filtrering"
+  - "Feedback-funktion 5.2: frontend i CropPage (backend klar)"
+  - "Dark mode (idé i roadmap): migrera inline colors till CSS custom properties först"
+
+context:
+  decisions:
+    - "Rotfrukter-bild som OG-image - sticker ut i flödet, jordnära, matchar Odlingsguidens själ"
+    - "Favicon utan bakgrundsruta - transparent med jordcirkel, dark mode-stöd"
+    - "Cache-busting via ?v=1 på favicon (manuellt, inte automatiserat)"
+  constraints:
+    - "OG-bild script kräver Python venv (Pillow + cairosvg)"
+    - "Filer i public/ har ingen content hash - bara Vite-assets cache-bustas automatiskt"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga mätstationer)"
+  - "Illustrationsflash: CropIcon/CropGraphic laddar via import.meta.glob"
