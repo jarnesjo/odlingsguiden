@@ -1,50 +1,170 @@
-import { FlatList, Text, View, StyleSheet, Pressable } from 'react-native'
+import { useState, useMemo } from 'react'
+import { FlatList, TextInput, View, Text, Pressable, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
-import { CROP_LIST, DIFFICULTY_INFO } from '@odlingsguiden/shared'
-import type { CropListEntry } from '@odlingsguiden/shared'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { CROP_LIST, CATEGORIES, ZONE_INFO } from '@odlingsguiden/shared'
+import type { Category, CropListEntry } from '@odlingsguiden/shared'
 import { colors, spacing, fontSize, fontFamily, radii } from '../../src/theme/tokens'
 import { useZone } from '../../src/hooks/useZone'
+import { CategoryToggle } from '../../src/components/CategoryToggle'
+import { CropRow } from '../../src/components/CropRow'
+import { SeasonBanner } from '../../src/components/SeasonBanner'
+import { FamilyFilters } from '../../src/components/FamilyFilters'
+import { SeasonView } from '../../src/components/SeasonView'
+import { LogoCombined } from '../../src/components/brand/LogoCombined'
+import { SymbolSprout } from '../../src/components/brand/symbols/SymbolSprout'
 
-const crops = CROP_LIST.filter(c => !c.locked)
-
-function CropRow({ item }: { item: CropListEntry }) {
-  const router = useRouter()
-  const difficulty = DIFFICULTY_INFO[item.difficulty]
-
-  return (
-    <Pressable
-      style={({ pressed }) => [styles.row, pressed && styles.rowPressed]}
-      onPress={() => router.push(`/crop/${item.id}`)}
-    >
-      <View style={styles.rowContent}>
-        <Text style={styles.name}>{item.name}</Text>
-        <Text style={styles.family}>{item.family}</Text>
-      </View>
-      <View style={[styles.badge, { backgroundColor: difficulty?.color + '20' }]}>
-        <Text style={[styles.badgeText, { color: difficulty?.color }]}>
-          {item.difficulty}
-        </Text>
-      </View>
-    </Pressable>
-  )
-}
+type ViewMode = Category | 'säsong'
 
 export default function CropListScreen() {
+  const router = useRouter()
   const { zone } = useZone()
+  const zoneInfo = ZONE_INFO[zone]
+
+  const [view, setView] = useState<ViewMode>('grönsaker')
+  const [search, setSearch] = useState('')
+  const [familyFilter, setFamilyFilter] = useState('Alla')
+  const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1)
+
+  const isSeason = view === 'säsong'
+  const activeCategory = isSeason ? 'grönsaker' : view
+
+  const activeCat = CATEGORIES.find(c => c.id === activeCategory)
+
+  const catCrops = useMemo(
+    () => CROP_LIST.filter(c => c.category === activeCategory),
+    [activeCategory],
+  )
+
+  const families = useMemo(() => {
+    const unique = [...new Set(catCrops.map(c => c.familyLatin))]
+    return ['Alla', ...unique.sort((a, b) => a.localeCompare(b, 'sv'))]
+  }, [catCrops])
+
+  const filtered = useMemo(() => {
+    return catCrops
+      .filter(
+        c =>
+          (familyFilter === 'Alla' || c.familyLatin === familyFilter) &&
+          c.name.toLowerCase().includes(search.toLowerCase()),
+      )
+      .sort((a, b) => {
+        if (a.locked !== b.locked) return a.locked ? 1 : -1
+        return a.name.localeCompare(b.name, 'sv')
+      })
+  }, [catCrops, familyFilter, search])
+
+  function handleCategoryChange(cat: Category) {
+    setView(cat)
+    setSearch('')
+    setFamilyFilter('Alla')
+  }
+
+  function handleSeasonToggle() {
+    if (isSeason) {
+      setView('grönsaker')
+    } else {
+      setView('säsong')
+    }
+  }
+
+  function handleCropPress(crop: CropListEntry) {
+    if (!crop.locked) {
+      router.push(`/crop/${crop.id}`)
+    }
+  }
+
+  const header = (
+    <>
+      {/* Header */}
+      <View style={styles.header}>
+        <LogoCombined
+          name="Odlingsguiden"
+          tagline="Allt du behöver veta - en gröda i taget"
+          symbol={SymbolSprout}
+        />
+      </View>
+
+      {/* Zone pill */}
+      <Pressable style={styles.zonePill} onPress={() => router.push('/zone')}>
+        <Text style={styles.zoneText}>
+          Zon {zone} · {zoneInfo?.region ?? ''}
+        </Text>
+        <Text style={styles.zoneCaret}>{'\u25BE'}</Text>
+      </Pressable>
+
+      {/* Season banner */}
+      <SeasonBanner
+        active={isSeason}
+        currentMonth={currentMonth}
+        onPress={handleSeasonToggle}
+      />
+
+      {/* Category toggle (hidden when season active) */}
+      {!isSeason && (
+        <CategoryToggle active={activeCategory} onSelect={handleCategoryChange} />
+      )}
+
+      {/* Search + family filter (hidden when season active) */}
+      {!isSeason && (
+        <View style={styles.searchWrapper}>
+          <TextInput
+            style={styles.searchInput}
+            placeholder={`Sök ${activeCat?.label.toLowerCase() ?? ''}...`}
+            placeholderTextColor={colors.textMuted}
+            value={search}
+            onChangeText={setSearch}
+            clearButtonMode="while-editing"
+            autoCorrect={false}
+          />
+        </View>
+      )}
+
+      {!isSeason && (
+        <FamilyFilters
+          families={families}
+          active={familyFilter}
+          categoryColor={activeCat?.color ?? colors.accent}
+          onSelect={setFamilyFilter}
+        />
+      )}
+    </>
+  )
+
+  if (isSeason) {
+    return (
+      <SafeAreaView style={styles.container} edges={['top']}>
+        <FlatList
+          data={[]}
+          renderItem={null}
+          ListHeaderComponent={
+            <>
+              {header}
+              <SeasonView
+                userZone={zone}
+                currentMonth={currentMonth}
+                onMonthChange={setCurrentMonth}
+                onSelect={cropId => router.push(`/crop/${cropId}`)}
+              />
+            </>
+          }
+        />
+      </SafeAreaView>
+    )
+  }
 
   return (
-    <View style={styles.container}>
-      <View style={styles.zoneBar}>
-        <Text style={styles.zoneLabel}>Zon {zone}</Text>
-        <Text style={styles.cropCount}>{crops.length} grödor</Text>
-      </View>
+    <SafeAreaView style={styles.container} edges={['top']}>
       <FlatList
-        data={crops}
+        data={filtered}
         keyExtractor={c => c.id}
-        renderItem={({ item }) => <CropRow item={item} />}
+        ListHeaderComponent={header}
+        renderItem={({ item }) => (
+          <CropRow crop={item} onPress={() => handleCropPress(item)} />
+        )}
         contentContainerStyle={styles.list}
       />
-    </View>
+    </SafeAreaView>
   )
 }
 
@@ -53,61 +173,61 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-  zoneBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-    backgroundColor: colors.card,
-  },
-  zoneLabel: {
-    fontSize: fontSize.label,
-    color: colors.accent,
-    fontFamily: fontFamily.headingBold,
-  },
-  cropCount: {
-    fontSize: fontSize.small,
-    color: colors.textMuted,
-  },
   list: {
     paddingBottom: spacing.section,
   },
-  row: {
+  header: {
+    alignItems: 'center',
+    paddingTop: spacing.section,
+    paddingBottom: spacing.xxl,
+    gap: spacing.xs,
+  },
+  title: {
+    fontSize: 26,
+    fontFamily: fontFamily.headingExtraBold,
+    color: colors.text,
+  },
+  tagline: {
+    fontSize: fontSize.body,
+    fontFamily: fontFamily.body,
+    color: colors.textMuted,
+  },
+  zonePill: {
     flexDirection: 'row',
     alignItems: 'center',
+    alignSelf: 'center',
+    backgroundColor: colors.card,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radii.badge,
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.sm,
+    marginBottom: spacing.xl,
+    gap: spacing.sm,
+  },
+  zoneText: {
+    fontSize: fontSize.label,
+    fontFamily: fontFamily.body,
+    color: colors.text,
+  },
+  zoneCaret: {
+    fontSize: 12,
+    color: colors.textMuted,
+  },
+  searchWrapper: {
+    marginHorizontal: spacing.lg,
+    marginTop: spacing.lg,
+    marginBottom: spacing.md,
+  },
+  searchInput: {
+    backgroundColor: colors.card,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radii.cardSmall,
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-    backgroundColor: colors.card,
-  },
-  rowPressed: {
-    backgroundColor: colors.background,
-  },
-  rowContent: {
-    flex: 1,
-  },
-  name: {
     fontSize: fontSize.body,
+    fontFamily: fontFamily.body,
     color: colors.text,
-    fontFamily: fontFamily.headingBold,
-  },
-  family: {
-    fontSize: fontSize.small,
-    color: colors.textMuted,
-    fontFamily: fontFamily.body,
-    marginTop: 2,
-  },
-  badge: {
-    paddingHorizontal: spacing.sm,
-    paddingVertical: 3,
-    borderRadius: radii.badge,
-  },
-  badgeText: {
-    fontSize: fontSize.badge,
-    fontFamily: fontFamily.body,
   },
 })

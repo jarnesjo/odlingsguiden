@@ -3,6 +3,7 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { getCachedCrop, ZONE_INFO } from '@odlingsguiden/shared'
 import { colors, spacing, fontSize, fontFamily, radii } from '../../src/theme/tokens'
 import { useZone } from '../../src/hooks/useZone'
+import { CropGraphic } from '../../src/components/illustrations/CropIcon'
 
 export default function CropDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>()
@@ -21,6 +22,9 @@ export default function CropDetailScreen() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+      <View style={styles.illustrationWrap}>
+        <CropGraphic id={id} size={160} category={crop.category} />
+      </View>
       <Text style={styles.name}>{crop.name}</Text>
       <Text style={styles.family}>{crop.family}</Text>
 
@@ -58,6 +62,10 @@ const styles = StyleSheet.create({
   content: {
     padding: spacing.lg,
     paddingBottom: spacing.section,
+  },
+  illustrationWrap: {
+    alignItems: 'center',
+    marginBottom: spacing.lg,
   },
   name: {
     fontSize: fontSize.h1,
