@@ -11,6 +11,7 @@
     "build": "npm run build -w packages/web",
     "prerender": "npm run prerender -w packages/web",
     "preview": "npm run preview -w packages/web",
-    "version": "npm run build -w packages/web && npm run prerender -w packages/web && git add packages/web/dist/"
+    "version": "npm run build -w packages/web && npm run prerender -w packages/web && git add packages/web/dist/",
+    "start:app": "npm run start -w packages/app"
   }
 }

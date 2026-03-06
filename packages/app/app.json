@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Odlingsguiden",
+    "slug": "odlingsguiden",
+    "scheme": "odlingsguiden",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5F2EB"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "se.lillabosgarden.odlingsguiden"
+    },
+    "android": {
+      "package": "se.lillabosgarden.odlingsguiden",
+      "adaptiveIcon": {
+        "backgroundColor": "#F5F2EB",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "experiments": {
+      "typedRoutes": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ]
+  }
+}
