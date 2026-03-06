@@ -30,10 +30,15 @@ export function SeasonView({ userZone, currentMonth, onMonthChange, onSelect }: 
     }
     return []
   })
+  const [loaded, setLoaded] = useState(() => groups.length > 0)
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
 
   useEffect(() => {
-    getSeasonActivities(currentMonth, userZone).then(setGroups)
+    setLoaded(false)
+    getSeasonActivities(currentMonth, userZone).then((data) => {
+      setGroups(data)
+      setLoaded(true)
+    })
     setExpanded(new Set())
   }, [currentMonth, userZone])
 
@@ -59,7 +64,7 @@ export function SeasonView({ userZone, currentMonth, onMonthChange, onSelect }: 
       </div>
 
       {/* Aktivitetsgrupper */}
-      {groups.length > 0 ? (
+      {!loaded && groups.length === 0 ? null : groups.length > 0 ? (
         groups.map(group => (
           <div key={group.key} className={styles.group}>
             <div className={styles.groupHeader}>
