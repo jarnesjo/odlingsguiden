@@ -1,9 +1,32 @@
 import { useLocalSearchParams } from 'expo-router'
 import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { getCachedCrop, ZONE_INFO } from '@odlingsguiden/shared'
-import { colors, spacing, fontSize, fontFamily, radii } from '../../src/theme/tokens'
+import type { TimelineZone } from '@odlingsguiden/shared'
+import { colors, spacing, fontSize, fontFamily } from '../../src/theme/tokens'
 import { useZone } from '../../src/hooks/useZone'
-import { CropGraphic } from '../../src/components/illustrations/CropIcon'
+import {
+  CropHeader,
+  OptimalConditionsSection,
+  GoodToKnowSection,
+  SowingSection,
+  PruningSection,
+  HerbHarvestSection,
+  NutritionSection,
+  SoilSection,
+  WateringSection,
+  TimelineSection,
+  CompanionSection,
+  RotationSection,
+  VarietiesSection,
+  PollinationSection,
+  EstablishmentSection,
+  RipeningSection,
+  ProblemsSection,
+  HarvestCalcSection,
+  StorageSection,
+  SeedSavingSection,
+  PropagationSection,
+} from '../../src/components/crop'
 
 export default function CropDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>()
@@ -18,39 +41,58 @@ export default function CropDetailScreen() {
     )
   }
 
-  const zoneInfo = ZONE_INFO[zone]
+  const isBerry = crop.category === 'bär' || crop.category === 'frukt'
+  const isFruit = crop.category === 'frukt'
+  const isHerb = crop.category === 'kryddor'
+
+  // Get zone-appropriate timeline (find closest matching zone key)
+  const timelineKeys = (Object.keys(crop.timeline).map(Number) as TimelineZone[]).sort((a, b) => a - b)
+  const closestKey = timelineKeys.reduce((prev, curr) =>
+    Math.abs(curr - zone) < Math.abs(prev - zone) ? curr : prev
+  )
+  const timeline = crop.timeline[closestKey] ?? []
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <View style={styles.illustrationWrap}>
-        <CropGraphic id={id} size={160} category={crop.category} />
-      </View>
-      <Text style={styles.name}>{crop.name}</Text>
-      <Text style={styles.family}>{crop.family}</Text>
+      <CropHeader cropId={id} crop={crop} userZone={zone} />
 
-      <View style={styles.infoCard}>
-        <Text style={styles.cardTitle}>Grundinfo</Text>
-        <InfoRow label="Svårighetsgrad" value={crop.difficulty} />
-        <InfoRow label="Kategori" value={crop.category} />
-        <InfoRow label="Din zon" value={`Zon ${zone} - ${zoneInfo?.name ?? ''}`} />
-      </View>
+      <OptimalConditionsSection conditions={crop.optimalConditions} watering={crop.watering} />
+      <GoodToKnowSection items={crop.goodToKnow} />
 
-      {crop.difficultyWhy && (
-        <View style={styles.infoCard}>
-          <Text style={styles.cardTitle}>Varför {crop.difficulty.toLowerCase()}?</Text>
-          <Text style={styles.bodyText}>{crop.difficultyWhy}</Text>
-        </View>
-      )}
+      {/* Sowing (vegetables & herbs) OR Pruning (berries) */}
+      {isBerry && crop.pruning ? (
+        <PruningSection pruning={crop.pruning} />
+      ) : crop.sowing ? (
+        <SowingSection sowing={crop.sowing} />
+      ) : null}
+
+      {/* Harvest & Usage for herbs */}
+      {isHerb && crop.harvest && <HerbHarvestSection harvest={crop.harvest} />}
+
+      <NutritionSection cropName={crop.name} data={crop.nutritionData} tips={crop.nutritionTips} />
+      <SoilSection soil={crop.soil} ph={crop.ph} soilTips={crop.soilTips} />
+      <WateringSection watering={crop.watering} />
+      <TimelineSection timeline={timeline} userZone={zone} zoneInfo={ZONE_INFO[zone]} />
+      <CompanionSection companions={crop.companions} />
+      <RotationSection rotation={crop.rotation} />
+      <VarietiesSection varieties={crop.varieties} userZone={zone} />
+
+      {/* Fruit-specific sections */}
+      {isFruit && crop.pollination && <PollinationSection pollination={crop.pollination} />}
+      {isFruit && crop.establishment && <EstablishmentSection establishment={crop.establishment} />}
+      {isFruit && crop.ripeningGuide && <RipeningSection guide={crop.ripeningGuide} />}
+
+      <ProblemsSection problems={crop.problems} />
+      <HarvestCalcSection calc={crop.harvestCalc} cropName={crop.name} />
+      <StorageSection storage={crop.storage} />
+
+      {/* Propagation for berries OR Seed saving for vegetables/herbs */}
+      {isBerry && crop.propagation ? (
+        <PropagationSection propagation={crop.propagation} />
+      ) : crop.seedSaving ? (
+        <SeedSavingSection seedSaving={crop.seedSaving} />
+      ) : null}
     </ScrollView>
-  )
-}
-
-function InfoRow({ label, value }: { label: string; value: string }) {
-  return (
-    <View style={styles.infoRow}>
-      <Text style={styles.infoLabel}>{label}</Text>
-      <Text style={styles.infoValue}>{value}</Text>
-    </View>
   )
 }
 
@@ -62,54 +104,6 @@ const styles = StyleSheet.create({
   content: {
     padding: spacing.lg,
     paddingBottom: spacing.section,
-  },
-  illustrationWrap: {
-    alignItems: 'center',
-    marginBottom: spacing.lg,
-  },
-  name: {
-    fontSize: fontSize.h1,
-    fontFamily: fontFamily.headingExtraBold,
-    color: colors.text,
-  },
-  family: {
-    fontSize: fontSize.body,
-    fontFamily: fontFamily.body,
-    color: colors.textMuted,
-    marginTop: spacing.xs,
-  },
-  infoCard: {
-    backgroundColor: colors.card,
-    borderRadius: radii.card,
-    padding: spacing.lg,
-    marginTop: spacing.lg,
-  },
-  cardTitle: {
-    fontSize: fontSize.h2,
-    fontFamily: fontFamily.headingBold,
-    color: colors.text,
-    marginBottom: spacing.md,
-  },
-  infoRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: spacing.xs,
-  },
-  infoLabel: {
-    fontSize: fontSize.body,
-    color: colors.textMuted,
-    fontFamily: fontFamily.body,
-  },
-  infoValue: {
-    fontSize: fontSize.body,
-    color: colors.text,
-    fontFamily: fontFamily.body,
-  },
-  bodyText: {
-    fontSize: fontSize.body,
-    fontFamily: fontFamily.body,
-    color: colors.text,
-    lineHeight: 20,
   },
   errorText: {
     fontSize: fontSize.body,
