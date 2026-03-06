@@ -1,0 +1,72 @@
+meta:
+  date: 2026-03-06
+  author: claude
+  phase: "Epic: Native App - 7.2 Expo Scaffold"
+  status: aktiv
+  session_notes: |
+    Session 60. Expo-scaffold med fullstandig grodlista och illustrationer.
+
+    EXPO SCAFFOLD:
+    - Expo SDK 55, React Native 0.83, React 19, Expo Router
+    - Metro konfigurerad for npm workspaces (watchFolders, symlinks)
+    - 1313+ moduler bundlar felfritt
+    - Verifierad i iOS Simulator (iPhone 14 Pro)
+
+    SVG-KONVERTERING:
+    - Konverteringsscript: scripts/convert-svg-to-rn.ts
+    - 85 crop-illustrationer (200x200 + 48x48 dual export)
+    - 44 UI-ikoner, 4 brand-symboler
+    - CropIcon/CropGraphic dispatchers (statiska imports, ingen import.meta.glob)
+    - LogoCombined for RN
+
+    GRODLISTA (matchar webben):
+    - LogoCombined header med SymbolSprout
+    - Zonpill som oppnar modal
+    - Sasongsbanner ("Vad ska jag gora i mars?")
+    - CategoryToggle (Gronsaker | Kryddor | Bar | Frukt)
+    - Sokfalt med clearButtonMode
+    - FamilyFilters (horisontell scroll, pills)
+    - CropRow med SVG-ikoner, familj, svarighetsdot + etikett
+    - SeasonView med manadsnavigering, aktivitetsgrupper, "Visa mer"
+
+    ZONVALJARE:
+    - Alla 8 zoner med region, frostdata
+    - Aktiv zon markerad med gron badge + bockmarkering
+    - AsyncStorage-persistens via ZoneContext
+
+    CONFIG:
+    - .nvmrc (Node 22)
+    - Root script: start:app
+    - Fonter: Fraunces 400/700/800 + Lora 400/700 (ttf)
+
+    BRANCH: feature/expo-scaffold (4 commits)
+
+commands:
+  - "npm run start:app      # Startar Expo dev server"
+  - "npm run dev             # Vite dev (web)"
+  - "npm run build           # Bygger web"
+  - "npx tsx scripts/convert-svg-to-rn.ts  # Konverterar SVG till RN"
+
+next_steps:
+  - "Grodprofil: bygga ut crop/[id].tsx med alla sektioner fran webben"
+  - "Tidslinje/odlingskalender i RN"
+  - "Jord, bevattning, temperatur, samodling, vaxtfoljd, sorter, problem"
+  - "Norkurvor (N-P-K) - behover react-native chart-losning"
+  - "Polishing: spacing, animationer, scroll-beteende"
+
+context:
+  decisions:
+    - "Inget tab bar - single-screen med category toggle (matchar webben)"
+    - "SVG-konvertering via script istallet for manuell konvertering"
+    - "Statiska imports i CropIcon (ingen import.meta.glob i Metro)"
+    - "ZoneContext med AsyncStorage istallet for useLocalStorage"
+    - "Expo tsconfig extendar expo/tsconfig.base (inte monorepo-basen)"
+  constraints:
+    - "metro.config.js maste vara CommonJS trots type:module i root"
+    - "Illustrationer ar 1:1 konverterade fran web - inga RN-optimeringar an"
+    - "Grodprofilen visar bara namn + grundinfo - behover alla sektioner"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga maetstationer)"
+  - "Bundle 11.6 MB i dev - alla illustrationer inkluderade statiskt"
+  - "Grodprofilen ar fortfarande minimal - saknar alla sektioner"
