@@ -437,6 +437,15 @@ Ingen prioritet. Plockas upp när det passar.
   - **Under jord:** Mykorrhiza (svampnätverk som ger växter mineraler i utbyte mot socker - 90% av växter lever i symbios). Rhizobium i baljväxternas rotknölar (kvävefixering). Daggmaskar (400-500/m2 i frisk jord, maskgödsel 5x rikare på kväve). Jordbakterier (Bacillus, Pseudomonas) som naturliga antagonister mot svampsjukdomar. Kompost som "vaccination" - miljarder mikroorganismer per gram. No-dig/ytkompostering (bevarar svampnätverk och jordstruktur). Täckodling (bar jord = död jord, naturen täcker alltid marken).
   - **Format:** Kan bli (1) utökad companion/soil-sektion i profiler, (2) fristående guide/sektion "Levande jord" eller "Ekosystemet i din trädgård", (3) både och. Spånas vidare på.
 
+### Transparens
+
+- "Om Odlingsguiden"-sida med AI-transparens. Kärnbudskap: AI är verktyget, inte experten - precis som en kock använder en matberedare men fortfarande bestämmer receptet. Vi bestämmer vad som ska skrivas, hur det ska låta, vilka sorter som rekommenderas och vilken odlingsfilosofi som gäller. AI hjälper oss skriva det snabbare.
+  - **Varför transparens?** Bättre att vara öppna och slippa frågorna. I AI-tider kommer folk undra hur en liten gård kan sammanställa så mycket information och göra det så snyggt. Ärlighet bygger förtroende - det blir en styrka, inte en svaghet.
+  - **Vad som gör oss trovärdiga:** (1) Allt är faktagranskat i 8 batchar, alla 43 profiler. (2) Odlingsfilosofin är vår egen - OP-sorter, frilandsodling, svenska förhållanden. (3) Det kommer från en riktig gård som faktiskt odlar det vi skriver om. (4) Kompistonen och personligheten i texterna är vår röst, inte en generisk AI-röst.
+  - **Vad AI gör:** Skrivassistent, kodverktyg, research-hjälp. Strukturerar data, genererar SVG-illustrationer, bygger UI-komponenter.
+  - **Vad AI inte gör:** Bestämmer sortrekommendationer, väljer odlingsfilosofi, sätter tonen, avgör vad som är rätt för svenska förhållanden.
+  - Referera till `docs/guides/kallor.md` som redan dokumenterar metod, källor och AI-användning.
+
 ### Funktioner
 
 - Mörkt läge / dark mode - CSS custom properties finns redan, favicon har dark mode-stöd, LogoCombined har `dark`-prop. Approach: (1) migrera inline color-references till CSS custom properties, (2) flippa alla properties i `[data-theme="dark"]`-block, (3) illustrationer och grafer sist. En ordentlig session.
