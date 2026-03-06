@@ -16,7 +16,7 @@ const root = document.getElementById('root')!
 // Hydrera om prerenderad HTML finns, annars skapa ny root (dev)
 const app = (
   <React.StrictMode>
-    <BrowserRouter basename="/odlingsguiden">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <App />
     </BrowserRouter>
   </React.StrictMode>

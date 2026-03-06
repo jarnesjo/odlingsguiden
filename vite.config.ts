@@ -1,21 +1,30 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
-  base: '/odlingsguiden/',
+export default defineConfig(({ mode }) => ({
+  base: mode === 'development' ? '/' : '/odlingsguiden/',
   plugins: [react()],
   server: {
     proxy: {
-      '/odlingsguiden/api/feedback': 'http://localhost:8080',
+      '/api/feedback': 'http://localhost:8080',
     },
   },
   build: {
+    chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+        manualChunks(id) {
+          if (id.includes('node_modules/react')) {
+            return 'react-vendor'
+          }
+          if (id.includes('/illustrations/') && id.endsWith('Illustration.tsx')) {
+            return 'illustrations'
+          }
+          if (id.includes('/data/crops/') && !id.endsWith('index.ts')) {
+            return 'crop-data'
+          }
         },
       },
     },
   },
-})
+}))
