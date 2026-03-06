@@ -1,0 +1,101 @@
+meta:
+  date: 2026-03-06
+  author: claude
+  phase: "Epic: Performance & Plattform"
+  status: avslutad
+  session_notes: |
+    Session 58. Performance-fixar, hydration, eager loading, monorepo-plan.
+
+    A11Y:
+    - <main> landmark i App.tsx (var <div>)
+    - Kontrastfix saesongsbanner: #96694A -> #6B4D35 (WCAG AA 5.2:1)
+
+    HYDRATION:
+    - Bytte till hydrateRoot for att bevara prerenderad HTML
+    - Reverterade: hydrateRoot orsakar React #418 nar localStorage-zon
+      skiljer sig fran prerenderad zon 4
+    - createRoot fungerar bra med eager loading (ingen flash)
+
+    EAGER LOADING:
+    - Illustrationer: import.meta.glob eager:true (var lazy med useEffect)
+    - CropGraphic: samma eager-fix
+    - Groddata: alla 85 grodor eager-laddade (var lazy dynamic imports)
+    - Eliminerar all illustration/data-flash vid sidladdning och navigering
+    - CropIcon och CropGraphic kraftigt foerenklade (inga hooks/useEffect)
+
+    CHUNKNING:
+    - index (app): 119KB / 31KB gzip
+    - react-vendor: 232KB / 75KB gzip
+    - illustrations: 561KB / 77KB gzip
+    - crop-data: 1194KB / 360KB gzip
+    - NutritionChart: 319KB / 95KB gzip (lazy)
+
+    VITE CONFIG:
+    - mode-baserad base path: development='/', production='/odlingsguiden/'
+    - npm run dev koer pa localhost:5173/ (utan /odlingsguiden/)
+    - npm run preview koer pa localhost:4173/odlingsguiden/
+    - chunkSizeWarningLimit: 600
+
+    ROADMAP:
+    - 5.1 Webb-version: markerad klar
+    - 5.2 Feedback: markerad klar
+    - 5.3 Anvaendartest: markerad klar
+    - 5.4 Gardskoppling: markerad klar (foterlaenk)
+    - 5.5 Innehallsmal: markerad klar (43+16+18+9)
+    - 5.6 Lansering: markerad klar
+
+    MONOREPO-PLAN:
+    - Detaljerad plan for omstrukturering till monorepo
+    - packages/shared (data, typer, utils, tokens)
+    - packages/web (nuvarande Vite-app)
+    - packages/app (Expo/React Native)
+    - Plan: docs/plans/7.1-monorepo-expo.md
+
+    ROADMAP:
+    - Epic: Native App tillagd (7.1-7.8)
+    - 7.1 Monorepo-omstrukturering
+    - 7.2 Expo-scaffold
+    - 7.3 Illustrationer & ikoner (react-native-svg)
+    - 7.4 Groedlista
+    - 7.5 Groedprofil
+    - 7.6 Saesongvy
+    - 7.7 Zonvaeljare
+    - 7.8 TestFlight & distribution
+    - 5.1-5.6 markerade klara
+
+    RELEASES:
+    - v1.1.0: eager loading, chunkning, dev base path
+    - v1.1.1: revert hydrateRoot (hydration mismatch fix)
+
+commands:
+  - "npm run dev          # Vite dev pa localhost:5173/"
+  - "npm run build        # Bygger till dist/"
+  - "npm run prerender    # Prerendera alla 102 routes"
+  - "npm run preview      # Preview pa localhost:4173/odlingsguiden/"
+  - "npm version patch    # Release: bump + build + commit + tag"
+
+next_steps:
+  - "Monorepo-omstrukturering: packages/shared + packages/web + packages/app"
+  - "Steg 1: skapa feature branch, root workspace, flytta shared-kod"
+  - "Steg 2: flytta web till packages/web, uppdatera imports"
+  - "Steg 3: verifiera att webben fortfarande bygger och fungerar"
+  - "Steg 4: skapa Expo-app i packages/app"
+  - "Plan: docs/plans/7.1-monorepo-expo.md"
+
+context:
+  decisions:
+    - "Monorepo med npm workspaces - inte watchFolders-hack"
+    - "Alltid baesta loesningen, aldrig bekvaeamaste"
+    - "createRoot istallet foer hydrateRoot (zon-mismatch)"
+    - "Eager loading av illustrationer och groddata (ingen flash)"
+    - "Illustrationer och crop-data som separata chunks"
+    - "Dev base path '/' (mode-baserad i vite.config.ts)"
+  constraints:
+    - "Webben maste fortsaetta fungera under omstruktureringen"
+    - "Deploy-flow via Forge maste uppdateras (dist/ byter plats)"
+    - "tokens.ts har CSS-straengar - shared-tokens maste vara nummer"
+    - "seasonData.ts sync-version maste refaktoreras (ta bort loadAllCrops-beroende)"
+
+known_issues:
+  - "Zon 7 frostdatum interpolerat (inga maetstationer)"
+  - "Vite varnar foer chunk >600KB (crop-data 1194KB)"

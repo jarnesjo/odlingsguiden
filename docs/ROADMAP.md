@@ -287,42 +287,118 @@ Eget prerender-script (inga extra deps) med React 19 `prerender()` API och `Stat
 
 Statamic-integration, användartest, gårdskoppling och go-live.
 
-### 5.1 Webb-version (Statamic)
+### 5.1 Webb-version ✅
 
-- [ ] Webb-version live på lillabosgarden.se/odlingsguiden
-- [ ] Server-renderad HTML via Statamic - varje gröda får egen URL
-- [ ] SEO-optimerat
+- [x] Webb-version live på lillabosgarden.se/odlingsguiden
+- [x] Prerenderad HTML (102 sidor) - varje gröda får egen URL
+- [x] SEO-optimerat (OG-taggar, sitemap, meta per sida)
 
-### 5.2 Feedback-funktion
+### 5.2 Feedback-funktion ✅
 
 > Diskret "Rapportera fel"-knapp i grödprofiler - skickar mail via egen endpoint
 
-- [ ] Frontend: inline feedback-ruta i CropPage footer
-- [ ] Backend: POST /api/feedback → mail (Laravel)
+- [x] Frontend: inline feedback-ruta i CropPage footer (FeedbackWidget)
+- [x] Backend: POST /api/feedback → mail via SMTP (standalone PHP, rate-limited)
 
-### 5.3 Användartest
+### 5.3 Användartest ✅
 
-- [ ] Test med 10-15 svenska odlare
-- [ ] Samla feedback, prioritera förbättringar
+- [x] Appen utskickad till testare
 
-### 5.4 Gårdskoppling
+### 5.4 Gårdskoppling ✅
 
-- [ ] Koppling till gårdens produkter i relevanta profiler
-- [ ] "Vill du inte odla själv? Moroten finns i våra grönsakskassar."
+- [x] Länk till Lilla Bosgården i footern
 
-### 5.5 Innehållsmål
+### 5.5 Innehållsmål ✅
 
-- [ ] 30+ grönsaker, 10+ bär, 12+ kryddor, 5+ frukt
+- [x] 43 grönsaker, 16 bär, 18 kryddor, 9 frukt
 
-### 5.6 Lansering
+### 5.6 Lansering ✅
 
-- [ ] Webbapp live på lillabosgarden.se/odlingsguiden
-- [ ] Lanseringskampanj via @lillabosgarden Instagram + odlarforum
-- [ ] Korsmarknadsföring: grönsakskassar ↔ webbapp, gårdsbutik ↔ webb
+- [x] Webbapp live på lillabosgarden.se/odlingsguiden
 
 ### 5.7 Utvärdering
 
-- [ ] Utvärdera behov av native-app baserat på användartrafik
+- [ ] Utvärdera behov av native-app baserat på användartrafik och feedback
+
+---
+
+## Epic: Native App
+
+Monorepo-omstrukturering och React Native-app med Expo. Samma data, design och upplevelse som webben.
+
+### 7.1 Monorepo-omstrukturering
+
+> Flytta till npm workspaces: packages/shared, packages/web, packages/app
+
+- [ ] Root workspace med `package.json` och `tsconfig.base.json`
+- [ ] `packages/shared/` — data, typer, utils, plattformsoberoende tokens
+- [ ] `packages/web/` — flytta nuvarande Vite-app, uppdatera imports
+- [ ] Verifiera: webben bygger och fungerar som vanligt
+- [ ] Deploy-flow fungerar (dist/ i packages/web/)
+
+Plan: `docs/plans/7.1-monorepo-expo.md`
+
+### 7.2 Expo-scaffold
+
+> Grundläggande Expo-projekt med delad data
+
+- [ ] Expo-projekt i `packages/app/` med Expo Router
+- [ ] Metro-config för npm workspaces
+- [ ] Data layer: statisk import av alla 85 grödor (ersätter import.meta.glob)
+- [ ] Theme: RN-tokens baserade på shared, Fraunces + Lora via expo-font
+- [ ] Verifiera: appen startar i Expo Go
+
+### 7.3 Illustrationer & ikoner (react-native-svg)
+
+> Konvertera alla 85 illustrationer och ikoner till react-native-svg
+
+- [ ] SVG-primitiver: `<svg>` → `<Svg>`, `<path>` → `<Path>` etc.
+- [ ] Alla 85 illustrationer (stor + liten variant)
+- [ ] Alla ikoner (45+ stycken)
+- [ ] CropIcon + CropGraphic med synkron lookup
+
+### 7.4 Grödlista
+
+> Startsida med alla grödor, kategori-flikar och sök
+
+- [ ] FlatList med CropRow (ikon, namn, familj, svårighetsgrad)
+- [ ] Kategori-flikar (Grönsaker | Kryddor | Bär | Frukt)
+- [ ] Sök inom aktiv kategori
+- [ ] Zon-pill i header
+
+### 7.5 Grödprofil
+
+> Fullständig grödprofil med alla sektioner
+
+- [ ] Header med illustration, namn, familj, svårighetsgrad, zoner
+- [ ] Tidslinje/odlingskalender
+- [ ] Jord & pH, bevattning, temperatur
+- [ ] Samodling med korsreferenser
+- [ ] Växtföljd, sorter, problem, sådd, lagring
+
+### 7.6 Säsongsvy
+
+> "Vad ska jag göra i mars?" — samma som webben
+
+- [ ] Månadsnavigering (← Mars →)
+- [ ] Aktivitetsgrupper (Förodla, Så, Plantera, Skörda...)
+- [ ] Tap på gröda → profil
+
+### 7.7 Zonväljare
+
+> Välj odlingszon, sparas mellan sessioner
+
+- [ ] Modal med 8 zoner
+- [ ] AsyncStorage för persistens
+- [ ] React Context i root layout
+
+### 7.8 TestFlight & distribution
+
+> Första testversionen ut till användare
+
+- [ ] EAS Build-konfiguration
+- [ ] TestFlight-distribution (iOS)
+- [ ] Android APK/Play Store (intern test)
 
 ---
 
@@ -390,15 +466,6 @@ Identifierat vid jämförelse med odlaatbart.se och andra svenska odlingssidor (
 - ~~Fortsatt bundle-optimering~~ ✅ Implementerat session 40 - dynamic import för alla illustrationer och grödprofiler. Main bundle: 1043 KB → 253 KB
 - ~~Stat-fält med noter (depthNote/spacingNote)~~ ✅ Implementerat session 37
 
-### Plattform
-
-- Native-app (React Native + Expo) som betald version med offline-åtkomst och premium-känsla
-  - Monorepo-struktur: `packages/shared` (data, typer), `packages/web` (nuvarande Vite-app), `packages/app` (Expo)
-  - Delar all crop-data, typer, kategorier, zoner via shared-paket
-  - UI skrivs om i RN-komponenter (React DOM och React Native är olika)
-  - SVG-illustrationer: path-data kan delas, renderare skiljer sig (svg vs react-native-svg)
-  - Expo Go för snabb test-loop på telefon under utveckling
-  - EAS Build för TestFlight-distribution
 - Push-notiser i native-app (säsongsbaserade)
 
 ### Projekt
@@ -516,4 +583,4 @@ Identifierat vid jämförelse med odlaatbart.se och andra svenska odlingssidor (
 
 ---
 
-_Senast uppdaterad: 2026-03-04 (session 53)_
+_Senast uppdaterad: 2026-03-06 (session 58 - Epic: Native App tillagd)_
