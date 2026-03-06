@@ -1,4 +1,4 @@
-import { useState, useEffect, type ComponentType } from 'react'
+import type { ComponentType } from 'react'
 import type { Category } from '../../data/types'
 import { VegetableIcon, BerryIcon, HerbIcon, FruitIcon, FlowerIcon } from '../icons'
 
@@ -11,13 +11,13 @@ interface IllustrationEntry {
   small: ComponentType<SizeProps>
 }
 
-// Lazy glob: varje illustration-fil blir en dynamic import
+// Eager glob: alla illustrationer bundlas direkt
 const modules = import.meta.glob<Record<string, ComponentType<SizeProps>>>(
   './*Illustration.tsx',
-  { eager: false }
+  { eager: true }
 )
 
-// Crop id (svenska) -> glob-nyckel (engelska filnamn)
+// Crop id (svenska) → glob-nyckel (engelska filnamn)
 const ID_TO_PATH: Record<string, string> = {
   morot: './CarrotIllustration.tsx',
   tomat: './TomatoIllustration.tsx',
@@ -106,42 +106,17 @@ const ID_TO_PATH: Record<string, string> = {
   vindruva: './GrapeIllustration.tsx',
 }
 
-// Cache laddade illustrationer
-const illustrationCache = new Map<string, IllustrationEntry>()
-
-function useIllustration(id: string): IllustrationEntry | null {
-  const [entry, setEntry] = useState<IllustrationEntry | null>(
-    () => illustrationCache.get(id) ?? null
-  )
-
-  useEffect(() => {
-    if (illustrationCache.has(id)) {
-      setEntry(() => illustrationCache.get(id)!)
-      return
-    }
-    const path = ID_TO_PATH[id]
-    if (!path) return
-
-    const loader = modules[path]
-    if (!loader) return
-
-    let cancelled = false
-    loader().then((mod) => {
-      if (cancelled) return
-      // Varje fil exporterar FooIllustration (large) och FooIcon (small)
-      const exports = Object.entries(mod)
-      const large = exports.find(([name]) => name.endsWith('Illustration'))?.[1] as ComponentType<SizeProps> | undefined
-      const small = exports.find(([name]) => name.endsWith('Icon'))?.[1] as ComponentType<SizeProps> | undefined
-      if (large && small) {
-        const result = { large, small }
-        illustrationCache.set(id, result)
-        setEntry(() => result)
-      }
-    })
-    return () => { cancelled = true }
-  }, [id])
-
-  return entry
+// Bygg synkron lookup: crop id → large/small komponent
+const illustrationMap = new Map<string, IllustrationEntry>()
+for (const [id, path] of Object.entries(ID_TO_PATH)) {
+  const mod = modules[path]
+  if (!mod) continue
+  const exports = Object.entries(mod)
+  const large = exports.find(([name]) => name.endsWith('Illustration'))?.[1] as ComponentType<SizeProps> | undefined
+  const small = exports.find(([name]) => name.endsWith('Icon'))?.[1] as ComponentType<SizeProps> | undefined
+  if (large && small) {
+    illustrationMap.set(id, { large, small })
+  }
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
@@ -159,7 +134,7 @@ interface Props {
 }
 
 export function CropGraphic({ id, size = 48, category }: Props) {
-  const entry = useIllustration(id)
+  const entry = illustrationMap.get(id)
   if (entry) {
     const Component = size >= 100 ? entry.large : entry.small
     return <Component size={size} />

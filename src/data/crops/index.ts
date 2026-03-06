@@ -1,9 +1,9 @@
 import type { Crop } from '../types'
 
-// Lazy glob: varje grödprofil blir en dynamic import
+// Eager glob: alla grödprofiler bundlas direkt
 const cropModules = import.meta.glob<Record<string, Crop>>(
   ['./*.ts', '!./index.ts'],
-  { eager: false }
+  { eager: true }
 )
 
 // Crop id -> glob-nyckel (filnamn)
@@ -95,56 +95,26 @@ const ID_TO_PATH: Record<string, string> = {
   vindruva: './vindruva.ts',
 }
 
-// Cache laddade grödor
+// Bygg synkron lookup från eager glob
 const cropCache = new Map<string, Crop>()
-
-// Hydrera cache från inbäddad JSON (satt av prerender-scriptet)
-if (typeof document !== 'undefined') {
-  const el = document.getElementById('__CROP_DATA__')
-  if (el?.textContent) {
-    try {
-      const data = JSON.parse(el.textContent) as Record<string, Crop>
-      for (const [id, crop] of Object.entries(data)) {
-        cropCache.set(id, crop)
-      }
-    } catch { /* ignorera parsningsfel */ }
-  }
-}
-
-/** Ladda en enskild gröda on-demand */
-export async function loadCrop(id: string): Promise<Crop | undefined> {
-  if (cropCache.has(id)) return cropCache.get(id)
-
-  const path = ID_TO_PATH[id]
-  if (!path) return undefined
-
-  const loader = cropModules[path]
-  if (!loader) return undefined
-
-  const mod = await loader()
+for (const [id, path] of Object.entries(ID_TO_PATH)) {
+  const mod = cropModules[path]
+  if (!mod) continue
   const crop = Object.values(mod)[0] as Crop
   cropCache.set(id, crop)
-  return crop
 }
 
-/** Hämta en gröda synkront från cache (för SSR). Returnerar undefined om ej cachad. */
+/** Hämta en gröda synkront */
 export function getCachedCrop(id: string): Crop | undefined {
   return cropCache.get(id)
 }
 
-/** Ladda alla grödor (för säsongsvy). Resultat cachas. */
+/** Ladda en enskild gröda (synkron med eager, behåller async-signatur för kompatibilitet) */
+export async function loadCrop(id: string): Promise<Crop | undefined> {
+  return cropCache.get(id)
+}
+
+/** Hämta alla grödor (synkron med eager, behåller async-signatur för kompatibilitet) */
 export async function loadAllCrops(): Promise<Record<string, Crop>> {
-  const entries = Object.entries(ID_TO_PATH)
-  const results = await Promise.all(
-    entries.map(async ([id, path]) => {
-      if (cropCache.has(id)) return [id, cropCache.get(id)!] as const
-      const loader = cropModules[path]
-      if (!loader) return null
-      const mod = await loader()
-      const crop = Object.values(mod)[0] as Crop
-      cropCache.set(id, crop)
-      return [id, crop] as const
-    })
-  )
-  return Object.fromEntries(results.filter(Boolean) as [string, Crop][])
+  return Object.fromEntries(cropCache)
 }

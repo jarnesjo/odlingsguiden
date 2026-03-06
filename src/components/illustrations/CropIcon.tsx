@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, type ComponentType } from 'react'
+import type { ComponentType } from 'react'
 import type { Category } from '../../data/types'
 import { VegetableIcon, BerryIcon, HerbIcon, FruitIcon, FlowerIcon } from '../icons'
 
@@ -6,10 +6,10 @@ interface SizeProps {
   size?: number
 }
 
-// Lazy glob: varje illustration-fil blir en dynamic import
+// Eager glob: alla illustrationer bundlas direkt
 const modules = import.meta.glob<Record<string, ComponentType<SizeProps>>>(
   './*Illustration.tsx',
-  { eager: false }
+  { eager: true }
 )
 
 // Crop id (svenska) → glob-nyckel (engelska filnamn)
@@ -101,40 +101,15 @@ const ID_TO_PATH: Record<string, string> = {
   vindruva: './GrapeIllustration.tsx',
 }
 
-// Cache laddade ikoner
-const iconCache = new Map<string, ComponentType<SizeProps>>()
-
-function useIcon(id: string, enabled: boolean): ComponentType<SizeProps> | null {
-  const [Icon, setIcon] = useState<ComponentType<SizeProps> | null>(
-    () => iconCache.get(id) ?? null
-  )
-
-  useEffect(() => {
-    if (!enabled) return
-    if (iconCache.has(id)) {
-      setIcon(() => iconCache.get(id)!)
-      return
-    }
-    const path = ID_TO_PATH[id]
-    if (!path) return
-
-    const loader = modules[path]
-    if (!loader) return
-
-    let cancelled = false
-    loader().then((mod) => {
-      // Hitta exporten som slutar på "Icon" (t.ex. CarrotIcon)
-      const iconExport = Object.entries(mod).find(([name]) => name.endsWith('Icon'))
-      if (iconExport && !cancelled) {
-        const comp = iconExport[1] as ComponentType<SizeProps>
-        iconCache.set(id, comp)
-        setIcon(() => comp)
-      }
-    })
-    return () => { cancelled = true }
-  }, [id, enabled])
-
-  return Icon
+// Bygg synkron lookup: crop id → komponent
+const iconMap = new Map<string, ComponentType<SizeProps>>()
+for (const [id, path] of Object.entries(ID_TO_PATH)) {
+  const mod = modules[path]
+  if (!mod) continue
+  const iconExport = Object.entries(mod).find(([name]) => name.endsWith('Icon'))
+  if (iconExport) {
+    iconMap.set(id, iconExport[1] as ComponentType<SizeProps>)
+  }
 }
 
 const CATEGORY_ICONS: Record<Category, ComponentType<SizeProps>> = {
@@ -149,34 +124,11 @@ interface Props {
   id: string
   size?: number
   category?: Category
-  lazy?: boolean
 }
 
-export function CropIcon({ id, size = 48, category, lazy = false }: Props) {
-  const ref = useRef<HTMLSpanElement>(null)
-  const [inView, setInView] = useState(!lazy)
-
-  useEffect(() => {
-    if (!lazy || inView) return
-    const el = ref.current
-    if (!el) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]?.isIntersecting) {
-          setInView(true)
-          observer.disconnect()
-        }
-      },
-      { rootMargin: '200px' }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [lazy, inView])
-
-  const Icon = useIcon(id, inView)
+export function CropIcon({ id, size = 48, category }: Props) {
+  const Icon = iconMap.get(id)
+  if (Icon) return <Icon size={size} />
   const FallbackIcon = category ? CATEGORY_ICONS[category] : VegetableIcon
-  const content = Icon ? <Icon size={size} /> : <FallbackIcon size={size} />
-
-  return lazy ? <span ref={ref}>{content}</span> : content
+  return <FallbackIcon size={size} />
 }
